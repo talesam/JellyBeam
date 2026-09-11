@@ -5,7 +5,7 @@ from utils.constants import APP_VERSION
 setup(
     name="jellybeam",
     version=APP_VERSION,
-    description="Install Jellyfin on Samsung Tizen TVs and projectors",
+    description="Install Jellyfin on Samsung Tizen and LG webOS TVs and projectors",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     author="JellyBeam Team",
