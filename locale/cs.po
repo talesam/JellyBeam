@@ -43,8 +43,8 @@ msgstr "Zrušit"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 31
 #: NEEDS WORK
-msgid "Developer Certificates"
-msgstr "Certifikáty vývojáře"
+msgid "Go Back"
+msgstr "Zpět"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 48
 #: NEEDS WORK
@@ -231,13 +231,13 @@ msgstr "Nastavení"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 24
 #: NEEDS WORK
-msgid "General"
-msgstr "Obecné"
+msgid "About"
+msgstr "O aplikaci"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 30
 #: NEEDS WORK
-msgid "Docker Settings"
-msgstr "Nastavení Dockeru"
+msgid "JellyTizen Team"
+msgstr "JellyTizen Tým"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 31
 #: NEEDS WORK
@@ -889,8 +889,18 @@ msgstr "Docker je vyžadován, ale není nainstalován."
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Install"
-msgstr "Nainstalovat"
+msgid "Docker Group"
+msgstr "Docker Skupina"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 134
+#: NEEDS WORK
+msgid "User not in docker group"
+msgstr "Uživatel není ve skupině docker"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 136
+#: NEEDS WORK
+msgid "Add to group"
+msgstr "Přidat do skupiny"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 106
 #: NEEDS WORK
@@ -919,8 +929,19 @@ msgstr "Není nainstalováno"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 193
 #: NEEDS WORK
-msgid "Select your distribution:"
-msgstr "Vyberte svou distribuci:"
+msgid "Added to group"
+msgstr "Přidáno do skupiny"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 307
+#: NEEDS WORK
+msgid ""
+"Select your distribution:\n"
+"\n"
+"⚠ This will require elevated privileges (sudo). You may be prompted for your password."
+msgstr ""
+"Vyberte svou distribuci:\n"
+"\n"
+"⚠ To bude vyžadovat zvýšená oprávnění (sudo). Můžete být vyzváni k zadání vašeho hesla."
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 199
 #: NEEDS WORK
@@ -939,13 +960,13 @@ msgstr "Fedora/RHEL"
 # 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
-msgid "Go Back"
-msgstr "Zpět"
+msgid "Installing Docker..."
+msgstr "Instalace Dockeru..."
 # 
 # File: usr/share/jellybeam/app.py, line: 106
 #: NEEDS WORK
-msgid "Welcome"
-msgstr "Vítejte"
+msgid "Docker installed! Checking status..."
+msgstr "Docker nainstalován! Kontrola stavu..."
 # 
 # File: usr/share/jellybeam/app.py, line: 113
 #: NEEDS WORK

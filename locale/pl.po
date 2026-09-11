@@ -43,8 +43,8 @@ msgstr "Anuluj"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 31
 #: NEEDS WORK
-msgid "Developer Certificates"
-msgstr "Certyfikaty dewelopera"
+msgid "Go Back"
+msgstr "Wróć"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 48
 #: NEEDS WORK
@@ -231,13 +231,13 @@ msgstr "Preferencje"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 24
 #: NEEDS WORK
-msgid "General"
-msgstr "Ogólny"
+msgid "About"
+msgstr "O programie"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 30
 #: NEEDS WORK
-msgid "Docker Settings"
-msgstr "Ustawienia Dockera"
+msgid "JellyTizen Team"
+msgstr "Zespół JellyTizen"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 31
 #: NEEDS WORK
@@ -889,8 +889,18 @@ msgstr "Docker jest wymagany, ale nie jest zainstalowany."
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Install"
-msgstr "Zainstaluj"
+msgid "Docker Group"
+msgstr "Grupa Docker"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 134
+#: NEEDS WORK
+msgid "User not in docker group"
+msgstr "Użytkownik nie jest w grupie docker"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 136
+#: NEEDS WORK
+msgid "Add to group"
+msgstr "Dodaj do grupy"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 106
 #: NEEDS WORK
@@ -919,8 +929,19 @@ msgstr "Nie zainstalowano"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 193
 #: NEEDS WORK
-msgid "Select your distribution:"
-msgstr "Wybierz swoją dystrybucję:"
+msgid "Added to group"
+msgstr "Dodano do grupy"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 307
+#: NEEDS WORK
+msgid ""
+"Select your distribution:\n"
+"\n"
+"⚠ This will require elevated privileges (sudo). You may be prompted for your password."
+msgstr ""
+"Wybierz swoją dystrybucję:\n"
+"\n"
+"⚠ To będzie wymagało podwyższonych uprawnień (sudo). Może być konieczne podanie hasła."
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 199
 #: NEEDS WORK
@@ -939,13 +960,13 @@ msgstr "Fedora/RHEL"
 # 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
-msgid "Go Back"
-msgstr "Wróć"
+msgid "Installing Docker..."
+msgstr "Instalowanie Dockera..."
 # 
 # File: usr/share/jellybeam/app.py, line: 106
 #: NEEDS WORK
-msgid "Welcome"
-msgstr "Witamy"
+msgid "Docker installed! Checking status..."
+msgstr "Docker zainstalowany! Sprawdzanie statusu..."
 # 
 # File: usr/share/jellybeam/app.py, line: 113
 #: NEEDS WORK

@@ -43,8 +43,8 @@ msgstr "취소"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 31
 #: NEEDS WORK
-msgid "Developer Certificates"
-msgstr "개발자 인증서"
+msgid "Go Back"
+msgstr "뒤로 가기"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 48
 #: NEEDS WORK
@@ -229,13 +229,13 @@ msgstr "환경 설정"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 24
 #: NEEDS WORK
-msgid "General"
-msgstr "일반"
+msgid "About"
+msgstr "정보"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 30
 #: NEEDS WORK
-msgid "Docker Settings"
-msgstr "도커 설정"
+msgid "JellyTizen Team"
+msgstr "젤리타이젠 팀"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 31
 #: NEEDS WORK
@@ -887,8 +887,18 @@ msgstr "Docker가 필요하지만 설치되지 않았습니다."
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Install"
-msgstr "설치"
+msgid "Docker Group"
+msgstr "도커 그룹"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 134
+#: NEEDS WORK
+msgid "User not in docker group"
+msgstr "사용자가 도커 그룹에 없습니다."
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 136
+#: NEEDS WORK
+msgid "Add to group"
+msgstr "그룹에 추가"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 106
 #: NEEDS WORK
@@ -917,8 +927,19 @@ msgstr "설치되지 않음"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 193
 #: NEEDS WORK
-msgid "Select your distribution:"
-msgstr "배포판을 선택하세요:"
+msgid "Added to group"
+msgstr "그룹에 추가됨"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 307
+#: NEEDS WORK
+msgid ""
+"Select your distribution:\n"
+"\n"
+"⚠ This will require elevated privileges (sudo). You may be prompted for your password."
+msgstr ""
+"배포판을 선택하세요:\n"
+"\n"
+"⚠ 이 작업은 관리자 권한(슈도)이 필요합니다. 비밀번호를 입력하라는 메시지가 표시될 수 있습니다."
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 199
 #: NEEDS WORK
@@ -937,13 +958,13 @@ msgstr "페도라/RHEL"
 # 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
-msgid "Go Back"
-msgstr "뒤로 가기"
+msgid "Installing Docker..."
+msgstr "도커 설치 중..."
 # 
 # File: usr/share/jellybeam/app.py, line: 106
 #: NEEDS WORK
-msgid "Welcome"
-msgstr "환영합니다"
+msgid "Docker installed! Checking status..."
+msgstr "Docker가 설치되었습니다! 상태 확인 중..."
 # 
 # File: usr/share/jellybeam/app.py, line: 113
 #: NEEDS WORK

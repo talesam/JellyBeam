@@ -43,8 +43,8 @@ msgstr "Ακύρωση"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 31
 #: NEEDS WORK
-msgid "Developer Certificates"
-msgstr "Πιστοποιητικά Προγραμματιστών"
+msgid "Go Back"
+msgstr "Πίσω"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 48
 #: NEEDS WORK
@@ -231,13 +231,13 @@ msgstr "Προτιμήσεις"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 24
 #: NEEDS WORK
-msgid "General"
-msgstr "Γενικά"
+msgid "About"
+msgstr "Σχετικά"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 30
 #: NEEDS WORK
-msgid "Docker Settings"
-msgstr "Ρυθμίσεις Docker"
+msgid "JellyTizen Team"
+msgstr "Ομάδα JellyTizen"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 31
 #: NEEDS WORK
@@ -891,8 +891,18 @@ msgstr "Απαιτείται το Docker αλλά δεν είναι εγκατε
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Install"
-msgstr "Εγκατάσταση"
+msgid "Docker Group"
+msgstr "Ομάδα Docker"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 134
+#: NEEDS WORK
+msgid "User not in docker group"
+msgstr "Ο χρήστης δεν είναι στην ομάδα docker"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 136
+#: NEEDS WORK
+msgid "Add to group"
+msgstr "Προσθήκη στην ομάδα"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 106
 #: NEEDS WORK
@@ -921,8 +931,19 @@ msgstr "Δεν έχει εγκατασταθεί"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 193
 #: NEEDS WORK
-msgid "Select your distribution:"
-msgstr "Επιλέξτε τη διανομή σας:"
+msgid "Added to group"
+msgstr "Προστέθηκε στην ομάδα"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 307
+#: NEEDS WORK
+msgid ""
+"Select your distribution:\n"
+"\n"
+"⚠ This will require elevated privileges (sudo). You may be prompted for your password."
+msgstr ""
+"Επιλέξτε τη διανομή σας:\n"
+"\n"
+"⚠ Αυτό θα απαιτήσει ανυψωμένα δικαιώματα (sudo). Μπορεί να σας ζητηθεί ο κωδικός πρόσβασής σας."
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 199
 #: NEEDS WORK
@@ -941,13 +962,13 @@ msgstr "Fedora/RHEL"
 # 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
-msgid "Go Back"
-msgstr "Πίσω"
+msgid "Installing Docker..."
+msgstr "Εγκατάσταση του Docker..."
 # 
 # File: usr/share/jellybeam/app.py, line: 106
 #: NEEDS WORK
-msgid "Welcome"
-msgstr "Καλώς ήρθατε"
+msgid "Docker installed! Checking status..."
+msgstr "Docker εγκατεστημένο! Έλεγχος κατάστασης..."
 # 
 # File: usr/share/jellybeam/app.py, line: 113
 #: NEEDS WORK

@@ -43,8 +43,8 @@ msgstr "Hætta við"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 31
 #: NEEDS WORK
-msgid "Developer Certificates"
-msgstr "Þróunarskírteini"
+msgid "Go Back"
+msgstr "Fara aftur"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 48
 #: NEEDS WORK
@@ -231,13 +231,13 @@ msgstr "Valmyndir"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 24
 #: NEEDS WORK
-msgid "General"
-msgstr "Almennt"
+msgid "About"
+msgstr "Um umfjöllun"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 30
 #: NEEDS WORK
-msgid "Docker Settings"
-msgstr "Docker stillingar"
+msgid "JellyTizen Team"
+msgstr "JellyTizen Teymi"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 31
 #: NEEDS WORK
@@ -891,8 +891,18 @@ msgstr "Docker er nauðsynlegur en ekki uppsettur"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Install"
-msgstr "Setja upp"
+msgid "Docker Group"
+msgstr "Docker Hópur"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 134
+#: NEEDS WORK
+msgid "User not in docker group"
+msgstr "Notandi er ekki í docker hópnum"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 136
+#: NEEDS WORK
+msgid "Add to group"
+msgstr "Bæta við hóp"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 106
 #: NEEDS WORK
@@ -921,8 +931,19 @@ msgstr "Ekki uppsett"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 193
 #: NEEDS WORK
-msgid "Select your distribution:"
-msgstr "Veldu dreifingu þína:"
+msgid "Added to group"
+msgstr "Bætt við hópinn"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 307
+#: NEEDS WORK
+msgid ""
+"Select your distribution:\n"
+"\n"
+"⚠ This will require elevated privileges (sudo). You may be prompted for your password."
+msgstr ""
+"Veldu dreifingu þína:\n"
+"\n"
+"⚠ Þetta mun krafast hækkaðra réttinda (sudo). Þú gætir verið beðinn um að slá inn lykilorðið þitt."
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 199
 #: NEEDS WORK
@@ -941,13 +962,13 @@ msgstr "Fedora/RHEL"
 # 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
-msgid "Go Back"
-msgstr "Fara aftur"
+msgid "Installing Docker..."
+msgstr "Að setja upp Docker..."
 # 
 # File: usr/share/jellybeam/app.py, line: 106
 #: NEEDS WORK
-msgid "Welcome"
-msgstr "Velkomin"
+msgid "Docker installed! Checking status..."
+msgstr "Docker uppsett! Athugar stöðu..."
 # 
 # File: usr/share/jellybeam/app.py, line: 113
 #: NEEDS WORK

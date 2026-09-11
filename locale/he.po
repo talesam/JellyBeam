@@ -43,8 +43,8 @@ msgstr "ביטול"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 31
 #: NEEDS WORK
-msgid "Developer Certificates"
-msgstr "תעודות מפתח"
+msgid "Go Back"
+msgstr "חזור назад"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 48
 #: NEEDS WORK
@@ -229,13 +229,13 @@ msgstr "העדפות"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 24
 #: NEEDS WORK
-msgid "General"
-msgstr "כללי"
+msgid "About"
+msgstr "אודות"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 30
 #: NEEDS WORK
-msgid "Docker Settings"
-msgstr "הגדרות דוקר"
+msgid "JellyTizen Team"
+msgstr "ג'לי טיזן צוות"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 31
 #: NEEDS WORK
@@ -887,8 +887,18 @@ msgstr "דרוש Docker אך הוא לא מותקן"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Install"
-msgstr "התקן"
+msgid "Docker Group"
+msgstr "קבוצת דוקר"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 134
+#: NEEDS WORK
+msgid "User not in docker group"
+msgstr "המשתמש אינו בקבוצת דוקר"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 136
+#: NEEDS WORK
+msgid "Add to group"
+msgstr "הוסף לקבוצה"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 106
 #: NEEDS WORK
@@ -917,8 +927,19 @@ msgstr "לא מותקן"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 193
 #: NEEDS WORK
-msgid "Select your distribution:"
-msgstr "בחר את ההפצה שלך:"
+msgid "Added to group"
+msgstr "נוסף לקבוצה"
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 307
+#: NEEDS WORK
+msgid ""
+"Select your distribution:\n"
+"\n"
+"⚠ This will require elevated privileges (sudo). You may be prompted for your password."
+msgstr ""
+"בחר את הפצתך:\n"
+"\n"
+"⚠ זה ידרוש הרשאות מוגברות (sudo). ייתכן שתתבקש להזין את הסיסמה שלך."
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 199
 #: NEEDS WORK
@@ -937,13 +958,13 @@ msgstr "פדורה/רד הטאח"
 # 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
-msgid "Go Back"
-msgstr "חזור назад"
+msgid "Installing Docker..."
+msgstr "מתקין את Docker..."
 # 
 # File: usr/share/jellybeam/app.py, line: 106
 #: NEEDS WORK
-msgid "Welcome"
-msgstr "ברוך הבא"
+msgid "Docker installed! Checking status..."
+msgstr "דוקר מותקן! בודק מצב..."
 # 
 # File: usr/share/jellybeam/app.py, line: 113
 #: NEEDS WORK
