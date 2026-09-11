@@ -41,183 +41,15 @@ msgstr "확인"
 msgid "Cancel"
 msgstr "취소"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 31
+# File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
 msgstr "뒤로 가기"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 48
+# File: usr/share/jellybeam/app.py, line: 108
 #: NEEDS WORK
-msgid "Certificates are required to install apps on Samsung TVs"
-msgstr "앱을 삼성 TV에 설치하려면 인증서가 필요합니다."
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
-#: NEEDS WORK
-msgid "Certificate Mode"
-msgstr "인증서 모드"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 60
-#: NEEDS WORK
-msgid "Use Built-in Certificates"
-msgstr "내장 인증서 사용"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 61
-#: NEEDS WORK
-msgid "Recommended - No Tizen Studio required"
-msgstr "추천 - Tizen Studio 필요 없음"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 73
-#: NEEDS WORK
-msgid "How it works"
-msgstr "작동 방식"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 74
-#: NEEDS WORK
-msgid ""
-"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
-"without any setup."
-msgstr "Docker 컨테이너에는 미리 구성된 인증서가 포함되어 있습니다. 설정 없이 즉시 Jellyfin을 설치할 수 있습니다."
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 83
-#: NEEDS WORK
-msgid "Custom Certificates (Advanced)"
-msgstr "사용자 정의 인증서 (고급)"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 84
-#: NEEDS WORK
-msgid "Only needed if you want to use your own certificates"
-msgstr "자신의 인증서를 사용하려는 경우에만 필요합니다."
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 43
-#: NEEDS WORK
-msgid "Author Certificate"
-msgstr "저자 인증서"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 148
-#: NEEDS WORK
-msgid "Select author.p12 file"
-msgstr "author.p12 파일 선택"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 46
-# File: usr/share/jellybeam/pages/certificates.py, line: 58
-#: NEEDS WORK
-msgid "Browse"
-msgstr "탐색"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
-#: NEEDS WORK
-msgid "Distributor Certificate"
-msgstr "배급사 인증서"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 162
-#: NEEDS WORK
-msgid "Select distributor.p12 file"
-msgstr "배포자.p12 파일 선택"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 115
-#: NEEDS WORK
-msgid "Certificate Password"
-msgstr "인증서 비밀번호"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 122
-#: NEEDS WORK
-msgid "Need help creating certificates?"
-msgstr "인증서 생성에 도움이 필요하신가요?"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 123
-#: NEEDS WORK
-msgid "View tutorial on Samsung Developer website"
-msgstr "삼성 개발자 웹사이트에서 튜토리얼 보기"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 127
-#: NEEDS WORK
-msgid "View Guide"
-msgstr "가이드 보기"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 114
-#: NEEDS WORK
-msgid "Continue to Installation"
-msgstr "설치 계속하기"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 226
-#: NEEDS WORK
-msgid "Proceed to install Jellyfin on your TV"
-msgstr "TV에 Jellyfin을 설치합니다."
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 117
-# File: usr/share/jellybeam/pages/device.py, line: 135
-# File: usr/share/jellybeam/pages/welcome.py, line: 105
-#: NEEDS WORK
-msgid "Continue"
-msgstr "계속"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 171
-#: NEEDS WORK
-msgid "Ready to install with built-in certificates"
-msgstr "내장된 인증서로 설치 준비 완료"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 132
-#: NEEDS WORK
-#, python-brace-format
-msgid "Select {cert_type} certificate"
-msgstr "{cert_type} 인증서 선택"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 136
-#: NEEDS WORK
-msgid "P12 Certificate Files"
-msgstr "P12 인증서 파일"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 212
-# File: usr/share/jellybeam/pages/certificates.py, line: 215
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-# File: usr/share/jellybeam/pages/certificates.py, line: 238
-#: NEEDS WORK
-#, python-brace-format
-msgid "✅ {filename}"
-msgstr "✅ {파일 이름}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 163
-# File: usr/share/jellybeam/pages/certificates.py, line: 166
-# File: usr/share/jellybeam/pages/certificates.py, line: 185
-# File: usr/share/jellybeam/pages/certificates.py, line: 191
-#: NEEDS WORK
-msgid "Change"
-msgstr "변경"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 251
-#: NEEDS WORK
-msgid "Ready to install with custom certificates"
-msgstr "사용자 정의 인증서로 설치 준비 완료"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 326
-#: NEEDS WORK
-msgid "author certificate"
-msgstr "저자 인증서"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 328
-#: NEEDS WORK
-msgid "distributor certificate"
-msgstr "배급사 인증서"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 330
-#: NEEDS WORK
-msgid "password"
-msgstr "비밀번호"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 331
-#: NEEDS WORK
-#, python-brace-format
-msgid "Missing: {items}"
-msgstr "누락됨: {items}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-#: NEEDS WORK
-msgid "Installation"
-msgstr "설치"
+msgid "Main Menu"
+msgstr "메인 메뉴"
 # 
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
@@ -227,438 +59,20 @@ msgstr "설치"
 msgid "Preferences"
 msgstr "환경 설정"
 # 
-# File: usr/share/jellybeam/pages/preferences.py, line: 24
+# File: usr/share/jellybeam/app.py, line: 113
 #: NEEDS WORK
 msgid "About"
 msgstr "정보"
 # 
-# File: usr/share/jellybeam/pages/preferences.py, line: 30
+# File: usr/share/jellybeam/app.py, line: 139
 #: NEEDS WORK
-msgid "JellyTizen Team"
+msgid "JellyBeam Team"
 msgstr "젤리타이젠 팀"
 # 
-# File: usr/share/jellybeam/pages/preferences.py, line: 31
+# File: usr/share/jellybeam/app.py, line: 145
 #: NEEDS WORK
-msgid "Configure Docker behavior and settings"
-msgstr "Docker 동작 및 설정 구성"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 36
-#: NEEDS WORK
-msgid "Docker Image"
-msgstr "도커 이미지"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 43
-#: NEEDS WORK
-msgid "Auto-pull Updates"
-msgstr "자동 업데이트 가져오기"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 44
-#: NEEDS WORK
-msgid "Automatically pull the latest Docker image"
-msgstr "최신 Docker 이미지를 자동으로 가져옵니다."
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 51
-#: NEEDS WORK
-msgid "Network Settings"
-msgstr "네트워크 설정"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 52
-#: NEEDS WORK
-msgid "Configure network scanning and timeouts"
-msgstr "네트워크 스캔 및 타임아웃 구성"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 57
-#: NEEDS WORK
-msgid "Scan Timeout"
-msgstr "스캔 시간 초과"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 58
-#: NEEDS WORK
-msgid "Timeout for network device scanning (seconds)"
-msgstr "네트워크 장치 스캔 타임아웃(초)"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 67
-#: NEEDS WORK
-msgid "Port Range"
-msgstr "포트 범위"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 68
-#: NEEDS WORK
-msgid "Scan port range (e.g., 8000-8080)"
-msgstr "포트 범위 스캔 (예: 8000-8080)"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 80
-#: NEEDS WORK
-msgid "Logging"
-msgstr "로깅"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 81
-#: NEEDS WORK
-msgid "Configure application logging"
-msgstr "애플리케이션 로깅 구성"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 86
-#: NEEDS WORK
-msgid "Log Level"
-msgstr "로그 수준"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 87
-#: NEEDS WORK
-msgid "Verbosity of application logs"
-msgstr "애플리케이션 로그의 상세 수준"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 104
-#: NEEDS WORK
-msgid "Save Logs to File"
-msgstr "파일에 로그 저장"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 105
-#: NEEDS WORK
-msgid "Save application logs to ~/.local/share/jellybeam/logs"
-msgstr "응용 프로그램 로그를 ~/.local/share/jellybeam/logs에 저장합니다."
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 112
-#: NEEDS WORK
-msgid "Advanced"
-msgstr "고급"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 118
-#: NEEDS WORK
-msgid "Developer Options"
-msgstr "개발자 옵션"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 119
-#: NEEDS WORK
-msgid "Advanced settings for developers"
-msgstr "개발자를 위한 고급 설정"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 124
-#: NEEDS WORK
-msgid "Debug Mode"
-msgstr "디버그 모드"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 125
-#: NEEDS WORK
-msgid "Enable debug mode for development"
-msgstr "개발을 위한 디버그 모드 활성화"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 140
-# File: usr/share/jellybeam/pages/preferences.py, line: 148
-# File: usr/share/jellybeam/pages/preferences.py, line: 172
-#: NEEDS WORK
-msgid "Reset"
-msgstr "재설정"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 141
-#: NEEDS WORK
-msgid "Reset application settings"
-msgstr "애플리케이션 설정 초기화"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 145
-#: NEEDS WORK
-msgid "Reset All Settings"
-msgstr "모든 설정 초기화"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 146
-#: NEEDS WORK
-msgid "Reset all preferences to default values"
-msgstr "모든 환경설정을 기본값으로 재설정합니다."
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 168
-#: NEEDS WORK
-msgid "Reset All Settings?"
-msgstr "모든 설정 초기화?"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 169
-#: NEEDS WORK
-msgid "This will reset all preferences to their default values. This action cannot be undone."
-msgstr "이 작업은 모든 기본 설정을 기본값으로 재설정합니다. 이 작업은 실행 취소할 수 없습니다."
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 49
-# File: usr/share/jellybeam/pages/welcome.py, line: 185
-#: NEEDS WORK
-msgid "Device Setup"
-msgstr "장치 설정"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 50
-#: NEEDS WORK
-msgid "Connect to your Samsung Tizen TV or projector"
-msgstr "삼성 타이젠 TV 또는 프로젝터에 연결하세요."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 58
-#: NEEDS WORK
-msgid "Setup Instructions"
-msgstr "설치 지침"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 63
-#: NEEDS WORK
-msgid "Enable Developer Mode on TV"
-msgstr "TV에서 개발자 모드 활성화"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 64
-#: NEEDS WORK
-msgid "Click to view step-by-step instructions"
-msgstr "단계별 지침을 보려면 클릭하세요"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 75
-#: NEEDS WORK
-msgid "1. Open Apps"
-msgstr "1. 앱 열기"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 76
-#: NEEDS WORK
-msgid "On the TV, go to the 'Apps' section"
-msgstr "TV에서 '앱' 섹션으로 이동하세요."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 83
-#: NEEDS WORK
-msgid "2. Go to App Settings"
-msgstr "2. 앱 설정으로 이동"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 79
-#: NEEDS WORK
-msgid "Scroll to the end and select 'App Settings'"
-msgstr "끝으로 스크롤하여 '앱 설정'을 선택하세요."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 91
-#: NEEDS WORK
-msgid "3. Press '123' Button"
-msgstr "3. '123' 버튼을 누르세요"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 85
-#: NEEDS WORK
-msgid "Press the '123' button on your remote"
-msgstr "리모컨에서 '123' 버튼을 누르세요"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 90
-#: NEEDS WORK
-msgid "4. Enter Code '12345'"
-msgstr "4. 코드 '12345' 입력하세요"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 91
-#: NEEDS WORK
-msgid "Developer Mode menu will appear"
-msgstr "개발자 모드 메뉴가 나타납니다"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 107
-#: NEEDS WORK
-msgid "5. Enable Developer Mode"
-msgstr "5. 개발자 모드 활성화"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 97
-#: NEEDS WORK
-msgid "Toggle 'Developer Mode' to 'On'"
-msgstr "'개발자 모드'를 '켜기'로 전환"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 103
-#: NEEDS WORK
-#, python-brace-format
-msgid "6. Enter This IP: {ip}"
-msgstr "6. 이 IP 입력: {ip}"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 104
-#: NEEDS WORK
-msgid "Your computer's IP address"
-msgstr "당신 컴퓨터의 IP 주소"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 403
-# File: usr/share/jellybeam/pages/device.py, line: 430
-#: NEEDS WORK
-msgid "Copy IP"
-msgstr "IP 복사"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 131
-#: NEEDS WORK
-msgid "7. Restart TV"
-msgstr "7. TV 재시작"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 116
-#: NEEDS WORK
-msgid "Turn off and on your TV"
-msgstr "TV를 끄고 켜세요"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 162
-#: NEEDS WORK
-msgid "Confirmation"
-msgstr "확인"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 167
-#: NEEDS WORK
-msgid "Developer Mode Enabled"
-msgstr "개발자 모드 활성화됨"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 168
-#: NEEDS WORK
-msgid "I confirm I have completed the steps above on my TV"
-msgstr "위의 단계를 TV에서 완료했음을 확인합니다."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 55
-#: NEEDS WORK
-msgid "Device Discovery"
-msgstr "장치 검색"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 60
-#: NEEDS WORK
-msgid "Scan Network"
-msgstr "네트워크 스캔"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 61
-#: NEEDS WORK
-msgid "Automatically discover Samsung devices on your network"
-msgstr "네트워크에서 삼성 장치를 자동으로 검색합니다."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 63
-# File: usr/share/jellybeam/pages/device.py, line: 163
-#: NEEDS WORK
-msgid "Scan"
-msgstr "스캔"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 73
-#: NEEDS WORK
-msgid "Discovered Devices"
-msgstr "발견된 장치"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 74
-#: NEEDS WORK
-msgid "Select your target device"
-msgstr "대상 장치를 선택하세요"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 79
-#: NEEDS WORK
-msgid "Manual Connection"
-msgstr "수동 연결"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 80
-#: NEEDS WORK
-msgid "Enter device details manually"
-msgstr "장치 세부정보를 수동으로 입력하세요"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 85
-#: NEEDS WORK
-msgid "Device IP Address"
-msgstr "장치 IP 주소"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 119
-#: NEEDS WORK
-msgid "Connect to Device"
-msgstr "장치에 연결"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 120
-#: NEEDS WORK
-msgid "Establish connection with your TV"
-msgstr "TV와 연결을 설정합니다."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 122
-# File: usr/share/jellybeam/pages/device.py, line: 250
-#: NEEDS WORK
-msgid "Connect"
-msgstr "연결"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 132
-#: NEEDS WORK
-msgid "Continue to Certificates"
-msgstr "인증서로 계속하기"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 133
-#: NEEDS WORK
-msgid "Setup developer certificates"
-msgstr "개발자 인증서 설정"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 422
-#: NEEDS WORK
-msgid "Unable to determine IP"
-msgstr "IP를 결정할 수 없습니다."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 429
-#: NEEDS WORK
-msgid "Copied!"
-msgstr "복사됨!"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 153
-#: NEEDS WORK
-msgid "Scanning..."
-msgstr "스캔 중..."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 178
-#: NEEDS WORK
-msgid "No devices found"
-msgstr "장치가 발견되지 않았습니다."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 179
-#: NEEDS WORK
-msgid "Try manual connection or check network"
-msgstr "수동 연결을 시도하거나 네트워크를 확인하세요"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 186
-#: NEEDS WORK
-msgid "Unknown Device"
-msgstr "알 수 없는 장치"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 187
-#: NEEDS WORK
-#, python-brace-format
-msgid "IP: {ip} | Model: {model}"
-msgstr "IP: {ip} | 모델: {model}"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 187
-#: NEEDS WORK
-msgid "Unknown"
-msgstr "알 수 없음"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 189
-#: NEEDS WORK
-msgid "Select"
-msgstr "선택"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 200
-#: NEEDS WORK
-msgid "Found 1 device - Select your target device"
-msgstr "1개의 장치가 발견되었습니다 - 대상 장치를 선택하세요"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 202
-#: NEEDS WORK
-#, python-brace-format
-msgid "Found {count} devices - Select your target device"
-msgstr "{count}개의 장치를 찾았습니다 - 대상 장치를 선택하세요"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 304
-#: NEEDS WORK
-#, python-brace-format
-msgid "Device selected: {name}"
-msgstr "선택한 장치: {name}"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 232
-#: NEEDS WORK
-msgid "Please enter a device IP address"
-msgstr "장치 IP 주소를 입력하십시오."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 236
-#: NEEDS WORK
-msgid "Please enter a valid IP address"
-msgstr "유효한 IP 주소를 입력하십시오."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 241
-#: NEEDS WORK
-msgid "Connecting..."
-msgstr "연결 중..."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 255
-#: NEEDS WORK
-msgid "Connected successfully!"
-msgstr "연결이 성공적으로 완료되었습니다!"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 257
-#: NEEDS WORK
-#, python-brace-format
-msgid "Connection failed: {message}"
-msgstr "연결 실패: {message}"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 264
-#: NEEDS WORK
-msgid "Certificates"
-msgstr "인증서"
+msgid "JellyBeam Contributors"
+msgstr "젤리타이젠 기여자"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 53
 # File: usr/share/jellybeam/pages/install.py, line: 116
@@ -697,10 +111,30 @@ msgstr "설치 준비 완료"
 msgid "Click the button below to start"
 msgstr "아래 버튼을 클릭하여 시작하세요"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 104
+#: NEEDS WORK
+msgid "Installation progress"
+msgstr "설치 진행 상황"
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 62
 #: NEEDS WORK
 msgid "Waiting to start..."
 msgstr "시작 대기 중..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 120
+#: NEEDS WORK
+msgid "Installation status updates"
+msgstr "설치 상태 업데이트"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 138
+#: NEEDS WORK
+msgid "Install Jellyfin on TV"
+msgstr "TV에 Jellyfin 설치"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 149
+#: NEEDS WORK
+msgid "Cancel installation"
+msgstr "설치 취소"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 67
 #: NEEDS WORK
@@ -802,6 +236,16 @@ msgstr "TV에 연결 중..."
 msgid "Finishing..."
 msgstr "완료 중..."
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 364
+#: NEEDS WORK
+msgid "Extracting layers..."
+msgstr "레이어 추출 중..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 366
+#: NEEDS WORK
+msgid "Download complete"
+msgstr "다운로드 완료"
+# 
 # File: usr/share/jellybeam/pages/welcome.py, line: 216
 #: NEEDS WORK
 msgid "Error"
@@ -848,6 +292,662 @@ msgstr "설치가 취소되었습니다"
 msgid "Installation cancelled"
 msgstr "설치가 취소되었습니다"
 # 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 49
+# File: usr/share/jellybeam/pages/welcome.py, line: 185
+#: NEEDS WORK
+msgid "Device Setup"
+msgstr "장치 설정"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 50
+#: NEEDS WORK
+msgid "Connect to your Samsung Tizen TV or projector"
+msgstr "삼성 타이젠 TV 또는 프로젝터에 연결하세요."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 58
+#: NEEDS WORK
+msgid "Setup Instructions"
+msgstr "설치 지침"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 63
+#: NEEDS WORK
+msgid "Enable Developer Mode on TV"
+msgstr "TV에서 개발자 모드 활성화"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 64
+#: NEEDS WORK
+msgid "Click to view step-by-step instructions"
+msgstr "단계별 지침을 보려면 클릭하세요"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 75
+#: NEEDS WORK
+msgid "1. Open Apps"
+msgstr "1. 앱 열기"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 76
+#: NEEDS WORK
+msgid "On the TV, go to the 'Apps' section"
+msgstr "TV에서 '앱' 섹션으로 이동하세요."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 83
+#: NEEDS WORK
+msgid "2. Go to App Settings"
+msgstr "2. 앱 설정으로 이동"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 79
+#: NEEDS WORK
+msgid "Scroll to the end and select 'App Settings'"
+msgstr "끝으로 스크롤하여 '앱 설정'을 선택하세요."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 91
+#: NEEDS WORK
+msgid "3. Press '123' Button"
+msgstr "3. '123' 버튼을 누르세요"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 85
+#: NEEDS WORK
+msgid "Press the '123' button on your remote"
+msgstr "리모컨에서 '123' 버튼을 누르세요"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 90
+#: NEEDS WORK
+msgid "4. Enter Code '12345'"
+msgstr "4. 코드 '12345' 입력하세요"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 91
+#: NEEDS WORK
+msgid "Developer Mode menu will appear"
+msgstr "개발자 모드 메뉴가 나타납니다"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 107
+#: NEEDS WORK
+msgid "5. Enable Developer Mode"
+msgstr "5. 개발자 모드 활성화"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 97
+#: NEEDS WORK
+msgid "Toggle 'Developer Mode' to 'On'"
+msgstr "'개발자 모드'를 '켜기'로 전환"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 103
+#: NEEDS WORK
+#, python-brace-format
+msgid "6. Enter This IP: {ip}"
+msgstr "6. 이 IP 입력: {ip}"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 104
+#: NEEDS WORK
+msgid "Your computer's IP address"
+msgstr "당신 컴퓨터의 IP 주소"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 403
+# File: usr/share/jellybeam/pages/device.py, line: 430
+#: NEEDS WORK
+msgid "Copy IP"
+msgstr "IP 복사"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 114
+#: NEEDS WORK
+msgid "Copy local IP address to clipboard"
+msgstr "로컬 IP 주소를 클립보드에 복사"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 131
+#: NEEDS WORK
+msgid "7. Restart TV"
+msgstr "7. TV 재시작"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 116
+#: NEEDS WORK
+msgid "Turn off and on your TV"
+msgstr "TV를 끄고 켜세요"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 162
+#: NEEDS WORK
+msgid "Confirmation"
+msgstr "확인"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 167
+#: NEEDS WORK
+msgid "Developer Mode Enabled"
+msgstr "개발자 모드 활성화됨"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 168
+#: NEEDS WORK
+msgid "I confirm I have completed the steps above on my TV"
+msgstr "위의 단계를 TV에서 완료했음을 확인합니다."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 55
+#: NEEDS WORK
+msgid "Device Discovery"
+msgstr "장치 검색"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 60
+#: NEEDS WORK
+msgid "Scan Network"
+msgstr "네트워크 스캔"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 61
+#: NEEDS WORK
+msgid "Automatically discover Samsung devices on your network"
+msgstr "네트워크에서 삼성 장치를 자동으로 검색합니다."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 63
+# File: usr/share/jellybeam/pages/device.py, line: 163
+#: NEEDS WORK
+msgid "Scan"
+msgstr "스캔"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 172
+#: NEEDS WORK
+msgid "Scan network for Samsung devices"
+msgstr "삼성 장치를 위한 네트워크 스캔"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 73
+#: NEEDS WORK
+msgid "Discovered Devices"
+msgstr "발견된 장치"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 74
+#: NEEDS WORK
+msgid "Select your target device"
+msgstr "대상 장치를 선택하세요"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 79
+#: NEEDS WORK
+msgid "Manual Connection"
+msgstr "수동 연결"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 80
+#: NEEDS WORK
+msgid "Enter device details manually"
+msgstr "장치 세부정보를 수동으로 입력하세요"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 85
+#: NEEDS WORK
+msgid "Device IP Address"
+msgstr "장치 IP 주소"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 201
+#: NEEDS WORK
+msgid "Enter the Samsung TV IP address, for example 192.168.1.100"
+msgstr "삼성 TV의 IP 주소를 입력하세요. 예: 192.168.1.100"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 119
+#: NEEDS WORK
+msgid "Connect to Device"
+msgstr "장치에 연결"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 120
+#: NEEDS WORK
+msgid "Establish connection with your TV"
+msgstr "TV와 연결을 설정합니다."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 122
+# File: usr/share/jellybeam/pages/device.py, line: 250
+#: NEEDS WORK
+msgid "Connect"
+msgstr "연결"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 222
+#: NEEDS WORK
+msgid "Connect to Samsung TV"
+msgstr "삼성 TV에 연결"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 132
+#: NEEDS WORK
+msgid "Continue to Certificates"
+msgstr "인증서로 계속하기"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 133
+#: NEEDS WORK
+msgid "Setup developer certificates"
+msgstr "개발자 인증서 설정"
+# 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 117
+# File: usr/share/jellybeam/pages/device.py, line: 135
+# File: usr/share/jellybeam/pages/welcome.py, line: 105
+#: NEEDS WORK
+msgid "Continue"
+msgstr "계속"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 422
+#: NEEDS WORK
+msgid "Unable to determine IP"
+msgstr "IP를 결정할 수 없습니다."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 429
+#: NEEDS WORK
+msgid "Copied!"
+msgstr "복사됨!"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 153
+#: NEEDS WORK
+msgid "Scanning..."
+msgstr "스캔 중..."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 178
+#: NEEDS WORK
+msgid "No devices found"
+msgstr "장치가 발견되지 않았습니다."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 179
+#: NEEDS WORK
+msgid "Try manual connection or check network"
+msgstr "수동 연결을 시도하거나 네트워크를 확인하세요"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 186
+#: NEEDS WORK
+msgid "Unknown Device"
+msgstr "알 수 없는 장치"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 187
+#: NEEDS WORK
+#, python-brace-format
+msgid "IP: {ip} | Model: {model}"
+msgstr "IP: {ip} | 모델: {model}"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 187
+#: NEEDS WORK
+msgid "Unknown"
+msgstr "알 수 없음"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 189
+#: NEEDS WORK
+msgid "Select"
+msgstr "선택"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 200
+#: NEEDS WORK
+msgid "Found 1 device - Select your target device"
+msgstr "1개의 장치가 발견되었습니다 - 대상 장치를 선택하세요"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 202
+#: NEEDS WORK
+#, python-brace-format
+msgid "Found {count} devices - Select your target device"
+msgstr "{count}개의 장치를 찾았습니다 - 대상 장치를 선택하세요"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 304
+#: NEEDS WORK
+#, python-brace-format
+msgid "Device selected: {name}"
+msgstr "선택한 장치: {name}"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 366
+#: NEEDS WORK
+msgid "Device IP Address — Invalid format (e.g. 192.168.1.100)"
+msgstr "장치 IP 주소 — 잘못된 형식(예: 192.168.1.100)"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 232
+#: NEEDS WORK
+msgid "Please enter a device IP address"
+msgstr "장치 IP 주소를 입력하십시오."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 236
+#: NEEDS WORK
+msgid "Please enter a valid IP address"
+msgstr "유효한 IP 주소를 입력하십시오."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 241
+#: NEEDS WORK
+msgid "Connecting..."
+msgstr "연결 중..."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 255
+#: NEEDS WORK
+msgid "Connected successfully!"
+msgstr "연결이 성공적으로 완료되었습니다!"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 425
+#: NEEDS WORK
+msgid "Connection Failed"
+msgstr "연결 실패"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 257
+#: NEEDS WORK
+#, python-brace-format
+msgid "Connection failed: {message}"
+msgstr "연결 실패: {message}"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 264
+#: NEEDS WORK
+msgid "Certificates"
+msgstr "인증서"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 24
+#: NEEDS WORK
+msgid "General"
+msgstr "일반"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 30
+#: NEEDS WORK
+msgid "Docker Settings"
+msgstr "도커 설정"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 31
+#: NEEDS WORK
+msgid "Configure Docker behavior and settings"
+msgstr "Docker 동작 및 설정 구성"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 36
+#: NEEDS WORK
+msgid "Docker Image"
+msgstr "도커 이미지"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 43
+#: NEEDS WORK
+msgid "Auto-pull Updates"
+msgstr "자동 업데이트 가져오기"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 44
+#: NEEDS WORK
+msgid "Automatically pull the latest Docker image"
+msgstr "최신 Docker 이미지를 자동으로 가져옵니다."
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 51
+#: NEEDS WORK
+msgid "Network Settings"
+msgstr "네트워크 설정"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 52
+#: NEEDS WORK
+msgid "Configure network scanning and timeouts"
+msgstr "네트워크 스캔 및 타임아웃 구성"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 57
+#: NEEDS WORK
+msgid "Scan Timeout"
+msgstr "스캔 시간 초과"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 58
+#: NEEDS WORK
+msgid "Timeout for network device scanning (seconds)"
+msgstr "네트워크 장치 스캔 타임아웃(초)"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 67
+#: NEEDS WORK
+msgid "Port Range"
+msgstr "포트 범위"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 68
+#: NEEDS WORK
+msgid "Scan port range (e.g., 8000-8080)"
+msgstr "포트 범위 스캔 (예: 8000-8080)"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 102
+#: NEEDS WORK
+msgid "Port range for network scanning"
+msgstr "네트워크 스캔을 위한 포트 범위"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 80
+#: NEEDS WORK
+msgid "Logging"
+msgstr "로깅"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 81
+#: NEEDS WORK
+msgid "Configure application logging"
+msgstr "애플리케이션 로깅 구성"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 86
+#: NEEDS WORK
+msgid "Log Level"
+msgstr "로그 수준"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 87
+#: NEEDS WORK
+msgid "Verbosity of application logs"
+msgstr "애플리케이션 로그의 상세 수준"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 104
+#: NEEDS WORK
+msgid "Save Logs to File"
+msgstr "파일에 로그 저장"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 105
+#: NEEDS WORK
+msgid "Save application logs to ~/.local/share/jellybeam/logs"
+msgstr "응용 프로그램 로그를 ~/.local/share/jellybeam/logs에 저장합니다."
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 112
+#: NEEDS WORK
+msgid "Advanced"
+msgstr "고급"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 118
+#: NEEDS WORK
+msgid "Developer Options"
+msgstr "개발자 옵션"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 119
+#: NEEDS WORK
+msgid "Advanced settings for developers"
+msgstr "개발자를 위한 고급 설정"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 124
+#: NEEDS WORK
+msgid "Debug Mode"
+msgstr "디버그 모드"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 125
+#: NEEDS WORK
+msgid "Enable debug mode for development"
+msgstr "개발을 위한 디버그 모드 활성화"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 140
+# File: usr/share/jellybeam/pages/preferences.py, line: 148
+# File: usr/share/jellybeam/pages/preferences.py, line: 172
+#: NEEDS WORK
+msgid "Reset"
+msgstr "재설정"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 141
+#: NEEDS WORK
+msgid "Reset application settings"
+msgstr "애플리케이션 설정 초기화"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 145
+#: NEEDS WORK
+msgid "Reset All Settings"
+msgstr "모든 설정 초기화"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 146
+#: NEEDS WORK
+msgid "Reset all preferences to default values"
+msgstr "모든 환경설정을 기본값으로 재설정합니다."
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 168
+#: NEEDS WORK
+msgid "Reset All Settings?"
+msgstr "모든 설정 초기화?"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 169
+#: NEEDS WORK
+msgid "This will reset all preferences to their default values. This action cannot be undone."
+msgstr "이 작업은 모든 기본 설정을 기본값으로 재설정합니다. 이 작업은 실행 취소할 수 없습니다."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 31
+#: NEEDS WORK
+msgid "Developer Certificates"
+msgstr "개발자 인증서"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 48
+#: NEEDS WORK
+msgid "Certificates are required to install apps on Samsung TVs"
+msgstr "앱을 삼성 TV에 설치하려면 인증서가 필요합니다."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
+#: NEEDS WORK
+msgid "Certificate Mode"
+msgstr "인증서 모드"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 60
+#: NEEDS WORK
+msgid "Use Built-in Certificates"
+msgstr "내장 인증서 사용"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 61
+#: NEEDS WORK
+msgid "Recommended - No Tizen Studio required"
+msgstr "추천 - Tizen Studio 필요 없음"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 73
+#: NEEDS WORK
+msgid "How it works"
+msgstr "작동 방식"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 74
+#: NEEDS WORK
+msgid ""
+"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
+"without any setup."
+msgstr "Docker 컨테이너에는 미리 구성된 인증서가 포함되어 있습니다. 설정 없이 즉시 Jellyfin을 설치할 수 있습니다."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 83
+#: NEEDS WORK
+msgid "Custom Certificates (Advanced)"
+msgstr "사용자 정의 인증서 (고급)"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 84
+#: NEEDS WORK
+msgid "Only needed if you want to use your own certificates"
+msgstr "자신의 인증서를 사용하려는 경우에만 필요합니다."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 43
+#: NEEDS WORK
+msgid "Author Certificate"
+msgstr "저자 인증서"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 148
+#: NEEDS WORK
+msgid "Select author.p12 file"
+msgstr "author.p12 파일 선택"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 46
+# File: usr/share/jellybeam/pages/certificates.py, line: 58
+#: NEEDS WORK
+msgid "Browse"
+msgstr "탐색"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
+#: NEEDS WORK
+msgid "Distributor Certificate"
+msgstr "배급사 인증서"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
+#: NEEDS WORK
+msgid "Select distributor.p12 file"
+msgstr "배포자.p12 파일 선택"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 115
+#: NEEDS WORK
+msgid "Certificate Password"
+msgstr "인증서 비밀번호"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
+#: NEEDS WORK
+msgid "Password for the author P12 certificate"
+msgstr "저자 P12 인증서의 비밀번호"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 122
+#: NEEDS WORK
+msgid "Need help creating certificates?"
+msgstr "인증서 생성에 도움이 필요하신가요?"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 123
+#: NEEDS WORK
+msgid "View tutorial on Samsung Developer website"
+msgstr "삼성 개발자 웹사이트에서 튜토리얼 보기"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 127
+#: NEEDS WORK
+msgid "View Guide"
+msgstr "가이드 보기"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 114
+#: NEEDS WORK
+msgid "Continue to Installation"
+msgstr "설치 계속하기"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 226
+#: NEEDS WORK
+msgid "Proceed to install Jellyfin on your TV"
+msgstr "TV에 Jellyfin을 설치합니다."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 171
+#: NEEDS WORK
+msgid "Ready to install with built-in certificates"
+msgstr "내장된 인증서로 설치 준비 완료"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
+#: NEEDS WORK
+#, python-brace-format
+msgid "Select {cert_type} certificate"
+msgstr "{cert_type} 인증서 선택"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 136
+#: NEEDS WORK
+msgid "P12 Certificate Files"
+msgstr "P12 인증서 파일"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 212
+# File: usr/share/jellybeam/pages/certificates.py, line: 215
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+# File: usr/share/jellybeam/pages/certificates.py, line: 238
+#: NEEDS WORK
+#, python-brace-format
+msgid "✅ {filename}"
+msgstr "✅ {파일 이름}"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 163
+# File: usr/share/jellybeam/pages/certificates.py, line: 166
+# File: usr/share/jellybeam/pages/certificates.py, line: 185
+# File: usr/share/jellybeam/pages/certificates.py, line: 191
+#: NEEDS WORK
+msgid "Change"
+msgstr "변경"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 251
+#: NEEDS WORK
+msgid "Ready to install with custom certificates"
+msgstr "사용자 정의 인증서로 설치 준비 완료"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 326
+#: NEEDS WORK
+msgid "author certificate"
+msgstr "저자 인증서"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 328
+#: NEEDS WORK
+msgid "distributor certificate"
+msgstr "배급사 인증서"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 330
+#: NEEDS WORK
+msgid "password"
+msgstr "비밀번호"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid "Missing: {items}"
+msgstr "누락됨: {items}"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+#: NEEDS WORK
+msgid "Installation"
+msgstr "설치"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 310
+#: NEEDS WORK
+msgid "Certificate Error"
+msgstr "인증서 오류"
+# 
 # File: usr/share/jellybeam/pages/welcome.py, line: 60
 #: NEEDS WORK
 msgid "JellyBeam Installer"
@@ -857,6 +957,46 @@ msgstr "젤리타이젠 설치 프로그램"
 #: NEEDS WORK
 msgid "Install Jellyfin on your Samsung Smart TV or projector"
 msgstr "삼성 스마트 TV 또는 프로젝터에 Jellyfin 설치하기"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+#: NEEDS WORK
+msgid "4 simple steps to get Jellyfin on your Samsung TV"
+msgstr "삼성 TV에서 Jellyfin을 설치하는 4단계 간단 가이드"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Check Requirements"
+msgstr "요구 사항 확인"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Ensure Docker is installed"
+msgstr "Docker가 설치되어 있는지 확인하십시오."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Connect Device"
+msgstr "장치 연결"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Find your TV on the network"
+msgstr "네트워크에서 TV 찾기"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Configure signing (auto by default)"
+msgstr "서명 구성 (기본값으로 자동)"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 92
+#: NEEDS WORK
+msgid "Install"
+msgstr "설치"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
+#: NEEDS WORK
+msgid "One click to deploy Jellyfin"
+msgstr "젤리핀 배포를 위한 한 번의 클릭"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 68
 #: NEEDS WORK
@@ -885,17 +1025,17 @@ msgstr "도커 설치"
 msgid "Docker is required but not installed"
 msgstr "Docker가 필요하지만 설치되지 않았습니다."
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 92
+# File: usr/share/jellybeam/pages/welcome.py, line: 133
 #: NEEDS WORK
 msgid "Docker Group"
 msgstr "도커 그룹"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 134
+# File: usr/share/jellybeam/pages/welcome.py, line: 134
 #: NEEDS WORK
 msgid "User not in docker group"
 msgstr "사용자가 도커 그룹에 없습니다."
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 136
+# File: usr/share/jellybeam/pages/welcome.py, line: 136
 #: NEEDS WORK
 msgid "Add to group"
 msgstr "그룹에 추가"
@@ -905,10 +1045,20 @@ msgstr "그룹에 추가"
 msgid "Configure your Samsung TV"
 msgstr "삼성 TV 설정하기"
 # 
+# File: usr/share/jellybeam/pages/welcome.py, line: 157
+#: NEEDS WORK
+msgid "Continue to Device Setup"
+msgstr "장치 설정 계속하기"
+# 
 # File: usr/share/jellybeam/pages/welcome.py, line: 135
 #: NEEDS WORK
 msgid "Ready"
 msgstr "준비 완료"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
+#: NEEDS WORK
+msgid "Permission required"
+msgstr "권한 필요"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 142
 #: NEEDS WORK
@@ -925,12 +1075,12 @@ msgstr "시작"
 msgid "Not installed"
 msgstr "설치되지 않음"
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 193
+# File: usr/share/jellybeam/pages/welcome.py, line: 259
 #: NEEDS WORK
 msgid "Added to group"
 msgstr "그룹에 추가됨"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 307
+# File: usr/share/jellybeam/pages/welcome.py, line: 307
 #: NEEDS WORK
 msgid ""
 "Select your distribution:\n"
@@ -956,27 +1106,18 @@ msgstr "데비안/우분투"
 msgid "Fedora/RHEL"
 msgstr "페도라/RHEL"
 # 
-# File: usr/share/jellybeam/app.py, line: 84
+# File: usr/share/jellybeam/pages/welcome.py, line: 331
 #: NEEDS WORK
 msgid "Installing Docker..."
 msgstr "도커 설치 중..."
 # 
-# File: usr/share/jellybeam/app.py, line: 106
+# File: usr/share/jellybeam/pages/welcome.py, line: 347
 #: NEEDS WORK
 msgid "Docker installed! Checking status..."
 msgstr "Docker가 설치되었습니다! 상태 확인 중..."
 # 
-# File: usr/share/jellybeam/app.py, line: 113
+# File: usr/share/jellybeam/pages/welcome.py, line: 355
 #: NEEDS WORK
-msgid "About"
-msgstr "정보"
-# 
-# File: usr/share/jellybeam/app.py, line: 139
-#: NEEDS WORK
-msgid "JellyBeam Team"
-msgstr "젤리타이젠 팀"
-# 
-# File: usr/share/jellybeam/app.py, line: 145
-#: NEEDS WORK
-msgid "JellyBeam Contributors"
-msgstr "젤리타이젠 기여자"
+#, python-brace-format
+msgid "Installation failed: {msg}"
+msgstr "설치 실패: {msg}"

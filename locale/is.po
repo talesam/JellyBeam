@@ -41,185 +41,15 @@ msgstr "Staðfesta"
 msgid "Cancel"
 msgstr "Hætta við"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 31
+# File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
 msgstr "Fara aftur"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 48
+# File: usr/share/jellybeam/app.py, line: 108
 #: NEEDS WORK
-msgid "Certificates are required to install apps on Samsung TVs"
-msgstr "Vottan eru nauðsynleg til að setja upp forrit á Samsung sjónvörpum."
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
-#: NEEDS WORK
-msgid "Certificate Mode"
-msgstr "Vottunarmódur"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 60
-#: NEEDS WORK
-msgid "Use Built-in Certificates"
-msgstr "Notaðu innbyggð vottorð"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 61
-#: NEEDS WORK
-msgid "Recommended - No Tizen Studio required"
-msgstr "Mælt með - Engin Tizen Studio nauðsynleg"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 73
-#: NEEDS WORK
-msgid "How it works"
-msgstr "Hvernig það virkar"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 74
-#: NEEDS WORK
-msgid ""
-"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
-"without any setup."
-msgstr ""
-"Docker ílátin inniheldur fyrirfram stillt vottorð. Þú getur sett upp Jellyfin strax án þess að "
-"þurfa að stilla neitt."
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 83
-#: NEEDS WORK
-msgid "Custom Certificates (Advanced)"
-msgstr "Sérfræðivottorð (Fyrirferðarmiklar)"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 84
-#: NEEDS WORK
-msgid "Only needed if you want to use your own certificates"
-msgstr "Aðeins nauðsynlegt ef þú vilt nota eigin vottorð."
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 43
-#: NEEDS WORK
-msgid "Author Certificate"
-msgstr "Höfundarvottorður"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 148
-#: NEEDS WORK
-msgid "Select author.p12 file"
-msgstr "Veldu author.p12 skrá"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 46
-# File: usr/share/jellybeam/pages/certificates.py, line: 58
-#: NEEDS WORK
-msgid "Browse"
-msgstr "Skoða"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
-#: NEEDS WORK
-msgid "Distributor Certificate"
-msgstr "Sertifikat dreifanda"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 162
-#: NEEDS WORK
-msgid "Select distributor.p12 file"
-msgstr "Veldu distributor.p12 skrá"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 115
-#: NEEDS WORK
-msgid "Certificate Password"
-msgstr "Vottorðaskilríki"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 122
-#: NEEDS WORK
-msgid "Need help creating certificates?"
-msgstr "Þarf þú aðstoð við að búa til vottorð?"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 123
-#: NEEDS WORK
-msgid "View tutorial on Samsung Developer website"
-msgstr "Skoða leiðbeiningar á vefsíðu Samsung Developers"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 127
-#: NEEDS WORK
-msgid "View Guide"
-msgstr "Skoða leiðbeiningar"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 114
-#: NEEDS WORK
-msgid "Continue to Installation"
-msgstr "Halda áfram í uppsetningu"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 226
-#: NEEDS WORK
-msgid "Proceed to install Jellyfin on your TV"
-msgstr "Fara að setja Jellyfin á sjónvarpið þitt"
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 117
-# File: usr/share/jellybeam/pages/device.py, line: 135
-# File: usr/share/jellybeam/pages/welcome.py, line: 105
-#: NEEDS WORK
-msgid "Continue"
-msgstr "Halda áfram"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 171
-#: NEEDS WORK
-msgid "Ready to install with built-in certificates"
-msgstr "Tilbúið til að setja upp með innbyggðum vottorðum"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 132
-#: NEEDS WORK
-#, python-brace-format
-msgid "Select {cert_type} certificate"
-msgstr "Veldu {cert_type} vottun"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 136
-#: NEEDS WORK
-msgid "P12 Certificate Files"
-msgstr "P12 vottunarskráarskrár"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 212
-# File: usr/share/jellybeam/pages/certificates.py, line: 215
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-# File: usr/share/jellybeam/pages/certificates.py, line: 238
-#: NEEDS WORK
-#, python-brace-format
-msgid "✅ {filename}"
-msgstr "✅ {skráarnafn}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 163
-# File: usr/share/jellybeam/pages/certificates.py, line: 166
-# File: usr/share/jellybeam/pages/certificates.py, line: 185
-# File: usr/share/jellybeam/pages/certificates.py, line: 191
-#: NEEDS WORK
-msgid "Change"
-msgstr "Breyta"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 251
-#: NEEDS WORK
-msgid "Ready to install with custom certificates"
-msgstr "Tilbúin til að setja upp með sérsniðnum vottorðum"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 326
-#: NEEDS WORK
-msgid "author certificate"
-msgstr "höfundarvottorð"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 328
-#: NEEDS WORK
-msgid "distributor certificate"
-msgstr "dreifingarskírteini"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 330
-#: NEEDS WORK
-msgid "password"
-msgstr "lykilord"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 331
-#: NEEDS WORK
-#, python-brace-format
-msgid "Missing: {items}"
-msgstr "Vantar: {items}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-#: NEEDS WORK
-msgid "Installation"
-msgstr "Uppsetning"
+msgid "Main Menu"
+msgstr "Aðalvalmynd"
 # 
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
@@ -229,440 +59,20 @@ msgstr "Uppsetning"
 msgid "Preferences"
 msgstr "Valmyndir"
 # 
-# File: usr/share/jellybeam/pages/preferences.py, line: 24
+# File: usr/share/jellybeam/app.py, line: 113
 #: NEEDS WORK
 msgid "About"
 msgstr "Um umfjöllun"
 # 
-# File: usr/share/jellybeam/pages/preferences.py, line: 30
+# File: usr/share/jellybeam/app.py, line: 139
 #: NEEDS WORK
-msgid "JellyTizen Team"
-msgstr "JellyTizen Teymi"
+msgid "JellyBeam Team"
+msgstr "JellyBeam Teymi"
 # 
-# File: usr/share/jellybeam/pages/preferences.py, line: 31
+# File: usr/share/jellybeam/app.py, line: 145
 #: NEEDS WORK
-msgid "Configure Docker behavior and settings"
-msgstr "Stillir hegðun og stillingar Docker"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 36
-#: NEEDS WORK
-msgid "Docker Image"
-msgstr "Docker mynd"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 43
-#: NEEDS WORK
-msgid "Auto-pull Updates"
-msgstr "Sjálfvirkar uppfærslur"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 44
-#: NEEDS WORK
-msgid "Automatically pull the latest Docker image"
-msgstr "Sjálfvirkt að draga nýjustu Docker myndina"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 51
-#: NEEDS WORK
-msgid "Network Settings"
-msgstr "Netvangaskipti"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 52
-#: NEEDS WORK
-msgid "Configure network scanning and timeouts"
-msgstr "Stillir netkerfis skönnun og tímasetningar"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 57
-#: NEEDS WORK
-msgid "Scan Timeout"
-msgstr "Skanna Tími útrunni"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 58
-#: NEEDS WORK
-msgid "Timeout for network device scanning (seconds)"
-msgstr "Tími fyrir skönnun nettækja (sekúndur)"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 67
-#: NEEDS WORK
-msgid "Port Range"
-msgstr "Porta svið"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 68
-#: NEEDS WORK
-msgid "Scan port range (e.g., 8000-8080)"
-msgstr "Skoða hafnarsvið (t.d. 8000-8080)"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 80
-#: NEEDS WORK
-msgid "Logging"
-msgstr "Skrásetning"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 81
-#: NEEDS WORK
-msgid "Configure application logging"
-msgstr "Stillir skráningu forrita"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 86
-#: NEEDS WORK
-msgid "Log Level"
-msgstr "Skráningarstig"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 87
-#: NEEDS WORK
-msgid "Verbosity of application logs"
-msgstr "Skráning á skráningu forrita"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 104
-#: NEEDS WORK
-msgid "Save Logs to File"
-msgstr "Vista skrá yfir skráningar"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 105
-#: NEEDS WORK
-msgid "Save application logs to ~/.local/share/jellybeam/logs"
-msgstr "Vista forritaskrár í ~/.local/share/jellybeam/logs"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 112
-#: NEEDS WORK
-msgid "Advanced"
-msgstr "Fyrirferðarmikill"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 118
-#: NEEDS WORK
-msgid "Developer Options"
-msgstr "Þróunaraðgerðir"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 119
-#: NEEDS WORK
-msgid "Advanced settings for developers"
-msgstr "Fyrirlestrarstillingar fyrir þróunaraðila"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 124
-#: NEEDS WORK
-msgid "Debug Mode"
-msgstr "Villurhamur"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 125
-#: NEEDS WORK
-msgid "Enable debug mode for development"
-msgstr "Virkja villuhamar fyrir þróun"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 140
-# File: usr/share/jellybeam/pages/preferences.py, line: 148
-# File: usr/share/jellybeam/pages/preferences.py, line: 172
-#: NEEDS WORK
-msgid "Reset"
-msgstr "Endurstilla"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 141
-#: NEEDS WORK
-msgid "Reset application settings"
-msgstr "Endurstilla forritstillingar"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 145
-#: NEEDS WORK
-msgid "Reset All Settings"
-msgstr "Endurstillu allar stillingar"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 146
-#: NEEDS WORK
-msgid "Reset all preferences to default values"
-msgstr "Endurstilltu allar stillingar á sjálfgefnar gildi"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 168
-#: NEEDS WORK
-msgid "Reset All Settings?"
-msgstr "Endurstilla allar stillingar?"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 169
-#: NEEDS WORK
-msgid "This will reset all preferences to their default values. This action cannot be undone."
-msgstr ""
-"Þetta mun endurstilla allar stillingar í þeirra sjálfgefnar gildi. Þessi aðgerð er ekki hægt að "
-"afturkalla."
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 49
-# File: usr/share/jellybeam/pages/welcome.py, line: 185
-#: NEEDS WORK
-msgid "Device Setup"
-msgstr "Tæki Uppsetning"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 50
-#: NEEDS WORK
-msgid "Connect to your Samsung Tizen TV or projector"
-msgstr "Tengdu samband við Samsung Tizen sjónvarpið þitt eða skjávarpa."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 58
-#: NEEDS WORK
-msgid "Setup Instructions"
-msgstr "Uppsetningarleiðbeiningar"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 63
-#: NEEDS WORK
-msgid "Enable Developer Mode on TV"
-msgstr "Virkja þróunarmód á sjónvarpinu"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 64
-#: NEEDS WORK
-msgid "Click to view step-by-step instructions"
-msgstr "Smelltu til að skoða skref-fyrir-skref leiðbeiningar"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 75
-#: NEEDS WORK
-msgid "1. Open Apps"
-msgstr "1. Opna forrit"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 76
-#: NEEDS WORK
-msgid "On the TV, go to the 'Apps' section"
-msgstr "Á sjónvarpinu, farðu í 'Forrit' hlutann"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 83
-#: NEEDS WORK
-msgid "2. Go to App Settings"
-msgstr "2. Farðu í forritastillingar"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 79
-#: NEEDS WORK
-msgid "Scroll to the end and select 'App Settings'"
-msgstr "Skrunaðu að endanum og veldu 'App Settings'"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 91
-#: NEEDS WORK
-msgid "3. Press '123' Button"
-msgstr "3. Ýttu á '123' takkann"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 85
-#: NEEDS WORK
-msgid "Press the '123' button on your remote"
-msgstr "Pressaðu á '123' takkann á fjarstýringunni þinni"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 90
-#: NEEDS WORK
-msgid "4. Enter Code '12345'"
-msgstr "4. Sláðu inn kóða '12345'"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 91
-#: NEEDS WORK
-msgid "Developer Mode menu will appear"
-msgstr "Þróunarmód valmynd mun birtast"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 107
-#: NEEDS WORK
-msgid "5. Enable Developer Mode"
-msgstr "5. Virkja þróunarmód"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 97
-#: NEEDS WORK
-msgid "Toggle 'Developer Mode' to 'On'"
-msgstr "Virkja 'Þróunarmód' á 'Á'"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 103
-#: NEEDS WORK
-#, python-brace-format
-msgid "6. Enter This IP: {ip}"
-msgstr "6. Sláðu inn þessa IP: {ip}"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 104
-#: NEEDS WORK
-msgid "Your computer's IP address"
-msgstr "IP-talað á tölvunni þinni"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 403
-# File: usr/share/jellybeam/pages/device.py, line: 430
-#: NEEDS WORK
-msgid "Copy IP"
-msgstr "Afrita IP"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 131
-#: NEEDS WORK
-msgid "7. Restart TV"
-msgstr "7. Endurræsa sjónvarpið"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 116
-#: NEEDS WORK
-msgid "Turn off and on your TV"
-msgstr "Slökkva og kveikja á sjónvarpinu þínu"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 162
-#: NEEDS WORK
-msgid "Confirmation"
-msgstr "Staðfesting"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 167
-#: NEEDS WORK
-msgid "Developer Mode Enabled"
-msgstr "Þróunaraðgerð virkjuð"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 168
-#: NEEDS WORK
-msgid "I confirm I have completed the steps above on my TV"
-msgstr "Ég staðfesti að ég hafi lokið skrefunum hér að ofan á sjónvarpinu mínu."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 55
-#: NEEDS WORK
-msgid "Device Discovery"
-msgstr "Tæki Uppgötvun"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 60
-#: NEEDS WORK
-msgid "Scan Network"
-msgstr "Skoða netið"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 61
-#: NEEDS WORK
-msgid "Automatically discover Samsung devices on your network"
-msgstr "Sjálfvirkt að finna Samsung tæki á netinu þínu"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 63
-# File: usr/share/jellybeam/pages/device.py, line: 163
-#: NEEDS WORK
-msgid "Scan"
-msgstr "Skenna"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 73
-#: NEEDS WORK
-msgid "Discovered Devices"
-msgstr "Fundin tæki"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 74
-#: NEEDS WORK
-msgid "Select your target device"
-msgstr "Veldu markmiðstækið þitt"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 79
-#: NEEDS WORK
-msgid "Manual Connection"
-msgstr "Handvirkni tenging"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 80
-#: NEEDS WORK
-msgid "Enter device details manually"
-msgstr "Sláðu inn tækinfærslur handvirkt"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 85
-#: NEEDS WORK
-msgid "Device IP Address"
-msgstr "Tæki IP heimilisfang"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 119
-#: NEEDS WORK
-msgid "Connect to Device"
-msgstr "Tengdu tengingu"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 120
-#: NEEDS WORK
-msgid "Establish connection with your TV"
-msgstr "Tengdu tengingu við sjónvarpið þitt"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 122
-# File: usr/share/jellybeam/pages/device.py, line: 250
-#: NEEDS WORK
-msgid "Connect"
-msgstr "Tengdu"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 132
-#: NEEDS WORK
-msgid "Continue to Certificates"
-msgstr "Halda áfram að vottunum"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 133
-#: NEEDS WORK
-msgid "Setup developer certificates"
-msgstr "Uppsetning þróunarskírteina"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 422
-#: NEEDS WORK
-msgid "Unable to determine IP"
-msgstr "Ekki er hægt að ákvarða IP."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 429
-#: NEEDS WORK
-msgid "Copied!"
-msgstr "Afrit!"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 153
-#: NEEDS WORK
-msgid "Scanning..."
-msgstr "Skoðun..."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 178
-#: NEEDS WORK
-msgid "No devices found"
-msgstr "Engin tæki fundin"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 179
-#: NEEDS WORK
-msgid "Try manual connection or check network"
-msgstr "Reyndu handvirka tengingu eða athugaðu netið"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 186
-#: NEEDS WORK
-msgid "Unknown Device"
-msgstr "Óþekkt tæki"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 187
-#: NEEDS WORK
-#, python-brace-format
-msgid "IP: {ip} | Model: {model}"
-msgstr "IP: {ip} | Model: {model}"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 187
-#: NEEDS WORK
-msgid "Unknown"
-msgstr "Óþekkt"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 189
-#: NEEDS WORK
-msgid "Select"
-msgstr "Veljaðu"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 200
-#: NEEDS WORK
-msgid "Found 1 device - Select your target device"
-msgstr "Fundin 1 tæki - Veldu þitt marktæki"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 202
-#: NEEDS WORK
-#, python-brace-format
-msgid "Found {count} devices - Select your target device"
-msgstr "Fundin {count} tæki - Veldu markmiðstækið þitt"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 304
-#: NEEDS WORK
-#, python-brace-format
-msgid "Device selected: {name}"
-msgstr "Tæki valið: {name}"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 232
-#: NEEDS WORK
-msgid "Please enter a device IP address"
-msgstr "Vinsamlegast sláðu inn IP-tölu tækis."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 236
-#: NEEDS WORK
-msgid "Please enter a valid IP address"
-msgstr "Vinsamlegast sláðu inn gilt IP-tölu"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 241
-#: NEEDS WORK
-msgid "Connecting..."
-msgstr "Tengist..."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 255
-#: NEEDS WORK
-msgid "Connected successfully!"
-msgstr "Tengist tengingu!"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 257
-#: NEEDS WORK
-#, python-brace-format
-msgid "Connection failed: {message}"
-msgstr "Tengist ekki: {message}"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 264
-#: NEEDS WORK
-msgid "Certificates"
-msgstr "Vottorð"
+msgid "JellyBeam Contributors"
+msgstr "JellyBeam Framleiðendur"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 53
 # File: usr/share/jellybeam/pages/install.py, line: 116
@@ -701,10 +111,30 @@ msgstr "Tilbúið til að setja upp"
 msgid "Click the button below to start"
 msgstr "Smelltu á hnappinn hér að neðan til að byrja"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 104
+#: NEEDS WORK
+msgid "Installation progress"
+msgstr "Uppsetningarframvinda"
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 62
 #: NEEDS WORK
 msgid "Waiting to start..."
 msgstr "Bíðandi eftir að byrja..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 120
+#: NEEDS WORK
+msgid "Installation status updates"
+msgstr "Uppfærslur um stöðu uppsetningar"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 138
+#: NEEDS WORK
+msgid "Install Jellyfin on TV"
+msgstr "Settu Jellyfin á sjónvarp"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 149
+#: NEEDS WORK
+msgid "Cancel installation"
+msgstr "Hætta við uppsetningu"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 67
 #: NEEDS WORK
@@ -806,6 +236,16 @@ msgstr "Tengist í sjónvarp..."
 msgid "Finishing..."
 msgstr "Að klára..."
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 364
+#: NEEDS WORK
+msgid "Extracting layers..."
+msgstr "Að draga út lög..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 366
+#: NEEDS WORK
+msgid "Download complete"
+msgstr "Niðurhal lokið"
+# 
 # File: usr/share/jellybeam/pages/welcome.py, line: 216
 #: NEEDS WORK
 msgid "Error"
@@ -852,6 +292,666 @@ msgstr "Uppsetningu var hætt."
 msgid "Installation cancelled"
 msgstr "Uppsetningu aflýst"
 # 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 49
+# File: usr/share/jellybeam/pages/welcome.py, line: 185
+#: NEEDS WORK
+msgid "Device Setup"
+msgstr "Tæki Uppsetning"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 50
+#: NEEDS WORK
+msgid "Connect to your Samsung Tizen TV or projector"
+msgstr "Tengdu samband við Samsung Tizen sjónvarpið þitt eða skjávarpa."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 58
+#: NEEDS WORK
+msgid "Setup Instructions"
+msgstr "Uppsetningarleiðbeiningar"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 63
+#: NEEDS WORK
+msgid "Enable Developer Mode on TV"
+msgstr "Virkja þróunarmód á sjónvarpinu"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 64
+#: NEEDS WORK
+msgid "Click to view step-by-step instructions"
+msgstr "Smelltu til að skoða skref-fyrir-skref leiðbeiningar"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 75
+#: NEEDS WORK
+msgid "1. Open Apps"
+msgstr "1. Opna forrit"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 76
+#: NEEDS WORK
+msgid "On the TV, go to the 'Apps' section"
+msgstr "Á sjónvarpinu, farðu í 'Forrit' hlutann"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 83
+#: NEEDS WORK
+msgid "2. Go to App Settings"
+msgstr "2. Farðu í forritastillingar"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 79
+#: NEEDS WORK
+msgid "Scroll to the end and select 'App Settings'"
+msgstr "Skrunaðu að endanum og veldu 'App Settings'"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 91
+#: NEEDS WORK
+msgid "3. Press '123' Button"
+msgstr "3. Ýttu á '123' takkann"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 85
+#: NEEDS WORK
+msgid "Press the '123' button on your remote"
+msgstr "Pressaðu á '123' takkann á fjarstýringunni þinni"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 90
+#: NEEDS WORK
+msgid "4. Enter Code '12345'"
+msgstr "4. Sláðu inn kóða '12345'"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 91
+#: NEEDS WORK
+msgid "Developer Mode menu will appear"
+msgstr "Þróunarmód valmynd mun birtast"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 107
+#: NEEDS WORK
+msgid "5. Enable Developer Mode"
+msgstr "5. Virkja þróunarmód"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 97
+#: NEEDS WORK
+msgid "Toggle 'Developer Mode' to 'On'"
+msgstr "Virkja 'Þróunarmód' á 'Á'"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 103
+#: NEEDS WORK
+#, python-brace-format
+msgid "6. Enter This IP: {ip}"
+msgstr "6. Sláðu inn þessa IP: {ip}"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 104
+#: NEEDS WORK
+msgid "Your computer's IP address"
+msgstr "IP-talað á tölvunni þinni"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 403
+# File: usr/share/jellybeam/pages/device.py, line: 430
+#: NEEDS WORK
+msgid "Copy IP"
+msgstr "Afrita IP"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 114
+#: NEEDS WORK
+msgid "Copy local IP address to clipboard"
+msgstr "Afrita staðbundna IP-tölu í klippiborð"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 131
+#: NEEDS WORK
+msgid "7. Restart TV"
+msgstr "7. Endurræsa sjónvarpið"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 116
+#: NEEDS WORK
+msgid "Turn off and on your TV"
+msgstr "Slökkva og kveikja á sjónvarpinu þínu"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 162
+#: NEEDS WORK
+msgid "Confirmation"
+msgstr "Staðfesting"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 167
+#: NEEDS WORK
+msgid "Developer Mode Enabled"
+msgstr "Þróunaraðgerð virkjuð"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 168
+#: NEEDS WORK
+msgid "I confirm I have completed the steps above on my TV"
+msgstr "Ég staðfesti að ég hafi lokið skrefunum hér að ofan á sjónvarpinu mínu."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 55
+#: NEEDS WORK
+msgid "Device Discovery"
+msgstr "Tæki Uppgötvun"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 60
+#: NEEDS WORK
+msgid "Scan Network"
+msgstr "Skoða netið"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 61
+#: NEEDS WORK
+msgid "Automatically discover Samsung devices on your network"
+msgstr "Sjálfvirkt að finna Samsung tæki á netinu þínu"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 63
+# File: usr/share/jellybeam/pages/device.py, line: 163
+#: NEEDS WORK
+msgid "Scan"
+msgstr "Skenna"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 172
+#: NEEDS WORK
+msgid "Scan network for Samsung devices"
+msgstr "Skoða netið fyrir Samsung tæki"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 73
+#: NEEDS WORK
+msgid "Discovered Devices"
+msgstr "Fundin tæki"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 74
+#: NEEDS WORK
+msgid "Select your target device"
+msgstr "Veldu markmiðstækið þitt"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 79
+#: NEEDS WORK
+msgid "Manual Connection"
+msgstr "Handvirkni tenging"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 80
+#: NEEDS WORK
+msgid "Enter device details manually"
+msgstr "Sláðu inn tækinfærslur handvirkt"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 85
+#: NEEDS WORK
+msgid "Device IP Address"
+msgstr "Tæki IP heimilisfang"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 201
+#: NEEDS WORK
+msgid "Enter the Samsung TV IP address, for example 192.168.1.100"
+msgstr "הזן את כתובת ה-IP של טלוויזיית סמסונג, לדוגמה 192.168.1.100"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 119
+#: NEEDS WORK
+msgid "Connect to Device"
+msgstr "Tengdu tengingu"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 120
+#: NEEDS WORK
+msgid "Establish connection with your TV"
+msgstr "Tengdu tengingu við sjónvarpið þitt"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 122
+# File: usr/share/jellybeam/pages/device.py, line: 250
+#: NEEDS WORK
+msgid "Connect"
+msgstr "Tengdu"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 222
+#: NEEDS WORK
+msgid "Connect to Samsung TV"
+msgstr "Tengdu samband við Samsung sjónvarp"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 132
+#: NEEDS WORK
+msgid "Continue to Certificates"
+msgstr "Halda áfram að vottunum"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 133
+#: NEEDS WORK
+msgid "Setup developer certificates"
+msgstr "Uppsetning þróunarskírteina"
+# 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 117
+# File: usr/share/jellybeam/pages/device.py, line: 135
+# File: usr/share/jellybeam/pages/welcome.py, line: 105
+#: NEEDS WORK
+msgid "Continue"
+msgstr "Halda áfram"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 422
+#: NEEDS WORK
+msgid "Unable to determine IP"
+msgstr "Ekki er hægt að ákvarða IP."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 429
+#: NEEDS WORK
+msgid "Copied!"
+msgstr "Afrit!"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 153
+#: NEEDS WORK
+msgid "Scanning..."
+msgstr "Skoðun..."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 178
+#: NEEDS WORK
+msgid "No devices found"
+msgstr "Engin tæki fundin"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 179
+#: NEEDS WORK
+msgid "Try manual connection or check network"
+msgstr "Reyndu handvirka tengingu eða athugaðu netið"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 186
+#: NEEDS WORK
+msgid "Unknown Device"
+msgstr "Óþekkt tæki"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 187
+#: NEEDS WORK
+#, python-brace-format
+msgid "IP: {ip} | Model: {model}"
+msgstr "IP: {ip} | Model: {model}"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 187
+#: NEEDS WORK
+msgid "Unknown"
+msgstr "Óþekkt"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 189
+#: NEEDS WORK
+msgid "Select"
+msgstr "Veljaðu"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 200
+#: NEEDS WORK
+msgid "Found 1 device - Select your target device"
+msgstr "Fundin 1 tæki - Veldu þitt marktæki"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 202
+#: NEEDS WORK
+#, python-brace-format
+msgid "Found {count} devices - Select your target device"
+msgstr "Fundin {count} tæki - Veldu markmiðstækið þitt"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 304
+#: NEEDS WORK
+#, python-brace-format
+msgid "Device selected: {name}"
+msgstr "Tæki valið: {name}"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 366
+#: NEEDS WORK
+msgid "Device IP Address — Invalid format (e.g. 192.168.1.100)"
+msgstr "Tæki IP heimilisfang — Ógildur sniðið (t.d. 192.168.1.100)"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 232
+#: NEEDS WORK
+msgid "Please enter a device IP address"
+msgstr "Vinsamlegast sláðu inn IP-tölu tækis."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 236
+#: NEEDS WORK
+msgid "Please enter a valid IP address"
+msgstr "Vinsamlegast sláðu inn gilt IP-tölu"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 241
+#: NEEDS WORK
+msgid "Connecting..."
+msgstr "Tengist..."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 255
+#: NEEDS WORK
+msgid "Connected successfully!"
+msgstr "Tengist tengingu!"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 425
+#: NEEDS WORK
+msgid "Connection Failed"
+msgstr "Tengist ekki tengingu"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 257
+#: NEEDS WORK
+#, python-brace-format
+msgid "Connection failed: {message}"
+msgstr "Tengist ekki: {message}"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 264
+#: NEEDS WORK
+msgid "Certificates"
+msgstr "Vottorð"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 24
+#: NEEDS WORK
+msgid "General"
+msgstr "Almennt"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 30
+#: NEEDS WORK
+msgid "Docker Settings"
+msgstr "Docker stillingar"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 31
+#: NEEDS WORK
+msgid "Configure Docker behavior and settings"
+msgstr "Stillir hegðun og stillingar Docker"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 36
+#: NEEDS WORK
+msgid "Docker Image"
+msgstr "Docker mynd"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 43
+#: NEEDS WORK
+msgid "Auto-pull Updates"
+msgstr "Sjálfvirkar uppfærslur"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 44
+#: NEEDS WORK
+msgid "Automatically pull the latest Docker image"
+msgstr "Sjálfvirkt að draga nýjustu Docker myndina"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 51
+#: NEEDS WORK
+msgid "Network Settings"
+msgstr "Netvangaskipti"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 52
+#: NEEDS WORK
+msgid "Configure network scanning and timeouts"
+msgstr "Stillir netkerfis skönnun og tímasetningar"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 57
+#: NEEDS WORK
+msgid "Scan Timeout"
+msgstr "Skanna Tími útrunni"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 58
+#: NEEDS WORK
+msgid "Timeout for network device scanning (seconds)"
+msgstr "Tími fyrir skönnun nettækja (sekúndur)"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 67
+#: NEEDS WORK
+msgid "Port Range"
+msgstr "Porta svið"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 68
+#: NEEDS WORK
+msgid "Scan port range (e.g., 8000-8080)"
+msgstr "Skoða hafnarsvið (t.d. 8000-8080)"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 102
+#: NEEDS WORK
+msgid "Port range for network scanning"
+msgstr "Portaheim fyrir netkönnun"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 80
+#: NEEDS WORK
+msgid "Logging"
+msgstr "Skrásetning"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 81
+#: NEEDS WORK
+msgid "Configure application logging"
+msgstr "Stillir skráningu forrita"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 86
+#: NEEDS WORK
+msgid "Log Level"
+msgstr "Skráningarstig"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 87
+#: NEEDS WORK
+msgid "Verbosity of application logs"
+msgstr "Skráning á skráningu forrita"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 104
+#: NEEDS WORK
+msgid "Save Logs to File"
+msgstr "Vista skrá yfir skráningar"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 105
+#: NEEDS WORK
+msgid "Save application logs to ~/.local/share/jellybeam/logs"
+msgstr "Vista forritaskrár í ~/.local/share/jellybeam/logs"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 112
+#: NEEDS WORK
+msgid "Advanced"
+msgstr "Fyrirferðarmikill"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 118
+#: NEEDS WORK
+msgid "Developer Options"
+msgstr "Þróunaraðgerðir"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 119
+#: NEEDS WORK
+msgid "Advanced settings for developers"
+msgstr "Fyrirlestrarstillingar fyrir þróunaraðila"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 124
+#: NEEDS WORK
+msgid "Debug Mode"
+msgstr "Villurhamur"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 125
+#: NEEDS WORK
+msgid "Enable debug mode for development"
+msgstr "Virkja villuhamar fyrir þróun"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 140
+# File: usr/share/jellybeam/pages/preferences.py, line: 148
+# File: usr/share/jellybeam/pages/preferences.py, line: 172
+#: NEEDS WORK
+msgid "Reset"
+msgstr "Endurstilla"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 141
+#: NEEDS WORK
+msgid "Reset application settings"
+msgstr "Endurstilla forritstillingar"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 145
+#: NEEDS WORK
+msgid "Reset All Settings"
+msgstr "Endurstillu allar stillingar"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 146
+#: NEEDS WORK
+msgid "Reset all preferences to default values"
+msgstr "Endurstilltu allar stillingar á sjálfgefnar gildi"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 168
+#: NEEDS WORK
+msgid "Reset All Settings?"
+msgstr "Endurstilla allar stillingar?"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 169
+#: NEEDS WORK
+msgid "This will reset all preferences to their default values. This action cannot be undone."
+msgstr ""
+"Þetta mun endurstilla allar stillingar í þeirra sjálfgefnar gildi. Þessi aðgerð er ekki hægt að "
+"afturkalla."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 31
+#: NEEDS WORK
+msgid "Developer Certificates"
+msgstr "Þróunarskírteini"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 48
+#: NEEDS WORK
+msgid "Certificates are required to install apps on Samsung TVs"
+msgstr "Vottan eru nauðsynleg til að setja upp forrit á Samsung sjónvörpum."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
+#: NEEDS WORK
+msgid "Certificate Mode"
+msgstr "Vottunarmódur"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 60
+#: NEEDS WORK
+msgid "Use Built-in Certificates"
+msgstr "Notaðu innbyggð vottorð"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 61
+#: NEEDS WORK
+msgid "Recommended - No Tizen Studio required"
+msgstr "Mælt með - Engin Tizen Studio nauðsynleg"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 73
+#: NEEDS WORK
+msgid "How it works"
+msgstr "Hvernig það virkar"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 74
+#: NEEDS WORK
+msgid ""
+"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
+"without any setup."
+msgstr ""
+"Docker ílátin inniheldur fyrirfram stillt vottorð. Þú getur sett upp Jellyfin strax án þess að "
+"þurfa að stilla neitt."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 83
+#: NEEDS WORK
+msgid "Custom Certificates (Advanced)"
+msgstr "Sérfræðivottorð (Fyrirferðarmiklar)"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 84
+#: NEEDS WORK
+msgid "Only needed if you want to use your own certificates"
+msgstr "Aðeins nauðsynlegt ef þú vilt nota eigin vottorð."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 43
+#: NEEDS WORK
+msgid "Author Certificate"
+msgstr "Höfundarvottorður"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 148
+#: NEEDS WORK
+msgid "Select author.p12 file"
+msgstr "Veldu author.p12 skrá"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 46
+# File: usr/share/jellybeam/pages/certificates.py, line: 58
+#: NEEDS WORK
+msgid "Browse"
+msgstr "Skoða"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
+#: NEEDS WORK
+msgid "Distributor Certificate"
+msgstr "Sertifikat dreifanda"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
+#: NEEDS WORK
+msgid "Select distributor.p12 file"
+msgstr "Veldu distributor.p12 skrá"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 115
+#: NEEDS WORK
+msgid "Certificate Password"
+msgstr "Vottorðaskilríki"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
+#: NEEDS WORK
+msgid "Password for the author P12 certificate"
+msgstr "Lykilorð fyrir P12 vottorð höfundar"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 122
+#: NEEDS WORK
+msgid "Need help creating certificates?"
+msgstr "Þarf þú aðstoð við að búa til vottorð?"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 123
+#: NEEDS WORK
+msgid "View tutorial on Samsung Developer website"
+msgstr "Skoða leiðbeiningar á vefsíðu Samsung Developers"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 127
+#: NEEDS WORK
+msgid "View Guide"
+msgstr "Skoða leiðbeiningar"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 114
+#: NEEDS WORK
+msgid "Continue to Installation"
+msgstr "Halda áfram í uppsetningu"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 226
+#: NEEDS WORK
+msgid "Proceed to install Jellyfin on your TV"
+msgstr "Fara að setja Jellyfin á sjónvarpið þitt"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 171
+#: NEEDS WORK
+msgid "Ready to install with built-in certificates"
+msgstr "Tilbúið til að setja upp með innbyggðum vottorðum"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
+#: NEEDS WORK
+#, python-brace-format
+msgid "Select {cert_type} certificate"
+msgstr "Veldu {cert_type} vottun"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 136
+#: NEEDS WORK
+msgid "P12 Certificate Files"
+msgstr "P12 vottunarskráarskrár"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 212
+# File: usr/share/jellybeam/pages/certificates.py, line: 215
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+# File: usr/share/jellybeam/pages/certificates.py, line: 238
+#: NEEDS WORK
+#, python-brace-format
+msgid "✅ {filename}"
+msgstr "✅ {skráarnafn}"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 163
+# File: usr/share/jellybeam/pages/certificates.py, line: 166
+# File: usr/share/jellybeam/pages/certificates.py, line: 185
+# File: usr/share/jellybeam/pages/certificates.py, line: 191
+#: NEEDS WORK
+msgid "Change"
+msgstr "Breyta"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 251
+#: NEEDS WORK
+msgid "Ready to install with custom certificates"
+msgstr "Tilbúin til að setja upp með sérsniðnum vottorðum"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 326
+#: NEEDS WORK
+msgid "author certificate"
+msgstr "höfundarvottorð"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 328
+#: NEEDS WORK
+msgid "distributor certificate"
+msgstr "dreifingarskírteini"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 330
+#: NEEDS WORK
+msgid "password"
+msgstr "lykilord"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid "Missing: {items}"
+msgstr "Vantar: {items}"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+#: NEEDS WORK
+msgid "Installation"
+msgstr "Uppsetning"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 310
+#: NEEDS WORK
+msgid "Certificate Error"
+msgstr "Vottunvilla Villa"
+# 
 # File: usr/share/jellybeam/pages/welcome.py, line: 60
 #: NEEDS WORK
 msgid "JellyBeam Installer"
@@ -861,6 +961,46 @@ msgstr "JellyBeam Uppsetningaraðili"
 #: NEEDS WORK
 msgid "Install Jellyfin on your Samsung Smart TV or projector"
 msgstr "Settu Jellyfin á Samsung Smart TV eða skjávarpa."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+#: NEEDS WORK
+msgid "4 simple steps to get Jellyfin on your Samsung TV"
+msgstr "4 einfaldar skref til að fá Jellyfin á Samsung sjónvarpið þitt"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Check Requirements"
+msgstr "Athugaðu kröfur"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Ensure Docker is installed"
+msgstr "Tryggðu að Docker sé uppsett."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Connect Device"
+msgstr "Tengdu tæki"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Find your TV on the network"
+msgstr "Finndu sjónvarpið þitt á netinu"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Configure signing (auto by default)"
+msgstr "Skráning stillinga (sjálfvirkt að sjálfgefið)"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 92
+#: NEEDS WORK
+msgid "Install"
+msgstr "Setja upp"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
+#: NEEDS WORK
+msgid "One click to deploy Jellyfin"
+msgstr "Einn smella til að setja upp Jellyfin"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 68
 #: NEEDS WORK
@@ -889,17 +1029,17 @@ msgstr "Setja upp Docker"
 msgid "Docker is required but not installed"
 msgstr "Docker er nauðsynlegur en ekki uppsettur"
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 92
+# File: usr/share/jellybeam/pages/welcome.py, line: 133
 #: NEEDS WORK
 msgid "Docker Group"
 msgstr "Docker Hópur"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 134
+# File: usr/share/jellybeam/pages/welcome.py, line: 134
 #: NEEDS WORK
 msgid "User not in docker group"
 msgstr "Notandi er ekki í docker hópnum"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 136
+# File: usr/share/jellybeam/pages/welcome.py, line: 136
 #: NEEDS WORK
 msgid "Add to group"
 msgstr "Bæta við hóp"
@@ -909,10 +1049,20 @@ msgstr "Bæta við hóp"
 msgid "Configure your Samsung TV"
 msgstr "Stilltuðu Samsung sjónvarpið þitt"
 # 
+# File: usr/share/jellybeam/pages/welcome.py, line: 157
+#: NEEDS WORK
+msgid "Continue to Device Setup"
+msgstr "Halda áfram í tækinu uppsetningu"
+# 
 # File: usr/share/jellybeam/pages/welcome.py, line: 135
 #: NEEDS WORK
 msgid "Ready"
 msgstr "Klárur"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
+#: NEEDS WORK
+msgid "Permission required"
+msgstr "Leyfi krafist"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 142
 #: NEEDS WORK
@@ -929,12 +1079,12 @@ msgstr "Byrjun"
 msgid "Not installed"
 msgstr "Ekki uppsett"
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 193
+# File: usr/share/jellybeam/pages/welcome.py, line: 259
 #: NEEDS WORK
 msgid "Added to group"
 msgstr "Bætt við hópinn"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 307
+# File: usr/share/jellybeam/pages/welcome.py, line: 307
 #: NEEDS WORK
 msgid ""
 "Select your distribution:\n"
@@ -960,27 +1110,18 @@ msgstr "Debian/Ubuntu"
 msgid "Fedora/RHEL"
 msgstr "Fedora/RHEL"
 # 
-# File: usr/share/jellybeam/app.py, line: 84
+# File: usr/share/jellybeam/pages/welcome.py, line: 331
 #: NEEDS WORK
 msgid "Installing Docker..."
 msgstr "Að setja upp Docker..."
 # 
-# File: usr/share/jellybeam/app.py, line: 106
+# File: usr/share/jellybeam/pages/welcome.py, line: 347
 #: NEEDS WORK
 msgid "Docker installed! Checking status..."
 msgstr "Docker uppsett! Athugar stöðu..."
 # 
-# File: usr/share/jellybeam/app.py, line: 113
+# File: usr/share/jellybeam/pages/welcome.py, line: 355
 #: NEEDS WORK
-msgid "About"
-msgstr "Um umfjöllun"
-# 
-# File: usr/share/jellybeam/app.py, line: 139
-#: NEEDS WORK
-msgid "JellyBeam Team"
-msgstr "JellyBeam Teymi"
-# 
-# File: usr/share/jellybeam/app.py, line: 145
-#: NEEDS WORK
-msgid "JellyBeam Contributors"
-msgstr "JellyBeam Framleiðendur"
+#, python-brace-format
+msgid "Installation failed: {msg}"
+msgstr "Uppsetning mistókst: {msg}"

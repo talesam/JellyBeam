@@ -41,185 +41,15 @@ msgstr "Confirmar"
 msgid "Cancel"
 msgstr "Cancelar"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 31
+# File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
 msgstr "Voltar"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 48
+# File: usr/share/jellybeam/app.py, line: 108
 #: NEEDS WORK
-msgid "Certificates are required to install apps on Samsung TVs"
-msgstr "Certificados são necessários para instalar aplicativos em TVs Samsung."
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
-#: NEEDS WORK
-msgid "Certificate Mode"
-msgstr "Modo de Certificado"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 60
-#: NEEDS WORK
-msgid "Use Built-in Certificates"
-msgstr "Usar Certificados Integrados"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 61
-#: NEEDS WORK
-msgid "Recommended - No Tizen Studio required"
-msgstr "Recomendado - Nenhum Tizen Studio necessário"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 73
-#: NEEDS WORK
-msgid "How it works"
-msgstr "Como funciona"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 74
-#: NEEDS WORK
-msgid ""
-"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
-"without any setup."
-msgstr ""
-"O contêiner Docker inclui certificados pré-configurados. Você pode instalar o Jellyfin "
-"imediatamente sem nenhuma configuração."
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 83
-#: NEEDS WORK
-msgid "Custom Certificates (Advanced)"
-msgstr "Certificados Personalizados (Avançado)"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 84
-#: NEEDS WORK
-msgid "Only needed if you want to use your own certificates"
-msgstr "Somente necessário se você quiser usar seus próprios certificados"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 43
-#: NEEDS WORK
-msgid "Author Certificate"
-msgstr "Certificado de Autor"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 148
-#: NEEDS WORK
-msgid "Select author.p12 file"
-msgstr "Selecione o arquivo author.p12"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 46
-# File: usr/share/jellybeam/pages/certificates.py, line: 58
-#: NEEDS WORK
-msgid "Browse"
-msgstr "Navegar"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
-#: NEEDS WORK
-msgid "Distributor Certificate"
-msgstr "Certificado de Distribuidor"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 162
-#: NEEDS WORK
-msgid "Select distributor.p12 file"
-msgstr "Selecionar arquivo distributor.p12"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 115
-#: NEEDS WORK
-msgid "Certificate Password"
-msgstr "Senha do Certificado"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 122
-#: NEEDS WORK
-msgid "Need help creating certificates?"
-msgstr "Precisa de ajuda para criar certificados?"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 123
-#: NEEDS WORK
-msgid "View tutorial on Samsung Developer website"
-msgstr "Veja o tutorial no site do desenvolvedor Samsung"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 127
-#: NEEDS WORK
-msgid "View Guide"
-msgstr "Ver Guia"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 114
-#: NEEDS WORK
-msgid "Continue to Installation"
-msgstr "Continuar para Instalação"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 226
-#: NEEDS WORK
-msgid "Proceed to install Jellyfin on your TV"
-msgstr "Prossiga para instalar o Jellyfin na sua TV"
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 117
-# File: usr/share/jellybeam/pages/device.py, line: 135
-# File: usr/share/jellybeam/pages/welcome.py, line: 105
-#: NEEDS WORK
-msgid "Continue"
-msgstr "Continuar"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 171
-#: NEEDS WORK
-msgid "Ready to install with built-in certificates"
-msgstr "Pronto para instalar com certificados integrados"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 132
-#: NEEDS WORK
-#, python-brace-format
-msgid "Select {cert_type} certificate"
-msgstr "Selecione o certificado {cert_type}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 136
-#: NEEDS WORK
-msgid "P12 Certificate Files"
-msgstr "Arquivos de Certificado P12"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 212
-# File: usr/share/jellybeam/pages/certificates.py, line: 215
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-# File: usr/share/jellybeam/pages/certificates.py, line: 238
-#: NEEDS WORK
-#, python-brace-format
-msgid "✅ {filename}"
-msgstr "✅ {filename}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 163
-# File: usr/share/jellybeam/pages/certificates.py, line: 166
-# File: usr/share/jellybeam/pages/certificates.py, line: 185
-# File: usr/share/jellybeam/pages/certificates.py, line: 191
-#: NEEDS WORK
-msgid "Change"
-msgstr "Alterar"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 251
-#: NEEDS WORK
-msgid "Ready to install with custom certificates"
-msgstr "Pronto para instalar com certificados personalizados"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 326
-#: NEEDS WORK
-msgid "author certificate"
-msgstr "certificado de autor"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 328
-#: NEEDS WORK
-msgid "distributor certificate"
-msgstr "certificado de distribuidor"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 330
-#: NEEDS WORK
-msgid "password"
-msgstr "senha"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 331
-#: NEEDS WORK
-#, python-brace-format
-msgid "Missing: {items}"
-msgstr "Faltando: {items}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-#: NEEDS WORK
-msgid "Installation"
-msgstr "Instalação"
+msgid "Main Menu"
+msgstr "Menu Principal"
 # 
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
@@ -229,438 +59,20 @@ msgstr "Instalação"
 msgid "Preferences"
 msgstr "Preferências"
 # 
-# File: usr/share/jellybeam/pages/preferences.py, line: 24
+# File: usr/share/jellybeam/app.py, line: 113
 #: NEEDS WORK
 msgid "About"
 msgstr "Sobre"
 # 
-# File: usr/share/jellybeam/pages/preferences.py, line: 30
+# File: usr/share/jellybeam/app.py, line: 139
 #: NEEDS WORK
-msgid "JellyTizen Team"
-msgstr "Equipe JellyTizen"
+msgid "JellyBeam Team"
+msgstr "Equipe JellyBeam"
 # 
-# File: usr/share/jellybeam/pages/preferences.py, line: 31
+# File: usr/share/jellybeam/app.py, line: 145
 #: NEEDS WORK
-msgid "Configure Docker behavior and settings"
-msgstr "Configurar o comportamento e as configurações do Docker"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 36
-#: NEEDS WORK
-msgid "Docker Image"
-msgstr "Imagem Docker"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 43
-#: NEEDS WORK
-msgid "Auto-pull Updates"
-msgstr "Atualizações de Auto-pull"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 44
-#: NEEDS WORK
-msgid "Automatically pull the latest Docker image"
-msgstr "Puxar automaticamente a imagem Docker mais recente"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 51
-#: NEEDS WORK
-msgid "Network Settings"
-msgstr "Configurações de Rede"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 52
-#: NEEDS WORK
-msgid "Configure network scanning and timeouts"
-msgstr "Configurar a digitalização de rede e os tempos limite"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 57
-#: NEEDS WORK
-msgid "Scan Timeout"
-msgstr "Tempo de Expiração da Digitalização"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 58
-#: NEEDS WORK
-msgid "Timeout for network device scanning (seconds)"
-msgstr "Tempo limite para a varredura de dispositivos de rede (segundos)"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 67
-#: NEEDS WORK
-msgid "Port Range"
-msgstr "Faixa de Portas"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 68
-#: NEEDS WORK
-msgid "Scan port range (e.g., 8000-8080)"
-msgstr "Escanear intervalo de portas (por exemplo, 8000-8080)"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 80
-#: NEEDS WORK
-msgid "Logging"
-msgstr "Registro"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 81
-#: NEEDS WORK
-msgid "Configure application logging"
-msgstr "Configurar o registro de aplicativos"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 86
-#: NEEDS WORK
-msgid "Log Level"
-msgstr "Nível de Log"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 87
-#: NEEDS WORK
-msgid "Verbosity of application logs"
-msgstr "Verbosidade dos logs da aplicação"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 104
-#: NEEDS WORK
-msgid "Save Logs to File"
-msgstr "Salvar Logs em Arquivo"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 105
-#: NEEDS WORK
-msgid "Save application logs to ~/.local/share/jellybeam/logs"
-msgstr "Salvar logs da aplicação em ~/.local/share/jellybeam/logs"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 112
-#: NEEDS WORK
-msgid "Advanced"
-msgstr "Avançado"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 118
-#: NEEDS WORK
-msgid "Developer Options"
-msgstr "Opções de Desenvolvedor"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 119
-#: NEEDS WORK
-msgid "Advanced settings for developers"
-msgstr "Configurações avançadas para desenvolvedores"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 124
-#: NEEDS WORK
-msgid "Debug Mode"
-msgstr "Modo de Depuração"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 125
-#: NEEDS WORK
-msgid "Enable debug mode for development"
-msgstr "Ativar modo de depuração para desenvolvimento"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 140
-# File: usr/share/jellybeam/pages/preferences.py, line: 148
-# File: usr/share/jellybeam/pages/preferences.py, line: 172
-#: NEEDS WORK
-msgid "Reset"
-msgstr "Redefinir"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 141
-#: NEEDS WORK
-msgid "Reset application settings"
-msgstr "Redefinir configurações do aplicativo"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 145
-#: NEEDS WORK
-msgid "Reset All Settings"
-msgstr "Redefinir Todas as Configurações"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 146
-#: NEEDS WORK
-msgid "Reset all preferences to default values"
-msgstr "Redefinir todas as preferências para os valores padrão"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 168
-#: NEEDS WORK
-msgid "Reset All Settings?"
-msgstr "Redefinir todas as configurações?"
-# 
-# File: usr/share/jellybeam/pages/preferences.py, line: 169
-#: NEEDS WORK
-msgid "This will reset all preferences to their default values. This action cannot be undone."
-msgstr "Isto irá redefinir todas as preferências para seus valores padrão. Esta ação não pode ser desfeita."
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 49
-# File: usr/share/jellybeam/pages/welcome.py, line: 185
-#: NEEDS WORK
-msgid "Device Setup"
-msgstr "Configuração do Dispositivo"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 50
-#: NEEDS WORK
-msgid "Connect to your Samsung Tizen TV or projector"
-msgstr "Conecte-se à sua TV ou projetor Samsung Tizen"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 58
-#: NEEDS WORK
-msgid "Setup Instructions"
-msgstr "Instruções de Configuração"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 63
-#: NEEDS WORK
-msgid "Enable Developer Mode on TV"
-msgstr "Ativar Modo Desenvolvedor na TV"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 64
-#: NEEDS WORK
-msgid "Click to view step-by-step instructions"
-msgstr "Clique para ver as instruções passo a passo"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 64
-#: NEEDS WORK
-msgid "1. Open Apps"
-msgstr "1. Abrir Aplicativos"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 65
-#: NEEDS WORK
-msgid "On the TV, go to the 'Apps' section"
-msgstr "Na TV, vá para a seção 'Aplicativos'"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 72
-#: NEEDS WORK
-msgid "2. Go to App Settings"
-msgstr "2. Ir para Configurações de Apps"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 79
-#: NEEDS WORK
-msgid "Scroll to the end and select 'App Settings'"
-msgstr "Role para baixo até o final e selecione 'Configurações do App'"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 80
-#: NEEDS WORK
-msgid "3. Press '123' Button"
-msgstr "3. Pressione o Botão '123'"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 85
-#: NEEDS WORK
-msgid "Press the '123' button on your remote"
-msgstr "Pressione o botão '123' no seu controle remoto"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 90
-#: NEEDS WORK
-msgid "4. Enter Code '12345'"
-msgstr "4. Insira o Código '12345'"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 91
-#: NEEDS WORK
-msgid "Developer Mode menu will appear"
-msgstr "O menu do Modo Desenvolvedor aparecerá"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 96
-#: NEEDS WORK
-msgid "5. Enable Developer Mode"
-msgstr "5. Ativar Modo Desenvolvedor"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 97
-#: NEEDS WORK
-msgid "Toggle 'Developer Mode' to 'On'"
-msgstr "Ativar 'Modo Desenvolvedor'"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 103
-#: NEEDS WORK
-#, python-brace-format
-msgid "6. Enter This IP: {ip}"
-msgstr "6. Insira este IP: {ip}"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 104
-#: NEEDS WORK
-msgid "Your computer's IP address"
-msgstr "O endereço IP do seu computador"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 403
-# File: usr/share/jellybeam/pages/device.py, line: 430
-#: NEEDS WORK
-msgid "Copy IP"
-msgstr "Copiar IP"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 131
-#: NEEDS WORK
-msgid "7. Restart TV"
-msgstr "7. Reiniciar TV"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 116
-#: NEEDS WORK
-msgid "Turn off and on your TV"
-msgstr "Desligue e ligue sua TV"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 162
-#: NEEDS WORK
-msgid "Confirmation"
-msgstr "Confirmação"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 167
-#: NEEDS WORK
-msgid "Developer Mode Enabled"
-msgstr "Modo de Desenvolvedor Ativado"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 168
-#: NEEDS WORK
-msgid "I confirm I have completed the steps above on my TV"
-msgstr "Eu confirmo que completei os passos acima na minha TV."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 55
-#: NEEDS WORK
-msgid "Device Discovery"
-msgstr "Descoberta de Dispositivos"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 60
-#: NEEDS WORK
-msgid "Scan Network"
-msgstr "Escanear Rede"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 61
-#: NEEDS WORK
-msgid "Automatically discover Samsung devices on your network"
-msgstr "Descubra automaticamente dispositivos Samsung na sua rede"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 63
-# File: usr/share/jellybeam/pages/device.py, line: 163
-#: NEEDS WORK
-msgid "Scan"
-msgstr "Escanear"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 73
-#: NEEDS WORK
-msgid "Discovered Devices"
-msgstr "Dispositivos Descobertos"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 74
-#: NEEDS WORK
-msgid "Select your target device"
-msgstr "Selecione seu dispositivo de destino"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 79
-#: NEEDS WORK
-msgid "Manual Connection"
-msgstr "Conexão Manual"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 80
-#: NEEDS WORK
-msgid "Enter device details manually"
-msgstr "Insira os detalhes do dispositivo manualmente"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 85
-#: NEEDS WORK
-msgid "Device IP Address"
-msgstr "Endereço IP do Dispositivo"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 119
-#: NEEDS WORK
-msgid "Connect to Device"
-msgstr "Conectar ao Dispositivo"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 120
-#: NEEDS WORK
-msgid "Establish connection with your TV"
-msgstr "Estabelecer conexão com sua TV"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 122
-# File: usr/share/jellybeam/pages/device.py, line: 250
-#: NEEDS WORK
-msgid "Connect"
-msgstr "Conectar"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 132
-#: NEEDS WORK
-msgid "Continue to Certificates"
-msgstr "Continuar para Certificados"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 133
-#: NEEDS WORK
-msgid "Setup developer certificates"
-msgstr "Configurar certificados de desenvolvedor"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 422
-#: NEEDS WORK
-msgid "Unable to determine IP"
-msgstr "Incapaz de determinar o IP"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 429
-#: NEEDS WORK
-msgid "Copied!"
-msgstr "Copiado!"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 153
-#: NEEDS WORK
-msgid "Scanning..."
-msgstr "Escaneando..."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 178
-#: NEEDS WORK
-msgid "No devices found"
-msgstr "Nenhum dispositivo encontrado"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 179
-#: NEEDS WORK
-msgid "Try manual connection or check network"
-msgstr "Tente a conexão manual ou verifique a rede"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 186
-#: NEEDS WORK
-msgid "Unknown Device"
-msgstr "Dispositivo Desconhecido"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 187
-#: NEEDS WORK
-#, python-brace-format
-msgid "IP: {ip} | Model: {model}"
-msgstr "IP: {ip} | Modelo: {model}"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 187
-#: NEEDS WORK
-msgid "Unknown"
-msgstr "Desconhecido"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 189
-#: NEEDS WORK
-msgid "Select"
-msgstr "Selecionar"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 200
-#: NEEDS WORK
-msgid "Found 1 device - Select your target device"
-msgstr "Encontrado 1 dispositivo - Selecione seu dispositivo alvo"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 202
-#: NEEDS WORK
-#, python-brace-format
-msgid "Found {count} devices - Select your target device"
-msgstr "Encontrados {count} dispositivos - Selecione seu dispositivo alvo"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 304
-#: NEEDS WORK
-#, python-brace-format
-msgid "Device selected: {name}"
-msgstr "Dispositivo selecionado: {name}"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 232
-#: NEEDS WORK
-msgid "Please enter a device IP address"
-msgstr "Por favor, insira um endereço IP do dispositivo"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 236
-#: NEEDS WORK
-msgid "Please enter a valid IP address"
-msgstr "Por favor, insira um endereço IP válido"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 241
-#: NEEDS WORK
-msgid "Connecting..."
-msgstr "Conectando..."
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 255
-#: NEEDS WORK
-msgid "Connected successfully!"
-msgstr "Conectado com sucesso!"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 257
-#: NEEDS WORK
-#, python-brace-format
-msgid "Connection failed: {message}"
-msgstr "Conexão falhou: {message}"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 264
-#: NEEDS WORK
-msgid "Certificates"
-msgstr "Certificados"
+msgid "JellyBeam Contributors"
+msgstr "Contribuidores do JellyBeam"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 53
 # File: usr/share/jellybeam/pages/install.py, line: 116
@@ -699,10 +111,30 @@ msgstr "Pronto para instalar"
 msgid "Click the button below to start"
 msgstr "Clique no botão abaixo para começar"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 104
+#: NEEDS WORK
+msgid "Installation progress"
+msgstr "Progresso da instalação"
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 62
 #: NEEDS WORK
 msgid "Waiting to start..."
 msgstr "Aguardando para começar..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 120
+#: NEEDS WORK
+msgid "Installation status updates"
+msgstr "Atualizações de status de instalação"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 138
+#: NEEDS WORK
+msgid "Install Jellyfin on TV"
+msgstr "Instalar Jellyfin na TV"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 149
+#: NEEDS WORK
+msgid "Cancel installation"
+msgstr "Cancelar instalação"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 67
 #: NEEDS WORK
@@ -804,6 +236,16 @@ msgstr "Conectando à TV..."
 msgid "Finishing..."
 msgstr "Finalizando..."
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 364
+#: NEEDS WORK
+msgid "Extracting layers..."
+msgstr "Extraindo camadas..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 366
+#: NEEDS WORK
+msgid "Download complete"
+msgstr "Download concluído"
+# 
 # File: usr/share/jellybeam/pages/welcome.py, line: 216
 #: NEEDS WORK
 msgid "Error"
@@ -850,6 +292,664 @@ msgstr "A instalação foi cancelada"
 msgid "Installation cancelled"
 msgstr "Instalação cancelada"
 # 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 49
+# File: usr/share/jellybeam/pages/welcome.py, line: 185
+#: NEEDS WORK
+msgid "Device Setup"
+msgstr "Configuração do Dispositivo"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 50
+#: NEEDS WORK
+msgid "Connect to your Samsung Tizen TV or projector"
+msgstr "Conecte-se à sua TV ou projetor Samsung Tizen"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 58
+#: NEEDS WORK
+msgid "Setup Instructions"
+msgstr "Instruções de Configuração"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 63
+#: NEEDS WORK
+msgid "Enable Developer Mode on TV"
+msgstr "Ativar Modo Desenvolvedor na TV"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 64
+#: NEEDS WORK
+msgid "Click to view step-by-step instructions"
+msgstr "Clique para ver as instruções passo a passo"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 64
+#: NEEDS WORK
+msgid "1. Open Apps"
+msgstr "1. Abrir Aplicativos"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 65
+#: NEEDS WORK
+msgid "On the TV, go to the 'Apps' section"
+msgstr "Na TV, vá para a seção 'Aplicativos'"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 72
+#: NEEDS WORK
+msgid "2. Go to App Settings"
+msgstr "2. Ir para Configurações de Apps"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 79
+#: NEEDS WORK
+msgid "Scroll to the end and select 'App Settings'"
+msgstr "Role para baixo até o final e selecione 'Configurações do App'"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 80
+#: NEEDS WORK
+msgid "3. Press '123' Button"
+msgstr "3. Pressione o Botão '123'"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 85
+#: NEEDS WORK
+msgid "Press the '123' button on your remote"
+msgstr "Pressione o botão '123' no seu controle remoto"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 90
+#: NEEDS WORK
+msgid "4. Enter Code '12345'"
+msgstr "4. Insira o Código '12345'"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 91
+#: NEEDS WORK
+msgid "Developer Mode menu will appear"
+msgstr "O menu do Modo Desenvolvedor aparecerá"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 96
+#: NEEDS WORK
+msgid "5. Enable Developer Mode"
+msgstr "5. Ativar Modo Desenvolvedor"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 97
+#: NEEDS WORK
+msgid "Toggle 'Developer Mode' to 'On'"
+msgstr "Ativar 'Modo Desenvolvedor'"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 103
+#: NEEDS WORK
+#, python-brace-format
+msgid "6. Enter This IP: {ip}"
+msgstr "6. Insira este IP: {ip}"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 104
+#: NEEDS WORK
+msgid "Your computer's IP address"
+msgstr "O endereço IP do seu computador"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 403
+# File: usr/share/jellybeam/pages/device.py, line: 430
+#: NEEDS WORK
+msgid "Copy IP"
+msgstr "Copiar IP"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 114
+#: NEEDS WORK
+msgid "Copy local IP address to clipboard"
+msgstr "Copiar endereço IP local para a área de transferência"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 131
+#: NEEDS WORK
+msgid "7. Restart TV"
+msgstr "7. Reiniciar TV"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 116
+#: NEEDS WORK
+msgid "Turn off and on your TV"
+msgstr "Desligue e ligue sua TV"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 162
+#: NEEDS WORK
+msgid "Confirmation"
+msgstr "Confirmação"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 167
+#: NEEDS WORK
+msgid "Developer Mode Enabled"
+msgstr "Modo de Desenvolvedor Ativado"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 168
+#: NEEDS WORK
+msgid "I confirm I have completed the steps above on my TV"
+msgstr "Eu confirmo que completei os passos acima na minha TV."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 55
+#: NEEDS WORK
+msgid "Device Discovery"
+msgstr "Descoberta de Dispositivos"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 60
+#: NEEDS WORK
+msgid "Scan Network"
+msgstr "Escanear Rede"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 61
+#: NEEDS WORK
+msgid "Automatically discover Samsung devices on your network"
+msgstr "Descubra automaticamente dispositivos Samsung na sua rede"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 63
+# File: usr/share/jellybeam/pages/device.py, line: 163
+#: NEEDS WORK
+msgid "Scan"
+msgstr "Escanear"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 172
+#: NEEDS WORK
+msgid "Scan network for Samsung devices"
+msgstr "Escanear rede em busca de dispositivos Samsung"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 73
+#: NEEDS WORK
+msgid "Discovered Devices"
+msgstr "Dispositivos Descobertos"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 74
+#: NEEDS WORK
+msgid "Select your target device"
+msgstr "Selecione seu dispositivo de destino"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 79
+#: NEEDS WORK
+msgid "Manual Connection"
+msgstr "Conexão Manual"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 80
+#: NEEDS WORK
+msgid "Enter device details manually"
+msgstr "Insira os detalhes do dispositivo manualmente"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 85
+#: NEEDS WORK
+msgid "Device IP Address"
+msgstr "Endereço IP do Dispositivo"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 201
+#: NEEDS WORK
+msgid "Enter the Samsung TV IP address, for example 192.168.1.100"
+msgstr "Digite o endereço IP da TV Samsung, por exemplo, 192.168.1.100"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 119
+#: NEEDS WORK
+msgid "Connect to Device"
+msgstr "Conectar ao Dispositivo"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 120
+#: NEEDS WORK
+msgid "Establish connection with your TV"
+msgstr "Estabelecer conexão com sua TV"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 122
+# File: usr/share/jellybeam/pages/device.py, line: 250
+#: NEEDS WORK
+msgid "Connect"
+msgstr "Conectar"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 222
+#: NEEDS WORK
+msgid "Connect to Samsung TV"
+msgstr "Conectar à TV Samsung"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 132
+#: NEEDS WORK
+msgid "Continue to Certificates"
+msgstr "Continuar para Certificados"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 133
+#: NEEDS WORK
+msgid "Setup developer certificates"
+msgstr "Configurar certificados de desenvolvedor"
+# 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 117
+# File: usr/share/jellybeam/pages/device.py, line: 135
+# File: usr/share/jellybeam/pages/welcome.py, line: 105
+#: NEEDS WORK
+msgid "Continue"
+msgstr "Continuar"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 422
+#: NEEDS WORK
+msgid "Unable to determine IP"
+msgstr "Incapaz de determinar o IP"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 429
+#: NEEDS WORK
+msgid "Copied!"
+msgstr "Copiado!"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 153
+#: NEEDS WORK
+msgid "Scanning..."
+msgstr "Escaneando..."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 178
+#: NEEDS WORK
+msgid "No devices found"
+msgstr "Nenhum dispositivo encontrado"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 179
+#: NEEDS WORK
+msgid "Try manual connection or check network"
+msgstr "Tente a conexão manual ou verifique a rede"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 186
+#: NEEDS WORK
+msgid "Unknown Device"
+msgstr "Dispositivo Desconhecido"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 187
+#: NEEDS WORK
+#, python-brace-format
+msgid "IP: {ip} | Model: {model}"
+msgstr "IP: {ip} | Modelo: {model}"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 187
+#: NEEDS WORK
+msgid "Unknown"
+msgstr "Desconhecido"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 189
+#: NEEDS WORK
+msgid "Select"
+msgstr "Selecionar"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 200
+#: NEEDS WORK
+msgid "Found 1 device - Select your target device"
+msgstr "Encontrado 1 dispositivo - Selecione seu dispositivo alvo"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 202
+#: NEEDS WORK
+#, python-brace-format
+msgid "Found {count} devices - Select your target device"
+msgstr "Encontrados {count} dispositivos - Selecione seu dispositivo alvo"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 304
+#: NEEDS WORK
+#, python-brace-format
+msgid "Device selected: {name}"
+msgstr "Dispositivo selecionado: {name}"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 366
+#: NEEDS WORK
+msgid "Device IP Address — Invalid format (e.g. 192.168.1.100)"
+msgstr "Endereço IP do Dispositivo — Formato inválido (por exemplo, 192.168.1.100)"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 232
+#: NEEDS WORK
+msgid "Please enter a device IP address"
+msgstr "Por favor, insira um endereço IP do dispositivo"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 236
+#: NEEDS WORK
+msgid "Please enter a valid IP address"
+msgstr "Por favor, insira um endereço IP válido"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 241
+#: NEEDS WORK
+msgid "Connecting..."
+msgstr "Conectando..."
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 255
+#: NEEDS WORK
+msgid "Connected successfully!"
+msgstr "Conectado com sucesso!"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 425
+#: NEEDS WORK
+msgid "Connection Failed"
+msgstr "Conexão Falhou"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 257
+#: NEEDS WORK
+#, python-brace-format
+msgid "Connection failed: {message}"
+msgstr "Conexão falhou: {message}"
+# 
+# File: usr/share/jellybeam/pages/device.py, line: 264
+#: NEEDS WORK
+msgid "Certificates"
+msgstr "Certificados"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 24
+#: NEEDS WORK
+msgid "General"
+msgstr "Geral"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 30
+#: NEEDS WORK
+msgid "Docker Settings"
+msgstr "Configurações do Docker"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 31
+#: NEEDS WORK
+msgid "Configure Docker behavior and settings"
+msgstr "Configurar o comportamento e as configurações do Docker"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 36
+#: NEEDS WORK
+msgid "Docker Image"
+msgstr "Imagem Docker"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 43
+#: NEEDS WORK
+msgid "Auto-pull Updates"
+msgstr "Atualizações de Auto-pull"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 44
+#: NEEDS WORK
+msgid "Automatically pull the latest Docker image"
+msgstr "Puxar automaticamente a imagem Docker mais recente"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 51
+#: NEEDS WORK
+msgid "Network Settings"
+msgstr "Configurações de Rede"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 52
+#: NEEDS WORK
+msgid "Configure network scanning and timeouts"
+msgstr "Configurar a digitalização de rede e os tempos limite"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 57
+#: NEEDS WORK
+msgid "Scan Timeout"
+msgstr "Tempo de Expiração da Digitalização"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 58
+#: NEEDS WORK
+msgid "Timeout for network device scanning (seconds)"
+msgstr "Tempo limite para a varredura de dispositivos de rede (segundos)"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 67
+#: NEEDS WORK
+msgid "Port Range"
+msgstr "Faixa de Portas"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 68
+#: NEEDS WORK
+msgid "Scan port range (e.g., 8000-8080)"
+msgstr "Escanear intervalo de portas (por exemplo, 8000-8080)"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 102
+#: NEEDS WORK
+msgid "Port range for network scanning"
+msgstr "Faixa de portas para varredura de rede"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 80
+#: NEEDS WORK
+msgid "Logging"
+msgstr "Registro"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 81
+#: NEEDS WORK
+msgid "Configure application logging"
+msgstr "Configurar o registro de aplicativos"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 86
+#: NEEDS WORK
+msgid "Log Level"
+msgstr "Nível de Log"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 87
+#: NEEDS WORK
+msgid "Verbosity of application logs"
+msgstr "Verbosidade dos logs da aplicação"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 104
+#: NEEDS WORK
+msgid "Save Logs to File"
+msgstr "Salvar Logs em Arquivo"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 105
+#: NEEDS WORK
+msgid "Save application logs to ~/.local/share/jellybeam/logs"
+msgstr "Salvar logs da aplicação em ~/.local/share/jellybeam/logs"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 112
+#: NEEDS WORK
+msgid "Advanced"
+msgstr "Avançado"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 118
+#: NEEDS WORK
+msgid "Developer Options"
+msgstr "Opções de Desenvolvedor"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 119
+#: NEEDS WORK
+msgid "Advanced settings for developers"
+msgstr "Configurações avançadas para desenvolvedores"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 124
+#: NEEDS WORK
+msgid "Debug Mode"
+msgstr "Modo de Depuração"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 125
+#: NEEDS WORK
+msgid "Enable debug mode for development"
+msgstr "Ativar modo de depuração para desenvolvimento"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 140
+# File: usr/share/jellybeam/pages/preferences.py, line: 148
+# File: usr/share/jellybeam/pages/preferences.py, line: 172
+#: NEEDS WORK
+msgid "Reset"
+msgstr "Redefinir"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 141
+#: NEEDS WORK
+msgid "Reset application settings"
+msgstr "Redefinir configurações do aplicativo"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 145
+#: NEEDS WORK
+msgid "Reset All Settings"
+msgstr "Redefinir Todas as Configurações"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 146
+#: NEEDS WORK
+msgid "Reset all preferences to default values"
+msgstr "Redefinir todas as preferências para os valores padrão"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 168
+#: NEEDS WORK
+msgid "Reset All Settings?"
+msgstr "Redefinir todas as configurações?"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 169
+#: NEEDS WORK
+msgid "This will reset all preferences to their default values. This action cannot be undone."
+msgstr "Isto irá redefinir todas as preferências para seus valores padrão. Esta ação não pode ser desfeita."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 31
+#: NEEDS WORK
+msgid "Developer Certificates"
+msgstr "Certificados de Desenvolvedor"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 48
+#: NEEDS WORK
+msgid "Certificates are required to install apps on Samsung TVs"
+msgstr "Certificados são necessários para instalar aplicativos em TVs Samsung."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
+#: NEEDS WORK
+msgid "Certificate Mode"
+msgstr "Modo de Certificado"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 60
+#: NEEDS WORK
+msgid "Use Built-in Certificates"
+msgstr "Usar Certificados Integrados"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 61
+#: NEEDS WORK
+msgid "Recommended - No Tizen Studio required"
+msgstr "Recomendado - Nenhum Tizen Studio necessário"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 73
+#: NEEDS WORK
+msgid "How it works"
+msgstr "Como funciona"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 74
+#: NEEDS WORK
+msgid ""
+"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
+"without any setup."
+msgstr ""
+"O contêiner Docker inclui certificados pré-configurados. Você pode instalar o Jellyfin "
+"imediatamente sem nenhuma configuração."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 83
+#: NEEDS WORK
+msgid "Custom Certificates (Advanced)"
+msgstr "Certificados Personalizados (Avançado)"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 84
+#: NEEDS WORK
+msgid "Only needed if you want to use your own certificates"
+msgstr "Somente necessário se você quiser usar seus próprios certificados"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 43
+#: NEEDS WORK
+msgid "Author Certificate"
+msgstr "Certificado de Autor"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 148
+#: NEEDS WORK
+msgid "Select author.p12 file"
+msgstr "Selecione o arquivo author.p12"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 46
+# File: usr/share/jellybeam/pages/certificates.py, line: 58
+#: NEEDS WORK
+msgid "Browse"
+msgstr "Navegar"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
+#: NEEDS WORK
+msgid "Distributor Certificate"
+msgstr "Certificado de Distribuidor"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
+#: NEEDS WORK
+msgid "Select distributor.p12 file"
+msgstr "Selecionar arquivo distributor.p12"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 115
+#: NEEDS WORK
+msgid "Certificate Password"
+msgstr "Senha do Certificado"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
+#: NEEDS WORK
+msgid "Password for the author P12 certificate"
+msgstr "Senha para o certificado P12 do autor"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 122
+#: NEEDS WORK
+msgid "Need help creating certificates?"
+msgstr "Precisa de ajuda para criar certificados?"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 123
+#: NEEDS WORK
+msgid "View tutorial on Samsung Developer website"
+msgstr "Veja o tutorial no site do desenvolvedor Samsung"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 127
+#: NEEDS WORK
+msgid "View Guide"
+msgstr "Ver Guia"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 114
+#: NEEDS WORK
+msgid "Continue to Installation"
+msgstr "Continuar para Instalação"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 226
+#: NEEDS WORK
+msgid "Proceed to install Jellyfin on your TV"
+msgstr "Prossiga para instalar o Jellyfin na sua TV"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 171
+#: NEEDS WORK
+msgid "Ready to install with built-in certificates"
+msgstr "Pronto para instalar com certificados integrados"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
+#: NEEDS WORK
+#, python-brace-format
+msgid "Select {cert_type} certificate"
+msgstr "Selecione o certificado {cert_type}"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 136
+#: NEEDS WORK
+msgid "P12 Certificate Files"
+msgstr "Arquivos de Certificado P12"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 212
+# File: usr/share/jellybeam/pages/certificates.py, line: 215
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+# File: usr/share/jellybeam/pages/certificates.py, line: 238
+#: NEEDS WORK
+#, python-brace-format
+msgid "✅ {filename}"
+msgstr "✅ {filename}"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 163
+# File: usr/share/jellybeam/pages/certificates.py, line: 166
+# File: usr/share/jellybeam/pages/certificates.py, line: 185
+# File: usr/share/jellybeam/pages/certificates.py, line: 191
+#: NEEDS WORK
+msgid "Change"
+msgstr "Alterar"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 251
+#: NEEDS WORK
+msgid "Ready to install with custom certificates"
+msgstr "Pronto para instalar com certificados personalizados"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 326
+#: NEEDS WORK
+msgid "author certificate"
+msgstr "certificado de autor"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 328
+#: NEEDS WORK
+msgid "distributor certificate"
+msgstr "certificado de distribuidor"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 330
+#: NEEDS WORK
+msgid "password"
+msgstr "senha"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid "Missing: {items}"
+msgstr "Faltando: {items}"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+#: NEEDS WORK
+msgid "Installation"
+msgstr "Instalação"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 310
+#: NEEDS WORK
+msgid "Certificate Error"
+msgstr "Erro de Certificado"
+# 
 # File: usr/share/jellybeam/pages/welcome.py, line: 60
 #: NEEDS WORK
 msgid "JellyBeam Installer"
@@ -859,6 +959,46 @@ msgstr "Instalador JellyBeam"
 #: NEEDS WORK
 msgid "Install Jellyfin on your Samsung Smart TV or projector"
 msgstr "Instale o Jellyfin na sua Samsung Smart TV ou projetor"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+#: NEEDS WORK
+msgid "4 simple steps to get Jellyfin on your Samsung TV"
+msgstr "4 etapas simples para instalar o Jellyfin na sua TV Samsung"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Check Requirements"
+msgstr "Verificar Requisitos"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Ensure Docker is installed"
+msgstr "Certifique-se de que o Docker está instalado"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Connect Device"
+msgstr "Conectar Dispositivo"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Find your TV on the network"
+msgstr "Encontre sua TV na rede"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Configure signing (auto by default)"
+msgstr "Configurar assinatura (automático por padrão)"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 92
+#: NEEDS WORK
+msgid "Install"
+msgstr "Instalar"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
+#: NEEDS WORK
+msgid "One click to deploy Jellyfin"
+msgstr "Um clique para implantar o Jellyfin"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 68
 #: NEEDS WORK
@@ -887,17 +1027,17 @@ msgstr "Instalar o Docker"
 msgid "Docker is required but not installed"
 msgstr "O Docker é necessário, mas não está instalado."
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 92
+# File: usr/share/jellybeam/pages/welcome.py, line: 133
 #: NEEDS WORK
 msgid "Docker Group"
 msgstr "Grupo Docker"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 134
+# File: usr/share/jellybeam/pages/welcome.py, line: 134
 #: NEEDS WORK
 msgid "User not in docker group"
 msgstr "Usuário não está no grupo docker"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 136
+# File: usr/share/jellybeam/pages/welcome.py, line: 136
 #: NEEDS WORK
 msgid "Add to group"
 msgstr "Adicionar ao grupo"
@@ -907,10 +1047,20 @@ msgstr "Adicionar ao grupo"
 msgid "Configure your Samsung TV"
 msgstr "Configure sua TV Samsung"
 # 
+# File: usr/share/jellybeam/pages/welcome.py, line: 157
+#: NEEDS WORK
+msgid "Continue to Device Setup"
+msgstr "Continuar para Configuração do Dispositivo"
+# 
 # File: usr/share/jellybeam/pages/welcome.py, line: 135
 #: NEEDS WORK
 msgid "Ready"
 msgstr "Pronto"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
+#: NEEDS WORK
+msgid "Permission required"
+msgstr "Permissão necessária"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 142
 #: NEEDS WORK
@@ -927,12 +1077,12 @@ msgstr "Iniciar"
 msgid "Not installed"
 msgstr "Não instalado"
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 193
+# File: usr/share/jellybeam/pages/welcome.py, line: 259
 #: NEEDS WORK
 msgid "Added to group"
 msgstr "Adicionado ao grupo"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 307
+# File: usr/share/jellybeam/pages/welcome.py, line: 307
 #: NEEDS WORK
 msgid ""
 "Select your distribution:\n"
@@ -958,27 +1108,18 @@ msgstr "Debian/Ubuntu"
 msgid "Fedora/RHEL"
 msgstr "Fedora/RHEL"
 # 
-# File: usr/share/jellybeam/app.py, line: 84
+# File: usr/share/jellybeam/pages/welcome.py, line: 331
 #: NEEDS WORK
 msgid "Installing Docker..."
 msgstr "Instalando o Docker..."
 # 
-# File: usr/share/jellybeam/app.py, line: 106
+# File: usr/share/jellybeam/pages/welcome.py, line: 347
 #: NEEDS WORK
 msgid "Docker installed! Checking status..."
 msgstr "Docker instalado! Verificando status..."
 # 
-# File: usr/share/jellybeam/app.py, line: 113
+# File: usr/share/jellybeam/pages/welcome.py, line: 355
 #: NEEDS WORK
-msgid "About"
-msgstr "Sobre"
-# 
-# File: usr/share/jellybeam/app.py, line: 139
-#: NEEDS WORK
-msgid "JellyBeam Team"
-msgstr "Equipe JellyBeam"
-# 
-# File: usr/share/jellybeam/app.py, line: 145
-#: NEEDS WORK
-msgid "JellyBeam Contributors"
-msgstr "Contribuidores do JellyBeam"
+#, python-brace-format
+msgid "Installation failed: {msg}"
+msgstr "Instalação falhou: {msg}"
