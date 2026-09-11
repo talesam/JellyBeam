@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the JellyTizen package.
+# This file is distributed under the same license as the JellyBeam package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: JellyTizen\n"
+"Project-Id-Version: JellyBeam\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,62 +16,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 94
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 137
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
 #: NEEDS WORK
 msgid "OK"
 msgstr "Tamam"
 # 
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 170
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
 #: NEEDS WORK
 msgid "Confirm"
 msgstr "Onayla"
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 172
-# File: usr/share/jellytizen/pages/preferences.py, line: 171
-# File: usr/share/jellytizen/pages/install.py, line: 110
-# File: usr/share/jellytizen/pages/welcome.py, line: 198
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
+# File: usr/share/jellybeam/pages/preferences.py, line: 171
+# File: usr/share/jellybeam/pages/install.py, line: 110
+# File: usr/share/jellybeam/pages/welcome.py, line: 198
 #: NEEDS WORK
 msgid "Cancel"
 msgstr "İptal"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 31
+# File: usr/share/jellybeam/pages/certificates.py, line: 31
 #: NEEDS WORK
 msgid "Developer Certificates"
 msgstr "Geliştirici Sertifikaları"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 48
+# File: usr/share/jellybeam/pages/certificates.py, line: 48
 #: NEEDS WORK
 msgid "Certificates are required to install apps on Samsung TVs"
 msgstr "Uygulamaları Samsung TV'lerde kurmak için sertifikalar gereklidir."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
 msgid "Certificate Mode"
 msgstr "Sertifika Modu"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 60
+# File: usr/share/jellybeam/pages/certificates.py, line: 60
 #: NEEDS WORK
 msgid "Use Built-in Certificates"
 msgstr "Yerleşik Sertifikaları Kullan"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 61
+# File: usr/share/jellybeam/pages/certificates.py, line: 61
 #: NEEDS WORK
 msgid "Recommended - No Tizen Studio required"
 msgstr "Tavsiye Edilir - Tizen Studio Gerekmez"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 73
+# File: usr/share/jellybeam/pages/certificates.py, line: 73
 #: NEEDS WORK
 msgid "How it works"
 msgstr "Nasıl çalışır"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 74
+# File: usr/share/jellybeam/pages/certificates.py, line: 74
 #: NEEDS WORK
 msgid ""
 "The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
@@ -80,884 +80,884 @@ msgstr ""
 "Docker konteyneri önceden yapılandırılmış sertifikalar içerir. Jellyfin'i hemen herhangi bir "
 "kurulum yapmadan yükleyebilirsiniz."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 83
+# File: usr/share/jellybeam/pages/certificates.py, line: 83
 #: NEEDS WORK
 msgid "Custom Certificates (Advanced)"
 msgstr "Özel Sertifikalar (Gelişmiş)"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 84
+# File: usr/share/jellybeam/pages/certificates.py, line: 84
 #: NEEDS WORK
 msgid "Only needed if you want to use your own certificates"
 msgstr "Sadece kendi sertifikalarınızı kullanmak istiyorsanız gereklidir."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 43
+# File: usr/share/jellybeam/pages/certificates.py, line: 43
 #: NEEDS WORK
 msgid "Author Certificate"
 msgstr "Yazar Sertifikası"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 148
+# File: usr/share/jellybeam/pages/certificates.py, line: 148
 #: NEEDS WORK
 msgid "Select author.p12 file"
 msgstr "author.p12 dosyasını seçin"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 46
-# File: usr/share/jellytizen/pages/certificates.py, line: 58
+# File: usr/share/jellybeam/pages/certificates.py, line: 46
+# File: usr/share/jellybeam/pages/certificates.py, line: 58
 #: NEEDS WORK
 msgid "Browse"
 msgstr "Gözat"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
 msgid "Distributor Certificate"
 msgstr "Dağıtıcı Sertifikası"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 162
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
 #: NEEDS WORK
 msgid "Select distributor.p12 file"
 msgstr "distributor.p12 dosyasını seçin"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 115
+# File: usr/share/jellybeam/pages/certificates.py, line: 115
 #: NEEDS WORK
 msgid "Certificate Password"
 msgstr "Sertifika Şifresi"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 122
+# File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
 msgid "Need help creating certificates?"
 msgstr "Sertifika oluşturma konusunda yardıma mı ihtiyacınız var?"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 123
+# File: usr/share/jellybeam/pages/certificates.py, line: 123
 #: NEEDS WORK
 msgid "View tutorial on Samsung Developer website"
 msgstr "Samsung Geliştirici web sitesinde eğitimi görüntüle"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 127
+# File: usr/share/jellybeam/pages/certificates.py, line: 127
 #: NEEDS WORK
 msgid "View Guide"
 msgstr "Kılavuzu Görüntüle"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 114
+# File: usr/share/jellybeam/pages/certificates.py, line: 114
 #: NEEDS WORK
 msgid "Continue to Installation"
 msgstr "Kuruluma Devam Et"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 226
+# File: usr/share/jellybeam/pages/certificates.py, line: 226
 #: NEEDS WORK
 msgid "Proceed to install Jellyfin on your TV"
 msgstr "Jellyfin'i TV'nize kurmaya devam edin"
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 117
-# File: usr/share/jellytizen/pages/device.py, line: 135
-# File: usr/share/jellytizen/pages/welcome.py, line: 105
+# File: usr/share/jellybeam/pages/certificates.py, line: 117
+# File: usr/share/jellybeam/pages/device.py, line: 135
+# File: usr/share/jellybeam/pages/welcome.py, line: 105
 #: NEEDS WORK
 msgid "Continue"
 msgstr "Devam et"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 171
+# File: usr/share/jellybeam/pages/certificates.py, line: 171
 #: NEEDS WORK
 msgid "Ready to install with built-in certificates"
 msgstr "Kurulum için hazır, yerleşik sertifikalarla birlikte"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 132
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
 #: NEEDS WORK
 #, python-brace-format
 msgid "Select {cert_type} certificate"
 msgstr "{cert_type} sertifikasını seçin"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 136
+# File: usr/share/jellybeam/pages/certificates.py, line: 136
 #: NEEDS WORK
 msgid "P12 Certificate Files"
 msgstr "P12 Sertifika Dosyaları"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 212
-# File: usr/share/jellytizen/pages/certificates.py, line: 215
-# File: usr/share/jellytizen/pages/certificates.py, line: 231
-# File: usr/share/jellytizen/pages/certificates.py, line: 238
+# File: usr/share/jellybeam/pages/certificates.py, line: 212
+# File: usr/share/jellybeam/pages/certificates.py, line: 215
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+# File: usr/share/jellybeam/pages/certificates.py, line: 238
 #: NEEDS WORK
 #, python-brace-format
 msgid "✅ {filename}"
 msgstr "✅ {dosya_adı}"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 163
-# File: usr/share/jellytizen/pages/certificates.py, line: 166
-# File: usr/share/jellytizen/pages/certificates.py, line: 185
-# File: usr/share/jellytizen/pages/certificates.py, line: 191
+# File: usr/share/jellybeam/pages/certificates.py, line: 163
+# File: usr/share/jellybeam/pages/certificates.py, line: 166
+# File: usr/share/jellybeam/pages/certificates.py, line: 185
+# File: usr/share/jellybeam/pages/certificates.py, line: 191
 #: NEEDS WORK
 msgid "Change"
 msgstr "Değiştir"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 251
+# File: usr/share/jellybeam/pages/certificates.py, line: 251
 #: NEEDS WORK
 msgid "Ready to install with custom certificates"
 msgstr "Özel sertifikalarla kurulum için hazır"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 326
+# File: usr/share/jellybeam/pages/certificates.py, line: 326
 #: NEEDS WORK
 msgid "author certificate"
 msgstr "yazar sertifikası"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 328
+# File: usr/share/jellybeam/pages/certificates.py, line: 328
 #: NEEDS WORK
 msgid "distributor certificate"
 msgstr "dağıtıcı sertifikası"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 330
+# File: usr/share/jellybeam/pages/certificates.py, line: 330
 #: NEEDS WORK
 msgid "password"
 msgstr "şifre"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 331
+# File: usr/share/jellybeam/pages/certificates.py, line: 331
 #: NEEDS WORK
 #, python-brace-format
 msgid "Missing: {items}"
 msgstr "Eksik: {items}"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 231
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
 #: NEEDS WORK
 msgid "Installation"
 msgstr "Kurulum"
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 16
-# File: usr/share/jellytizen/app.py, line: 112
+# File: usr/share/jellybeam/pages/preferences.py, line: 16
+# File: usr/share/jellybeam/app.py, line: 112
 #: NEEDS WORK
 msgid "Preferences"
 msgstr "Tercihler"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 24
+# File: usr/share/jellybeam/pages/preferences.py, line: 24
 #: NEEDS WORK
 msgid "General"
 msgstr "Genel"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 30
+# File: usr/share/jellybeam/pages/preferences.py, line: 30
 #: NEEDS WORK
 msgid "Docker Settings"
 msgstr "Docker Ayarları"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 31
+# File: usr/share/jellybeam/pages/preferences.py, line: 31
 #: NEEDS WORK
 msgid "Configure Docker behavior and settings"
 msgstr "Docker davranışını ve ayarlarını yapılandırın"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 36
+# File: usr/share/jellybeam/pages/preferences.py, line: 36
 #: NEEDS WORK
 msgid "Docker Image"
 msgstr "Docker Görüntüsü"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 43
+# File: usr/share/jellybeam/pages/preferences.py, line: 43
 #: NEEDS WORK
 msgid "Auto-pull Updates"
 msgstr "Otomatik Güncellemeleri Çekme"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 44
+# File: usr/share/jellybeam/pages/preferences.py, line: 44
 #: NEEDS WORK
 msgid "Automatically pull the latest Docker image"
 msgstr "En son Docker görüntüsünü otomatik olarak çek."
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 51
+# File: usr/share/jellybeam/pages/preferences.py, line: 51
 #: NEEDS WORK
 msgid "Network Settings"
 msgstr "Ağ Ayarları"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 52
+# File: usr/share/jellybeam/pages/preferences.py, line: 52
 #: NEEDS WORK
 msgid "Configure network scanning and timeouts"
 msgstr "Ağ taramasını ve zaman aşımını yapılandırın"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 57
+# File: usr/share/jellybeam/pages/preferences.py, line: 57
 #: NEEDS WORK
 msgid "Scan Timeout"
 msgstr "Tarama Zaman Aşımı"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 58
+# File: usr/share/jellybeam/pages/preferences.py, line: 58
 #: NEEDS WORK
 msgid "Timeout for network device scanning (seconds)"
 msgstr "Ağ cihazı taraması için zaman aşımı (saniye)"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 67
+# File: usr/share/jellybeam/pages/preferences.py, line: 67
 #: NEEDS WORK
 msgid "Port Range"
 msgstr "Port Aralığı"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 68
+# File: usr/share/jellybeam/pages/preferences.py, line: 68
 #: NEEDS WORK
 msgid "Scan port range (e.g., 8000-8080)"
 msgstr "Port aralığını tara (örn., 8000-8080)"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 80
+# File: usr/share/jellybeam/pages/preferences.py, line: 80
 #: NEEDS WORK
 msgid "Logging"
 msgstr "Günlükleme"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 81
+# File: usr/share/jellybeam/pages/preferences.py, line: 81
 #: NEEDS WORK
 msgid "Configure application logging"
 msgstr "Uygulama günlüğünü yapılandırın"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 86
+# File: usr/share/jellybeam/pages/preferences.py, line: 86
 #: NEEDS WORK
 msgid "Log Level"
 msgstr "Günlük Seviyesi"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 87
+# File: usr/share/jellybeam/pages/preferences.py, line: 87
 #: NEEDS WORK
 msgid "Verbosity of application logs"
 msgstr "Uygulama günlüklerinin ayrıntı seviyesi"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 104
+# File: usr/share/jellybeam/pages/preferences.py, line: 104
 #: NEEDS WORK
 msgid "Save Logs to File"
 msgstr "Günlükleri Dosyaya Kaydet"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 105
+# File: usr/share/jellybeam/pages/preferences.py, line: 105
 #: NEEDS WORK
-msgid "Save application logs to ~/.local/share/jellytizen/logs"
-msgstr "Uygulama günlüklerini ~/.local/share/jellytizen/logs konumuna kaydet"
+msgid "Save application logs to ~/.local/share/jellybeam/logs"
+msgstr "Uygulama günlüklerini ~/.local/share/jellybeam/logs konumuna kaydet"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 112
+# File: usr/share/jellybeam/pages/preferences.py, line: 112
 #: NEEDS WORK
 msgid "Advanced"
 msgstr "Gelişmiş"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 118
+# File: usr/share/jellybeam/pages/preferences.py, line: 118
 #: NEEDS WORK
 msgid "Developer Options"
 msgstr "Geliştirici Seçenekleri"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 119
+# File: usr/share/jellybeam/pages/preferences.py, line: 119
 #: NEEDS WORK
 msgid "Advanced settings for developers"
 msgstr "Geliştiriciler için Gelişmiş Ayarlar"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 124
+# File: usr/share/jellybeam/pages/preferences.py, line: 124
 #: NEEDS WORK
 msgid "Debug Mode"
 msgstr "Hata Ayıklama Modu"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 125
+# File: usr/share/jellybeam/pages/preferences.py, line: 125
 #: NEEDS WORK
 msgid "Enable debug mode for development"
 msgstr "Geliştirme için hata ayıklama modunu etkinleştir"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 140
-# File: usr/share/jellytizen/pages/preferences.py, line: 148
-# File: usr/share/jellytizen/pages/preferences.py, line: 172
+# File: usr/share/jellybeam/pages/preferences.py, line: 140
+# File: usr/share/jellybeam/pages/preferences.py, line: 148
+# File: usr/share/jellybeam/pages/preferences.py, line: 172
 #: NEEDS WORK
 msgid "Reset"
 msgstr "Sıfırla"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 141
+# File: usr/share/jellybeam/pages/preferences.py, line: 141
 #: NEEDS WORK
 msgid "Reset application settings"
 msgstr "Uygulama ayarlarını sıfırla"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 145
+# File: usr/share/jellybeam/pages/preferences.py, line: 145
 #: NEEDS WORK
 msgid "Reset All Settings"
 msgstr "Tüm Ayarları Sıfırla"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 146
+# File: usr/share/jellybeam/pages/preferences.py, line: 146
 #: NEEDS WORK
 msgid "Reset all preferences to default values"
 msgstr "Tüm tercihleri varsayılan değerlere sıfırla"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 168
+# File: usr/share/jellybeam/pages/preferences.py, line: 168
 #: NEEDS WORK
 msgid "Reset All Settings?"
 msgstr "Tüm Ayarları Sıfırla?"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 169
+# File: usr/share/jellybeam/pages/preferences.py, line: 169
 #: NEEDS WORK
 msgid "This will reset all preferences to their default values. This action cannot be undone."
 msgstr "Bu, tüm tercihleri varsayılan değerlerine sıfırlayacaktır. Bu işlem geri alınamaz."
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 49
-# File: usr/share/jellytizen/pages/welcome.py, line: 185
+# File: usr/share/jellybeam/pages/device.py, line: 49
+# File: usr/share/jellybeam/pages/welcome.py, line: 185
 #: NEEDS WORK
 msgid "Device Setup"
 msgstr "Cihaz Kurulumu"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 50
+# File: usr/share/jellybeam/pages/device.py, line: 50
 #: NEEDS WORK
 msgid "Connect to your Samsung Tizen TV or projector"
 msgstr "Samsung Tizen TV'nize veya projektörünüze bağlanın"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 58
+# File: usr/share/jellybeam/pages/device.py, line: 58
 #: NEEDS WORK
 msgid "Setup Instructions"
 msgstr "Kurulum Talimatları"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 63
+# File: usr/share/jellybeam/pages/device.py, line: 63
 #: NEEDS WORK
 msgid "Enable Developer Mode on TV"
 msgstr "TV'de Geliştirici Modunu Etkinleştir"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 64
+# File: usr/share/jellybeam/pages/device.py, line: 64
 #: NEEDS WORK
 msgid "Click to view step-by-step instructions"
 msgstr "Adım adım talimatları görüntülemek için tıklayın"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 75
+# File: usr/share/jellybeam/pages/device.py, line: 75
 #: NEEDS WORK
 msgid "1. Open Apps"
 msgstr "1. Uygulamaları Aç"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 76
+# File: usr/share/jellybeam/pages/device.py, line: 76
 #: NEEDS WORK
 msgid "On the TV, go to the 'Apps' section"
 msgstr "TV'de 'Uygulamalar' bölümüne gidin"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 83
+# File: usr/share/jellybeam/pages/device.py, line: 83
 #: NEEDS WORK
 msgid "2. Go to App Settings"
 msgstr "2. Uygulama Ayarlarına Git"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 79
+# File: usr/share/jellybeam/pages/device.py, line: 79
 #: NEEDS WORK
 msgid "Scroll to the end and select 'App Settings'"
 msgstr "Sonuna kaydırın ve 'Uygulama Ayarları'nı seçin."
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 91
+# File: usr/share/jellybeam/pages/device.py, line: 91
 #: NEEDS WORK
 msgid "3. Press '123' Button"
 msgstr "3. '123' Butonuna Basın"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 85
+# File: usr/share/jellybeam/pages/device.py, line: 85
 #: NEEDS WORK
 msgid "Press the '123' button on your remote"
 msgstr "Uzaktan kumandanızdaki '123' tuşuna basın"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 90
+# File: usr/share/jellybeam/pages/device.py, line: 90
 #: NEEDS WORK
 msgid "4. Enter Code '12345'"
 msgstr "4. Kodu Girin '12345'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 91
+# File: usr/share/jellybeam/pages/device.py, line: 91
 #: NEEDS WORK
 msgid "Developer Mode menu will appear"
 msgstr "Geliştirici Modu menüsü görünecektir"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 107
+# File: usr/share/jellybeam/pages/device.py, line: 107
 #: NEEDS WORK
 msgid "5. Enable Developer Mode"
 msgstr "5. Geliştirici Modunu Etkinleştir"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 97
+# File: usr/share/jellybeam/pages/device.py, line: 97
 #: NEEDS WORK
 msgid "Toggle 'Developer Mode' to 'On'"
 msgstr "Geliştirici Modu'nu 'Açık' konumuna getirin"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 103
+# File: usr/share/jellybeam/pages/device.py, line: 103
 #: NEEDS WORK
 #, python-brace-format
 msgid "6. Enter This IP: {ip}"
 msgstr "6. Bu IP'yi girin: {ip}"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 104
+# File: usr/share/jellybeam/pages/device.py, line: 104
 #: NEEDS WORK
 msgid "Your computer's IP address"
 msgstr "Bilgisayarınızın IP adresi"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 403
-# File: usr/share/jellytizen/pages/device.py, line: 430
+# File: usr/share/jellybeam/pages/device.py, line: 403
+# File: usr/share/jellybeam/pages/device.py, line: 430
 #: NEEDS WORK
 msgid "Copy IP"
 msgstr "IP'yi Kopyala"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 131
+# File: usr/share/jellybeam/pages/device.py, line: 131
 #: NEEDS WORK
 msgid "7. Restart TV"
 msgstr "7. TV'yi Yeniden Başlat"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 116
+# File: usr/share/jellybeam/pages/device.py, line: 116
 #: NEEDS WORK
 msgid "Turn off and on your TV"
 msgstr "TV'nizi kapatıp açın"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 162
+# File: usr/share/jellybeam/pages/device.py, line: 162
 #: NEEDS WORK
 msgid "Confirmation"
 msgstr "Onay"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 167
+# File: usr/share/jellybeam/pages/device.py, line: 167
 #: NEEDS WORK
 msgid "Developer Mode Enabled"
 msgstr "Geliştirici Modu Etkinleştirildi"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 168
+# File: usr/share/jellybeam/pages/device.py, line: 168
 #: NEEDS WORK
 msgid "I confirm I have completed the steps above on my TV"
 msgstr "Yukarıdaki adımları TV'mde tamamladığımı onaylıyorum."
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 55
+# File: usr/share/jellybeam/pages/device.py, line: 55
 #: NEEDS WORK
 msgid "Device Discovery"
 msgstr "Cihaz Keşfi"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 60
+# File: usr/share/jellybeam/pages/device.py, line: 60
 #: NEEDS WORK
 msgid "Scan Network"
 msgstr "Ağ Tarama"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 61
+# File: usr/share/jellybeam/pages/device.py, line: 61
 #: NEEDS WORK
 msgid "Automatically discover Samsung devices on your network"
 msgstr "Ağınızdaki Samsung cihazlarını otomatik olarak keşfedin"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 63
-# File: usr/share/jellytizen/pages/device.py, line: 163
+# File: usr/share/jellybeam/pages/device.py, line: 63
+# File: usr/share/jellybeam/pages/device.py, line: 163
 #: NEEDS WORK
 msgid "Scan"
 msgstr "Tarama"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 73
+# File: usr/share/jellybeam/pages/device.py, line: 73
 #: NEEDS WORK
 msgid "Discovered Devices"
 msgstr "Keşfedilen Cihazlar"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 74
+# File: usr/share/jellybeam/pages/device.py, line: 74
 #: NEEDS WORK
 msgid "Select your target device"
 msgstr "Hedef cihazınızı seçin"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 79
+# File: usr/share/jellybeam/pages/device.py, line: 79
 #: NEEDS WORK
 msgid "Manual Connection"
 msgstr "Manuel Bağlantı"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 80
+# File: usr/share/jellybeam/pages/device.py, line: 80
 #: NEEDS WORK
 msgid "Enter device details manually"
 msgstr "Cihaz ayrıntılarını manuel olarak girin"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 85
+# File: usr/share/jellybeam/pages/device.py, line: 85
 #: NEEDS WORK
 msgid "Device IP Address"
 msgstr "Cihaz IP Adresi"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 119
+# File: usr/share/jellybeam/pages/device.py, line: 119
 #: NEEDS WORK
 msgid "Connect to Device"
 msgstr "Cihaza Bağlanın"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 120
+# File: usr/share/jellybeam/pages/device.py, line: 120
 #: NEEDS WORK
 msgid "Establish connection with your TV"
 msgstr "TV'nizle bağlantı kurun"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 122
-# File: usr/share/jellytizen/pages/device.py, line: 250
+# File: usr/share/jellybeam/pages/device.py, line: 122
+# File: usr/share/jellybeam/pages/device.py, line: 250
 #: NEEDS WORK
 msgid "Connect"
 msgstr "Bağlan"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 132
+# File: usr/share/jellybeam/pages/device.py, line: 132
 #: NEEDS WORK
 msgid "Continue to Certificates"
 msgstr "Sertifikalara Devam Et"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 133
+# File: usr/share/jellybeam/pages/device.py, line: 133
 #: NEEDS WORK
 msgid "Setup developer certificates"
 msgstr "Geliştirici sertifikalarını ayarlayın"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 422
+# File: usr/share/jellybeam/pages/device.py, line: 422
 #: NEEDS WORK
 msgid "Unable to determine IP"
 msgstr "IP belirlenemiyor"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 429
+# File: usr/share/jellybeam/pages/device.py, line: 429
 #: NEEDS WORK
 msgid "Copied!"
 msgstr "Kopyalandı!"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 153
+# File: usr/share/jellybeam/pages/device.py, line: 153
 #: NEEDS WORK
 msgid "Scanning..."
 msgstr "Tarama..."
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 178
+# File: usr/share/jellybeam/pages/device.py, line: 178
 #: NEEDS WORK
 msgid "No devices found"
 msgstr "Cihaz bulunamadı"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 179
+# File: usr/share/jellybeam/pages/device.py, line: 179
 #: NEEDS WORK
 msgid "Try manual connection or check network"
 msgstr "Manuel bağlantıyı deneyin veya ağı kontrol edin"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 186
+# File: usr/share/jellybeam/pages/device.py, line: 186
 #: NEEDS WORK
 msgid "Unknown Device"
 msgstr "Bilinmeyen Aygıt"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 187
+# File: usr/share/jellybeam/pages/device.py, line: 187
 #: NEEDS WORK
 #, python-brace-format
 msgid "IP: {ip} | Model: {model}"
 msgstr "IP: {ip} | Model: {model}"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 187
+# File: usr/share/jellybeam/pages/device.py, line: 187
 #: NEEDS WORK
 msgid "Unknown"
 msgstr "Bilinmiyor"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 189
+# File: usr/share/jellybeam/pages/device.py, line: 189
 #: NEEDS WORK
 msgid "Select"
 msgstr "Seçin"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 200
+# File: usr/share/jellybeam/pages/device.py, line: 200
 #: NEEDS WORK
 msgid "Found 1 device - Select your target device"
 msgstr "1 cihaz bulundu - Hedef cihazınızı seçin"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 202
+# File: usr/share/jellybeam/pages/device.py, line: 202
 #: NEEDS WORK
 #, python-brace-format
 msgid "Found {count} devices - Select your target device"
 msgstr "{count} cihaz bulundu - Hedef cihazınızı seçin"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 304
+# File: usr/share/jellybeam/pages/device.py, line: 304
 #: NEEDS WORK
 #, python-brace-format
 msgid "Device selected: {name}"
 msgstr "Seçilen cihaz: {name}"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 232
+# File: usr/share/jellybeam/pages/device.py, line: 232
 #: NEEDS WORK
 msgid "Please enter a device IP address"
 msgstr "Lütfen bir cihaz IP adresi girin"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 236
+# File: usr/share/jellybeam/pages/device.py, line: 236
 #: NEEDS WORK
 msgid "Please enter a valid IP address"
 msgstr "Lütfen geçerli bir IP adresi girin"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 241
+# File: usr/share/jellybeam/pages/device.py, line: 241
 #: NEEDS WORK
 msgid "Connecting..."
 msgstr "Bağlanıyor..."
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 255
+# File: usr/share/jellybeam/pages/device.py, line: 255
 #: NEEDS WORK
 msgid "Connected successfully!"
 msgstr "Bağlantı başarıyla kuruldu!"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 257
+# File: usr/share/jellybeam/pages/device.py, line: 257
 #: NEEDS WORK
 #, python-brace-format
 msgid "Connection failed: {message}"
 msgstr "Bağlantı başarısız: {message}"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 264
+# File: usr/share/jellybeam/pages/device.py, line: 264
 #: NEEDS WORK
 msgid "Certificates"
 msgstr "Sertifikalar"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 53
-# File: usr/share/jellytizen/pages/install.py, line: 116
-# File: usr/share/jellytizen/pages/install.py, line: 385
+# File: usr/share/jellybeam/pages/install.py, line: 53
+# File: usr/share/jellybeam/pages/install.py, line: 116
+# File: usr/share/jellybeam/pages/install.py, line: 385
 #: NEEDS WORK
 msgid "Install Jellyfin"
 msgstr "Jellyfin'i Kurun"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 54
+# File: usr/share/jellybeam/pages/install.py, line: 54
 #: NEEDS WORK
 msgid "One-click installation to your Samsung TV"
 msgstr "Samsung TV'nize tek tıklama ile kurulum"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 59
+# File: usr/share/jellybeam/pages/install.py, line: 59
 #: NEEDS WORK
 msgid "Target Device"
 msgstr "Hedef Cihaz"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 60
+# File: usr/share/jellybeam/pages/install.py, line: 60
 #: NEEDS WORK
 msgid "Loading..."
 msgstr "Yükleniyor..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 43
+# File: usr/share/jellybeam/pages/install.py, line: 43
 #: NEEDS WORK
 msgid "Installation Progress"
 msgstr "Kurulum İlerlemesi"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 74
+# File: usr/share/jellybeam/pages/install.py, line: 74
 #: NEEDS WORK
 msgid "Ready to install"
 msgstr "Kuruluma hazır"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 75
+# File: usr/share/jellybeam/pages/install.py, line: 75
 #: NEEDS WORK
 msgid "Click the button below to start"
 msgstr "Aşağıdaki butona tıklayarak başlayın"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 62
+# File: usr/share/jellybeam/pages/install.py, line: 62
 #: NEEDS WORK
 msgid "Waiting to start..."
 msgstr "Başlatmak için bekleniyor..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 67
+# File: usr/share/jellybeam/pages/install.py, line: 67
 #: NEEDS WORK
 msgid "Installation Log"
 msgstr "Kurulum Günlüğü"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 139
+# File: usr/share/jellybeam/pages/install.py, line: 139
 #: NEEDS WORK
 msgid "Click to view detailed output"
 msgstr "Ayrıntılı çıktıyı görüntülemek için tıklayın"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 307
+# File: usr/share/jellybeam/pages/install.py, line: 307
 #: NEEDS WORK
 msgid "Installation Complete!"
 msgstr "Kurulum Tamamlandı!"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 174
+# File: usr/share/jellybeam/pages/install.py, line: 174
 #: NEEDS WORK
 msgid "Jellyfin is ready!"
 msgstr "Jellyfin hazır!"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 175
+# File: usr/share/jellybeam/pages/install.py, line: 175
 #: NEEDS WORK
 msgid "Open the Jellyfin app on your TV"
 msgstr "Jellyfin uygulamasını TV'nizde açın"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 179
+# File: usr/share/jellybeam/pages/install.py, line: 179
 #: NEEDS WORK
 msgid "Done"
 msgstr "Tamam"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 197
+# File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"
 msgstr "Cihaz seçilmedi - lütfen geri dönün"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 206
+# File: usr/share/jellybeam/pages/install.py, line: 206
 #: NEEDS WORK
 msgid "No TV configured. Please go back and select a device."
 msgstr "TV yapılandırılmadı. Lütfen geri dönün ve bir cihaz seçin."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 231
+# File: usr/share/jellybeam/pages/install.py, line: 231
 #: NEEDS WORK
 msgid "Starting Installation"
 msgstr "Kurulum Başlatılıyor"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 236
+# File: usr/share/jellybeam/pages/install.py, line: 236
 #: NEEDS WORK
 msgid "Downloading container..."
 msgstr "İndirme konteyneri..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 237
+# File: usr/share/jellybeam/pages/install.py, line: 237
 #: NEEDS WORK
 msgid "Pulling Docker image..."
 msgstr "Docker görüntüsü çekiliyor..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 250
+# File: usr/share/jellybeam/pages/install.py, line: 250
 #: NEEDS WORK
 msgid "Container ready!"
 msgstr "Konteyner hazır!"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 254
+# File: usr/share/jellybeam/pages/install.py, line: 254
 #: NEEDS WORK
 msgid "Installing to TV..."
 msgstr "TV'ye Yükleniyor..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 255
+# File: usr/share/jellybeam/pages/install.py, line: 255
 #: NEEDS WORK
 msgid "Connecting and installing..."
 msgstr "Bağlanıyor ve kurulum yapılıyor..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 256
+# File: usr/share/jellybeam/pages/install.py, line: 256
 #: NEEDS WORK
 msgid "This may take a few minutes..."
 msgstr "Bu birkaç dakika sürebilir..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 275
+# File: usr/share/jellybeam/pages/install.py, line: 275
 #: NEEDS WORK
 msgid "Installing..."
 msgstr "Yükleniyor..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 277
+# File: usr/share/jellybeam/pages/install.py, line: 277
 #: NEEDS WORK
 msgid "Downloading app..."
 msgstr "Uygulama indiriliyor..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 279
+# File: usr/share/jellybeam/pages/install.py, line: 279
 #: NEEDS WORK
 msgid "Transferring..."
 msgstr "Aktarılıyor..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 281
+# File: usr/share/jellybeam/pages/install.py, line: 281
 #: NEEDS WORK
 msgid "Connecting to TV..."
 msgstr "TV'ye bağlanıyor..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 283
+# File: usr/share/jellybeam/pages/install.py, line: 283
 #: NEEDS WORK
 msgid "Finishing..."
 msgstr "Tamamlanıyor..."
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 216
+# File: usr/share/jellybeam/pages/welcome.py, line: 216
 #: NEEDS WORK
 msgid "Error"
 msgstr "Hata"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 339
+# File: usr/share/jellybeam/pages/install.py, line: 339
 #: NEEDS WORK
 msgid "Jellyfin is now on your TV"
 msgstr "Jellyfin artık TV'nizde."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 341
+# File: usr/share/jellybeam/pages/install.py, line: 341
 #: NEEDS WORK
 msgid "Reinstall"
 msgstr "Yeniden Yükle"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 348
+# File: usr/share/jellybeam/pages/install.py, line: 348
 #: NEEDS WORK
 msgid "Find Jellyfin in your TV's app list."
 msgstr "Jellyfin'i TV'nizin uygulama listesinden bulun."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 322
+# File: usr/share/jellybeam/pages/install.py, line: 322
 #: NEEDS WORK
 msgid "Installation Failed"
 msgstr "Kurulum Başarısız"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 362
+# File: usr/share/jellybeam/pages/install.py, line: 362
 #: NEEDS WORK
 msgid "Retry"
 msgstr "Yeniden Dene"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 379
-# File: usr/share/jellytizen/pages/install.py, line: 383
+# File: usr/share/jellybeam/pages/install.py, line: 379
+# File: usr/share/jellybeam/pages/install.py, line: 383
 #: NEEDS WORK
 msgid "Cancelled"
 msgstr "İptal Edildi"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 380
+# File: usr/share/jellybeam/pages/install.py, line: 380
 #: NEEDS WORK
 msgid "Installation was cancelled"
 msgstr "Kurulum iptal edildi"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 333
+# File: usr/share/jellybeam/pages/install.py, line: 333
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Kurulum iptal edildi"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 60
+# File: usr/share/jellybeam/pages/welcome.py, line: 60
 #: NEEDS WORK
-msgid "JellyTizen Installer"
-msgstr "JellyTizen Yükleyici"
+msgid "JellyBeam Installer"
+msgstr "JellyBeam Yükleyici"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 63
+# File: usr/share/jellybeam/pages/welcome.py, line: 63
 #: NEEDS WORK
 msgid "Install Jellyfin on your Samsung Smart TV or projector"
 msgstr "Samsung Akıllı TV'nize veya projektörünüze Jellyfin'i kurun"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 68
+# File: usr/share/jellybeam/pages/welcome.py, line: 68
 #: NEEDS WORK
 msgid "System Requirements"
 msgstr "Sistem Gereksinimleri"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 74
+# File: usr/share/jellybeam/pages/welcome.py, line: 74
 #: NEEDS WORK
 msgid "Docker Engine"
 msgstr "Docker Motoru"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 79
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
 #: NEEDS WORK
 msgid "Checking..."
 msgstr "Kontrol ediliyor..."
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 85
-# File: usr/share/jellytizen/pages/welcome.py, line: 88
-# File: usr/share/jellytizen/pages/welcome.py, line: 194
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+# File: usr/share/jellybeam/pages/welcome.py, line: 88
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
 #: NEEDS WORK
 msgid "Install Docker"
 msgstr "Docker'ı Yükle"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 86
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
 #: NEEDS WORK
 msgid "Docker is required but not installed"
 msgstr "Docker gereklidir ancak kurulu değil."
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 92
+# File: usr/share/jellybeam/pages/welcome.py, line: 92
 #: NEEDS WORK
 msgid "Install"
 msgstr "Kurulum"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 106
+# File: usr/share/jellybeam/pages/welcome.py, line: 106
 #: NEEDS WORK
 msgid "Configure your Samsung TV"
 msgstr "Samsung TV'nizi Yapılandırın"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 135
+# File: usr/share/jellybeam/pages/welcome.py, line: 135
 #: NEEDS WORK
 msgid "Ready"
 msgstr "Hazır"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 142
+# File: usr/share/jellybeam/pages/welcome.py, line: 142
 #: NEEDS WORK
 msgid "Not running"
 msgstr "Çalışmıyor"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 144
+# File: usr/share/jellybeam/pages/welcome.py, line: 144
 #: NEEDS WORK
 msgid "Start"
 msgstr "Başla"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 153
+# File: usr/share/jellybeam/pages/welcome.py, line: 153
 #: NEEDS WORK
 msgid "Not installed"
 msgstr "Yüklenmedi"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 193
+# File: usr/share/jellybeam/pages/welcome.py, line: 193
 #: NEEDS WORK
 msgid "Select your distribution:"
 msgstr "Dağıtımınızı seçin:"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 199
+# File: usr/share/jellybeam/pages/welcome.py, line: 199
 #: NEEDS WORK
 msgid "Arch/Manjaro"
 msgstr "Arch/Manjaro"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 200
+# File: usr/share/jellybeam/pages/welcome.py, line: 200
 #: NEEDS WORK
 msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 201
+# File: usr/share/jellybeam/pages/welcome.py, line: 201
 #: NEEDS WORK
 msgid "Fedora/RHEL"
 msgstr "Fedora/RHEL"
 # 
-# File: usr/share/jellytizen/app.py, line: 84
+# File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
 msgstr "Geri Dön"
 # 
-# File: usr/share/jellytizen/app.py, line: 106
+# File: usr/share/jellybeam/app.py, line: 106
 #: NEEDS WORK
 msgid "Welcome"
 msgstr "Hoş geldiniz"
 # 
-# File: usr/share/jellytizen/app.py, line: 113
+# File: usr/share/jellybeam/app.py, line: 113
 #: NEEDS WORK
 msgid "About"
 msgstr "Hakkında"
 # 
-# File: usr/share/jellytizen/app.py, line: 139
+# File: usr/share/jellybeam/app.py, line: 139
 #: NEEDS WORK
-msgid "JellyTizen Team"
-msgstr "JellyTizen Ekibi"
+msgid "JellyBeam Team"
+msgstr "JellyBeam Ekibi"
 # 
-# File: usr/share/jellytizen/app.py, line: 145
+# File: usr/share/jellybeam/app.py, line: 145
 #: NEEDS WORK
-msgid "JellyTizen Contributors"
-msgstr "JellyTizen Katkıda Bulunanlar"
+msgid "JellyBeam Contributors"
+msgstr "JellyBeam Katkıda Bulunanlar"

@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the JellyTizen package.
+# This file is distributed under the same license as the JellyBeam package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: JellyTizen\n"
+"Project-Id-Version: JellyBeam\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,62 +16,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 94
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 137
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
 msgid "OK"
 msgstr "OK"
 
 #
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 170
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
 msgid "Confirm"
 msgstr "Confirm"
 
 #
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 172
-# File: usr/share/jellytizen/pages/preferences.py, line: 165
-# File: usr/share/jellytizen/pages/install.py, line: 123
-# File: usr/share/jellytizen/pages/welcome.py, line: 268
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
+# File: usr/share/jellybeam/pages/preferences.py, line: 165
+# File: usr/share/jellybeam/pages/install.py, line: 123
+# File: usr/share/jellybeam/pages/welcome.py, line: 268
 msgid "Cancel"
 msgstr "Cancel"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 47
+# File: usr/share/jellybeam/pages/certificates.py, line: 47
 msgid "Developer Certificates"
 msgstr "Developer Certificates"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 48
+# File: usr/share/jellybeam/pages/certificates.py, line: 48
 msgid "Certificates are required to install apps on Samsung TVs"
 msgstr "Certificates are required to install apps on Samsung TVs"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 msgid "Certificate Mode"
 msgstr "Certificate Mode"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 60
+# File: usr/share/jellybeam/pages/certificates.py, line: 60
 msgid "Use Built-in Certificates"
 msgstr "Use Built-in Certificates"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 61
+# File: usr/share/jellybeam/pages/certificates.py, line: 61
 msgid "Recommended - No Tizen Studio required"
 msgstr "Recommended - No Tizen Studio required"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 73
+# File: usr/share/jellybeam/pages/certificates.py, line: 73
 msgid "How it works"
 msgstr "How it works"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 74
+# File: usr/share/jellybeam/pages/certificates.py, line: 74
 msgid ""
 "The Docker container includes pre-configured certificates. You can install "
 "Jellyfin immediately without any setup."
@@ -80,299 +80,299 @@ msgstr ""
 "Jellyfin immediately without any setup."
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 83
+# File: usr/share/jellybeam/pages/certificates.py, line: 83
 msgid "Custom Certificates (Advanced)"
 msgstr "Custom Certificates (Advanced)"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 84
+# File: usr/share/jellybeam/pages/certificates.py, line: 84
 msgid "Only needed if you want to use your own certificates"
 msgstr "Only needed if you want to use your own certificates"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 89
+# File: usr/share/jellybeam/pages/certificates.py, line: 89
 msgid "Author Certificate"
 msgstr "Author Certificate"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 90
+# File: usr/share/jellybeam/pages/certificates.py, line: 90
 msgid "Select author.p12 file"
 msgstr "Select author.p12 file"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 94
-# File: usr/share/jellytizen/pages/certificates.py, line: 107
+# File: usr/share/jellybeam/pages/certificates.py, line: 94
+# File: usr/share/jellybeam/pages/certificates.py, line: 107
 msgid "Browse"
 msgstr "Browse"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 102
+# File: usr/share/jellybeam/pages/certificates.py, line: 102
 msgid "Distributor Certificate"
 msgstr "Distributor Certificate"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 103
+# File: usr/share/jellybeam/pages/certificates.py, line: 103
 msgid "Select distributor.p12 file"
 msgstr "Select distributor.p12 file"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 115
+# File: usr/share/jellybeam/pages/certificates.py, line: 115
 msgid "Certificate Password"
 msgstr "Certificate Password"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 122
+# File: usr/share/jellybeam/pages/certificates.py, line: 122
 msgid "Need help creating certificates?"
 msgstr "Need help creating certificates?"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 123
+# File: usr/share/jellybeam/pages/certificates.py, line: 123
 msgid "View tutorial on Samsung Developer website"
 msgstr "View tutorial on Samsung Developer website"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 127
+# File: usr/share/jellybeam/pages/certificates.py, line: 127
 msgid "View Guide"
 msgstr "View Guide"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 140
+# File: usr/share/jellybeam/pages/certificates.py, line: 140
 msgid "Continue to Installation"
 msgstr "Continue to Installation"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 141
+# File: usr/share/jellybeam/pages/certificates.py, line: 141
 msgid "Proceed to install Jellyfin on your TV"
 msgstr "Proceed to install Jellyfin on your TV"
 
 #
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 143
-# File: usr/share/jellytizen/pages/device.py, line: 207
-# File: usr/share/jellytizen/pages/welcome.py, line: 117
-# File: usr/share/jellytizen/pages/welcome.py, line: 120
+# File: usr/share/jellybeam/pages/certificates.py, line: 143
+# File: usr/share/jellybeam/pages/device.py, line: 207
+# File: usr/share/jellybeam/pages/welcome.py, line: 117
+# File: usr/share/jellybeam/pages/welcome.py, line: 120
 msgid "Continue"
 msgstr "Continue"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 171
+# File: usr/share/jellybeam/pages/certificates.py, line: 171
 msgid "Ready to install with built-in certificates"
 msgstr "Ready to install with built-in certificates"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 179
+# File: usr/share/jellybeam/pages/certificates.py, line: 179
 #, python-brace-format
 msgid "Select {cert_type} certificate"
 msgstr "Select {cert_type} certificate"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 183
+# File: usr/share/jellybeam/pages/certificates.py, line: 183
 msgid "P12 Certificate Files"
 msgstr "P12 Certificate Files"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 212
-# File: usr/share/jellytizen/pages/certificates.py, line: 215
-# File: usr/share/jellytizen/pages/certificates.py, line: 231
-# File: usr/share/jellytizen/pages/certificates.py, line: 238
+# File: usr/share/jellybeam/pages/certificates.py, line: 212
+# File: usr/share/jellybeam/pages/certificates.py, line: 215
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+# File: usr/share/jellybeam/pages/certificates.py, line: 238
 #, python-brace-format
 msgid "✅ {filename}"
 msgstr "✅ {filename}"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 213
-# File: usr/share/jellytizen/pages/certificates.py, line: 216
-# File: usr/share/jellytizen/pages/certificates.py, line: 232
-# File: usr/share/jellytizen/pages/certificates.py, line: 239
+# File: usr/share/jellybeam/pages/certificates.py, line: 213
+# File: usr/share/jellybeam/pages/certificates.py, line: 216
+# File: usr/share/jellybeam/pages/certificates.py, line: 232
+# File: usr/share/jellybeam/pages/certificates.py, line: 239
 msgid "Change"
 msgstr "Change"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 251
+# File: usr/share/jellybeam/pages/certificates.py, line: 251
 msgid "Ready to install with custom certificates"
 msgstr "Ready to install with custom certificates"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 255
+# File: usr/share/jellybeam/pages/certificates.py, line: 255
 msgid "author certificate"
 msgstr "author certificate"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 257
+# File: usr/share/jellybeam/pages/certificates.py, line: 257
 msgid "distributor certificate"
 msgstr "distributor certificate"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 259
+# File: usr/share/jellybeam/pages/certificates.py, line: 259
 msgid "password"
 msgstr "password"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 260
+# File: usr/share/jellybeam/pages/certificates.py, line: 260
 #, python-brace-format
 msgid "Missing: {items}"
 msgstr "Missing: {items}"
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 264
+# File: usr/share/jellybeam/pages/certificates.py, line: 264
 msgid "Installation"
 msgstr "Installation"
 
 #
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 16
-# File: usr/share/jellytizen/app.py, line: 134
+# File: usr/share/jellybeam/pages/preferences.py, line: 16
+# File: usr/share/jellybeam/app.py, line: 134
 msgid "Preferences"
 msgstr "Preferences"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 24
+# File: usr/share/jellybeam/pages/preferences.py, line: 24
 msgid "General"
 msgstr "General"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 30
+# File: usr/share/jellybeam/pages/preferences.py, line: 30
 msgid "Docker Settings"
 msgstr "Docker Settings"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 31
+# File: usr/share/jellybeam/pages/preferences.py, line: 31
 msgid "Configure Docker behavior and settings"
 msgstr "Configure Docker behavior and settings"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 36
+# File: usr/share/jellybeam/pages/preferences.py, line: 36
 msgid "Docker Image"
 msgstr "Docker Image"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 43
+# File: usr/share/jellybeam/pages/preferences.py, line: 43
 msgid "Auto-pull Updates"
 msgstr "Auto-pull Updates"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 44
+# File: usr/share/jellybeam/pages/preferences.py, line: 44
 msgid "Automatically pull the latest Docker image"
 msgstr "Automatically pull the latest Docker image"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 51
+# File: usr/share/jellybeam/pages/preferences.py, line: 51
 msgid "Network Settings"
 msgstr "Network Settings"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 52
+# File: usr/share/jellybeam/pages/preferences.py, line: 52
 msgid "Configure network scanning and timeouts"
 msgstr "Configure network scanning and timeouts"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 57
+# File: usr/share/jellybeam/pages/preferences.py, line: 57
 msgid "Scan Timeout"
 msgstr "Scan Timeout"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 58
+# File: usr/share/jellybeam/pages/preferences.py, line: 58
 msgid "Timeout for network device scanning (seconds)"
 msgstr "Timeout for network device scanning (seconds)"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 67
+# File: usr/share/jellybeam/pages/preferences.py, line: 67
 msgid "Port Range"
 msgstr "Port Range"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 68
+# File: usr/share/jellybeam/pages/preferences.py, line: 68
 msgid "Scan port range (e.g., 8000-8080)"
 msgstr "Scan port range (e.g., 8000-8080)"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 82
+# File: usr/share/jellybeam/pages/preferences.py, line: 82
 msgid "Logging"
 msgstr "Logging"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 83
+# File: usr/share/jellybeam/pages/preferences.py, line: 83
 msgid "Configure application logging"
 msgstr "Configure application logging"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 88
+# File: usr/share/jellybeam/pages/preferences.py, line: 88
 msgid "Log Level"
 msgstr "Log Level"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 89
+# File: usr/share/jellybeam/pages/preferences.py, line: 89
 msgid "Verbosity of application logs"
 msgstr "Verbosity of application logs"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 106
+# File: usr/share/jellybeam/pages/preferences.py, line: 106
 msgid "Save Logs to File"
 msgstr "Save Logs to File"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 107
-msgid "Save application logs to ~/.local/share/jellytizen/logs"
-msgstr "Save application logs to ~/.local/share/jellytizen/logs"
+# File: usr/share/jellybeam/pages/preferences.py, line: 107
+msgid "Save application logs to ~/.local/share/jellybeam/logs"
+msgstr "Save application logs to ~/.local/share/jellybeam/logs"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 114
+# File: usr/share/jellybeam/pages/preferences.py, line: 114
 msgid "Advanced"
 msgstr "Advanced"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 120
+# File: usr/share/jellybeam/pages/preferences.py, line: 120
 msgid "Developer Options"
 msgstr "Developer Options"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 121
+# File: usr/share/jellybeam/pages/preferences.py, line: 121
 msgid "Advanced settings for developers"
 msgstr "Advanced settings for developers"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 126
+# File: usr/share/jellybeam/pages/preferences.py, line: 126
 msgid "Debug Mode"
 msgstr "Debug Mode"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 127
+# File: usr/share/jellybeam/pages/preferences.py, line: 127
 msgid "Enable debug mode for development"
 msgstr "Enable debug mode for development"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 134
-# File: usr/share/jellytizen/pages/preferences.py, line: 142
-# File: usr/share/jellytizen/pages/preferences.py, line: 166
+# File: usr/share/jellybeam/pages/preferences.py, line: 134
+# File: usr/share/jellybeam/pages/preferences.py, line: 142
+# File: usr/share/jellybeam/pages/preferences.py, line: 166
 msgid "Reset"
 msgstr "Reset"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 135
+# File: usr/share/jellybeam/pages/preferences.py, line: 135
 msgid "Reset application settings"
 msgstr "Reset application settings"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 139
+# File: usr/share/jellybeam/pages/preferences.py, line: 139
 msgid "Reset All Settings"
 msgstr "Reset All Settings"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 140
+# File: usr/share/jellybeam/pages/preferences.py, line: 140
 msgid "Reset all preferences to default values"
 msgstr "Reset all preferences to default values"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 162
+# File: usr/share/jellybeam/pages/preferences.py, line: 162
 msgid "Reset All Settings?"
 msgstr "Reset All Settings?"
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 163
+# File: usr/share/jellybeam/pages/preferences.py, line: 163
 msgid ""
 "This will reset all preferences to their default values. This action cannot "
 "be undone."
@@ -381,619 +381,619 @@ msgstr ""
 "be undone."
 
 #
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
-# File: usr/share/jellytizen/pages/device.py, line: 50
-# File: usr/share/jellytizen/pages/welcome.py, line: 255
+# File: usr/share/jellybeam/pages/device.py, line: 50
+# File: usr/share/jellybeam/pages/welcome.py, line: 255
 msgid "Device Setup"
 msgstr "Device Setup"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 51
+# File: usr/share/jellybeam/pages/device.py, line: 51
 msgid "Connect to your Samsung Tizen TV or projector"
 msgstr "Connect to your Samsung Tizen TV or projector"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 58
+# File: usr/share/jellybeam/pages/device.py, line: 58
 msgid "Setup Instructions"
 msgstr "Setup Instructions"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 63
+# File: usr/share/jellybeam/pages/device.py, line: 63
 msgid "Enable Developer Mode on TV"
 msgstr "Enable Developer Mode on TV"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 64
+# File: usr/share/jellybeam/pages/device.py, line: 64
 msgid "Click to view step-by-step instructions"
 msgstr "Click to view step-by-step instructions"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 72
+# File: usr/share/jellybeam/pages/device.py, line: 72
 msgid "1. Open Apps"
 msgstr "1. Open Apps"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 73
+# File: usr/share/jellybeam/pages/device.py, line: 73
 msgid "On the TV, go to the 'Apps' section"
 msgstr "On the TV, go to the 'Apps' section"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 78
+# File: usr/share/jellybeam/pages/device.py, line: 78
 msgid "2. Go to App Settings"
 msgstr "2. Go to App Settings"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 79
+# File: usr/share/jellybeam/pages/device.py, line: 79
 msgid "Scroll to the end and select 'App Settings'"
 msgstr "Scroll to the end and select 'App Settings'"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 84
+# File: usr/share/jellybeam/pages/device.py, line: 84
 msgid "3. Press '123' Button"
 msgstr "3. Press '123' Button"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 85
+# File: usr/share/jellybeam/pages/device.py, line: 85
 msgid "Press the '123' button on your remote"
 msgstr "Press the '123' button on your remote"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 90
+# File: usr/share/jellybeam/pages/device.py, line: 90
 msgid "4. Enter Code '12345'"
 msgstr "4. Enter Code '12345'"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 91
+# File: usr/share/jellybeam/pages/device.py, line: 91
 msgid "Developer Mode menu will appear"
 msgstr "Developer Mode menu will appear"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 96
+# File: usr/share/jellybeam/pages/device.py, line: 96
 msgid "5. Enable Developer Mode"
 msgstr "5. Enable Developer Mode"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 97
+# File: usr/share/jellybeam/pages/device.py, line: 97
 msgid "Toggle 'Developer Mode' to 'On'"
 msgstr "Toggle 'Developer Mode' to 'On'"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 103
+# File: usr/share/jellybeam/pages/device.py, line: 103
 #, python-brace-format
 msgid "6. Enter This IP: {ip}"
 msgstr "6. Enter This IP: {ip}"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 104
+# File: usr/share/jellybeam/pages/device.py, line: 104
 msgid "Your computer's IP address"
 msgstr "Your computer's IP address"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 106
+# File: usr/share/jellybeam/pages/device.py, line: 106
 msgid "Copy IP"
 msgstr "Copy IP"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 115
+# File: usr/share/jellybeam/pages/device.py, line: 115
 msgid "7. Restart TV"
 msgstr "7. Restart TV"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 116
+# File: usr/share/jellybeam/pages/device.py, line: 116
 msgid "Turn off and on your TV"
 msgstr "Turn off and on your TV"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 123
+# File: usr/share/jellybeam/pages/device.py, line: 123
 msgid "Confirmation"
 msgstr "Confirmation"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 128
+# File: usr/share/jellybeam/pages/device.py, line: 128
 msgid "Developer Mode Enabled"
 msgstr "Developer Mode Enabled"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 129
+# File: usr/share/jellybeam/pages/device.py, line: 129
 msgid "I confirm I have completed the steps above on my TV"
 msgstr "I confirm I have completed the steps above on my TV"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 144
+# File: usr/share/jellybeam/pages/device.py, line: 144
 msgid "Device Discovery"
 msgstr "Device Discovery"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 149
+# File: usr/share/jellybeam/pages/device.py, line: 149
 msgid "Scan Network"
 msgstr "Scan Network"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 150
+# File: usr/share/jellybeam/pages/device.py, line: 150
 msgid "Automatically discover Samsung devices on your network"
 msgstr "Automatically discover Samsung devices on your network"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 152
-# File: usr/share/jellytizen/pages/device.py, line: 251
+# File: usr/share/jellybeam/pages/device.py, line: 152
+# File: usr/share/jellybeam/pages/device.py, line: 251
 msgid "Scan"
 msgstr "Scan"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 162
+# File: usr/share/jellybeam/pages/device.py, line: 162
 msgid "Discovered Devices"
 msgstr "Discovered Devices"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 163
+# File: usr/share/jellybeam/pages/device.py, line: 163
 msgid "Select your target device"
 msgstr "Select your target device"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 170
+# File: usr/share/jellybeam/pages/device.py, line: 170
 msgid "Manual Connection"
 msgstr "Manual Connection"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 171
+# File: usr/share/jellybeam/pages/device.py, line: 171
 msgid "Enter device details manually"
 msgstr "Enter device details manually"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 176
+# File: usr/share/jellybeam/pages/device.py, line: 176
 msgid "Device IP Address"
 msgstr "Device IP Address"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 189
+# File: usr/share/jellybeam/pages/device.py, line: 189
 msgid "Connect to Device"
 msgstr "Connect to Device"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 190
+# File: usr/share/jellybeam/pages/device.py, line: 190
 msgid "Establish connection with your TV"
 msgstr "Establish connection with your TV"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 192
-# File: usr/share/jellytizen/pages/device.py, line: 348
+# File: usr/share/jellybeam/pages/device.py, line: 192
+# File: usr/share/jellybeam/pages/device.py, line: 348
 msgid "Connect"
 msgstr "Connect"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 204
+# File: usr/share/jellybeam/pages/device.py, line: 204
 msgid "Continue to Certificates"
 msgstr "Continue to Certificates"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 205
+# File: usr/share/jellybeam/pages/device.py, line: 205
 msgid "Setup developer certificates"
 msgstr "Setup developer certificates"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 226
+# File: usr/share/jellybeam/pages/device.py, line: 226
 msgid "Unable to determine IP"
 msgstr "Unable to determine IP"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 234
+# File: usr/share/jellybeam/pages/device.py, line: 234
 msgid "Copied!"
 msgstr "Copied!"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 241
+# File: usr/share/jellybeam/pages/device.py, line: 241
 msgid "Scanning..."
 msgstr "Scanning..."
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 266
+# File: usr/share/jellybeam/pages/device.py, line: 266
 msgid "No devices found"
 msgstr "No devices found"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 267
+# File: usr/share/jellybeam/pages/device.py, line: 267
 msgid "Try manual connection or check network"
 msgstr "Try manual connection or check network"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 274
+# File: usr/share/jellybeam/pages/device.py, line: 274
 msgid "Unknown Device"
 msgstr "Unknown Device"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 275
+# File: usr/share/jellybeam/pages/device.py, line: 275
 #, python-brace-format
 msgid "IP: {ip} | Model: {model}"
 msgstr "IP: {ip} | Model: {model}"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 275
+# File: usr/share/jellybeam/pages/device.py, line: 275
 msgid "Unknown"
 msgstr "Unknown"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 277
+# File: usr/share/jellybeam/pages/device.py, line: 277
 msgid "Select"
 msgstr "Select"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 288
+# File: usr/share/jellybeam/pages/device.py, line: 288
 msgid "Found 1 device - Select your target device"
 msgstr "Found 1 device - Select your target device"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 290
+# File: usr/share/jellybeam/pages/device.py, line: 290
 #, python-brace-format
 msgid "Found {count} devices - Select your target device"
 msgstr "Found {count} devices - Select your target device"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 304
+# File: usr/share/jellybeam/pages/device.py, line: 304
 #, python-brace-format
 msgid "Device selected: {name}"
 msgstr "Device selected: {name}"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 330
+# File: usr/share/jellybeam/pages/device.py, line: 330
 msgid "Please enter a device IP address"
 msgstr "Please enter a device IP address"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 334
+# File: usr/share/jellybeam/pages/device.py, line: 334
 msgid "Please enter a valid IP address"
 msgstr "Please enter a valid IP address"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 339
+# File: usr/share/jellybeam/pages/device.py, line: 339
 msgid "Connecting..."
 msgstr "Connecting..."
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 353
+# File: usr/share/jellybeam/pages/device.py, line: 353
 msgid "Connected successfully!"
 msgstr "Connected successfully!"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 355
+# File: usr/share/jellybeam/pages/device.py, line: 355
 #, python-brace-format
 msgid "Connection failed: {message}"
 msgstr "Connection failed: {message}"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 362
+# File: usr/share/jellybeam/pages/device.py, line: 362
 msgid "Certificates"
 msgstr "Certificates"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 53
-# File: usr/share/jellytizen/pages/install.py, line: 116
-# File: usr/share/jellytizen/pages/install.py, line: 398
+# File: usr/share/jellybeam/pages/install.py, line: 53
+# File: usr/share/jellybeam/pages/install.py, line: 116
+# File: usr/share/jellybeam/pages/install.py, line: 398
 msgid "Install Jellyfin"
 msgstr "Install Jellyfin"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 54
+# File: usr/share/jellybeam/pages/install.py, line: 54
 msgid "One-click installation to your Samsung TV"
 msgstr "One-click installation to your Samsung TV"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 59
-# File: usr/share/jellytizen/pages/install.py, line: 206
-# File: usr/share/jellytizen/pages/install.py, line: 209
+# File: usr/share/jellybeam/pages/install.py, line: 59
+# File: usr/share/jellybeam/pages/install.py, line: 206
+# File: usr/share/jellybeam/pages/install.py, line: 209
 msgid "Target Device"
 msgstr "Target Device"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 60
+# File: usr/share/jellybeam/pages/install.py, line: 60
 msgid "Loading..."
 msgstr "Loading..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 69
+# File: usr/share/jellybeam/pages/install.py, line: 69
 msgid "Installation Progress"
 msgstr "Installation Progress"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 74
+# File: usr/share/jellybeam/pages/install.py, line: 74
 msgid "Ready to install"
 msgstr "Ready to install"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 75
+# File: usr/share/jellybeam/pages/install.py, line: 75
 msgid "Click the button below to start"
 msgstr "Click the button below to start"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 100
+# File: usr/share/jellybeam/pages/install.py, line: 100
 msgid "Waiting to start..."
 msgstr "Waiting to start..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 138
+# File: usr/share/jellybeam/pages/install.py, line: 138
 msgid "Installation Log"
 msgstr "Installation Log"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 139
+# File: usr/share/jellybeam/pages/install.py, line: 139
 msgid "Click to view detailed output"
 msgstr "Click to view detailed output"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 169
-# File: usr/share/jellytizen/pages/install.py, line: 351
-# File: usr/share/jellytizen/pages/install.py, line: 360
+# File: usr/share/jellybeam/pages/install.py, line: 169
+# File: usr/share/jellybeam/pages/install.py, line: 351
+# File: usr/share/jellybeam/pages/install.py, line: 360
 msgid "Installation Complete!"
 msgstr "Installation Complete!"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 174
+# File: usr/share/jellybeam/pages/install.py, line: 174
 msgid "Jellyfin is ready!"
 msgstr "Jellyfin is ready!"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 175
+# File: usr/share/jellybeam/pages/install.py, line: 175
 msgid "Open the Jellyfin app on your TV"
 msgstr "Open the Jellyfin app on your TV"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 179
+# File: usr/share/jellybeam/pages/install.py, line: 179
 msgid "Done"
 msgstr "Done"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 210
+# File: usr/share/jellybeam/pages/install.py, line: 210
 msgid "No device selected - please go back"
 msgstr "No device selected - please go back"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 219
+# File: usr/share/jellybeam/pages/install.py, line: 219
 msgid "No TV configured. Please go back and select a device."
 msgstr "No TV configured. Please go back and select a device."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 244
+# File: usr/share/jellybeam/pages/install.py, line: 244
 msgid "Starting Installation"
 msgstr "Starting Installation"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 249
+# File: usr/share/jellybeam/pages/install.py, line: 249
 msgid "Downloading container..."
 msgstr "Downloading container..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 250
+# File: usr/share/jellybeam/pages/install.py, line: 250
 msgid "Pulling Docker image..."
 msgstr "Pulling Docker image..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 263
+# File: usr/share/jellybeam/pages/install.py, line: 263
 msgid "Container ready!"
 msgstr "Container ready!"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 267
+# File: usr/share/jellybeam/pages/install.py, line: 267
 msgid "Installing to TV..."
 msgstr "Installing to TV..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 268
+# File: usr/share/jellybeam/pages/install.py, line: 268
 msgid "Connecting and installing..."
 msgstr "Connecting and installing..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 269
+# File: usr/share/jellybeam/pages/install.py, line: 269
 msgid "This may take a few minutes..."
 msgstr "This may take a few minutes..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 288
+# File: usr/share/jellybeam/pages/install.py, line: 288
 msgid "Installing..."
 msgstr "Installing..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 290
+# File: usr/share/jellybeam/pages/install.py, line: 290
 msgid "Downloading app..."
 msgstr "Downloading app..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 292
+# File: usr/share/jellybeam/pages/install.py, line: 292
 msgid "Transferring..."
 msgstr "Transferring..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 294
+# File: usr/share/jellybeam/pages/install.py, line: 294
 msgid "Connecting to TV..."
 msgstr "Connecting to TV..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 296
+# File: usr/share/jellybeam/pages/install.py, line: 296
 msgid "Finishing..."
 msgstr "Finishing..."
 
 #
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
-# File: usr/share/jellytizen/pages/install.py, line: 335
-# File: usr/share/jellytizen/pages/welcome.py, line: 285
+# File: usr/share/jellybeam/pages/install.py, line: 335
+# File: usr/share/jellybeam/pages/welcome.py, line: 285
 msgid "Error"
 msgstr "Error"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 352
+# File: usr/share/jellybeam/pages/install.py, line: 352
 msgid "Jellyfin is now on your TV"
 msgstr "Jellyfin is now on your TV"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 354
+# File: usr/share/jellybeam/pages/install.py, line: 354
 msgid "Reinstall"
 msgstr "Reinstall"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 361
+# File: usr/share/jellybeam/pages/install.py, line: 361
 msgid "Find Jellyfin in your TV's app list."
 msgstr "Find Jellyfin in your TV's app list."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 372
-# File: usr/share/jellytizen/pages/install.py, line: 380
+# File: usr/share/jellybeam/pages/install.py, line: 372
+# File: usr/share/jellybeam/pages/install.py, line: 380
 msgid "Installation Failed"
 msgstr "Installation Failed"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 375
+# File: usr/share/jellybeam/pages/install.py, line: 375
 msgid "Retry"
 msgstr "Retry"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 392
-# File: usr/share/jellytizen/pages/install.py, line: 396
+# File: usr/share/jellybeam/pages/install.py, line: 392
+# File: usr/share/jellybeam/pages/install.py, line: 396
 msgid "Cancelled"
 msgstr "Cancelled"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 393
+# File: usr/share/jellybeam/pages/install.py, line: 393
 msgid "Installation was cancelled"
 msgstr "Installation was cancelled"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 402
+# File: usr/share/jellybeam/pages/install.py, line: 402
 msgid "Installation cancelled"
 msgstr "Installation cancelled"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 58
-msgid "JellyTizen Installer"
-msgstr "JellyTizen Installer"
+# File: usr/share/jellybeam/pages/welcome.py, line: 58
+msgid "JellyBeam Installer"
+msgstr "JellyBeam Installer"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 63
+# File: usr/share/jellybeam/pages/welcome.py, line: 63
 msgid "Install Jellyfin on your Samsung Smart TV or projector"
 msgstr "Install Jellyfin on your Samsung Smart TV or projector"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 73
+# File: usr/share/jellybeam/pages/welcome.py, line: 73
 msgid "System Requirements"
 msgstr "System Requirements"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 78
+# File: usr/share/jellybeam/pages/welcome.py, line: 78
 msgid "Docker Engine"
 msgstr "Docker Engine"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 79
-# File: usr/share/jellytizen/pages/welcome.py, line: 251
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+# File: usr/share/jellybeam/pages/welcome.py, line: 251
 msgid "Checking..."
 msgstr "Checking..."
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 89
-# File: usr/share/jellytizen/pages/welcome.py, line: 265
+# File: usr/share/jellybeam/pages/welcome.py, line: 89
+# File: usr/share/jellybeam/pages/welcome.py, line: 265
 msgid "Install Docker"
 msgstr "Install Docker"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 90
+# File: usr/share/jellybeam/pages/welcome.py, line: 90
 msgid "Docker is required but not installed"
 msgstr "Docker is required but not installed"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 92
+# File: usr/share/jellybeam/pages/welcome.py, line: 92
 msgid "Install"
 msgstr "Install"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 100
+# File: usr/share/jellybeam/pages/welcome.py, line: 100
 msgid "Docker Group"
 msgstr "Docker Group"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 101
+# File: usr/share/jellybeam/pages/welcome.py, line: 101
 msgid "User not in docker group"
 msgstr "User not in docker group"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 103
+# File: usr/share/jellybeam/pages/welcome.py, line: 103
 msgid "Add to group"
 msgstr "Add to group"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 118
+# File: usr/share/jellybeam/pages/welcome.py, line: 118
 msgid "Configure your Samsung TV"
 msgstr "Configure your Samsung TV"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 148
+# File: usr/share/jellybeam/pages/welcome.py, line: 148
 msgid "Ready"
 msgstr "Ready"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 155
+# File: usr/share/jellybeam/pages/welcome.py, line: 155
 msgid "Permission required"
 msgstr "Permission required"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 162
+# File: usr/share/jellybeam/pages/welcome.py, line: 162
 msgid "Not running"
 msgstr "Not running"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 164
+# File: usr/share/jellybeam/pages/welcome.py, line: 164
 msgid "Start"
 msgstr "Start"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 173
+# File: usr/share/jellybeam/pages/welcome.py, line: 173
 msgid "Not installed"
 msgstr "Not installed"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 221
+# File: usr/share/jellybeam/pages/welcome.py, line: 221
 msgid "Added to group"
 msgstr "Added to group"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 266
+# File: usr/share/jellybeam/pages/welcome.py, line: 266
 msgid "Select your distribution:"
 msgstr "Select your distribution:"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 269
+# File: usr/share/jellybeam/pages/welcome.py, line: 269
 msgid "Arch/Manjaro"
 msgstr "Arch/Manjaro"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 270
+# File: usr/share/jellybeam/pages/welcome.py, line: 270
 msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 271
+# File: usr/share/jellybeam/pages/welcome.py, line: 271
 msgid "Fedora/RHEL"
 msgstr "Fedora/RHEL"
 
 #
-# File: usr/share/jellytizen/app.py, line: 84
+# File: usr/share/jellybeam/app.py, line: 84
 msgid "Go Back"
 msgstr "Go Back"
 
 #
-# File: usr/share/jellytizen/app.py, line: 113
+# File: usr/share/jellybeam/app.py, line: 113
 msgid "Welcome"
 msgstr "Welcome"
 
 #
-# File: usr/share/jellytizen/app.py, line: 135
+# File: usr/share/jellybeam/app.py, line: 135
 msgid "About"
 msgstr "About"
 
 #
-# File: usr/share/jellytizen/app.py, line: 161
-msgid "JellyTizen Team"
-msgstr "JellyTizen Team"
+# File: usr/share/jellybeam/app.py, line: 161
+msgid "JellyBeam Team"
+msgstr "JellyBeam Team"
 
 #
-# File: usr/share/jellytizen/app.py, line: 167
-msgid "JellyTizen Contributors"
-msgstr "JellyTizen Contributors"
+# File: usr/share/jellybeam/app.py, line: 167
+msgid "JellyBeam Contributors"
+msgstr "JellyBeam Contributors"

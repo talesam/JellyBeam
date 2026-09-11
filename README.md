@@ -1,7 +1,7 @@
-# JellyTizen
+# JellyBeam
 
 <p align="center">
-  <img src="https://github.com/talesam/JellyTizen/blob/main/usr/share/icons/hicolor/scalable/apps/jellytizen.svg" alt="JellyTizen Logo" width="128">
+  <img src="https://github.com/talesam/JellyBeam/blob/main/usr/share/icons/hicolor/scalable/apps/jellybeam.svg" alt="JellyBeam Logo" width="128">
 </p>
 
 <p align="center">
@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img width="818" height="702" alt="jellytizen" src="https://github.com/user-attachments/assets/767488a3-0004-4656-9eff-374313e8aa0d" />
+  <img width="818" height="702" alt="jellybeam" src="https://github.com/user-attachments/assets/767488a3-0004-4656-9eff-374313e8aa0d" />
 </p>
 
 
@@ -54,8 +54,8 @@ sudo dnf install python3-gobject gtk4-devel libadwaita-devel vte291
 ### 2. Clone and Run
 
 ```bash
-git clone https://github.com/talesam/jellytizen.git
-cd jellytizen
+git clone https://github.com/talesam/jellybeam.git
+cd jellybeam
 python main.py
 ```
 
@@ -80,7 +80,7 @@ python main.py
 
 ## ⚙️ Configuration
 
-Settings are stored in `~/.config/jellytizen/config.json`:
+Settings are stored in `~/.config/jellybeam/config.json`:
 - Docker image preferences
 - Network scanning parameters
 - Logging levels
@@ -94,7 +94,7 @@ Settings are stored in `~/.config/jellytizen/config.json`:
 | Connection failed | Enable Developer Mode on TV, restart TV |
 | Installation hangs | Check Docker logs, ensure disk space |
 
-Logs: `~/.local/share/jellytizen/logs/`
+Logs: `~/.local/share/jellybeam/logs/`
 
 ## 🤝 Contributing
 

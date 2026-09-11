@@ -65,7 +65,7 @@ The project has a solid foundation: clean architecture with clear separation (pa
 
 - [x] ✅ **Bare except clause**: welcome.py:228 — `except:` on line 228 catches all exceptions including SystemExit and KeyboardInterrupt. Fix: use `except Exception:`.
 
-- [x] ✅ **Password stored in config.json in plaintext**: certificates.py:131, config.py — Certificate password is saved via `config_manager.set('certificates.password', ...)` to `~/.config/jellytizen/config.json`. This is a plaintext password on disk. Fix: either don't persist the password (ask each time) or use the system keyring (`secretstorage` or `libsecret`).
+- [x] ✅ **Password stored in config.json in plaintext**: certificates.py:131, config.py — Certificate password is saved via `config_manager.set('certificates.password', ...)` to `~/.config/jellybeam/config.json`. This is a plaintext password on disk. Fix: either don't persist the password (ask each time) or use the system keyring (`secretstorage` or `libsecret`).
 
 ---
 

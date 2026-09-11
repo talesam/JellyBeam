@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the JellyTizen package.
+# This file is distributed under the same license as the JellyBeam package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: JellyTizen\n"
+"Project-Id-Version: JellyBeam\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,62 +16,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 94
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 137
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
 #: NEEDS WORK
 msgid "OK"
 msgstr "OK"
 # 
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 170
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
 #: NEEDS WORK
 msgid "Confirm"
 msgstr "Vahvista"
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 172
-# File: usr/share/jellytizen/pages/preferences.py, line: 171
-# File: usr/share/jellytizen/pages/install.py, line: 110
-# File: usr/share/jellytizen/pages/welcome.py, line: 198
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
+# File: usr/share/jellybeam/pages/preferences.py, line: 171
+# File: usr/share/jellybeam/pages/install.py, line: 110
+# File: usr/share/jellybeam/pages/welcome.py, line: 198
 #: NEEDS WORK
 msgid "Cancel"
 msgstr "Peruuta"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 31
+# File: usr/share/jellybeam/pages/certificates.py, line: 31
 #: NEEDS WORK
 msgid "Developer Certificates"
 msgstr "Kehittäjäsertifikaatit"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 48
+# File: usr/share/jellybeam/pages/certificates.py, line: 48
 #: NEEDS WORK
 msgid "Certificates are required to install apps on Samsung TVs"
 msgstr "Sertifikaatit ovat tarpeen sovellusten asentamiseen Samsung-televisioihin."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
 msgid "Certificate Mode"
 msgstr "Todistustila"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 60
+# File: usr/share/jellybeam/pages/certificates.py, line: 60
 #: NEEDS WORK
 msgid "Use Built-in Certificates"
 msgstr "Käytä sisäänrakennettuja sertifikaatteja"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 61
+# File: usr/share/jellybeam/pages/certificates.py, line: 61
 #: NEEDS WORK
 msgid "Recommended - No Tizen Studio required"
 msgstr "Suositeltava - Ei vaadi Tizen Studioa"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 73
+# File: usr/share/jellybeam/pages/certificates.py, line: 73
 #: NEEDS WORK
 msgid "How it works"
 msgstr "Kuinka se toimii"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 74
+# File: usr/share/jellybeam/pages/certificates.py, line: 74
 #: NEEDS WORK
 msgid ""
 "The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
@@ -80,884 +80,884 @@ msgstr ""
 "Docker-kontti sisältää esiasetetut sertifikaatit. Voit asentaa Jellyfinin heti ilman mitään "
 "asetuksia."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 83
+# File: usr/share/jellybeam/pages/certificates.py, line: 83
 #: NEEDS WORK
 msgid "Custom Certificates (Advanced)"
 msgstr "Mukautetut sertifikaatit (Edistynyt)"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 84
+# File: usr/share/jellybeam/pages/certificates.py, line: 84
 #: NEEDS WORK
 msgid "Only needed if you want to use your own certificates"
 msgstr "Vain tarpeen, jos haluat käyttää omia sertifikaattejasi."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 43
+# File: usr/share/jellybeam/pages/certificates.py, line: 43
 #: NEEDS WORK
 msgid "Author Certificate"
 msgstr "Tekijätodistus"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 148
+# File: usr/share/jellybeam/pages/certificates.py, line: 148
 #: NEEDS WORK
 msgid "Select author.p12 file"
 msgstr "Valitse author.p12-tiedosto"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 46
-# File: usr/share/jellytizen/pages/certificates.py, line: 58
+# File: usr/share/jellybeam/pages/certificates.py, line: 46
+# File: usr/share/jellybeam/pages/certificates.py, line: 58
 #: NEEDS WORK
 msgid "Browse"
 msgstr "Selaa"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
 msgid "Distributor Certificate"
 msgstr "Jakelijan todistus"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 162
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
 #: NEEDS WORK
 msgid "Select distributor.p12 file"
 msgstr "Valitse distributor.p12-tiedosto"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 115
+# File: usr/share/jellybeam/pages/certificates.py, line: 115
 #: NEEDS WORK
 msgid "Certificate Password"
 msgstr "Todistuksen salasana"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 122
+# File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
 msgid "Need help creating certificates?"
 msgstr "Tarvitsetko apua sertifikaattien luomisessa?"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 123
+# File: usr/share/jellybeam/pages/certificates.py, line: 123
 #: NEEDS WORK
 msgid "View tutorial on Samsung Developer website"
 msgstr "Katso opetusohjelma Samsung Developer -verkkosivustolla"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 127
+# File: usr/share/jellybeam/pages/certificates.py, line: 127
 #: NEEDS WORK
 msgid "View Guide"
 msgstr "Näytä opas"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 114
+# File: usr/share/jellybeam/pages/certificates.py, line: 114
 #: NEEDS WORK
 msgid "Continue to Installation"
 msgstr "Jatka asennukseen"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 226
+# File: usr/share/jellybeam/pages/certificates.py, line: 226
 #: NEEDS WORK
 msgid "Proceed to install Jellyfin on your TV"
 msgstr "Jatka Jellyfinin asentamista televisioosi"
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 117
-# File: usr/share/jellytizen/pages/device.py, line: 135
-# File: usr/share/jellytizen/pages/welcome.py, line: 105
+# File: usr/share/jellybeam/pages/certificates.py, line: 117
+# File: usr/share/jellybeam/pages/device.py, line: 135
+# File: usr/share/jellybeam/pages/welcome.py, line: 105
 #: NEEDS WORK
 msgid "Continue"
 msgstr "Jatka"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 171
+# File: usr/share/jellybeam/pages/certificates.py, line: 171
 #: NEEDS WORK
 msgid "Ready to install with built-in certificates"
 msgstr "Valmis asennettavaksi sisäänrakennetuilla sertifikaateilla"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 132
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
 #: NEEDS WORK
 #, python-brace-format
 msgid "Select {cert_type} certificate"
 msgstr "Valitse {cert_type} -sertifikaatti"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 136
+# File: usr/share/jellybeam/pages/certificates.py, line: 136
 #: NEEDS WORK
 msgid "P12 Certificate Files"
 msgstr "P12-sertifikaattitiedostot"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 212
-# File: usr/share/jellytizen/pages/certificates.py, line: 215
-# File: usr/share/jellytizen/pages/certificates.py, line: 231
-# File: usr/share/jellytizen/pages/certificates.py, line: 238
+# File: usr/share/jellybeam/pages/certificates.py, line: 212
+# File: usr/share/jellybeam/pages/certificates.py, line: 215
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+# File: usr/share/jellybeam/pages/certificates.py, line: 238
 #: NEEDS WORK
 #, python-brace-format
 msgid "✅ {filename}"
 msgstr "✅ {tiedosto}"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 163
-# File: usr/share/jellytizen/pages/certificates.py, line: 166
-# File: usr/share/jellytizen/pages/certificates.py, line: 185
-# File: usr/share/jellytizen/pages/certificates.py, line: 191
+# File: usr/share/jellybeam/pages/certificates.py, line: 163
+# File: usr/share/jellybeam/pages/certificates.py, line: 166
+# File: usr/share/jellybeam/pages/certificates.py, line: 185
+# File: usr/share/jellybeam/pages/certificates.py, line: 191
 #: NEEDS WORK
 msgid "Change"
 msgstr "Muuta"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 251
+# File: usr/share/jellybeam/pages/certificates.py, line: 251
 #: NEEDS WORK
 msgid "Ready to install with custom certificates"
 msgstr "Valmis asennettavaksi mukautetuilla sertifikaateilla"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 326
+# File: usr/share/jellybeam/pages/certificates.py, line: 326
 #: NEEDS WORK
 msgid "author certificate"
 msgstr "tekijätodistus"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 328
+# File: usr/share/jellybeam/pages/certificates.py, line: 328
 #: NEEDS WORK
 msgid "distributor certificate"
 msgstr "jakelijatodistus"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 330
+# File: usr/share/jellybeam/pages/certificates.py, line: 330
 #: NEEDS WORK
 msgid "password"
 msgstr "salasana"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 331
+# File: usr/share/jellybeam/pages/certificates.py, line: 331
 #: NEEDS WORK
 #, python-brace-format
 msgid "Missing: {items}"
 msgstr "Puuttuu: {items}"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 231
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
 #: NEEDS WORK
 msgid "Installation"
 msgstr "Asennus"
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 16
-# File: usr/share/jellytizen/app.py, line: 112
+# File: usr/share/jellybeam/pages/preferences.py, line: 16
+# File: usr/share/jellybeam/app.py, line: 112
 #: NEEDS WORK
 msgid "Preferences"
 msgstr "Asetukset"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 24
+# File: usr/share/jellybeam/pages/preferences.py, line: 24
 #: NEEDS WORK
 msgid "General"
 msgstr "Yleinen"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 30
+# File: usr/share/jellybeam/pages/preferences.py, line: 30
 #: NEEDS WORK
 msgid "Docker Settings"
 msgstr "Docker-asetukset"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 31
+# File: usr/share/jellybeam/pages/preferences.py, line: 31
 #: NEEDS WORK
 msgid "Configure Docker behavior and settings"
 msgstr "Määritä Dockerin käyttäytyminen ja asetukset"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 36
+# File: usr/share/jellybeam/pages/preferences.py, line: 36
 #: NEEDS WORK
 msgid "Docker Image"
 msgstr "Docker-kuva"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 43
+# File: usr/share/jellybeam/pages/preferences.py, line: 43
 #: NEEDS WORK
 msgid "Auto-pull Updates"
 msgstr "Automaattiset päivitykset"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 44
+# File: usr/share/jellybeam/pages/preferences.py, line: 44
 #: NEEDS WORK
 msgid "Automatically pull the latest Docker image"
 msgstr "Vedä automaattisesti uusin Docker-kuva"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 51
+# File: usr/share/jellybeam/pages/preferences.py, line: 51
 #: NEEDS WORK
 msgid "Network Settings"
 msgstr "Verkkoasetukset"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 52
+# File: usr/share/jellybeam/pages/preferences.py, line: 52
 #: NEEDS WORK
 msgid "Configure network scanning and timeouts"
 msgstr "Määritä verkon skannaus ja aikarajat"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 57
+# File: usr/share/jellybeam/pages/preferences.py, line: 57
 #: NEEDS WORK
 msgid "Scan Timeout"
 msgstr "Skannausaika ylitetty"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 58
+# File: usr/share/jellybeam/pages/preferences.py, line: 58
 #: NEEDS WORK
 msgid "Timeout for network device scanning (seconds)"
 msgstr "Verkon laitteiden skannaamisen aikakatkaisu (sekuntia)"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 67
+# File: usr/share/jellybeam/pages/preferences.py, line: 67
 #: NEEDS WORK
 msgid "Port Range"
 msgstr "Porttialue"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 68
+# File: usr/share/jellybeam/pages/preferences.py, line: 68
 #: NEEDS WORK
 msgid "Scan port range (e.g., 8000-8080)"
 msgstr "Skannaa porttiväli (esim. 8000-8080)"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 80
+# File: usr/share/jellybeam/pages/preferences.py, line: 80
 #: NEEDS WORK
 msgid "Logging"
 msgstr "Lokitus"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 81
+# File: usr/share/jellybeam/pages/preferences.py, line: 81
 #: NEEDS WORK
 msgid "Configure application logging"
 msgstr "Määritä sovelluksen lokitus"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 86
+# File: usr/share/jellybeam/pages/preferences.py, line: 86
 #: NEEDS WORK
 msgid "Log Level"
 msgstr "Lokitaso"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 87
+# File: usr/share/jellybeam/pages/preferences.py, line: 87
 #: NEEDS WORK
 msgid "Verbosity of application logs"
 msgstr "Sovelluksen lokien yksityiskohtaisuus"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 104
+# File: usr/share/jellybeam/pages/preferences.py, line: 104
 #: NEEDS WORK
 msgid "Save Logs to File"
 msgstr "Tallenna lokit tiedostoon"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 105
+# File: usr/share/jellybeam/pages/preferences.py, line: 105
 #: NEEDS WORK
-msgid "Save application logs to ~/.local/share/jellytizen/logs"
-msgstr "Tallenna sovelluksen lokit tiedostoon ~/.local/share/jellytizen/logs"
+msgid "Save application logs to ~/.local/share/jellybeam/logs"
+msgstr "Tallenna sovelluksen lokit tiedostoon ~/.local/share/jellybeam/logs"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 112
+# File: usr/share/jellybeam/pages/preferences.py, line: 112
 #: NEEDS WORK
 msgid "Advanced"
 msgstr "Edistynyt"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 118
+# File: usr/share/jellybeam/pages/preferences.py, line: 118
 #: NEEDS WORK
 msgid "Developer Options"
 msgstr "Kehittäjäasetukset"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 119
+# File: usr/share/jellybeam/pages/preferences.py, line: 119
 #: NEEDS WORK
 msgid "Advanced settings for developers"
 msgstr "Kehittäjien lisäasetukset"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 124
+# File: usr/share/jellybeam/pages/preferences.py, line: 124
 #: NEEDS WORK
 msgid "Debug Mode"
 msgstr "Vianetsintätila"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 125
+# File: usr/share/jellybeam/pages/preferences.py, line: 125
 #: NEEDS WORK
 msgid "Enable debug mode for development"
 msgstr "Ota käyttöön virheenkorjaustila kehitystä varten"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 140
-# File: usr/share/jellytizen/pages/preferences.py, line: 148
-# File: usr/share/jellytizen/pages/preferences.py, line: 172
+# File: usr/share/jellybeam/pages/preferences.py, line: 140
+# File: usr/share/jellybeam/pages/preferences.py, line: 148
+# File: usr/share/jellybeam/pages/preferences.py, line: 172
 #: NEEDS WORK
 msgid "Reset"
 msgstr "Nollaa"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 141
+# File: usr/share/jellybeam/pages/preferences.py, line: 141
 #: NEEDS WORK
 msgid "Reset application settings"
 msgstr "Nollaa sovelluksen asetukset"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 145
+# File: usr/share/jellybeam/pages/preferences.py, line: 145
 #: NEEDS WORK
 msgid "Reset All Settings"
 msgstr "Nollaa kaikki asetukset"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 146
+# File: usr/share/jellybeam/pages/preferences.py, line: 146
 #: NEEDS WORK
 msgid "Reset all preferences to default values"
 msgstr "Palauta kaikki asetukset oletusarvoihin"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 168
+# File: usr/share/jellybeam/pages/preferences.py, line: 168
 #: NEEDS WORK
 msgid "Reset All Settings?"
 msgstr "Nollaa kaikki asetukset?"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 169
+# File: usr/share/jellybeam/pages/preferences.py, line: 169
 #: NEEDS WORK
 msgid "This will reset all preferences to their default values. This action cannot be undone."
 msgstr "Tämä palauttaa kaikki asetukset oletusarvoihinsa. Tätä toimintoa ei voi peruuttaa."
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 49
-# File: usr/share/jellytizen/pages/welcome.py, line: 185
+# File: usr/share/jellybeam/pages/device.py, line: 49
+# File: usr/share/jellybeam/pages/welcome.py, line: 185
 #: NEEDS WORK
 msgid "Device Setup"
 msgstr "Laitteen asetukset"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 50
+# File: usr/share/jellybeam/pages/device.py, line: 50
 #: NEEDS WORK
 msgid "Connect to your Samsung Tizen TV or projector"
 msgstr "Yhdistä Samsung Tizen -televisioosi tai projektoriisi"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 58
+# File: usr/share/jellybeam/pages/device.py, line: 58
 #: NEEDS WORK
 msgid "Setup Instructions"
 msgstr "Asennusohjeet"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 63
+# File: usr/share/jellybeam/pages/device.py, line: 63
 #: NEEDS WORK
 msgid "Enable Developer Mode on TV"
 msgstr "Ota kehittäjätila käyttöön televisiossa"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 64
+# File: usr/share/jellybeam/pages/device.py, line: 64
 #: NEEDS WORK
 msgid "Click to view step-by-step instructions"
 msgstr "Napsauta nähdäksesi vaiheittaiset ohjeet"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 75
+# File: usr/share/jellybeam/pages/device.py, line: 75
 #: NEEDS WORK
 msgid "1. Open Apps"
 msgstr "1. Avaa sovellukset"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 76
+# File: usr/share/jellybeam/pages/device.py, line: 76
 #: NEEDS WORK
 msgid "On the TV, go to the 'Apps' section"
 msgstr "Siirry televisiossa 'Sovellukset' osioon."
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 83
+# File: usr/share/jellybeam/pages/device.py, line: 83
 #: NEEDS WORK
 msgid "2. Go to App Settings"
 msgstr "2. Siirry sovelluksen asetuksiin"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 79
+# File: usr/share/jellybeam/pages/device.py, line: 79
 #: NEEDS WORK
 msgid "Scroll to the end and select 'App Settings'"
 msgstr "Selaa alas ja valitse 'Sovelluksen asetukset'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 91
+# File: usr/share/jellybeam/pages/device.py, line: 91
 #: NEEDS WORK
 msgid "3. Press '123' Button"
 msgstr "3. Paina '123' painiketta"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 85
+# File: usr/share/jellybeam/pages/device.py, line: 85
 #: NEEDS WORK
 msgid "Press the '123' button on your remote"
 msgstr "Paina kaukosäätimen '123' painiketta"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 90
+# File: usr/share/jellybeam/pages/device.py, line: 90
 #: NEEDS WORK
 msgid "4. Enter Code '12345'"
 msgstr "4. Syötä koodi '12345'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 91
+# File: usr/share/jellybeam/pages/device.py, line: 91
 #: NEEDS WORK
 msgid "Developer Mode menu will appear"
 msgstr "Kehittäjätila-valikko tulee näkyviin"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 107
+# File: usr/share/jellybeam/pages/device.py, line: 107
 #: NEEDS WORK
 msgid "5. Enable Developer Mode"
 msgstr "5. Ota kehittäjätila käyttöön"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 97
+# File: usr/share/jellybeam/pages/device.py, line: 97
 #: NEEDS WORK
 msgid "Toggle 'Developer Mode' to 'On'"
 msgstr "Vaihda 'Kehittäjätila' päälle"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 103
+# File: usr/share/jellybeam/pages/device.py, line: 103
 #: NEEDS WORK
 #, python-brace-format
 msgid "6. Enter This IP: {ip}"
 msgstr "6. Syötä tämä IP-osoite: {ip}"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 104
+# File: usr/share/jellybeam/pages/device.py, line: 104
 #: NEEDS WORK
 msgid "Your computer's IP address"
 msgstr "Tietokoneesi IP-osoite"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 403
-# File: usr/share/jellytizen/pages/device.py, line: 430
+# File: usr/share/jellybeam/pages/device.py, line: 403
+# File: usr/share/jellybeam/pages/device.py, line: 430
 #: NEEDS WORK
 msgid "Copy IP"
 msgstr "Kopioi IP"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 131
+# File: usr/share/jellybeam/pages/device.py, line: 131
 #: NEEDS WORK
 msgid "7. Restart TV"
 msgstr "7. Käynnistä TV uudelleen"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 116
+# File: usr/share/jellybeam/pages/device.py, line: 116
 #: NEEDS WORK
 msgid "Turn off and on your TV"
 msgstr "Kytke televisio pois ja päälle"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 162
+# File: usr/share/jellybeam/pages/device.py, line: 162
 #: NEEDS WORK
 msgid "Confirmation"
 msgstr "Vahvistus"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 167
+# File: usr/share/jellybeam/pages/device.py, line: 167
 #: NEEDS WORK
 msgid "Developer Mode Enabled"
 msgstr "Kehittäjätila käytössä"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 168
+# File: usr/share/jellybeam/pages/device.py, line: 168
 #: NEEDS WORK
 msgid "I confirm I have completed the steps above on my TV"
 msgstr "Vahvistan, että olen suorittanut yllä olevat vaiheet televisiossani."
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 55
+# File: usr/share/jellybeam/pages/device.py, line: 55
 #: NEEDS WORK
 msgid "Device Discovery"
 msgstr "Laitteen löytäminen"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 60
+# File: usr/share/jellybeam/pages/device.py, line: 60
 #: NEEDS WORK
 msgid "Scan Network"
 msgstr "Skannaa verkko"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 61
+# File: usr/share/jellybeam/pages/device.py, line: 61
 #: NEEDS WORK
 msgid "Automatically discover Samsung devices on your network"
 msgstr "Löydä automaattisesti Samsung-laitteet verkostasi"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 63
-# File: usr/share/jellytizen/pages/device.py, line: 163
+# File: usr/share/jellybeam/pages/device.py, line: 63
+# File: usr/share/jellybeam/pages/device.py, line: 163
 #: NEEDS WORK
 msgid "Scan"
 msgstr "Skannaa"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 73
+# File: usr/share/jellybeam/pages/device.py, line: 73
 #: NEEDS WORK
 msgid "Discovered Devices"
 msgstr "Löydetyt laitteet"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 74
+# File: usr/share/jellybeam/pages/device.py, line: 74
 #: NEEDS WORK
 msgid "Select your target device"
 msgstr "Valitse kohdelaitteesi"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 79
+# File: usr/share/jellybeam/pages/device.py, line: 79
 #: NEEDS WORK
 msgid "Manual Connection"
 msgstr "Manuaalinen yhteys"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 80
+# File: usr/share/jellybeam/pages/device.py, line: 80
 #: NEEDS WORK
 msgid "Enter device details manually"
 msgstr "Syötä laitetiedot manuaalisesti"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 85
+# File: usr/share/jellybeam/pages/device.py, line: 85
 #: NEEDS WORK
 msgid "Device IP Address"
 msgstr "Laitteen IP-osoite"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 119
+# File: usr/share/jellybeam/pages/device.py, line: 119
 #: NEEDS WORK
 msgid "Connect to Device"
 msgstr "Yhdistä laitteeseen"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 120
+# File: usr/share/jellybeam/pages/device.py, line: 120
 #: NEEDS WORK
 msgid "Establish connection with your TV"
 msgstr "Varmista yhteys televisioosi"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 122
-# File: usr/share/jellytizen/pages/device.py, line: 250
+# File: usr/share/jellybeam/pages/device.py, line: 122
+# File: usr/share/jellybeam/pages/device.py, line: 250
 #: NEEDS WORK
 msgid "Connect"
 msgstr "Yhdistä"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 132
+# File: usr/share/jellybeam/pages/device.py, line: 132
 #: NEEDS WORK
 msgid "Continue to Certificates"
 msgstr "Jatka sertifikaatteihin"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 133
+# File: usr/share/jellybeam/pages/device.py, line: 133
 #: NEEDS WORK
 msgid "Setup developer certificates"
 msgstr "Aseta kehittäjäsertifikaatit"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 422
+# File: usr/share/jellybeam/pages/device.py, line: 422
 #: NEEDS WORK
 msgid "Unable to determine IP"
 msgstr "Ei voida määrittää IP-osoitetta"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 429
+# File: usr/share/jellybeam/pages/device.py, line: 429
 #: NEEDS WORK
 msgid "Copied!"
 msgstr "Kopioitu!"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 153
+# File: usr/share/jellybeam/pages/device.py, line: 153
 #: NEEDS WORK
 msgid "Scanning..."
 msgstr "Skannaus..."
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 178
+# File: usr/share/jellybeam/pages/device.py, line: 178
 #: NEEDS WORK
 msgid "No devices found"
 msgstr "Ei laitteita löytynyt"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 179
+# File: usr/share/jellybeam/pages/device.py, line: 179
 #: NEEDS WORK
 msgid "Try manual connection or check network"
 msgstr "Kokeile manuaalista yhteyttä tai tarkista verkko"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 186
+# File: usr/share/jellybeam/pages/device.py, line: 186
 #: NEEDS WORK
 msgid "Unknown Device"
 msgstr "Tuntematon laite"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 187
+# File: usr/share/jellybeam/pages/device.py, line: 187
 #: NEEDS WORK
 #, python-brace-format
 msgid "IP: {ip} | Model: {model}"
 msgstr "IP: {ip} | Malli: {model}"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 187
+# File: usr/share/jellybeam/pages/device.py, line: 187
 #: NEEDS WORK
 msgid "Unknown"
 msgstr "Tuntematon"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 189
+# File: usr/share/jellybeam/pages/device.py, line: 189
 #: NEEDS WORK
 msgid "Select"
 msgstr "Valitse"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 200
+# File: usr/share/jellybeam/pages/device.py, line: 200
 #: NEEDS WORK
 msgid "Found 1 device - Select your target device"
 msgstr "Löydetty 1 laite - Valitse kohdelaitteesi"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 202
+# File: usr/share/jellybeam/pages/device.py, line: 202
 #: NEEDS WORK
 #, python-brace-format
 msgid "Found {count} devices - Select your target device"
 msgstr "Löydetty {count} laitetta - Valitse kohdelaitteesi"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 304
+# File: usr/share/jellybeam/pages/device.py, line: 304
 #: NEEDS WORK
 #, python-brace-format
 msgid "Device selected: {name}"
 msgstr "Laite valittu: {name}"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 232
+# File: usr/share/jellybeam/pages/device.py, line: 232
 #: NEEDS WORK
 msgid "Please enter a device IP address"
 msgstr "Ole hyvä ja syötä laitteen IP-osoite"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 236
+# File: usr/share/jellybeam/pages/device.py, line: 236
 #: NEEDS WORK
 msgid "Please enter a valid IP address"
 msgstr "Ole hyvä ja syötä voimassa oleva IP-osoite"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 241
+# File: usr/share/jellybeam/pages/device.py, line: 241
 #: NEEDS WORK
 msgid "Connecting..."
 msgstr "Yhdistetään..."
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 255
+# File: usr/share/jellybeam/pages/device.py, line: 255
 #: NEEDS WORK
 msgid "Connected successfully!"
 msgstr "Yhdistetty onnistuneesti!"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 257
+# File: usr/share/jellybeam/pages/device.py, line: 257
 #: NEEDS WORK
 #, python-brace-format
 msgid "Connection failed: {message}"
 msgstr "Yhteys epäonnistui: {message}"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 264
+# File: usr/share/jellybeam/pages/device.py, line: 264
 #: NEEDS WORK
 msgid "Certificates"
 msgstr "Todistukset"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 53
-# File: usr/share/jellytizen/pages/install.py, line: 116
-# File: usr/share/jellytizen/pages/install.py, line: 385
+# File: usr/share/jellybeam/pages/install.py, line: 53
+# File: usr/share/jellybeam/pages/install.py, line: 116
+# File: usr/share/jellybeam/pages/install.py, line: 385
 #: NEEDS WORK
 msgid "Install Jellyfin"
 msgstr "Asenna Jellyfin"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 54
+# File: usr/share/jellybeam/pages/install.py, line: 54
 #: NEEDS WORK
 msgid "One-click installation to your Samsung TV"
 msgstr "Yhden napsautuksen asennus Samsung-televisioosi"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 59
+# File: usr/share/jellybeam/pages/install.py, line: 59
 #: NEEDS WORK
 msgid "Target Device"
 msgstr "Kohdelaitteet"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 60
+# File: usr/share/jellybeam/pages/install.py, line: 60
 #: NEEDS WORK
 msgid "Loading..."
 msgstr "Lataaminen..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 43
+# File: usr/share/jellybeam/pages/install.py, line: 43
 #: NEEDS WORK
 msgid "Installation Progress"
 msgstr "Asennuksen edistyminen"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 74
+# File: usr/share/jellybeam/pages/install.py, line: 74
 #: NEEDS WORK
 msgid "Ready to install"
 msgstr "Asennettavaksi valmis"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 75
+# File: usr/share/jellybeam/pages/install.py, line: 75
 #: NEEDS WORK
 msgid "Click the button below to start"
 msgstr "Napsauta alla olevaa painiketta aloittaaksesi"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 62
+# File: usr/share/jellybeam/pages/install.py, line: 62
 #: NEEDS WORK
 msgid "Waiting to start..."
 msgstr "Odottaa aloittamista..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 67
+# File: usr/share/jellybeam/pages/install.py, line: 67
 #: NEEDS WORK
 msgid "Installation Log"
 msgstr "Asennuslokit"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 139
+# File: usr/share/jellybeam/pages/install.py, line: 139
 #: NEEDS WORK
 msgid "Click to view detailed output"
 msgstr "Napsauta nähdäksesi yksityiskohtaisen tuloksen"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 307
+# File: usr/share/jellybeam/pages/install.py, line: 307
 #: NEEDS WORK
 msgid "Installation Complete!"
 msgstr "Asennus valmis!"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 174
+# File: usr/share/jellybeam/pages/install.py, line: 174
 #: NEEDS WORK
 msgid "Jellyfin is ready!"
 msgstr "Jellyfin on valmis!"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 175
+# File: usr/share/jellybeam/pages/install.py, line: 175
 #: NEEDS WORK
 msgid "Open the Jellyfin app on your TV"
 msgstr "Avaa Jellyfin-sovellus televisiossasi"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 179
+# File: usr/share/jellybeam/pages/install.py, line: 179
 #: NEEDS WORK
 msgid "Done"
 msgstr "Valmis"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 197
+# File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"
 msgstr "Ei laitetta valittuna - palaa takaisin"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 206
+# File: usr/share/jellybeam/pages/install.py, line: 206
 #: NEEDS WORK
 msgid "No TV configured. Please go back and select a device."
 msgstr "Ei televisiota ole määritetty. Palaa takaisin ja valitse laite."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 231
+# File: usr/share/jellybeam/pages/install.py, line: 231
 #: NEEDS WORK
 msgid "Starting Installation"
 msgstr "Asennuksen aloittaminen"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 236
+# File: usr/share/jellybeam/pages/install.py, line: 236
 #: NEEDS WORK
 msgid "Downloading container..."
 msgstr "Ladataan säiliötä..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 237
+# File: usr/share/jellybeam/pages/install.py, line: 237
 #: NEEDS WORK
 msgid "Pulling Docker image..."
 msgstr "Ladataan Docker-kuvaa..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 250
+# File: usr/share/jellybeam/pages/install.py, line: 250
 #: NEEDS WORK
 msgid "Container ready!"
 msgstr "Säiliö valmis!"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 254
+# File: usr/share/jellybeam/pages/install.py, line: 254
 #: NEEDS WORK
 msgid "Installing to TV..."
 msgstr "Asentaminen televisioon..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 255
+# File: usr/share/jellybeam/pages/install.py, line: 255
 #: NEEDS WORK
 msgid "Connecting and installing..."
 msgstr "Yhdistetään ja asennetaan..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 256
+# File: usr/share/jellybeam/pages/install.py, line: 256
 #: NEEDS WORK
 msgid "This may take a few minutes..."
 msgstr "Tämä saattaa kestää muutaman minuutin..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 275
+# File: usr/share/jellybeam/pages/install.py, line: 275
 #: NEEDS WORK
 msgid "Installing..."
 msgstr "Asentaminen..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 277
+# File: usr/share/jellybeam/pages/install.py, line: 277
 #: NEEDS WORK
 msgid "Downloading app..."
 msgstr "Ladataan sovellusta..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 279
+# File: usr/share/jellybeam/pages/install.py, line: 279
 #: NEEDS WORK
 msgid "Transferring..."
 msgstr "Siirtäminen..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 281
+# File: usr/share/jellybeam/pages/install.py, line: 281
 #: NEEDS WORK
 msgid "Connecting to TV..."
 msgstr "Yhdistetään televisioon..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 283
+# File: usr/share/jellybeam/pages/install.py, line: 283
 #: NEEDS WORK
 msgid "Finishing..."
 msgstr "Valmistellaan..."
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 216
+# File: usr/share/jellybeam/pages/welcome.py, line: 216
 #: NEEDS WORK
 msgid "Error"
 msgstr "Virhe"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 339
+# File: usr/share/jellybeam/pages/install.py, line: 339
 #: NEEDS WORK
 msgid "Jellyfin is now on your TV"
 msgstr "Jellyfin on nyt televisiossasi"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 341
+# File: usr/share/jellybeam/pages/install.py, line: 341
 #: NEEDS WORK
 msgid "Reinstall"
 msgstr "Asenna uudelleen"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 348
+# File: usr/share/jellybeam/pages/install.py, line: 348
 #: NEEDS WORK
 msgid "Find Jellyfin in your TV's app list."
 msgstr "Löydä Jellyfin televisiosi sovelluslistasta."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 322
+# File: usr/share/jellybeam/pages/install.py, line: 322
 #: NEEDS WORK
 msgid "Installation Failed"
 msgstr "Asennus epäonnistui"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 362
+# File: usr/share/jellybeam/pages/install.py, line: 362
 #: NEEDS WORK
 msgid "Retry"
 msgstr "Yritä uudelleen"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 379
-# File: usr/share/jellytizen/pages/install.py, line: 383
+# File: usr/share/jellybeam/pages/install.py, line: 379
+# File: usr/share/jellybeam/pages/install.py, line: 383
 #: NEEDS WORK
 msgid "Cancelled"
 msgstr "Peruutettu"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 380
+# File: usr/share/jellybeam/pages/install.py, line: 380
 #: NEEDS WORK
 msgid "Installation was cancelled"
 msgstr "Asennus peruttiin"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 333
+# File: usr/share/jellybeam/pages/install.py, line: 333
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Asennus peruutettu"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 60
+# File: usr/share/jellybeam/pages/welcome.py, line: 60
 #: NEEDS WORK
-msgid "JellyTizen Installer"
-msgstr "JellyTizen Asentaja"
+msgid "JellyBeam Installer"
+msgstr "JellyBeam Asentaja"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 63
+# File: usr/share/jellybeam/pages/welcome.py, line: 63
 #: NEEDS WORK
 msgid "Install Jellyfin on your Samsung Smart TV or projector"
 msgstr "Asenna Jellyfin Samsung Smart TV:hen tai projektoriin."
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 68
+# File: usr/share/jellybeam/pages/welcome.py, line: 68
 #: NEEDS WORK
 msgid "System Requirements"
 msgstr "Järjestelmävaatimukset"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 74
+# File: usr/share/jellybeam/pages/welcome.py, line: 74
 #: NEEDS WORK
 msgid "Docker Engine"
 msgstr "Docker Engine"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 79
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
 #: NEEDS WORK
 msgid "Checking..."
 msgstr "Tarkistetaan..."
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 85
-# File: usr/share/jellytizen/pages/welcome.py, line: 88
-# File: usr/share/jellytizen/pages/welcome.py, line: 194
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+# File: usr/share/jellybeam/pages/welcome.py, line: 88
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
 #: NEEDS WORK
 msgid "Install Docker"
 msgstr "Asenna Docker"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 86
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
 #: NEEDS WORK
 msgid "Docker is required but not installed"
 msgstr "Dockeria vaaditaan, mutta se ei ole asennettuna."
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 92
+# File: usr/share/jellybeam/pages/welcome.py, line: 92
 #: NEEDS WORK
 msgid "Install"
 msgstr "Asenna"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 106
+# File: usr/share/jellybeam/pages/welcome.py, line: 106
 #: NEEDS WORK
 msgid "Configure your Samsung TV"
 msgstr "Määritä Samsung-televisiosi"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 135
+# File: usr/share/jellybeam/pages/welcome.py, line: 135
 #: NEEDS WORK
 msgid "Ready"
 msgstr "Valmis"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 142
+# File: usr/share/jellybeam/pages/welcome.py, line: 142
 #: NEEDS WORK
 msgid "Not running"
 msgstr "Ei käynnissä"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 144
+# File: usr/share/jellybeam/pages/welcome.py, line: 144
 #: NEEDS WORK
 msgid "Start"
 msgstr "Aloita"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 153
+# File: usr/share/jellybeam/pages/welcome.py, line: 153
 #: NEEDS WORK
 msgid "Not installed"
 msgstr "Ei asennettu"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 193
+# File: usr/share/jellybeam/pages/welcome.py, line: 193
 #: NEEDS WORK
 msgid "Select your distribution:"
 msgstr "Valitse jakelusi:"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 199
+# File: usr/share/jellybeam/pages/welcome.py, line: 199
 #: NEEDS WORK
 msgid "Arch/Manjaro"
 msgstr "Arch/Manjaro"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 200
+# File: usr/share/jellybeam/pages/welcome.py, line: 200
 #: NEEDS WORK
 msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 201
+# File: usr/share/jellybeam/pages/welcome.py, line: 201
 #: NEEDS WORK
 msgid "Fedora/RHEL"
 msgstr "Fedora/RHEL"
 # 
-# File: usr/share/jellytizen/app.py, line: 84
+# File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
 msgstr "Palaa takaisin"
 # 
-# File: usr/share/jellytizen/app.py, line: 106
+# File: usr/share/jellybeam/app.py, line: 106
 #: NEEDS WORK
 msgid "Welcome"
 msgstr "Tervetuloa"
 # 
-# File: usr/share/jellytizen/app.py, line: 113
+# File: usr/share/jellybeam/app.py, line: 113
 #: NEEDS WORK
 msgid "About"
 msgstr "Tietoja"
 # 
-# File: usr/share/jellytizen/app.py, line: 139
+# File: usr/share/jellybeam/app.py, line: 139
 #: NEEDS WORK
-msgid "JellyTizen Team"
-msgstr "JellyTizen-tiimi"
+msgid "JellyBeam Team"
+msgstr "JellyBeam-tiimi"
 # 
-# File: usr/share/jellytizen/app.py, line: 145
+# File: usr/share/jellybeam/app.py, line: 145
 #: NEEDS WORK
-msgid "JellyTizen Contributors"
-msgstr "JellyTizen -tekijät"
+msgid "JellyBeam Contributors"
+msgstr "JellyBeam -tekijät"

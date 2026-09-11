@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the JellyTizen package.
+# This file is distributed under the same license as the JellyBeam package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: JellyTizen\n"
+"Project-Id-Version: JellyBeam\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,62 +16,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 94
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 137
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
 #: NEEDS WORK
 msgid "OK"
 msgstr "U redu"
 # 
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 170
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
 #: NEEDS WORK
 msgid "Confirm"
 msgstr "Potvrdi"
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellytizen/utils/ui_helpers.py, line: 172
-# File: usr/share/jellytizen/pages/preferences.py, line: 171
-# File: usr/share/jellytizen/pages/install.py, line: 110
-# File: usr/share/jellytizen/pages/welcome.py, line: 198
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
+# File: usr/share/jellybeam/pages/preferences.py, line: 171
+# File: usr/share/jellybeam/pages/install.py, line: 110
+# File: usr/share/jellybeam/pages/welcome.py, line: 198
 #: NEEDS WORK
 msgid "Cancel"
 msgstr "Otkaži"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 31
+# File: usr/share/jellybeam/pages/certificates.py, line: 31
 #: NEEDS WORK
 msgid "Developer Certificates"
 msgstr "Certifikati programera"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 48
+# File: usr/share/jellybeam/pages/certificates.py, line: 48
 #: NEEDS WORK
 msgid "Certificates are required to install apps on Samsung TVs"
 msgstr "Certifikati su potrebni za instalaciju aplikacija na Samsung TV-ima"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
 msgid "Certificate Mode"
 msgstr "Način certifikata"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 60
+# File: usr/share/jellybeam/pages/certificates.py, line: 60
 #: NEEDS WORK
 msgid "Use Built-in Certificates"
 msgstr "Koristi ugrađene certifikate"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 61
+# File: usr/share/jellybeam/pages/certificates.py, line: 61
 #: NEEDS WORK
 msgid "Recommended - No Tizen Studio required"
 msgstr "Preporučeno - Nije potreban Tizen Studio"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 73
+# File: usr/share/jellybeam/pages/certificates.py, line: 73
 #: NEEDS WORK
 msgid "How it works"
 msgstr "Kako to funkcionira"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 74
+# File: usr/share/jellybeam/pages/certificates.py, line: 74
 #: NEEDS WORK
 msgid ""
 "The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
@@ -80,884 +80,884 @@ msgstr ""
 "Docker kontejner uključuje unaprijed konfigurirane certifikate. Možete odmah instalirati Jellyfin "
 "bez ikakve postavke."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 83
+# File: usr/share/jellybeam/pages/certificates.py, line: 83
 #: NEEDS WORK
 msgid "Custom Certificates (Advanced)"
 msgstr "Prilagođeni certifikati (Napredno)"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 84
+# File: usr/share/jellybeam/pages/certificates.py, line: 84
 #: NEEDS WORK
 msgid "Only needed if you want to use your own certificates"
 msgstr "Samo je potrebno ako želite koristiti vlastite certifikate"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 43
+# File: usr/share/jellybeam/pages/certificates.py, line: 43
 #: NEEDS WORK
 msgid "Author Certificate"
 msgstr "Certifikat autora"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 148
+# File: usr/share/jellybeam/pages/certificates.py, line: 148
 #: NEEDS WORK
 msgid "Select author.p12 file"
 msgstr "Odaberite datoteku author.p12"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 46
-# File: usr/share/jellytizen/pages/certificates.py, line: 58
+# File: usr/share/jellybeam/pages/certificates.py, line: 46
+# File: usr/share/jellybeam/pages/certificates.py, line: 58
 #: NEEDS WORK
 msgid "Browse"
 msgstr "Pretraži"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
 msgid "Distributor Certificate"
 msgstr "Certifikat distributera"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 162
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
 #: NEEDS WORK
 msgid "Select distributor.p12 file"
 msgstr "Odaberite distributor.p12 datoteku"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 115
+# File: usr/share/jellybeam/pages/certificates.py, line: 115
 #: NEEDS WORK
 msgid "Certificate Password"
 msgstr "Lozinka za certifikat"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 122
+# File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
 msgid "Need help creating certificates?"
 msgstr "Trebate pomoć pri izradi certifikata?"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 123
+# File: usr/share/jellybeam/pages/certificates.py, line: 123
 #: NEEDS WORK
 msgid "View tutorial on Samsung Developer website"
 msgstr "Pogledajte vodič na web stranici Samsung Developer."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 127
+# File: usr/share/jellybeam/pages/certificates.py, line: 127
 #: NEEDS WORK
 msgid "View Guide"
 msgstr "Pogledaj vodič"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 114
+# File: usr/share/jellybeam/pages/certificates.py, line: 114
 #: NEEDS WORK
 msgid "Continue to Installation"
 msgstr "Nastavi na instalaciju"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 226
+# File: usr/share/jellybeam/pages/certificates.py, line: 226
 #: NEEDS WORK
 msgid "Proceed to install Jellyfin on your TV"
 msgstr "Nastavite s instalacijom Jellyfina na vašem TV-u"
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 117
-# File: usr/share/jellytizen/pages/device.py, line: 135
-# File: usr/share/jellytizen/pages/welcome.py, line: 105
+# File: usr/share/jellybeam/pages/certificates.py, line: 117
+# File: usr/share/jellybeam/pages/device.py, line: 135
+# File: usr/share/jellybeam/pages/welcome.py, line: 105
 #: NEEDS WORK
 msgid "Continue"
 msgstr "Nastavi"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 171
+# File: usr/share/jellybeam/pages/certificates.py, line: 171
 #: NEEDS WORK
 msgid "Ready to install with built-in certificates"
 msgstr "Spreman za instalaciju s ugrađenim certifikatima"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 132
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
 #: NEEDS WORK
 #, python-brace-format
 msgid "Select {cert_type} certificate"
 msgstr "Odaberite {cert_type} certifikat"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 136
+# File: usr/share/jellybeam/pages/certificates.py, line: 136
 #: NEEDS WORK
 msgid "P12 Certificate Files"
 msgstr "P12 certifikacijske datoteke"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 212
-# File: usr/share/jellytizen/pages/certificates.py, line: 215
-# File: usr/share/jellytizen/pages/certificates.py, line: 231
-# File: usr/share/jellytizen/pages/certificates.py, line: 238
+# File: usr/share/jellybeam/pages/certificates.py, line: 212
+# File: usr/share/jellybeam/pages/certificates.py, line: 215
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+# File: usr/share/jellybeam/pages/certificates.py, line: 238
 #: NEEDS WORK
 #, python-brace-format
 msgid "✅ {filename}"
 msgstr "✅ {filename}"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 163
-# File: usr/share/jellytizen/pages/certificates.py, line: 166
-# File: usr/share/jellytizen/pages/certificates.py, line: 185
-# File: usr/share/jellytizen/pages/certificates.py, line: 191
+# File: usr/share/jellybeam/pages/certificates.py, line: 163
+# File: usr/share/jellybeam/pages/certificates.py, line: 166
+# File: usr/share/jellybeam/pages/certificates.py, line: 185
+# File: usr/share/jellybeam/pages/certificates.py, line: 191
 #: NEEDS WORK
 msgid "Change"
 msgstr "Promjena"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 251
+# File: usr/share/jellybeam/pages/certificates.py, line: 251
 #: NEEDS WORK
 msgid "Ready to install with custom certificates"
 msgstr "Spreman za instalaciju s prilagođenim certifikatima"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 326
+# File: usr/share/jellybeam/pages/certificates.py, line: 326
 #: NEEDS WORK
 msgid "author certificate"
 msgstr "certifikat autora"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 328
+# File: usr/share/jellybeam/pages/certificates.py, line: 328
 #: NEEDS WORK
 msgid "distributor certificate"
 msgstr "certifikat distributera"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 330
+# File: usr/share/jellybeam/pages/certificates.py, line: 330
 #: NEEDS WORK
 msgid "password"
 msgstr "lozinka"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 331
+# File: usr/share/jellybeam/pages/certificates.py, line: 331
 #: NEEDS WORK
 #, python-brace-format
 msgid "Missing: {items}"
 msgstr "Nedostaje: {items}"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 231
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
 #: NEEDS WORK
 msgid "Installation"
 msgstr "Instalacija"
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 16
-# File: usr/share/jellytizen/app.py, line: 112
+# File: usr/share/jellybeam/pages/preferences.py, line: 16
+# File: usr/share/jellybeam/app.py, line: 112
 #: NEEDS WORK
 msgid "Preferences"
 msgstr "Postavke"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 24
+# File: usr/share/jellybeam/pages/preferences.py, line: 24
 #: NEEDS WORK
 msgid "General"
 msgstr "Općenito"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 30
+# File: usr/share/jellybeam/pages/preferences.py, line: 30
 #: NEEDS WORK
 msgid "Docker Settings"
 msgstr "Postavke Dockera"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 31
+# File: usr/share/jellybeam/pages/preferences.py, line: 31
 #: NEEDS WORK
 msgid "Configure Docker behavior and settings"
 msgstr "Konfigurirajte ponašanje i postavke Dockera"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 36
+# File: usr/share/jellybeam/pages/preferences.py, line: 36
 #: NEEDS WORK
 msgid "Docker Image"
 msgstr "Docker slika"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 43
+# File: usr/share/jellybeam/pages/preferences.py, line: 43
 #: NEEDS WORK
 msgid "Auto-pull Updates"
 msgstr "Automatsko preuzimanje ažuriranja"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 44
+# File: usr/share/jellybeam/pages/preferences.py, line: 44
 #: NEEDS WORK
 msgid "Automatically pull the latest Docker image"
 msgstr "Automatski preuzmi najnoviju Docker sliku"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 51
+# File: usr/share/jellybeam/pages/preferences.py, line: 51
 #: NEEDS WORK
 msgid "Network Settings"
 msgstr "Postavke mreže"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 52
+# File: usr/share/jellybeam/pages/preferences.py, line: 52
 #: NEEDS WORK
 msgid "Configure network scanning and timeouts"
 msgstr "Konfigurirajte mrežno skeniranje i vremenske limite"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 57
+# File: usr/share/jellybeam/pages/preferences.py, line: 57
 #: NEEDS WORK
 msgid "Scan Timeout"
 msgstr "Vrijeme isteka skeniranja"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 58
+# File: usr/share/jellybeam/pages/preferences.py, line: 58
 #: NEEDS WORK
 msgid "Timeout for network device scanning (seconds)"
 msgstr "Vrijeme isteka za skeniranje mrežnih uređaja (sekunde)"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 67
+# File: usr/share/jellybeam/pages/preferences.py, line: 67
 #: NEEDS WORK
 msgid "Port Range"
 msgstr "Raspon portova"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 68
+# File: usr/share/jellybeam/pages/preferences.py, line: 68
 #: NEEDS WORK
 msgid "Scan port range (e.g., 8000-8080)"
 msgstr "Skeniraj raspon portova (npr. 8000-8080)"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 80
+# File: usr/share/jellybeam/pages/preferences.py, line: 80
 #: NEEDS WORK
 msgid "Logging"
 msgstr "Zapisivanje"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 81
+# File: usr/share/jellybeam/pages/preferences.py, line: 81
 #: NEEDS WORK
 msgid "Configure application logging"
 msgstr "Konfigurirajte zapisivanje aplikacije"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 86
+# File: usr/share/jellybeam/pages/preferences.py, line: 86
 #: NEEDS WORK
 msgid "Log Level"
 msgstr "Razina dnevnika"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 87
+# File: usr/share/jellybeam/pages/preferences.py, line: 87
 #: NEEDS WORK
 msgid "Verbosity of application logs"
 msgstr "Razina detaljnosti aplikacijskih logova"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 104
+# File: usr/share/jellybeam/pages/preferences.py, line: 104
 #: NEEDS WORK
 msgid "Save Logs to File"
 msgstr "Spremi dnevnike u datoteku"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 105
+# File: usr/share/jellybeam/pages/preferences.py, line: 105
 #: NEEDS WORK
-msgid "Save application logs to ~/.local/share/jellytizen/logs"
-msgstr "Spremi dnevničke datoteke aplikacije u ~/.local/share/jellytizen/logs"
+msgid "Save application logs to ~/.local/share/jellybeam/logs"
+msgstr "Spremi dnevničke datoteke aplikacije u ~/.local/share/jellybeam/logs"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 112
+# File: usr/share/jellybeam/pages/preferences.py, line: 112
 #: NEEDS WORK
 msgid "Advanced"
 msgstr "Napredni"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 118
+# File: usr/share/jellybeam/pages/preferences.py, line: 118
 #: NEEDS WORK
 msgid "Developer Options"
 msgstr "Opcije za programere"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 119
+# File: usr/share/jellybeam/pages/preferences.py, line: 119
 #: NEEDS WORK
 msgid "Advanced settings for developers"
 msgstr "Napredne postavke za programere"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 124
+# File: usr/share/jellybeam/pages/preferences.py, line: 124
 #: NEEDS WORK
 msgid "Debug Mode"
 msgstr "Način ispravljanja grešaka"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 125
+# File: usr/share/jellybeam/pages/preferences.py, line: 125
 #: NEEDS WORK
 msgid "Enable debug mode for development"
 msgstr "Omogući način rada za otklanjanje pogrešaka za razvoj"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 140
-# File: usr/share/jellytizen/pages/preferences.py, line: 148
-# File: usr/share/jellytizen/pages/preferences.py, line: 172
+# File: usr/share/jellybeam/pages/preferences.py, line: 140
+# File: usr/share/jellybeam/pages/preferences.py, line: 148
+# File: usr/share/jellybeam/pages/preferences.py, line: 172
 #: NEEDS WORK
 msgid "Reset"
 msgstr "Ponovno postavi"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 141
+# File: usr/share/jellybeam/pages/preferences.py, line: 141
 #: NEEDS WORK
 msgid "Reset application settings"
 msgstr "Ponovno postavi postavke aplikacije"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 145
+# File: usr/share/jellybeam/pages/preferences.py, line: 145
 #: NEEDS WORK
 msgid "Reset All Settings"
 msgstr "Poništi sve postavke"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 146
+# File: usr/share/jellybeam/pages/preferences.py, line: 146
 #: NEEDS WORK
 msgid "Reset all preferences to default values"
 msgstr "Poništi sve postavke na zadane vrijednosti"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 168
+# File: usr/share/jellybeam/pages/preferences.py, line: 168
 #: NEEDS WORK
 msgid "Reset All Settings?"
 msgstr "Poništi sve postavke?"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 169
+# File: usr/share/jellybeam/pages/preferences.py, line: 169
 #: NEEDS WORK
 msgid "This will reset all preferences to their default values. This action cannot be undone."
 msgstr "Ovo će resetirati sve postavke na njihove zadane vrijednosti. Ova radnja se ne može poništiti."
 # 
-# #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 49
-# File: usr/share/jellytizen/pages/welcome.py, line: 185
+# File: usr/share/jellybeam/pages/device.py, line: 49
+# File: usr/share/jellybeam/pages/welcome.py, line: 185
 #: NEEDS WORK
 msgid "Device Setup"
 msgstr "Postavke uređaja"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 50
+# File: usr/share/jellybeam/pages/device.py, line: 50
 #: NEEDS WORK
 msgid "Connect to your Samsung Tizen TV or projector"
 msgstr "Povežite se s vašim Samsung Tizen TV-om ili projektorom"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 58
+# File: usr/share/jellybeam/pages/device.py, line: 58
 #: NEEDS WORK
 msgid "Setup Instructions"
 msgstr "Upute za postavljanje"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 63
+# File: usr/share/jellybeam/pages/device.py, line: 63
 #: NEEDS WORK
 msgid "Enable Developer Mode on TV"
 msgstr "Omogući način rada za programere na TV-u"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 64
+# File: usr/share/jellybeam/pages/device.py, line: 64
 #: NEEDS WORK
 msgid "Click to view step-by-step instructions"
 msgstr "Kliknite za prikaz korak-po-korak uputa"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 75
+# File: usr/share/jellybeam/pages/device.py, line: 75
 #: NEEDS WORK
 msgid "1. Open Apps"
 msgstr "1. Otvori aplikacije"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 76
+# File: usr/share/jellybeam/pages/device.py, line: 76
 #: NEEDS WORK
 msgid "On the TV, go to the 'Apps' section"
 msgstr "Na TV-u idite u odjeljak 'Aplikacije'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 83
+# File: usr/share/jellybeam/pages/device.py, line: 83
 #: NEEDS WORK
 msgid "2. Go to App Settings"
 msgstr "2. Idite na Postavke aplikacije"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 79
+# File: usr/share/jellybeam/pages/device.py, line: 79
 #: NEEDS WORK
 msgid "Scroll to the end and select 'App Settings'"
 msgstr "Pomaknite se do kraja i odaberite 'Postavke aplikacije'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 91
+# File: usr/share/jellybeam/pages/device.py, line: 91
 #: NEEDS WORK
 msgid "3. Press '123' Button"
 msgstr "3. Pritisnite gumb '123'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 85
+# File: usr/share/jellybeam/pages/device.py, line: 85
 #: NEEDS WORK
 msgid "Press the '123' button on your remote"
 msgstr "Pritisnite gumb '123' na svom daljinskom upravljaču"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 90
+# File: usr/share/jellybeam/pages/device.py, line: 90
 #: NEEDS WORK
 msgid "4. Enter Code '12345'"
 msgstr "4. Unesite kod '12345'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 91
+# File: usr/share/jellybeam/pages/device.py, line: 91
 #: NEEDS WORK
 msgid "Developer Mode menu will appear"
 msgstr "Izbornik načina rada za programere će se pojaviti"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 107
+# File: usr/share/jellybeam/pages/device.py, line: 107
 #: NEEDS WORK
 msgid "5. Enable Developer Mode"
 msgstr "5. Omogući način rada za programere"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 97
+# File: usr/share/jellybeam/pages/device.py, line: 97
 #: NEEDS WORK
 msgid "Toggle 'Developer Mode' to 'On'"
 msgstr "Prebaci 'Način programera' na 'Uključeno'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 103
+# File: usr/share/jellybeam/pages/device.py, line: 103
 #: NEEDS WORK
 #, python-brace-format
 msgid "6. Enter This IP: {ip}"
 msgstr "6. Unesite ovu IP adresu: {ip}"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 104
+# File: usr/share/jellybeam/pages/device.py, line: 104
 #: NEEDS WORK
 msgid "Your computer's IP address"
 msgstr "IP adresa vašeg računala"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 403
-# File: usr/share/jellytizen/pages/device.py, line: 430
+# File: usr/share/jellybeam/pages/device.py, line: 403
+# File: usr/share/jellybeam/pages/device.py, line: 430
 #: NEEDS WORK
 msgid "Copy IP"
 msgstr "Kopiraj IP"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 131
+# File: usr/share/jellybeam/pages/device.py, line: 131
 #: NEEDS WORK
 msgid "7. Restart TV"
 msgstr "7. Ponovno pokreni TV"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 116
+# File: usr/share/jellybeam/pages/device.py, line: 116
 #: NEEDS WORK
 msgid "Turn off and on your TV"
 msgstr "Isključite i uključite svoj TV."
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 162
+# File: usr/share/jellybeam/pages/device.py, line: 162
 #: NEEDS WORK
 msgid "Confirmation"
 msgstr "Potvrda"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 167
+# File: usr/share/jellybeam/pages/device.py, line: 167
 #: NEEDS WORK
 msgid "Developer Mode Enabled"
 msgstr "Omogućen način rada za programere"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 168
+# File: usr/share/jellybeam/pages/device.py, line: 168
 #: NEEDS WORK
 msgid "I confirm I have completed the steps above on my TV"
 msgstr "Potvrđujem da sam završio korake iznad na svom TV-u."
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 55
+# File: usr/share/jellybeam/pages/device.py, line: 55
 #: NEEDS WORK
 msgid "Device Discovery"
 msgstr "Otkrivanje uređaja"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 60
+# File: usr/share/jellybeam/pages/device.py, line: 60
 #: NEEDS WORK
 msgid "Scan Network"
 msgstr "Skeniraj mrežu"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 61
+# File: usr/share/jellybeam/pages/device.py, line: 61
 #: NEEDS WORK
 msgid "Automatically discover Samsung devices on your network"
 msgstr "Automatski otkrijte Samsung uređaje na svojoj mreži"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 63
-# File: usr/share/jellytizen/pages/device.py, line: 163
+# File: usr/share/jellybeam/pages/device.py, line: 63
+# File: usr/share/jellybeam/pages/device.py, line: 163
 #: NEEDS WORK
 msgid "Scan"
 msgstr "Skeniraj"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 73
+# File: usr/share/jellybeam/pages/device.py, line: 73
 #: NEEDS WORK
 msgid "Discovered Devices"
 msgstr "Otkriveni uređaji"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 74
+# File: usr/share/jellybeam/pages/device.py, line: 74
 #: NEEDS WORK
 msgid "Select your target device"
 msgstr "Odaberite svoj ciljani uređaj"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 79
+# File: usr/share/jellybeam/pages/device.py, line: 79
 #: NEEDS WORK
 msgid "Manual Connection"
 msgstr "Ručno povezivanje"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 80
+# File: usr/share/jellybeam/pages/device.py, line: 80
 #: NEEDS WORK
 msgid "Enter device details manually"
 msgstr "Unesite pojedinosti o uređaju ručno"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 85
+# File: usr/share/jellybeam/pages/device.py, line: 85
 #: NEEDS WORK
 msgid "Device IP Address"
 msgstr "IP adresa uređaja"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 119
+# File: usr/share/jellybeam/pages/device.py, line: 119
 #: NEEDS WORK
 msgid "Connect to Device"
 msgstr "Poveži se s uređajem"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 120
+# File: usr/share/jellybeam/pages/device.py, line: 120
 #: NEEDS WORK
 msgid "Establish connection with your TV"
 msgstr "Uspostavite vezu s vašim TV-om"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 122
-# File: usr/share/jellytizen/pages/device.py, line: 250
+# File: usr/share/jellybeam/pages/device.py, line: 122
+# File: usr/share/jellybeam/pages/device.py, line: 250
 #: NEEDS WORK
 msgid "Connect"
 msgstr "Poveži"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 132
+# File: usr/share/jellybeam/pages/device.py, line: 132
 #: NEEDS WORK
 msgid "Continue to Certificates"
 msgstr "Nastavi na Certifikate"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 133
+# File: usr/share/jellybeam/pages/device.py, line: 133
 #: NEEDS WORK
 msgid "Setup developer certificates"
 msgstr "Postavljanje razvojnih certifikata"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 422
+# File: usr/share/jellybeam/pages/device.py, line: 422
 #: NEEDS WORK
 msgid "Unable to determine IP"
 msgstr "Nije moguće odrediti IP"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 429
+# File: usr/share/jellybeam/pages/device.py, line: 429
 #: NEEDS WORK
 msgid "Copied!"
 msgstr "Kopirano!"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 153
+# File: usr/share/jellybeam/pages/device.py, line: 153
 #: NEEDS WORK
 msgid "Scanning..."
 msgstr "Skeniranje..."
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 178
+# File: usr/share/jellybeam/pages/device.py, line: 178
 #: NEEDS WORK
 msgid "No devices found"
 msgstr "Nema pronađenih uređaja"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 179
+# File: usr/share/jellybeam/pages/device.py, line: 179
 #: NEEDS WORK
 msgid "Try manual connection or check network"
 msgstr "Pokušajte ručno povezivanje ili provjerite mrežu"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 186
+# File: usr/share/jellybeam/pages/device.py, line: 186
 #: NEEDS WORK
 msgid "Unknown Device"
 msgstr "Nepoznati uređaj"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 187
+# File: usr/share/jellybeam/pages/device.py, line: 187
 #: NEEDS WORK
 #, python-brace-format
 msgid "IP: {ip} | Model: {model}"
 msgstr "IP: {ip} | Model: {model}"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 187
+# File: usr/share/jellybeam/pages/device.py, line: 187
 #: NEEDS WORK
 msgid "Unknown"
 msgstr "Nepoznato"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 189
+# File: usr/share/jellybeam/pages/device.py, line: 189
 #: NEEDS WORK
 msgid "Select"
 msgstr "Odaberi"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 200
+# File: usr/share/jellybeam/pages/device.py, line: 200
 #: NEEDS WORK
 msgid "Found 1 device - Select your target device"
 msgstr "Pronađen 1 uređaj - Odaberite svoj ciljani uređaj"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 202
+# File: usr/share/jellybeam/pages/device.py, line: 202
 #: NEEDS WORK
 #, python-brace-format
 msgid "Found {count} devices - Select your target device"
 msgstr "Pronađeno {count} uređaja - Odaberite svoj ciljani uređaj"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 304
+# File: usr/share/jellybeam/pages/device.py, line: 304
 #: NEEDS WORK
 #, python-brace-format
 msgid "Device selected: {name}"
 msgstr "Odabrani uređaj: {name}"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 232
+# File: usr/share/jellybeam/pages/device.py, line: 232
 #: NEEDS WORK
 msgid "Please enter a device IP address"
 msgstr "Molimo unesite IP adresu uređaja"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 236
+# File: usr/share/jellybeam/pages/device.py, line: 236
 #: NEEDS WORK
 msgid "Please enter a valid IP address"
 msgstr "Molimo unesite važeću IP adresu"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 241
+# File: usr/share/jellybeam/pages/device.py, line: 241
 #: NEEDS WORK
 msgid "Connecting..."
 msgstr "Povezivanje..."
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 255
+# File: usr/share/jellybeam/pages/device.py, line: 255
 #: NEEDS WORK
 msgid "Connected successfully!"
 msgstr "Uspješno povezano!"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 257
+# File: usr/share/jellybeam/pages/device.py, line: 257
 #: NEEDS WORK
 #, python-brace-format
 msgid "Connection failed: {message}"
 msgstr "Veza nije uspjela: {message}"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 264
+# File: usr/share/jellybeam/pages/device.py, line: 264
 #: NEEDS WORK
 msgid "Certificates"
 msgstr "Certifikati"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 53
-# File: usr/share/jellytizen/pages/install.py, line: 116
-# File: usr/share/jellytizen/pages/install.py, line: 385
+# File: usr/share/jellybeam/pages/install.py, line: 53
+# File: usr/share/jellybeam/pages/install.py, line: 116
+# File: usr/share/jellybeam/pages/install.py, line: 385
 #: NEEDS WORK
 msgid "Install Jellyfin"
 msgstr "Instalirajte Jellyfin"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 54
+# File: usr/share/jellybeam/pages/install.py, line: 54
 #: NEEDS WORK
 msgid "One-click installation to your Samsung TV"
 msgstr "Instalacija jednim klikom na vašem Samsung TV-u"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 59
+# File: usr/share/jellybeam/pages/install.py, line: 59
 #: NEEDS WORK
 msgid "Target Device"
 msgstr "Ciljani uređaj"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 60
+# File: usr/share/jellybeam/pages/install.py, line: 60
 #: NEEDS WORK
 msgid "Loading..."
 msgstr "Učitavanje..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 43
+# File: usr/share/jellybeam/pages/install.py, line: 43
 #: NEEDS WORK
 msgid "Installation Progress"
 msgstr "Napredak instalacije"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 74
+# File: usr/share/jellybeam/pages/install.py, line: 74
 #: NEEDS WORK
 msgid "Ready to install"
 msgstr "Spreman za instalaciju"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 75
+# File: usr/share/jellybeam/pages/install.py, line: 75
 #: NEEDS WORK
 msgid "Click the button below to start"
 msgstr "Kliknite gumb ispod za početak"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 62
+# File: usr/share/jellybeam/pages/install.py, line: 62
 #: NEEDS WORK
 msgid "Waiting to start..."
 msgstr "Čekanje na početak..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 67
+# File: usr/share/jellybeam/pages/install.py, line: 67
 #: NEEDS WORK
 msgid "Installation Log"
 msgstr "Zapisnik instalacije"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 139
+# File: usr/share/jellybeam/pages/install.py, line: 139
 #: NEEDS WORK
 msgid "Click to view detailed output"
 msgstr "Kliknite za prikaz detaljnog izlaza"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 307
+# File: usr/share/jellybeam/pages/install.py, line: 307
 #: NEEDS WORK
 msgid "Installation Complete!"
 msgstr "Instalacija dovršena!"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 174
+# File: usr/share/jellybeam/pages/install.py, line: 174
 #: NEEDS WORK
 msgid "Jellyfin is ready!"
 msgstr "Jellyfin je spreman!"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 175
+# File: usr/share/jellybeam/pages/install.py, line: 175
 #: NEEDS WORK
 msgid "Open the Jellyfin app on your TV"
 msgstr "Otvorite Jellyfin aplikaciju na svom TV-u"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 179
+# File: usr/share/jellybeam/pages/install.py, line: 179
 #: NEEDS WORK
 msgid "Done"
 msgstr "Završeno"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 197
+# File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"
 msgstr "Nema odabranog uređaja - molimo vratite se nazad"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 206
+# File: usr/share/jellybeam/pages/install.py, line: 206
 #: NEEDS WORK
 msgid "No TV configured. Please go back and select a device."
 msgstr "Nema konfigurirane TV. Molimo vas da se vratite i odaberete uređaj."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 231
+# File: usr/share/jellybeam/pages/install.py, line: 231
 #: NEEDS WORK
 msgid "Starting Installation"
 msgstr "Pokretanje instalacije"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 236
+# File: usr/share/jellybeam/pages/install.py, line: 236
 #: NEEDS WORK
 msgid "Downloading container..."
 msgstr "Preuzimanje kontejnera..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 237
+# File: usr/share/jellybeam/pages/install.py, line: 237
 #: NEEDS WORK
 msgid "Pulling Docker image..."
 msgstr "Preuzimanje Docker slike..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 250
+# File: usr/share/jellybeam/pages/install.py, line: 250
 #: NEEDS WORK
 msgid "Container ready!"
 msgstr "Kontejner spreman!"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 254
+# File: usr/share/jellybeam/pages/install.py, line: 254
 #: NEEDS WORK
 msgid "Installing to TV..."
 msgstr "Instaliranje na TV..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 255
+# File: usr/share/jellybeam/pages/install.py, line: 255
 #: NEEDS WORK
 msgid "Connecting and installing..."
 msgstr "Povezivanje i instalacija..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 256
+# File: usr/share/jellybeam/pages/install.py, line: 256
 #: NEEDS WORK
 msgid "This may take a few minutes..."
 msgstr "Ovo može potrajati nekoliko minuta..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 275
+# File: usr/share/jellybeam/pages/install.py, line: 275
 #: NEEDS WORK
 msgid "Installing..."
 msgstr "Instaliranje..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 277
+# File: usr/share/jellybeam/pages/install.py, line: 277
 #: NEEDS WORK
 msgid "Downloading app..."
 msgstr "Preuzimanje aplikacije..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 279
+# File: usr/share/jellybeam/pages/install.py, line: 279
 #: NEEDS WORK
 msgid "Transferring..."
 msgstr "Prebacivanje..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 281
+# File: usr/share/jellybeam/pages/install.py, line: 281
 #: NEEDS WORK
 msgid "Connecting to TV..."
 msgstr "Povezivanje s TV-om..."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 283
+# File: usr/share/jellybeam/pages/install.py, line: 283
 #: NEEDS WORK
 msgid "Finishing..."
 msgstr "Završavanje..."
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 216
+# File: usr/share/jellybeam/pages/welcome.py, line: 216
 #: NEEDS WORK
 msgid "Error"
 msgstr "Greška"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 339
+# File: usr/share/jellybeam/pages/install.py, line: 339
 #: NEEDS WORK
 msgid "Jellyfin is now on your TV"
 msgstr "Jellyfin je sada na vašem TV-u"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 341
+# File: usr/share/jellybeam/pages/install.py, line: 341
 #: NEEDS WORK
 msgid "Reinstall"
 msgstr "Ponovno instaliraj"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 348
+# File: usr/share/jellybeam/pages/install.py, line: 348
 #: NEEDS WORK
 msgid "Find Jellyfin in your TV's app list."
 msgstr "Pronađite Jellyfin na popisu aplikacija vašeg TV-a."
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 322
+# File: usr/share/jellybeam/pages/install.py, line: 322
 #: NEEDS WORK
 msgid "Installation Failed"
 msgstr "Instalacija nije uspjela"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 362
+# File: usr/share/jellybeam/pages/install.py, line: 362
 #: NEEDS WORK
 msgid "Retry"
 msgstr "Ponovno pokušaj"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 379
-# File: usr/share/jellytizen/pages/install.py, line: 383
+# File: usr/share/jellybeam/pages/install.py, line: 379
+# File: usr/share/jellybeam/pages/install.py, line: 383
 #: NEEDS WORK
 msgid "Cancelled"
 msgstr "Otkaženo"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 380
+# File: usr/share/jellybeam/pages/install.py, line: 380
 #: NEEDS WORK
 msgid "Installation was cancelled"
 msgstr "Instalacija je otkazana"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 333
+# File: usr/share/jellybeam/pages/install.py, line: 333
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Instalacija otkazana"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 60
+# File: usr/share/jellybeam/pages/welcome.py, line: 60
 #: NEEDS WORK
-msgid "JellyTizen Installer"
-msgstr "JellyTizen Instalater"
+msgid "JellyBeam Installer"
+msgstr "JellyBeam Instalater"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 63
+# File: usr/share/jellybeam/pages/welcome.py, line: 63
 #: NEEDS WORK
 msgid "Install Jellyfin on your Samsung Smart TV or projector"
 msgstr "Instalirajte Jellyfin na svoj Samsung Smart TV ili projektor"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 68
+# File: usr/share/jellybeam/pages/welcome.py, line: 68
 #: NEEDS WORK
 msgid "System Requirements"
 msgstr "Sistemski zahtjevi"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 74
+# File: usr/share/jellybeam/pages/welcome.py, line: 74
 #: NEEDS WORK
 msgid "Docker Engine"
 msgstr "Docker Engine"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 79
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
 #: NEEDS WORK
 msgid "Checking..."
 msgstr "Provjera..."
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 85
-# File: usr/share/jellytizen/pages/welcome.py, line: 88
-# File: usr/share/jellytizen/pages/welcome.py, line: 194
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+# File: usr/share/jellybeam/pages/welcome.py, line: 88
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
 #: NEEDS WORK
 msgid "Install Docker"
 msgstr "Instalirajte Docker"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 86
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
 #: NEEDS WORK
 msgid "Docker is required but not installed"
 msgstr "Docker je potreban, ali nije instaliran"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 92
+# File: usr/share/jellybeam/pages/welcome.py, line: 92
 #: NEEDS WORK
 msgid "Install"
 msgstr "Instaliraj"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 106
+# File: usr/share/jellybeam/pages/welcome.py, line: 106
 #: NEEDS WORK
 msgid "Configure your Samsung TV"
 msgstr "Konfigurirajte svoj Samsung TV"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 135
+# File: usr/share/jellybeam/pages/welcome.py, line: 135
 #: NEEDS WORK
 msgid "Ready"
 msgstr "Spreman"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 142
+# File: usr/share/jellybeam/pages/welcome.py, line: 142
 #: NEEDS WORK
 msgid "Not running"
 msgstr "Nije u radu"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 144
+# File: usr/share/jellybeam/pages/welcome.py, line: 144
 #: NEEDS WORK
 msgid "Start"
 msgstr "Započni"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 153
+# File: usr/share/jellybeam/pages/welcome.py, line: 153
 #: NEEDS WORK
 msgid "Not installed"
 msgstr "Nije instalirano"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 193
+# File: usr/share/jellybeam/pages/welcome.py, line: 193
 #: NEEDS WORK
 msgid "Select your distribution:"
 msgstr "Odaberite svoju distribuciju:"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 199
+# File: usr/share/jellybeam/pages/welcome.py, line: 199
 #: NEEDS WORK
 msgid "Arch/Manjaro"
 msgstr "Arch/Manjaro"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 200
+# File: usr/share/jellybeam/pages/welcome.py, line: 200
 #: NEEDS WORK
 msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 201
+# File: usr/share/jellybeam/pages/welcome.py, line: 201
 #: NEEDS WORK
 msgid "Fedora/RHEL"
 msgstr "Fedora/RHEL"
 # 
-# File: usr/share/jellytizen/app.py, line: 84
+# File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
 msgstr "Idi nazad"
 # 
-# File: usr/share/jellytizen/app.py, line: 106
+# File: usr/share/jellybeam/app.py, line: 106
 #: NEEDS WORK
 msgid "Welcome"
 msgstr "Dobrodošli"
 # 
-# File: usr/share/jellytizen/app.py, line: 113
+# File: usr/share/jellybeam/app.py, line: 113
 #: NEEDS WORK
 msgid "About"
 msgstr "O programu"
 # 
-# File: usr/share/jellytizen/app.py, line: 139
+# File: usr/share/jellybeam/app.py, line: 139
 #: NEEDS WORK
-msgid "JellyTizen Team"
-msgstr "JellyTizen Tim"
+msgid "JellyBeam Team"
+msgstr "JellyBeam Tim"
 # 
-# File: usr/share/jellytizen/app.py, line: 145
+# File: usr/share/jellybeam/app.py, line: 145
 #: NEEDS WORK
-msgid "JellyTizen Contributors"
-msgstr "JellyTizen Suradnici"
+msgid "JellyBeam Contributors"
+msgstr "JellyBeam Suradnici"

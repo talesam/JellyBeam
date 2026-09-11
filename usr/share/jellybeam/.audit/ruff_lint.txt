@@ -1,0 +1,268 @@
+F401 [*] `os` imported but unused
+ --> app.py:3:8
+  |
+1 | # app.py
+2 | import gi
+3 | import os
+  |        ^^
+4 | from pathlib import Path
+  |
+help: Remove unused import: `os`
+
+F401 [*] `pathlib.Path` imported but unused
+ --> app.py:4:21
+  |
+2 | import gi
+3 | import os
+4 | from pathlib import Path
+  |                     ^^^^
+5 |
+6 | gi.require_version('Gtk', '4.0')
+  |
+help: Remove unused import: `pathlib.Path`
+
+E402 Module level import not at top of file
+  --> app.py:9:1
+   |
+ 7 | gi.require_version('Adw', '1')
+ 8 |
+ 9 | from gi.repository import Gtk, Adw, Gio
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+10 | from pages.welcome import WelcomePage
+11 | from pages.device import DevicePage
+   |
+
+E402 Module level import not at top of file
+  --> app.py:10:1
+   |
+ 9 | from gi.repository import Gtk, Adw, Gio
+10 | from pages.welcome import WelcomePage
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+11 | from pages.device import DevicePage
+12 | from pages.certificates import CertificatesPage
+   |
+
+E402 Module level import not at top of file
+  --> app.py:11:1
+   |
+ 9 | from gi.repository import Gtk, Adw, Gio
+10 | from pages.welcome import WelcomePage
+11 | from pages.device import DevicePage
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+12 | from pages.certificates import CertificatesPage
+13 | from pages.install import InstallPage
+   |
+
+E402 Module level import not at top of file
+  --> app.py:12:1
+   |
+10 | from pages.welcome import WelcomePage
+11 | from pages.device import DevicePage
+12 | from pages.certificates import CertificatesPage
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+13 | from pages.install import InstallPage
+14 | from pages.preferences import PreferencesPage
+   |
+
+E402 Module level import not at top of file
+  --> app.py:13:1
+   |
+11 | from pages.device import DevicePage
+12 | from pages.certificates import CertificatesPage
+13 | from pages.install import InstallPage
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+14 | from pages.preferences import PreferencesPage
+15 | from utils.config import ConfigManager
+   |
+
+E402 Module level import not at top of file
+  --> app.py:14:1
+   |
+12 | from pages.certificates import CertificatesPage
+13 | from pages.install import InstallPage
+14 | from pages.preferences import PreferencesPage
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+15 | from utils.config import ConfigManager
+16 | from utils.logger import Logger
+   |
+
+E402 Module level import not at top of file
+  --> app.py:15:1
+   |
+13 | from pages.install import InstallPage
+14 | from pages.preferences import PreferencesPage
+15 | from utils.config import ConfigManager
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+16 | from utils.logger import Logger
+17 | from utils.constants import *
+   |
+
+E402 Module level import not at top of file
+  --> app.py:16:1
+   |
+14 | from pages.preferences import PreferencesPage
+15 | from utils.config import ConfigManager
+16 | from utils.logger import Logger
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+17 | from utils.constants import *
+18 | from utils.i18n import _
+   |
+
+E402 Module level import not at top of file
+  --> app.py:17:1
+   |
+15 | from utils.config import ConfigManager
+16 | from utils.logger import Logger
+17 | from utils.constants import *
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+18 | from utils.i18n import _
+19 | from services.docker import DockerService
+   |
+
+F403 `from utils.constants import *` used; unable to detect undefined names
+  --> app.py:17:1
+   |
+15 | from utils.config import ConfigManager
+16 | from utils.logger import Logger
+17 | from utils.constants import *
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+18 | from utils.i18n import _
+19 | from services.docker import DockerService
+   |
+
+E402 Module level import not at top of file
+  --> app.py:18:1
+   |
+16 | from utils.logger import Logger
+17 | from utils.constants import *
+18 | from utils.i18n import _
+   | ^^^^^^^^^^^^^^^^^^^^^^^^
+19 | from services.docker import DockerService
+20 | from services.device import DeviceService
+   |
+
+E402 Module level import not at top of file
+  --> app.py:19:1
+   |
+17 | from utils.constants import *
+18 | from utils.i18n import _
+19 | from services.docker import DockerService
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+20 | from services.device import DeviceService
+21 | from services.certificates import CertificateService
+   |
+
+E402 Module level import not at top of file
+  --> app.py:20:1
+   |
+18 | from utils.i18n import _
+19 | from services.docker import DockerService
+20 | from services.device import DeviceService
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 | from services.certificates import CertificateService
+   |
+
+E402 Module level import not at top of file
+  --> app.py:21:1
+   |
+19 | from services.docker import DockerService
+20 | from services.device import DeviceService
+21 | from services.certificates import CertificateService
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+22 |
+23 | class JellyBeamApplication(Adw.Application):
+   |
+
+F405 `APP_ID` may be undefined, or defined from star imports
+  --> app.py:27:41
+   |
+26 |     def __init__(self):
+27 |         super().__init__(application_id=APP_ID,
+   |                                         ^^^^^^
+28 |                          flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
+   |
+
+F405 `APP_NAME` may be undefined, or defined from star imports
+  --> app.py:32:29
+   |
+30 |         self.config_manager = ConfigManager()
+31 |         self.logger = Logger()
+32 |         self.logger.info(f"{APP_NAME} {APP_VERSION} starting")
+   |                             ^^^^^^^^
+33 |         self.window = None
+   |
+
+F405 `APP_VERSION` may be undefined, or defined from star imports
+  --> app.py:32:40
+   |
+30 |         self.config_manager = ConfigManager()
+31 |         self.logger = Logger()
+32 |         self.logger.info(f"{APP_NAME} {APP_VERSION} starting")
+   |                                        ^^^^^^^^^^^
+33 |         self.window = None
+   |
+
+F405 `APP_NAME` may be undefined, or defined from star imports
+  --> app.py:59:24
+   |
+57 |         self.logger.info("Initializing main window")
+58 |
+59 |         self.set_title(APP_NAME)
+   |                        ^^^^^^^^
+60 |
+61 |         # Set window size from constants
+   |
+
+F405 `WINDOW_DEFAULT_WIDTH` may be undefined, or defined from star imports
+  --> app.py:62:31
+   |
+61 |         # Set window size from constants
+62 |         self.set_default_size(WINDOW_DEFAULT_WIDTH, WINDOW_DEFAULT_HEIGHT)
+   |                               ^^^^^^^^^^^^^^^^^^^^
+63 |
+64 |         # Set minimum size
+   |
+
+F405 `WINDOW_DEFAULT_HEIGHT` may be undefined, or defined from star imports
+  --> app.py:62:53
+   |
+61 |         # Set window size from constants
+62 |         self.set_default_size(WINDOW_DEFAULT_WIDTH, WINDOW_DEFAULT_HEIGHT)
+   |                                                     ^^^^^^^^^^^^^^^^^^^^^
+63 |
+64 |         # Set minimum size
+   |
+
+F405 `WINDOW_MIN_WIDTH` may be undefined, or defined from star imports
+  --> app.py:66:31
+   |
+64 |         # Set minimum size
+65 |         self.set_resizable(True)
+66 |         self.set_size_request(WINDOW_MIN_WIDTH, WINDOW_MIN_HEIGHT)
+   |                               ^^^^^^^^^^^^^^^^
+67 |
+68 |         self._setup_ui()
+   |
+
+F405 `WINDOW_MIN_HEIGHT` may be undefined, or defined from star imports
+  --> app.py:66:49
+   |
+64 |         # Set minimum size
+65 |         self.set_resizable(True)
+66 |         self.set_size_request(WINDOW_MIN_WIDTH, WINDOW_MIN_HEIGHT)
+   |                                                 ^^^^^^^^^^^^^^^^^
+67 |
+68 |         self._setup_ui()
+   |
+
+F405 `APP_NAME` may be undefined, or defined from star imports
+   --> app.py:158:30
+    |
+156 |         """Show about dialog."""
+157 |         about = Adw.AboutDialog(
+158 |             application_name=APP_NAME,
+    |                              ^^^^^^^^
+159 |             application_icon="jellybeam",
+160 |             version=APP_VERSION,
+    |
+
