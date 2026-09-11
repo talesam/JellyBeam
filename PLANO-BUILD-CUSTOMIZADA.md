@@ -160,25 +160,39 @@ só se a renovação automática estiver resolvida.
 
 ## 6. Plano de implementação
 
-### Fase 1 — injeção no Tizen (o essencial)
+### Fase 1 — injeção no Tizen (o essencial) — ✅ código pronto, falta testar na TV
 
-1. Novo módulo `services/customizacao.py`:
-   - `injetar(www_dir, base_url, recursos)` — edita `www/index.html` de forma
+1. ✅ Novo módulo `services/customization.py`:
+   - `inject(www_dir, base_url, resources)` — edita `www/index.html` de forma
      idempotente
-   - `remover(www_dir)` — desfaz
-2. Chamar `injetar()` em `build_jellyfin_app_async()`, entre o clone e o
-   `build-web`
-3. Configuração, **não** constante de código:
-   - `utils/constants.py`: só a **lista de recursos** (caminhos relativos) e o
-     marcador `{BASE}`
-   - `utils/config.py`: a **URL do servidor**, lida e gravada em
-     `~/.config/jellybeam/`, fora do controle de versão
-4. Build, instalar no projetor, e **verificar no console remoto** que os scripts
-   carregaram (`ares`/`sdb` dão acesso ao console; no Tizen, o `tizen`
-   Web Inspector)
+   - `remove(www_dir)`, `is_injected(www_dir)`
+2. ✅ Chamado em `build_jellyfin_app_async()`, entre o clone e o `build-web`.
+   O build foi dividido em dois `docker exec` para abrir esse espaço.
+3. ✅ Configuração, **não** constante de código:
+   - `utils/constants.py`: só a **lista de recursos** (caminhos relativos)
+   - `utils/config.py`: `customization.server_url` e `customization.enabled`,
+     em `~/.config/jellybeam/`, fora do controle de versão
+4. ⬜ Build, instalar no projetor, e **verificar no Web Inspector** que os
+   scripts carregaram
 
 **Critério de pronto:** a barra de destaque e a navegação de topo aparecem no
 projetor, e uma alteração no `cs-nav.js` do servidor chega lá sem recompilar.
+
+#### Diferenças em relação ao que estava planejado aqui
+
+- **Nomes em inglês.** O plano dizia `customizacao.py` / `injetar()`. Todo o
+  resto do código é em inglês, e um módulo isolado em português destoaria num
+  repositório público com 28 traduções.
+- **O marcador `{BASE}` não foi necessário.** Os recursos são caminhos
+  relativos e a base é concatenada em tempo de execução, o que dá o mesmo
+  resultado sem um template para substituir. A garantia continua a mesma: no
+  código só existem caminhos relativos.
+- **Edição no host, não dentro do container.** O workspace é bind-mount
+  (`/tmp/jellybeam` → `/workspace`), então o `index.html` que o container vai
+  compilar é gravável direto daqui. Sem `docker exec`, sem escape de shell, e
+  o módulo virou lógica pura de arquivo — testável sem Docker.
+- **Desligado por padrão.** Quem não configurar URL nenhuma tem exatamente o
+  build de antes; o `index.html` não é tocado.
 
 ### Fase 2 — interface
 

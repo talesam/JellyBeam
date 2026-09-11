@@ -320,3 +320,30 @@ class AppInstallError(InstallationError):
         message = f"Failed to install application to device {device_ip}"
         details = {"reason": reason} if reason else None
         super().__init__(message, details)
+
+
+# Server customization errors
+
+
+class CustomizationError(JellyBeamError):
+    """Base exception for server-customization errors."""
+
+    pass
+
+
+class CustomizationURLError(CustomizationError):
+    """The configured Jellyfin server URL cannot be used."""
+
+    def __init__(self, url: str, reason: Optional[str] = None) -> None:
+        message = "Invalid Jellyfin server URL"
+        details = {"url": url} if url else {}
+        if reason:
+            details["reason"] = reason
+        super().__init__(message, details or None)
+
+
+class CustomizationInjectionError(CustomizationError):
+    """Could not inject the customization tags into index.html."""
+
+    def __init__(self, reason: str) -> None:
+        super().__init__("Customization injection failed", {"reason": reason})

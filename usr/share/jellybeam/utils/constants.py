@@ -56,6 +56,23 @@ TIZEN_SDK_BIN_NAME = "tizen-studio.bin"
 JELLYFIN_REPO_URL = "https://github.com/jellyfin/jellyfin-tizen.git"
 JELLYFIN_REPO_DIR = "jellyfin-tizen"
 JELLYFIN_APP_FILENAME = "jellyfin.wgt"
+JELLYFIN_WWW_DIR = "www"
+
+# Server Customization Constants
+#
+# The TV app bundles jellyfin-web at build time, so JavaScript the server
+# injects into its own index.html never reaches it. We instead embed tags
+# pointing back at the server, resolved on every app start.
+#
+# Only relative paths live here. The server address is user data and belongs
+# in ~/.config/jellybeam/ -- never in this repository, which is public.
+CUSTOMIZATION_MARKER_START = "<!-- JellyBeam:start -->"
+CUSTOMIZATION_MARKER_END = "<!-- JellyBeam:end -->"
+CUSTOMIZATION_RESOURCES = (
+    "MediaBarEnhanced/Resources/mediaBarEnhanced.css",
+    "MediaBarEnhanced/Resources/mediaBarEnhanced.js",
+    "web/cs-nav.js",
+)
 
 # Certificate Constants
 CERT_FILE_EXTENSION = ".p12"

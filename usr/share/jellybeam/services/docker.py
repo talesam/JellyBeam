@@ -25,6 +25,7 @@ from utils.constants import (
     JELLYFIN_REPO_URL,
     JELLYFIN_REPO_DIR,
     JELLYFIN_APP_FILENAME,
+    JELLYFIN_WWW_DIR,
     CERT_AUTHOR_FILENAME,
     CERT_DISTRIBUTOR_FILENAME,
     CERT_PASSWORD_FILE,
@@ -40,20 +41,29 @@ from utils.constants import (
     TIMEOUT_DOCKER_EXEC_LONG,
     TIMEOUT_DOCKER_SDK_SETUP,
 )
-from utils.exceptions import DockerError
+from utils.config import ConfigManager
+from utils.exceptions import CustomizationError, DockerError
+from services import customization
 
 
 class DockerService:
     """Service for Docker operations and Tizen SDK management."""
 
-    def __init__(self, logger: Optional[Logger] = None) -> None:
+    def __init__(
+        self,
+        logger: Optional[Logger] = None,
+        config: Optional[ConfigManager] = None,
+    ) -> None:
         """
         Initialize Docker service.
 
         Args:
             logger: Logger instance. Creates new one if not provided.
+            config: Configuration manager, read for the customization step.
+                Creates new one if not provided.
         """
         self.logger: Logger = logger or Logger()
+        self.config: ConfigManager = config or ConfigManager()
         self.container_name: str = DOCKER_CONTAINER_NAME
         self.image_name: str = DOCKER_IMAGE_NAME
         self.image_tag: str = DOCKER_IMAGE_TAG
@@ -694,19 +704,89 @@ class DockerService:
         thread = threading.Thread(target=setup_certs, daemon=True)
         thread.start()
 
+    def _apply_customization(self) -> str:
+        """Edit the cloned www/index.html according to the user's config.
+
+        Runs on the host: the workspace is bind-mounted, so this is the same
+        file the container is about to build from.
+
+        When the feature is off we still call remove(), otherwise turning it
+        off would leave tags behind from an earlier build over the same
+        workspace and appear to have no effect.
+
+        Returns:
+            A short line describing what happened, for the build log.
+
+        Raises:
+            CustomizationError: only when the feature is enabled and the
+                injection could not be done. Failing the build is deliberate:
+                a silently uncustomized package looks identical to a good one,
+                and the user would only find out on the TV.
+        """
+        www_dir = os.path.join(
+            self.workspace_host, JELLYFIN_REPO_DIR, JELLYFIN_WWW_DIR
+        )
+        enabled = self.config.get("customization.enabled", False)
+        server_url = self.config.get("customization.server_url", "")
+
+        if not enabled or not server_url:
+            try:
+                if customization.remove(www_dir):
+                    self.logger.info("Removed customization tags from a previous build")
+                    return "customization disabled (previous tags removed)"
+            except CustomizationError as e:
+                # Nothing was asked of us, so a failure here is not worth
+                # aborting the build over.
+                self.logger.debug(f"Nothing to clean up: {e}")
+            return "customization disabled"
+
+        resources = customization.inject(www_dir, server_url)
+        self.logger.info(f"Customization applied: {len(resources)} resource(s)")
+        return f"customization applied ({len(resources)} resources)"
+
     def build_jellyfin_app_async(self, callback: Callable[[bool, str], None]) -> None:
-        """Build the Jellyfin application."""
+        """Clone jellyfin-tizen, apply customizations, then build and package.
+
+        Split into two docker exec calls so the customization step can edit
+        www/index.html in between. It has to happen before build-web, because
+        build-web is what decides which files enter the package -- editing
+        .buildResult afterwards would be betting that package does not redo it.
+        """
 
         def build_app():
             try:
                 self.logger.info("Starting Jellyfin app build")
 
-                build_script = f"""
+                clone_script = f"""
                 cd {self.workspace_container}
                 if [ ! -d "{JELLYFIN_REPO_DIR}" ]; then
                     git clone {JELLYFIN_REPO_URL}
                 fi
-                cd {JELLYFIN_REPO_DIR}
+                """
+
+                self.logger.debug("Cloning jellyfin-tizen")
+                result = subprocess.run(
+                    ["docker", "exec", self.container_name, "bash", "-c", clone_script],
+                    capture_output=True,
+                    text=True,
+                    timeout=TIMEOUT_DOCKER_EXEC_LONG,
+                )
+                if result.returncode != 0:
+                    error_msg = f"Clone failed: {result.stderr}"
+                    self.logger.error(error_msg)
+                    GLib.idle_add(callback, False, error_msg)
+                    return
+
+                try:
+                    customization_note = self._apply_customization()
+                except CustomizationError as e:
+                    error_msg = f"Build aborted: {e}"
+                    self.logger.error(error_msg)
+                    GLib.idle_add(callback, False, error_msg)
+                    return
+
+                build_script = f"""
+                cd {self.workspace_container}/{JELLYFIN_REPO_DIR}
                 {TIZEN_TOOLS_PATH} build-web
                 {TIZEN_TOOLS_PATH} package -t wgt -s {DEFAULT_PROFILE_NAME}
                 """
@@ -721,7 +801,11 @@ class DockerService:
 
                 if result.returncode == 0:
                     self.logger.info("Application built successfully")
-                    GLib.idle_add(callback, True, "Application built successfully")
+                    GLib.idle_add(
+                        callback,
+                        True,
+                        f"Application built successfully ({customization_note})",
+                    )
                 else:
                     error_msg = f"Build failed: {result.stderr}"
                     self.logger.error(error_msg)

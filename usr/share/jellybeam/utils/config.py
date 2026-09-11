@@ -72,6 +72,13 @@ class ConfigManager:
                 "container_name": "jellybeam-builder",
                 "workspace_path": "/tmp/jellybeam",
             },
+            # Tags pointing at a Jellyfin server, embedded into the TV build.
+            # The URL stays here, in the user's config, and never in the
+            # repository -- it is a private address and this repo is public.
+            "customization": {
+                "enabled": False,
+                "server_url": "",
+            },
             "network": {
                 "scan_timeout": 30,
                 "port_range": "8000-8080",
