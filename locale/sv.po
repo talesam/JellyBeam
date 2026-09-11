@@ -1125,3 +1125,63 @@ msgstr "Docker installerat! Kontrollerar status..."
 #, python-brace-format
 msgid "Installation failed: {msg}"
 msgstr "Installation misslyckades: {msg}"
+
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "Tillämpa serveranpassningar"
+
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "Kontrollera att servern svarar innan du bygger"
+
+#: NEEDS WORK
+msgid "Connected to {name}"
+msgstr "Ansluten till {name}"
+
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "Kunde inte nå servern"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker-tjänsten körs inte"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker är inte installerat på det här systemet"
+
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "Ange en server-URL först"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Ogiltigt certifikatlösenord"
+
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "Jellyfin-server-URL"
+
+#: NEEDS WORK
+msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
+msgstr "Läser in tema och skript från din Jellyfin-server till tv:n. Adressen stannar på den här datorn och skrivs bara in i paketet du bygger."
+
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "Läs in dem igen varje gång appen startar på tv:n"
+
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "Serveranpassning"
+
+#: NEEDS WORK
+msgid "Test"
+msgstr "Testa"
+
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "Testa anslutning"
+
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "Testar…"

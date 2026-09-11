@@ -1126,3 +1126,63 @@ msgstr "Docker installiert! Überprüfe den Status..."
 #, python-brace-format
 msgid "Installation failed: {msg}"
 msgstr "Installation fehlgeschlagen: {msg}"
+
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "Serveranpassungen anwenden"
+
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "Vor dem Erstellen prüfen, ob der Server antwortet"
+
+#: NEEDS WORK
+msgid "Connected to {name}"
+msgstr "Verbunden mit {name}"
+
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "Server nicht erreichbar"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker-Daemon läuft nicht"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker ist auf diesem System nicht installiert"
+
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "Zuerst eine Server-URL eingeben"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Ungültiges Zertifikatspasswort"
+
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "Jellyfin-Server-URL"
+
+#: NEEDS WORK
+msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
+msgstr "Lädt das Theme und die Skripte von Ihrem Jellyfin-Server auf den Fernseher. Die Adresse bleibt auf diesem Computer und wird nur in das erstellte Paket geschrieben."
+
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "Bei jedem Start der App auf dem Fernseher erneut laden"
+
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "Serveranpassung"
+
+#: NEEDS WORK
+msgid "Test"
+msgstr "Testen"
+
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "Verbindung testen"
+
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "Wird getestet…"

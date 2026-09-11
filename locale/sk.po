@@ -1123,3 +1123,63 @@ msgstr "Docker nainštalovaný! Kontrola stavu..."
 #, python-brace-format
 msgid "Installation failed: {msg}"
 msgstr "Inštalácia zlyhala: {msg}"
+
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "Použiť prispôsobenia servera"
+
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "Skontrolovať odozvu servera pred zostavením"
+
+#: NEEDS WORK
+msgid "Connected to {name}"
+msgstr "Pripojené k {name}"
+
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "Server sa nepodarilo kontaktovať"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Služba Docker nie je spustená"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker nie je v tomto systéme nainštalovaný"
+
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "Najprv zadajte adresu URL servera"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Neplatné heslo certifikátu"
+
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "Adresa URL servera Jellyfin"
+
+#: NEEDS WORK
+msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
+msgstr "Načíta motív a skripty z vášho servera Jellyfin do televízora. Adresa zostáva v tomto počítači a zapíše sa iba do balíka, ktorý zostavíte."
+
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "Znova ich načítať pri každom spustení aplikácie v televízore"
+
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "Prispôsobenie servera"
+
+#: NEEDS WORK
+msgid "Test"
+msgstr "Otestovať"
+
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "Otestovať pripojenie"
+
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "Testuje sa…"

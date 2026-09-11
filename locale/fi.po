@@ -1123,3 +1123,63 @@ msgstr "Docker asennettu! Tarkistetaan tilaa..."
 #, python-brace-format
 msgid "Installation failed: {msg}"
 msgstr "Asennus epäonnistui: {msg}"
+
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "Käytä palvelimen mukautuksia"
+
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "Tarkista, että palvelin vastaa ennen kääntämistä"
+
+#: NEEDS WORK
+msgid "Connected to {name}"
+msgstr "Yhdistetty kohteeseen {name}"
+
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "Palvelinta ei tavoitettu"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker-taustaprosessi ei ole käynnissä"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Dockeria ei ole asennettu tähän järjestelmään"
+
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "Anna ensin palvelimen URL-osoite"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Virheellinen varmenteen salasana"
+
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "Jellyfin-palvelimen URL-osoite"
+
+#: NEEDS WORK
+msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
+msgstr "Lataa teeman ja skriptit Jellyfin-palvelimeltasi televisioon. Osoite pysyy tässä tietokoneessa ja kirjoitetaan vain rakentamaasi pakettiin."
+
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "Lataa ne uudelleen aina, kun sovellus käynnistyy televisiossa"
+
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "Palvelimen mukautus"
+
+#: NEEDS WORK
+msgid "Test"
+msgstr "Testaa"
+
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "Testaa yhteys"
+
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "Testataan…"

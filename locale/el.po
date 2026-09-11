@@ -1125,3 +1125,63 @@ msgstr "Docker εγκατεστημένο! Έλεγχος κατάστασης..
 #, python-brace-format
 msgid "Installation failed: {msg}"
 msgstr "Η εγκατάσταση απέτυχε: {msg}"
+
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "Εφαρμογή προσαρμογών διακομιστή"
+
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "Έλεγχος ότι ο διακομιστής αποκρίνεται πριν από τη δημιουργία"
+
+#: NEEDS WORK
+msgid "Connected to {name}"
+msgstr "Συνδέθηκε με {name}"
+
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "Δεν ήταν δυνατή η πρόσβαση στον διακομιστή"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Ο δαίμονας Docker δεν εκτελείται"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Το Docker δεν είναι εγκατεστημένο σε αυτό το σύστημα"
+
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "Εισαγάγετε πρώτα ένα URL διακομιστή"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Μη έγκυρος κωδικός πρόσβασης πιστοποιητικού"
+
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "URL διακομιστή Jellyfin"
+
+#: NEEDS WORK
+msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
+msgstr "Φόρτωση του θέματος και των σεναρίων από τον διακομιστή Jellyfin στην τηλεόραση. Η διεύθυνση παραμένει σε αυτόν τον υπολογιστή και γράφεται μόνο στο πακέτο που δημιουργείτε."
+
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "Επαναφόρτωσή τους κάθε φορά που η εφαρμογή ξεκινά στην τηλεόραση"
+
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "Προσαρμογή διακομιστή"
+
+#: NEEDS WORK
+msgid "Test"
+msgstr "Δοκιμή"
+
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "Δοκιμή σύνδεσης"
+
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "Δοκιμή…"

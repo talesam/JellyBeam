@@ -194,14 +194,21 @@ projetor, e uma alteração no `cs-nav.js` do servidor chega lá sem recompilar.
 - **Desligado por padrão.** Quem não configurar URL nenhuma tem exatamente o
   build de antes; o `index.html` não é tocado.
 
-### Fase 2 — interface
+### Fase 2 — interface — ✅ pronta
 
-5. Campo **"URL do servidor Jellyfin"** na tela de preferências
-6. Caixa **"Aplicar customizações do servidor"**, ligada por padrão quando a URL
-   estiver preenchida
-7. Validação: URL alcançável e respondendo `/System/Info/Public`
+5. ✅ Campo **"Jellyfin Server URL"** na tela de preferências, no grupo
+   *Server Customization* da aba Geral
+6. ✅ Chave **"Apply Server Customizations"**. Em vez de ligar sozinha quando a
+   URL aparece, ela fica **desabilitada enquanto não houver URL** — mostrar a
+   dependência é melhor do que mudar o estado por conta própria enquanto o
+   usuário digita. Apagar a URL desliga a chave, porque deixá-la ligada sem
+   endereço quebraria só na hora do build.
+7. ✅ Botão **"Test"** que consulta `/System/Info/Public` fora da thread
+   principal. Confere também se a resposta *parece* Jellyfin — um servidor web
+   qualquer devolve 200 em muitos caminhos, e sem essa checagem o usuário
+   levaria sinal verde e uma build quebrada.
 
-**Critério de pronto:** dá para instalar sem editar código.
+**Critério de pronto:** dá para instalar sem editar código. ✅
 
 ### Fase 3 — WebOS (condicional)
 

@@ -1121,3 +1121,63 @@ msgstr "Docker가 설치되었습니다! 상태 확인 중..."
 #, python-brace-format
 msgid "Installation failed: {msg}"
 msgstr "설치 실패: {msg}"
+
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "서버 사용자 지정 적용"
+
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "빌드 전에 서버 응답 확인"
+
+#: NEEDS WORK
+msgid "Connected to {name}"
+msgstr "{name}에 연결됨"
+
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "서버에 연결할 수 없습니다"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker 데몬이 실행 중이 아닙니다"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "이 시스템에 Docker가 설치되어 있지 않습니다"
+
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "먼저 서버 URL을 입력하세요"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "인증서 암호가 올바르지 않습니다"
+
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "Jellyfin 서버 URL"
+
+#: NEEDS WORK
+msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
+msgstr "TV에서 Jellyfin 서버의 테마와 스크립트를 불러옵니다. 주소는 이 컴퓨터에만 저장되며 빌드하는 패키지에만 기록됩니다."
+
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "앱이 TV에서 시작될 때마다 다시 불러오기"
+
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "서버 사용자 지정"
+
+#: NEEDS WORK
+msgid "Test"
+msgstr "테스트"
+
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "연결 테스트"
+
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "테스트 중…"

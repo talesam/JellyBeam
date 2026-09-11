@@ -1121,3 +1121,63 @@ msgstr "Docker已安装！正在检查状态..."
 #, python-brace-format
 msgid "Installation failed: {msg}"
 msgstr "安装失败：{msg}"
+
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "应用服务器自定义设置"
+
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "构建前检查服务器是否响应"
+
+#: NEEDS WORK
+msgid "Connected to {name}"
+msgstr "已连接到 {name}"
+
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "无法连接到服务器"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker 守护进程未运行"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "此系统未安装 Docker"
+
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "请先输入服务器 URL"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "证书密码无效"
+
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "Jellyfin 服务器 URL"
+
+#: NEEDS WORK
+msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
+msgstr "在电视上从您的 Jellyfin 服务器加载主题和脚本。该地址仅保留在此计算机上,只会写入您构建的软件包中。"
+
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "每次应用在电视上启动时重新加载它们"
+
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "服务器自定义设置"
+
+#: NEEDS WORK
+msgid "Test"
+msgstr "测试"
+
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "测试连接"
+
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "正在测试…"

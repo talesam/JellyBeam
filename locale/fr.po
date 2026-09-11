@@ -1126,3 +1126,63 @@ msgstr "Docker installé ! Vérification de l'état..."
 #, python-brace-format
 msgid "Installation failed: {msg}"
 msgstr "L'installation a échoué : {msg}"
+
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "Appliquer les personnalisations du serveur"
+
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "Vérifier que le serveur répond avant de générer le paquet"
+
+#: NEEDS WORK
+msgid "Connected to {name}"
+msgstr "Connecté à {name}"
+
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "Impossible de joindre le serveur"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Le démon Docker n'est pas en cours d'exécution"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker n'est pas installé sur ce système"
+
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "Saisissez d'abord une URL de serveur"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Mot de passe de certificat invalide"
+
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "URL du serveur Jellyfin"
+
+#: NEEDS WORK
+msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
+msgstr "Charge le thème et les scripts depuis votre serveur Jellyfin sur le téléviseur. L'adresse reste sur cet ordinateur et n'est écrite que dans le paquet que vous générez."
+
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "Les recharger à chaque démarrage de l'application sur le téléviseur"
+
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "Personnalisation du serveur"
+
+#: NEEDS WORK
+msgid "Test"
+msgstr "Tester"
+
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "Tester la connexion"
+
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "Test en cours…"

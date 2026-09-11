@@ -66,6 +66,7 @@ JELLYFIN_WWW_DIR = "www"
 #
 # Only relative paths live here. The server address is user data and belongs
 # in ~/.config/jellybeam/ -- never in this repository, which is public.
+JELLYFIN_INFO_ENDPOINT = "/System/Info/Public"
 CUSTOMIZATION_MARKER_START = "<!-- JellyBeam:start -->"
 CUSTOMIZATION_MARKER_END = "<!-- JellyBeam:end -->"
 CUSTOMIZATION_RESOURCES = (

@@ -1125,3 +1125,63 @@ msgstr "Docker uppsett! Athugar stöðu..."
 #, python-brace-format
 msgid "Installation failed: {msg}"
 msgstr "Uppsetning mistókst: {msg}"
+
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "Nota sérsniðnar stillingar netþjóns"
+
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "Athuga hvort netþjónninn svari fyrir smíði"
+
+#: NEEDS WORK
+msgid "Connected to {name}"
+msgstr "Tengt við {name}"
+
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "Ekki tókst að ná sambandi við netþjóninn"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker-þjónusta er ekki keyrandi"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker er ekki uppsett á þessu kerfi"
+
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "Sláðu fyrst inn slóð netþjóns"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Ógilt lykilorð skírteinis"
+
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "Slóð Jellyfin netþjóns"
+
+#: NEEDS WORK
+msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
+msgstr "Hlaða þema og skriftum frá Jellyfin netþjóninum þínum á sjónvarpið. Vistfangið er áfram á þessari tölvu og er einungis skrifað í pakkann sem þú smíðar."
+
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "Hlaða þeim aftur í hvert sinn sem forritið ræsist í sjónvarpinu"
+
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "Sérsníðing netþjóns"
+
+#: NEEDS WORK
+msgid "Test"
+msgstr "Prófa"
+
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "Prófa tengingu"
+
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "Prófa…"

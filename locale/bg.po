@@ -1125,3 +1125,63 @@ msgstr "Docker инсталиран! Проверка на статуса..."
 #, python-brace-format
 msgid "Installation failed: {msg}"
 msgstr "Инсталацията не успя: {msg}"
+
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "Прилагане на персонализациите на сървъра"
+
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "Проверете дали сървърът отговаря, преди да компилирате"
+
+#: NEEDS WORK
+msgid "Connected to {name}"
+msgstr "Свързан с {name}"
+
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "Сървърът не беше достигнат"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker демонът не работи"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker не е инсталиран на тази система"
+
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "Първо въведете URL адрес на сървъра"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Невалидна парола за сертификат"
+
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "URL адрес на Jellyfin сървъра"
+
+#: NEEDS WORK
+msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
+msgstr "Зареждане на темата и скриптовете от вашия Jellyfin сървър на телевизора. Адресът остава на този компютър и се записва само в пакета, който изграждате."
+
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "Зареждай ги отново всеки път, когато приложението стартира на телевизора"
+
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "Персонализация на сървъра"
+
+#: NEEDS WORK
+msgid "Test"
+msgstr "Тест"
+
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "Тест на връзката"
+
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "Тестване…"

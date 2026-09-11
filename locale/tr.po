@@ -1123,3 +1123,63 @@ msgstr "Docker yüklendi! Durum kontrol ediliyor..."
 #, python-brace-format
 msgid "Installation failed: {msg}"
 msgstr "Kurulum başarısız: {msg}"
+
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "Sunucu Özelleştirmelerini Uygula"
+
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "Derlemeden önce sunucunun yanıt verdiğini kontrol et"
+
+#: NEEDS WORK
+msgid "Connected to {name}"
+msgstr "{name} sunucusuna bağlanıldı"
+
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "Sunucuya ulaşılamadı"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker hizmeti çalışmıyor"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker bu sistemde kurulu değil"
+
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "Önce bir sunucu URL'si girin"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Geçersiz sertifika parolası"
+
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "Jellyfin Sunucu URL'si"
+
+#: NEEDS WORK
+msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
+msgstr "TV'de Jellyfin sunucunuzdaki temayı ve betikleri yükler. Adres bu bilgisayarda kalır ve yalnızca oluşturduğunuz pakete yazılır."
+
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "Uygulama TV'de her başladığında bunları yeniden yükle"
+
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "Sunucu Özelleştirmesi"
+
+#: NEEDS WORK
+msgid "Test"
+msgstr "Test Et"
+
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "Bağlantıyı Test Et"
+
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "Test ediliyor…"

@@ -1134,3 +1134,63 @@ msgstr  ""
 #, python-brace-format
 msgid   "Installation failed: {msg}"
 msgstr  ""
+
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Connected to {name}"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
+msgstr ""
+
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Test"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Testing…"
+msgstr ""

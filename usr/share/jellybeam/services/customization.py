@@ -21,18 +21,31 @@ from is directly writable here. No docker exec, no shell quoting.
 from __future__ import annotations
 
 import html
+import json
 import logging
 import re
+import threading
+import urllib.error
+import urllib.request
 from pathlib import Path
-from typing import List, Optional, Sequence, Union
+from typing import Callable, List, Optional, Sequence, Union
 from urllib.parse import urlparse
+
+from gi.repository import GLib
 
 from utils.constants import (
     CUSTOMIZATION_MARKER_END,
     CUSTOMIZATION_MARKER_START,
     CUSTOMIZATION_RESOURCES,
+    JELLYFIN_INFO_ENDPOINT,
+    TIMEOUT_HTTP_REQUEST,
 )
-from utils.exceptions import CustomizationInjectionError, CustomizationURLError
+from utils.exceptions import (
+    CustomizationError,
+    CustomizationInjectionError,
+    CustomizationServerError,
+    CustomizationURLError,
+)
 
 _logger = logging.getLogger(__name__)
 
@@ -175,6 +188,59 @@ def remove(www_dir: PathLike) -> bool:
     return True
 
 
+def probe_server(base_url: str, timeout: int = TIMEOUT_HTTP_REQUEST) -> str:
+    """Ask the Jellyfin server who it is, to validate the configured URL.
+
+    /System/Info/Public needs no authentication, which is what makes it usable
+    as a reachability check.
+
+    Returns:
+        The server name it reports, or its host when the name is blank.
+
+    Raises:
+        CustomizationURLError: the URL itself is unusable.
+        CustomizationServerError: unreachable, or not a Jellyfin server.
+    """
+    base_url = normalize_url(base_url)
+    url = f"{base_url}{JELLYFIN_INFO_ENDPOINT}"
+
+    try:
+        with urllib.request.urlopen(url, timeout=timeout) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        raise CustomizationServerError(f"server answered HTTP {e.code}") from e
+    except urllib.error.URLError as e:
+        raise CustomizationServerError(f"could not connect: {e.reason}") from e
+    except (TimeoutError, OSError) as e:
+        raise CustomizationServerError(f"could not connect: {e}") from e
+    except json.JSONDecodeError as e:
+        raise CustomizationServerError("reply was not JSON") from e
+
+    # A reachable web server that is not Jellyfin also returns 200 for many
+    # paths, so check the payload actually looks like Jellyfin.
+    if not isinstance(payload, dict) or "Version" not in payload:
+        raise CustomizationServerError("this does not look like a Jellyfin server")
+
+    return payload.get("ServerName") or urlparse(base_url).netloc
+
+
+def probe_server_async(
+    base_url: str,
+    callback: Callable[[bool, str], None],
+    timeout: int = TIMEOUT_HTTP_REQUEST,
+) -> None:
+    """Run probe_server off the main thread; callback lands back on it."""
+
+    def run() -> None:
+        try:
+            name = probe_server(base_url, timeout)
+            GLib.idle_add(callback, True, name)
+        except CustomizationError as e:
+            GLib.idle_add(callback, False, str(e))
+
+    threading.Thread(target=run, daemon=True).start()
+
+
 def is_injected(www_dir: PathLike) -> bool:
     """Whether index.html currently carries an injected block."""
     try:
@@ -189,5 +255,7 @@ __all__ = [
     "inject",
     "is_injected",
     "normalize_url",
+    "probe_server",
+    "probe_server_async",
     "remove",
 ]

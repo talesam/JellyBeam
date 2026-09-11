@@ -1123,3 +1123,63 @@ msgstr "Docker instalat! Verificare stare..."
 #, python-brace-format
 msgid "Installation failed: {msg}"
 msgstr "Instalarea a eșuat: {msg}"
+
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "Aplică personalizările serverului"
+
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "Verifică dacă serverul răspunde înainte de compilare"
+
+#: NEEDS WORK
+msgid "Connected to {name}"
+msgstr "Conectat la {name}"
+
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "Nu s-a putut contacta serverul"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Serviciul Docker nu rulează"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker nu este instalat pe acest sistem"
+
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "Introduceți mai întâi un URL de server"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Parolă de certificat nevalidă"
+
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "URL server Jellyfin"
+
+#: NEEDS WORK
+msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
+msgstr "Încarcă tema și scripturile de pe serverul dvs. Jellyfin pe televizor. Adresa rămâne pe acest computer și este scrisă doar în pachetul pe care îl construiți."
+
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "Încarcă-le din nou de fiecare dată când aplicația pornește pe televizor"
+
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "Personalizare server"
+
+#: NEEDS WORK
+msgid "Test"
+msgstr "Testare"
+
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "Testare conexiune"
+
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "Se testează…"

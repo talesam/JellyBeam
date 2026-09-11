@@ -1121,3 +1121,63 @@ msgstr "דוקר מותקן! בודק מצב..."
 #, python-brace-format
 msgid "Installation failed: {msg}"
 msgstr "התקנה נכשלה: {msg}"
+
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "החלת התאמות אישיות לשרת"
+
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "בדוק שהשרת מגיב לפני הבנייה"
+
+#: NEEDS WORK
+msgid "Connected to {name}"
+msgstr "מחובר אל {name}"
+
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "לא ניתן להתחבר לשרת"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "שירות Docker אינו פועל"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker אינו מותקן במערכת זו"
+
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "הזן תחילה כתובת URL של שרת"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "סיסמת אישור אבטחה שגויה"
+
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "כתובת URL של שרת Jellyfin"
+
+#: NEEDS WORK
+msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
+msgstr "טען את ערכת העיצוב והסקריפטים משרת ה-Jellyfin שלך אל הטלוויזיה. הכתובת נשארת במחשב זה ונכתבת רק לתוך החבילה שאתה בונה."
+
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "טען אותם מחדש בכל הפעלה של האפליקציה בטלוויזיה"
+
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "התאמה אישית של שרת"
+
+#: NEEDS WORK
+msgid "Test"
+msgstr "בדיקה"
+
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "בדיקת חיבור"
+
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "בודק…"

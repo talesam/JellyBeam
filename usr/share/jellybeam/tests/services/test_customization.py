@@ -1,5 +1,10 @@
 """Tests for services/customization.py."""
 
+import io
+import json
+import urllib.error
+from unittest.mock import patch
+
 import pytest
 
 from services import customization
@@ -8,7 +13,11 @@ from utils.constants import (
     CUSTOMIZATION_MARKER_START,
     CUSTOMIZATION_RESOURCES,
 )
-from utils.exceptions import CustomizationInjectionError, CustomizationURLError
+from utils.exceptions import (
+    CustomizationInjectionError,
+    CustomizationServerError,
+    CustomizationURLError,
+)
 
 INDEX_HTML = """<!DOCTYPE html>
 <html>
@@ -156,6 +165,88 @@ class TestRemove:
         customization.inject(www_dir, URL)
         assert customization.remove(www_dir) is True
         assert customization.remove(www_dir) is False
+
+
+class FakeResponse(io.BytesIO):
+    """Minimal stand-in for what urlopen returns in a context manager."""
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+
+def fake_urlopen(payload):
+    return lambda url, timeout=None: FakeResponse(json.dumps(payload).encode("utf-8"))
+
+
+class TestProbeServer:
+    def test_returns_the_reported_server_name(self):
+        with patch(
+            "urllib.request.urlopen",
+            fake_urlopen({"ServerName": "Contos", "Version": "12.0.0"}),
+        ):
+            assert customization.probe_server(URL) == "Contos"
+
+    def test_falls_back_to_the_host_when_name_is_blank(self):
+        with patch(
+            "urllib.request.urlopen",
+            fake_urlopen({"ServerName": "", "Version": "12.0.0"}),
+        ):
+            assert customization.probe_server("https://tv.example.org") == (
+                "tv.example.org"
+            )
+
+    def test_queries_the_public_info_endpoint(self):
+        seen = {}
+
+        def spy(url, timeout=None):
+            seen["url"] = url
+            return FakeResponse(json.dumps({"Version": "12.0.0"}).encode())
+
+        with patch("urllib.request.urlopen", spy):
+            customization.probe_server("https://example.org/")
+        assert seen["url"] == "https://example.org/System/Info/Public"
+
+    def test_rejects_a_reachable_server_that_is_not_jellyfin(self):
+        # A random web server answers 200 for plenty of paths; without this
+        # check the user would get a green light and a broken TV build.
+        with patch("urllib.request.urlopen", fake_urlopen({"nginx": "hello"})):
+            with pytest.raises(CustomizationServerError):
+                customization.probe_server(URL)
+
+    def test_reports_a_non_json_reply(self):
+        with patch(
+            "urllib.request.urlopen",
+            lambda url, timeout=None: FakeResponse(b"<html>nope</html>"),
+        ):
+            with pytest.raises(CustomizationServerError):
+                customization.probe_server(URL)
+
+    def test_reports_an_http_error(self):
+        def raise_http(url, timeout=None):
+            raise urllib.error.HTTPError(url, 502, "Bad Gateway", {}, None)
+
+        with patch("urllib.request.urlopen", raise_http):
+            with pytest.raises(CustomizationServerError):
+                customization.probe_server(URL)
+
+    def test_reports_a_connection_failure(self):
+        def raise_url(url, timeout=None):
+            raise urllib.error.URLError("no route to host")
+
+        with patch("urllib.request.urlopen", raise_url):
+            with pytest.raises(CustomizationServerError):
+                customization.probe_server(URL)
+
+    def test_validates_the_url_before_any_request(self):
+        def explode(url, timeout=None):
+            raise AssertionError("should not have been called")
+
+        with patch("urllib.request.urlopen", explode):
+            with pytest.raises(CustomizationURLError):
+                customization.probe_server("not-a-url")
 
 
 class TestIsInjected:

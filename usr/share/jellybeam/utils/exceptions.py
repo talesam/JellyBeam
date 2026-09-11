@@ -347,3 +347,10 @@ class CustomizationInjectionError(CustomizationError):
 
     def __init__(self, reason: str) -> None:
         super().__init__("Customization injection failed", {"reason": reason})
+
+
+class CustomizationServerError(CustomizationError):
+    """The Jellyfin server did not answer as expected."""
+
+    def __init__(self, reason: str) -> None:
+        super().__init__("Could not reach the Jellyfin server", {"reason": reason})
