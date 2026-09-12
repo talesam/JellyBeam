@@ -232,7 +232,6 @@ class DevicePage(Gtk.ScrolledWindow):
         # Show sections if developer mode was already enabled (saved state)
         if self.dev_mode_switch.get_active():
             self.discovery_group.set_visible(True)
-            self.actions_group.set_visible(True)
             # manual_group stays hidden until scan finds nothing
 
     def _get_local_ip(self):
@@ -292,6 +291,7 @@ class DevicePage(Gtk.ScrolledWindow):
             self.device_rows.append(no_devices_row)
             # Show manual connection as fallback
             self.manual_group.set_visible(True)
+            self.actions_group.set_visible(True)
             return
 
         for device in devices:
@@ -303,9 +303,12 @@ class DevicePage(Gtk.ScrolledWindow):
                 )
             )
 
-            select_button = Gtk.Button.new_with_label(_("Select"))
+            select_button = Gtk.Button.new_with_label(_("Connect"))
             select_button.set_valign(Gtk.Align.CENTER)
-            select_button.connect("clicked", lambda b, d=device: self._select_device(d))
+            select_button.add_css_class("suggested-action")
+            select_button.connect(
+                "clicked", lambda b, d=device: self._select_device(d, b)
+            )
             device_row.add_suffix(select_button)
 
             self.devices_group.add(device_row)
@@ -323,8 +326,8 @@ class DevicePage(Gtk.ScrolledWindow):
         # Announce to screen readers
         self.devices_group.update_property([Gtk.AccessibleProperty.LABEL], [desc])
 
-    def _select_device(self, device):
-        """Select a discovered device."""
+    def _select_device(self, device, button=None):
+        """Select a discovered device and connect to it."""
         ip = device["ip"]
         name = device.get("name", "")
         model = device.get("model", "")
@@ -335,7 +338,9 @@ class DevicePage(Gtk.ScrolledWindow):
         self.window.config_manager.set("device.model", model)
 
         self.window.logger.info(f"Selected device: {name} ({ip})")
-        self._show_success(_("Device selected: {name}").format(name=name or ip))
+        # Picking a device off the scan can only mean one thing, so connect
+        # right away instead of asking for a second click.
+        self._connect_to(ip, button)
 
     def _on_ip_changed(self, entry):
         """Handle IP address changes."""
@@ -364,7 +369,9 @@ class DevicePage(Gtk.ScrolledWindow):
 
         # Show/hide sections based on developer mode
         self.discovery_group.set_visible(is_active)
-        self.actions_group.set_visible(is_active)
+        # The standalone Connect row belongs to manual entry only: picking a
+        # device from the scan already connects.
+        self.actions_group.set_visible(False)
         # manual_group stays hidden until scan finds nothing
         if not is_active:
             self.manual_group.set_visible(False)
@@ -375,7 +382,7 @@ class DevicePage(Gtk.ScrolledWindow):
         self.connect_button.set_sensitive(is_active and len(ip) > 0)
 
     def _on_connect_device(self, button):
-        """Connect to the device."""
+        """Connect using the manually typed address."""
         ip = self.ip_row.get_text().strip()
 
         if not ip:
@@ -386,19 +393,21 @@ class DevicePage(Gtk.ScrolledWindow):
             self._show_error(_("Please enter a valid IP address"))
             return
 
-        # Disable button and show spinner
-        self.connect_button.set_sensitive(False)
-        self.connect_button.set_label(_("Connecting..."))
+        self._connect_to(ip)
 
-        self.connect_spinner = Gtk.Spinner()
-        self.connect_spinner.start()
-        self.connect_row.add_suffix(self.connect_spinner)
+    def _connect_to(self, ip, button=None):
+        """Connect to a device, from the scan list or from manual entry.
+
+        The busy state goes on whichever button was pressed, so the feedback
+        appears where the user is looking.
+        """
+        button = button or self.connect_button
+        button.set_sensitive(False)
+        button.set_label(_("Connecting..."))
 
         def on_connection_result(success, message):
-            # Re-enable button and remove spinner
-            self.connect_button.set_sensitive(True)
-            self.connect_button.set_label(_("Connect"))
-            self.connect_row.remove(self.connect_spinner)
+            button.set_sensitive(True)
+            button.set_label(_("Connect"))
 
             if success:
                 self._show_success(_("Connected successfully!"))
