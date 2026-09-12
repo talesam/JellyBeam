@@ -1239,3 +1239,7 @@ msgstr "Samm {number} / {total}"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "Lai seadmetugi"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "Valige oma jaotamine:\n\nSee nõuab kõrgendatud õigusi (sudo). Teilt võidakse küsida teie parooli."

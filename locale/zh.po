@@ -1237,3 +1237,7 @@ msgstr "第 {number} 步，共 {total} 步"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "广泛的设备支持"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "选择您的发行版：\n\n这将需要提升的权限（sudo）。您可能会被提示输入密码。"

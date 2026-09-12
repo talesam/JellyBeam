@@ -329,7 +329,7 @@ class DockerInstallDialog(Adw.AlertDialog):
         self.set_body(
             _(
                 "Select your distribution:\n\n"
-                "⚠ This will require elevated privileges (sudo). "
+                "This will require elevated privileges (sudo). "
                 "You may be prompted for your password."
             )
         )

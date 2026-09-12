@@ -1240,3 +1240,7 @@ msgstr "Korak {number} od {total}"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "Široka podrška uređaja"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "Odaberite svoju distribuciju:\n\nOvo će zahtijevati povišene privilegije (sudo). Možda ćete biti zatraženi da unesete svoju lozinku."

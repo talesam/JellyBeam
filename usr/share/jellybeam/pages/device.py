@@ -72,9 +72,11 @@ class DevicePage(Gtk.ScrolledWindow):
         self.instructions_expander.set_subtitle(
             _("Click to view step-by-step instructions")
         )
-        expander_icon = Gtk.Image.new_from_icon_name("dialog-warning-symbolic")
-        expander_icon.add_css_class("warning")
-        self.instructions_expander.add_prefix(expander_icon)
+        # The badge is what the mockups use for row icons: a bare symbolic
+        # glyph floating in the row reads as an emoji stuck on the text.
+        self.instructions_expander.add_prefix(
+            design.icon_badge("dialog-warning-symbolic", tone="warning")
+        )
         instructions_group.add(self.instructions_expander)
 
         # Step 1

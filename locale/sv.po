@@ -1241,3 +1241,7 @@ msgstr "Steg {number} av {total}"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "Brett enhetsstöd"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "Välj din distribution:\n\nDetta kommer att kräva förhöjda rättigheter (sudo). Du kan bli ombedd att ange ditt lösenord."

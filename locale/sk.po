@@ -1239,3 +1239,7 @@ msgstr "Krok {number} z {total}"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "Široká podpora zariadení"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "Vyberte svoju distribúciu:\n\nToto si vyžaduje zvýšené oprávnenia (sudo). Môže sa od vás vyžadovať zadanie hesla."

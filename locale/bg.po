@@ -1241,3 +1241,7 @@ msgstr "Стъпка {number} от {total}"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "Широка съвместимост с устройства"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "Изберете вашата дистрибуция:\n\nТова ще изисква повишени привилегии (sudo). Може да бъдете подканени за вашата парола."

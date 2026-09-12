@@ -1239,3 +1239,7 @@ msgstr "Шаг {number} из {total}"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "Широкая поддержка устройств"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "Выберите вашу дистрибуцию:\n\nЭто потребует повышенных привилегий (sudo). Вам может быть предложено ввести ваш пароль."

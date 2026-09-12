@@ -1241,3 +1241,7 @@ msgstr "Stap {number} van {total}"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "Brede apparaatondersteuning"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "Selecteer uw distributie:\n\nDit vereist verhoogde bevoegdheden (sudo). U wordt mogelijk om uw wachtwoord gevraagd."

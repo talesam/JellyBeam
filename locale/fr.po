@@ -1242,3 +1242,7 @@ msgstr "Étape {number} sur {total}"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "Large compatibilité des appareils"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "Sélectionnez votre distribution :\n\nCela nécessitera des privilèges élevés (sudo). Vous pourriez être invité à entrer votre mot de passe."

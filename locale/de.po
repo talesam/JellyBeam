@@ -1242,3 +1242,7 @@ msgstr "Schritt {number} von {total}"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "Breite Geräteunterstützung"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "Wählen Sie Ihre Distribution aus:\n\nDies erfordert erhöhte Berechtigungen (sudo). Möglicherweise werden Sie nach Ihrem Passwort gefragt."

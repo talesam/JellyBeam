@@ -524,13 +524,13 @@ class InstallPage(Gtk.Box):
 
     def _log_success(self, text):
         """Log success text (green)."""
-        self.terminal.feed(f"\033[1;32m✓ {text}\033[0m\r\n".encode("utf-8"))
+        self.terminal.feed(f"\033[1;32m[OK] {text}\033[0m\r\n".encode("utf-8"))
         self._plain_log.append(f"OK: {text}")
         self._announce(text)
 
     def _log_error(self, text):
         """Log error text (red)."""
-        self.terminal.feed(f"\033[1;31m✗ {text}\033[0m\r\n".encode("utf-8"))
+        self.terminal.feed(f"\033[1;31m[!!] {text}\033[0m\r\n".encode("utf-8"))
         self._plain_log.append(f"ERROR: {text}")
         self._announce(text)
 

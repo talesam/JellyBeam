@@ -1239,3 +1239,7 @@ msgstr "Vaihe {number}/{total}"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "Laaja laitetuki"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "Valitse jakelusi:\n\nTämä vaatii korotettuja oikeuksia (sudo). Sinua saatetaan pyytää salasanaasi."

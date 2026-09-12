@@ -1241,3 +1241,7 @@ msgstr "Lépés {number}/{total}"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "Széles körű eszköztámogatás"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "Válaszd ki a disztribúciódat:\n\nEz emelt szintű jogosultságokat igényel (sudo). Lehet, hogy meg kell adnod a jelszavadat."

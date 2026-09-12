@@ -31,6 +31,10 @@ STEP_CONNECT = 1
 STEP_INSTALL = 2
 STEP_COMPLETE = 3
 
+# Diameter of the numbered circles, in pixels. Also referenced by the CSS
+# below; keep the two in step.
+STEP_DOT = 28
+
 CSS = b"""
 .jb-badge {
     background-color: alpha(currentColor, 0.10);
@@ -81,10 +85,9 @@ CSS = b"""
 
 .jb-step-num {
     border-radius: 999px;
-    min-width: 26px;
-    min-height: 26px;
     font-size: 0.8em;
     font-weight: 700;
+    font-feature-settings: "tnum";
     background-color: alpha(currentColor, 0.10);
 }
 .jb-step-num-current {
@@ -177,6 +180,13 @@ def step_indicator(current: int) -> Gtk.Box:
 
         number = Gtk.Label(label=str(index + 1))
         number.add_css_class("jb-step-num")
+        # Fixed geometry, not just a CSS minimum: with min-width alone the
+        # circles came out at slightly different sizes, because each label
+        # still sized itself to its own glyph and to whatever the cell below
+        # it was doing. A request pins all four to the same box.
+        number.set_size_request(STEP_DOT, STEP_DOT)
+        number.set_halign(Gtk.Align.CENTER)
+        number.set_valign(Gtk.Align.CENTER)
         if index == current:
             number.add_css_class("jb-step-num-current")
         elif index < current:

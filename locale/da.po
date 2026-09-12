@@ -1239,3 +1239,7 @@ msgstr "Trin {number} af {total}"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "Bred enhedsunderstøttelse"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "Vælg din distribution:\n\nDette vil kræve forhøjede rettigheder (sudo). Du kan blive bedt om at indtaste din adgangskode."

@@ -1237,3 +1237,7 @@ msgstr "ステップ {number}/{total}"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "幅広いデバイス対応"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "ディストリビューションを選択してください：\n\nこれには昇格した権限（sudo）が必要です。パスワードの入力を求められる場合があります。"

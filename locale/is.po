@@ -1241,3 +1241,7 @@ msgstr "Skref {number} af {total}"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "Víðtækur tækjastuðningur"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "Veldu dreifingu þína:\n\nÞetta mun krafast hækkaðra réttinda (sudo). Þú gætir verið beðinn um að slá inn lykilorðið þitt."

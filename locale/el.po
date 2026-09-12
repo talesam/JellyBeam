@@ -1241,3 +1241,7 @@ msgstr "Βήμα {number} από {total}"
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr "Ευρεία υποστήριξη συσκευών"
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr "Επιλέξτε τη διανομή σας:\n\nΑυτό θα απαιτήσει ανυψωμένα δικαιώματα (sudo). Μπορεί να σας ζητηθεί ο κωδικός πρόσβασής σας."

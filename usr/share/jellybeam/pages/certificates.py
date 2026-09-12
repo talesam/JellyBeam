@@ -109,6 +109,10 @@ class CertificatesPage(Gtk.ScrolledWindow):
         self.author_cert_button.connect(
             "clicked", lambda b: self._browse_file("author")
         )
+        self.author_cert_ok = Gtk.Image.new_from_icon_name("emblem-ok-symbolic")
+        self.author_cert_ok.add_css_class("success")
+        self.author_cert_ok.set_visible(False)
+        self.author_cert_row.add_suffix(self.author_cert_ok)
         self.author_cert_row.add_suffix(self.author_cert_button)
         self.custom_group.add(self.author_cert_row)
 
@@ -124,6 +128,10 @@ class CertificatesPage(Gtk.ScrolledWindow):
         self.dist_cert_button.connect(
             "clicked", lambda b: self._browse_file("distributor")
         )
+        self.dist_cert_ok = Gtk.Image.new_from_icon_name("emblem-ok-symbolic")
+        self.dist_cert_ok.add_css_class("success")
+        self.dist_cert_ok.set_visible(False)
+        self.dist_cert_row.add_suffix(self.dist_cert_ok)
         self.dist_cert_row.add_suffix(self.dist_cert_button)
         self.custom_group.add(self.dist_cert_row)
 
@@ -244,14 +252,12 @@ class CertificatesPage(Gtk.ScrolledWindow):
 
         # Update UI with checkmark
         if cert_type == "author":
-            self.author_cert_row.set_subtitle(
-                _("✅ {filename}").format(filename=filename)
-            )
+            self.author_cert_row.set_subtitle(filename)
+            self.author_cert_ok.set_visible(True)
             self.author_cert_button.set_label(_("Change"))
         else:
-            self.dist_cert_row.set_subtitle(
-                _("✅ {filename}").format(filename=filename)
-            )
+            self.dist_cert_row.set_subtitle(filename)
+            self.dist_cert_ok.set_visible(True)
             self.dist_cert_button.set_label(_("Change"))
 
         self._check_certificate_completeness()
@@ -266,18 +272,16 @@ class CertificatesPage(Gtk.ScrolledWindow):
         author_path = self.window.config_manager.get("certificates.author_cert_path")
         if author_path:
             filename = author_path.split("/")[-1]
-            self.author_cert_row.set_subtitle(
-                _("✅ {filename}").format(filename=filename)
-            )
+            self.author_cert_row.set_subtitle(filename)
+            self.author_cert_ok.set_visible(True)
             self.author_cert_button.set_label(_("Change"))
 
         # Load distributor certificate
         dist_path = self.window.config_manager.get("certificates.distributor_cert_path")
         if dist_path:
             filename = dist_path.split("/")[-1]
-            self.dist_cert_row.set_subtitle(
-                _("✅ {filename}").format(filename=filename)
-            )
+            self.dist_cert_row.set_subtitle(filename)
+            self.dist_cert_ok.set_visible(True)
             self.dist_cert_button.set_label(_("Change"))
 
     def _check_certificate_completeness(self):

@@ -1250,3 +1250,7 @@ msgstr ""
 #: NEEDS WORK
 msgid "Wide device support"
 msgstr ""
+
+#: NEEDS WORK
+msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
+msgstr ""
