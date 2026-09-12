@@ -80,11 +80,15 @@ TIZEN_SIGN_PROFILE = "dev"
 CUSTOMIZATION_PKG_DIR = "pkg"
 CUSTOMIZATION_MARKER_START = "<!-- JellyBeam:start -->"
 CUSTOMIZATION_MARKER_END = "<!-- JellyBeam:end -->"
-CUSTOMIZATION_RESOURCES = (
-    "MediaBarEnhanced/Resources/mediaBarEnhanced.css",
-    "MediaBarEnhanced/Resources/mediaBarEnhanced.js",
-    "web/cs-nav.js",
-)
+# Media Bar Enhanced used to be here as well, and was dropped: on a projector
+# its carousel made the whole interface crawl. Anyone running it can add the
+# two paths back:
+#   MediaBarEnhanced/Resources/mediaBarEnhanced.css
+#   MediaBarEnhanced/Resources/mediaBarEnhanced.js
+# A resource the server does not have is not an error -- the tag just fails --
+# but it costs a failed request at every app start, which is worth avoiding on
+# TV hardware.
+CUSTOMIZATION_RESOURCES = ("web/cs-nav.js",)
 
 # Certificate Constants
 CERT_FILE_EXTENSION = ".p12"
