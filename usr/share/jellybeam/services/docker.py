@@ -1084,7 +1084,14 @@ if ! try_install; then
         echo "Removing it before installing the customized package."
         echo "(Settings stored inside the TV app will be lost.)"
         if [ -z "$PKGID" ]; then echo "Could not read the package id"; exit 1; fi
-        tizen uninstall -p "$PKGID" -t "$TV_NAME" || exit 1
+        # sdb, not "tizen uninstall": the latter answers "The package is not
+        # exist" for a package that is plainly installed and that sdb removes
+        # without complaint.
+        sdb -s {tv_ip}:26101 uninstall "$PKGID" 2>&1 | tee /tmp/uninstall.log
+        if ! grep -q "uninstall completed" /tmp/uninstall.log; then
+            echo "Could not remove the installed app"
+            exit 1
+        fi
         try_install || exit 1
     else
         exit 1
