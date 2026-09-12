@@ -1200,3 +1200,43 @@ msgstr "Kopiraj zapisnik"
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Zapisnik kopiran"
+
+#: NEEDS WORK
+msgid "Bring Jellyfin to your big screen"
+msgstr "Donesite Jellyfin na svoj veliki ekran"
+
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "Izgradila zajednica"
+
+#: NEEDS WORK
+msgid "Complete"
+msgstr "Dovršeno"
+
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Pokreće Docker"
+
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Otvoreni kod"
+
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Samsung & LG televizori"
+
+#: NEEDS WORK
+msgid "Setup Device"
+msgstr "Postavljanje uređaja"
+
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Jednostavno i pouzdano"
+
+#: NEEDS WORK
+msgid "Step {number} of {total}"
+msgstr "Korak {number} od {total}"
+
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Široka podrška uređaja"

@@ -1199,3 +1199,43 @@ msgstr "Kopeeri logi"
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Logi kopeeritud"
+
+#: NEEDS WORK
+msgid "Bring Jellyfin to your big screen"
+msgstr "Too Jellyfin oma suurele ekraanile"
+
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "Loonud kogukond"
+
+#: NEEDS WORK
+msgid "Complete"
+msgstr "Valmis"
+
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Dockeri toel"
+
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Avatud lähtekood"
+
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Samsung & LG telerid"
+
+#: NEEDS WORK
+msgid "Setup Device"
+msgstr "Seadme seadistamine"
+
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Lihtne ja usaldusväärne"
+
+#: NEEDS WORK
+msgid "Step {number} of {total}"
+msgstr "Samm {number} / {total}"
+
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Lai seadmetugi"

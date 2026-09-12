@@ -1199,3 +1199,43 @@ msgstr "Günlüğü kopyala"
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Günlük kopyalandı"
+
+#: NEEDS WORK
+msgid "Bring Jellyfin to your big screen"
+msgstr "Jellyfin'i büyük ekranınıza taşıyın"
+
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "Topluluk tarafından geliştirildi"
+
+#: NEEDS WORK
+msgid "Complete"
+msgstr "Tamamlandı"
+
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Docker ile çalışır"
+
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Açık kaynak"
+
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Samsung & LG TV'ler"
+
+#: NEEDS WORK
+msgid "Setup Device"
+msgstr "Cihaz Kurulumu"
+
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Basit ve güvenilir"
+
+#: NEEDS WORK
+msgid "Step {number} of {total}"
+msgstr "Adım {number}/{total}"
+
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Geniş cihaz desteği"

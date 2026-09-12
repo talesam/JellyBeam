@@ -8,6 +8,7 @@ gi.require_version("Vte", "3.91")
 from gi.repository import Gtk, Adw, Vte, GLib, Pango, Gdk
 from services.docker import DockerService
 from services.device import DeviceService
+from utils import design
 from utils.i18n import _
 
 
@@ -57,9 +58,16 @@ class InstallPage(Gtk.Box):
         # ============================================
         # HEADER
         # ============================================
+        main_box.append(
+            design.page_header(
+                "software-install-symbolic",
+                _("Install Jellyfin"),
+                _("One-click installation to your Samsung TV"),
+                step=design.STEP_INSTALL,
+            )
+        )
+
         header_group = Adw.PreferencesGroup()
-        header_group.set_title(_("Install Jellyfin"))
-        header_group.set_description(_("One-click installation to your Samsung TV"))
         main_box.append(header_group)
 
         # TV Info row
@@ -226,6 +234,9 @@ class InstallPage(Gtk.Box):
         success_row.add_suffix(done_button)
 
         self.success_group.add(success_row)
+
+        # signature closing the page
+        main_box.append(design.footer())
 
     def _clear_prefix(self) -> None:
         """Remove the current prefix widget from status_row."""

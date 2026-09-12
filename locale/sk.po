@@ -1199,3 +1199,43 @@ msgstr "Kopírovať log"
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Log skopírovaný"
+
+#: NEEDS WORK
+msgid "Bring Jellyfin to your big screen"
+msgstr "Prineste Jellyfin na svoju veľkú obrazovku"
+
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "Vytvorené komunitou"
+
+#: NEEDS WORK
+msgid "Complete"
+msgstr "Dokončené"
+
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Poháňané Dockerom"
+
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Otvorený zdrojový kód"
+
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Televízory Samsung & LG"
+
+#: NEEDS WORK
+msgid "Setup Device"
+msgstr "Nastavenie zariadenia"
+
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Jednoduché a spoľahlivé"
+
+#: NEEDS WORK
+msgid "Step {number} of {total}"
+msgstr "Krok {number} z {total}"
+
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Široká podpora zariadení"

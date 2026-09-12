@@ -1201,3 +1201,43 @@ msgstr "Copiar el registro"
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Registro copiado"
+
+#: NEEDS WORK
+msgid "Bring Jellyfin to your big screen"
+msgstr "Lleva Jellyfin a tu pantalla grande"
+
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "Creado por la comunidad"
+
+#: NEEDS WORK
+msgid "Complete"
+msgstr "Completado"
+
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Impulsado por Docker"
+
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Código abierto"
+
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Televisores Samsung & LG"
+
+#: NEEDS WORK
+msgid "Setup Device"
+msgstr "Configurar dispositivo"
+
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Simple y confiable"
+
+#: NEEDS WORK
+msgid "Step {number} of {total}"
+msgstr "Paso {number} de {total}"
+
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Amplia compatibilidad de dispositivos"

@@ -1201,3 +1201,43 @@ msgstr "Копиране на дневника"
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Дневникът е копиран"
+
+#: NEEDS WORK
+msgid "Bring Jellyfin to your big screen"
+msgstr "Донесете Jellyfin на големия екран"
+
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "Създадено от общността"
+
+#: NEEDS WORK
+msgid "Complete"
+msgstr "Завършено"
+
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Задвижвано от Docker"
+
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Отворен код"
+
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Samsung & LG телевизори"
+
+#: NEEDS WORK
+msgid "Setup Device"
+msgstr "Настройка на устройството"
+
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Просто и надеждно"
+
+#: NEEDS WORK
+msgid "Step {number} of {total}"
+msgstr "Стъпка {number} от {total}"
+
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Широка съвместимост с устройства"

@@ -1201,3 +1201,43 @@ msgstr "Αντιγραφή αρχείου καταγραφής"
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Το αρχείο καταγραφής αντιγράφηκε"
+
+#: NEEDS WORK
+msgid "Bring Jellyfin to your big screen"
+msgstr "Φέρτε το Jellyfin στη μεγάλη σας οθόνη"
+
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "Χτισμένο από την κοινότητα"
+
+#: NEEDS WORK
+msgid "Complete"
+msgstr "Ολοκληρώθηκε"
+
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Με τεχνολογία Docker"
+
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Ανοιχτός κώδικας"
+
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Τηλεοράσεις Samsung & LG"
+
+#: NEEDS WORK
+msgid "Setup Device"
+msgstr "Ρύθμιση συσκευής"
+
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Απλό και αξιόπιστο"
+
+#: NEEDS WORK
+msgid "Step {number} of {total}"
+msgstr "Βήμα {number} από {total}"
+
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Ευρεία υποστήριξη συσκευών"

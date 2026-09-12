@@ -1197,3 +1197,43 @@ msgstr "העתקת היומן"
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "היומן הועתק"
+
+#: NEEDS WORK
+msgid "Bring Jellyfin to your big screen"
+msgstr "הביאו את Jellyfin למסך הגדול שלכם"
+
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "נבנה על ידי הקהילה"
+
+#: NEEDS WORK
+msgid "Complete"
+msgstr "הושלם"
+
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "מופעל על ידי Docker"
+
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "קוד פתוח"
+
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "טלוויזיות Samsung & LG"
+
+#: NEEDS WORK
+msgid "Setup Device"
+msgstr "הגדרת מכשיר"
+
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "פשוט ואמין"
+
+#: NEEDS WORK
+msgid "Step {number} of {total}"
+msgstr "שלב {number} מתוך {total}"
+
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "תמיכה רחבה במכשירים"

@@ -9,6 +9,7 @@ from gi.repository import Gtk, Adw, GLib
 from utils.constants import TIMEOUT_UI_FEEDBACK
 from services.device import DeviceService
 from utils.validators import NetworkValidator
+from utils import design
 from utils.i18n import _
 from utils.ui_helpers import ErrorNotification
 
@@ -49,10 +50,14 @@ class DevicePage(Gtk.ScrolledWindow):
         clamp.set_child(main_box)
 
         # Header
-        header_group = Adw.PreferencesGroup()
-        header_group.set_title(_("Device Setup"))
-        header_group.set_description(_("Connect to your Samsung Tizen TV or projector"))
-        main_box.append(header_group)
+        main_box.append(
+            design.page_header(
+                "video-display-symbolic",
+                _("Device Setup"),
+                _("Connect to your Samsung Tizen TV or projector"),
+                step=design.STEP_DEVICE,
+            )
+        )
 
         # ============================================
         # DEVELOPER MODE INSTRUCTIONS (COLLAPSIBLE)
@@ -233,6 +238,9 @@ class DevicePage(Gtk.ScrolledWindow):
         if self.dev_mode_switch.get_active():
             self.discovery_group.set_visible(True)
             # manual_group stays hidden until scan finds nothing
+
+        # signature closing the page
+        main_box.append(design.footer())
 
     def _get_local_ip(self):
         """Get local IP address."""

@@ -1199,3 +1199,43 @@ msgstr "Копировать журнал"
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Журнал скопирован"
+
+#: NEEDS WORK
+msgid "Bring Jellyfin to your big screen"
+msgstr "Перенесите Jellyfin на большой экран"
+
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "Создано сообществом"
+
+#: NEEDS WORK
+msgid "Complete"
+msgstr "Готово"
+
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Работает на Docker"
+
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Открытый исходный код"
+
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Телевизоры Samsung & LG"
+
+#: NEEDS WORK
+msgid "Setup Device"
+msgstr "Настройка устройства"
+
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Просто и надёжно"
+
+#: NEEDS WORK
+msgid "Step {number} of {total}"
+msgstr "Шаг {number} из {total}"
+
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Широкая поддержка устройств"

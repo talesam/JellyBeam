@@ -1199,3 +1199,43 @@ msgstr "Copiază jurnalul"
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Jurnal copiat"
+
+#: NEEDS WORK
+msgid "Bring Jellyfin to your big screen"
+msgstr "Adu Jellyfin pe ecranul tău mare"
+
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "Construit de comunitate"
+
+#: NEEDS WORK
+msgid "Complete"
+msgstr "Finalizat"
+
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Bazat pe Docker"
+
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Sursă deschisă"
+
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Televizoare Samsung & LG"
+
+#: NEEDS WORK
+msgid "Setup Device"
+msgstr "Configurare dispozitiv"
+
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Simplu și fiabil"
+
+#: NEEDS WORK
+msgid "Step {number} of {total}"
+msgstr "Pasul {number} din {total}"
+
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Suport extins pentru dispozitive"

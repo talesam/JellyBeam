@@ -1210,3 +1210,43 @@ msgstr ""
 #: NEEDS WORK
 msgid "Log copied"
 msgstr ""
+
+#: NEEDS WORK
+msgid "Bring Jellyfin to your big screen"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Complete"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Open Source"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Setup Device"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Step {number} of {total}"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr ""

@@ -1201,3 +1201,43 @@ msgstr "Napló másolása"
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Napló másolva"
+
+#: NEEDS WORK
+msgid "Bring Jellyfin to your big screen"
+msgstr "Hozd el a Jellyfint a nagy képernyődre"
+
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "A közösség alkotása"
+
+#: NEEDS WORK
+msgid "Complete"
+msgstr "Kész"
+
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Docker által működtetve"
+
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Nyílt forráskód"
+
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Samsung & LG TV-k"
+
+#: NEEDS WORK
+msgid "Setup Device"
+msgstr "Eszköz beállítása"
+
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Egyszerű és megbízható"
+
+#: NEEDS WORK
+msgid "Step {number} of {total}"
+msgstr "Lépés {number}/{total}"
+
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Széles körű eszköztámogatás"

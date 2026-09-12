@@ -1197,3 +1197,43 @@ msgstr "复制日志"
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "日志已复制"
+
+#: NEEDS WORK
+msgid "Bring Jellyfin to your big screen"
+msgstr "让 Jellyfin 登上你的大屏幕"
+
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "由社区构建"
+
+#: NEEDS WORK
+msgid "Complete"
+msgstr "完成"
+
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Docker 驱动"
+
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "开源"
+
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Samsung & LG 电视"
+
+#: NEEDS WORK
+msgid "Setup Device"
+msgstr "设备设置"
+
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "简单可靠"
+
+#: NEEDS WORK
+msgid "Step {number} of {total}"
+msgstr "第 {number} 步，共 {total} 步"
+
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "广泛的设备支持"

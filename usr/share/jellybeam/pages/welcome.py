@@ -6,6 +6,7 @@ gi.require_version("Adw", "1")
 
 from gi.repository import Gtk, Adw, GLib
 from services.docker import DockerService
+from utils import design
 from utils.i18n import _
 
 
@@ -27,17 +28,26 @@ class WelcomePage(Gtk.Box):
     def _setup_ui(self):
         """Setup the welcome page UI."""
         # Create a clamp to center content
+        # Without this the page has no upper bound on its height: the content
+        # pushed the window taller than its default size, and on a short screen
+        # the bottom simply fell off. Every other page already scrolls.
+        scroll = Gtk.ScrolledWindow()
+        scroll.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
+        scroll.set_propagate_natural_height(False)
+        scroll.set_vexpand(True)
+        self.append(scroll)
+
         clamp = Adw.Clamp()
         clamp.set_maximum_size(700)
         clamp.set_tightening_threshold(500)
-        clamp.set_margin_top(32)
-        clamp.set_margin_bottom(32)
+        clamp.set_margin_top(20)
+        clamp.set_margin_bottom(20)
         clamp.set_margin_start(32)
         clamp.set_margin_end(32)
-        self.append(clamp)
+        scroll.set_child(clamp)
 
         # Main content box
-        main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=32)
+        main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=20)
         clamp.set_child(main_box)
 
         # ============================================
@@ -45,29 +55,40 @@ class WelcomePage(Gtk.Box):
         # ============================================
         header_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=16)
         header_box.set_halign(Gtk.Align.CENTER)
-        header_box.set_margin_top(24)
-        header_box.set_margin_bottom(24)
+        header_box.set_margin_top(4)
+        header_box.set_margin_bottom(4)
         main_box.append(header_box)
 
-        # Icon - larger
-        icon = Gtk.Image.new_from_icon_name("tv-symbolic")
-        icon.set_pixel_size(96)
-        icon.add_css_class("dim-label")
-        header_box.append(icon)
-
-        # Title - larger
-        title = Gtk.Label(label=_("JellyBeam Installer"))
-        title.add_css_class("title-1")
-        header_box.append(title)
-
-        # Description
-        desc = Gtk.Label(
-            label=_("Install Jellyfin on your Samsung Smart TV or projector")
+        header_box.append(
+            design.hero(
+                "tv-symbolic",
+                _("JellyBeam Installer"),
+                _("Install Jellyfin on your Samsung Smart TV or projector"),
+            )
         )
-        desc.add_css_class("dim-label")
-        desc.set_wrap(True)
-        desc.set_justify(Gtk.Justification.CENTER)
-        header_box.append(desc)
+
+        # What the tool is, before asking anything of the user.
+        header_box.append(
+            design.feature_strip(
+                [
+                    (
+                        "tv-symbolic",
+                        _("Samsung & LG TVs"),
+                        _("Wide device support"),
+                    ),
+                    (
+                        "package-x-generic-symbolic",
+                        _("Docker Powered"),
+                        _("Simple and reliable"),
+                    ),
+                    (
+                        "emblem-favorite-symbolic",
+                        _("Open Source"),
+                        _("Built by the community"),
+                    ),
+                ]
+            )
+        )
 
         # ============================================
         # FIRST-RUN ONBOARDING BANNER
@@ -160,6 +181,9 @@ class WelcomePage(Gtk.Box):
         self.continue_row.add_suffix(self.continue_button)
 
         self.actions_group.add(self.continue_row)
+
+        # signature closing the page
+        main_box.append(design.footer())
 
     def _check_dependencies(self):
         """Check if all required dependencies are installed."""

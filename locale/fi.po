@@ -1199,3 +1199,43 @@ msgstr "Kopioi loki"
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Loki kopioitu"
+
+#: NEEDS WORK
+msgid "Bring Jellyfin to your big screen"
+msgstr "Tuo Jellyfin isolle näytöllesi"
+
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "Yhteisön rakentama"
+
+#: NEEDS WORK
+msgid "Complete"
+msgstr "Valmis"
+
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Dockerin voimalla"
+
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Avoin lähdekoodi"
+
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Samsung & LG -televisiot"
+
+#: NEEDS WORK
+msgid "Setup Device"
+msgstr "Laitteen asetukset"
+
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Yksinkertainen ja luotettava"
+
+#: NEEDS WORK
+msgid "Step {number} of {total}"
+msgstr "Vaihe {number}/{total}"
+
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Laaja laitetuki"

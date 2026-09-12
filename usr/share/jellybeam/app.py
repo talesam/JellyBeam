@@ -11,6 +11,7 @@ from pages.certificates import CertificatesPage
 from pages.install import InstallPage
 from pages.preferences import PreferencesPage
 from utils.config import ConfigManager
+from utils import design
 from utils.logger import Logger
 from utils.constants import (
     APP_ID,
@@ -45,6 +46,8 @@ class JellyBeamApplication(Adw.Application):
 
     def do_activate(self):
         """Called when the application is activated."""
+        # After the display exists, before any page is built.
+        design.load_css()
         if not self.window:
             self.window = JellyBeamWindow(
                 application=self, config_manager=self.config_manager, logger=self.logger

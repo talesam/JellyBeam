@@ -1197,3 +1197,43 @@ msgstr "로그 복사"
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "로그가 복사됨"
+
+#: NEEDS WORK
+msgid "Bring Jellyfin to your big screen"
+msgstr "Jellyfin을 큰 화면으로"
+
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "커뮤니티가 만든"
+
+#: NEEDS WORK
+msgid "Complete"
+msgstr "완료"
+
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Docker 기반"
+
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "오픈 소스"
+
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Samsung & LG TV"
+
+#: NEEDS WORK
+msgid "Setup Device"
+msgstr "기기 설정"
+
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "간단하고 안정적"
+
+#: NEEDS WORK
+msgid "Step {number} of {total}"
+msgstr "{total}단계 중 {number}단계"
+
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "폭넓은 기기 지원"

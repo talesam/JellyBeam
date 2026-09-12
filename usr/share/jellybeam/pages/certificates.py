@@ -7,6 +7,7 @@ gi.require_version("Adw", "1")
 
 from gi.repository import Gtk, Adw, Gio
 from services.certificates import CertificateService
+from utils import design
 from utils.i18n import _
 from utils.ui_helpers import ErrorNotification
 
@@ -45,12 +46,14 @@ class CertificatesPage(Gtk.ScrolledWindow):
         # ============================================
         # HEADER
         # ============================================
-        header_group = Adw.PreferencesGroup()
-        header_group.set_title(_("Developer Certificates"))
-        header_group.set_description(
-            _("Certificates are required to install apps on Samsung TVs")
+        main_box.append(
+            design.page_header(
+                "security-high-symbolic",
+                _("Developer Certificates"),
+                _("Certificates are required to install apps on Samsung TVs"),
+                step=design.STEP_CONNECT,
+            )
         )
-        main_box.append(header_group)
 
         # ============================================
         # DEFAULT CERTIFICATES OPTION (NEW - SIMPLIFIED)
@@ -175,6 +178,9 @@ class CertificatesPage(Gtk.ScrolledWindow):
         # Load existing certificate info and update UI visibility
         self._load_certificate_info()
         self._update_ui_visibility()
+
+        # signature closing the page
+        main_box.append(design.footer())
 
     def _on_use_default_changed(self, switch, param):
         """Handle toggle between default and custom certificates."""
