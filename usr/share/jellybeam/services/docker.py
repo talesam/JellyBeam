@@ -26,6 +26,9 @@ from utils.constants import (
     JELLYFIN_REPO_DIR,
     JELLYFIN_APP_FILENAME,
     JELLYFIN_WWW_DIR,
+    JELLYFIN_BUILDS_RELEASES,
+    TIZEN_SIGN_PROFILE,
+    CUSTOMIZATION_PKG_DIR,
     CERT_AUTHOR_FILENAME,
     CERT_DISTRIBUTOR_FILENAME,
     CERT_PASSWORD_FILE,
@@ -955,6 +958,136 @@ class DockerService:
 
         thread = threading.Thread(target=install_direct, daemon=True)
         thread.start()
+
+    def _run_in_image(
+        self,
+        script: str,
+        log_progress: Callable[[str], None],
+        timeout: int = TIMEOUT_DOCKER_EXEC_LONG,
+    ) -> int:
+        """Run a shell script in the builder image with the workspace mounted.
+
+        The image's entrypoint installs Jellyfin on its own, so it is replaced
+        by a shell here: we need its tools (sdb, tizen, unzip) but our own
+        sequence of steps.
+        """
+        cmd = self._wrap_cmd(
+            [
+                "docker",
+                "run",
+                "--rm",
+                "-v",
+                f"{self.workspace_host}:{self.workspace_container}",
+                "--entrypoint",
+                "sh",
+                f"{self.image_name}:{self.image_tag}",
+                "-c",
+                script,
+            ]
+        )
+        process = subprocess.Popen(
+            cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1
+        )
+        for line in iter(process.stdout.readline, ""):
+            line = line.strip()
+            if line:
+                log_progress(line)
+        process.wait(timeout=timeout)
+        return process.returncode
+
+    def install_jellyfin_customized_async(
+        self,
+        tv_ip: str,
+        server_url: str,
+        callback: Callable[[bool, str], None],
+        progress_callback: Optional[Callable[[str], None]] = None,
+        build_option: str = "Jellyfin",
+    ) -> None:
+        """Install a pre-built package with the server customizations added.
+
+        The image normally downloads a ready-made .wgt and installs it, which
+        leaves no place to inject anything. A .wgt is just a zip, so we unpack
+        it, edit www/index.html, and sign it again with the image's own 'dev'
+        profile -- no certificate needed from the user.
+
+        Three steps rather than one, because the injection runs on the host:
+        it is the tested Python in services/customization.py, and the image has
+        no Python at all.
+        """
+
+        def install():
+            try:
+
+                def log_progress(msg: str):
+                    if progress_callback:
+                        GLib.idle_add(progress_callback, msg)
+                    self.logger.info(msg)
+
+                os.makedirs(self.workspace_host, exist_ok=True)
+                ws = self.workspace_container
+                pkg = f"{ws}/{CUSTOMIZATION_PKG_DIR}"
+
+                log_progress("Downloading the pre-built package...")
+                fetch = f"""set -e
+cd {ws}
+rm -rf {CUSTOMIZATION_PKG_DIR} && mkdir {CUSTOMIZATION_PKG_DIR}
+TAG=$(basename "$(curl -sLI {JELLYFIN_BUILDS_RELEASES}/latest \
+  | grep -i '^location:' | sed 's/^[Ll]ocation: //' | tr -d '\\r')")
+echo "Release: $TAG"
+wget -q "{JELLYFIN_BUILDS_RELEASES}/download/$TAG/{build_option}.wgt" -O original.wgt
+cd {CUSTOMIZATION_PKG_DIR} && unzip -qo ../original.wgt
+# The image runs as root; hand the files back so the injection step can
+# write to them as the desktop user.
+chown -R {os.getuid()}:{os.getgid()} {ws}
+echo "Package unpacked"
+"""
+                if self._run_in_image(fetch, log_progress) != 0:
+                    GLib.idle_add(
+                        callback, False, "Could not download the Jellyfin package"
+                    )
+                    return
+
+                www = os.path.join(
+                    self.workspace_host, CUSTOMIZATION_PKG_DIR, JELLYFIN_WWW_DIR
+                )
+                resources = customization.inject(www, server_url)
+                log_progress(f"Injected {len(resources)} customization resource(s)")
+
+                log_progress("Signing and installing...")
+                finish = f"""set -e
+cd {pkg}
+# The old signatures no longer match the edited files.
+rm -f author-signature.xml signature1.xml
+cd {ws}
+tizen package -t wgt -s {TIZEN_SIGN_PROFILE} -- {CUSTOMIZATION_PKG_DIR}
+WGT=$(ls {pkg}/*.wgt | head -1)
+echo "Signed: $WGT"
+sdb connect {tv_ip}
+TV_NAME=$(sdb devices | grep -E 'device\\s+\\w+[-]?\\w+' -o | sed 's/device//' - | xargs)
+if [ -z "$TV_NAME" ]; then echo "Could not find the TV name"; exit 1; fi
+echo "Found TV: $TV_NAME"
+tizen install -n "$WGT" -t "$TV_NAME"
+"""
+                if self._run_in_image(finish, log_progress) != 0:
+                    GLib.idle_add(callback, False, "Installation failed")
+                    return
+
+                GLib.idle_add(
+                    callback, True, "Jellyfin installed with your customizations!"
+                )
+
+            except CustomizationError as e:
+                self.logger.error(f"Customization failed: {e}")
+                GLib.idle_add(callback, False, str(e))
+            except subprocess.TimeoutExpired:
+                GLib.idle_add(callback, False, "Installation timed out")
+            except FileNotFoundError:
+                GLib.idle_add(callback, False, "Docker executable not found")
+            except Exception as e:
+                self.logger.exception(f"Error during installation: {e}")
+                GLib.idle_add(callback, False, str(e))
+
+        threading.Thread(target=install, daemon=True).start()
 
     def stop_all_processes(self) -> None:
         """Stop all running Docker processes."""

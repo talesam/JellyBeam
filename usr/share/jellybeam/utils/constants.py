@@ -67,6 +67,17 @@ JELLYFIN_WWW_DIR = "www"
 # Only relative paths live here. The server address is user data and belongs
 # in ~/.config/jellybeam/ -- never in this repository, which is public.
 JELLYFIN_INFO_ENDPOINT = "/System/Info/Public"
+
+# Pre-built Tizen packages. The Docker image installs these instead of
+# compiling jellyfin-tizen, so customizing means unpacking one, editing it and
+# signing it again -- see services/docker.py.
+JELLYFIN_BUILDS_RELEASES = (
+    "https://github.com/jeppevinkel/jellyfin-tizen-builds/releases"
+)
+# Signing profile shipped inside the image, along with its author certificate.
+# It is what lets us re-sign without asking the user for a certificate.
+TIZEN_SIGN_PROFILE = "dev"
+CUSTOMIZATION_PKG_DIR = "pkg"
 CUSTOMIZATION_MARKER_START = "<!-- JellyBeam:start -->"
 CUSTOMIZATION_MARKER_END = "<!-- JellyBeam:end -->"
 CUSTOMIZATION_RESOURCES = (

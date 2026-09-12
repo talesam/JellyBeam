@@ -18,7 +18,9 @@ class InstallPage(Gtk.Box):
         super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=16)
 
         self.window = window
-        self.docker_service = DockerService(logger=window.logger)
+        self.docker_service = DockerService(
+            logger=window.logger, config=window.config_manager
+        )
         self.device_service = DeviceService(logger=window.logger)
 
         self.installation_running = False
@@ -387,9 +389,22 @@ class InstallPage(Gtk.Box):
                 elif "install completed" in msg.lower():
                     GLib.idle_add(self._set_status, _("Finishing..."), 0.98)
 
-            self.docker_service.install_jellyfin_direct_async(
-                tv_ip, on_install_complete, progress_callback=on_progress
-            )
+            # With customizations configured we take the longer route: unpack
+            # the pre-built package, inject, sign it again. Otherwise the
+            # image's own one-shot install, which is faster and well proven.
+            config = self.window.config_manager
+            server_url = config.get("customization.server_url", "")
+            if config.get("customization.enabled", False) and server_url:
+                self.docker_service.install_jellyfin_customized_async(
+                    tv_ip,
+                    server_url,
+                    on_install_complete,
+                    progress_callback=on_progress,
+                )
+            else:
+                self.docker_service.install_jellyfin_direct_async(
+                    tv_ip, on_install_complete, progress_callback=on_progress
+                )
 
         def on_pull_progress(msg):
             GLib.idle_add(self._log_info, msg)
