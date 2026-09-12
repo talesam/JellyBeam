@@ -60,7 +60,7 @@ class InstallPage(Gtk.Box):
         # ============================================
         main_box.append(
             design.page_header(
-                "software-install-symbolic",
+                "system-software-install-symbolic",
                 _("Install Jellyfin"),
                 _("One-click installation to your Samsung TV"),
                 step=design.STEP_INSTALL,

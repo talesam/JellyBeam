@@ -48,7 +48,7 @@ class CertificatesPage(Gtk.ScrolledWindow):
         # ============================================
         main_box.append(
             design.page_header(
-                "security-high-symbolic",
+                "application-certificate-symbolic",
                 _("Developer Certificates"),
                 _("Certificates are required to install apps on Samsung TVs"),
                 step=design.STEP_CONNECT,

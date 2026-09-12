@@ -12,6 +12,8 @@ to call from any page.
 
 from __future__ import annotations
 
+import logging
+
 from typing import Optional, Sequence, Tuple
 
 import gi
@@ -23,6 +25,8 @@ from gi.repository import Adw, Gdk, Gtk, Pango  # noqa: E402
 
 from utils.constants import APP_NAME  # noqa: E402
 from utils.i18n import _  # noqa: E402
+
+_logger = logging.getLogger(__name__)
 
 # The four steps of the wizard, in order. Pages pass their own index so the
 # indicator cannot drift out of step with the actual navigation.
@@ -127,6 +131,27 @@ def load_css() -> None:
         )
 
 
+FALLBACK_ICON = "application-x-executable-symbolic"
+
+
+def resolve_icon(icon_name: str) -> str:
+    """Return icon_name if the theme really has it, else a safe stand-in.
+
+    Icon names are not portable between themes: two of the names used here
+    were missing or not truly symbolic on this desktop, and produced a broken
+    glyph and an empty badge. A name that is not there should degrade to
+    something visible rather than to a hole in the layout.
+    """
+    display = Gdk.Display.get_default()
+    if display is None:
+        return icon_name
+    theme = Gtk.IconTheme.get_for_display(display)
+    if theme.has_icon(icon_name):
+        return icon_name
+    _logger.warning("Icon %r missing from the theme; using a stand-in", icon_name)
+    return FALLBACK_ICON
+
+
 def icon_badge(icon_name: str, tone: str = "", hero: bool = False) -> Gtk.Image:
     """An icon sitting on a rounded, tinted square.
 
@@ -134,7 +159,7 @@ def icon_badge(icon_name: str, tone: str = "", hero: bool = False) -> Gtk.Image:
         tone: "accent", "warning", or "" for the neutral grey.
         hero: the larger size used by page headers.
     """
-    image = Gtk.Image.new_from_icon_name(icon_name)
+    image = Gtk.Image.new_from_icon_name(resolve_icon(icon_name))
     image.set_valign(Gtk.Align.CENTER)
     image.add_css_class("jb-badge")
     if tone:
@@ -258,7 +283,7 @@ def hero(icon_name: str, title: str, subtitle: str) -> Gtk.Box:
     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
     box.set_halign(Gtk.Align.CENTER)
 
-    image = Gtk.Image.new_from_icon_name(icon_name)
+    image = Gtk.Image.new_from_icon_name(resolve_icon(icon_name))
     image.add_css_class("jb-badge")
     image.add_css_class("jb-badge-accent")
     image.add_css_class("jb-badge-hero")
