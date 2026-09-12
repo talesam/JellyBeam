@@ -6,6 +6,7 @@ gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 
 from gi.repository import Gtk, Adw, GLib
+from utils.constants import TIMEOUT_UI_FEEDBACK
 from services.device import DeviceService
 from utils.validators import NetworkValidator
 from utils.i18n import _
@@ -228,23 +229,6 @@ class DevicePage(Gtk.ScrolledWindow):
 
         self.actions_group.add(self.connect_row)
 
-        # Continue button (initially disabled)
-        self.continue_row = Adw.ActionRow()
-        self.continue_row.set_title(_("Continue to Certificates"))
-        self.continue_row.set_subtitle(_("Setup developer certificates"))
-
-        self.continue_button = Gtk.Button.new_with_label(_("Continue"))
-        self.continue_button.set_valign(Gtk.Align.CENTER)
-        self.continue_button.add_css_class("suggested-action")
-        self.continue_button.set_sensitive(False)
-        self.continue_button.update_property(
-            [Gtk.AccessibleProperty.LABEL], [_("Continue to Certificates")]
-        )
-        self.continue_button.connect("clicked", self._on_continue)
-        self.continue_row.add_suffix(self.continue_button)
-
-        self.actions_group.add(self.continue_row)
-
         # Show sections if developer mode was already enabled (saved state)
         if self.dev_mode_switch.get_active():
             self.discovery_group.set_visible(True)
@@ -417,8 +401,11 @@ class DevicePage(Gtk.ScrolledWindow):
             self.connect_row.remove(self.connect_spinner)
 
             if success:
-                self.continue_button.set_sensitive(True)
                 self._show_success(_("Connected successfully!"))
+                # Connecting is the whole point of this page, so advance on
+                # success instead of asking for a second click that could not
+                # mean anything else. Deferred so the success toast is seen.
+                GLib.timeout_add(TIMEOUT_UI_FEEDBACK, self._go_to_certificates)
             else:
                 ErrorNotification.show_error_dialog(
                     self.window,
@@ -429,9 +416,10 @@ class DevicePage(Gtk.ScrolledWindow):
         dev_mode = self.dev_mode_switch.get_active()
         self.device_service.connect_device_async(ip, dev_mode, on_connection_result)
 
-    def _on_continue(self, button):
-        """Continue to certificates page."""
+    def _go_to_certificates(self):
+        """Move on to the certificates page. Runs once, from a timeout."""
         self.window.navigate_to_page(self.window.certificates_page, _("Certificates"))
+        return GLib.SOURCE_REMOVE
 
     def _show_error(self, message):
         """Show error toast."""
