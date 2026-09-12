@@ -1185,3 +1185,7 @@ msgstr "Kapcsolat tesztelése"
 #: NEEDS WORK
 msgid "Testing…"
 msgstr "Tesztelés…"
+
+#: NEEDS WORK
+msgid "The address must start with http:// or https://"
+msgstr "A címnek http:// vagy https:// előtaggal kell kezdődnie"

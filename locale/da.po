@@ -1183,3 +1183,7 @@ msgstr "Test forbindelse"
 #: NEEDS WORK
 msgid "Testing…"
 msgstr "Tester…"
+
+#: NEEDS WORK
+msgid "The address must start with http:// or https://"
+msgstr "Adressen skal starte med http:// eller https://"

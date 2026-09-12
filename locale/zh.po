@@ -1181,3 +1181,7 @@ msgstr "测试连接"
 #: NEEDS WORK
 msgid "Testing…"
 msgstr "正在测试…"
+
+#: NEEDS WORK
+msgid "The address must start with http:// or https://"
+msgstr "地址必须以 http:// 或 https:// 开头"

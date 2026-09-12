@@ -1183,3 +1183,7 @@ msgstr "Testi ühendust"
 #: NEEDS WORK
 msgid "Testing…"
 msgstr "Testimine…"
+
+#: NEEDS WORK
+msgid "The address must start with http:// or https://"
+msgstr "Aadress peab algama http:// või https://"

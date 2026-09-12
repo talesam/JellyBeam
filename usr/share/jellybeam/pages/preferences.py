@@ -6,6 +6,7 @@ gi.require_version("Adw", "1")
 
 from gi.repository import Gtk, Adw
 from services import customization
+from utils.exceptions import CustomizationURLError
 from utils.i18n import _
 
 
@@ -281,6 +282,17 @@ class PreferencesPage(Adw.PreferencesDialog):
         url = self.server_url_row.get_text().strip()
         if not url:
             self.add_toast(Adw.Toast.new(_("Enter a server URL first")))
+            return
+
+        # Check the address here rather than letting probe_server raise, so a
+        # malformed URL says so instead of claiming the server is unreachable.
+        # Typing a bare host is the most likely mistake by a wide margin.
+        try:
+            customization.normalize_url(url)
+        except CustomizationURLError:
+            self.add_toast(
+                Adw.Toast.new(_("The address must start with http:// or https://"))
+            )
             return
 
         button.set_sensitive(False)

@@ -1184,3 +1184,7 @@ msgstr "Testiranje veze"
 #: NEEDS WORK
 msgid "Testing…"
 msgstr "Testiranje…"
+
+#: NEEDS WORK
+msgid "The address must start with http:// or https://"
+msgstr "Adresa mora počinjati s http:// ili https://"

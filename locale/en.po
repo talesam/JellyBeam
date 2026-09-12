@@ -1206,3 +1206,7 @@ msgstr "Test Connection"
 #: NEEDS WORK
 msgid "Testing…"
 msgstr "Testing…"
+
+#: NEEDS WORK
+msgid "The address must start with http:// or https://"
+msgstr "The address must start with http:// or https://"

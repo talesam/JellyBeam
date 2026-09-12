@@ -1181,3 +1181,7 @@ msgstr "연결 테스트"
 #: NEEDS WORK
 msgid "Testing…"
 msgstr "테스트 중…"
+
+#: NEEDS WORK
+msgid "The address must start with http:// or https://"
+msgstr "주소는 http:// 또는 https://로 시작해야 합니다"

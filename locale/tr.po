@@ -1183,3 +1183,7 @@ msgstr "Bağlantıyı Test Et"
 #: NEEDS WORK
 msgid "Testing…"
 msgstr "Test ediliyor…"
+
+#: NEEDS WORK
+msgid "The address must start with http:// or https://"
+msgstr "Adres http:// veya https:// ile başlamalıdır"

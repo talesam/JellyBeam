@@ -1183,3 +1183,7 @@ msgstr "Otestovať pripojenie"
 #: NEEDS WORK
 msgid "Testing…"
 msgstr "Testuje sa…"
+
+#: NEEDS WORK
+msgid "The address must start with http:// or https://"
+msgstr "Adresa musí začínať na http:// alebo https://"

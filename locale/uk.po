@@ -1183,3 +1183,7 @@ msgstr "Перевірити з'єднання"
 #: NEEDS WORK
 msgid "Testing…"
 msgstr "Перевірка…"
+
+#: NEEDS WORK
+msgid "The address must start with http:// or https://"
+msgstr "Адреса має починатися з http:// або https://"

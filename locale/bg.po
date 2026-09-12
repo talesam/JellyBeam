@@ -1185,3 +1185,7 @@ msgstr "Тест на връзката"
 #: NEEDS WORK
 msgid "Testing…"
 msgstr "Тестване…"
+
+#: NEEDS WORK
+msgid "The address must start with http:// or https://"
+msgstr "Адресът трябва да започва с http:// или https://"

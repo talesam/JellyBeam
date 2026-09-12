@@ -1185,3 +1185,7 @@ msgstr "Prova connessione"
 #: NEEDS WORK
 msgid "Testing…"
 msgstr "Verifica in corso…"
+
+#: NEEDS WORK
+msgid "The address must start with http:// or https://"
+msgstr "L'indirizzo deve iniziare con http:// o https://"
