@@ -1210,3 +1210,7 @@ msgstr "Testing…"
 #: NEEDS WORK
 msgid "The address must start with http:// or https://"
 msgstr "The address must start with http:// or https://"
+
+#: NEEDS WORK
+msgid "That does not look like an address"
+msgstr "That does not look like an address"

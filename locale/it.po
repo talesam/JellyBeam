@@ -1189,3 +1189,7 @@ msgstr "Verifica in corso…"
 #: NEEDS WORK
 msgid "The address must start with http:// or https://"
 msgstr "L'indirizzo deve iniziare con http:// o https://"
+
+#: NEEDS WORK
+msgid "That does not look like an address"
+msgstr "Non sembra un indirizzo"

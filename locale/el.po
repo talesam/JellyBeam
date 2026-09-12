@@ -1189,3 +1189,7 @@ msgstr "Δοκιμή…"
 #: NEEDS WORK
 msgid "The address must start with http:// or https://"
 msgstr "Η διεύθυνση πρέπει να ξεκινά με http:// ή https://"
+
+#: NEEDS WORK
+msgid "That does not look like an address"
+msgstr "Αυτό δεν μοιάζει με διεύθυνση"

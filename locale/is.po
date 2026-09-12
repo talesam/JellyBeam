@@ -1189,3 +1189,7 @@ msgstr "Prófa…"
 #: NEEDS WORK
 msgid "The address must start with http:// or https://"
 msgstr "Vistfangið verður að byrja á http:// eða https://"
+
+#: NEEDS WORK
+msgid "That does not look like an address"
+msgstr "Þetta lítur ekki út eins og vistfang"

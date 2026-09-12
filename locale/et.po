@@ -1187,3 +1187,7 @@ msgstr "Testimine…"
 #: NEEDS WORK
 msgid "The address must start with http:// or https://"
 msgstr "Aadress peab algama http:// või https://"
+
+#: NEEDS WORK
+msgid "That does not look like an address"
+msgstr "See ei näi olevat aadress"

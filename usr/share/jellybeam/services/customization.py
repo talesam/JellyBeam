@@ -28,7 +28,7 @@ import threading
 import urllib.error
 import urllib.request
 from pathlib import Path
-from typing import Callable, List, Optional, Sequence, Union
+from typing import Callable, List, Optional, Sequence, Tuple, Union
 from urllib.parse import urlparse
 
 from gi.repository import GLib
@@ -64,8 +64,44 @@ _ACCEPTED_SCHEMES = ("http", "https")
 PathLike = Union[str, Path]
 
 
-def normalize_url(url: str) -> str:
+def has_scheme(url: str) -> bool:
+    """Whether the user actually typed a scheme.
+
+    Tested with '://' rather than urlparse: urlparse("localhost:8096") reports
+    the scheme as "localhost", which would make a bare host-and-port look like
+    it already had one.
+    """
+    return "://" in (url or "").strip()
+
+
+def prefers_plain_http(url: str) -> bool:
+    """Whether to try http before https for this host.
+
+    A LAN box usually speaks plain http, and attempting TLS against it stalls
+    until the timeout. A public domain is the opposite. Guessing the likely one
+    first only affects ordering -- both are still tried.
+    """
+    host = urlparse(_with_scheme(url, "http")).hostname or ""
+    if host in ("localhost", "127.0.0.1", "::1") or host.endswith(".local"):
+        return True
+    if "." not in host:  # a bare machine name on the local network
+        return True
+    if re.match(r"^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)", host):
+        return True
+    return False
+
+
+def _with_scheme(url: str, scheme: str) -> str:
+    url = (url or "").strip()
+    return url if has_scheme(url) else f"{scheme}://{url}"
+
+
+def normalize_url(url: str, default_scheme: str = "https") -> str:
     """Validate the server URL and strip its trailing slash.
+
+    A missing scheme is filled in rather than rejected: typing just the host is
+    the common case, and resolve_server_url() works out which scheme actually
+    answers. Anything other than http/https is still an error.
 
     Raises:
         CustomizationURLError: empty, malformed, or not http/https.
@@ -73,6 +109,8 @@ def normalize_url(url: str) -> str:
     url = (url or "").strip()
     if not url:
         raise CustomizationURLError("", "server URL is empty")
+
+    url = _with_scheme(url, default_scheme)
 
     parts = urlparse(url)
     if parts.scheme not in _ACCEPTED_SCHEMES:
@@ -241,6 +279,63 @@ def probe_server_async(
     threading.Thread(target=run, daemon=True).start()
 
 
+def resolve_server_url(
+    url: str, timeout: int = TIMEOUT_HTTP_REQUEST
+) -> Tuple[str, str]:
+    """Work out the full URL of a server the user may have typed bare.
+
+    When no scheme was given, both are tried and the one that answers wins.
+    Actually asking beats assuming: the scheme is baked into the package the TV
+    loads, so guessing wrong here fails silently on the TV, far from the cause.
+
+    Returns:
+        (resolved_url, server_name)
+
+    Raises:
+        CustomizationURLError: the address is unusable whatever the scheme.
+        CustomizationServerError: no scheme produced a Jellyfin server.
+    """
+    if has_scheme(url):
+        candidates = [normalize_url(url)]
+    else:
+        first = "http" if prefers_plain_http(url) else "https"
+        second = "https" if first == "http" else "http"
+        candidates = [
+            normalize_url(url, default_scheme=first),
+            normalize_url(url, default_scheme=second),
+        ]
+
+    last_error: Optional[CustomizationServerError] = None
+    for candidate in candidates:
+        try:
+            return candidate, probe_server(candidate, timeout)
+        except CustomizationServerError as e:
+            last_error = e
+
+    raise last_error or CustomizationServerError("no scheme answered")
+
+
+def resolve_server_url_async(
+    url: str,
+    callback: Callable[[bool, str, str], None],
+    timeout: int = TIMEOUT_HTTP_REQUEST,
+) -> None:
+    """Run resolve_server_url off the main thread.
+
+    The callback gets (ok, resolved_url, server_name) on success, and
+    (False, "", reason) on failure.
+    """
+
+    def run() -> None:
+        try:
+            resolved, name = resolve_server_url(url, timeout)
+            GLib.idle_add(callback, True, resolved, name)
+        except CustomizationError as e:
+            GLib.idle_add(callback, False, "", str(e))
+
+    threading.Thread(target=run, daemon=True).start()
+
+
 def is_injected(www_dir: PathLike) -> bool:
     """Whether index.html currently carries an injected block."""
     try:
@@ -252,10 +347,14 @@ def is_injected(www_dir: PathLike) -> bool:
 
 __all__ = [
     "build_block",
+    "has_scheme",
     "inject",
     "is_injected",
     "normalize_url",
+    "prefers_plain_http",
     "probe_server",
     "probe_server_async",
     "remove",
+    "resolve_server_url",
+    "resolve_server_url_async",
 ]

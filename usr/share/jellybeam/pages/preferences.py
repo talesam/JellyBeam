@@ -284,33 +284,36 @@ class PreferencesPage(Adw.PreferencesDialog):
             self.add_toast(Adw.Toast.new(_("Enter a server URL first")))
             return
 
-        # Check the address here rather than letting probe_server raise, so a
-        # malformed URL says so instead of claiming the server is unreachable.
-        # Typing a bare host is the most likely mistake by a wide margin.
+        # Check the shape of the address before going to the network, so a
+        # malformed one says so instead of claiming the server is unreachable.
         try:
             customization.normalize_url(url)
         except CustomizationURLError:
-            self.add_toast(
-                Adw.Toast.new(_("The address must start with http:// or https://"))
-            )
+            self.add_toast(Adw.Toast.new(_("That does not look like an address")))
             return
 
         button.set_sensitive(False)
         button.set_label(_("Testing…"))
 
-        def on_result(success, message):
+        def on_result(success, resolved, message):
             button.set_sensitive(True)
             button.set_label(_("Test"))
-            if success:
-                self.add_toast(
-                    Adw.Toast.new(_("Connected to {name}").format(name=message))
-                )
-            else:
+
+            if not success:
                 self.add_toast(Adw.Toast.new(_("Could not reach the server")))
                 self.window.logger.warning(f"Server test failed: {message}")
+                return False
+
+            # Show the address that actually answered. The scheme ends up
+            # inside the package the TV loads, so leaving the field bare while
+            # storing something else would hide what gets built.
+            if resolved != url:
+                self.server_url_row.set_text(resolved)
+
+            self.add_toast(Adw.Toast.new(_("Connected to {name}").format(name=message)))
             return False
 
-        customization.probe_server_async(url, on_result)
+        customization.resolve_server_url_async(url, on_result)
 
     def _on_log_level_changed(self, combo_row, param):
         """Handle log level change."""

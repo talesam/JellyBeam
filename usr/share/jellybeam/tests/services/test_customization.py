@@ -55,6 +55,20 @@ class TestNormalizeUrl:
             "http://10.0.0.5:8096/jf"
         )
 
+    def test_fills_in_a_missing_scheme(self):
+        # Typing just the host is the common case; resolve_server_url works out
+        # which scheme actually answers.
+        assert customization.normalize_url("example.org") == "https://example.org"
+        assert customization.normalize_url("example.org", "http") == (
+            "http://example.org"
+        )
+
+    def test_host_with_port_is_not_mistaken_for_a_scheme(self):
+        # urlparse("localhost:8096") reports "localhost" as the scheme.
+        assert customization.normalize_url("localhost:8096", "http") == (
+            "http://localhost:8096"
+        )
+
     def test_strips_surrounding_whitespace(self):
         assert customization.normalize_url("  https://example.org  ") == (
             "https://example.org"
@@ -65,7 +79,6 @@ class TestNormalizeUrl:
         [
             "",
             "   ",
-            "example.org",  # no scheme
             "ftp://example.org",  # wrong scheme
             "https://",  # no host
             'https://a"onerror=x',  # would break out of the attribute
@@ -143,7 +156,7 @@ class TestInject:
     def test_bad_url_is_reported_before_touching_the_file(self, www_dir):
         before = read_index(www_dir)
         with pytest.raises(CustomizationURLError):
-            customization.inject(www_dir, "not-a-url")
+            customization.inject(www_dir, "ftp://example.org")
         assert read_index(www_dir) == before
 
     def test_empty_resource_list_is_rejected(self, www_dir):
@@ -246,7 +259,7 @@ class TestProbeServer:
 
         with patch("urllib.request.urlopen", explode):
             with pytest.raises(CustomizationURLError):
-                customization.probe_server("not-a-url")
+                customization.probe_server("ftp://example.org")
 
 
 class TestIsInjected:
@@ -259,3 +272,59 @@ class TestIsInjected:
 
     def test_missing_index_counts_as_not_injected(self, tmp_path):
         assert customization.is_injected(tmp_path) is False
+
+
+class TestSchemeHeuristics:
+    @pytest.mark.parametrize(
+        "host",
+        ["localhost:8096", "192.168.1.5", "10.0.0.2", "172.16.0.9", "tv.local", "nas"],
+    )
+    def test_local_hosts_try_plain_http_first(self, host):
+        assert customization.prefers_plain_http(host) is True
+
+    @pytest.mark.parametrize("host", ["example.org", "jf.example.co.uk", "8.8.8.8"])
+    def test_public_hosts_try_https_first(self, host):
+        assert customization.prefers_plain_http(host) is False
+
+    def test_detects_a_scheme_the_user_typed(self):
+        assert customization.has_scheme("https://x.org") is True
+        assert customization.has_scheme("x.org") is False
+        assert customization.has_scheme("localhost:8096") is False
+
+
+class TestResolveServerUrl:
+    def test_falls_back_to_the_other_scheme(self):
+        seen = []
+
+        def only_http(url, timeout=None):
+            seen.append(url)
+            if url.startswith("https://"):
+                raise urllib.error.URLError("no tls here")
+            return FakeResponse(json.dumps({"Version": "12"}).encode())
+
+        with patch("urllib.request.urlopen", only_http):
+            resolved, _ = customization.resolve_server_url("example.org")
+        assert resolved == "http://example.org"
+        assert len(seen) == 2  # https first for a public host, then http
+
+    def test_keeps_a_scheme_the_user_typed(self):
+        seen = []
+
+        def spy(url, timeout=None):
+            seen.append(url)
+            raise urllib.error.URLError("nope")
+
+        with patch("urllib.request.urlopen", spy):
+            with pytest.raises(CustomizationServerError):
+                customization.resolve_server_url("http://example.org")
+        assert seen == ["http://example.org/System/Info/Public"]
+
+    def test_returns_the_resolved_url_and_name(self):
+        with patch(
+            "urllib.request.urlopen",
+            fake_urlopen({"ServerName": "Contos", "Version": "12"}),
+        ):
+            assert customization.resolve_server_url("example.org") == (
+                "https://example.org",
+                "Contos",
+            )

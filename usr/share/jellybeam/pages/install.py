@@ -169,7 +169,7 @@ class InstallPage(Gtk.Box):
         self.terminal_frame.set_size_request(-1, 250)
 
         self.terminal = Vte.Terminal()
-        self.terminal.set_font(Pango.FontDescription("monospace 10"))
+        self.terminal.set_font(self._monospace_font())
         self.terminal.set_scroll_on_output(True)
         self.terminal.set_scrollback_lines(2000)
         self._apply_terminal_colors()
@@ -221,6 +221,43 @@ class InstallPage(Gtk.Box):
         self.status_spinner.start()
         self.status_row.add_prefix(self.status_spinner)
         self._current_prefix = self.status_spinner
+
+    def _monospace_font(self) -> Pango.FontDescription:
+        """Pick the font for the log terminal.
+
+        Asking Pango for the generic "monospace" family is not reliable: on
+        systems where fontconfig has no monospace alias configured it resolves
+        to a proportional face, and VTE then pads every glyph out to a fixed
+        cell, which looks broken. Prefer whatever the desktop is configured to
+        use for monospace, and fall back to concrete families that are actually
+        fixed width.
+        """
+        try:
+            from gi.repository import Gio
+
+            source = Gio.SettingsSchemaSource.get_default()
+            if source is not None and source.lookup(
+                "org.gnome.desktop.interface", True
+            ):
+                name = Gio.Settings.new("org.gnome.desktop.interface").get_string(
+                    "monospace-font-name"
+                )
+                if name:
+                    return Pango.FontDescription(name)
+        except Exception as e:  # a missing schema must not stop the page
+            self.window.logger.debug(f"Could not read the desktop monospace font: {e}")
+
+        families = {f.get_name() for f in self.get_pango_context().list_families()}
+        for candidate in (
+            "Noto Mono Nerd Font",
+            "Adwaita Mono",
+            "DejaVu Sans Mono",
+            "Liberation Mono",
+        ):
+            if candidate in families:
+                return Pango.FontDescription(f"{candidate} 10")
+
+        return Pango.FontDescription("monospace 10")
 
     def _show_icon_prefix(self, icon_name: str) -> None:
         """Replace prefix with a static icon."""

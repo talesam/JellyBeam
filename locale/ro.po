@@ -1187,3 +1187,7 @@ msgstr "Se testează…"
 #: NEEDS WORK
 msgid "The address must start with http:// or https://"
 msgstr "Adresa trebuie să înceapă cu http:// sau https://"
+
+#: NEEDS WORK
+msgid "That does not look like an address"
+msgstr "Aceasta nu pare o adresă"
