@@ -1214,3 +1214,11 @@ msgstr "The address must start with http:// or https://"
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr "That does not look like an address"
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr "Copy the log"
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr "Log copied"

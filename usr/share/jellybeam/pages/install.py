@@ -25,6 +25,9 @@ class InstallPage(Gtk.Box):
 
         self.installation_running = False
         self._pulse_source_id = None
+        # Mirrors what goes to the terminal, without the colour escapes, so
+        # the copy button does not depend on reading text back out of VTE.
+        self._plain_log = []
 
         self._setup_ui()
 
@@ -164,6 +167,19 @@ class InstallPage(Gtk.Box):
         self.terminal_expander.set_subtitle(_("Click to view detailed output"))
         log_icon = Gtk.Image.new_from_icon_name("utilities-terminal-symbolic")
         self.terminal_expander.add_prefix(log_icon)
+
+        # Copying the log is how a failure gets reported to someone else, so
+        # the button belongs on the header rather than buried inside.
+        self.copy_log_button = Gtk.Button.new_from_icon_name("edit-copy-symbolic")
+        self.copy_log_button.set_valign(Gtk.Align.CENTER)
+        self.copy_log_button.add_css_class("flat")
+        self.copy_log_button.set_tooltip_text(_("Copy the log"))
+        self.copy_log_button.update_property(
+            [Gtk.AccessibleProperty.LABEL], [_("Copy the log")]
+        )
+        self.copy_log_button.connect("clicked", self._on_copy_log)
+        self.terminal_expander.add_suffix(self.copy_log_button)
+
         terminal_group.add(self.terminal_expander)
 
         # Terminal inside expander
@@ -223,6 +239,27 @@ class InstallPage(Gtk.Box):
         self.status_spinner.start()
         self.status_row.add_prefix(self.status_spinner)
         self._current_prefix = self.status_spinner
+
+    def _on_copy_log(self, button):
+        """Put the whole log on the clipboard.
+
+        The text is kept as it is written rather than read back out of VTE:
+        VTE's own copy goes through its clipboard object, which aborts the
+        process -- not raises -- when the widget is not realized. Keeping our
+        own copy also strips the colour escapes, which nobody wants pasted
+        into a bug report.
+        """
+        text = "\n".join(self._plain_log)
+        display = self.get_display()
+        if display is not None:
+            display.get_clipboard().set(text)
+
+        toast = Adw.Toast.new(_("Log copied"))
+        window = self.get_root()
+        if hasattr(window, "toast_overlay"):
+            window.toast_overlay.add_toast(toast)
+        else:
+            self.window.logger.info("Installation log copied to the clipboard")
 
     def _monospace_font(self) -> Pango.FontDescription:
         """Pick the font for the log terminal.
@@ -373,10 +410,12 @@ class InstallPage(Gtk.Box):
 
                 GLib.idle_add(self._log_info, msg)
 
-                # Parse real progress from Docker output like "installing[95]"
-                match = re.search(r"\[(\d+)\]", msg)
+                # Only "installing[95]" is a percentage. A bare [number] also
+                # appears in lines like "spend time for wascmd is [9926]ms",
+                # which used to be read as progress and drove the bar to 6978%.
+                match = re.search(r"installing\[(\d+)\]", msg)
                 if match:
-                    percent = int(match.group(1))
+                    percent = min(int(match.group(1)), 100)
                     # Scale: 30% base (pull done) + 70% * install progress
                     real_progress = 0.30 + (0.70 * percent / 100)
                     GLib.idle_add(self._set_status, _("Installing..."), real_progress)
@@ -465,19 +504,23 @@ class InstallPage(Gtk.Box):
         line = "=" * 50
         header = f"\r\n\033[1;36m{line}\r\n  {text}\r\n{line}\033[0m\r\n"
         self.terminal.feed(header.encode("utf-8"))
+        self._plain_log.append(f"\n{line}\n  {text}\n{line}")
 
     def _log_info(self, text):
         """Log info text to terminal."""
         self.terminal.feed(f"{text}\r\n".encode("utf-8"))
+        self._plain_log.append(text)
 
     def _log_success(self, text):
         """Log success text (green)."""
         self.terminal.feed(f"\033[1;32m✓ {text}\033[0m\r\n".encode("utf-8"))
+        self._plain_log.append(f"OK: {text}")
         self._announce(text)
 
     def _log_error(self, text):
         """Log error text (red)."""
         self.terminal.feed(f"\033[1;31m✗ {text}\033[0m\r\n".encode("utf-8"))
+        self._plain_log.append(f"ERROR: {text}")
         self._announce(text)
 
     def _show_error(self, message):

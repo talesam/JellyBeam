@@ -1189,3 +1189,11 @@ msgstr "地址必须以 http:// 或 https:// 开头"
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr "这看起来不像地址"
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr "复制日志"
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr "日志已复制"

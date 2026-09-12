@@ -1193,3 +1193,11 @@ msgstr "A címnek http:// vagy https:// előtaggal kell kezdődnie"
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr "Ez nem tűnik címnek"
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr "Napló másolása"
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr "Napló másolva"

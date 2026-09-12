@@ -1193,3 +1193,11 @@ msgstr "Vistfangið verður að byrja á http:// eða https://"
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr "Þetta lítur ekki út eins og vistfang"
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr "Afrita atvikaskrá"
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr "Atvikaskrá afrituð"

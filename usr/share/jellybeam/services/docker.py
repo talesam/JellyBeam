@@ -1054,19 +1054,42 @@ echo "Package unpacked"
                 log_progress(f"Injected {len(resources)} customization resource(s)")
 
                 log_progress("Signing and installing...")
-                finish = f"""set -e
-cd {pkg}
+                finish = f"""cd {pkg} || exit 1
 # The old signatures no longer match the edited files.
 rm -f author-signature.xml signature1.xml
-cd {ws}
-tizen package -t wgt -s {TIZEN_SIGN_PROFILE} -- {CUSTOMIZATION_PKG_DIR}
+cd {ws} || exit 1
+tizen package -t wgt -s {TIZEN_SIGN_PROFILE} -- {CUSTOMIZATION_PKG_DIR} || exit 1
 WGT=$(ls {pkg}/*.wgt | head -1)
 echo "Signed: $WGT"
 sdb connect {tv_ip}
 TV_NAME=$(sdb devices | grep -E 'device\\s+\\w+[-]?\\w+' -o | sed 's/device//' - | xargs)
 if [ -z "$TV_NAME" ]; then echo "Could not find the TV name"; exit 1; fi
 echo "Found TV: $TV_NAME"
-tizen install -n "$WGT" -t "$TV_NAME"
+
+# tee keeps the output streaming to the user while letting us inspect it.
+try_install() {{
+    tizen install -n "$WGT" -t "$TV_NAME" 2>&1 | tee /tmp/install.log
+    grep -q "successfully installed" /tmp/install.log
+}}
+
+if ! try_install; then
+    # Tizen refuses to update an app unless the new package carries the same
+    # author certificate. The published package is signed by whoever built it,
+    # and ours is re-signed here, so the first customized install always
+    # collides. Removing the old one is the only way through.
+    if grep -q "Author certificate not match" /tmp/install.log; then
+        PKGID=$(grep -o 'package="[^"]*"' {pkg}/config.xml | head -1 | cut -d'"' -f2)
+        echo ""
+        echo "The installed app was signed by a different author."
+        echo "Removing it before installing the customized package."
+        echo "(Settings stored inside the TV app will be lost.)"
+        if [ -z "$PKGID" ]; then echo "Could not read the package id"; exit 1; fi
+        tizen uninstall -p "$PKGID" -t "$TV_NAME" || exit 1
+        try_install || exit 1
+    else
+        exit 1
+    fi
+fi
 """
                 if self._run_in_image(finish, log_progress) != 0:
                     GLib.idle_add(callback, False, "Installation failed")

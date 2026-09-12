@@ -1192,3 +1192,11 @@ msgstr "Adresa mora počinjati s http:// ili https://"
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr "To ne izgleda kao adresa"
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr "Kopiraj zapisnik"
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr "Zapisnik kopiran"

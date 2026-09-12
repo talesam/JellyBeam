@@ -1191,3 +1191,11 @@ msgstr "Адреса має починатися з http:// або https://"
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr "Це не схоже на адресу"
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr "Копіювати журнал"
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr "Журнал скопійовано"

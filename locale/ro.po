@@ -1191,3 +1191,11 @@ msgstr "Adresa trebuie să înceapă cu http:// sau https://"
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr "Aceasta nu pare o adresă"
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr "Copiază jurnalul"
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr "Jurnal copiat"

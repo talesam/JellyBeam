@@ -1191,3 +1191,11 @@ msgstr "Adresa musí začínať na http:// alebo https://"
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr "Toto nevyzerá ako adresa"
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr "Kopírovať log"
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr "Log skopírovaný"

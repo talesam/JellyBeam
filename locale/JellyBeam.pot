@@ -1202,3 +1202,11 @@ msgstr ""
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr ""
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr ""

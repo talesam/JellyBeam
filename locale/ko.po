@@ -1189,3 +1189,11 @@ msgstr "주소는 http:// 또는 https://로 시작해야 합니다"
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr "주소처럼 보이지 않습니다"
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr "로그 복사"
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr "로그가 복사됨"

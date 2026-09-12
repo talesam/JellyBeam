@@ -1189,3 +1189,11 @@ msgstr "הכתובת חייבת להתחיל ב-http:// או ב-https://"
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr "זה לא נראה ככתובת"
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr "העתקת היומן"
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr "היומן הועתק"

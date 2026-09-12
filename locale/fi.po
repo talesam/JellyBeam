@@ -1191,3 +1191,11 @@ msgstr "Osoitteen on alettava http:// tai https://"
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr "Tämä ei näytä osoitteelta"
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr "Kopioi loki"
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr "Loki kopioitu"

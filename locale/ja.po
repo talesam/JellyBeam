@@ -1189,3 +1189,11 @@ msgstr "アドレスは http:// または https:// で始まる必要があり�
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr "アドレスのようには見えません"
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr "ログをコピー"
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr "ログをコピーしました"

@@ -1191,3 +1191,11 @@ msgstr "Aadress peab algama http:// või https://"
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr "See ei näi olevat aadress"
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr "Kopeeri logi"
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr "Logi kopeeritud"

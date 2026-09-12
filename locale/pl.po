@@ -1191,3 +1191,11 @@ msgstr "Adres musi zaczynać się od http:// lub https://"
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr "To nie wygląda na adres"
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr "Kopiuj dziennik"
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr "Dziennik skopiowany"

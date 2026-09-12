@@ -1193,3 +1193,11 @@ msgstr "Η διεύθυνση πρέπει να ξεκινά με http:// ή htt
 #: NEEDS WORK
 msgid "That does not look like an address"
 msgstr "Αυτό δεν μοιάζει με διεύθυνση"
+
+#: NEEDS WORK
+msgid "Copy the log"
+msgstr "Αντιγραφή αρχείου καταγραφής"
+
+#: NEEDS WORK
+msgid "Log copied"
+msgstr "Το αρχείο καταγραφής αντιγράφηκε"
