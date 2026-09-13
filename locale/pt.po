@@ -1159,12 +1159,17 @@ msgstr "Concluído"
 msgid "Log copied"
 msgstr "Log copiado"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 371
+# File: usr/share/jellybeam/pages/install.py, line: 355
+#: NEEDS WORK
+msgid "Tizen version unavailable"
+msgstr "Versão do Tizen indisponível"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 378
 #: NEEDS WORK
 msgid "This TV needs its own certificate"
 msgstr "Esta TV precisa do próprio certificado"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 374
+# File: usr/share/jellybeam/pages/install.py, line: 381
 #: NEEDS WORK
 #, python-brace-format
 msgid ""
@@ -1299,27 +1304,3 @@ msgstr "A instalação foi cancelada"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Instalação cancelada"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "O serviço do Docker não está em execução"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "O Docker não está instalado neste sistema"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Senha do certificado inválida"
-
-#: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Esta TV precisa do próprio certificado"
-
-#: NEEDS WORK
-msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
-msgstr "O Tizen {version} rejeita o pacote publicado, cujo certificado de assinatura expirou. A instalação falhará com um erro de certificado."
-
-#: NEEDS WORK
-msgid "Tizen version unavailable"
-msgstr "Versão do Tizen indisponível"

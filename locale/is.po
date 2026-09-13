@@ -1161,12 +1161,17 @@ msgstr "Farið að framkvæma"
 msgid "Log copied"
 msgstr "Atvikaskrá afrituð"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 371
+# File: usr/share/jellybeam/pages/install.py, line: 355
+#: NEEDS WORK
+msgid "Tizen version unavailable"
+msgstr "Tizen útgáfa ekki tiltæk"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 378
 #: NEEDS WORK
 msgid "This TV needs its own certificate"
 msgstr "Þetta sjónvarp þarf sitt eigið skírteini"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 374
+# File: usr/share/jellybeam/pages/install.py, line: 381
 #: NEEDS WORK
 #, python-brace-format
 msgid ""
@@ -1301,27 +1306,3 @@ msgstr "Uppsetningu var hætt."
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Uppsetningu aflýst"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Docker-þjónustan er ekki í gangi"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker er ekki uppsett á þessu kerfi"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Ógilt lykilorð skírteinis"
-
-#: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Þetta sjónvarp þarf sitt eigið skírteini"
-
-#: NEEDS WORK
-msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
-msgstr "Tizen {version} hafnar útgefnum pakka þar sem undirritunarskírteinið er útrunnið. Uppsetningin mun mistakast með skírteinisvillu."
-
-#: NEEDS WORK
-msgid "Tizen version unavailable"
-msgstr "Tizen útgáfa ekki tiltæk"

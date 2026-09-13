@@ -1154,12 +1154,17 @@ msgstr "완료"
 msgid "Log copied"
 msgstr "로그가 복사됨"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 371
+# File: usr/share/jellybeam/pages/install.py, line: 355
+#: NEEDS WORK
+msgid "Tizen version unavailable"
+msgstr "Tizen 버전 확인 불가"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 378
 #: NEEDS WORK
 msgid "This TV needs its own certificate"
 msgstr "이 TV에는 자체 인증서가 필요합니다"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 374
+# File: usr/share/jellybeam/pages/install.py, line: 381
 #: NEEDS WORK
 #, python-brace-format
 msgid ""
@@ -1292,27 +1297,3 @@ msgstr "설치가 취소되었습니다"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "설치가 취소되었습니다"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Docker 데몬이 실행되고 있지 않습니다"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "이 시스템에 Docker가 설치되어 있지 않습니다"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "인증서 비밀번호가 올바르지 않습니다"
-
-#: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "이 TV에는 자체 인증서가 필요합니다"
-
-#: NEEDS WORK
-msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
-msgstr "Tizen {version}은(는) 서명 인증서가 만료된 게시된 패키지를 거부합니다. 설치는 인증서 오류로 실패합니다."
-
-#: NEEDS WORK
-msgid "Tizen version unavailable"
-msgstr "Tizen 버전 확인 불가"
