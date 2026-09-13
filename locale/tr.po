@@ -1159,6 +1159,21 @@ msgstr "Tamam"
 msgid "Log copied"
 msgstr "Günlük kopyalandı"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 371
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Bu TV kendi sertifikasına ihtiyaç duyuyor"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 374
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
+"fail with a certificate error."
+msgstr ""
+"Tizen {version}, imzalama sertifikasının süresi dolmuş olan yayınlanan paketi reddediyor. Kurulum "
+"bir sertifika hatasıyla başarısız olacak."
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"

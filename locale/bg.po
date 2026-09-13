@@ -1161,6 +1161,21 @@ msgstr "Готово"
 msgid "Log copied"
 msgstr "Дневникът е копиран"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 371
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Този телевизор се нуждае от собствен сертификат"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 374
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
+"fail with a certificate error."
+msgstr ""
+"Tizen {version} отхвърля публикувания пакет, чийто сертификат за подписване е изтекъл. "
+"Инсталирането ще завърши с грешка в сертификата."
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"

@@ -1159,6 +1159,21 @@ msgstr "Hotovo"
 msgid "Log copied"
 msgstr "Log zkopírován"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 371
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Tento televizor potřebuje vlastní certifikát"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 374
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
+"fail with a certificate error."
+msgstr ""
+"Tizen {version} odmítá zveřejněný balíček, jehož podpisový certifikát vypršel. Instalace selže s "
+"chybou certifikátu."
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"

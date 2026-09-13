@@ -7,7 +7,7 @@
 msgid   ""
 msgstr  "Project-Id-Version: JellyBeam\n"
         "Report-Msgid-Bugs-To: \n"
-        "POT-Creation-Date: 2026-09-13 19:50+0000\n"
+        "POT-Creation-Date: 2026-09-13 22:04+0000\n"
         "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
         "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
         "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,31 +17,31 @@ msgstr  "Project-Id-Version: JellyBeam\n"
         "Content-Transfer-Encoding: 8bit\n"
 
 #
-# File: usr/share/jellybeam/services/docker.py, line: 319
+# File: usr/share/jellybeam/services/docker.py, line: 324
 msgid   "Authorization was cancelled"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/services/docker.py, line: 325
+# File: usr/share/jellybeam/services/docker.py, line: 330
 msgid   "Could not get administrator access"
 msgstr  ""
 
 #
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
-# File: usr/share/jellybeam/services/docker.py, line: 331
+# File: usr/share/jellybeam/services/docker.py, line: 336
 # File: usr/share/jellybeam/pages/welcome.py, line: 266
 msgid   "Could not start Docker"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/services/docker.py, line: 344
-# File: usr/share/jellybeam/services/docker.py, line: 348
+# File: usr/share/jellybeam/services/docker.py, line: 349
+# File: usr/share/jellybeam/services/docker.py, line: 353
 msgid   "Docker did not start in time"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/services/docker.py, line: 355
+# File: usr/share/jellybeam/services/docker.py, line: 360
 msgid   "pkexec was not found. Start Docker manually."
 msgstr  ""
 
@@ -1057,7 +1057,7 @@ msgstr  ""
 #
 # File: usr/share/jellybeam/pages/install.py, line: 64
 # File: usr/share/jellybeam/pages/install.py, line: 146
-# File: usr/share/jellybeam/pages/install.py, line: 601
+# File: usr/share/jellybeam/pages/install.py, line: 648
 msgid   "Install Jellyfin"
 msgstr  ""
 
@@ -1068,8 +1068,8 @@ msgstr  ""
 
 #
 # File: usr/share/jellybeam/pages/install.py, line: 75
-# File: usr/share/jellybeam/pages/install.py, line: 351
-# File: usr/share/jellybeam/pages/install.py, line: 354
+# File: usr/share/jellybeam/pages/install.py, line: 398
+# File: usr/share/jellybeam/pages/install.py, line: 401
 msgid   "Target Device"
 msgstr  ""
 
@@ -1136,8 +1136,8 @@ msgstr  ""
 
 #
 # File: usr/share/jellybeam/pages/install.py, line: 220
-# File: usr/share/jellybeam/pages/install.py, line: 554
-# File: usr/share/jellybeam/pages/install.py, line: 563
+# File: usr/share/jellybeam/pages/install.py, line: 601
+# File: usr/share/jellybeam/pages/install.py, line: 610
 msgid   "Installation Complete!"
 msgstr  ""
 
@@ -1162,130 +1162,142 @@ msgid   "Log copied"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 355
+# File: usr/share/jellybeam/pages/install.py, line: 371
+msgid   "This TV needs its own certificate"
+msgstr  ""
+
+#
+# File: usr/share/jellybeam/pages/install.py, line: 374
+#, python-brace-format
+msgid   "Tizen {version} refuses the published package, whose signing "
+        "certificate expired. Installing will fail with a certificate error."
+msgstr  ""
+
+#
+# File: usr/share/jellybeam/pages/install.py, line: 402
 msgid   "No device selected - please go back"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 364
+# File: usr/share/jellybeam/pages/install.py, line: 411
 msgid   "No TV configured. Please go back and select a device."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 387
+# File: usr/share/jellybeam/pages/install.py, line: 434
 msgid   "Starting Installation"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 392
-# File: usr/share/jellybeam/pages/install.py, line: 464
+# File: usr/share/jellybeam/pages/install.py, line: 439
+# File: usr/share/jellybeam/pages/install.py, line: 511
 msgid   "Downloading container..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 393
+# File: usr/share/jellybeam/pages/install.py, line: 440
 msgid   "Pulling Docker image..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 404
+# File: usr/share/jellybeam/pages/install.py, line: 451
 msgid   "Container ready!"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 408
+# File: usr/share/jellybeam/pages/install.py, line: 455
 msgid   "Installing to TV..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 409
+# File: usr/share/jellybeam/pages/install.py, line: 456
 msgid   "Connecting and installing..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 410
+# File: usr/share/jellybeam/pages/install.py, line: 457
 msgid   "This may take a few minutes..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 432
+# File: usr/share/jellybeam/pages/install.py, line: 479
 msgid   "Installing..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 434
+# File: usr/share/jellybeam/pages/install.py, line: 481
 msgid   "Downloading app..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 436
+# File: usr/share/jellybeam/pages/install.py, line: 483
 msgid   "Transferring..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 438
+# File: usr/share/jellybeam/pages/install.py, line: 485
 msgid   "Connecting to TV..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 440
+# File: usr/share/jellybeam/pages/install.py, line: 487
 msgid   "Finishing..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 466
+# File: usr/share/jellybeam/pages/install.py, line: 513
 msgid   "Extracting layers..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 468
+# File: usr/share/jellybeam/pages/install.py, line: 515
 msgid   "Download complete"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 539
+# File: usr/share/jellybeam/pages/install.py, line: 586
 msgid   "Error"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 555
+# File: usr/share/jellybeam/pages/install.py, line: 602
 msgid   "Jellyfin is now on your TV"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 557
+# File: usr/share/jellybeam/pages/install.py, line: 604
 msgid   "Reinstall"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 564
+# File: usr/share/jellybeam/pages/install.py, line: 611
 msgid   "Find Jellyfin in your TV's app list."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 573
-# File: usr/share/jellybeam/pages/install.py, line: 581
+# File: usr/share/jellybeam/pages/install.py, line: 620
+# File: usr/share/jellybeam/pages/install.py, line: 628
 msgid   "Installation Failed"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 576
+# File: usr/share/jellybeam/pages/install.py, line: 623
 msgid   "Retry"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 594
-# File: usr/share/jellybeam/pages/install.py, line: 599
+# File: usr/share/jellybeam/pages/install.py, line: 641
+# File: usr/share/jellybeam/pages/install.py, line: 646
 msgid   "Cancelled"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 595
+# File: usr/share/jellybeam/pages/install.py, line: 642
 msgid   "Installation was cancelled"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 605
+# File: usr/share/jellybeam/pages/install.py, line: 652
 msgid   "Installation cancelled"
 msgstr  ""
 

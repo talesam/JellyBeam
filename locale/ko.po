@@ -1154,6 +1154,19 @@ msgstr "완료"
 msgid "Log copied"
 msgstr "로그가 복사됨"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 371
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "이 TV에는 자체 인증서가 필요합니다"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 374
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
+"fail with a certificate error."
+msgstr "Tizen {version}은(는) 서명 인증서가 만료된 게시된 패키지를 거부합니다. 설치는 인증서 오류로 실패합니다."
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"

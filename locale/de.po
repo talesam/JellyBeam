@@ -1161,6 +1161,21 @@ msgstr "Fertig"
 msgid "Log copied"
 msgstr "Protokoll kopiert"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 371
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Dieser Fernseher benötigt ein eigenes Zertifikat"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 374
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
+"fail with a certificate error."
+msgstr ""
+"Tizen {version} lehnt das veröffentlichte Paket ab, dessen Signaturzertifikat abgelaufen ist. Die "
+"Installation schlägt mit einem Zertifikatfehler fehl."
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"
