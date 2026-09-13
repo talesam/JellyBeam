@@ -1266,3 +1266,11 @@ msgstr "Telerid ja projektorid"
 #: NEEDS WORK
 msgid "pkexec was not found. Start Docker manually."
 msgstr "pkexec'i ei leitud. Käivitage Docker käsitsi."
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was turned off and on again after that\n\nThe TV only opens the installation port after a restart."
+msgstr "Teler vastas, kuid arendajarežiim ei ole veel aktiivne.\n\nKontrollige telerist, et:\n  • Arendajarežiim on Sees\n  • hostarvuti IP on {ip}\n  • teler lülitati pärast seda välja ja uuesti sisse\n\nTeler avab paigalduspordi alles pärast taaskäivitust."
+
+#: NEEDS WORK
+msgid "your computer's IP"
+msgstr "teie arvuti IP-aadress"

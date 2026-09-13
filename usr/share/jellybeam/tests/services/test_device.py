@@ -220,3 +220,61 @@ class TestDeviceServiceIdentification:
 
         result = device_service._identify_samsung_device("192.168.1.100", 8001)
         assert result is None
+
+
+class TestDeveloperModeDiagnosis:
+    """The TV answers on 8001 but keeps 26101 shut until Developer Mode is on.
+
+    That used to be logged as a warning and reported as success, so the run
+    carried on and failed much later, at the install step, where the cause no
+    longer appeared. A user hit exactly that.
+    """
+
+    @patch("services.device.GLib")
+    def test_closed_sdb_port_fails_the_connection(self, mock_glib):
+        from services.device import DeviceService
+
+        service = DeviceService(logger=Mock())
+        service._identify_samsung_device = Mock(return_value={"name": "TV"})
+        service._get_local_ip = Mock(return_value="192.168.0.10")
+        # 8001 open, 26101 shut.
+        service._check_port_quick = Mock(side_effect=lambda ip, port: port != 26101)
+
+        recebido = []
+        done = threading.Event()
+
+        def capture(fn, *a, **kw):
+            recebido.append(a)
+            done.set()
+
+        mock_glib.idle_add.side_effect = capture
+        service.connect_device_async("192.168.0.50", True, Mock())
+        done.wait(timeout=2)
+
+        assert recebido, "callback never ran"
+        ok, mensagem = recebido[0][0], recebido[0][1]
+        assert ok is False, "a shut debug port must not count as connected"
+        # The message has to be actionable, not just a code.
+        assert "192.168.0.10" in mensagem, "must show which IP the TV expects"
+        assert "reason=" not in mensagem, "log wording leaked into the dialog"
+
+    @patch("services.device.GLib")
+    def test_open_sdb_port_connects(self, mock_glib):
+        from services.device import DeviceService
+
+        service = DeviceService(logger=Mock())
+        service._identify_samsung_device = Mock(return_value={"name": "TV"})
+        service._check_port_quick = Mock(return_value=True)
+
+        recebido = []
+        done = threading.Event()
+
+        def capture(fn, *a, **kw):
+            recebido.append(a)
+            done.set()
+
+        mock_glib.idle_add.side_effect = capture
+        service.connect_device_async("192.168.0.50", True, Mock())
+        done.wait(timeout=2)
+
+        assert recebido and recebido[0][0] is True

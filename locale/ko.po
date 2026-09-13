@@ -1262,3 +1262,11 @@ msgstr "TV 및 프로젝터"
 #: NEEDS WORK
 msgid "pkexec was not found. Start Docker manually."
 msgstr "pkexec를 찾을 수 없습니다. Docker를 수동으로 시작하세요."
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was turned off and on again after that\n\nThe TV only opens the installation port after a restart."
+msgstr "TV가 응답했지만 개발자 모드가 아직 활성화되지 않았습니다.\n\nTV에서 다음을 확인하세요:\n  • 개발자 모드가 켜져 있는지\n  • 호스트 PC IP가 {ip}인지\n  • 그 후 TV를 껐다가 다시 켰는지\n\nTV는 재시작 후에만 설치 포트를 엽니다."
+
+#: NEEDS WORK
+msgid "your computer's IP"
+msgstr "사용 중인 컴퓨터의 IP"

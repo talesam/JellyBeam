@@ -1268,3 +1268,11 @@ msgstr "Fernseher und Projektoren"
 #: NEEDS WORK
 msgid "pkexec was not found. Start Docker manually."
 msgstr "pkexec wurde nicht gefunden. Starten Sie Docker manuell."
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was turned off and on again after that\n\nThe TV only opens the installation port after a restart."
+msgstr "Der Fernseher hat geantwortet, aber der Entwicklermodus ist noch nicht aktiv.\n\nPrüfen Sie am Fernseher, dass:\n  • Entwicklermodus aktiviert ist\n  • die Host-PC-IP {ip} lautet\n  • der Fernseher danach aus- und wieder eingeschaltet wurde\n\nDer Fernseher öffnet den Installationsport erst nach einem Neustart."
+
+#: NEEDS WORK
+msgid "your computer's IP"
+msgstr "die IP-Adresse Ihres Computers"

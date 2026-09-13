@@ -1268,3 +1268,11 @@ msgstr "Τηλεοράσεις και προβολείς"
 #: NEEDS WORK
 msgid "pkexec was not found. Start Docker manually."
 msgstr "Το pkexec δεν βρέθηκε. Εκκινήστε το Docker χειροκίνητα."
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was turned off and on again after that\n\nThe TV only opens the installation port after a restart."
+msgstr "Η τηλεόραση απάντησε, αλλά η Λειτουργία προγραμματιστή δεν είναι ακόμη ενεργή.\n\nΣτην τηλεόραση, ελέγξτε ότι:\n  • Η Λειτουργία προγραμματιστή είναι Ενεργοποιημένη\n  • η IP του υπολογιστή host είναι {ip}\n  • η τηλεόραση απενεργοποιήθηκε και ενεργοποιήθηκε ξανά μετά από αυτό\n\nΗ τηλεόραση ανοίγει τη θύρα εγκατάστασης μόνο μετά από επανεκκίνηση."
+
+#: NEEDS WORK
+msgid "your computer's IP"
+msgstr "η IP διεύθυνση του υπολογιστή σας"

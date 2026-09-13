@@ -1264,3 +1264,11 @@ msgstr "טלוויזיות ומקרנים"
 #: NEEDS WORK
 msgid "pkexec was not found. Start Docker manually."
 msgstr "pkexec לא נמצא. הפעל את Docker באופן ידני."
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was turned off and on again after that\n\nThe TV only opens the installation port after a restart."
+msgstr "הטלוויזיה הגיבה, אך מצב מפתח עדיין אינו פעיל.\n\nבטלוויזיה, בדקו כי:\n  • מצב מפתח מופעל\n  • כתובת ה-IP של המחשב המארח היא {ip}\n  • הטלוויזיה כובתה והודלקה מחדש לאחר מכן\n\nהטלוויזיה פותחת את פורט ההתקנה רק לאחר הפעלה מחדש."
+
+#: NEEDS WORK
+msgid "your computer's IP"
+msgstr "כתובת ה-IP של המחשב שלך"

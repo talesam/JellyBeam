@@ -31,6 +31,7 @@ from utils.constants import (
     APP_VERSION,
 )
 from utils.exceptions import DeviceConnectionError, NetworkScanError
+from utils.i18n import _
 from utils.validators import NetworkValidator
 
 
@@ -281,7 +282,11 @@ class DeviceService:
 
             except DeviceConnectionError as e:
                 self.logger.error(f"Device connection error: {e}")
-                GLib.idle_add(callback, False, str(e))
+                # str(e) reads like a log line ("Failed to connect to device at
+                # 1.2.3.4 (reason=...)"). The reason alone is what was written
+                # for the person looking at the dialog.
+                motivo = e.details.get("reason") or str(e)
+                GLib.idle_add(callback, False, motivo)
             except Exception as e:
                 self.logger.exception(f"Unexpected connection error: {e}")
                 GLib.idle_add(callback, False, str(e))
@@ -312,19 +317,33 @@ class DeviceService:
                         f"SDB port {SDB_PORT} is accessible - developer mode confirmed on TV"
                     )
                     return True
-                else:
-                    # SDB port not accessible, but device is reachable
-                    # This might mean developer mode is not fully enabled on the TV
-                    self.logger.warning(
-                        f"SDB port {SDB_PORT} not accessible - ensure Developer Mode is enabled on TV and TV was restarted"
-                    )
-                    # Still return True since the device is valid Samsung TV
-                    # The actual SDB connection will be attempted during installation
-                    return True
+                # The TV answers, but the debug bridge is shut. Reporting
+                # success here used to push the failure all the way to the
+                # install step, where the cause no longer shows -- the reason
+                # was written to the log and nowhere the user would look.
+                self.logger.warning(
+                    f"SDB port {SDB_PORT} closed on {ip}: Developer Mode is not "
+                    "active yet"
+                )
+                raise DeviceConnectionError(
+                    ip,
+                    _(
+                        "The TV answered, but Developer Mode is not active yet.\n\n"
+                        "On the TV, check that:\n"
+                        "  • Developer Mode is On\n"
+                        "  • the Host PC IP is {ip}\n"
+                        "  • the TV was turned off and on again after that\n\n"
+                        "The TV only opens the installation port after a restart."
+                    ).format(ip=self._get_local_ip() or _("your computer's IP")),
+                )
             else:
                 self.logger.warning("Could not verify Samsung device")
                 return False
 
+        except DeviceConnectionError:
+            # Carries the explanation meant for the user; the generic handler
+            # below would flatten it into "Failed to establish connection".
+            raise
         except Exception as e:
             self.logger.exception(f"Developer mode verification error: {e}")
             return False

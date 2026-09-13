@@ -1262,3 +1262,11 @@ msgstr "电视和投影仪"
 #: NEEDS WORK
 msgid "pkexec was not found. Start Docker manually."
 msgstr "未找到 pkexec。请手动启动 Docker。"
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was turned off and on again after that\n\nThe TV only opens the installation port after a restart."
+msgstr "电视已响应,但开发者模式尚未激活。\n\n请在电视上检查:\n  • 开发者模式已开启\n  • 主机PC IP为{ip}\n  • 之后电视已关闭并重新打开\n\n电视只有在重启后才会打开安装端口。"
+
+#: NEEDS WORK
+msgid "your computer's IP"
+msgstr "您电脑的IP"

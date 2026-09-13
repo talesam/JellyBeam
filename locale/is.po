@@ -1268,3 +1268,11 @@ msgstr "Sjónvörp og skjávarpar"
 #: NEEDS WORK
 msgid "pkexec was not found. Start Docker manually."
 msgstr "pkexec fannst ekki. Ræstu Docker handvirkt."
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was turned off and on again after that\n\nThe TV only opens the installation port after a restart."
+msgstr "Sjónvarpið svaraði, en Forritarahamur er ekki enn virkur.\n\nAthugaðu í sjónvarpinu að:\n  • Forritarahamur sé Á\n  • IP-tala hýsingartölvu sé {ip}\n  • slökkt hafi verið á sjónvarpinu og kveikt aftur á því á eftir\n\nSjónvarpið opnar aðeins uppsetningargáttina eftir endurræsingu."
+
+#: NEEDS WORK
+msgid "your computer's IP"
+msgstr "IP-tala tölvunnar þinnar"
