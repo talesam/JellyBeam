@@ -16,6 +16,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
+# File: usr/share/jellybeam/services/docker.py, line: 319
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "ההרשאה בוטלה"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 325
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "לא ניתן היה לקבל הרשאות מנהל"
+# 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 331
+# File: usr/share/jellybeam/pages/welcome.py, line: 266
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "לא ניתן היה להפעיל את Docker"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 344
+# File: usr/share/jellybeam/services/docker.py, line: 348
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker לא הופעל בזמן"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 355
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec לא נמצא. הפעל את Docker באופן ידני."
+# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -584,15 +613,15 @@ msgstr "ג'לי טיזן מתקין"
 msgid "Install Jellyfin on your Samsung Smart TV or projector"
 msgstr "התקן את Jellyfin על הטלוויזיה החכמה של סמסונג או על המקרן שלך"
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 76
-#: NEEDS WORK
-msgid "Samsung & LG TVs"
-msgstr "טלוויזיות Samsung & LG"
-# 
 # File: usr/share/jellybeam/pages/welcome.py, line: 77
 #: NEEDS WORK
-msgid "Wide device support"
-msgstr "תמיכה רחבה במכשירים"
+msgid "Samsung TVs"
+msgstr "טלוויזיות Samsung"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 78
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "טלוויזיות ומקרנים"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 81
 #: NEEDS WORK
