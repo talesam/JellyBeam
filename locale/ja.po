@@ -1154,6 +1154,19 @@ msgstr "完了"
 msgid "Log copied"
 msgstr "ログをコピーしました"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 371
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "このテレビには専用の証明書が必要です"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 374
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
+"fail with a certificate error."
+msgstr "Tizen {version} は、署名証明書の有効期限が切れている公開パッケージを拒否します。インストールは証明書エラーで失敗します。"
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"
@@ -1279,23 +1292,3 @@ msgstr "インストールがキャンセルされました"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "インストールがキャンセルされました"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Dockerデーモンが実行されていません"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "このシステムにはDockerがインストールされていません"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "証明書のパスワードが正しくありません"
-
-#: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "このテレビには専用の証明書が必要です"
-
-#: NEEDS WORK
-msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
-msgstr "Tizen {version} は、署名証明書の有効期限が切れている公開パッケージを拒否します。インストールは証明書エラーで失敗します。"

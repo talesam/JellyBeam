@@ -1159,6 +1159,21 @@ msgstr "Završeno"
 msgid "Log copied"
 msgstr "Zapisnik kopiran"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 371
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Ovaj TV treba vlastiti certifikat"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 374
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
+"fail with a certificate error."
+msgstr ""
+"Tizen {version} odbija objavljeni paket čiji je certifikat za potpisivanje istekao. Instalacija će "
+"propasti s pogreškom certifikata."
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"
@@ -1284,23 +1299,3 @@ msgstr "Instalacija je otkazana"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Instalacija otkazana"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Docker servis nije pokrenut"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker nije instaliran na ovom sustavu"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Neispravna lozinka certifikata"
-
-#: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Ovaj TV treba vlastiti certifikat"
-
-#: NEEDS WORK
-msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
-msgstr "Tizen {version} odbija objavljeni paket čiji je certifikat za potpisivanje istekao. Instalacija će propasti s pogreškom certifikata."

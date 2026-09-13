@@ -1159,6 +1159,21 @@ msgstr "Færdig"
 msgid "Log copied"
 msgstr "Log kopieret"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 371
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Dette tv har brug for sit eget certifikat"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 374
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
+"fail with a certificate error."
+msgstr ""
+"Tizen {version} afviser den udgivne pakke, hvis signeringscertifikat er udløbet. Installationen "
+"mislykkes med en certifikatfejl."
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"
@@ -1284,23 +1299,3 @@ msgstr "Installation blev annulleret"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installation annulleret"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Docker-dæmonen kører ikke"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker er ikke installeret på dette system"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Ugyldig certifikatadgangskode"
-
-#: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Dette tv har brug for sit eget certifikat"
-
-#: NEEDS WORK
-msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
-msgstr "Tizen {version} afviser den udgivne pakke, hvis signeringscertifikat er udløbet. Installationen mislykkes med en certifikatfejl."

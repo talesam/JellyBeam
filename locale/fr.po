@@ -1162,6 +1162,21 @@ msgstr "Fait"
 msgid "Log copied"
 msgstr "Journal copié"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 371
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Ce téléviseur a besoin de son propre certificat"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 374
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
+"fail with a certificate error."
+msgstr ""
+"Tizen {version} refuse le paquet publié, dont le certificat de signature a expiré. L'installation "
+"échouera avec une erreur de certificat."
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"
@@ -1287,23 +1302,3 @@ msgstr "L'installation a été annulée"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installation annulée"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Le service Docker n'est pas en cours d'exécution"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker n'est pas installé sur ce système"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Mot de passe de certificat invalide"
-
-#: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Ce téléviseur a besoin de son propre certificat"
-
-#: NEEDS WORK
-msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
-msgstr "Tizen {version} refuse le paquet publié, dont le certificat de signature a expiré. L'installation échouera avec une erreur de certificat."

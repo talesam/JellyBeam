@@ -1161,6 +1161,21 @@ msgstr "Kész"
 msgid "Log copied"
 msgstr "Napló másolva"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 371
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Ennek a TV-nek saját tanúsítványra van szüksége"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 374
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
+"fail with a certificate error."
+msgstr ""
+"A Tizen {version} elutasítja a közzétett csomagot, amelynek aláíró tanúsítványa lejárt. A telepítés "
+"tanúsítványhibával fog meghiúsulni."
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"
@@ -1286,23 +1301,3 @@ msgstr "A telepítés megszakítva lett"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Telepítés megszakítva"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "A Docker szolgáltatás nem fut"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "A Docker nincs telepítve ezen a rendszeren"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Érvénytelen tanúsítványjelszó"
-
-#: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Ennek a TV-nek saját tanúsítványra van szüksége"
-
-#: NEEDS WORK
-msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
-msgstr "A Tizen {version} elutasítja a közzétett csomagot, amelynek aláíró tanúsítványa lejárt. A telepítés tanúsítványhibával fog meghiúsulni."

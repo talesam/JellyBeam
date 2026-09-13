@@ -1161,6 +1161,21 @@ msgstr "Klaar"
 msgid "Log copied"
 msgstr "Log gekopieerd"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 371
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Deze tv heeft een eigen certificaat nodig"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 374
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
+"fail with a certificate error."
+msgstr ""
+"Tizen {version} weigert het gepubliceerde pakket, waarvan het ondertekeningscertificaat is "
+"verlopen. Installeren mislukt met een certificaatfout."
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"
@@ -1286,23 +1301,3 @@ msgstr "Installatie is geannuleerd"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installatie geannuleerd"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Docker-service draait niet"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker is niet geïnstalleerd op dit systeem"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Ongeldig certificaatwachtwoord"
-
-#: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Deze tv heeft een eigen certificaat nodig"
-
-#: NEEDS WORK
-msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
-msgstr "Tizen {version} weigert het gepubliceerde pakket, waarvan het ondertekeningscertificaat is verlopen. Installeren mislukt met een certificaatfout."

@@ -1157,6 +1157,21 @@ msgstr "בוצע"
 msgid "Log copied"
 msgstr "היומן הועתק"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 371
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "לטלוויזיה הזו נדרשת תעודה משלה"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 374
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
+"fail with a certificate error."
+msgstr ""
+"Tizen {version} דוחה את החבילה שפורסמה, מכיוון שתוקף תעודת החתימה שלה פג. ההתקנה תיכשל עם שגיאת "
+"תעודה."
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"
@@ -1282,23 +1297,3 @@ msgstr "ההתקנה בוטלה"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "התקנה בוטלה"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "שירות Docker אינו פועל"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker אינו מותקן במערכת זו"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "סיסמת האישור אינה תקינה"
-
-#: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "לטלוויזיה הזו נדרשת תעודה משלה"
-
-#: NEEDS WORK
-msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
-msgstr "Tizen {version} דוחה את החבילה שפורסמה, מכיוון שתוקף תעודת החתימה שלה פג. ההתקנה תיכשל עם שגיאת תעודה."

@@ -1159,6 +1159,21 @@ msgstr "Finalizat"
 msgid "Log copied"
 msgstr "Jurnal copiat"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 371
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Acest televizor are nevoie de propriul certificat"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 374
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
+"fail with a certificate error."
+msgstr ""
+"Tizen {version} respinge pachetul publicat, al cărui certificat de semnare a expirat. Instalarea va "
+"eșua cu o eroare de certificat."
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"
@@ -1284,23 +1299,3 @@ msgstr "Instalarea a fost anulată"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Instalare anulată"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Serviciul Docker nu rulează"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker nu este instalat pe acest sistem"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Parolă certificat nevalidă"
-
-#: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Acest televizor are nevoie de propriul certificat"
-
-#: NEEDS WORK
-msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
-msgstr "Tizen {version} respinge pachetul publicat, al cărui certificat de semnare a expirat. Instalarea va eșua cu o eroare de certificat."

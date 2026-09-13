@@ -1159,6 +1159,21 @@ msgstr "Tehtud"
 msgid "Log copied"
 msgstr "Logi kopeeritud"
 # 
+# File: usr/share/jellybeam/pages/install.py, line: 371
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "See teler vajab enda sertifikaati"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 374
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
+"fail with a certificate error."
+msgstr ""
+"Tizen {version} lükkab avaldatud paketi tagasi, kuna selle allkirjastamissertifikaat on aegunud. "
+"Installimine nurjub sertifikaadi veaga."
+# 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
 msgid "No device selected - please go back"
@@ -1284,23 +1299,3 @@ msgstr "Installeerimine tühistati"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installeerimine tühistatud"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Dockeri teenus ei tööta"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker ei ole selles süsteemis installitud"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Sertifikaadi parool on vale"
-
-#: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "See teler vajab enda sertifikaati"
-
-#: NEEDS WORK
-msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
-msgstr "Tizen {version} lükkab avaldatud paketi tagasi, kuna selle allkirjastamissertifikaat on aegunud. Installimine nurjub sertifikaadi veaga."
