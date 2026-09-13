@@ -1168,18 +1168,20 @@ msgstr "Versión de Tizen no disponible"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 378
 #: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Este televisor necesita su propio certificado"
+msgid "This TV needs a Samsung certificate"
+msgstr "Este televisor necesita un certificado de Samsung"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 381
 #: NEEDS WORK
 #, python-brace-format
 msgid ""
-"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
-"fail with a certificate error."
+"Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, "
+"with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under "
+"Certificates."
 msgstr ""
-"Tizen {version} rechaza el paquete publicado, cuyo certificado de firma ha caducado. La instalación "
-"fallará con un error de certificado."
+"Tizen {version} solo acepta paquetes firmados con un certificado emitido por Samsung para su "
+"cuenta, con este televisor registrado. Cree uno en el Certificate Manager de Tizen Studio y luego "
+"añádalo en Certificados."
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
@@ -1306,11 +1308,3 @@ msgstr "La instalación fue cancelada"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Instalación cancelada"
-
-#: NEEDS WORK
-msgid "This TV needs a Samsung certificate"
-msgstr "Este televisor necesita un certificado de Samsung"
-
-#: NEEDS WORK
-msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
-msgstr "Tizen {version} solo acepta paquetes firmados con un certificado emitido por Samsung para su cuenta, con este televisor registrado. Cree uno en el Certificate Manager de Tizen Studio y luego añádalo en Certificados."

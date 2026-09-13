@@ -1168,18 +1168,20 @@ msgstr "Tizen-verzió nem elérhető"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 378
 #: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Ennek a TV-nek saját tanúsítványra van szüksége"
+msgid "This TV needs a Samsung certificate"
+msgstr "Ehhez a TV-hez Samsung tanúsítvány szükséges"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 381
 #: NEEDS WORK
 #, python-brace-format
 msgid ""
-"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
-"fail with a certificate error."
+"Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, "
+"with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under "
+"Certificates."
 msgstr ""
-"A Tizen {version} elutasítja a közzétett csomagot, amelynek aláíró tanúsítványa lejárt. A telepítés "
-"tanúsítványhibával fog meghiúsulni."
+"A Tizen {version} csak olyan csomagokat fogad el, amelyeket a Samsung a fiókjához kiállított, ehhez "
+"a TV-hez regisztrált tanúsítvánnyal írtak alá. Hozzon létre egyet a Tizen Studio Certificate "
+"Managerében, majd adja hozzá a Tanúsítványok alatt."
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
@@ -1306,11 +1308,3 @@ msgstr "A telepítés megszakítva lett"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Telepítés megszakítva"
-
-#: NEEDS WORK
-msgid "This TV needs a Samsung certificate"
-msgstr "Ehhez a TV-hez Samsung tanúsítvány szükséges"
-
-#: NEEDS WORK
-msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
-msgstr "A Tizen {version} csak olyan csomagokat fogad el, amelyeket a Samsung a fiókjához kiállított, ehhez a TV-hez regisztrált tanúsítvánnyal írtak alá. Hozzon létre egyet a Tizen Studio Certificate Managerében, majd adja hozzá a Tanúsítványok alatt."
