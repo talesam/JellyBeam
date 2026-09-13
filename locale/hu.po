@@ -1276,3 +1276,15 @@ msgstr "A TV válaszolt, de a Fejlesztői mód még nem aktív.\n\nA TV-n ellen�
 #: NEEDS WORK
 msgid "your computer's IP"
 msgstr "a számítógépe IP-címe"
+
+#: NEEDS WORK
+msgid "7. Unplug the TV from the wall"
+msgstr "7. Húzza ki a tévét a fali aljzatból"
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
+msgstr "A tévé válaszolt, de a Fejlesztői mód még nem aktív.\n\nA tévén ellenőrizze, hogy:\n  • A Fejlesztői mód be van kapcsolva\n  • A gazdagép (Host PC) IP-címe {ip}\n  • a tévét ezután kihúzták a fali aljzatból\n\nA távirányítóval történő kikapcsolás nem elég: az csak készenléti állapotba helyezi. A telepítési port csak valódi újraindítás után nyílik meg."
+
+#: NEEDS WORK
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "Várjon néhány másodpercet, majd dugja vissza. A távirányító nem elég"

@@ -1276,3 +1276,15 @@ msgstr "El televisor respondió, pero el Modo desarrollador aún no está activo
 #: NEEDS WORK
 msgid "your computer's IP"
 msgstr "la IP de tu ordenador"
+
+#: NEEDS WORK
+msgid "7. Unplug the TV from the wall"
+msgstr "7. Desenchufa el televisor de la pared"
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
+msgstr "El televisor respondió, pero el Modo desarrollador aún no está activo.\n\nEn el televisor, comprueba que:\n  • El Modo desarrollador está activado\n  • la IP del PC host (Host PC IP) es {ip}\n  • el televisor se desenchufó de la pared después de eso\n\nApagarlo con el mando no es suficiente: eso solo lo pone en modo espera. El puerto de instalación se abre únicamente con un reinicio real."
+
+#: NEEDS WORK
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "Espera unos segundos y vuelve a enchufarlo. El mando a distancia no es suficiente"

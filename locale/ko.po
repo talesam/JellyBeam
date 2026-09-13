@@ -1270,3 +1270,15 @@ msgstr "TV가 응답했지만 개발자 모드가 아직 활성화되지 않았�
 #: NEEDS WORK
 msgid "your computer's IP"
 msgstr "사용 중인 컴퓨터의 IP"
+
+#: NEEDS WORK
+msgid "7. Unplug the TV from the wall"
+msgstr "7. TV를 콘센트에서 뽑으세요"
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
+msgstr "TV가 응답했지만 개발자 모드가 아직 활성화되지 않았습니다.\n\nTV에서 다음을 확인하세요.\n  • 개발자 모드가 켜져 있는지\n  • 호스트 PC IP(Host PC IP)가 {ip}인지\n  • 그 후 TV를 콘센트에서 뽑았는지\n\n리모컨으로 전원을 끄는 것만으로는 충분하지 않습니다. 그것은 TV를 대기 모드로 전환할 뿐입니다. 설치 포트는 실제로 재시작해야만 열립니다."
+
+#: NEEDS WORK
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "몇 초 기다린 후 다시 꽂으세요. 리모컨만으로는 충분하지 않습니다"

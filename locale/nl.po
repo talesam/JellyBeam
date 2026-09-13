@@ -1276,3 +1276,15 @@ msgstr "De tv heeft gereageerd, maar de Ontwikkelaarsmodus is nog niet actief.\n
 #: NEEDS WORK
 msgid "your computer's IP"
 msgstr "het IP-adres van uw computer"
+
+#: NEEDS WORK
+msgid "7. Unplug the TV from the wall"
+msgstr "7. Haal de tv uit het stopcontact"
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
+msgstr "De tv heeft gereageerd, maar Ontwikkelaarsmodus is nog niet actief.\n\nControleer op de tv dat:\n  • Ontwikkelaarsmodus is ingeschakeld\n  • het Host PC IP-adres {ip} is\n  • de tv daarna uit het stopcontact is gehaald\n\nDe tv uitzetten met de afstandsbediening is niet genoeg: dat zet hem alleen in stand-by. De installatiepoort gaat pas open na een echte herstart."
+
+#: NEEDS WORK
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "Wacht een paar seconden en steek de stekker er weer in. De afstandsbediening is niet genoeg"

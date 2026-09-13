@@ -1274,3 +1274,15 @@ msgstr "TV yanıt verdi, ancak Geliştirici Modu henüz etkin değil.\n\nTV'de �
 #: NEEDS WORK
 msgid "your computer's IP"
 msgstr "bilgisayarınızın IP'si"
+
+#: NEEDS WORK
+msgid "7. Unplug the TV from the wall"
+msgstr "7. Televizyonun fişini prizden çekin"
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
+msgstr "Televizyon yanıt verdi ama Geliştirici Modu henüz etkin değil.\n\nTelevizyonda şunları kontrol edin:\n  • Geliştirici Modu açık\n  • Ana bilgisayar IP'si (Host PC IP) {ip}\n  • bundan sonra televizyonun fişi prizden çekildi\n\nKumandayla kapatmak yeterli değildir: bu yalnızca televizyonu bekleme moduna alır. Kurulum portu yalnızca gerçek bir yeniden başlatmayla açılır."
+
+#: NEEDS WORK
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "Birkaç saniye bekleyip tekrar takın. Kumanda yeterli değildir"

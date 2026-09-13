@@ -1270,3 +1270,15 @@ msgstr "电视已响应,但开发者模式尚未激活。\n\n请在电视上检�
 #: NEEDS WORK
 msgid "your computer's IP"
 msgstr "您电脑的IP"
+
+#: NEEDS WORK
+msgid "7. Unplug the TV from the wall"
+msgstr "7. 从墙上插座拔掉电视电源"
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
+msgstr "电视已响应，但开发者模式尚未激活。\n\n请在电视上检查：\n  • 开发者模式已开启\n  • 主机IP（Host PC IP）为 {ip}\n  • 之后已将电视从插座上拔下\n\n仅用遥控器关机是不够的：那只会让电视进入待机状态。安装端口只有在真正重启后才会打开。"
+
+#: NEEDS WORK
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "等几秒钟后再插回去。遥控器是不够的"

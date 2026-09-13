@@ -1276,3 +1276,15 @@ msgstr "Il televisore ha risposto, ma la Modalità sviluppatore non è ancora at
 #: NEEDS WORK
 msgid "your computer's IP"
 msgstr "l'IP del tuo computer"
+
+#: NEEDS WORK
+msgid "7. Unplug the TV from the wall"
+msgstr "7. Stacca la TV dalla presa a muro"
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
+msgstr "La TV ha risposto, ma la Modalità sviluppatore non è ancora attiva.\n\nSulla TV, verifica che:\n  • La Modalità sviluppatore sia attiva\n  • l'IP del PC host (Host PC IP) sia {ip}\n  • la TV sia stata staccata dalla presa dopo aver fatto questo\n\nSpegnerla con il telecomando non basta: la mette solo in standby. La porta di installazione si apre solo dopo un riavvio reale."
+
+#: NEEDS WORK
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "Aspetta qualche secondo e ricollegala. Il telecomando non basta"

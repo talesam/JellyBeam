@@ -1274,3 +1274,15 @@ msgstr "Телевізор відповів, але Режим розробни�
 #: NEEDS WORK
 msgid "your computer's IP"
 msgstr "IP-адреса вашого комп'ютера"
+
+#: NEEDS WORK
+msgid "7. Unplug the TV from the wall"
+msgstr "7. Витягніть телевізор з розетки"
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
+msgstr "Телевізор відповів, але Режим розробника ще не активний.\n\nНа телевізорі перевірте, що:\n  • Режим розробника увімкнено\n  • IP-адреса комп'ютера (Host PC IP) — {ip}\n  • після цього телевізор було витягнуто з розетки\n\nВимкнення пультом недостатньо: це лише переводить телевізор у режим очікування. Порт встановлення відкривається лише після справжнього перезавантаження."
+
+#: NEEDS WORK
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "Зачекайте кілька секунд і увімкніть знову. Пульта недостатньо"

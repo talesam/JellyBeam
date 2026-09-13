@@ -1274,3 +1274,15 @@ msgstr "Televízor odpovedal, ale Vývojársky režim ešte nie je aktívny.\n\n
 #: NEEDS WORK
 msgid "your computer's IP"
 msgstr "IP adresa vášho počítača"
+
+#: NEEDS WORK
+msgid "7. Unplug the TV from the wall"
+msgstr "7. Odpojte televízor zo zásuvky"
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
+msgstr "Televízor odpovedal, ale Vývojársky režim ešte nie je aktívny.\n\nNa televízore skontrolujte, či:\n  • Vývojársky režim je zapnutý\n  • IP adresa hostiteľského PC (Host PC IP) je {ip}\n  • televízor bol potom odpojený zo zásuvky\n\nVypnutie diaľkovým ovládaním nestačí: tým sa televízor iba prepne do pohotovostného režimu. Inštalačný port sa otvorí až po skutočnom reštarte."
+
+#: NEEDS WORK
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "Počkajte niekoľko sekúnd a znova ho zapojte. Diaľkové ovládanie nestačí"

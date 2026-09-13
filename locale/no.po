@@ -1274,3 +1274,15 @@ msgstr "TV-en svarte, men Utviklermodus er ikke aktivert ennå.\n\nKontroller p�
 #: NEEDS WORK
 msgid "your computer's IP"
 msgstr "IP-adressen til datamaskinen din"
+
+#: NEEDS WORK
+msgid "7. Unplug the TV from the wall"
+msgstr "7. Trekk ut TV-en fra strømuttaket"
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
+msgstr "TV-en svarte, men Utviklermodus er ikke aktivert ennå.\n\nSjekk på TV-en at:\n  • Utviklermodus er på\n  • Host PC IP er {ip}\n  • TV-en ble trukket ut av kontakten etterpå\n\nÅ slå den av med fjernkontrollen er ikke nok: det setter den bare i hvilemodus. Installasjonsporten åpnes først ved en ekte omstart."
+
+#: NEEDS WORK
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "Vent noen sekunder og sett den i igjen. Fjernkontrollen er ikke nok"

@@ -1276,3 +1276,15 @@ msgstr "Η τηλεόραση απάντησε, αλλά η Λειτουργία
 #: NEEDS WORK
 msgid "your computer's IP"
 msgstr "η IP διεύθυνση του υπολογιστή σας"
+
+#: NEEDS WORK
+msgid "7. Unplug the TV from the wall"
+msgstr "7. Βγάλτε την τηλεόραση από την πρίζα"
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
+msgstr "Η τηλεόραση απάντησε, αλλά η Λειτουργία προγραμματιστή δεν είναι ακόμη ενεργή.\n\nΣτην τηλεόραση, ελέγξτε ότι:\n  • Η Λειτουργία προγραμματιστή είναι ενεργοποιημένη\n  • Η IP του υπολογιστή (Host PC IP) είναι {ip}\n  • η τηλεόραση βγήκε από την πρίζα μετά από αυτό\n\nΤο σβήσιμο με το τηλεχειριστήριο δεν αρκεί: απλώς τη θέτει σε αναμονή. Η θύρα εγκατάστασης ανοίγει μόνο με πραγματική επανεκκίνηση."
+
+#: NEEDS WORK
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "Περιμένετε λίγα δευτερόλεπτα και βάλτε την ξανά στην πρίζα. Το τηλεχειριστήριο δεν αρκεί"

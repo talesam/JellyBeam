@@ -127,8 +127,13 @@ class DevicePage(Gtk.ScrolledWindow):
 
         # Step 7
         step7 = Adw.ActionRow()
-        step7.set_title(_("7. Restart TV"))
-        step7.set_subtitle(_("Turn off and on your TV"))
+        step7.set_title(_("7. Unplug the TV from the wall"))
+        # The remote only sends the TV to standby, which does not restart
+        # Tizen and leaves the debug port shut. A user lost time on exactly
+        # this, because the old wording said "turn off and on".
+        step7.set_subtitle(
+            _("Wait a few seconds and plug it back in. The remote is not enough")
+        )
         self.instructions_expander.add_row(step7)
 
         # ============================================

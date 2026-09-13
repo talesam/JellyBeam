@@ -332,8 +332,10 @@ class DeviceService:
                         "On the TV, check that:\n"
                         "  • Developer Mode is On\n"
                         "  • the Host PC IP is {ip}\n"
-                        "  • the TV was turned off and on again after that\n\n"
-                        "The TV only opens the installation port after a restart."
+                        "  • the TV was unplugged from the wall after that\n\n"
+                        "Switching it off with the remote is not enough: that "
+                        "only puts it on standby. The installation port opens "
+                        "on a real restart."
                     ).format(ip=self._get_local_ip() or _("your computer's IP")),
                 )
             else:

@@ -1274,3 +1274,15 @@ msgstr "Telewizor odpowiedział, ale Tryb dewelopera nie jest jeszcze aktywny.\n
 #: NEEDS WORK
 msgid "your computer's IP"
 msgstr "adres IP Twojego komputera"
+
+#: NEEDS WORK
+msgid "7. Unplug the TV from the wall"
+msgstr "7. Odłącz telewizor od gniazdka"
+
+#: NEEDS WORK
+msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
+msgstr "Telewizor odpowiedział, ale Tryb programisty nie jest jeszcze aktywny.\n\nNa telewizorze sprawdź, czy:\n  • Tryb programisty jest włączony\n  • adres IP komputera (Host PC IP) to {ip}\n  • telewizor został potem odłączony od gniazdka\n\nWyłączenie pilotem to za mało: telewizor przechodzi wtedy tylko w stan gotowości (standby). Port instalacyjny otwiera się dopiero po prawdziwym ponownym uruchomieniu."
+
+#: NEEDS WORK
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "Poczekaj kilka sekund i podłącz go ponownie. Pilot to za mało"

@@ -69,7 +69,10 @@ python main.py
 4. Enter **12345** - Developer Mode menu appears
 5. Toggle **Developer Mode** to **On**
 6. Enter your computer's IP address
-7. **Restart your TV**
+7. **Unplug the TV from the wall**, wait a few seconds, plug it back in
+
+> The remote only puts the TV on standby, which does not restart Tizen. The
+> debug port stays shut until the power is actually cut.
 
 ## 🎯 Usage
 
@@ -89,9 +92,9 @@ Settings are stored in `~/.config/jellybeam/config.json`:
 
 | Issue | Solution |
 |-------|----------|
-| Docker not running | `sudo systemctl start docker` |
+| Docker not running | Use the Start button on the welcome screen, or `systemctl start docker` |
 | TV not found | Ensure TV and PC are on same network |
-| Connection failed | Enable Developer Mode on TV, restart TV |
+| Connection failed | Enable Developer Mode, enter this PC's IP, then unplug the TV from the wall |
 | Installation hangs | Check Docker logs, ensure disk space |
 
 Logs: `~/.local/share/jellybeam/logs/`
