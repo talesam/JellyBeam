@@ -18,9 +18,9 @@
 </p>
 
 
-**One-click Jellyfin installation for Samsung Tizen and LG webOS TVs and projectors.**
+**One-click Jellyfin installation for Samsung Tizen TVs and projectors.**
 
-A modern GTK4 application that simplifies installing the Jellyfin client on Samsung Smart TVs running Tizen OS. LG webOS support is planned.
+A modern GTK4 application that simplifies installing the Jellyfin client on Samsung Smart TVs running Tizen OS.
 
 ## ✨ Features
 

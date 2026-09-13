@@ -1,7 +1,7 @@
 # Maintainer: Tales A. Mendonça <talesam@gmail.com>
 
 pkgname=jellybeam
-pkgdesc="Install Jellyfin on Samsung Tizen and LG webOS TVs and projectors"
+pkgdesc="Install Jellyfin on Samsung Tizen TVs and projectors"
 # Renamed from jellytizen when the project stopped being Samsung-only.
 provides=('jellytizen')
 replaces=('jellytizen')

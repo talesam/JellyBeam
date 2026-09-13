@@ -120,9 +120,55 @@ recarregamento resolve. Não vale adicionar retry no `index.html`.
 
 ---
 
-## 5. WebOS — é possível, mas o custo é outro
+## 5. WebOS — a premissa deste plano estava errada
 
-Sim, dá para fazer o mesmo. O toolchain é diferente e há **uma restrição séria**.
+> **Investigado em 12/09/2026. Conclusão: não há nada a fazer no app.**
+> O que segue nesta seção descreve o toolchain, que continua correto, mas a
+> motivação caiu por terra.
+
+O plano assumia que WebOS teria o mesmo problema do Tizen. Não tem, e a
+diferença é estrutural. Abrindo o `.ipk` publicado (`org.jellyfin.webos`,
+v1.2.2, **272 KB descompactado**) encontra-se:
+
+```html
+<iframe id="contentFrame" style="display: none;">
+```
+```js
+baseurl + "/web/"   →   src = url
+```
+
+O cliente de WebOS **não embute o jellyfin-web**. Ele é uma casca com um
+iframe apontado para `<servidor>/web/`. A página que renderiza na TV é a do
+próprio servidor, buscada a cada abertura.
+
+Consequência: **as customizações do servidor já chegam à LG hoje**, sem
+pacote customizado, sem injeção, sem reassinatura. O `cs-nav.js` injetado no
+`index.html` do servidor vale para WebOS do mesmo jeito que vale para
+navegador.
+
+Compare com o Tizen, cujo `.wgt` traz o `jellyfin-web` inteiro dentro: lá a
+TV nunca pede a página ao servidor, e por isso toda a maquinaria da seção 6
+precisa existir.
+
+### E por isso o app não implementa WebOS
+
+O cliente Jellyfin está na Loja LG desde maio de 2024. Quem instala por lá
+recebe as customizações igualmente, **sem** Modo Desenvolvedor, sem senha e
+sem o temporizador de 50 horas. Um instalador por sideload seria pior que a
+loja para praticamente todo mundo.
+
+Sobram apenas casos de borda: TV cuja loja não oferece o app, WebOS antigo
+demais, ou a necessidade de travar uma versão específica. Não é o bastante
+para sustentar um caminho de instalação não testado.
+
+O código de `services/webos.py` chegou a ser escrito e foi descartado. O SDK
+existe dentro da imagem Docker (`/webOS_TV_SDK/CLI/bin`, ares-cli 1.11.0) e
+os comandos abaixo foram conferidos — se um dia houver motivo, o caminho está
+mapeado.
+
+### O toolchain, para referência futura
+
+O SDK é diferente e há **uma restrição séria**.
 
 | | Tizen | WebOS |
 |---|---|---|
@@ -210,16 +256,24 @@ projetor, e uma alteração no `cs-nav.js` do servidor chega lá sem recompilar.
 
 **Critério de pronto:** dá para instalar sem editar código. ✅
 
-### Fase 3 — WebOS (condicional)
+### Fase 3 — WebOS — ❌ cancelada, ver seção 5
 
-8. Investigar se a imagem Docker do `jellyfin-webos` cabe no mesmo padrão de
-   `services/docker.py`
-9. Seletor **Tizen / WebOS** na tela de dispositivo
-10. `services/webos.py` com o fluxo `ares-*`
-11. **Renovação automática do Dev Mode** — sem isso, não lançar
-12. Aviso explícito na interface sobre as 50 horas
+Investigada e descartada em 12/09/2026, não por dificuldade mas por falta de
+motivo: o cliente de WebOS carrega a interface do servidor por iframe, então
+as customizações já chegam sem nada disso. Quem tem TV LG instala pela loja
+e recebe o mesmo resultado, sem Modo Desenvolvedor nem as 50 horas.
 
-**Critério de pronto:** instalar no LG e o app continuar lá depois de uma semana.
+O que se descobriu no caminho, e vale guardar:
+
+- o SDK do LG já está dentro da imagem Docker que o app usa
+  (`/webOS_TV_SDK/CLI/bin`, ares-cli 1.11.0), incluindo `ares-extend-dev`,
+  que renova a sessão de Modo Desenvolvedor
+- existe `.ipk` publicado em `jellyfin/jellyfin-webos/releases`
+- o `.ipk` é um pacote Debian (`ar` + `data.tar.gz`), não um zip como o `.wgt`
+- WebOS não exige assinatura de código, ao contrário do Tizen
+
+As descrições do app foram revertidas para falar só de Samsung: anunciar LG
+sem entregar instalação seria prometer o que não existe.
 
 ### Fase 4 — robustez
 
