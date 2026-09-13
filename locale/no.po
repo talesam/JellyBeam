@@ -16,31 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
-#: NEEDS WORK
-msgid "OK"
-msgstr "OK"
-# 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
-#: NEEDS WORK
-msgid "Confirm"
-msgstr "Bekreft"
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
-# File: usr/share/jellybeam/pages/preferences.py, line: 171
-# File: usr/share/jellybeam/pages/install.py, line: 110
-# File: usr/share/jellybeam/pages/welcome.py, line: 198
-#: NEEDS WORK
-msgid "Cancel"
-msgstr "Avbryt"
-# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -74,223 +49,243 @@ msgstr "JellyBeam Team"
 msgid "JellyBeam Contributors"
 msgstr "JellyBeam Bidragsytere"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 53
-# File: usr/share/jellybeam/pages/install.py, line: 116
-# File: usr/share/jellybeam/pages/install.py, line: 385
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
 #: NEEDS WORK
-msgid "Install Jellyfin"
-msgstr "Installer Jellyfin"
+msgid "OK"
+msgstr "OK"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 54
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
 #: NEEDS WORK
-msgid "One-click installation to your Samsung TV"
-msgstr "Én-klikk installasjon til din Samsung TV"
+msgid "Confirm"
+msgstr "Bekreft"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 59
-#: NEEDS WORK
-msgid "Target Device"
-msgstr "Mål-enhet"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 60
-#: NEEDS WORK
-msgid "Loading..."
-msgstr "Laster..."
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 43
-#: NEEDS WORK
-msgid "Installation Progress"
-msgstr "Installasjonsprogresjon"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 74
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
+# File: usr/share/jellybeam/pages/preferences.py, line: 171
+# File: usr/share/jellybeam/pages/install.py, line: 110
+# File: usr/share/jellybeam/pages/welcome.py, line: 198
 #: NEEDS WORK
-msgid "Ready to install"
-msgstr "Klar til å installere"
+msgid "Cancel"
+msgstr "Avbryt"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 75
+# File: usr/share/jellybeam/utils/design.py, line: 190
 #: NEEDS WORK
-msgid "Click the button below to start"
-msgstr "Klikk på knappen nedenfor for å starte"
+msgid "Setup Device"
+msgstr "Enhetsoppsett"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 104
+# File: usr/share/jellybeam/pages/device.py, line: 122
+# File: usr/share/jellybeam/pages/device.py, line: 250
 #: NEEDS WORK
-msgid "Installation progress"
-msgstr "Installasjonsprogresjon"
+msgid "Connect"
+msgstr "Koble"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 62
+# File: usr/share/jellybeam/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Waiting to start..."
-msgstr "Venter på å starte..."
+msgid "Install"
+msgstr "Installer"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 120
+# File: usr/share/jellybeam/utils/design.py, line: 190
 #: NEEDS WORK
-msgid "Installation status updates"
-msgstr "Installasjonsstatusoppdateringer"
+msgid "Complete"
+msgstr "Fullført"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 138
+# File: usr/share/jellybeam/utils/design.py, line: 242
 #: NEEDS WORK
-msgid "Install Jellyfin on TV"
-msgstr "Installer Jellyfin på TV"
+#, python-brace-format
+msgid "Step {number} of {total}"
+msgstr "Trinn {number} av {total}"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 149
+# File: usr/share/jellybeam/utils/design.py, line: 361
 #: NEEDS WORK
-msgid "Cancel installation"
-msgstr "Avbryt installasjon"
+msgid "Bring Jellyfin to your big screen"
+msgstr "Få Jellyfin på den store skjermen din"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 67
+# File: usr/share/jellybeam/pages/certificates.py, line: 31
 #: NEEDS WORK
-msgid "Installation Log"
-msgstr "Installasjonslogg"
+msgid "Developer Certificates"
+msgstr "Utviklersertifikater"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 139
+# File: usr/share/jellybeam/pages/certificates.py, line: 48
 #: NEEDS WORK
-msgid "Click to view detailed output"
-msgstr "Klikk for å se detaljert utdata"
+msgid "Certificates are required to install apps on Samsung TVs"
+msgstr "Sertifikater er påkrevd for å installere apper på Samsung TV-er"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 307
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "Installation Complete!"
-msgstr "Installasjon fullført!"
+msgid "Certificate Mode"
+msgstr "Sertifikatmodus"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 174
+# File: usr/share/jellybeam/pages/certificates.py, line: 60
 #: NEEDS WORK
-msgid "Jellyfin is ready!"
-msgstr "Jellyfin er klar!"
+msgid "Use Built-in Certificates"
+msgstr "Bruk innebygde sertifikater"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 175
+# File: usr/share/jellybeam/pages/certificates.py, line: 61
 #: NEEDS WORK
-msgid "Open the Jellyfin app on your TV"
-msgstr "Åpne Jellyfin-appen på TV-en din"
+msgid "Recommended - No Tizen Studio required"
+msgstr "Anbefalt - Ingen Tizen Studio nødvendig"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 179
+# File: usr/share/jellybeam/pages/certificates.py, line: 73
 #: NEEDS WORK
-msgid "Done"
-msgstr "Ferdig"
+msgid "How it works"
+msgstr "Hvordan det fungerer"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 197
+# File: usr/share/jellybeam/pages/certificates.py, line: 74
 #: NEEDS WORK
-msgid "No device selected - please go back"
-msgstr "Ingen enhet valgt - vennligst gå tilbake"
+msgid ""
+"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
+"without any setup."
+msgstr ""
+"Docker-beholderen inkluderer forhåndskonfigurerte sertifikater. Du kan installere Jellyfin "
+"umiddelbart uten noen oppsett."
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 206
+# File: usr/share/jellybeam/pages/certificates.py, line: 83
 #: NEEDS WORK
-msgid "No TV configured. Please go back and select a device."
-msgstr "Ingen TV konfigurert. Vennligst gå tilbake og velg en enhet."
+msgid "Custom Certificates (Advanced)"
+msgstr "Egendefinerte sertifikater (Avansert)"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 231
+# File: usr/share/jellybeam/pages/certificates.py, line: 84
 #: NEEDS WORK
-msgid "Starting Installation"
-msgstr "Starter installasjon"
+msgid "Only needed if you want to use your own certificates"
+msgstr "Bare nødvendig hvis du vil bruke dine egne sertifikater"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 236
+# File: usr/share/jellybeam/pages/certificates.py, line: 43
 #: NEEDS WORK
-msgid "Downloading container..."
-msgstr "Laster ned container..."
+msgid "Author Certificate"
+msgstr "Forfattersertifikat"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 237
+# File: usr/share/jellybeam/pages/certificates.py, line: 148
 #: NEEDS WORK
-msgid "Pulling Docker image..."
-msgstr "Henter Docker-bilde..."
+msgid "Select author.p12 file"
+msgstr "Velg author.p12-fil"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 250
+# File: usr/share/jellybeam/pages/certificates.py, line: 46
+# File: usr/share/jellybeam/pages/certificates.py, line: 58
 #: NEEDS WORK
-msgid "Container ready!"
-msgstr "Beholder klar!"
+msgid "Browse"
+msgstr "Bla gjennom"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 254
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "Installing to TV..."
-msgstr "Installerer til TV..."
+msgid "Distributor Certificate"
+msgstr "Distributørsertifikat"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 255
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
 #: NEEDS WORK
-msgid "Connecting and installing..."
-msgstr "Kobler og installerer..."
+msgid "Select distributor.p12 file"
+msgstr "Velg distributor.p12-fil"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 256
+# File: usr/share/jellybeam/pages/certificates.py, line: 115
 #: NEEDS WORK
-msgid "This may take a few minutes..."
-msgstr "Dette kan ta noen minutter..."
+msgid "Certificate Password"
+msgstr "Sertifikatpassord"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 275
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
 #: NEEDS WORK
-msgid "Installing..."
-msgstr "Installerer..."
+msgid "Password for the author P12 certificate"
+msgstr "Passord for forfatter P12-sertifikatet"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 277
+# File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
-msgid "Downloading app..."
-msgstr "Laster ned app..."
+msgid "Need help creating certificates?"
+msgstr "Trenger du hjelp til å lage sertifikater?"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 279
+# File: usr/share/jellybeam/pages/certificates.py, line: 123
 #: NEEDS WORK
-msgid "Transferring..."
-msgstr "Overfører..."
+msgid "View tutorial on Samsung Developer website"
+msgstr "Se læringsprogram på Samsung Developer-nettstedet"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 281
+# File: usr/share/jellybeam/pages/certificates.py, line: 127
 #: NEEDS WORK
-msgid "Connecting to TV..."
-msgstr "Kobler til TV..."
+msgid "View Guide"
+msgstr "Vis veiledning"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 283
+# File: usr/share/jellybeam/pages/certificates.py, line: 114
 #: NEEDS WORK
-msgid "Finishing..."
-msgstr "Ferdiggjøring..."
+msgid "Continue to Installation"
+msgstr "Fortsett til installasjon"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 364
+# File: usr/share/jellybeam/pages/certificates.py, line: 226
 #: NEEDS WORK
-msgid "Extracting layers..."
-msgstr "Ekstraherer lag..."
+msgid "Proceed to install Jellyfin on your TV"
+msgstr "Fortsett med å installere Jellyfin på TV-en din"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 366
-#: NEEDS WORK
-msgid "Download complete"
-msgstr "Nedlasting fullført"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 216
-#: NEEDS WORK
-msgid "Error"
-msgstr "Feil"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 339
+# File: usr/share/jellybeam/pages/certificates.py, line: 117
+# File: usr/share/jellybeam/pages/device.py, line: 135
+# File: usr/share/jellybeam/pages/welcome.py, line: 105
 #: NEEDS WORK
-msgid "Jellyfin is now on your TV"
-msgstr "Jellyfin er nå på TV-en din"
+msgid "Continue"
+msgstr "Fortsett"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 341
+# File: usr/share/jellybeam/pages/certificates.py, line: 171
 #: NEEDS WORK
-msgid "Reinstall"
-msgstr "Installer på nytt"
+msgid "Ready to install with built-in certificates"
+msgstr "Klar til å installere med innebygde sertifikater"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 348
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
 #: NEEDS WORK
-msgid "Find Jellyfin in your TV's app list."
-msgstr "Finn Jellyfin i applisten på TV-en din."
+#, python-brace-format
+msgid "Select {cert_type} certificate"
+msgstr "Velg {cert_type} sertifikat"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 322
+# File: usr/share/jellybeam/pages/certificates.py, line: 136
 #: NEEDS WORK
-msgid "Installation Failed"
-msgstr "Installasjon mislyktes"
+msgid "P12 Certificate Files"
+msgstr "P12 sertifikatfiler"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 362
+# File: usr/share/jellybeam/pages/certificates.py, line: 163
+# File: usr/share/jellybeam/pages/certificates.py, line: 166
+# File: usr/share/jellybeam/pages/certificates.py, line: 185
+# File: usr/share/jellybeam/pages/certificates.py, line: 191
 #: NEEDS WORK
-msgid "Retry"
-msgstr "Prøv igjen"
+msgid "Change"
+msgstr "Endre"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 379
-# File: usr/share/jellybeam/pages/install.py, line: 383
+# File: usr/share/jellybeam/pages/certificates.py, line: 251
 #: NEEDS WORK
-msgid "Cancelled"
-msgstr "Avbrutt"
+msgid "Ready to install with custom certificates"
+msgstr "Klar til å installere med tilpassede sertifikater"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 380
+# File: usr/share/jellybeam/pages/certificates.py, line: 326
 #: NEEDS WORK
-msgid "Installation was cancelled"
-msgstr "Installasjonen ble avbrutt"
+msgid "author certificate"
+msgstr "forfattersertifikat"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 333
+# File: usr/share/jellybeam/pages/certificates.py, line: 328
 #: NEEDS WORK
-msgid "Installation cancelled"
-msgstr "Installasjon avbrutt"
+msgid "distributor certificate"
+msgstr "distributørsertifikat"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 330
+#: NEEDS WORK
+msgid "password"
+msgstr "passord"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid "Missing: {items}"
+msgstr "Mangler: {items}"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+#: NEEDS WORK
+msgid "Installation"
+msgstr "Installasjon"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 310
+#: NEEDS WORK
+msgid "Certificate Error"
+msgstr "Sertifikatfeil"
 # 
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
@@ -483,37 +478,10 @@ msgstr "Koble til enhet"
 msgid "Establish connection with your TV"
 msgstr "Etabler forbindelse med TV-en din"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 122
-# File: usr/share/jellybeam/pages/device.py, line: 250
-#: NEEDS WORK
-msgid "Connect"
-msgstr "Koble"
-# 
 # File: usr/share/jellybeam/pages/device.py, line: 222
 #: NEEDS WORK
 msgid "Connect to Samsung TV"
 msgstr "Koble til Samsung TV"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 132
-#: NEEDS WORK
-msgid "Continue to Certificates"
-msgstr "Fortsett til sertifikater"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 133
-#: NEEDS WORK
-msgid "Setup developer certificates"
-msgstr "Konfigurer utviklersertifikater"
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 117
-# File: usr/share/jellybeam/pages/device.py, line: 135
-# File: usr/share/jellybeam/pages/welcome.py, line: 105
-#: NEEDS WORK
-msgid "Continue"
-msgstr "Fortsett"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 422
 #: NEEDS WORK
@@ -556,11 +524,6 @@ msgstr "IP: {ip} | Modell: {model}"
 msgid "Unknown"
 msgstr "Ukjent"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 189
-#: NEEDS WORK
-msgid "Select"
-msgstr "Velg"
-# 
 # File: usr/share/jellybeam/pages/device.py, line: 200
 #: NEEDS WORK
 msgid "Found 1 device - Select your target device"
@@ -571,12 +534,6 @@ msgstr "Fant 1 enhet - Velg din mål-enhet"
 #, python-brace-format
 msgid "Found {count} devices - Select your target device"
 msgstr "Fant {count} enheter - Velg din mål-enhet"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 304
-#: NEEDS WORK
-#, python-brace-format
-msgid "Device selected: {name}"
-msgstr "Enhet valgt: {name}"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 366
 #: NEEDS WORK
@@ -618,6 +575,205 @@ msgstr "Tilkobling mislyktes: {message}"
 #: NEEDS WORK
 msgid "Certificates"
 msgstr "Sertifikater"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 60
+#: NEEDS WORK
+msgid "JellyBeam Installer"
+msgstr "JellyBeam Installer"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 63
+#: NEEDS WORK
+msgid "Install Jellyfin on your Samsung Smart TV or projector"
+msgstr "Installer Jellyfin på din Samsung Smart TV eller projektor"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 76
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Samsung & LG TV-er"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 77
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Bred enhetsstøtte"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 81
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Drevet av Docker"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 82
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Enkelt og pålitelig"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Åpen kildekode"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "Bygget av fellesskapet"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+#: NEEDS WORK
+msgid "4 simple steps to get Jellyfin on your Samsung TV"
+msgstr "4 enkle trinn for å få Jellyfin på din Samsung TV"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Check Requirements"
+msgstr "Sjekk krav"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Ensure Docker is installed"
+msgstr "Sørg for at Docker er installert"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Connect Device"
+msgstr "Koble til enhet"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Find your TV on the network"
+msgstr "Finn TV-en din på nettverket"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Configure signing (auto by default)"
+msgstr "Konfigurer signering (automatisk som standard)"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
+#: NEEDS WORK
+msgid "One click to deploy Jellyfin"
+msgstr "Én klikk for å distribuere Jellyfin"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 68
+#: NEEDS WORK
+msgid "System Requirements"
+msgstr "Systemkrav"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 74
+#: NEEDS WORK
+msgid "Docker Engine"
+msgstr "Docker-motor"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+#: NEEDS WORK
+msgid "Checking..."
+msgstr "Sjekker..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+# File: usr/share/jellybeam/pages/welcome.py, line: 88
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
+#: NEEDS WORK
+msgid "Install Docker"
+msgstr "Installer Docker"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Docker is required but not installed"
+msgstr "Docker er påkrevd, men ikke installert"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 133
+#: NEEDS WORK
+msgid "Docker Group"
+msgstr "Docker-gruppe"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 134
+#: NEEDS WORK
+msgid "User not in docker group"
+msgstr "Bruker ikke i docker-gruppen"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 136
+#: NEEDS WORK
+msgid "Add to group"
+msgstr "Legg til gruppe"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 106
+#: NEEDS WORK
+msgid "Configure your Samsung TV"
+msgstr "Konfigurer din Samsung TV"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 157
+#: NEEDS WORK
+msgid "Continue to Device Setup"
+msgstr "Fortsett til enhetsoppsett"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 135
+#: NEEDS WORK
+msgid "Ready"
+msgstr "Klar"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
+#: NEEDS WORK
+msgid "Permission required"
+msgstr "Tillatelse kreves"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 142
+#: NEEDS WORK
+msgid "Not running"
+msgstr "Ikke kjører"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 144
+#: NEEDS WORK
+msgid "Start"
+msgstr "Start"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 153
+#: NEEDS WORK
+msgid "Not installed"
+msgstr "Ikke installert"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 259
+#: NEEDS WORK
+msgid "Added to group"
+msgstr "Lagt til gruppe"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 331
+#: NEEDS WORK
+msgid ""
+"Select your distribution:\n"
+"\n"
+"This will require elevated privileges (sudo). You may be prompted for your password."
+msgstr ""
+"Velg distribusjonen din:\n"
+"\n"
+"Dette vil kreve forhøyede rettigheter (sudo). Du kan bli bedt om passordet ditt."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 199
+#: NEEDS WORK
+msgid "Arch/Manjaro"
+msgstr "Arch/Manjaro"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 200
+#: NEEDS WORK
+msgid "Debian/Ubuntu"
+msgstr "Debian/Ubuntu"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 201
+#: NEEDS WORK
+msgid "Fedora/RHEL"
+msgstr "Fedora/RHEL"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 331
+#: NEEDS WORK
+msgid "Installing Docker..."
+msgstr "Installerer Docker..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 347
+#: NEEDS WORK
+msgid "Docker installed! Checking status..."
+msgstr "Docker installert! Sjekker status..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 355
+#: NEEDS WORK
+#, python-brace-format
+msgid "Installation failed: {msg}"
+msgstr "Installasjonen mislyktes: {msg}"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 24
 #: NEEDS WORK
@@ -761,6 +917,77 @@ msgstr "Tilbakestill alle innstillinger"
 msgid "Reset all preferences to default values"
 msgstr "Tilbakestill alle innstillinger til standardverdier"
 # 
+# File: usr/share/jellybeam/pages/preferences.py, line: 214
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "Tjenertilpasning"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 217
+#: NEEDS WORK
+msgid ""
+"Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer "
+"and is only written into the package you build."
+msgstr ""
+"Last inn temaet og skriptene fra Jellyfin-tjeneren din på TV-en. Adressen forblir på denne "
+"datamaskinen og skrives kun inn i pakken du bygger."
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 225
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "URL til Jellyfin-tjener"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 233
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "Bruk tilpasninger for tjener"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 235
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "Last dem inn på nytt hver gang appen starter på TV-en"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 249
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "Test tilkobling"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 250
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "Sjekk at tjeneren svarer før bygging"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 251
+# File: usr/share/jellybeam/pages/preferences.py, line: 300
+#: NEEDS WORK
+msgid "Test"
+msgstr "Test"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 284
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "Skriv inn en tjener-URL først"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 292
+#: NEEDS WORK
+msgid "That does not look like an address"
+msgstr "Dette ser ikke ut som en adresse"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 296
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "Tester…"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 303
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "Fikk ikke kontakt med tjeneren"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 313
+#: NEEDS WORK
+#, python-brace-format
+msgid "Connected to {name}"
+msgstr "Koblet til {name}"
+# 
 # File: usr/share/jellybeam/pages/preferences.py, line: 168
 #: NEEDS WORK
 msgid "Reset All Settings?"
@@ -771,475 +998,231 @@ msgstr "Tilbakestill alle innstillinger?"
 msgid "This will reset all preferences to their default values. This action cannot be undone."
 msgstr "Dette vil tilbakestille alle innstillinger til standardverdiene. Denne handlingen kan ikke angres."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 31
+# File: usr/share/jellybeam/pages/install.py, line: 53
+# File: usr/share/jellybeam/pages/install.py, line: 116
+# File: usr/share/jellybeam/pages/install.py, line: 385
 #: NEEDS WORK
-msgid "Developer Certificates"
-msgstr "Utviklersertifikater"
+msgid "Install Jellyfin"
+msgstr "Installer Jellyfin"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 48
+# File: usr/share/jellybeam/pages/install.py, line: 54
 #: NEEDS WORK
-msgid "Certificates are required to install apps on Samsung TVs"
-msgstr "Sertifikater er påkrevd for å installere apper på Samsung TV-er"
+msgid "One-click installation to your Samsung TV"
+msgstr "Én-klikk installasjon til din Samsung TV"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/install.py, line: 59
 #: NEEDS WORK
-msgid "Certificate Mode"
-msgstr "Sertifikatmodus"
+msgid "Target Device"
+msgstr "Mål-enhet"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 60
+# File: usr/share/jellybeam/pages/install.py, line: 60
 #: NEEDS WORK
-msgid "Use Built-in Certificates"
-msgstr "Bruk innebygde sertifikater"
+msgid "Loading..."
+msgstr "Laster..."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 61
+# File: usr/share/jellybeam/pages/install.py, line: 43
 #: NEEDS WORK
-msgid "Recommended - No Tizen Studio required"
-msgstr "Anbefalt - Ingen Tizen Studio nødvendig"
+msgid "Installation Progress"
+msgstr "Installasjonsprogresjon"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 73
+# File: usr/share/jellybeam/pages/install.py, line: 74
 #: NEEDS WORK
-msgid "How it works"
-msgstr "Hvordan det fungerer"
+msgid "Ready to install"
+msgstr "Klar til å installere"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 74
+# File: usr/share/jellybeam/pages/install.py, line: 75
 #: NEEDS WORK
-msgid ""
-"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
-"without any setup."
-msgstr ""
-"Docker-beholderen inkluderer forhåndskonfigurerte sertifikater. Du kan installere Jellyfin "
-"umiddelbart uten noen oppsett."
+msgid "Click the button below to start"
+msgstr "Klikk på knappen nedenfor for å starte"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 83
+# File: usr/share/jellybeam/pages/install.py, line: 104
 #: NEEDS WORK
-msgid "Custom Certificates (Advanced)"
-msgstr "Egendefinerte sertifikater (Avansert)"
+msgid "Installation progress"
+msgstr "Installasjonsprogresjon"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 84
+# File: usr/share/jellybeam/pages/install.py, line: 62
 #: NEEDS WORK
-msgid "Only needed if you want to use your own certificates"
-msgstr "Bare nødvendig hvis du vil bruke dine egne sertifikater"
+msgid "Waiting to start..."
+msgstr "Venter på å starte..."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 43
+# File: usr/share/jellybeam/pages/install.py, line: 120
 #: NEEDS WORK
-msgid "Author Certificate"
-msgstr "Forfattersertifikat"
+msgid "Installation status updates"
+msgstr "Installasjonsstatusoppdateringer"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 148
+# File: usr/share/jellybeam/pages/install.py, line: 138
 #: NEEDS WORK
-msgid "Select author.p12 file"
-msgstr "Velg author.p12-fil"
+msgid "Install Jellyfin on TV"
+msgstr "Installer Jellyfin på TV"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 46
-# File: usr/share/jellybeam/pages/certificates.py, line: 58
+# File: usr/share/jellybeam/pages/install.py, line: 149
 #: NEEDS WORK
-msgid "Browse"
-msgstr "Bla gjennom"
+msgid "Cancel installation"
+msgstr "Avbryt installasjon"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/install.py, line: 67
 #: NEEDS WORK
-msgid "Distributor Certificate"
-msgstr "Distributørsertifikat"
+msgid "Installation Log"
+msgstr "Installasjonslogg"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 162
+# File: usr/share/jellybeam/pages/install.py, line: 139
 #: NEEDS WORK
-msgid "Select distributor.p12 file"
-msgstr "Velg distributor.p12-fil"
+msgid "Click to view detailed output"
+msgstr "Klikk for å se detaljert utdata"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 115
-#: NEEDS WORK
-msgid "Certificate Password"
-msgstr "Sertifikatpassord"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 132
-#: NEEDS WORK
-msgid "Password for the author P12 certificate"
-msgstr "Passord for forfatter P12-sertifikatet"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 122
-#: NEEDS WORK
-msgid "Need help creating certificates?"
-msgstr "Trenger du hjelp til å lage sertifikater?"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 123
-#: NEEDS WORK
-msgid "View tutorial on Samsung Developer website"
-msgstr "Se læringsprogram på Samsung Developer-nettstedet"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 127
-#: NEEDS WORK
-msgid "View Guide"
-msgstr "Vis veiledning"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 114
-#: NEEDS WORK
-msgid "Continue to Installation"
-msgstr "Fortsett til installasjon"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 226
-#: NEEDS WORK
-msgid "Proceed to install Jellyfin on your TV"
-msgstr "Fortsett med å installere Jellyfin på TV-en din"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 171
-#: NEEDS WORK
-msgid "Ready to install with built-in certificates"
-msgstr "Klar til å installere med innebygde sertifikater"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 132
-#: NEEDS WORK
-#, python-brace-format
-msgid "Select {cert_type} certificate"
-msgstr "Velg {cert_type} sertifikat"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 136
-#: NEEDS WORK
-msgid "P12 Certificate Files"
-msgstr "P12 sertifikatfiler"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 212
-# File: usr/share/jellybeam/pages/certificates.py, line: 215
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-# File: usr/share/jellybeam/pages/certificates.py, line: 238
-#: NEEDS WORK
-#, python-brace-format
-msgid "✅ {filename}"
-msgstr "✅ {filnavn}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 163
-# File: usr/share/jellybeam/pages/certificates.py, line: 166
-# File: usr/share/jellybeam/pages/certificates.py, line: 185
-# File: usr/share/jellybeam/pages/certificates.py, line: 191
-#: NEEDS WORK
-msgid "Change"
-msgstr "Endre"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 251
-#: NEEDS WORK
-msgid "Ready to install with custom certificates"
-msgstr "Klar til å installere med tilpassede sertifikater"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 326
-#: NEEDS WORK
-msgid "author certificate"
-msgstr "forfattersertifikat"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 328
-#: NEEDS WORK
-msgid "distributor certificate"
-msgstr "distributørsertifikat"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 330
-#: NEEDS WORK
-msgid "password"
-msgstr "passord"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 331
-#: NEEDS WORK
-#, python-brace-format
-msgid "Missing: {items}"
-msgstr "Mangler: {items}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-#: NEEDS WORK
-msgid "Installation"
-msgstr "Installasjon"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 310
-#: NEEDS WORK
-msgid "Certificate Error"
-msgstr "Sertifikatfeil"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 60
-#: NEEDS WORK
-msgid "JellyBeam Installer"
-msgstr "JellyBeam Installer"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 63
-#: NEEDS WORK
-msgid "Install Jellyfin on your Samsung Smart TV or projector"
-msgstr "Installer Jellyfin på din Samsung Smart TV eller projektor"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 79
-#: NEEDS WORK
-msgid "4 simple steps to get Jellyfin on your Samsung TV"
-msgstr "4 enkle trinn for å få Jellyfin på din Samsung TV"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 84
-#: NEEDS WORK
-msgid "Check Requirements"
-msgstr "Sjekk krav"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 84
-#: NEEDS WORK
-msgid "Ensure Docker is installed"
-msgstr "Sørg for at Docker er installert"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-#: NEEDS WORK
-msgid "Connect Device"
-msgstr "Koble til enhet"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-#: NEEDS WORK
-msgid "Find your TV on the network"
-msgstr "Finn TV-en din på nettverket"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 86
-#: NEEDS WORK
-msgid "Configure signing (auto by default)"
-msgstr "Konfigurer signering (automatisk som standard)"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 92
-#: NEEDS WORK
-msgid "Install"
-msgstr "Installer"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 87
-#: NEEDS WORK
-msgid "One click to deploy Jellyfin"
-msgstr "Én klikk for å distribuere Jellyfin"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 68
-#: NEEDS WORK
-msgid "System Requirements"
-msgstr "Systemkrav"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 74
-#: NEEDS WORK
-msgid "Docker Engine"
-msgstr "Docker-motor"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 79
-#: NEEDS WORK
-msgid "Checking..."
-msgstr "Sjekker..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-# File: usr/share/jellybeam/pages/welcome.py, line: 88
-# File: usr/share/jellybeam/pages/welcome.py, line: 194
-#: NEEDS WORK
-msgid "Install Docker"
-msgstr "Installer Docker"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 86
-#: NEEDS WORK
-msgid "Docker is required but not installed"
-msgstr "Docker er påkrevd, men ikke installert"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 133
-#: NEEDS WORK
-msgid "Docker Group"
-msgstr "Docker-gruppe"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 134
-#: NEEDS WORK
-msgid "User not in docker group"
-msgstr "Bruker ikke i docker-gruppen"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 136
-#: NEEDS WORK
-msgid "Add to group"
-msgstr "Legg til gruppe"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 106
-#: NEEDS WORK
-msgid "Configure your Samsung TV"
-msgstr "Konfigurer din Samsung TV"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 157
-#: NEEDS WORK
-msgid "Continue to Device Setup"
-msgstr "Fortsett til enhetsoppsett"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 135
-#: NEEDS WORK
-msgid "Ready"
-msgstr "Klar"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 194
-#: NEEDS WORK
-msgid "Permission required"
-msgstr "Tillatelse kreves"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 142
-#: NEEDS WORK
-msgid "Not running"
-msgstr "Ikke kjører"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 144
-#: NEEDS WORK
-msgid "Start"
-msgstr "Start"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 153
-#: NEEDS WORK
-msgid "Not installed"
-msgstr "Ikke installert"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 259
-#: NEEDS WORK
-msgid "Added to group"
-msgstr "Lagt til gruppe"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 307
-#: NEEDS WORK
-msgid ""
-"Select your distribution:\n"
-"\n"
-"⚠ This will require elevated privileges (sudo). You may be prompted for your password."
-msgstr ""
-"Velg distribusjonen din:\n"
-"\n"
-"⚠ Dette vil kreve forhøyede rettigheter (sudo). Du kan bli bedt om passordet ditt."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 199
-#: NEEDS WORK
-msgid "Arch/Manjaro"
-msgstr "Arch/Manjaro"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 200
-#: NEEDS WORK
-msgid "Debian/Ubuntu"
-msgstr "Debian/Ubuntu"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 201
-#: NEEDS WORK
-msgid "Fedora/RHEL"
-msgstr "Fedora/RHEL"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 331
-#: NEEDS WORK
-msgid "Installing Docker..."
-msgstr "Installerer Docker..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 347
-#: NEEDS WORK
-msgid "Docker installed! Checking status..."
-msgstr "Docker installert! Sjekker status..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 355
-#: NEEDS WORK
-#, python-brace-format
-msgid "Installation failed: {msg}"
-msgstr "Installasjonen mislyktes: {msg}"
-
-#: NEEDS WORK
-msgid "Apply Server Customizations"
-msgstr "Bruk tilpasninger for tjener"
-
-#: NEEDS WORK
-msgid "Check that the server answers before building"
-msgstr "Sjekk at tjeneren svarer før bygging"
-
-#: NEEDS WORK
-msgid "Connected to {name}"
-msgstr "Koblet til {name}"
-
-#: NEEDS WORK
-msgid "Could not reach the server"
-msgstr "Fikk ikke kontakt med tjeneren"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Docker-tjenesten kjører ikke"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker er ikke installert på dette systemet"
-
-#: NEEDS WORK
-msgid "Enter a server URL first"
-msgstr "Skriv inn en tjener-URL først"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Ugyldig passord for sertifikat"
-
-#: NEEDS WORK
-msgid "Jellyfin Server URL"
-msgstr "URL til Jellyfin-tjener"
-
-#: NEEDS WORK
-msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
-msgstr "Last inn temaet og skriptene fra Jellyfin-tjeneren din på TV-en. Adressen forblir på denne datamaskinen og skrives kun inn i pakken du bygger."
-
-#: NEEDS WORK
-msgid "Load them again every time the app starts on the TV"
-msgstr "Last dem inn på nytt hver gang appen starter på TV-en"
-
-#: NEEDS WORK
-msgid "Server Customization"
-msgstr "Tjenertilpasning"
-
-#: NEEDS WORK
-msgid "Test"
-msgstr "Test"
-
-#: NEEDS WORK
-msgid "Test Connection"
-msgstr "Test tilkobling"
-
-#: NEEDS WORK
-msgid "Testing…"
-msgstr "Tester…"
-
-#: NEEDS WORK
-msgid "The address must start with http:// or https://"
-msgstr "Adressen må starte med http:// eller https://"
-
-#: NEEDS WORK
-msgid "That does not look like an address"
-msgstr "Dette ser ikke ut som en adresse"
-
+# File: usr/share/jellybeam/pages/install.py, line: 184
+# File: usr/share/jellybeam/pages/install.py, line: 186
 #: NEEDS WORK
 msgid "Copy the log"
 msgstr "Kopier loggen"
-
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 307
+#: NEEDS WORK
+msgid "Installation Complete!"
+msgstr "Installasjon fullført!"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 174
+#: NEEDS WORK
+msgid "Jellyfin is ready!"
+msgstr "Jellyfin er klar!"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 175
+#: NEEDS WORK
+msgid "Open the Jellyfin app on your TV"
+msgstr "Åpne Jellyfin-appen på TV-en din"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 179
+#: NEEDS WORK
+msgid "Done"
+msgstr "Ferdig"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 268
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Loggen kopiert"
-
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
-msgid "Bring Jellyfin to your big screen"
-msgstr "Få Jellyfin på den store skjermen din"
-
+msgid "No device selected - please go back"
+msgstr "Ingen enhet valgt - vennligst gå tilbake"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 206
 #: NEEDS WORK
-msgid "Built by the community"
-msgstr "Bygget av fellesskapet"
-
+msgid "No TV configured. Please go back and select a device."
+msgstr "Ingen TV konfigurert. Vennligst gå tilbake og velg en enhet."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 231
 #: NEEDS WORK
-msgid "Complete"
-msgstr "Fullført"
-
+msgid "Starting Installation"
+msgstr "Starter installasjon"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 236
 #: NEEDS WORK
-msgid "Docker Powered"
-msgstr "Drevet av Docker"
-
+msgid "Downloading container..."
+msgstr "Laster ned container..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 237
 #: NEEDS WORK
-msgid "Open Source"
-msgstr "Åpen kildekode"
-
+msgid "Pulling Docker image..."
+msgstr "Henter Docker-bilde..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 250
 #: NEEDS WORK
-msgid "Samsung & LG TVs"
-msgstr "Samsung & LG TV-er"
-
+msgid "Container ready!"
+msgstr "Beholder klar!"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 254
 #: NEEDS WORK
-msgid "Setup Device"
-msgstr "Enhetsoppsett"
-
+msgid "Installing to TV..."
+msgstr "Installerer til TV..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 255
 #: NEEDS WORK
-msgid "Simple and reliable"
-msgstr "Enkelt og pålitelig"
-
+msgid "Connecting and installing..."
+msgstr "Kobler og installerer..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 256
 #: NEEDS WORK
-msgid "Step {number} of {total}"
-msgstr "Trinn {number} av {total}"
-
+msgid "This may take a few minutes..."
+msgstr "Dette kan ta noen minutter..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 275
 #: NEEDS WORK
-msgid "Wide device support"
-msgstr "Bred enhetsstøtte"
-
+msgid "Installing..."
+msgstr "Installerer..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 277
 #: NEEDS WORK
-msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
-msgstr "Velg distribusjonen din:\n\nDette vil kreve forhøyede rettigheter (sudo). Du kan bli bedt om passordet ditt."
+msgid "Downloading app..."
+msgstr "Laster ned app..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 279
+#: NEEDS WORK
+msgid "Transferring..."
+msgstr "Overfører..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 281
+#: NEEDS WORK
+msgid "Connecting to TV..."
+msgstr "Kobler til TV..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 283
+#: NEEDS WORK
+msgid "Finishing..."
+msgstr "Ferdiggjøring..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 364
+#: NEEDS WORK
+msgid "Extracting layers..."
+msgstr "Ekstraherer lag..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 366
+#: NEEDS WORK
+msgid "Download complete"
+msgstr "Nedlasting fullført"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 216
+#: NEEDS WORK
+msgid "Error"
+msgstr "Feil"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 339
+#: NEEDS WORK
+msgid "Jellyfin is now on your TV"
+msgstr "Jellyfin er nå på TV-en din"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 341
+#: NEEDS WORK
+msgid "Reinstall"
+msgstr "Installer på nytt"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 348
+#: NEEDS WORK
+msgid "Find Jellyfin in your TV's app list."
+msgstr "Finn Jellyfin i applisten på TV-en din."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 322
+#: NEEDS WORK
+msgid "Installation Failed"
+msgstr "Installasjon mislyktes"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 362
+#: NEEDS WORK
+msgid "Retry"
+msgstr "Prøv igjen"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 379
+# File: usr/share/jellybeam/pages/install.py, line: 383
+#: NEEDS WORK
+msgid "Cancelled"
+msgstr "Avbrutt"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 380
+#: NEEDS WORK
+msgid "Installation was cancelled"
+msgstr "Installasjonen ble avbrutt"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 333
+#: NEEDS WORK
+msgid "Installation cancelled"
+msgstr "Installasjon avbrutt"

@@ -16,31 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
-#: NEEDS WORK
-msgid "OK"
-msgstr "Bine"
-# 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
-#: NEEDS WORK
-msgid "Confirm"
-msgstr "Confirmare"
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
-# File: usr/share/jellybeam/pages/preferences.py, line: 171
-# File: usr/share/jellybeam/pages/install.py, line: 110
-# File: usr/share/jellybeam/pages/welcome.py, line: 198
-#: NEEDS WORK
-msgid "Cancel"
-msgstr "Anulează"
-# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -74,223 +49,243 @@ msgstr "Echipa JellyBeam"
 msgid "JellyBeam Contributors"
 msgstr "Contribuitori JellyBeam"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 53
-# File: usr/share/jellybeam/pages/install.py, line: 116
-# File: usr/share/jellybeam/pages/install.py, line: 385
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
 #: NEEDS WORK
-msgid "Install Jellyfin"
-msgstr "Instalează Jellyfin"
+msgid "OK"
+msgstr "Bine"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 54
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
 #: NEEDS WORK
-msgid "One-click installation to your Samsung TV"
-msgstr "Instalare cu un singur clic pe televizorul tău Samsung"
+msgid "Confirm"
+msgstr "Confirmare"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 59
-#: NEEDS WORK
-msgid "Target Device"
-msgstr "Dispozitiv țintă"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 60
-#: NEEDS WORK
-msgid "Loading..."
-msgstr "Încărcare..."
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 43
-#: NEEDS WORK
-msgid "Installation Progress"
-msgstr "Progresul Instalării"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 74
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
+# File: usr/share/jellybeam/pages/preferences.py, line: 171
+# File: usr/share/jellybeam/pages/install.py, line: 110
+# File: usr/share/jellybeam/pages/welcome.py, line: 198
 #: NEEDS WORK
-msgid "Ready to install"
-msgstr "Pregătit pentru instalare"
+msgid "Cancel"
+msgstr "Anulează"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 75
+# File: usr/share/jellybeam/utils/design.py, line: 190
 #: NEEDS WORK
-msgid "Click the button below to start"
-msgstr "Faceți clic pe butonul de mai jos pentru a începe"
+msgid "Setup Device"
+msgstr "Configurare dispozitiv"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 104
+# File: usr/share/jellybeam/pages/device.py, line: 122
+# File: usr/share/jellybeam/pages/device.py, line: 250
 #: NEEDS WORK
-msgid "Installation progress"
-msgstr "Progresul instalării"
+msgid "Connect"
+msgstr "Conectează"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 62
+# File: usr/share/jellybeam/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Waiting to start..."
-msgstr "Așteptând să înceapă..."
+msgid "Install"
+msgstr "Instalare"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 120
+# File: usr/share/jellybeam/utils/design.py, line: 190
 #: NEEDS WORK
-msgid "Installation status updates"
-msgstr "Actualizări ale stării instalării"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 138
-#: NEEDS WORK
-msgid "Install Jellyfin on TV"
-msgstr "Instalează Jellyfin pe TV"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 149
-#: NEEDS WORK
-msgid "Cancel installation"
-msgstr "Anulează instalarea"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 67
-#: NEEDS WORK
-msgid "Installation Log"
-msgstr "Jurnal de instalare"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 139
-#: NEEDS WORK
-msgid "Click to view detailed output"
-msgstr "Faceți clic pentru a vizualiza ieșirea detaliată"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 307
-#: NEEDS WORK
-msgid "Installation Complete!"
-msgstr "Instalare completă!"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 174
-#: NEEDS WORK
-msgid "Jellyfin is ready!"
-msgstr "Jellyfin este gata!"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 175
-#: NEEDS WORK
-msgid "Open the Jellyfin app on your TV"
-msgstr "Deschide aplicația Jellyfin pe televizorul tău"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 179
-#: NEEDS WORK
-msgid "Done"
+msgid "Complete"
 msgstr "Finalizat"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 197
+# File: usr/share/jellybeam/utils/design.py, line: 242
 #: NEEDS WORK
-msgid "No device selected - please go back"
-msgstr "Niciun dispozitiv selectat - vă rugăm să reveniți"
+#, python-brace-format
+msgid "Step {number} of {total}"
+msgstr "Pasul {number} din {total}"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 206
+# File: usr/share/jellybeam/utils/design.py, line: 361
 #: NEEDS WORK
-msgid "No TV configured. Please go back and select a device."
-msgstr "Niciun televizor configurat. Vă rugăm să reveniți și să selectați un dispozitiv."
+msgid "Bring Jellyfin to your big screen"
+msgstr "Adu Jellyfin pe ecranul tău mare"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 231
+# File: usr/share/jellybeam/pages/certificates.py, line: 31
 #: NEEDS WORK
-msgid "Starting Installation"
-msgstr "Începere Instalare"
+msgid "Developer Certificates"
+msgstr "Certificatul de dezvoltator"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 236
+# File: usr/share/jellybeam/pages/certificates.py, line: 48
 #: NEEDS WORK
-msgid "Downloading container..."
-msgstr "Descărcare container..."
+msgid "Certificates are required to install apps on Samsung TVs"
+msgstr "Certificatul este necesar pentru a instala aplicații pe televizoarele Samsung."
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 237
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "Pulling Docker image..."
-msgstr "Se descarcă imaginea Docker..."
+msgid "Certificate Mode"
+msgstr "Modul certificat"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 250
+# File: usr/share/jellybeam/pages/certificates.py, line: 60
 #: NEEDS WORK
-msgid "Container ready!"
-msgstr "Container pregătit!"
+msgid "Use Built-in Certificates"
+msgstr "Utilizați certificatele încorporate"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 254
+# File: usr/share/jellybeam/pages/certificates.py, line: 61
 #: NEEDS WORK
-msgid "Installing to TV..."
-msgstr "Se instalează pe TV..."
+msgid "Recommended - No Tizen Studio required"
+msgstr "Recomandat - Nu este necesar Tizen Studio"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 255
+# File: usr/share/jellybeam/pages/certificates.py, line: 73
 #: NEEDS WORK
-msgid "Connecting and installing..."
-msgstr "Conectare și instalare..."
+msgid "How it works"
+msgstr "Cum funcționează"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 256
+# File: usr/share/jellybeam/pages/certificates.py, line: 74
 #: NEEDS WORK
-msgid "This may take a few minutes..."
-msgstr "Acest lucru poate dura câteva minute..."
+msgid ""
+"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
+"without any setup."
+msgstr ""
+"Containerul Docker include certificate preconfigurate. Puteți instala Jellyfin imediat, fără nicio "
+"configurare."
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 275
+# File: usr/share/jellybeam/pages/certificates.py, line: 83
 #: NEEDS WORK
-msgid "Installing..."
-msgstr "Instalare..."
+msgid "Custom Certificates (Advanced)"
+msgstr "Certificatul Personalizat (Avansat)"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 277
+# File: usr/share/jellybeam/pages/certificates.py, line: 84
 #: NEEDS WORK
-msgid "Downloading app..."
-msgstr "Se descarcă aplicația..."
+msgid "Only needed if you want to use your own certificates"
+msgstr "Necesar doar dacă doriți să utilizați propriile certificate."
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 279
+# File: usr/share/jellybeam/pages/certificates.py, line: 43
 #: NEEDS WORK
-msgid "Transferring..."
-msgstr "Transferare..."
+msgid "Author Certificate"
+msgstr "Certificat de autor"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 281
+# File: usr/share/jellybeam/pages/certificates.py, line: 148
 #: NEEDS WORK
-msgid "Connecting to TV..."
-msgstr "Conectare la TV..."
+msgid "Select author.p12 file"
+msgstr "Selectați fișierul author.p12"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 283
+# File: usr/share/jellybeam/pages/certificates.py, line: 46
+# File: usr/share/jellybeam/pages/certificates.py, line: 58
 #: NEEDS WORK
-msgid "Finishing..."
-msgstr "Finalizare..."
+msgid "Browse"
+msgstr "Răsfoiește"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 364
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "Extracting layers..."
-msgstr "Extrage straturi..."
+msgid "Distributor Certificate"
+msgstr "Certificat de Distribuitor"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 366
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
 #: NEEDS WORK
-msgid "Download complete"
-msgstr "Descărcare completă"
+msgid "Select distributor.p12 file"
+msgstr "Selectați fișierul distributor.p12"
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 216
+# File: usr/share/jellybeam/pages/certificates.py, line: 115
 #: NEEDS WORK
-msgid "Error"
-msgstr "Eroare"
+msgid "Certificate Password"
+msgstr "Parola certificat"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 339
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
 #: NEEDS WORK
-msgid "Jellyfin is now on your TV"
-msgstr "Jellyfin este acum pe televizorul tău"
+msgid "Password for the author P12 certificate"
+msgstr "Parola pentru certificatul P12 al autorului"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 341
+# File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
-msgid "Reinstall"
-msgstr "Reinstalare"
+msgid "Need help creating certificates?"
+msgstr "Ai nevoie de ajutor pentru a crea certificate?"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 348
+# File: usr/share/jellybeam/pages/certificates.py, line: 123
 #: NEEDS WORK
-msgid "Find Jellyfin in your TV's app list."
-msgstr "Găsește Jellyfin în lista de aplicații a televizorului tău."
+msgid "View tutorial on Samsung Developer website"
+msgstr "Vizualizați tutorialul pe site-ul dezvoltatorului Samsung"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 322
+# File: usr/share/jellybeam/pages/certificates.py, line: 127
 #: NEEDS WORK
-msgid "Installation Failed"
-msgstr "Instalare eșuată"
+msgid "View Guide"
+msgstr "Vizualizați Ghidul"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 362
+# File: usr/share/jellybeam/pages/certificates.py, line: 114
 #: NEEDS WORK
-msgid "Retry"
-msgstr "Reîncercare"
+msgid "Continue to Installation"
+msgstr "Continuare la instalare"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 379
-# File: usr/share/jellybeam/pages/install.py, line: 383
+# File: usr/share/jellybeam/pages/certificates.py, line: 226
 #: NEEDS WORK
-msgid "Cancelled"
-msgstr "Anulat"
+msgid "Proceed to install Jellyfin on your TV"
+msgstr "Continuați pentru a instala Jellyfin pe televizorul dumneavoastră"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 380
-#: NEEDS WORK
-msgid "Installation was cancelled"
-msgstr "Instalarea a fost anulată"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 333
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 117
+# File: usr/share/jellybeam/pages/device.py, line: 135
+# File: usr/share/jellybeam/pages/welcome.py, line: 105
 #: NEEDS WORK
-msgid "Installation cancelled"
-msgstr "Instalare anulată"
+msgid "Continue"
+msgstr "Continuare"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 171
+#: NEEDS WORK
+msgid "Ready to install with built-in certificates"
+msgstr "Pregătit pentru instalare cu certificate încorporate"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
+#: NEEDS WORK
+#, python-brace-format
+msgid "Select {cert_type} certificate"
+msgstr "Selectați certificatul {cert_type}"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 136
+#: NEEDS WORK
+msgid "P12 Certificate Files"
+msgstr "Fișiere certificat P12"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 163
+# File: usr/share/jellybeam/pages/certificates.py, line: 166
+# File: usr/share/jellybeam/pages/certificates.py, line: 185
+# File: usr/share/jellybeam/pages/certificates.py, line: 191
+#: NEEDS WORK
+msgid "Change"
+msgstr "Schimbare"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 251
+#: NEEDS WORK
+msgid "Ready to install with custom certificates"
+msgstr "Pregătit pentru instalare cu certificate personalizate"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 326
+#: NEEDS WORK
+msgid "author certificate"
+msgstr "certificat de autor"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 328
+#: NEEDS WORK
+msgid "distributor certificate"
+msgstr "certificat de distribuitor"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 330
+#: NEEDS WORK
+msgid "password"
+msgstr "parolă"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid "Missing: {items}"
+msgstr "Lipsă: {items}"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+#: NEEDS WORK
+msgid "Installation"
+msgstr "Instalare"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 310
+#: NEEDS WORK
+msgid "Certificate Error"
+msgstr "Eroare de certificat"
 # 
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
@@ -483,37 +478,10 @@ msgstr "Conectare la dispozitiv"
 msgid "Establish connection with your TV"
 msgstr "Stabilește conexiunea cu televizorul tău"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 122
-# File: usr/share/jellybeam/pages/device.py, line: 250
-#: NEEDS WORK
-msgid "Connect"
-msgstr "Conectează"
-# 
 # File: usr/share/jellybeam/pages/device.py, line: 222
 #: NEEDS WORK
 msgid "Connect to Samsung TV"
 msgstr "Conectare la televizorul Samsung"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 132
-#: NEEDS WORK
-msgid "Continue to Certificates"
-msgstr "Continuare la Certificate"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 133
-#: NEEDS WORK
-msgid "Setup developer certificates"
-msgstr "Configurare certificate de dezvoltator"
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 117
-# File: usr/share/jellybeam/pages/device.py, line: 135
-# File: usr/share/jellybeam/pages/welcome.py, line: 105
-#: NEEDS WORK
-msgid "Continue"
-msgstr "Continuare"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 422
 #: NEEDS WORK
@@ -556,11 +524,6 @@ msgstr "IP: {ip} | Model: {model}"
 msgid "Unknown"
 msgstr "Necunoscut"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 189
-#: NEEDS WORK
-msgid "Select"
-msgstr "Selectați"
-# 
 # File: usr/share/jellybeam/pages/device.py, line: 200
 #: NEEDS WORK
 msgid "Found 1 device - Select your target device"
@@ -571,12 +534,6 @@ msgstr "Am găsit 1 dispozitiv - Selectați dispozitivul țintă"
 #, python-brace-format
 msgid "Found {count} devices - Select your target device"
 msgstr "Am găsit {count} dispozitive - Selectați dispozitivul țintă"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 304
-#: NEEDS WORK
-#, python-brace-format
-msgid "Device selected: {name}"
-msgstr "Dispozitiv selectat: {name}"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 366
 #: NEEDS WORK
@@ -618,6 +575,205 @@ msgstr "Conexiune eșuată: {message}"
 #: NEEDS WORK
 msgid "Certificates"
 msgstr "Certificate"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 60
+#: NEEDS WORK
+msgid "JellyBeam Installer"
+msgstr "Instalator JellyBeam"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 63
+#: NEEDS WORK
+msgid "Install Jellyfin on your Samsung Smart TV or projector"
+msgstr "Instalați Jellyfin pe televizorul dumneavoastră inteligent Samsung sau pe proiector."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 76
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Televizoare Samsung & LG"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 77
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Suport extins pentru dispozitive"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 81
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Bazat pe Docker"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 82
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Simplu și fiabil"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Sursă deschisă"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "Construit de comunitate"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+#: NEEDS WORK
+msgid "4 simple steps to get Jellyfin on your Samsung TV"
+msgstr "4 pași simpli pentru a obține Jellyfin pe televizorul tău Samsung"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Check Requirements"
+msgstr "Verifica cerințele"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Ensure Docker is installed"
+msgstr "Asigurați-vă că Docker este instalat"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Connect Device"
+msgstr "Conectează dispozitivul"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Find your TV on the network"
+msgstr "Găsește-ți televizorul pe rețea"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Configure signing (auto by default)"
+msgstr "Configurează semnarea (automat, implicit)"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
+#: NEEDS WORK
+msgid "One click to deploy Jellyfin"
+msgstr "Un clic pentru a desfășura Jellyfin"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 68
+#: NEEDS WORK
+msgid "System Requirements"
+msgstr "Cerințe de sistem"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 74
+#: NEEDS WORK
+msgid "Docker Engine"
+msgstr "Motor Docker"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+#: NEEDS WORK
+msgid "Checking..."
+msgstr "Verificare..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+# File: usr/share/jellybeam/pages/welcome.py, line: 88
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
+#: NEEDS WORK
+msgid "Install Docker"
+msgstr "Instalează Docker"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Docker is required but not installed"
+msgstr "Docker este necesar, dar nu este instalat."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 133
+#: NEEDS WORK
+msgid "Docker Group"
+msgstr "Grup Docker"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 134
+#: NEEDS WORK
+msgid "User not in docker group"
+msgstr "Utilizatorul nu este în grupul docker"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 136
+#: NEEDS WORK
+msgid "Add to group"
+msgstr "Adaugă la grup"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 106
+#: NEEDS WORK
+msgid "Configure your Samsung TV"
+msgstr "Configurează-ți televizorul Samsung"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 157
+#: NEEDS WORK
+msgid "Continue to Device Setup"
+msgstr "Continuă la Configurarea Dispozitivului"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 135
+#: NEEDS WORK
+msgid "Ready"
+msgstr "Pregătit"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
+#: NEEDS WORK
+msgid "Permission required"
+msgstr "Permisiune necesară"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 142
+#: NEEDS WORK
+msgid "Not running"
+msgstr "Neîntreținut"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 144
+#: NEEDS WORK
+msgid "Start"
+msgstr "Începe"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 153
+#: NEEDS WORK
+msgid "Not installed"
+msgstr "Neinstalat"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 259
+#: NEEDS WORK
+msgid "Added to group"
+msgstr "Adăugat în grup"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 331
+#: NEEDS WORK
+msgid ""
+"Select your distribution:\n"
+"\n"
+"This will require elevated privileges (sudo). You may be prompted for your password."
+msgstr ""
+"Selectați distribuția dumneavoastră:\n"
+"\n"
+"Aceasta va necesita privilegii elevate (sudo). Este posibil să vi se ceară parola."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 199
+#: NEEDS WORK
+msgid "Arch/Manjaro"
+msgstr "Arch/Manjaro"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 200
+#: NEEDS WORK
+msgid "Debian/Ubuntu"
+msgstr "Debian/Ubuntu"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 201
+#: NEEDS WORK
+msgid "Fedora/RHEL"
+msgstr "Fedora/RHEL"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 331
+#: NEEDS WORK
+msgid "Installing Docker..."
+msgstr "Instalarea Docker..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 347
+#: NEEDS WORK
+msgid "Docker installed! Checking status..."
+msgstr "Docker instalat! Verificare stare..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 355
+#: NEEDS WORK
+#, python-brace-format
+msgid "Installation failed: {msg}"
+msgstr "Instalarea a eșuat: {msg}"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 24
 #: NEEDS WORK
@@ -761,6 +917,77 @@ msgstr "Resetare toate setările"
 msgid "Reset all preferences to default values"
 msgstr "Resetare toate preferințele la valorile implicite"
 # 
+# File: usr/share/jellybeam/pages/preferences.py, line: 214
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "Personalizare server"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 217
+#: NEEDS WORK
+msgid ""
+"Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer "
+"and is only written into the package you build."
+msgstr ""
+"Încarcă tema și scripturile de pe serverul dvs. Jellyfin pe televizor. Adresa rămâne pe acest "
+"computer și este scrisă doar în pachetul pe care îl construiți."
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 225
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "URL server Jellyfin"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 233
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "Aplică personalizările serverului"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 235
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "Încarcă-le din nou de fiecare dată când aplicația pornește pe televizor"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 249
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "Testare conexiune"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 250
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "Verifică dacă serverul răspunde înainte de compilare"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 251
+# File: usr/share/jellybeam/pages/preferences.py, line: 300
+#: NEEDS WORK
+msgid "Test"
+msgstr "Testare"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 284
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "Introduceți mai întâi un URL de server"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 292
+#: NEEDS WORK
+msgid "That does not look like an address"
+msgstr "Aceasta nu pare o adresă"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 296
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "Se testează…"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 303
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "Nu s-a putut contacta serverul"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 313
+#: NEEDS WORK
+#, python-brace-format
+msgid "Connected to {name}"
+msgstr "Conectat la {name}"
+# 
 # File: usr/share/jellybeam/pages/preferences.py, line: 168
 #: NEEDS WORK
 msgid "Reset All Settings?"
@@ -771,475 +998,231 @@ msgstr "Resetare toate setările?"
 msgid "This will reset all preferences to their default values. This action cannot be undone."
 msgstr "Aceasta va reseta toate preferințele la valorile lor implicite. Această acțiune nu poate fi anulată."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 31
+# File: usr/share/jellybeam/pages/install.py, line: 53
+# File: usr/share/jellybeam/pages/install.py, line: 116
+# File: usr/share/jellybeam/pages/install.py, line: 385
 #: NEEDS WORK
-msgid "Developer Certificates"
-msgstr "Certificatul de dezvoltator"
+msgid "Install Jellyfin"
+msgstr "Instalează Jellyfin"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 48
+# File: usr/share/jellybeam/pages/install.py, line: 54
 #: NEEDS WORK
-msgid "Certificates are required to install apps on Samsung TVs"
-msgstr "Certificatul este necesar pentru a instala aplicații pe televizoarele Samsung."
+msgid "One-click installation to your Samsung TV"
+msgstr "Instalare cu un singur clic pe televizorul tău Samsung"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/install.py, line: 59
 #: NEEDS WORK
-msgid "Certificate Mode"
-msgstr "Modul certificat"
+msgid "Target Device"
+msgstr "Dispozitiv țintă"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 60
+# File: usr/share/jellybeam/pages/install.py, line: 60
 #: NEEDS WORK
-msgid "Use Built-in Certificates"
-msgstr "Utilizați certificatele încorporate"
+msgid "Loading..."
+msgstr "Încărcare..."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 61
+# File: usr/share/jellybeam/pages/install.py, line: 43
 #: NEEDS WORK
-msgid "Recommended - No Tizen Studio required"
-msgstr "Recomandat - Nu este necesar Tizen Studio"
+msgid "Installation Progress"
+msgstr "Progresul Instalării"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 73
+# File: usr/share/jellybeam/pages/install.py, line: 74
 #: NEEDS WORK
-msgid "How it works"
-msgstr "Cum funcționează"
+msgid "Ready to install"
+msgstr "Pregătit pentru instalare"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 74
+# File: usr/share/jellybeam/pages/install.py, line: 75
 #: NEEDS WORK
-msgid ""
-"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
-"without any setup."
-msgstr ""
-"Containerul Docker include certificate preconfigurate. Puteți instala Jellyfin imediat, fără nicio "
-"configurare."
+msgid "Click the button below to start"
+msgstr "Faceți clic pe butonul de mai jos pentru a începe"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 83
+# File: usr/share/jellybeam/pages/install.py, line: 104
 #: NEEDS WORK
-msgid "Custom Certificates (Advanced)"
-msgstr "Certificatul Personalizat (Avansat)"
+msgid "Installation progress"
+msgstr "Progresul instalării"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 84
+# File: usr/share/jellybeam/pages/install.py, line: 62
 #: NEEDS WORK
-msgid "Only needed if you want to use your own certificates"
-msgstr "Necesar doar dacă doriți să utilizați propriile certificate."
+msgid "Waiting to start..."
+msgstr "Așteptând să înceapă..."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 43
+# File: usr/share/jellybeam/pages/install.py, line: 120
 #: NEEDS WORK
-msgid "Author Certificate"
-msgstr "Certificat de autor"
+msgid "Installation status updates"
+msgstr "Actualizări ale stării instalării"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 148
+# File: usr/share/jellybeam/pages/install.py, line: 138
 #: NEEDS WORK
-msgid "Select author.p12 file"
-msgstr "Selectați fișierul author.p12"
+msgid "Install Jellyfin on TV"
+msgstr "Instalează Jellyfin pe TV"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 46
-# File: usr/share/jellybeam/pages/certificates.py, line: 58
+# File: usr/share/jellybeam/pages/install.py, line: 149
 #: NEEDS WORK
-msgid "Browse"
-msgstr "Răsfoiește"
+msgid "Cancel installation"
+msgstr "Anulează instalarea"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/install.py, line: 67
 #: NEEDS WORK
-msgid "Distributor Certificate"
-msgstr "Certificat de Distribuitor"
+msgid "Installation Log"
+msgstr "Jurnal de instalare"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 162
+# File: usr/share/jellybeam/pages/install.py, line: 139
 #: NEEDS WORK
-msgid "Select distributor.p12 file"
-msgstr "Selectați fișierul distributor.p12"
+msgid "Click to view detailed output"
+msgstr "Faceți clic pentru a vizualiza ieșirea detaliată"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 115
-#: NEEDS WORK
-msgid "Certificate Password"
-msgstr "Parola certificat"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 132
-#: NEEDS WORK
-msgid "Password for the author P12 certificate"
-msgstr "Parola pentru certificatul P12 al autorului"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 122
-#: NEEDS WORK
-msgid "Need help creating certificates?"
-msgstr "Ai nevoie de ajutor pentru a crea certificate?"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 123
-#: NEEDS WORK
-msgid "View tutorial on Samsung Developer website"
-msgstr "Vizualizați tutorialul pe site-ul dezvoltatorului Samsung"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 127
-#: NEEDS WORK
-msgid "View Guide"
-msgstr "Vizualizați Ghidul"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 114
-#: NEEDS WORK
-msgid "Continue to Installation"
-msgstr "Continuare la instalare"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 226
-#: NEEDS WORK
-msgid "Proceed to install Jellyfin on your TV"
-msgstr "Continuați pentru a instala Jellyfin pe televizorul dumneavoastră"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 171
-#: NEEDS WORK
-msgid "Ready to install with built-in certificates"
-msgstr "Pregătit pentru instalare cu certificate încorporate"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 132
-#: NEEDS WORK
-#, python-brace-format
-msgid "Select {cert_type} certificate"
-msgstr "Selectați certificatul {cert_type}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 136
-#: NEEDS WORK
-msgid "P12 Certificate Files"
-msgstr "Fișiere certificat P12"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 212
-# File: usr/share/jellybeam/pages/certificates.py, line: 215
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-# File: usr/share/jellybeam/pages/certificates.py, line: 238
-#: NEEDS WORK
-#, python-brace-format
-msgid "✅ {filename}"
-msgstr "✅ {filename}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 163
-# File: usr/share/jellybeam/pages/certificates.py, line: 166
-# File: usr/share/jellybeam/pages/certificates.py, line: 185
-# File: usr/share/jellybeam/pages/certificates.py, line: 191
-#: NEEDS WORK
-msgid "Change"
-msgstr "Schimbare"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 251
-#: NEEDS WORK
-msgid "Ready to install with custom certificates"
-msgstr "Pregătit pentru instalare cu certificate personalizate"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 326
-#: NEEDS WORK
-msgid "author certificate"
-msgstr "certificat de autor"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 328
-#: NEEDS WORK
-msgid "distributor certificate"
-msgstr "certificat de distribuitor"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 330
-#: NEEDS WORK
-msgid "password"
-msgstr "parolă"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 331
-#: NEEDS WORK
-#, python-brace-format
-msgid "Missing: {items}"
-msgstr "Lipsă: {items}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-#: NEEDS WORK
-msgid "Installation"
-msgstr "Instalare"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 310
-#: NEEDS WORK
-msgid "Certificate Error"
-msgstr "Eroare de certificat"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 60
-#: NEEDS WORK
-msgid "JellyBeam Installer"
-msgstr "Instalator JellyBeam"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 63
-#: NEEDS WORK
-msgid "Install Jellyfin on your Samsung Smart TV or projector"
-msgstr "Instalați Jellyfin pe televizorul dumneavoastră inteligent Samsung sau pe proiector."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 79
-#: NEEDS WORK
-msgid "4 simple steps to get Jellyfin on your Samsung TV"
-msgstr "4 pași simpli pentru a obține Jellyfin pe televizorul tău Samsung"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 84
-#: NEEDS WORK
-msgid "Check Requirements"
-msgstr "Verifica cerințele"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 84
-#: NEEDS WORK
-msgid "Ensure Docker is installed"
-msgstr "Asigurați-vă că Docker este instalat"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-#: NEEDS WORK
-msgid "Connect Device"
-msgstr "Conectează dispozitivul"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-#: NEEDS WORK
-msgid "Find your TV on the network"
-msgstr "Găsește-ți televizorul pe rețea"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 86
-#: NEEDS WORK
-msgid "Configure signing (auto by default)"
-msgstr "Configurează semnarea (automat, implicit)"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 92
-#: NEEDS WORK
-msgid "Install"
-msgstr "Instalare"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 87
-#: NEEDS WORK
-msgid "One click to deploy Jellyfin"
-msgstr "Un clic pentru a desfășura Jellyfin"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 68
-#: NEEDS WORK
-msgid "System Requirements"
-msgstr "Cerințe de sistem"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 74
-#: NEEDS WORK
-msgid "Docker Engine"
-msgstr "Motor Docker"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 79
-#: NEEDS WORK
-msgid "Checking..."
-msgstr "Verificare..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-# File: usr/share/jellybeam/pages/welcome.py, line: 88
-# File: usr/share/jellybeam/pages/welcome.py, line: 194
-#: NEEDS WORK
-msgid "Install Docker"
-msgstr "Instalează Docker"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 86
-#: NEEDS WORK
-msgid "Docker is required but not installed"
-msgstr "Docker este necesar, dar nu este instalat."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 133
-#: NEEDS WORK
-msgid "Docker Group"
-msgstr "Grup Docker"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 134
-#: NEEDS WORK
-msgid "User not in docker group"
-msgstr "Utilizatorul nu este în grupul docker"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 136
-#: NEEDS WORK
-msgid "Add to group"
-msgstr "Adaugă la grup"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 106
-#: NEEDS WORK
-msgid "Configure your Samsung TV"
-msgstr "Configurează-ți televizorul Samsung"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 157
-#: NEEDS WORK
-msgid "Continue to Device Setup"
-msgstr "Continuă la Configurarea Dispozitivului"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 135
-#: NEEDS WORK
-msgid "Ready"
-msgstr "Pregătit"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 194
-#: NEEDS WORK
-msgid "Permission required"
-msgstr "Permisiune necesară"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 142
-#: NEEDS WORK
-msgid "Not running"
-msgstr "Neîntreținut"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 144
-#: NEEDS WORK
-msgid "Start"
-msgstr "Începe"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 153
-#: NEEDS WORK
-msgid "Not installed"
-msgstr "Neinstalat"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 259
-#: NEEDS WORK
-msgid "Added to group"
-msgstr "Adăugat în grup"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 307
-#: NEEDS WORK
-msgid ""
-"Select your distribution:\n"
-"\n"
-"⚠ This will require elevated privileges (sudo). You may be prompted for your password."
-msgstr ""
-"Selectați distribuția dumneavoastră:\n"
-"\n"
-"⚠ Aceasta va necesita privilegii elevate (sudo). Este posibil să vi se ceară parola."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 199
-#: NEEDS WORK
-msgid "Arch/Manjaro"
-msgstr "Arch/Manjaro"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 200
-#: NEEDS WORK
-msgid "Debian/Ubuntu"
-msgstr "Debian/Ubuntu"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 201
-#: NEEDS WORK
-msgid "Fedora/RHEL"
-msgstr "Fedora/RHEL"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 331
-#: NEEDS WORK
-msgid "Installing Docker..."
-msgstr "Instalarea Docker..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 347
-#: NEEDS WORK
-msgid "Docker installed! Checking status..."
-msgstr "Docker instalat! Verificare stare..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 355
-#: NEEDS WORK
-#, python-brace-format
-msgid "Installation failed: {msg}"
-msgstr "Instalarea a eșuat: {msg}"
-
-#: NEEDS WORK
-msgid "Apply Server Customizations"
-msgstr "Aplică personalizările serverului"
-
-#: NEEDS WORK
-msgid "Check that the server answers before building"
-msgstr "Verifică dacă serverul răspunde înainte de compilare"
-
-#: NEEDS WORK
-msgid "Connected to {name}"
-msgstr "Conectat la {name}"
-
-#: NEEDS WORK
-msgid "Could not reach the server"
-msgstr "Nu s-a putut contacta serverul"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Serviciul Docker nu rulează"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker nu este instalat pe acest sistem"
-
-#: NEEDS WORK
-msgid "Enter a server URL first"
-msgstr "Introduceți mai întâi un URL de server"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Parolă de certificat nevalidă"
-
-#: NEEDS WORK
-msgid "Jellyfin Server URL"
-msgstr "URL server Jellyfin"
-
-#: NEEDS WORK
-msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
-msgstr "Încarcă tema și scripturile de pe serverul dvs. Jellyfin pe televizor. Adresa rămâne pe acest computer și este scrisă doar în pachetul pe care îl construiți."
-
-#: NEEDS WORK
-msgid "Load them again every time the app starts on the TV"
-msgstr "Încarcă-le din nou de fiecare dată când aplicația pornește pe televizor"
-
-#: NEEDS WORK
-msgid "Server Customization"
-msgstr "Personalizare server"
-
-#: NEEDS WORK
-msgid "Test"
-msgstr "Testare"
-
-#: NEEDS WORK
-msgid "Test Connection"
-msgstr "Testare conexiune"
-
-#: NEEDS WORK
-msgid "Testing…"
-msgstr "Se testează…"
-
-#: NEEDS WORK
-msgid "The address must start with http:// or https://"
-msgstr "Adresa trebuie să înceapă cu http:// sau https://"
-
-#: NEEDS WORK
-msgid "That does not look like an address"
-msgstr "Aceasta nu pare o adresă"
-
+# File: usr/share/jellybeam/pages/install.py, line: 184
+# File: usr/share/jellybeam/pages/install.py, line: 186
 #: NEEDS WORK
 msgid "Copy the log"
 msgstr "Copiază jurnalul"
-
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 307
+#: NEEDS WORK
+msgid "Installation Complete!"
+msgstr "Instalare completă!"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 174
+#: NEEDS WORK
+msgid "Jellyfin is ready!"
+msgstr "Jellyfin este gata!"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 175
+#: NEEDS WORK
+msgid "Open the Jellyfin app on your TV"
+msgstr "Deschide aplicația Jellyfin pe televizorul tău"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 179
+#: NEEDS WORK
+msgid "Done"
+msgstr "Finalizat"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 268
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Jurnal copiat"
-
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
-msgid "Bring Jellyfin to your big screen"
-msgstr "Adu Jellyfin pe ecranul tău mare"
-
+msgid "No device selected - please go back"
+msgstr "Niciun dispozitiv selectat - vă rugăm să reveniți"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 206
 #: NEEDS WORK
-msgid "Built by the community"
-msgstr "Construit de comunitate"
-
+msgid "No TV configured. Please go back and select a device."
+msgstr "Niciun televizor configurat. Vă rugăm să reveniți și să selectați un dispozitiv."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 231
 #: NEEDS WORK
-msgid "Complete"
-msgstr "Finalizat"
-
+msgid "Starting Installation"
+msgstr "Începere Instalare"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 236
 #: NEEDS WORK
-msgid "Docker Powered"
-msgstr "Bazat pe Docker"
-
+msgid "Downloading container..."
+msgstr "Descărcare container..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 237
 #: NEEDS WORK
-msgid "Open Source"
-msgstr "Sursă deschisă"
-
+msgid "Pulling Docker image..."
+msgstr "Se descarcă imaginea Docker..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 250
 #: NEEDS WORK
-msgid "Samsung & LG TVs"
-msgstr "Televizoare Samsung & LG"
-
+msgid "Container ready!"
+msgstr "Container pregătit!"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 254
 #: NEEDS WORK
-msgid "Setup Device"
-msgstr "Configurare dispozitiv"
-
+msgid "Installing to TV..."
+msgstr "Se instalează pe TV..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 255
 #: NEEDS WORK
-msgid "Simple and reliable"
-msgstr "Simplu și fiabil"
-
+msgid "Connecting and installing..."
+msgstr "Conectare și instalare..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 256
 #: NEEDS WORK
-msgid "Step {number} of {total}"
-msgstr "Pasul {number} din {total}"
-
+msgid "This may take a few minutes..."
+msgstr "Acest lucru poate dura câteva minute..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 275
 #: NEEDS WORK
-msgid "Wide device support"
-msgstr "Suport extins pentru dispozitive"
-
+msgid "Installing..."
+msgstr "Instalare..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 277
 #: NEEDS WORK
-msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
-msgstr "Selectați distribuția dumneavoastră:\n\nAceasta va necesita privilegii elevate (sudo). Este posibil să vi se ceară parola."
+msgid "Downloading app..."
+msgstr "Se descarcă aplicația..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 279
+#: NEEDS WORK
+msgid "Transferring..."
+msgstr "Transferare..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 281
+#: NEEDS WORK
+msgid "Connecting to TV..."
+msgstr "Conectare la TV..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 283
+#: NEEDS WORK
+msgid "Finishing..."
+msgstr "Finalizare..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 364
+#: NEEDS WORK
+msgid "Extracting layers..."
+msgstr "Extrage straturi..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 366
+#: NEEDS WORK
+msgid "Download complete"
+msgstr "Descărcare completă"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 216
+#: NEEDS WORK
+msgid "Error"
+msgstr "Eroare"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 339
+#: NEEDS WORK
+msgid "Jellyfin is now on your TV"
+msgstr "Jellyfin este acum pe televizorul tău"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 341
+#: NEEDS WORK
+msgid "Reinstall"
+msgstr "Reinstalare"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 348
+#: NEEDS WORK
+msgid "Find Jellyfin in your TV's app list."
+msgstr "Găsește Jellyfin în lista de aplicații a televizorului tău."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 322
+#: NEEDS WORK
+msgid "Installation Failed"
+msgstr "Instalare eșuată"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 362
+#: NEEDS WORK
+msgid "Retry"
+msgstr "Reîncercare"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 379
+# File: usr/share/jellybeam/pages/install.py, line: 383
+#: NEEDS WORK
+msgid "Cancelled"
+msgstr "Anulat"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 380
+#: NEEDS WORK
+msgid "Installation was cancelled"
+msgstr "Instalarea a fost anulată"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 333
+#: NEEDS WORK
+msgid "Installation cancelled"
+msgstr "Instalare anulată"

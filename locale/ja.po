@@ -16,31 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
-#: NEEDS WORK
-msgid "OK"
-msgstr "OK"
-# 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
-#: NEEDS WORK
-msgid "Confirm"
-msgstr "確認"
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
-# File: usr/share/jellybeam/pages/preferences.py, line: 171
-# File: usr/share/jellybeam/pages/install.py, line: 110
-# File: usr/share/jellybeam/pages/welcome.py, line: 198
-#: NEEDS WORK
-msgid "Cancel"
-msgstr "キャンセル"
-# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -74,223 +49,241 @@ msgstr "ジェリータイゼンチーム"
 msgid "JellyBeam Contributors"
 msgstr "JellyBeam 貢献者"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 53
-# File: usr/share/jellybeam/pages/install.py, line: 116
-# File: usr/share/jellybeam/pages/install.py, line: 385
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
 #: NEEDS WORK
-msgid "Install Jellyfin"
-msgstr "Jellyfinをインストール"
+msgid "OK"
+msgstr "OK"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 54
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
 #: NEEDS WORK
-msgid "One-click installation to your Samsung TV"
-msgstr "Samsung TVへのワンクリックインストール"
+msgid "Confirm"
+msgstr "確認"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 59
-#: NEEDS WORK
-msgid "Target Device"
-msgstr "ターゲットデバイス"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 60
-#: NEEDS WORK
-msgid "Loading..."
-msgstr "読み込み中..."
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 43
-#: NEEDS WORK
-msgid "Installation Progress"
-msgstr "インストール進行状況"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 74
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
+# File: usr/share/jellybeam/pages/preferences.py, line: 171
+# File: usr/share/jellybeam/pages/install.py, line: 110
+# File: usr/share/jellybeam/pages/welcome.py, line: 198
 #: NEEDS WORK
-msgid "Ready to install"
-msgstr "インストールの準備ができました"
+msgid "Cancel"
+msgstr "キャンセル"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 75
+# File: usr/share/jellybeam/utils/design.py, line: 190
 #: NEEDS WORK
-msgid "Click the button below to start"
-msgstr "下のボタンをクリックして開始してください"
+msgid "Setup Device"
+msgstr "デバイスの設定"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 104
+# File: usr/share/jellybeam/pages/device.py, line: 122
+# File: usr/share/jellybeam/pages/device.py, line: 250
 #: NEEDS WORK
-msgid "Installation progress"
-msgstr "インストール進行状況"
+msgid "Connect"
+msgstr "接続"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 62
+# File: usr/share/jellybeam/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Waiting to start..."
-msgstr "開始待機中..."
+msgid "Install"
+msgstr "インストール"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 120
+# File: usr/share/jellybeam/utils/design.py, line: 190
 #: NEEDS WORK
-msgid "Installation status updates"
-msgstr "インストール状況の更新"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 138
-#: NEEDS WORK
-msgid "Install Jellyfin on TV"
-msgstr "TVにJellyfinをインストール"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 149
-#: NEEDS WORK
-msgid "Cancel installation"
-msgstr "インストールをキャンセル"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 67
-#: NEEDS WORK
-msgid "Installation Log"
-msgstr "インストールログ"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 139
-#: NEEDS WORK
-msgid "Click to view detailed output"
-msgstr "詳細な出力を表示するにはクリックしてください"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 307
-#: NEEDS WORK
-msgid "Installation Complete!"
-msgstr "インストールが完了しました！"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 174
-#: NEEDS WORK
-msgid "Jellyfin is ready!"
-msgstr "Jellyfinの準備ができました！"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 175
-#: NEEDS WORK
-msgid "Open the Jellyfin app on your TV"
-msgstr "テレビでJellyfinアプリを開く"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 179
-#: NEEDS WORK
-msgid "Done"
+msgid "Complete"
 msgstr "完了"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 197
+# File: usr/share/jellybeam/utils/design.py, line: 242
 #: NEEDS WORK
-msgid "No device selected - please go back"
-msgstr "デバイスが選択されていません - 戻ってください"
+#, python-brace-format
+msgid "Step {number} of {total}"
+msgstr "ステップ {number}/{total}"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 206
+# File: usr/share/jellybeam/utils/design.py, line: 361
 #: NEEDS WORK
-msgid "No TV configured. Please go back and select a device."
-msgstr "テレビが設定されていません。戻ってデバイスを選択してください。"
+msgid "Bring Jellyfin to your big screen"
+msgstr "Jellyfinを大画面で"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 231
+# File: usr/share/jellybeam/pages/certificates.py, line: 31
 #: NEEDS WORK
-msgid "Starting Installation"
-msgstr "インストールを開始しています"
+msgid "Developer Certificates"
+msgstr "開発者証明書"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 236
+# File: usr/share/jellybeam/pages/certificates.py, line: 48
 #: NEEDS WORK
-msgid "Downloading container..."
-msgstr "コンテナをダウンロード中..."
+msgid "Certificates are required to install apps on Samsung TVs"
+msgstr "アプリをSamsung TVにインストールするには証明書が必要です。"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 237
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "Pulling Docker image..."
-msgstr "Dockerイメージをプルしています..."
+msgid "Certificate Mode"
+msgstr "証明書モード"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 250
+# File: usr/share/jellybeam/pages/certificates.py, line: 60
 #: NEEDS WORK
-msgid "Container ready!"
-msgstr "コンテナの準備ができました！"
+msgid "Use Built-in Certificates"
+msgstr "組み込み証明書を使用する"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 254
+# File: usr/share/jellybeam/pages/certificates.py, line: 61
 #: NEEDS WORK
-msgid "Installing to TV..."
-msgstr "テレビにインストール中..."
+msgid "Recommended - No Tizen Studio required"
+msgstr "推奨 - Tizen Studio は不要"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 255
+# File: usr/share/jellybeam/pages/certificates.py, line: 73
 #: NEEDS WORK
-msgid "Connecting and installing..."
-msgstr "接続中およびインストール中..."
+msgid "How it works"
+msgstr "使い方"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 256
+# File: usr/share/jellybeam/pages/certificates.py, line: 74
 #: NEEDS WORK
-msgid "This may take a few minutes..."
-msgstr "これには数分かかる場合があります..."
+msgid ""
+"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
+"without any setup."
+msgstr "Dockerコンテナには、事前に設定された証明書が含まれています。設定なしですぐにJellyfinをインストールできます。"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 275
+# File: usr/share/jellybeam/pages/certificates.py, line: 83
 #: NEEDS WORK
-msgid "Installing..."
-msgstr "インストール中..."
+msgid "Custom Certificates (Advanced)"
+msgstr "カスタム証明書（高度）"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 277
+# File: usr/share/jellybeam/pages/certificates.py, line: 84
 #: NEEDS WORK
-msgid "Downloading app..."
-msgstr "アプリをダウンロード中..."
+msgid "Only needed if you want to use your own certificates"
+msgstr "独自の証明書を使用する場合のみ必要です。"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 279
+# File: usr/share/jellybeam/pages/certificates.py, line: 43
 #: NEEDS WORK
-msgid "Transferring..."
-msgstr "転送中..."
+msgid "Author Certificate"
+msgstr "著者証明書"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 281
+# File: usr/share/jellybeam/pages/certificates.py, line: 148
 #: NEEDS WORK
-msgid "Connecting to TV..."
-msgstr "テレビに接続中..."
+msgid "Select author.p12 file"
+msgstr "author.p12ファイルを選択してください"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 283
+# File: usr/share/jellybeam/pages/certificates.py, line: 46
+# File: usr/share/jellybeam/pages/certificates.py, line: 58
 #: NEEDS WORK
-msgid "Finishing..."
-msgstr "終了中..."
+msgid "Browse"
+msgstr "ブラウズ"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 364
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "Extracting layers..."
-msgstr "レイヤーを抽出中..."
+msgid "Distributor Certificate"
+msgstr "ディストリビューター証明書"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 366
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
 #: NEEDS WORK
-msgid "Download complete"
-msgstr "ダウンロード完了"
+msgid "Select distributor.p12 file"
+msgstr "ディストリビュータ.p12ファイルを選択してください"
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 216
+# File: usr/share/jellybeam/pages/certificates.py, line: 115
 #: NEEDS WORK
-msgid "Error"
-msgstr "エラー"
+msgid "Certificate Password"
+msgstr "証明書パスワード"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 339
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
 #: NEEDS WORK
-msgid "Jellyfin is now on your TV"
-msgstr "Jellyfinがあなたのテレビに表示されています"
+msgid "Password for the author P12 certificate"
+msgstr "著者P12証明書のパスワード"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 341
+# File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
-msgid "Reinstall"
-msgstr "再インストール"
+msgid "Need help creating certificates?"
+msgstr "証明書の作成に関するヘルプが必要ですか？"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 348
+# File: usr/share/jellybeam/pages/certificates.py, line: 123
 #: NEEDS WORK
-msgid "Find Jellyfin in your TV's app list."
-msgstr "テレビのアプリ一覧でJellyfinを見つけてください。"
+msgid "View tutorial on Samsung Developer website"
+msgstr "Samsung Developerウェブサイトでチュートリアルを見る"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 322
+# File: usr/share/jellybeam/pages/certificates.py, line: 127
 #: NEEDS WORK
-msgid "Installation Failed"
-msgstr "インストールに失敗しました"
+msgid "View Guide"
+msgstr "ガイドを表示"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 362
+# File: usr/share/jellybeam/pages/certificates.py, line: 114
 #: NEEDS WORK
-msgid "Retry"
-msgstr "再試行"
+msgid "Continue to Installation"
+msgstr "インストールを続ける"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 379
-# File: usr/share/jellybeam/pages/install.py, line: 383
+# File: usr/share/jellybeam/pages/certificates.py, line: 226
 #: NEEDS WORK
-msgid "Cancelled"
-msgstr "キャンセルされた"
+msgid "Proceed to install Jellyfin on your TV"
+msgstr "テレビにJellyfinをインストールします。"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 380
-#: NEEDS WORK
-msgid "Installation was cancelled"
-msgstr "インストールがキャンセルされました"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 333
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 117
+# File: usr/share/jellybeam/pages/device.py, line: 135
+# File: usr/share/jellybeam/pages/welcome.py, line: 105
 #: NEEDS WORK
-msgid "Installation cancelled"
-msgstr "インストールがキャンセルされました"
+msgid "Continue"
+msgstr "続ける"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 171
+#: NEEDS WORK
+msgid "Ready to install with built-in certificates"
+msgstr "組み込み証明書でインストールの準備が整いました"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
+#: NEEDS WORK
+#, python-brace-format
+msgid "Select {cert_type} certificate"
+msgstr "{cert_type}証明書を選択"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 136
+#: NEEDS WORK
+msgid "P12 Certificate Files"
+msgstr "P12証明書ファイル"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 163
+# File: usr/share/jellybeam/pages/certificates.py, line: 166
+# File: usr/share/jellybeam/pages/certificates.py, line: 185
+# File: usr/share/jellybeam/pages/certificates.py, line: 191
+#: NEEDS WORK
+msgid "Change"
+msgstr "変更"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 251
+#: NEEDS WORK
+msgid "Ready to install with custom certificates"
+msgstr "カスタム証明書でインストールの準備が整いました"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 326
+#: NEEDS WORK
+msgid "author certificate"
+msgstr "著者証明書"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 328
+#: NEEDS WORK
+msgid "distributor certificate"
+msgstr "ディストリビューター証明書"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 330
+#: NEEDS WORK
+msgid "password"
+msgstr "パスワード"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid "Missing: {items}"
+msgstr "不足: {items}"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+#: NEEDS WORK
+msgid "Installation"
+msgstr "インストール"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 310
+#: NEEDS WORK
+msgid "Certificate Error"
+msgstr "証明書エラー"
 # 
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
@@ -483,37 +476,10 @@ msgstr "デバイスに接続"
 msgid "Establish connection with your TV"
 msgstr "テレビとの接続を確立する"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 122
-# File: usr/share/jellybeam/pages/device.py, line: 250
-#: NEEDS WORK
-msgid "Connect"
-msgstr "接続"
-# 
 # File: usr/share/jellybeam/pages/device.py, line: 222
 #: NEEDS WORK
 msgid "Connect to Samsung TV"
 msgstr "Samsung TVに接続"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 132
-#: NEEDS WORK
-msgid "Continue to Certificates"
-msgstr "証明書に進む"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 133
-#: NEEDS WORK
-msgid "Setup developer certificates"
-msgstr "開発者証明書のセットアップ"
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 117
-# File: usr/share/jellybeam/pages/device.py, line: 135
-# File: usr/share/jellybeam/pages/welcome.py, line: 105
-#: NEEDS WORK
-msgid "Continue"
-msgstr "続ける"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 422
 #: NEEDS WORK
@@ -556,11 +522,6 @@ msgstr "IP: {ip} | モデル: {model}"
 msgid "Unknown"
 msgstr "不明"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 189
-#: NEEDS WORK
-msgid "Select"
-msgstr "選択"
-# 
 # File: usr/share/jellybeam/pages/device.py, line: 200
 #: NEEDS WORK
 msgid "Found 1 device - Select your target device"
@@ -571,12 +532,6 @@ msgstr "デバイスが1つ見つかりました - 対象デバイスを選択�
 #, python-brace-format
 msgid "Found {count} devices - Select your target device"
 msgstr "{count} 台のデバイスが見つかりました - 対象デバイスを選択してください"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 304
-#: NEEDS WORK
-#, python-brace-format
-msgid "Device selected: {name}"
-msgstr "選択されたデバイス: {name}"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 366
 #: NEEDS WORK
@@ -618,6 +573,205 @@ msgstr "接続に失敗しました: {message}"
 #: NEEDS WORK
 msgid "Certificates"
 msgstr "証明書"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 60
+#: NEEDS WORK
+msgid "JellyBeam Installer"
+msgstr "ジェリーチザンインストーラー"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 63
+#: NEEDS WORK
+msgid "Install Jellyfin on your Samsung Smart TV or projector"
+msgstr "Samsung Smart TV またはプロジェクターに Jellyfin をインストールする"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 76
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Samsung & LG テレビ"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 77
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "幅広いデバイス対応"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 81
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Docker搭載"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 82
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "シンプルで信頼性が高い"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "オープンソース"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "コミュニティによって開発"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+#: NEEDS WORK
+msgid "4 simple steps to get Jellyfin on your Samsung TV"
+msgstr "Samsung TVでJellyfinを取得するための4つの簡単なステップ"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Check Requirements"
+msgstr "要件を確認する"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Ensure Docker is installed"
+msgstr "Dockerがインストールされていることを確認してください"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Connect Device"
+msgstr "デバイスを接続"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Find your TV on the network"
+msgstr "ネットワーク上でテレビを見つける"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Configure signing (auto by default)"
+msgstr "署名の設定（デフォルトで自動）"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
+#: NEEDS WORK
+msgid "One click to deploy Jellyfin"
+msgstr "Jellyfinをデプロイするにはワンクリックしてください"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 68
+#: NEEDS WORK
+msgid "System Requirements"
+msgstr "システム要件"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 74
+#: NEEDS WORK
+msgid "Docker Engine"
+msgstr "ドッカーエンジン"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+#: NEEDS WORK
+msgid "Checking..."
+msgstr "確認中..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+# File: usr/share/jellybeam/pages/welcome.py, line: 88
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
+#: NEEDS WORK
+msgid "Install Docker"
+msgstr "Dockerをインストール"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Docker is required but not installed"
+msgstr "Dockerは必要ですが、インストールされていません。"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 133
+#: NEEDS WORK
+msgid "Docker Group"
+msgstr "Dockerグループ"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 134
+#: NEEDS WORK
+msgid "User not in docker group"
+msgstr "ユーザーはdockerグループに属していません"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 136
+#: NEEDS WORK
+msgid "Add to group"
+msgstr "グループに追加"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 106
+#: NEEDS WORK
+msgid "Configure your Samsung TV"
+msgstr "Samsung TVを設定する"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 157
+#: NEEDS WORK
+msgid "Continue to Device Setup"
+msgstr "デバイス設定に進む"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 135
+#: NEEDS WORK
+msgid "Ready"
+msgstr "準備完了"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
+#: NEEDS WORK
+msgid "Permission required"
+msgstr "権限が必要です"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 142
+#: NEEDS WORK
+msgid "Not running"
+msgstr "実行されていません"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 144
+#: NEEDS WORK
+msgid "Start"
+msgstr "開始"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 153
+#: NEEDS WORK
+msgid "Not installed"
+msgstr "未インストール"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 259
+#: NEEDS WORK
+msgid "Added to group"
+msgstr "グループに追加されました"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 331
+#: NEEDS WORK
+msgid ""
+"Select your distribution:\n"
+"\n"
+"This will require elevated privileges (sudo). You may be prompted for your password."
+msgstr ""
+"ディストリビューションを選択してください：\n"
+"\n"
+"これには昇格した権限（sudo）が必要です。パスワードの入力を求められる場合があります。"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 199
+#: NEEDS WORK
+msgid "Arch/Manjaro"
+msgstr "アーチ/マンジャロ"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 200
+#: NEEDS WORK
+msgid "Debian/Ubuntu"
+msgstr "デビアン/ウブントゥ"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 201
+#: NEEDS WORK
+msgid "Fedora/RHEL"
+msgstr "フェドラ/RHEL"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 331
+#: NEEDS WORK
+msgid "Installing Docker..."
+msgstr "Dockerをインストール中..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 347
+#: NEEDS WORK
+msgid "Docker installed! Checking status..."
+msgstr "Dockerがインストールされました！ステータスを確認中..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 355
+#: NEEDS WORK
+#, python-brace-format
+msgid "Installation failed: {msg}"
+msgstr "インストールに失敗しました: {msg}"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 24
 #: NEEDS WORK
@@ -761,6 +915,75 @@ msgstr "すべての設定をリセット"
 msgid "Reset all preferences to default values"
 msgstr "すべての設定をデフォルト値にリセット"
 # 
+# File: usr/share/jellybeam/pages/preferences.py, line: 214
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "サーバーのカスタマイズ"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 217
+#: NEEDS WORK
+msgid ""
+"Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer "
+"and is only written into the package you build."
+msgstr "テレビ上で Jellyfin サーバーからテーマとスクリプトを読み込みます。アドレスはこのコンピューター上に留まり、ビルドしたパッケージにのみ書き込まれます。"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 225
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "Jellyfin サーバーの URL"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 233
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "サーバーのカスタマイズを適用"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 235
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "アプリがテレビで起動するたびに再読み込みする"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 249
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "接続テスト"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 250
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "ビルド前にサーバーの応答を確認"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 251
+# File: usr/share/jellybeam/pages/preferences.py, line: 300
+#: NEEDS WORK
+msgid "Test"
+msgstr "テスト"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 284
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "先にサーバーの URL を入力してください"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 292
+#: NEEDS WORK
+msgid "That does not look like an address"
+msgstr "アドレスのようには見えません"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 296
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "テスト中…"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 303
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "サーバーに接続できませんでした"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 313
+#: NEEDS WORK
+#, python-brace-format
+msgid "Connected to {name}"
+msgstr "{name} に接続しました"
+# 
 # File: usr/share/jellybeam/pages/preferences.py, line: 168
 #: NEEDS WORK
 msgid "Reset All Settings?"
@@ -771,473 +994,231 @@ msgstr "すべての設定をリセットしますか？"
 msgid "This will reset all preferences to their default values. This action cannot be undone."
 msgstr "これにより、すべての設定がデフォルト値にリセットされます。この操作は元に戻すことができません。"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 31
+# File: usr/share/jellybeam/pages/install.py, line: 53
+# File: usr/share/jellybeam/pages/install.py, line: 116
+# File: usr/share/jellybeam/pages/install.py, line: 385
 #: NEEDS WORK
-msgid "Developer Certificates"
-msgstr "開発者証明書"
+msgid "Install Jellyfin"
+msgstr "Jellyfinをインストール"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 48
+# File: usr/share/jellybeam/pages/install.py, line: 54
 #: NEEDS WORK
-msgid "Certificates are required to install apps on Samsung TVs"
-msgstr "アプリをSamsung TVにインストールするには証明書が必要です。"
+msgid "One-click installation to your Samsung TV"
+msgstr "Samsung TVへのワンクリックインストール"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/install.py, line: 59
 #: NEEDS WORK
-msgid "Certificate Mode"
-msgstr "証明書モード"
+msgid "Target Device"
+msgstr "ターゲットデバイス"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 60
+# File: usr/share/jellybeam/pages/install.py, line: 60
 #: NEEDS WORK
-msgid "Use Built-in Certificates"
-msgstr "組み込み証明書を使用する"
+msgid "Loading..."
+msgstr "読み込み中..."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 61
+# File: usr/share/jellybeam/pages/install.py, line: 43
 #: NEEDS WORK
-msgid "Recommended - No Tizen Studio required"
-msgstr "推奨 - Tizen Studio は不要"
+msgid "Installation Progress"
+msgstr "インストール進行状況"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 73
+# File: usr/share/jellybeam/pages/install.py, line: 74
 #: NEEDS WORK
-msgid "How it works"
-msgstr "使い方"
+msgid "Ready to install"
+msgstr "インストールの準備ができました"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 74
+# File: usr/share/jellybeam/pages/install.py, line: 75
 #: NEEDS WORK
-msgid ""
-"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
-"without any setup."
-msgstr "Dockerコンテナには、事前に設定された証明書が含まれています。設定なしですぐにJellyfinをインストールできます。"
+msgid "Click the button below to start"
+msgstr "下のボタンをクリックして開始してください"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 83
+# File: usr/share/jellybeam/pages/install.py, line: 104
 #: NEEDS WORK
-msgid "Custom Certificates (Advanced)"
-msgstr "カスタム証明書（高度）"
+msgid "Installation progress"
+msgstr "インストール進行状況"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 84
+# File: usr/share/jellybeam/pages/install.py, line: 62
 #: NEEDS WORK
-msgid "Only needed if you want to use your own certificates"
-msgstr "独自の証明書を使用する場合のみ必要です。"
+msgid "Waiting to start..."
+msgstr "開始待機中..."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 43
+# File: usr/share/jellybeam/pages/install.py, line: 120
 #: NEEDS WORK
-msgid "Author Certificate"
-msgstr "著者証明書"
+msgid "Installation status updates"
+msgstr "インストール状況の更新"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 148
+# File: usr/share/jellybeam/pages/install.py, line: 138
 #: NEEDS WORK
-msgid "Select author.p12 file"
-msgstr "author.p12ファイルを選択してください"
+msgid "Install Jellyfin on TV"
+msgstr "TVにJellyfinをインストール"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 46
-# File: usr/share/jellybeam/pages/certificates.py, line: 58
+# File: usr/share/jellybeam/pages/install.py, line: 149
 #: NEEDS WORK
-msgid "Browse"
-msgstr "ブラウズ"
+msgid "Cancel installation"
+msgstr "インストールをキャンセル"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/install.py, line: 67
 #: NEEDS WORK
-msgid "Distributor Certificate"
-msgstr "ディストリビューター証明書"
+msgid "Installation Log"
+msgstr "インストールログ"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 162
+# File: usr/share/jellybeam/pages/install.py, line: 139
 #: NEEDS WORK
-msgid "Select distributor.p12 file"
-msgstr "ディストリビュータ.p12ファイルを選択してください"
+msgid "Click to view detailed output"
+msgstr "詳細な出力を表示するにはクリックしてください"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 115
-#: NEEDS WORK
-msgid "Certificate Password"
-msgstr "証明書パスワード"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 132
-#: NEEDS WORK
-msgid "Password for the author P12 certificate"
-msgstr "著者P12証明書のパスワード"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 122
-#: NEEDS WORK
-msgid "Need help creating certificates?"
-msgstr "証明書の作成に関するヘルプが必要ですか？"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 123
-#: NEEDS WORK
-msgid "View tutorial on Samsung Developer website"
-msgstr "Samsung Developerウェブサイトでチュートリアルを見る"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 127
-#: NEEDS WORK
-msgid "View Guide"
-msgstr "ガイドを表示"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 114
-#: NEEDS WORK
-msgid "Continue to Installation"
-msgstr "インストールを続ける"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 226
-#: NEEDS WORK
-msgid "Proceed to install Jellyfin on your TV"
-msgstr "テレビにJellyfinをインストールします。"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 171
-#: NEEDS WORK
-msgid "Ready to install with built-in certificates"
-msgstr "組み込み証明書でインストールの準備が整いました"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 132
-#: NEEDS WORK
-#, python-brace-format
-msgid "Select {cert_type} certificate"
-msgstr "{cert_type}証明書を選択"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 136
-#: NEEDS WORK
-msgid "P12 Certificate Files"
-msgstr "P12証明書ファイル"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 212
-# File: usr/share/jellybeam/pages/certificates.py, line: 215
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-# File: usr/share/jellybeam/pages/certificates.py, line: 238
-#: NEEDS WORK
-#, python-brace-format
-msgid "✅ {filename}"
-msgstr "✅ {ファイル名}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 163
-# File: usr/share/jellybeam/pages/certificates.py, line: 166
-# File: usr/share/jellybeam/pages/certificates.py, line: 185
-# File: usr/share/jellybeam/pages/certificates.py, line: 191
-#: NEEDS WORK
-msgid "Change"
-msgstr "変更"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 251
-#: NEEDS WORK
-msgid "Ready to install with custom certificates"
-msgstr "カスタム証明書でインストールの準備が整いました"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 326
-#: NEEDS WORK
-msgid "author certificate"
-msgstr "著者証明書"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 328
-#: NEEDS WORK
-msgid "distributor certificate"
-msgstr "ディストリビューター証明書"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 330
-#: NEEDS WORK
-msgid "password"
-msgstr "パスワード"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 331
-#: NEEDS WORK
-#, python-brace-format
-msgid "Missing: {items}"
-msgstr "不足: {items}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-#: NEEDS WORK
-msgid "Installation"
-msgstr "インストール"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 310
-#: NEEDS WORK
-msgid "Certificate Error"
-msgstr "証明書エラー"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 60
-#: NEEDS WORK
-msgid "JellyBeam Installer"
-msgstr "ジェリーチザンインストーラー"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 63
-#: NEEDS WORK
-msgid "Install Jellyfin on your Samsung Smart TV or projector"
-msgstr "Samsung Smart TV またはプロジェクターに Jellyfin をインストールする"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 79
-#: NEEDS WORK
-msgid "4 simple steps to get Jellyfin on your Samsung TV"
-msgstr "Samsung TVでJellyfinを取得するための4つの簡単なステップ"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 84
-#: NEEDS WORK
-msgid "Check Requirements"
-msgstr "要件を確認する"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 84
-#: NEEDS WORK
-msgid "Ensure Docker is installed"
-msgstr "Dockerがインストールされていることを確認してください"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-#: NEEDS WORK
-msgid "Connect Device"
-msgstr "デバイスを接続"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-#: NEEDS WORK
-msgid "Find your TV on the network"
-msgstr "ネットワーク上でテレビを見つける"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 86
-#: NEEDS WORK
-msgid "Configure signing (auto by default)"
-msgstr "署名の設定（デフォルトで自動）"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 92
-#: NEEDS WORK
-msgid "Install"
-msgstr "インストール"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 87
-#: NEEDS WORK
-msgid "One click to deploy Jellyfin"
-msgstr "Jellyfinをデプロイするにはワンクリックしてください"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 68
-#: NEEDS WORK
-msgid "System Requirements"
-msgstr "システム要件"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 74
-#: NEEDS WORK
-msgid "Docker Engine"
-msgstr "ドッカーエンジン"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 79
-#: NEEDS WORK
-msgid "Checking..."
-msgstr "確認中..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-# File: usr/share/jellybeam/pages/welcome.py, line: 88
-# File: usr/share/jellybeam/pages/welcome.py, line: 194
-#: NEEDS WORK
-msgid "Install Docker"
-msgstr "Dockerをインストール"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 86
-#: NEEDS WORK
-msgid "Docker is required but not installed"
-msgstr "Dockerは必要ですが、インストールされていません。"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 133
-#: NEEDS WORK
-msgid "Docker Group"
-msgstr "Dockerグループ"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 134
-#: NEEDS WORK
-msgid "User not in docker group"
-msgstr "ユーザーはdockerグループに属していません"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 136
-#: NEEDS WORK
-msgid "Add to group"
-msgstr "グループに追加"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 106
-#: NEEDS WORK
-msgid "Configure your Samsung TV"
-msgstr "Samsung TVを設定する"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 157
-#: NEEDS WORK
-msgid "Continue to Device Setup"
-msgstr "デバイス設定に進む"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 135
-#: NEEDS WORK
-msgid "Ready"
-msgstr "準備完了"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 194
-#: NEEDS WORK
-msgid "Permission required"
-msgstr "権限が必要です"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 142
-#: NEEDS WORK
-msgid "Not running"
-msgstr "実行されていません"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 144
-#: NEEDS WORK
-msgid "Start"
-msgstr "開始"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 153
-#: NEEDS WORK
-msgid "Not installed"
-msgstr "未インストール"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 259
-#: NEEDS WORK
-msgid "Added to group"
-msgstr "グループに追加されました"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 307
-#: NEEDS WORK
-msgid ""
-"Select your distribution:\n"
-"\n"
-"⚠ This will require elevated privileges (sudo). You may be prompted for your password."
-msgstr ""
-"ディストリビューションを選択してください：\n"
-"\n"
-"⚠ これには昇格した権限（sudo）が必要です。パスワードの入力を求められる場合があります。"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 199
-#: NEEDS WORK
-msgid "Arch/Manjaro"
-msgstr "アーチ/マンジャロ"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 200
-#: NEEDS WORK
-msgid "Debian/Ubuntu"
-msgstr "デビアン/ウブントゥ"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 201
-#: NEEDS WORK
-msgid "Fedora/RHEL"
-msgstr "フェドラ/RHEL"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 331
-#: NEEDS WORK
-msgid "Installing Docker..."
-msgstr "Dockerをインストール中..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 347
-#: NEEDS WORK
-msgid "Docker installed! Checking status..."
-msgstr "Dockerがインストールされました！ステータスを確認中..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 355
-#: NEEDS WORK
-#, python-brace-format
-msgid "Installation failed: {msg}"
-msgstr "インストールに失敗しました: {msg}"
-
-#: NEEDS WORK
-msgid "Apply Server Customizations"
-msgstr "サーバーのカスタマイズを適用"
-
-#: NEEDS WORK
-msgid "Check that the server answers before building"
-msgstr "ビルド前にサーバーの応答を確認"
-
-#: NEEDS WORK
-msgid "Connected to {name}"
-msgstr "{name} に接続しました"
-
-#: NEEDS WORK
-msgid "Could not reach the server"
-msgstr "サーバーに接続できませんでした"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Docker デーモンが実行されていません"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "このシステムに Docker がインストールされていません"
-
-#: NEEDS WORK
-msgid "Enter a server URL first"
-msgstr "先にサーバーの URL を入力してください"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "証明書のパスワードが無効です"
-
-#: NEEDS WORK
-msgid "Jellyfin Server URL"
-msgstr "Jellyfin サーバーの URL"
-
-#: NEEDS WORK
-msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
-msgstr "テレビ上で Jellyfin サーバーからテーマとスクリプトを読み込みます。アドレスはこのコンピューター上に留まり、ビルドしたパッケージにのみ書き込まれます。"
-
-#: NEEDS WORK
-msgid "Load them again every time the app starts on the TV"
-msgstr "アプリがテレビで起動するたびに再読み込みする"
-
-#: NEEDS WORK
-msgid "Server Customization"
-msgstr "サーバーのカスタマイズ"
-
-#: NEEDS WORK
-msgid "Test"
-msgstr "テスト"
-
-#: NEEDS WORK
-msgid "Test Connection"
-msgstr "接続テスト"
-
-#: NEEDS WORK
-msgid "Testing…"
-msgstr "テスト中…"
-
-#: NEEDS WORK
-msgid "The address must start with http:// or https://"
-msgstr "アドレスは http:// または https:// で始まる必要があります"
-
-#: NEEDS WORK
-msgid "That does not look like an address"
-msgstr "アドレスのようには見えません"
-
+# File: usr/share/jellybeam/pages/install.py, line: 184
+# File: usr/share/jellybeam/pages/install.py, line: 186
 #: NEEDS WORK
 msgid "Copy the log"
 msgstr "ログをコピー"
-
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 307
+#: NEEDS WORK
+msgid "Installation Complete!"
+msgstr "インストールが完了しました！"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 174
+#: NEEDS WORK
+msgid "Jellyfin is ready!"
+msgstr "Jellyfinの準備ができました！"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 175
+#: NEEDS WORK
+msgid "Open the Jellyfin app on your TV"
+msgstr "テレビでJellyfinアプリを開く"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 179
+#: NEEDS WORK
+msgid "Done"
+msgstr "完了"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 268
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "ログをコピーしました"
-
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
-msgid "Bring Jellyfin to your big screen"
-msgstr "Jellyfinを大画面で"
-
+msgid "No device selected - please go back"
+msgstr "デバイスが選択されていません - 戻ってください"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 206
 #: NEEDS WORK
-msgid "Built by the community"
-msgstr "コミュニティによって開発"
-
+msgid "No TV configured. Please go back and select a device."
+msgstr "テレビが設定されていません。戻ってデバイスを選択してください。"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 231
 #: NEEDS WORK
-msgid "Complete"
-msgstr "完了"
-
+msgid "Starting Installation"
+msgstr "インストールを開始しています"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 236
 #: NEEDS WORK
-msgid "Docker Powered"
-msgstr "Docker搭載"
-
+msgid "Downloading container..."
+msgstr "コンテナをダウンロード中..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 237
 #: NEEDS WORK
-msgid "Open Source"
-msgstr "オープンソース"
-
+msgid "Pulling Docker image..."
+msgstr "Dockerイメージをプルしています..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 250
 #: NEEDS WORK
-msgid "Samsung & LG TVs"
-msgstr "Samsung & LG テレビ"
-
+msgid "Container ready!"
+msgstr "コンテナの準備ができました！"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 254
 #: NEEDS WORK
-msgid "Setup Device"
-msgstr "デバイスの設定"
-
+msgid "Installing to TV..."
+msgstr "テレビにインストール中..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 255
 #: NEEDS WORK
-msgid "Simple and reliable"
-msgstr "シンプルで信頼性が高い"
-
+msgid "Connecting and installing..."
+msgstr "接続中およびインストール中..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 256
 #: NEEDS WORK
-msgid "Step {number} of {total}"
-msgstr "ステップ {number}/{total}"
-
+msgid "This may take a few minutes..."
+msgstr "これには数分かかる場合があります..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 275
 #: NEEDS WORK
-msgid "Wide device support"
-msgstr "幅広いデバイス対応"
-
+msgid "Installing..."
+msgstr "インストール中..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 277
 #: NEEDS WORK
-msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
-msgstr "ディストリビューションを選択してください：\n\nこれには昇格した権限（sudo）が必要です。パスワードの入力を求められる場合があります。"
+msgid "Downloading app..."
+msgstr "アプリをダウンロード中..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 279
+#: NEEDS WORK
+msgid "Transferring..."
+msgstr "転送中..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 281
+#: NEEDS WORK
+msgid "Connecting to TV..."
+msgstr "テレビに接続中..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 283
+#: NEEDS WORK
+msgid "Finishing..."
+msgstr "終了中..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 364
+#: NEEDS WORK
+msgid "Extracting layers..."
+msgstr "レイヤーを抽出中..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 366
+#: NEEDS WORK
+msgid "Download complete"
+msgstr "ダウンロード完了"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 216
+#: NEEDS WORK
+msgid "Error"
+msgstr "エラー"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 339
+#: NEEDS WORK
+msgid "Jellyfin is now on your TV"
+msgstr "Jellyfinがあなたのテレビに表示されています"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 341
+#: NEEDS WORK
+msgid "Reinstall"
+msgstr "再インストール"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 348
+#: NEEDS WORK
+msgid "Find Jellyfin in your TV's app list."
+msgstr "テレビのアプリ一覧でJellyfinを見つけてください。"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 322
+#: NEEDS WORK
+msgid "Installation Failed"
+msgstr "インストールに失敗しました"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 362
+#: NEEDS WORK
+msgid "Retry"
+msgstr "再試行"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 379
+# File: usr/share/jellybeam/pages/install.py, line: 383
+#: NEEDS WORK
+msgid "Cancelled"
+msgstr "キャンセルされた"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 380
+#: NEEDS WORK
+msgid "Installation was cancelled"
+msgstr "インストールがキャンセルされました"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 333
+#: NEEDS WORK
+msgid "Installation cancelled"
+msgstr "インストールがキャンセルされました"

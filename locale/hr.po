@@ -16,31 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
-#: NEEDS WORK
-msgid "OK"
-msgstr "U redu"
-# 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
-#: NEEDS WORK
-msgid "Confirm"
-msgstr "Potvrdi"
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
-# File: usr/share/jellybeam/pages/preferences.py, line: 171
-# File: usr/share/jellybeam/pages/install.py, line: 110
-# File: usr/share/jellybeam/pages/welcome.py, line: 198
-#: NEEDS WORK
-msgid "Cancel"
-msgstr "Otkaži"
-# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -74,223 +49,243 @@ msgstr "JellyBeam Tim"
 msgid "JellyBeam Contributors"
 msgstr "JellyBeam Suradnici"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 53
-# File: usr/share/jellybeam/pages/install.py, line: 116
-# File: usr/share/jellybeam/pages/install.py, line: 385
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
 #: NEEDS WORK
-msgid "Install Jellyfin"
-msgstr "Instalirajte Jellyfin"
+msgid "OK"
+msgstr "U redu"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 54
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
 #: NEEDS WORK
-msgid "One-click installation to your Samsung TV"
-msgstr "Instalacija jednim klikom na vašem Samsung TV-u"
+msgid "Confirm"
+msgstr "Potvrdi"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 59
-#: NEEDS WORK
-msgid "Target Device"
-msgstr "Ciljani uređaj"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 60
-#: NEEDS WORK
-msgid "Loading..."
-msgstr "Učitavanje..."
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 43
-#: NEEDS WORK
-msgid "Installation Progress"
-msgstr "Napredak instalacije"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 74
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
+# File: usr/share/jellybeam/pages/preferences.py, line: 171
+# File: usr/share/jellybeam/pages/install.py, line: 110
+# File: usr/share/jellybeam/pages/welcome.py, line: 198
 #: NEEDS WORK
-msgid "Ready to install"
-msgstr "Spreman za instalaciju"
+msgid "Cancel"
+msgstr "Otkaži"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 75
+# File: usr/share/jellybeam/utils/design.py, line: 190
 #: NEEDS WORK
-msgid "Click the button below to start"
-msgstr "Kliknite gumb ispod za početak"
+msgid "Setup Device"
+msgstr "Postavljanje uređaja"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 104
+# File: usr/share/jellybeam/pages/device.py, line: 122
+# File: usr/share/jellybeam/pages/device.py, line: 250
 #: NEEDS WORK
-msgid "Installation progress"
-msgstr "Napredak instalacije"
+msgid "Connect"
+msgstr "Poveži"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 62
+# File: usr/share/jellybeam/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Waiting to start..."
-msgstr "Čekanje na početak..."
+msgid "Install"
+msgstr "Instaliraj"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 120
+# File: usr/share/jellybeam/utils/design.py, line: 190
 #: NEEDS WORK
-msgid "Installation status updates"
-msgstr "Ažuriranja statusa instalacije"
+msgid "Complete"
+msgstr "Dovršeno"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 138
+# File: usr/share/jellybeam/utils/design.py, line: 242
 #: NEEDS WORK
-msgid "Install Jellyfin on TV"
-msgstr "Instalirajte Jellyfin na TV-u"
+#, python-brace-format
+msgid "Step {number} of {total}"
+msgstr "Korak {number} od {total}"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 149
+# File: usr/share/jellybeam/utils/design.py, line: 361
 #: NEEDS WORK
-msgid "Cancel installation"
-msgstr "Otkaži instalaciju"
+msgid "Bring Jellyfin to your big screen"
+msgstr "Donesite Jellyfin na svoj veliki ekran"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 67
+# File: usr/share/jellybeam/pages/certificates.py, line: 31
 #: NEEDS WORK
-msgid "Installation Log"
-msgstr "Zapisnik instalacije"
+msgid "Developer Certificates"
+msgstr "Certifikati programera"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 139
+# File: usr/share/jellybeam/pages/certificates.py, line: 48
 #: NEEDS WORK
-msgid "Click to view detailed output"
-msgstr "Kliknite za prikaz detaljnog izlaza"
+msgid "Certificates are required to install apps on Samsung TVs"
+msgstr "Certifikati su potrebni za instalaciju aplikacija na Samsung TV-ima"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 307
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "Installation Complete!"
-msgstr "Instalacija dovršena!"
+msgid "Certificate Mode"
+msgstr "Način certifikata"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 174
+# File: usr/share/jellybeam/pages/certificates.py, line: 60
 #: NEEDS WORK
-msgid "Jellyfin is ready!"
-msgstr "Jellyfin je spreman!"
+msgid "Use Built-in Certificates"
+msgstr "Koristi ugrađene certifikate"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 175
+# File: usr/share/jellybeam/pages/certificates.py, line: 61
 #: NEEDS WORK
-msgid "Open the Jellyfin app on your TV"
-msgstr "Otvorite Jellyfin aplikaciju na svom TV-u"
+msgid "Recommended - No Tizen Studio required"
+msgstr "Preporučeno - Nije potreban Tizen Studio"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 179
+# File: usr/share/jellybeam/pages/certificates.py, line: 73
 #: NEEDS WORK
-msgid "Done"
-msgstr "Završeno"
+msgid "How it works"
+msgstr "Kako to funkcionira"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 197
+# File: usr/share/jellybeam/pages/certificates.py, line: 74
 #: NEEDS WORK
-msgid "No device selected - please go back"
-msgstr "Nema odabranog uređaja - molimo vratite se nazad"
+msgid ""
+"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
+"without any setup."
+msgstr ""
+"Docker kontejner uključuje unaprijed konfigurirane certifikate. Možete odmah instalirati Jellyfin "
+"bez ikakve postavke."
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 206
+# File: usr/share/jellybeam/pages/certificates.py, line: 83
 #: NEEDS WORK
-msgid "No TV configured. Please go back and select a device."
-msgstr "Nema konfigurirane TV. Molimo vas da se vratite i odaberete uređaj."
+msgid "Custom Certificates (Advanced)"
+msgstr "Prilagođeni certifikati (Napredno)"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 231
+# File: usr/share/jellybeam/pages/certificates.py, line: 84
 #: NEEDS WORK
-msgid "Starting Installation"
-msgstr "Pokretanje instalacije"
+msgid "Only needed if you want to use your own certificates"
+msgstr "Samo je potrebno ako želite koristiti vlastite certifikate"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 236
+# File: usr/share/jellybeam/pages/certificates.py, line: 43
 #: NEEDS WORK
-msgid "Downloading container..."
-msgstr "Preuzimanje kontejnera..."
+msgid "Author Certificate"
+msgstr "Certifikat autora"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 237
+# File: usr/share/jellybeam/pages/certificates.py, line: 148
 #: NEEDS WORK
-msgid "Pulling Docker image..."
-msgstr "Preuzimanje Docker slike..."
+msgid "Select author.p12 file"
+msgstr "Odaberite datoteku author.p12"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 250
+# File: usr/share/jellybeam/pages/certificates.py, line: 46
+# File: usr/share/jellybeam/pages/certificates.py, line: 58
 #: NEEDS WORK
-msgid "Container ready!"
-msgstr "Kontejner spreman!"
+msgid "Browse"
+msgstr "Pretraži"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 254
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "Installing to TV..."
-msgstr "Instaliranje na TV..."
+msgid "Distributor Certificate"
+msgstr "Certifikat distributera"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 255
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
 #: NEEDS WORK
-msgid "Connecting and installing..."
-msgstr "Povezivanje i instalacija..."
+msgid "Select distributor.p12 file"
+msgstr "Odaberite distributor.p12 datoteku"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 256
+# File: usr/share/jellybeam/pages/certificates.py, line: 115
 #: NEEDS WORK
-msgid "This may take a few minutes..."
-msgstr "Ovo može potrajati nekoliko minuta..."
+msgid "Certificate Password"
+msgstr "Lozinka za certifikat"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 275
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
 #: NEEDS WORK
-msgid "Installing..."
-msgstr "Instaliranje..."
+msgid "Password for the author P12 certificate"
+msgstr "Lozinka za P12 certifikat autora"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 277
+# File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
-msgid "Downloading app..."
-msgstr "Preuzimanje aplikacije..."
+msgid "Need help creating certificates?"
+msgstr "Trebate pomoć pri izradi certifikata?"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 279
+# File: usr/share/jellybeam/pages/certificates.py, line: 123
 #: NEEDS WORK
-msgid "Transferring..."
-msgstr "Prebacivanje..."
+msgid "View tutorial on Samsung Developer website"
+msgstr "Pogledajte vodič na web stranici Samsung Developer."
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 281
+# File: usr/share/jellybeam/pages/certificates.py, line: 127
 #: NEEDS WORK
-msgid "Connecting to TV..."
-msgstr "Povezivanje s TV-om..."
+msgid "View Guide"
+msgstr "Pogledaj vodič"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 283
+# File: usr/share/jellybeam/pages/certificates.py, line: 114
 #: NEEDS WORK
-msgid "Finishing..."
-msgstr "Završavanje..."
+msgid "Continue to Installation"
+msgstr "Nastavi na instalaciju"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 364
+# File: usr/share/jellybeam/pages/certificates.py, line: 226
 #: NEEDS WORK
-msgid "Extracting layers..."
-msgstr "Izdvajanje slojeva..."
+msgid "Proceed to install Jellyfin on your TV"
+msgstr "Nastavite s instalacijom Jellyfina na vašem TV-u"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 366
-#: NEEDS WORK
-msgid "Download complete"
-msgstr "Preuzimanje završeno"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 216
-#: NEEDS WORK
-msgid "Error"
-msgstr "Greška"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 339
+# File: usr/share/jellybeam/pages/certificates.py, line: 117
+# File: usr/share/jellybeam/pages/device.py, line: 135
+# File: usr/share/jellybeam/pages/welcome.py, line: 105
 #: NEEDS WORK
-msgid "Jellyfin is now on your TV"
-msgstr "Jellyfin je sada na vašem TV-u"
+msgid "Continue"
+msgstr "Nastavi"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 341
+# File: usr/share/jellybeam/pages/certificates.py, line: 171
 #: NEEDS WORK
-msgid "Reinstall"
-msgstr "Ponovno instaliraj"
+msgid "Ready to install with built-in certificates"
+msgstr "Spreman za instalaciju s ugrađenim certifikatima"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 348
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
 #: NEEDS WORK
-msgid "Find Jellyfin in your TV's app list."
-msgstr "Pronađite Jellyfin na popisu aplikacija vašeg TV-a."
+#, python-brace-format
+msgid "Select {cert_type} certificate"
+msgstr "Odaberite {cert_type} certifikat"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 322
+# File: usr/share/jellybeam/pages/certificates.py, line: 136
 #: NEEDS WORK
-msgid "Installation Failed"
-msgstr "Instalacija nije uspjela"
+msgid "P12 Certificate Files"
+msgstr "P12 certifikacijske datoteke"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 362
+# File: usr/share/jellybeam/pages/certificates.py, line: 163
+# File: usr/share/jellybeam/pages/certificates.py, line: 166
+# File: usr/share/jellybeam/pages/certificates.py, line: 185
+# File: usr/share/jellybeam/pages/certificates.py, line: 191
 #: NEEDS WORK
-msgid "Retry"
-msgstr "Ponovno pokušaj"
+msgid "Change"
+msgstr "Promjena"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 379
-# File: usr/share/jellybeam/pages/install.py, line: 383
+# File: usr/share/jellybeam/pages/certificates.py, line: 251
 #: NEEDS WORK
-msgid "Cancelled"
-msgstr "Otkaženo"
+msgid "Ready to install with custom certificates"
+msgstr "Spreman za instalaciju s prilagođenim certifikatima"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 380
+# File: usr/share/jellybeam/pages/certificates.py, line: 326
 #: NEEDS WORK
-msgid "Installation was cancelled"
-msgstr "Instalacija je otkazana"
+msgid "author certificate"
+msgstr "certifikat autora"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 333
+# File: usr/share/jellybeam/pages/certificates.py, line: 328
 #: NEEDS WORK
-msgid "Installation cancelled"
-msgstr "Instalacija otkazana"
+msgid "distributor certificate"
+msgstr "certifikat distributera"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 330
+#: NEEDS WORK
+msgid "password"
+msgstr "lozinka"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid "Missing: {items}"
+msgstr "Nedostaje: {items}"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+#: NEEDS WORK
+msgid "Installation"
+msgstr "Instalacija"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 310
+#: NEEDS WORK
+msgid "Certificate Error"
+msgstr "Pogreška certifikata"
 # 
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
@@ -483,37 +478,10 @@ msgstr "Poveži se s uređajem"
 msgid "Establish connection with your TV"
 msgstr "Uspostavite vezu s vašim TV-om"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 122
-# File: usr/share/jellybeam/pages/device.py, line: 250
-#: NEEDS WORK
-msgid "Connect"
-msgstr "Poveži"
-# 
 # File: usr/share/jellybeam/pages/device.py, line: 222
 #: NEEDS WORK
 msgid "Connect to Samsung TV"
 msgstr "Poveži se s Samsung TV-om"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 132
-#: NEEDS WORK
-msgid "Continue to Certificates"
-msgstr "Nastavi na Certifikate"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 133
-#: NEEDS WORK
-msgid "Setup developer certificates"
-msgstr "Postavljanje razvojnih certifikata"
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 117
-# File: usr/share/jellybeam/pages/device.py, line: 135
-# File: usr/share/jellybeam/pages/welcome.py, line: 105
-#: NEEDS WORK
-msgid "Continue"
-msgstr "Nastavi"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 422
 #: NEEDS WORK
@@ -556,11 +524,6 @@ msgstr "IP: {ip} | Model: {model}"
 msgid "Unknown"
 msgstr "Nepoznato"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 189
-#: NEEDS WORK
-msgid "Select"
-msgstr "Odaberi"
-# 
 # File: usr/share/jellybeam/pages/device.py, line: 200
 #: NEEDS WORK
 msgid "Found 1 device - Select your target device"
@@ -571,12 +534,6 @@ msgstr "Pronađen 1 uređaj - Odaberite svoj ciljani uređaj"
 #, python-brace-format
 msgid "Found {count} devices - Select your target device"
 msgstr "Pronađeno {count} uređaja - Odaberite svoj ciljani uređaj"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 304
-#: NEEDS WORK
-#, python-brace-format
-msgid "Device selected: {name}"
-msgstr "Odabrani uređaj: {name}"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 366
 #: NEEDS WORK
@@ -618,6 +575,205 @@ msgstr "Veza nije uspjela: {message}"
 #: NEEDS WORK
 msgid "Certificates"
 msgstr "Certifikati"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 60
+#: NEEDS WORK
+msgid "JellyBeam Installer"
+msgstr "JellyBeam Instalater"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 63
+#: NEEDS WORK
+msgid "Install Jellyfin on your Samsung Smart TV or projector"
+msgstr "Instalirajte Jellyfin na svoj Samsung Smart TV ili projektor"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 76
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Samsung & LG televizori"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 77
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Široka podrška uređaja"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 81
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Pokreće Docker"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 82
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Jednostavno i pouzdano"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Otvoreni kod"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "Izgradila zajednica"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+#: NEEDS WORK
+msgid "4 simple steps to get Jellyfin on your Samsung TV"
+msgstr "4 jednostavna koraka za postavljanje Jellyfina na vašem Samsung TV-u"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Check Requirements"
+msgstr "Provjeri zahtjeve"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Ensure Docker is installed"
+msgstr "Osigurajte da je Docker instaliran"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Connect Device"
+msgstr "Poveži uređaj"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Find your TV on the network"
+msgstr "Pronađite svoj TV na mreži"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Configure signing (auto by default)"
+msgstr "Konfiguriraj potpisivanje (automatski prema zadanim postavkama)"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
+#: NEEDS WORK
+msgid "One click to deploy Jellyfin"
+msgstr "Jedan klik za implementaciju Jellyfina"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 68
+#: NEEDS WORK
+msgid "System Requirements"
+msgstr "Sistemski zahtjevi"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 74
+#: NEEDS WORK
+msgid "Docker Engine"
+msgstr "Docker Engine"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+#: NEEDS WORK
+msgid "Checking..."
+msgstr "Provjera..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+# File: usr/share/jellybeam/pages/welcome.py, line: 88
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
+#: NEEDS WORK
+msgid "Install Docker"
+msgstr "Instalirajte Docker"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Docker is required but not installed"
+msgstr "Docker je potreban, ali nije instaliran"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 133
+#: NEEDS WORK
+msgid "Docker Group"
+msgstr "Docker Grupa"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 134
+#: NEEDS WORK
+msgid "User not in docker group"
+msgstr "Korisnik nije u docker grupi"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 136
+#: NEEDS WORK
+msgid "Add to group"
+msgstr "Dodaj u grupu"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 106
+#: NEEDS WORK
+msgid "Configure your Samsung TV"
+msgstr "Konfigurirajte svoj Samsung TV"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 157
+#: NEEDS WORK
+msgid "Continue to Device Setup"
+msgstr "Nastavi na Postavljanje Uređaja"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 135
+#: NEEDS WORK
+msgid "Ready"
+msgstr "Spreman"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
+#: NEEDS WORK
+msgid "Permission required"
+msgstr "Potrebna dozvola"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 142
+#: NEEDS WORK
+msgid "Not running"
+msgstr "Nije u radu"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 144
+#: NEEDS WORK
+msgid "Start"
+msgstr "Započni"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 153
+#: NEEDS WORK
+msgid "Not installed"
+msgstr "Nije instalirano"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 259
+#: NEEDS WORK
+msgid "Added to group"
+msgstr "Dodano u grupu"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 331
+#: NEEDS WORK
+msgid ""
+"Select your distribution:\n"
+"\n"
+"This will require elevated privileges (sudo). You may be prompted for your password."
+msgstr ""
+"Odaberite svoju distribuciju:\n"
+"\n"
+"Ovo će zahtijevati povišene privilegije (sudo). Možda ćete biti zatraženi da unesete svoju lozinku."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 199
+#: NEEDS WORK
+msgid "Arch/Manjaro"
+msgstr "Arch/Manjaro"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 200
+#: NEEDS WORK
+msgid "Debian/Ubuntu"
+msgstr "Debian/Ubuntu"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 201
+#: NEEDS WORK
+msgid "Fedora/RHEL"
+msgstr "Fedora/RHEL"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 331
+#: NEEDS WORK
+msgid "Installing Docker..."
+msgstr "Instaliranje Dockera..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 347
+#: NEEDS WORK
+msgid "Docker installed! Checking status..."
+msgstr "Docker je instaliran! Provjeravam status..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 355
+#: NEEDS WORK
+#, python-brace-format
+msgid "Installation failed: {msg}"
+msgstr "Instalacija nije uspjela: {msg}"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 24
 #: NEEDS WORK
@@ -761,6 +917,77 @@ msgstr "Poništi sve postavke"
 msgid "Reset all preferences to default values"
 msgstr "Poništi sve postavke na zadane vrijednosti"
 # 
+# File: usr/share/jellybeam/pages/preferences.py, line: 214
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "Prilagodba poslužitelja"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 217
+#: NEEDS WORK
+msgid ""
+"Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer "
+"and is only written into the package you build."
+msgstr ""
+"Učitaj temu i skripte s vašeg Jellyfin poslužitelja na TV-u. Adresa ostaje na ovom računalu i "
+"upisuje se samo u paket koji izradite."
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 225
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "URL Jellyfin poslužitelja"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 233
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "Primijeni prilagodbe poslužitelja"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 235
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "Ponovno ih učitaj svaki put kad se aplikacija pokrene na TV-u"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 249
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "Testiranje veze"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 250
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "Provjeri odgovara li poslužitelj prije izgradnje"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 251
+# File: usr/share/jellybeam/pages/preferences.py, line: 300
+#: NEEDS WORK
+msgid "Test"
+msgstr "Testiraj"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 284
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "Najprije unesite URL poslužitelja"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 292
+#: NEEDS WORK
+msgid "That does not look like an address"
+msgstr "To ne izgleda kao adresa"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 296
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "Testiranje…"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 303
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "Poslužitelj nije dostupan"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 313
+#: NEEDS WORK
+#, python-brace-format
+msgid "Connected to {name}"
+msgstr "Povezano s {name}"
+# 
 # File: usr/share/jellybeam/pages/preferences.py, line: 168
 #: NEEDS WORK
 msgid "Reset All Settings?"
@@ -771,476 +998,231 @@ msgstr "Poništi sve postavke?"
 msgid "This will reset all preferences to their default values. This action cannot be undone."
 msgstr "Ovo će resetirati sve postavke na njihove zadane vrijednosti. Ova radnja se ne može poništiti."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 31
+# File: usr/share/jellybeam/pages/install.py, line: 53
+# File: usr/share/jellybeam/pages/install.py, line: 116
+# File: usr/share/jellybeam/pages/install.py, line: 385
 #: NEEDS WORK
-msgid "Developer Certificates"
-msgstr "Certifikati programera"
+msgid "Install Jellyfin"
+msgstr "Instalirajte Jellyfin"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 48
+# File: usr/share/jellybeam/pages/install.py, line: 54
 #: NEEDS WORK
-msgid "Certificates are required to install apps on Samsung TVs"
-msgstr "Certifikati su potrebni za instalaciju aplikacija na Samsung TV-ima"
+msgid "One-click installation to your Samsung TV"
+msgstr "Instalacija jednim klikom na vašem Samsung TV-u"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/install.py, line: 59
 #: NEEDS WORK
-msgid "Certificate Mode"
-msgstr "Način certifikata"
+msgid "Target Device"
+msgstr "Ciljani uređaj"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 60
+# File: usr/share/jellybeam/pages/install.py, line: 60
 #: NEEDS WORK
-msgid "Use Built-in Certificates"
-msgstr "Koristi ugrađene certifikate"
+msgid "Loading..."
+msgstr "Učitavanje..."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 61
+# File: usr/share/jellybeam/pages/install.py, line: 43
 #: NEEDS WORK
-msgid "Recommended - No Tizen Studio required"
-msgstr "Preporučeno - Nije potreban Tizen Studio"
+msgid "Installation Progress"
+msgstr "Napredak instalacije"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 73
+# File: usr/share/jellybeam/pages/install.py, line: 74
 #: NEEDS WORK
-msgid "How it works"
-msgstr "Kako to funkcionira"
+msgid "Ready to install"
+msgstr "Spreman za instalaciju"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 74
+# File: usr/share/jellybeam/pages/install.py, line: 75
 #: NEEDS WORK
-msgid ""
-"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
-"without any setup."
-msgstr ""
-"Docker kontejner uključuje unaprijed konfigurirane certifikate. Možete odmah instalirati Jellyfin "
-"bez ikakve postavke."
+msgid "Click the button below to start"
+msgstr "Kliknite gumb ispod za početak"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 83
+# File: usr/share/jellybeam/pages/install.py, line: 104
 #: NEEDS WORK
-msgid "Custom Certificates (Advanced)"
-msgstr "Prilagođeni certifikati (Napredno)"
+msgid "Installation progress"
+msgstr "Napredak instalacije"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 84
+# File: usr/share/jellybeam/pages/install.py, line: 62
 #: NEEDS WORK
-msgid "Only needed if you want to use your own certificates"
-msgstr "Samo je potrebno ako želite koristiti vlastite certifikate"
+msgid "Waiting to start..."
+msgstr "Čekanje na početak..."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 43
+# File: usr/share/jellybeam/pages/install.py, line: 120
 #: NEEDS WORK
-msgid "Author Certificate"
-msgstr "Certifikat autora"
+msgid "Installation status updates"
+msgstr "Ažuriranja statusa instalacije"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 148
+# File: usr/share/jellybeam/pages/install.py, line: 138
 #: NEEDS WORK
-msgid "Select author.p12 file"
-msgstr "Odaberite datoteku author.p12"
+msgid "Install Jellyfin on TV"
+msgstr "Instalirajte Jellyfin na TV-u"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 46
-# File: usr/share/jellybeam/pages/certificates.py, line: 58
+# File: usr/share/jellybeam/pages/install.py, line: 149
 #: NEEDS WORK
-msgid "Browse"
-msgstr "Pretraži"
+msgid "Cancel installation"
+msgstr "Otkaži instalaciju"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/install.py, line: 67
 #: NEEDS WORK
-msgid "Distributor Certificate"
-msgstr "Certifikat distributera"
+msgid "Installation Log"
+msgstr "Zapisnik instalacije"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 162
+# File: usr/share/jellybeam/pages/install.py, line: 139
 #: NEEDS WORK
-msgid "Select distributor.p12 file"
-msgstr "Odaberite distributor.p12 datoteku"
+msgid "Click to view detailed output"
+msgstr "Kliknite za prikaz detaljnog izlaza"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 115
-#: NEEDS WORK
-msgid "Certificate Password"
-msgstr "Lozinka za certifikat"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 132
-#: NEEDS WORK
-msgid "Password for the author P12 certificate"
-msgstr "Lozinka za P12 certifikat autora"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 122
-#: NEEDS WORK
-msgid "Need help creating certificates?"
-msgstr "Trebate pomoć pri izradi certifikata?"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 123
-#: NEEDS WORK
-msgid "View tutorial on Samsung Developer website"
-msgstr "Pogledajte vodič na web stranici Samsung Developer."
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 127
-#: NEEDS WORK
-msgid "View Guide"
-msgstr "Pogledaj vodič"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 114
-#: NEEDS WORK
-msgid "Continue to Installation"
-msgstr "Nastavi na instalaciju"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 226
-#: NEEDS WORK
-msgid "Proceed to install Jellyfin on your TV"
-msgstr "Nastavite s instalacijom Jellyfina na vašem TV-u"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 171
-#: NEEDS WORK
-msgid "Ready to install with built-in certificates"
-msgstr "Spreman za instalaciju s ugrađenim certifikatima"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 132
-#: NEEDS WORK
-#, python-brace-format
-msgid "Select {cert_type} certificate"
-msgstr "Odaberite {cert_type} certifikat"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 136
-#: NEEDS WORK
-msgid "P12 Certificate Files"
-msgstr "P12 certifikacijske datoteke"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 212
-# File: usr/share/jellybeam/pages/certificates.py, line: 215
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-# File: usr/share/jellybeam/pages/certificates.py, line: 238
-#: NEEDS WORK
-#, python-brace-format
-msgid "✅ {filename}"
-msgstr "✅ {filename}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 163
-# File: usr/share/jellybeam/pages/certificates.py, line: 166
-# File: usr/share/jellybeam/pages/certificates.py, line: 185
-# File: usr/share/jellybeam/pages/certificates.py, line: 191
-#: NEEDS WORK
-msgid "Change"
-msgstr "Promjena"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 251
-#: NEEDS WORK
-msgid "Ready to install with custom certificates"
-msgstr "Spreman za instalaciju s prilagođenim certifikatima"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 326
-#: NEEDS WORK
-msgid "author certificate"
-msgstr "certifikat autora"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 328
-#: NEEDS WORK
-msgid "distributor certificate"
-msgstr "certifikat distributera"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 330
-#: NEEDS WORK
-msgid "password"
-msgstr "lozinka"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 331
-#: NEEDS WORK
-#, python-brace-format
-msgid "Missing: {items}"
-msgstr "Nedostaje: {items}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-#: NEEDS WORK
-msgid "Installation"
-msgstr "Instalacija"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 310
-#: NEEDS WORK
-msgid "Certificate Error"
-msgstr "Pogreška certifikata"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 60
-#: NEEDS WORK
-msgid "JellyBeam Installer"
-msgstr "JellyBeam Instalater"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 63
-#: NEEDS WORK
-msgid "Install Jellyfin on your Samsung Smart TV or projector"
-msgstr "Instalirajte Jellyfin na svoj Samsung Smart TV ili projektor"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 79
-#: NEEDS WORK
-msgid "4 simple steps to get Jellyfin on your Samsung TV"
-msgstr "4 jednostavna koraka za postavljanje Jellyfina na vašem Samsung TV-u"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 84
-#: NEEDS WORK
-msgid "Check Requirements"
-msgstr "Provjeri zahtjeve"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 84
-#: NEEDS WORK
-msgid "Ensure Docker is installed"
-msgstr "Osigurajte da je Docker instaliran"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-#: NEEDS WORK
-msgid "Connect Device"
-msgstr "Poveži uređaj"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-#: NEEDS WORK
-msgid "Find your TV on the network"
-msgstr "Pronađite svoj TV na mreži"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 86
-#: NEEDS WORK
-msgid "Configure signing (auto by default)"
-msgstr "Konfiguriraj potpisivanje (automatski prema zadanim postavkama)"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 92
-#: NEEDS WORK
-msgid "Install"
-msgstr "Instaliraj"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 87
-#: NEEDS WORK
-msgid "One click to deploy Jellyfin"
-msgstr "Jedan klik za implementaciju Jellyfina"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 68
-#: NEEDS WORK
-msgid "System Requirements"
-msgstr "Sistemski zahtjevi"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 74
-#: NEEDS WORK
-msgid "Docker Engine"
-msgstr "Docker Engine"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 79
-#: NEEDS WORK
-msgid "Checking..."
-msgstr "Provjera..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-# File: usr/share/jellybeam/pages/welcome.py, line: 88
-# File: usr/share/jellybeam/pages/welcome.py, line: 194
-#: NEEDS WORK
-msgid "Install Docker"
-msgstr "Instalirajte Docker"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 86
-#: NEEDS WORK
-msgid "Docker is required but not installed"
-msgstr "Docker je potreban, ali nije instaliran"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 133
-#: NEEDS WORK
-msgid "Docker Group"
-msgstr "Docker Grupa"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 134
-#: NEEDS WORK
-msgid "User not in docker group"
-msgstr "Korisnik nije u docker grupi"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 136
-#: NEEDS WORK
-msgid "Add to group"
-msgstr "Dodaj u grupu"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 106
-#: NEEDS WORK
-msgid "Configure your Samsung TV"
-msgstr "Konfigurirajte svoj Samsung TV"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 157
-#: NEEDS WORK
-msgid "Continue to Device Setup"
-msgstr "Nastavi na Postavljanje Uređaja"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 135
-#: NEEDS WORK
-msgid "Ready"
-msgstr "Spreman"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 194
-#: NEEDS WORK
-msgid "Permission required"
-msgstr "Potrebna dozvola"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 142
-#: NEEDS WORK
-msgid "Not running"
-msgstr "Nije u radu"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 144
-#: NEEDS WORK
-msgid "Start"
-msgstr "Započni"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 153
-#: NEEDS WORK
-msgid "Not installed"
-msgstr "Nije instalirano"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 259
-#: NEEDS WORK
-msgid "Added to group"
-msgstr "Dodano u grupu"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 307
-#: NEEDS WORK
-msgid ""
-"Select your distribution:\n"
-"\n"
-"⚠ This will require elevated privileges (sudo). You may be prompted for your password."
-msgstr ""
-"Odaberite svoju distribuciju:\n"
-"\n"
-"⚠ Ovo će zahtijevati povišene privilegije (sudo). Možda ćete biti zatraženi da unesete svoju "
-"lozinku."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 199
-#: NEEDS WORK
-msgid "Arch/Manjaro"
-msgstr "Arch/Manjaro"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 200
-#: NEEDS WORK
-msgid "Debian/Ubuntu"
-msgstr "Debian/Ubuntu"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 201
-#: NEEDS WORK
-msgid "Fedora/RHEL"
-msgstr "Fedora/RHEL"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 331
-#: NEEDS WORK
-msgid "Installing Docker..."
-msgstr "Instaliranje Dockera..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 347
-#: NEEDS WORK
-msgid "Docker installed! Checking status..."
-msgstr "Docker je instaliran! Provjeravam status..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 355
-#: NEEDS WORK
-#, python-brace-format
-msgid "Installation failed: {msg}"
-msgstr "Instalacija nije uspjela: {msg}"
-
-#: NEEDS WORK
-msgid "Apply Server Customizations"
-msgstr "Primijeni prilagodbe poslužitelja"
-
-#: NEEDS WORK
-msgid "Check that the server answers before building"
-msgstr "Provjeri odgovara li poslužitelj prije izgradnje"
-
-#: NEEDS WORK
-msgid "Connected to {name}"
-msgstr "Povezano s {name}"
-
-#: NEEDS WORK
-msgid "Could not reach the server"
-msgstr "Poslužitelj nije dostupan"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Docker daemon nije pokrenut"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker nije instaliran na ovom sustavu"
-
-#: NEEDS WORK
-msgid "Enter a server URL first"
-msgstr "Najprije unesite URL poslužitelja"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Neispravna lozinka certifikata"
-
-#: NEEDS WORK
-msgid "Jellyfin Server URL"
-msgstr "URL Jellyfin poslužitelja"
-
-#: NEEDS WORK
-msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
-msgstr "Učitaj temu i skripte s vašeg Jellyfin poslužitelja na TV-u. Adresa ostaje na ovom računalu i upisuje se samo u paket koji izradite."
-
-#: NEEDS WORK
-msgid "Load them again every time the app starts on the TV"
-msgstr "Ponovno ih učitaj svaki put kad se aplikacija pokrene na TV-u"
-
-#: NEEDS WORK
-msgid "Server Customization"
-msgstr "Prilagodba poslužitelja"
-
-#: NEEDS WORK
-msgid "Test"
-msgstr "Testiraj"
-
-#: NEEDS WORK
-msgid "Test Connection"
-msgstr "Testiranje veze"
-
-#: NEEDS WORK
-msgid "Testing…"
-msgstr "Testiranje…"
-
-#: NEEDS WORK
-msgid "The address must start with http:// or https://"
-msgstr "Adresa mora počinjati s http:// ili https://"
-
-#: NEEDS WORK
-msgid "That does not look like an address"
-msgstr "To ne izgleda kao adresa"
-
+# File: usr/share/jellybeam/pages/install.py, line: 184
+# File: usr/share/jellybeam/pages/install.py, line: 186
 #: NEEDS WORK
 msgid "Copy the log"
 msgstr "Kopiraj zapisnik"
-
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 307
+#: NEEDS WORK
+msgid "Installation Complete!"
+msgstr "Instalacija dovršena!"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 174
+#: NEEDS WORK
+msgid "Jellyfin is ready!"
+msgstr "Jellyfin je spreman!"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 175
+#: NEEDS WORK
+msgid "Open the Jellyfin app on your TV"
+msgstr "Otvorite Jellyfin aplikaciju na svom TV-u"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 179
+#: NEEDS WORK
+msgid "Done"
+msgstr "Završeno"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 268
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Zapisnik kopiran"
-
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
-msgid "Bring Jellyfin to your big screen"
-msgstr "Donesite Jellyfin na svoj veliki ekran"
-
+msgid "No device selected - please go back"
+msgstr "Nema odabranog uređaja - molimo vratite se nazad"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 206
 #: NEEDS WORK
-msgid "Built by the community"
-msgstr "Izgradila zajednica"
-
+msgid "No TV configured. Please go back and select a device."
+msgstr "Nema konfigurirane TV. Molimo vas da se vratite i odaberete uređaj."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 231
 #: NEEDS WORK
-msgid "Complete"
-msgstr "Dovršeno"
-
+msgid "Starting Installation"
+msgstr "Pokretanje instalacije"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 236
 #: NEEDS WORK
-msgid "Docker Powered"
-msgstr "Pokreće Docker"
-
+msgid "Downloading container..."
+msgstr "Preuzimanje kontejnera..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 237
 #: NEEDS WORK
-msgid "Open Source"
-msgstr "Otvoreni kod"
-
+msgid "Pulling Docker image..."
+msgstr "Preuzimanje Docker slike..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 250
 #: NEEDS WORK
-msgid "Samsung & LG TVs"
-msgstr "Samsung & LG televizori"
-
+msgid "Container ready!"
+msgstr "Kontejner spreman!"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 254
 #: NEEDS WORK
-msgid "Setup Device"
-msgstr "Postavljanje uređaja"
-
+msgid "Installing to TV..."
+msgstr "Instaliranje na TV..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 255
 #: NEEDS WORK
-msgid "Simple and reliable"
-msgstr "Jednostavno i pouzdano"
-
+msgid "Connecting and installing..."
+msgstr "Povezivanje i instalacija..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 256
 #: NEEDS WORK
-msgid "Step {number} of {total}"
-msgstr "Korak {number} od {total}"
-
+msgid "This may take a few minutes..."
+msgstr "Ovo može potrajati nekoliko minuta..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 275
 #: NEEDS WORK
-msgid "Wide device support"
-msgstr "Široka podrška uređaja"
-
+msgid "Installing..."
+msgstr "Instaliranje..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 277
 #: NEEDS WORK
-msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
-msgstr "Odaberite svoju distribuciju:\n\nOvo će zahtijevati povišene privilegije (sudo). Možda ćete biti zatraženi da unesete svoju lozinku."
+msgid "Downloading app..."
+msgstr "Preuzimanje aplikacije..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 279
+#: NEEDS WORK
+msgid "Transferring..."
+msgstr "Prebacivanje..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 281
+#: NEEDS WORK
+msgid "Connecting to TV..."
+msgstr "Povezivanje s TV-om..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 283
+#: NEEDS WORK
+msgid "Finishing..."
+msgstr "Završavanje..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 364
+#: NEEDS WORK
+msgid "Extracting layers..."
+msgstr "Izdvajanje slojeva..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 366
+#: NEEDS WORK
+msgid "Download complete"
+msgstr "Preuzimanje završeno"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 216
+#: NEEDS WORK
+msgid "Error"
+msgstr "Greška"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 339
+#: NEEDS WORK
+msgid "Jellyfin is now on your TV"
+msgstr "Jellyfin je sada na vašem TV-u"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 341
+#: NEEDS WORK
+msgid "Reinstall"
+msgstr "Ponovno instaliraj"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 348
+#: NEEDS WORK
+msgid "Find Jellyfin in your TV's app list."
+msgstr "Pronađite Jellyfin na popisu aplikacija vašeg TV-a."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 322
+#: NEEDS WORK
+msgid "Installation Failed"
+msgstr "Instalacija nije uspjela"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 362
+#: NEEDS WORK
+msgid "Retry"
+msgstr "Ponovno pokušaj"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 379
+# File: usr/share/jellybeam/pages/install.py, line: 383
+#: NEEDS WORK
+msgid "Cancelled"
+msgstr "Otkaženo"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 380
+#: NEEDS WORK
+msgid "Installation was cancelled"
+msgstr "Instalacija je otkazana"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 333
+#: NEEDS WORK
+msgid "Installation cancelled"
+msgstr "Instalacija otkazana"

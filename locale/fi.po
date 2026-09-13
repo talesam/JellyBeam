@@ -16,31 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
-#: NEEDS WORK
-msgid "OK"
-msgstr "OK"
-# 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
-#: NEEDS WORK
-msgid "Confirm"
-msgstr "Vahvista"
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
-# File: usr/share/jellybeam/pages/preferences.py, line: 171
-# File: usr/share/jellybeam/pages/install.py, line: 110
-# File: usr/share/jellybeam/pages/welcome.py, line: 198
-#: NEEDS WORK
-msgid "Cancel"
-msgstr "Peruuta"
-# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -74,223 +49,243 @@ msgstr "JellyBeam-tiimi"
 msgid "JellyBeam Contributors"
 msgstr "JellyBeam -tekijät"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 53
-# File: usr/share/jellybeam/pages/install.py, line: 116
-# File: usr/share/jellybeam/pages/install.py, line: 385
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
 #: NEEDS WORK
-msgid "Install Jellyfin"
-msgstr "Asenna Jellyfin"
+msgid "OK"
+msgstr "OK"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 54
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
 #: NEEDS WORK
-msgid "One-click installation to your Samsung TV"
-msgstr "Yhden napsautuksen asennus Samsung-televisioosi"
+msgid "Confirm"
+msgstr "Vahvista"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 59
-#: NEEDS WORK
-msgid "Target Device"
-msgstr "Kohdelaitteet"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 60
-#: NEEDS WORK
-msgid "Loading..."
-msgstr "Lataaminen..."
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 43
-#: NEEDS WORK
-msgid "Installation Progress"
-msgstr "Asennuksen edistyminen"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 74
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
+# File: usr/share/jellybeam/pages/preferences.py, line: 171
+# File: usr/share/jellybeam/pages/install.py, line: 110
+# File: usr/share/jellybeam/pages/welcome.py, line: 198
 #: NEEDS WORK
-msgid "Ready to install"
-msgstr "Asennettavaksi valmis"
+msgid "Cancel"
+msgstr "Peruuta"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 75
+# File: usr/share/jellybeam/utils/design.py, line: 190
 #: NEEDS WORK
-msgid "Click the button below to start"
-msgstr "Napsauta alla olevaa painiketta aloittaaksesi"
+msgid "Setup Device"
+msgstr "Laitteen asetukset"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 104
+# File: usr/share/jellybeam/pages/device.py, line: 122
+# File: usr/share/jellybeam/pages/device.py, line: 250
 #: NEEDS WORK
-msgid "Installation progress"
-msgstr "Asennuksen edistyminen"
+msgid "Connect"
+msgstr "Yhdistä"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 62
+# File: usr/share/jellybeam/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Waiting to start..."
-msgstr "Odottaa aloittamista..."
+msgid "Install"
+msgstr "Asenna"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 120
+# File: usr/share/jellybeam/utils/design.py, line: 190
 #: NEEDS WORK
-msgid "Installation status updates"
-msgstr "Asennustilan päivitykset"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 138
-#: NEEDS WORK
-msgid "Install Jellyfin on TV"
-msgstr "Asenna Jellyfin televisioon"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 149
-#: NEEDS WORK
-msgid "Cancel installation"
-msgstr "Peruuta asennus"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 67
-#: NEEDS WORK
-msgid "Installation Log"
-msgstr "Asennuslokit"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 139
-#: NEEDS WORK
-msgid "Click to view detailed output"
-msgstr "Napsauta nähdäksesi yksityiskohtaisen tuloksen"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 307
-#: NEEDS WORK
-msgid "Installation Complete!"
-msgstr "Asennus valmis!"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 174
-#: NEEDS WORK
-msgid "Jellyfin is ready!"
-msgstr "Jellyfin on valmis!"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 175
-#: NEEDS WORK
-msgid "Open the Jellyfin app on your TV"
-msgstr "Avaa Jellyfin-sovellus televisiossasi"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 179
-#: NEEDS WORK
-msgid "Done"
+msgid "Complete"
 msgstr "Valmis"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 197
+# File: usr/share/jellybeam/utils/design.py, line: 242
 #: NEEDS WORK
-msgid "No device selected - please go back"
-msgstr "Ei laitetta valittuna - palaa takaisin"
+#, python-brace-format
+msgid "Step {number} of {total}"
+msgstr "Vaihe {number}/{total}"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 206
+# File: usr/share/jellybeam/utils/design.py, line: 361
 #: NEEDS WORK
-msgid "No TV configured. Please go back and select a device."
-msgstr "Ei televisiota ole määritetty. Palaa takaisin ja valitse laite."
+msgid "Bring Jellyfin to your big screen"
+msgstr "Tuo Jellyfin isolle näytöllesi"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 231
+# File: usr/share/jellybeam/pages/certificates.py, line: 31
 #: NEEDS WORK
-msgid "Starting Installation"
-msgstr "Asennuksen aloittaminen"
+msgid "Developer Certificates"
+msgstr "Kehittäjäsertifikaatit"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 236
+# File: usr/share/jellybeam/pages/certificates.py, line: 48
 #: NEEDS WORK
-msgid "Downloading container..."
-msgstr "Ladataan säiliötä..."
+msgid "Certificates are required to install apps on Samsung TVs"
+msgstr "Sertifikaatit ovat tarpeen sovellusten asentamiseen Samsung-televisioihin."
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 237
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "Pulling Docker image..."
-msgstr "Ladataan Docker-kuvaa..."
+msgid "Certificate Mode"
+msgstr "Todistustila"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 250
+# File: usr/share/jellybeam/pages/certificates.py, line: 60
 #: NEEDS WORK
-msgid "Container ready!"
-msgstr "Säiliö valmis!"
+msgid "Use Built-in Certificates"
+msgstr "Käytä sisäänrakennettuja sertifikaatteja"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 254
+# File: usr/share/jellybeam/pages/certificates.py, line: 61
 #: NEEDS WORK
-msgid "Installing to TV..."
-msgstr "Asentaminen televisioon..."
+msgid "Recommended - No Tizen Studio required"
+msgstr "Suositeltava - Ei vaadi Tizen Studioa"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 255
+# File: usr/share/jellybeam/pages/certificates.py, line: 73
 #: NEEDS WORK
-msgid "Connecting and installing..."
-msgstr "Yhdistetään ja asennetaan..."
+msgid "How it works"
+msgstr "Kuinka se toimii"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 256
+# File: usr/share/jellybeam/pages/certificates.py, line: 74
 #: NEEDS WORK
-msgid "This may take a few minutes..."
-msgstr "Tämä saattaa kestää muutaman minuutin..."
+msgid ""
+"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
+"without any setup."
+msgstr ""
+"Docker-kontti sisältää esiasetetut sertifikaatit. Voit asentaa Jellyfinin heti ilman mitään "
+"asetuksia."
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 275
+# File: usr/share/jellybeam/pages/certificates.py, line: 83
 #: NEEDS WORK
-msgid "Installing..."
-msgstr "Asentaminen..."
+msgid "Custom Certificates (Advanced)"
+msgstr "Mukautetut sertifikaatit (Edistynyt)"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 277
+# File: usr/share/jellybeam/pages/certificates.py, line: 84
 #: NEEDS WORK
-msgid "Downloading app..."
-msgstr "Ladataan sovellusta..."
+msgid "Only needed if you want to use your own certificates"
+msgstr "Vain tarpeen, jos haluat käyttää omia sertifikaattejasi."
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 279
+# File: usr/share/jellybeam/pages/certificates.py, line: 43
 #: NEEDS WORK
-msgid "Transferring..."
-msgstr "Siirtäminen..."
+msgid "Author Certificate"
+msgstr "Tekijätodistus"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 281
+# File: usr/share/jellybeam/pages/certificates.py, line: 148
 #: NEEDS WORK
-msgid "Connecting to TV..."
-msgstr "Yhdistetään televisioon..."
+msgid "Select author.p12 file"
+msgstr "Valitse author.p12-tiedosto"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 283
+# File: usr/share/jellybeam/pages/certificates.py, line: 46
+# File: usr/share/jellybeam/pages/certificates.py, line: 58
 #: NEEDS WORK
-msgid "Finishing..."
-msgstr "Valmistellaan..."
+msgid "Browse"
+msgstr "Selaa"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 364
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "Extracting layers..."
-msgstr "Kerätään kerroksia..."
+msgid "Distributor Certificate"
+msgstr "Jakelijan todistus"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 366
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
 #: NEEDS WORK
-msgid "Download complete"
-msgstr "Lataus valmis"
+msgid "Select distributor.p12 file"
+msgstr "Valitse distributor.p12-tiedosto"
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 216
+# File: usr/share/jellybeam/pages/certificates.py, line: 115
 #: NEEDS WORK
-msgid "Error"
-msgstr "Virhe"
+msgid "Certificate Password"
+msgstr "Todistuksen salasana"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 339
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
 #: NEEDS WORK
-msgid "Jellyfin is now on your TV"
-msgstr "Jellyfin on nyt televisiossasi"
+msgid "Password for the author P12 certificate"
+msgstr "Salasana kirjoittajan P12-sertifikaatille"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 341
+# File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
-msgid "Reinstall"
-msgstr "Asenna uudelleen"
+msgid "Need help creating certificates?"
+msgstr "Tarvitsetko apua sertifikaattien luomisessa?"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 348
+# File: usr/share/jellybeam/pages/certificates.py, line: 123
 #: NEEDS WORK
-msgid "Find Jellyfin in your TV's app list."
-msgstr "Löydä Jellyfin televisiosi sovelluslistasta."
+msgid "View tutorial on Samsung Developer website"
+msgstr "Katso opetusohjelma Samsung Developer -verkkosivustolla"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 322
+# File: usr/share/jellybeam/pages/certificates.py, line: 127
 #: NEEDS WORK
-msgid "Installation Failed"
-msgstr "Asennus epäonnistui"
+msgid "View Guide"
+msgstr "Näytä opas"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 362
+# File: usr/share/jellybeam/pages/certificates.py, line: 114
 #: NEEDS WORK
-msgid "Retry"
-msgstr "Yritä uudelleen"
+msgid "Continue to Installation"
+msgstr "Jatka asennukseen"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 379
-# File: usr/share/jellybeam/pages/install.py, line: 383
+# File: usr/share/jellybeam/pages/certificates.py, line: 226
 #: NEEDS WORK
-msgid "Cancelled"
-msgstr "Peruutettu"
+msgid "Proceed to install Jellyfin on your TV"
+msgstr "Jatka Jellyfinin asentamista televisioosi"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 380
-#: NEEDS WORK
-msgid "Installation was cancelled"
-msgstr "Asennus peruttiin"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 333
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 117
+# File: usr/share/jellybeam/pages/device.py, line: 135
+# File: usr/share/jellybeam/pages/welcome.py, line: 105
 #: NEEDS WORK
-msgid "Installation cancelled"
-msgstr "Asennus peruutettu"
+msgid "Continue"
+msgstr "Jatka"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 171
+#: NEEDS WORK
+msgid "Ready to install with built-in certificates"
+msgstr "Valmis asennettavaksi sisäänrakennetuilla sertifikaateilla"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
+#: NEEDS WORK
+#, python-brace-format
+msgid "Select {cert_type} certificate"
+msgstr "Valitse {cert_type} -sertifikaatti"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 136
+#: NEEDS WORK
+msgid "P12 Certificate Files"
+msgstr "P12-sertifikaattitiedostot"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 163
+# File: usr/share/jellybeam/pages/certificates.py, line: 166
+# File: usr/share/jellybeam/pages/certificates.py, line: 185
+# File: usr/share/jellybeam/pages/certificates.py, line: 191
+#: NEEDS WORK
+msgid "Change"
+msgstr "Muuta"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 251
+#: NEEDS WORK
+msgid "Ready to install with custom certificates"
+msgstr "Valmis asennettavaksi mukautetuilla sertifikaateilla"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 326
+#: NEEDS WORK
+msgid "author certificate"
+msgstr "tekijätodistus"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 328
+#: NEEDS WORK
+msgid "distributor certificate"
+msgstr "jakelijatodistus"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 330
+#: NEEDS WORK
+msgid "password"
+msgstr "salasana"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid "Missing: {items}"
+msgstr "Puuttuu: {items}"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+#: NEEDS WORK
+msgid "Installation"
+msgstr "Asennus"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 310
+#: NEEDS WORK
+msgid "Certificate Error"
+msgstr "Todistuksen virhe"
 # 
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
@@ -483,37 +478,10 @@ msgstr "Yhdistä laitteeseen"
 msgid "Establish connection with your TV"
 msgstr "Varmista yhteys televisioosi"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 122
-# File: usr/share/jellybeam/pages/device.py, line: 250
-#: NEEDS WORK
-msgid "Connect"
-msgstr "Yhdistä"
-# 
 # File: usr/share/jellybeam/pages/device.py, line: 222
 #: NEEDS WORK
 msgid "Connect to Samsung TV"
 msgstr "Yhdistä Samsung TV:hen"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 132
-#: NEEDS WORK
-msgid "Continue to Certificates"
-msgstr "Jatka sertifikaatteihin"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 133
-#: NEEDS WORK
-msgid "Setup developer certificates"
-msgstr "Aseta kehittäjäsertifikaatit"
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 117
-# File: usr/share/jellybeam/pages/device.py, line: 135
-# File: usr/share/jellybeam/pages/welcome.py, line: 105
-#: NEEDS WORK
-msgid "Continue"
-msgstr "Jatka"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 422
 #: NEEDS WORK
@@ -556,11 +524,6 @@ msgstr "IP: {ip} | Malli: {model}"
 msgid "Unknown"
 msgstr "Tuntematon"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 189
-#: NEEDS WORK
-msgid "Select"
-msgstr "Valitse"
-# 
 # File: usr/share/jellybeam/pages/device.py, line: 200
 #: NEEDS WORK
 msgid "Found 1 device - Select your target device"
@@ -571,12 +534,6 @@ msgstr "Löydetty 1 laite - Valitse kohdelaitteesi"
 #, python-brace-format
 msgid "Found {count} devices - Select your target device"
 msgstr "Löydetty {count} laitetta - Valitse kohdelaitteesi"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 304
-#: NEEDS WORK
-#, python-brace-format
-msgid "Device selected: {name}"
-msgstr "Laite valittu: {name}"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 366
 #: NEEDS WORK
@@ -618,6 +575,205 @@ msgstr "Yhteys epäonnistui: {message}"
 #: NEEDS WORK
 msgid "Certificates"
 msgstr "Todistukset"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 60
+#: NEEDS WORK
+msgid "JellyBeam Installer"
+msgstr "JellyBeam Asentaja"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 63
+#: NEEDS WORK
+msgid "Install Jellyfin on your Samsung Smart TV or projector"
+msgstr "Asenna Jellyfin Samsung Smart TV:hen tai projektoriin."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 76
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Samsung & LG -televisiot"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 77
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Laaja laitetuki"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 81
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Dockerin voimalla"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 82
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Yksinkertainen ja luotettava"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Avoin lähdekoodi"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "Yhteisön rakentama"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+#: NEEDS WORK
+msgid "4 simple steps to get Jellyfin on your Samsung TV"
+msgstr "4 yksinkertaista vaihetta Jellyfinin saamiseksi Samsung-televisioosi"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Check Requirements"
+msgstr "Tarkista vaatimukset"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Ensure Docker is installed"
+msgstr "Varmista, että Docker on asennettu"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Connect Device"
+msgstr "Yhdistä laite"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Find your TV on the network"
+msgstr "Löydä televisiosi verkosta"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Configure signing (auto by default)"
+msgstr "Määritä allekirjoitus (automaattinen oletuksena)"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
+#: NEEDS WORK
+msgid "One click to deploy Jellyfin"
+msgstr "Yksi napsautus Jellyfinin käyttöönottoon"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 68
+#: NEEDS WORK
+msgid "System Requirements"
+msgstr "Järjestelmävaatimukset"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 74
+#: NEEDS WORK
+msgid "Docker Engine"
+msgstr "Docker Engine"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+#: NEEDS WORK
+msgid "Checking..."
+msgstr "Tarkistetaan..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+# File: usr/share/jellybeam/pages/welcome.py, line: 88
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
+#: NEEDS WORK
+msgid "Install Docker"
+msgstr "Asenna Docker"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Docker is required but not installed"
+msgstr "Dockeria vaaditaan, mutta se ei ole asennettuna."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 133
+#: NEEDS WORK
+msgid "Docker Group"
+msgstr "Docker-ryhmä"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 134
+#: NEEDS WORK
+msgid "User not in docker group"
+msgstr "Käyttäjä ei ole docker-ryhmässä"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 136
+#: NEEDS WORK
+msgid "Add to group"
+msgstr "Lisää ryhmään"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 106
+#: NEEDS WORK
+msgid "Configure your Samsung TV"
+msgstr "Määritä Samsung-televisiosi"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 157
+#: NEEDS WORK
+msgid "Continue to Device Setup"
+msgstr "Jatka laiteasetuksiin"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 135
+#: NEEDS WORK
+msgid "Ready"
+msgstr "Valmis"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
+#: NEEDS WORK
+msgid "Permission required"
+msgstr "Lupa vaaditaan"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 142
+#: NEEDS WORK
+msgid "Not running"
+msgstr "Ei käynnissä"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 144
+#: NEEDS WORK
+msgid "Start"
+msgstr "Aloita"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 153
+#: NEEDS WORK
+msgid "Not installed"
+msgstr "Ei asennettu"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 259
+#: NEEDS WORK
+msgid "Added to group"
+msgstr "Lisätty ryhmään"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 331
+#: NEEDS WORK
+msgid ""
+"Select your distribution:\n"
+"\n"
+"This will require elevated privileges (sudo). You may be prompted for your password."
+msgstr ""
+"Valitse jakelusi:\n"
+"\n"
+"Tämä vaatii korotettuja oikeuksia (sudo). Sinua saatetaan pyytää salasanaasi."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 199
+#: NEEDS WORK
+msgid "Arch/Manjaro"
+msgstr "Arch/Manjaro"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 200
+#: NEEDS WORK
+msgid "Debian/Ubuntu"
+msgstr "Debian/Ubuntu"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 201
+#: NEEDS WORK
+msgid "Fedora/RHEL"
+msgstr "Fedora/RHEL"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 331
+#: NEEDS WORK
+msgid "Installing Docker..."
+msgstr "Asennetaan Docker..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 347
+#: NEEDS WORK
+msgid "Docker installed! Checking status..."
+msgstr "Docker asennettu! Tarkistetaan tilaa..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 355
+#: NEEDS WORK
+#, python-brace-format
+msgid "Installation failed: {msg}"
+msgstr "Asennus epäonnistui: {msg}"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 24
 #: NEEDS WORK
@@ -761,6 +917,77 @@ msgstr "Nollaa kaikki asetukset"
 msgid "Reset all preferences to default values"
 msgstr "Palauta kaikki asetukset oletusarvoihin"
 # 
+# File: usr/share/jellybeam/pages/preferences.py, line: 214
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "Palvelimen mukautus"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 217
+#: NEEDS WORK
+msgid ""
+"Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer "
+"and is only written into the package you build."
+msgstr ""
+"Lataa teeman ja skriptit Jellyfin-palvelimeltasi televisioon. Osoite pysyy tässä tietokoneessa ja "
+"kirjoitetaan vain rakentamaasi pakettiin."
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 225
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "Jellyfin-palvelimen URL-osoite"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 233
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "Käytä palvelimen mukautuksia"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 235
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "Lataa ne uudelleen aina, kun sovellus käynnistyy televisiossa"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 249
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "Testaa yhteys"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 250
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "Tarkista, että palvelin vastaa ennen kääntämistä"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 251
+# File: usr/share/jellybeam/pages/preferences.py, line: 300
+#: NEEDS WORK
+msgid "Test"
+msgstr "Testaa"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 284
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "Anna ensin palvelimen URL-osoite"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 292
+#: NEEDS WORK
+msgid "That does not look like an address"
+msgstr "Tämä ei näytä osoitteelta"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 296
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "Testataan…"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 303
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "Palvelinta ei tavoitettu"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 313
+#: NEEDS WORK
+#, python-brace-format
+msgid "Connected to {name}"
+msgstr "Yhdistetty kohteeseen {name}"
+# 
 # File: usr/share/jellybeam/pages/preferences.py, line: 168
 #: NEEDS WORK
 msgid "Reset All Settings?"
@@ -771,475 +998,231 @@ msgstr "Nollaa kaikki asetukset?"
 msgid "This will reset all preferences to their default values. This action cannot be undone."
 msgstr "Tämä palauttaa kaikki asetukset oletusarvoihinsa. Tätä toimintoa ei voi peruuttaa."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 31
+# File: usr/share/jellybeam/pages/install.py, line: 53
+# File: usr/share/jellybeam/pages/install.py, line: 116
+# File: usr/share/jellybeam/pages/install.py, line: 385
 #: NEEDS WORK
-msgid "Developer Certificates"
-msgstr "Kehittäjäsertifikaatit"
+msgid "Install Jellyfin"
+msgstr "Asenna Jellyfin"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 48
+# File: usr/share/jellybeam/pages/install.py, line: 54
 #: NEEDS WORK
-msgid "Certificates are required to install apps on Samsung TVs"
-msgstr "Sertifikaatit ovat tarpeen sovellusten asentamiseen Samsung-televisioihin."
+msgid "One-click installation to your Samsung TV"
+msgstr "Yhden napsautuksen asennus Samsung-televisioosi"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/install.py, line: 59
 #: NEEDS WORK
-msgid "Certificate Mode"
-msgstr "Todistustila"
+msgid "Target Device"
+msgstr "Kohdelaitteet"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 60
+# File: usr/share/jellybeam/pages/install.py, line: 60
 #: NEEDS WORK
-msgid "Use Built-in Certificates"
-msgstr "Käytä sisäänrakennettuja sertifikaatteja"
+msgid "Loading..."
+msgstr "Lataaminen..."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 61
+# File: usr/share/jellybeam/pages/install.py, line: 43
 #: NEEDS WORK
-msgid "Recommended - No Tizen Studio required"
-msgstr "Suositeltava - Ei vaadi Tizen Studioa"
+msgid "Installation Progress"
+msgstr "Asennuksen edistyminen"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 73
+# File: usr/share/jellybeam/pages/install.py, line: 74
 #: NEEDS WORK
-msgid "How it works"
-msgstr "Kuinka se toimii"
+msgid "Ready to install"
+msgstr "Asennettavaksi valmis"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 74
+# File: usr/share/jellybeam/pages/install.py, line: 75
 #: NEEDS WORK
-msgid ""
-"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
-"without any setup."
-msgstr ""
-"Docker-kontti sisältää esiasetetut sertifikaatit. Voit asentaa Jellyfinin heti ilman mitään "
-"asetuksia."
+msgid "Click the button below to start"
+msgstr "Napsauta alla olevaa painiketta aloittaaksesi"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 83
+# File: usr/share/jellybeam/pages/install.py, line: 104
 #: NEEDS WORK
-msgid "Custom Certificates (Advanced)"
-msgstr "Mukautetut sertifikaatit (Edistynyt)"
+msgid "Installation progress"
+msgstr "Asennuksen edistyminen"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 84
+# File: usr/share/jellybeam/pages/install.py, line: 62
 #: NEEDS WORK
-msgid "Only needed if you want to use your own certificates"
-msgstr "Vain tarpeen, jos haluat käyttää omia sertifikaattejasi."
+msgid "Waiting to start..."
+msgstr "Odottaa aloittamista..."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 43
+# File: usr/share/jellybeam/pages/install.py, line: 120
 #: NEEDS WORK
-msgid "Author Certificate"
-msgstr "Tekijätodistus"
+msgid "Installation status updates"
+msgstr "Asennustilan päivitykset"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 148
+# File: usr/share/jellybeam/pages/install.py, line: 138
 #: NEEDS WORK
-msgid "Select author.p12 file"
-msgstr "Valitse author.p12-tiedosto"
+msgid "Install Jellyfin on TV"
+msgstr "Asenna Jellyfin televisioon"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 46
-# File: usr/share/jellybeam/pages/certificates.py, line: 58
+# File: usr/share/jellybeam/pages/install.py, line: 149
 #: NEEDS WORK
-msgid "Browse"
-msgstr "Selaa"
+msgid "Cancel installation"
+msgstr "Peruuta asennus"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/install.py, line: 67
 #: NEEDS WORK
-msgid "Distributor Certificate"
-msgstr "Jakelijan todistus"
+msgid "Installation Log"
+msgstr "Asennuslokit"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 162
+# File: usr/share/jellybeam/pages/install.py, line: 139
 #: NEEDS WORK
-msgid "Select distributor.p12 file"
-msgstr "Valitse distributor.p12-tiedosto"
+msgid "Click to view detailed output"
+msgstr "Napsauta nähdäksesi yksityiskohtaisen tuloksen"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 115
-#: NEEDS WORK
-msgid "Certificate Password"
-msgstr "Todistuksen salasana"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 132
-#: NEEDS WORK
-msgid "Password for the author P12 certificate"
-msgstr "Salasana kirjoittajan P12-sertifikaatille"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 122
-#: NEEDS WORK
-msgid "Need help creating certificates?"
-msgstr "Tarvitsetko apua sertifikaattien luomisessa?"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 123
-#: NEEDS WORK
-msgid "View tutorial on Samsung Developer website"
-msgstr "Katso opetusohjelma Samsung Developer -verkkosivustolla"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 127
-#: NEEDS WORK
-msgid "View Guide"
-msgstr "Näytä opas"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 114
-#: NEEDS WORK
-msgid "Continue to Installation"
-msgstr "Jatka asennukseen"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 226
-#: NEEDS WORK
-msgid "Proceed to install Jellyfin on your TV"
-msgstr "Jatka Jellyfinin asentamista televisioosi"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 171
-#: NEEDS WORK
-msgid "Ready to install with built-in certificates"
-msgstr "Valmis asennettavaksi sisäänrakennetuilla sertifikaateilla"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 132
-#: NEEDS WORK
-#, python-brace-format
-msgid "Select {cert_type} certificate"
-msgstr "Valitse {cert_type} -sertifikaatti"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 136
-#: NEEDS WORK
-msgid "P12 Certificate Files"
-msgstr "P12-sertifikaattitiedostot"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 212
-# File: usr/share/jellybeam/pages/certificates.py, line: 215
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-# File: usr/share/jellybeam/pages/certificates.py, line: 238
-#: NEEDS WORK
-#, python-brace-format
-msgid "✅ {filename}"
-msgstr "✅ {tiedosto}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 163
-# File: usr/share/jellybeam/pages/certificates.py, line: 166
-# File: usr/share/jellybeam/pages/certificates.py, line: 185
-# File: usr/share/jellybeam/pages/certificates.py, line: 191
-#: NEEDS WORK
-msgid "Change"
-msgstr "Muuta"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 251
-#: NEEDS WORK
-msgid "Ready to install with custom certificates"
-msgstr "Valmis asennettavaksi mukautetuilla sertifikaateilla"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 326
-#: NEEDS WORK
-msgid "author certificate"
-msgstr "tekijätodistus"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 328
-#: NEEDS WORK
-msgid "distributor certificate"
-msgstr "jakelijatodistus"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 330
-#: NEEDS WORK
-msgid "password"
-msgstr "salasana"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 331
-#: NEEDS WORK
-#, python-brace-format
-msgid "Missing: {items}"
-msgstr "Puuttuu: {items}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-#: NEEDS WORK
-msgid "Installation"
-msgstr "Asennus"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 310
-#: NEEDS WORK
-msgid "Certificate Error"
-msgstr "Todistuksen virhe"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 60
-#: NEEDS WORK
-msgid "JellyBeam Installer"
-msgstr "JellyBeam Asentaja"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 63
-#: NEEDS WORK
-msgid "Install Jellyfin on your Samsung Smart TV or projector"
-msgstr "Asenna Jellyfin Samsung Smart TV:hen tai projektoriin."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 79
-#: NEEDS WORK
-msgid "4 simple steps to get Jellyfin on your Samsung TV"
-msgstr "4 yksinkertaista vaihetta Jellyfinin saamiseksi Samsung-televisioosi"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 84
-#: NEEDS WORK
-msgid "Check Requirements"
-msgstr "Tarkista vaatimukset"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 84
-#: NEEDS WORK
-msgid "Ensure Docker is installed"
-msgstr "Varmista, että Docker on asennettu"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-#: NEEDS WORK
-msgid "Connect Device"
-msgstr "Yhdistä laite"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-#: NEEDS WORK
-msgid "Find your TV on the network"
-msgstr "Löydä televisiosi verkosta"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 86
-#: NEEDS WORK
-msgid "Configure signing (auto by default)"
-msgstr "Määritä allekirjoitus (automaattinen oletuksena)"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 92
-#: NEEDS WORK
-msgid "Install"
-msgstr "Asenna"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 87
-#: NEEDS WORK
-msgid "One click to deploy Jellyfin"
-msgstr "Yksi napsautus Jellyfinin käyttöönottoon"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 68
-#: NEEDS WORK
-msgid "System Requirements"
-msgstr "Järjestelmävaatimukset"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 74
-#: NEEDS WORK
-msgid "Docker Engine"
-msgstr "Docker Engine"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 79
-#: NEEDS WORK
-msgid "Checking..."
-msgstr "Tarkistetaan..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-# File: usr/share/jellybeam/pages/welcome.py, line: 88
-# File: usr/share/jellybeam/pages/welcome.py, line: 194
-#: NEEDS WORK
-msgid "Install Docker"
-msgstr "Asenna Docker"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 86
-#: NEEDS WORK
-msgid "Docker is required but not installed"
-msgstr "Dockeria vaaditaan, mutta se ei ole asennettuna."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 133
-#: NEEDS WORK
-msgid "Docker Group"
-msgstr "Docker-ryhmä"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 134
-#: NEEDS WORK
-msgid "User not in docker group"
-msgstr "Käyttäjä ei ole docker-ryhmässä"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 136
-#: NEEDS WORK
-msgid "Add to group"
-msgstr "Lisää ryhmään"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 106
-#: NEEDS WORK
-msgid "Configure your Samsung TV"
-msgstr "Määritä Samsung-televisiosi"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 157
-#: NEEDS WORK
-msgid "Continue to Device Setup"
-msgstr "Jatka laiteasetuksiin"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 135
-#: NEEDS WORK
-msgid "Ready"
-msgstr "Valmis"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 194
-#: NEEDS WORK
-msgid "Permission required"
-msgstr "Lupa vaaditaan"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 142
-#: NEEDS WORK
-msgid "Not running"
-msgstr "Ei käynnissä"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 144
-#: NEEDS WORK
-msgid "Start"
-msgstr "Aloita"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 153
-#: NEEDS WORK
-msgid "Not installed"
-msgstr "Ei asennettu"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 259
-#: NEEDS WORK
-msgid "Added to group"
-msgstr "Lisätty ryhmään"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 307
-#: NEEDS WORK
-msgid ""
-"Select your distribution:\n"
-"\n"
-"⚠ This will require elevated privileges (sudo). You may be prompted for your password."
-msgstr ""
-"Valitse jakelusi:\n"
-"\n"
-"⚠ Tämä vaatii korotettuja oikeuksia (sudo). Sinua saatetaan pyytää salasanaasi."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 199
-#: NEEDS WORK
-msgid "Arch/Manjaro"
-msgstr "Arch/Manjaro"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 200
-#: NEEDS WORK
-msgid "Debian/Ubuntu"
-msgstr "Debian/Ubuntu"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 201
-#: NEEDS WORK
-msgid "Fedora/RHEL"
-msgstr "Fedora/RHEL"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 331
-#: NEEDS WORK
-msgid "Installing Docker..."
-msgstr "Asennetaan Docker..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 347
-#: NEEDS WORK
-msgid "Docker installed! Checking status..."
-msgstr "Docker asennettu! Tarkistetaan tilaa..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 355
-#: NEEDS WORK
-#, python-brace-format
-msgid "Installation failed: {msg}"
-msgstr "Asennus epäonnistui: {msg}"
-
-#: NEEDS WORK
-msgid "Apply Server Customizations"
-msgstr "Käytä palvelimen mukautuksia"
-
-#: NEEDS WORK
-msgid "Check that the server answers before building"
-msgstr "Tarkista, että palvelin vastaa ennen kääntämistä"
-
-#: NEEDS WORK
-msgid "Connected to {name}"
-msgstr "Yhdistetty kohteeseen {name}"
-
-#: NEEDS WORK
-msgid "Could not reach the server"
-msgstr "Palvelinta ei tavoitettu"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Docker-taustaprosessi ei ole käynnissä"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Dockeria ei ole asennettu tähän järjestelmään"
-
-#: NEEDS WORK
-msgid "Enter a server URL first"
-msgstr "Anna ensin palvelimen URL-osoite"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Virheellinen varmenteen salasana"
-
-#: NEEDS WORK
-msgid "Jellyfin Server URL"
-msgstr "Jellyfin-palvelimen URL-osoite"
-
-#: NEEDS WORK
-msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
-msgstr "Lataa teeman ja skriptit Jellyfin-palvelimeltasi televisioon. Osoite pysyy tässä tietokoneessa ja kirjoitetaan vain rakentamaasi pakettiin."
-
-#: NEEDS WORK
-msgid "Load them again every time the app starts on the TV"
-msgstr "Lataa ne uudelleen aina, kun sovellus käynnistyy televisiossa"
-
-#: NEEDS WORK
-msgid "Server Customization"
-msgstr "Palvelimen mukautus"
-
-#: NEEDS WORK
-msgid "Test"
-msgstr "Testaa"
-
-#: NEEDS WORK
-msgid "Test Connection"
-msgstr "Testaa yhteys"
-
-#: NEEDS WORK
-msgid "Testing…"
-msgstr "Testataan…"
-
-#: NEEDS WORK
-msgid "The address must start with http:// or https://"
-msgstr "Osoitteen on alettava http:// tai https://"
-
-#: NEEDS WORK
-msgid "That does not look like an address"
-msgstr "Tämä ei näytä osoitteelta"
-
+# File: usr/share/jellybeam/pages/install.py, line: 184
+# File: usr/share/jellybeam/pages/install.py, line: 186
 #: NEEDS WORK
 msgid "Copy the log"
 msgstr "Kopioi loki"
-
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 307
+#: NEEDS WORK
+msgid "Installation Complete!"
+msgstr "Asennus valmis!"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 174
+#: NEEDS WORK
+msgid "Jellyfin is ready!"
+msgstr "Jellyfin on valmis!"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 175
+#: NEEDS WORK
+msgid "Open the Jellyfin app on your TV"
+msgstr "Avaa Jellyfin-sovellus televisiossasi"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 179
+#: NEEDS WORK
+msgid "Done"
+msgstr "Valmis"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 268
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Loki kopioitu"
-
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
-msgid "Bring Jellyfin to your big screen"
-msgstr "Tuo Jellyfin isolle näytöllesi"
-
+msgid "No device selected - please go back"
+msgstr "Ei laitetta valittuna - palaa takaisin"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 206
 #: NEEDS WORK
-msgid "Built by the community"
-msgstr "Yhteisön rakentama"
-
+msgid "No TV configured. Please go back and select a device."
+msgstr "Ei televisiota ole määritetty. Palaa takaisin ja valitse laite."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 231
 #: NEEDS WORK
-msgid "Complete"
-msgstr "Valmis"
-
+msgid "Starting Installation"
+msgstr "Asennuksen aloittaminen"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 236
 #: NEEDS WORK
-msgid "Docker Powered"
-msgstr "Dockerin voimalla"
-
+msgid "Downloading container..."
+msgstr "Ladataan säiliötä..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 237
 #: NEEDS WORK
-msgid "Open Source"
-msgstr "Avoin lähdekoodi"
-
+msgid "Pulling Docker image..."
+msgstr "Ladataan Docker-kuvaa..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 250
 #: NEEDS WORK
-msgid "Samsung & LG TVs"
-msgstr "Samsung & LG -televisiot"
-
+msgid "Container ready!"
+msgstr "Säiliö valmis!"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 254
 #: NEEDS WORK
-msgid "Setup Device"
-msgstr "Laitteen asetukset"
-
+msgid "Installing to TV..."
+msgstr "Asentaminen televisioon..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 255
 #: NEEDS WORK
-msgid "Simple and reliable"
-msgstr "Yksinkertainen ja luotettava"
-
+msgid "Connecting and installing..."
+msgstr "Yhdistetään ja asennetaan..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 256
 #: NEEDS WORK
-msgid "Step {number} of {total}"
-msgstr "Vaihe {number}/{total}"
-
+msgid "This may take a few minutes..."
+msgstr "Tämä saattaa kestää muutaman minuutin..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 275
 #: NEEDS WORK
-msgid "Wide device support"
-msgstr "Laaja laitetuki"
-
+msgid "Installing..."
+msgstr "Asentaminen..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 277
 #: NEEDS WORK
-msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
-msgstr "Valitse jakelusi:\n\nTämä vaatii korotettuja oikeuksia (sudo). Sinua saatetaan pyytää salasanaasi."
+msgid "Downloading app..."
+msgstr "Ladataan sovellusta..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 279
+#: NEEDS WORK
+msgid "Transferring..."
+msgstr "Siirtäminen..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 281
+#: NEEDS WORK
+msgid "Connecting to TV..."
+msgstr "Yhdistetään televisioon..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 283
+#: NEEDS WORK
+msgid "Finishing..."
+msgstr "Valmistellaan..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 364
+#: NEEDS WORK
+msgid "Extracting layers..."
+msgstr "Kerätään kerroksia..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 366
+#: NEEDS WORK
+msgid "Download complete"
+msgstr "Lataus valmis"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 216
+#: NEEDS WORK
+msgid "Error"
+msgstr "Virhe"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 339
+#: NEEDS WORK
+msgid "Jellyfin is now on your TV"
+msgstr "Jellyfin on nyt televisiossasi"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 341
+#: NEEDS WORK
+msgid "Reinstall"
+msgstr "Asenna uudelleen"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 348
+#: NEEDS WORK
+msgid "Find Jellyfin in your TV's app list."
+msgstr "Löydä Jellyfin televisiosi sovelluslistasta."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 322
+#: NEEDS WORK
+msgid "Installation Failed"
+msgstr "Asennus epäonnistui"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 362
+#: NEEDS WORK
+msgid "Retry"
+msgstr "Yritä uudelleen"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 379
+# File: usr/share/jellybeam/pages/install.py, line: 383
+#: NEEDS WORK
+msgid "Cancelled"
+msgstr "Peruutettu"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 380
+#: NEEDS WORK
+msgid "Installation was cancelled"
+msgstr "Asennus peruttiin"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 333
+#: NEEDS WORK
+msgid "Installation cancelled"
+msgstr "Asennus peruutettu"

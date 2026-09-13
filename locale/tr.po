@@ -16,31 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
-#: NEEDS WORK
-msgid "OK"
-msgstr "Tamam"
-# 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
-#: NEEDS WORK
-msgid "Confirm"
-msgstr "Onayla"
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
-# File: usr/share/jellybeam/pages/preferences.py, line: 171
-# File: usr/share/jellybeam/pages/install.py, line: 110
-# File: usr/share/jellybeam/pages/welcome.py, line: 198
-#: NEEDS WORK
-msgid "Cancel"
-msgstr "İptal"
-# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -74,223 +49,243 @@ msgstr "JellyBeam Ekibi"
 msgid "JellyBeam Contributors"
 msgstr "JellyBeam Katkıda Bulunanlar"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 53
-# File: usr/share/jellybeam/pages/install.py, line: 116
-# File: usr/share/jellybeam/pages/install.py, line: 385
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 94
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 137
 #: NEEDS WORK
-msgid "Install Jellyfin"
-msgstr "Jellyfin'i Kurun"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 54
-#: NEEDS WORK
-msgid "One-click installation to your Samsung TV"
-msgstr "Samsung TV'nize tek tıklama ile kurulum"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 59
-#: NEEDS WORK
-msgid "Target Device"
-msgstr "Hedef Cihaz"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 60
-#: NEEDS WORK
-msgid "Loading..."
-msgstr "Yükleniyor..."
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 43
-#: NEEDS WORK
-msgid "Installation Progress"
-msgstr "Kurulum İlerlemesi"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 74
-#: NEEDS WORK
-msgid "Ready to install"
-msgstr "Kuruluma hazır"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 75
-#: NEEDS WORK
-msgid "Click the button below to start"
-msgstr "Aşağıdaki butona tıklayarak başlayın"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 104
-#: NEEDS WORK
-msgid "Installation progress"
-msgstr "Kurulum ilerlemesi"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 62
-#: NEEDS WORK
-msgid "Waiting to start..."
-msgstr "Başlatmak için bekleniyor..."
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 120
-#: NEEDS WORK
-msgid "Installation status updates"
-msgstr "Kurulum durumu güncellemeleri"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 138
-#: NEEDS WORK
-msgid "Install Jellyfin on TV"
-msgstr "Jellyfin'i TV'ye Kurun"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 149
-#: NEEDS WORK
-msgid "Cancel installation"
-msgstr "Kurulumu iptal et"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 67
-#: NEEDS WORK
-msgid "Installation Log"
-msgstr "Kurulum Günlüğü"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 139
-#: NEEDS WORK
-msgid "Click to view detailed output"
-msgstr "Ayrıntılı çıktıyı görüntülemek için tıklayın"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 307
-#: NEEDS WORK
-msgid "Installation Complete!"
-msgstr "Kurulum Tamamlandı!"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 174
-#: NEEDS WORK
-msgid "Jellyfin is ready!"
-msgstr "Jellyfin hazır!"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 175
-#: NEEDS WORK
-msgid "Open the Jellyfin app on your TV"
-msgstr "Jellyfin uygulamasını TV'nizde açın"
-# 
-# File: usr/share/jellybeam/pages/install.py, line: 179
-#: NEEDS WORK
-msgid "Done"
+msgid "OK"
 msgstr "Tamam"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 197
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 170
 #: NEEDS WORK
-msgid "No device selected - please go back"
-msgstr "Cihaz seçilmedi - lütfen geri dönün"
+msgid "Confirm"
+msgstr "Onayla"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 206
-#: NEEDS WORK
-msgid "No TV configured. Please go back and select a device."
-msgstr "TV yapılandırılmadı. Lütfen geri dönün ve bir cihaz seçin."
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 231
-#: NEEDS WORK
-msgid "Starting Installation"
-msgstr "Kurulum Başlatılıyor"
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 236
-#: NEEDS WORK
-msgid "Downloading container..."
-msgstr "İndirme konteyneri..."
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 237
+# File: usr/share/jellybeam/utils/ui_helpers.py, line: 172
+# File: usr/share/jellybeam/pages/preferences.py, line: 171
+# File: usr/share/jellybeam/pages/install.py, line: 110
+# File: usr/share/jellybeam/pages/welcome.py, line: 198
 #: NEEDS WORK
-msgid "Pulling Docker image..."
-msgstr "Docker görüntüsü çekiliyor..."
+msgid "Cancel"
+msgstr "İptal"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 250
+# File: usr/share/jellybeam/utils/design.py, line: 190
 #: NEEDS WORK
-msgid "Container ready!"
-msgstr "Konteyner hazır!"
+msgid "Setup Device"
+msgstr "Cihaz Kurulumu"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 254
+# File: usr/share/jellybeam/pages/device.py, line: 122
+# File: usr/share/jellybeam/pages/device.py, line: 250
 #: NEEDS WORK
-msgid "Installing to TV..."
-msgstr "TV'ye Yükleniyor..."
+msgid "Connect"
+msgstr "Bağlan"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 255
+# File: usr/share/jellybeam/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Connecting and installing..."
-msgstr "Bağlanıyor ve kurulum yapılıyor..."
+msgid "Install"
+msgstr "Kurulum"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 256
+# File: usr/share/jellybeam/utils/design.py, line: 190
 #: NEEDS WORK
-msgid "This may take a few minutes..."
-msgstr "Bu birkaç dakika sürebilir..."
+msgid "Complete"
+msgstr "Tamamlandı"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 275
+# File: usr/share/jellybeam/utils/design.py, line: 242
 #: NEEDS WORK
-msgid "Installing..."
-msgstr "Yükleniyor..."
+#, python-brace-format
+msgid "Step {number} of {total}"
+msgstr "Adım {number}/{total}"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 277
+# File: usr/share/jellybeam/utils/design.py, line: 361
 #: NEEDS WORK
-msgid "Downloading app..."
-msgstr "Uygulama indiriliyor..."
+msgid "Bring Jellyfin to your big screen"
+msgstr "Jellyfin'i büyük ekranınıza taşıyın"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 279
+# File: usr/share/jellybeam/pages/certificates.py, line: 31
 #: NEEDS WORK
-msgid "Transferring..."
-msgstr "Aktarılıyor..."
+msgid "Developer Certificates"
+msgstr "Geliştirici Sertifikaları"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 281
+# File: usr/share/jellybeam/pages/certificates.py, line: 48
 #: NEEDS WORK
-msgid "Connecting to TV..."
-msgstr "TV'ye bağlanıyor..."
+msgid "Certificates are required to install apps on Samsung TVs"
+msgstr "Uygulamaları Samsung TV'lerde kurmak için sertifikalar gereklidir."
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 283
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "Finishing..."
-msgstr "Tamamlanıyor..."
+msgid "Certificate Mode"
+msgstr "Sertifika Modu"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 364
+# File: usr/share/jellybeam/pages/certificates.py, line: 60
 #: NEEDS WORK
-msgid "Extracting layers..."
-msgstr "Katmanlar çıkarılıyor..."
+msgid "Use Built-in Certificates"
+msgstr "Yerleşik Sertifikaları Kullan"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 366
+# File: usr/share/jellybeam/pages/certificates.py, line: 61
 #: NEEDS WORK
-msgid "Download complete"
-msgstr "İndirme tamamlandı"
+msgid "Recommended - No Tizen Studio required"
+msgstr "Tavsiye Edilir - Tizen Studio Gerekmez"
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 216
+# File: usr/share/jellybeam/pages/certificates.py, line: 73
 #: NEEDS WORK
-msgid "Error"
-msgstr "Hata"
+msgid "How it works"
+msgstr "Nasıl çalışır"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 339
+# File: usr/share/jellybeam/pages/certificates.py, line: 74
 #: NEEDS WORK
-msgid "Jellyfin is now on your TV"
-msgstr "Jellyfin artık TV'nizde."
+msgid ""
+"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
+"without any setup."
+msgstr ""
+"Docker konteyneri önceden yapılandırılmış sertifikalar içerir. Jellyfin'i hemen herhangi bir "
+"kurulum yapmadan yükleyebilirsiniz."
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 341
+# File: usr/share/jellybeam/pages/certificates.py, line: 83
 #: NEEDS WORK
-msgid "Reinstall"
-msgstr "Yeniden Yükle"
+msgid "Custom Certificates (Advanced)"
+msgstr "Özel Sertifikalar (Gelişmiş)"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 348
+# File: usr/share/jellybeam/pages/certificates.py, line: 84
 #: NEEDS WORK
-msgid "Find Jellyfin in your TV's app list."
-msgstr "Jellyfin'i TV'nizin uygulama listesinden bulun."
+msgid "Only needed if you want to use your own certificates"
+msgstr "Sadece kendi sertifikalarınızı kullanmak istiyorsanız gereklidir."
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 322
+# File: usr/share/jellybeam/pages/certificates.py, line: 43
 #: NEEDS WORK
-msgid "Installation Failed"
-msgstr "Kurulum Başarısız"
+msgid "Author Certificate"
+msgstr "Yazar Sertifikası"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 362
+# File: usr/share/jellybeam/pages/certificates.py, line: 148
 #: NEEDS WORK
-msgid "Retry"
-msgstr "Yeniden Dene"
+msgid "Select author.p12 file"
+msgstr "author.p12 dosyasını seçin"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 379
-# File: usr/share/jellybeam/pages/install.py, line: 383
+# File: usr/share/jellybeam/pages/certificates.py, line: 46
+# File: usr/share/jellybeam/pages/certificates.py, line: 58
 #: NEEDS WORK
-msgid "Cancelled"
-msgstr "İptal Edildi"
+msgid "Browse"
+msgstr "Gözat"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 380
+# File: usr/share/jellybeam/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "Installation was cancelled"
-msgstr "Kurulum iptal edildi"
+msgid "Distributor Certificate"
+msgstr "Dağıtıcı Sertifikası"
 # 
-# File: usr/share/jellybeam/pages/install.py, line: 333
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
 #: NEEDS WORK
-msgid "Installation cancelled"
-msgstr "Kurulum iptal edildi"
+msgid "Select distributor.p12 file"
+msgstr "distributor.p12 dosyasını seçin"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 115
+#: NEEDS WORK
+msgid "Certificate Password"
+msgstr "Sertifika Şifresi"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
+#: NEEDS WORK
+msgid "Password for the author P12 certificate"
+msgstr "Yazar P12 sertifikası için şifre"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 122
+#: NEEDS WORK
+msgid "Need help creating certificates?"
+msgstr "Sertifika oluşturma konusunda yardıma mı ihtiyacınız var?"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 123
+#: NEEDS WORK
+msgid "View tutorial on Samsung Developer website"
+msgstr "Samsung Geliştirici web sitesinde eğitimi görüntüle"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 127
+#: NEEDS WORK
+msgid "View Guide"
+msgstr "Kılavuzu Görüntüle"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 114
+#: NEEDS WORK
+msgid "Continue to Installation"
+msgstr "Kuruluma Devam Et"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 226
+#: NEEDS WORK
+msgid "Proceed to install Jellyfin on your TV"
+msgstr "Jellyfin'i TV'nize kurmaya devam edin"
+# 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 117
+# File: usr/share/jellybeam/pages/device.py, line: 135
+# File: usr/share/jellybeam/pages/welcome.py, line: 105
+#: NEEDS WORK
+msgid "Continue"
+msgstr "Devam et"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 171
+#: NEEDS WORK
+msgid "Ready to install with built-in certificates"
+msgstr "Kurulum için hazır, yerleşik sertifikalarla birlikte"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
+#: NEEDS WORK
+#, python-brace-format
+msgid "Select {cert_type} certificate"
+msgstr "{cert_type} sertifikasını seçin"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 136
+#: NEEDS WORK
+msgid "P12 Certificate Files"
+msgstr "P12 Sertifika Dosyaları"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 163
+# File: usr/share/jellybeam/pages/certificates.py, line: 166
+# File: usr/share/jellybeam/pages/certificates.py, line: 185
+# File: usr/share/jellybeam/pages/certificates.py, line: 191
+#: NEEDS WORK
+msgid "Change"
+msgstr "Değiştir"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 251
+#: NEEDS WORK
+msgid "Ready to install with custom certificates"
+msgstr "Özel sertifikalarla kurulum için hazır"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 326
+#: NEEDS WORK
+msgid "author certificate"
+msgstr "yazar sertifikası"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 328
+#: NEEDS WORK
+msgid "distributor certificate"
+msgstr "dağıtıcı sertifikası"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 330
+#: NEEDS WORK
+msgid "password"
+msgstr "şifre"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid "Missing: {items}"
+msgstr "Eksik: {items}"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 231
+#: NEEDS WORK
+msgid "Installation"
+msgstr "Kurulum"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 310
+#: NEEDS WORK
+msgid "Certificate Error"
+msgstr "Sertifika Hatası"
 # 
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 # 
@@ -483,37 +478,10 @@ msgstr "Cihaza Bağlanın"
 msgid "Establish connection with your TV"
 msgstr "TV'nizle bağlantı kurun"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 122
-# File: usr/share/jellybeam/pages/device.py, line: 250
-#: NEEDS WORK
-msgid "Connect"
-msgstr "Bağlan"
-# 
 # File: usr/share/jellybeam/pages/device.py, line: 222
 #: NEEDS WORK
 msgid "Connect to Samsung TV"
 msgstr "Samsung TV'ye Bağlan"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 132
-#: NEEDS WORK
-msgid "Continue to Certificates"
-msgstr "Sertifikalara Devam Et"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 133
-#: NEEDS WORK
-msgid "Setup developer certificates"
-msgstr "Geliştirici sertifikalarını ayarlayın"
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 117
-# File: usr/share/jellybeam/pages/device.py, line: 135
-# File: usr/share/jellybeam/pages/welcome.py, line: 105
-#: NEEDS WORK
-msgid "Continue"
-msgstr "Devam et"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 422
 #: NEEDS WORK
@@ -556,11 +524,6 @@ msgstr "IP: {ip} | Model: {model}"
 msgid "Unknown"
 msgstr "Bilinmiyor"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 189
-#: NEEDS WORK
-msgid "Select"
-msgstr "Seçin"
-# 
 # File: usr/share/jellybeam/pages/device.py, line: 200
 #: NEEDS WORK
 msgid "Found 1 device - Select your target device"
@@ -571,12 +534,6 @@ msgstr "1 cihaz bulundu - Hedef cihazınızı seçin"
 #, python-brace-format
 msgid "Found {count} devices - Select your target device"
 msgstr "{count} cihaz bulundu - Hedef cihazınızı seçin"
-# 
-# File: usr/share/jellybeam/pages/device.py, line: 304
-#: NEEDS WORK
-#, python-brace-format
-msgid "Device selected: {name}"
-msgstr "Seçilen cihaz: {name}"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 366
 #: NEEDS WORK
@@ -618,6 +575,205 @@ msgstr "Bağlantı başarısız: {message}"
 #: NEEDS WORK
 msgid "Certificates"
 msgstr "Sertifikalar"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 60
+#: NEEDS WORK
+msgid "JellyBeam Installer"
+msgstr "JellyBeam Yükleyici"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 63
+#: NEEDS WORK
+msgid "Install Jellyfin on your Samsung Smart TV or projector"
+msgstr "Samsung Akıllı TV'nize veya projektörünüze Jellyfin'i kurun"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 76
+#: NEEDS WORK
+msgid "Samsung & LG TVs"
+msgstr "Samsung & LG TV'ler"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 77
+#: NEEDS WORK
+msgid "Wide device support"
+msgstr "Geniş cihaz desteği"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 81
+#: NEEDS WORK
+msgid "Docker Powered"
+msgstr "Docker ile çalışır"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 82
+#: NEEDS WORK
+msgid "Simple and reliable"
+msgstr "Basit ve güvenilir"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Open Source"
+msgstr "Açık kaynak"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
+#: NEEDS WORK
+msgid "Built by the community"
+msgstr "Topluluk tarafından geliştirildi"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+#: NEEDS WORK
+msgid "4 simple steps to get Jellyfin on your Samsung TV"
+msgstr "Jellyfin'i Samsung TV'nize almak için 4 basit adım"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Check Requirements"
+msgstr "Gereksinimleri Kontrol Et"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 84
+#: NEEDS WORK
+msgid "Ensure Docker is installed"
+msgstr "Docker'ın yüklü olduğundan emin olun"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Connect Device"
+msgstr "Cihaz Bağla"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+#: NEEDS WORK
+msgid "Find your TV on the network"
+msgstr "Ağ üzerindeki TV'nizi bulun"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Configure signing (auto by default)"
+msgstr "İmzayı yapılandır (varsayılan olarak otomatik)"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
+#: NEEDS WORK
+msgid "One click to deploy Jellyfin"
+msgstr "Jellyfin'i dağıtmak için bir tıklama"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 68
+#: NEEDS WORK
+msgid "System Requirements"
+msgstr "Sistem Gereksinimleri"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 74
+#: NEEDS WORK
+msgid "Docker Engine"
+msgstr "Docker Motoru"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 79
+#: NEEDS WORK
+msgid "Checking..."
+msgstr "Kontrol ediliyor..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 85
+# File: usr/share/jellybeam/pages/welcome.py, line: 88
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
+#: NEEDS WORK
+msgid "Install Docker"
+msgstr "Docker'ı Yükle"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 86
+#: NEEDS WORK
+msgid "Docker is required but not installed"
+msgstr "Docker gereklidir ancak kurulu değil."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 133
+#: NEEDS WORK
+msgid "Docker Group"
+msgstr "Docker Grubu"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 134
+#: NEEDS WORK
+msgid "User not in docker group"
+msgstr "Kullanıcı docker grubunda değil"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 136
+#: NEEDS WORK
+msgid "Add to group"
+msgstr "Gruba ekle"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 106
+#: NEEDS WORK
+msgid "Configure your Samsung TV"
+msgstr "Samsung TV'nizi Yapılandırın"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 157
+#: NEEDS WORK
+msgid "Continue to Device Setup"
+msgstr "Cihaz Kurulumuna Devam Et"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 135
+#: NEEDS WORK
+msgid "Ready"
+msgstr "Hazır"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 194
+#: NEEDS WORK
+msgid "Permission required"
+msgstr "İzin gerekli"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 142
+#: NEEDS WORK
+msgid "Not running"
+msgstr "Çalışmıyor"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 144
+#: NEEDS WORK
+msgid "Start"
+msgstr "Başla"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 153
+#: NEEDS WORK
+msgid "Not installed"
+msgstr "Yüklenmedi"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 259
+#: NEEDS WORK
+msgid "Added to group"
+msgstr "Gruba eklendi"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 331
+#: NEEDS WORK
+msgid ""
+"Select your distribution:\n"
+"\n"
+"This will require elevated privileges (sudo). You may be prompted for your password."
+msgstr ""
+"Dağıtımınızı seçin:\n"
+"\n"
+"Bu, yükseltilmiş ayrıcalıklar (sudo) gerektirecektir. Şifreniz istenebilir."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 199
+#: NEEDS WORK
+msgid "Arch/Manjaro"
+msgstr "Arch/Manjaro"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 200
+#: NEEDS WORK
+msgid "Debian/Ubuntu"
+msgstr "Debian/Ubuntu"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 201
+#: NEEDS WORK
+msgid "Fedora/RHEL"
+msgstr "Fedora/RHEL"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 331
+#: NEEDS WORK
+msgid "Installing Docker..."
+msgstr "Docker kuruluyor..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 347
+#: NEEDS WORK
+msgid "Docker installed! Checking status..."
+msgstr "Docker yüklendi! Durum kontrol ediliyor..."
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 355
+#: NEEDS WORK
+#, python-brace-format
+msgid "Installation failed: {msg}"
+msgstr "Kurulum başarısız: {msg}"
 # 
 # File: usr/share/jellybeam/pages/preferences.py, line: 24
 #: NEEDS WORK
@@ -761,6 +917,77 @@ msgstr "Tüm Ayarları Sıfırla"
 msgid "Reset all preferences to default values"
 msgstr "Tüm tercihleri varsayılan değerlere sıfırla"
 # 
+# File: usr/share/jellybeam/pages/preferences.py, line: 214
+#: NEEDS WORK
+msgid "Server Customization"
+msgstr "Sunucu Özelleştirmesi"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 217
+#: NEEDS WORK
+msgid ""
+"Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer "
+"and is only written into the package you build."
+msgstr ""
+"TV'de Jellyfin sunucunuzdaki temayı ve betikleri yükler. Adres bu bilgisayarda kalır ve yalnızca "
+"oluşturduğunuz pakete yazılır."
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 225
+#: NEEDS WORK
+msgid "Jellyfin Server URL"
+msgstr "Jellyfin Sunucu URL'si"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 233
+#: NEEDS WORK
+msgid "Apply Server Customizations"
+msgstr "Sunucu Özelleştirmelerini Uygula"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 235
+#: NEEDS WORK
+msgid "Load them again every time the app starts on the TV"
+msgstr "Uygulama TV'de her başladığında bunları yeniden yükle"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 249
+#: NEEDS WORK
+msgid "Test Connection"
+msgstr "Bağlantıyı Test Et"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 250
+#: NEEDS WORK
+msgid "Check that the server answers before building"
+msgstr "Derlemeden önce sunucunun yanıt verdiğini kontrol et"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 251
+# File: usr/share/jellybeam/pages/preferences.py, line: 300
+#: NEEDS WORK
+msgid "Test"
+msgstr "Test Et"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 284
+#: NEEDS WORK
+msgid "Enter a server URL first"
+msgstr "Önce bir sunucu URL'si girin"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 292
+#: NEEDS WORK
+msgid "That does not look like an address"
+msgstr "Bu bir adrese benzemiyor"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 296
+#: NEEDS WORK
+msgid "Testing…"
+msgstr "Test ediliyor…"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 303
+#: NEEDS WORK
+msgid "Could not reach the server"
+msgstr "Sunucuya ulaşılamadı"
+# 
+# File: usr/share/jellybeam/pages/preferences.py, line: 313
+#: NEEDS WORK
+#, python-brace-format
+msgid "Connected to {name}"
+msgstr "{name} sunucusuna bağlanıldı"
+# 
 # File: usr/share/jellybeam/pages/preferences.py, line: 168
 #: NEEDS WORK
 msgid "Reset All Settings?"
@@ -771,475 +998,231 @@ msgstr "Tüm Ayarları Sıfırla?"
 msgid "This will reset all preferences to their default values. This action cannot be undone."
 msgstr "Bu, tüm tercihleri varsayılan değerlerine sıfırlayacaktır. Bu işlem geri alınamaz."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 31
+# File: usr/share/jellybeam/pages/install.py, line: 53
+# File: usr/share/jellybeam/pages/install.py, line: 116
+# File: usr/share/jellybeam/pages/install.py, line: 385
 #: NEEDS WORK
-msgid "Developer Certificates"
-msgstr "Geliştirici Sertifikaları"
+msgid "Install Jellyfin"
+msgstr "Jellyfin'i Kurun"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 48
+# File: usr/share/jellybeam/pages/install.py, line: 54
 #: NEEDS WORK
-msgid "Certificates are required to install apps on Samsung TVs"
-msgstr "Uygulamaları Samsung TV'lerde kurmak için sertifikalar gereklidir."
+msgid "One-click installation to your Samsung TV"
+msgstr "Samsung TV'nize tek tıklama ile kurulum"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/install.py, line: 59
 #: NEEDS WORK
-msgid "Certificate Mode"
-msgstr "Sertifika Modu"
+msgid "Target Device"
+msgstr "Hedef Cihaz"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 60
+# File: usr/share/jellybeam/pages/install.py, line: 60
 #: NEEDS WORK
-msgid "Use Built-in Certificates"
-msgstr "Yerleşik Sertifikaları Kullan"
+msgid "Loading..."
+msgstr "Yükleniyor..."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 61
+# File: usr/share/jellybeam/pages/install.py, line: 43
 #: NEEDS WORK
-msgid "Recommended - No Tizen Studio required"
-msgstr "Tavsiye Edilir - Tizen Studio Gerekmez"
+msgid "Installation Progress"
+msgstr "Kurulum İlerlemesi"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 73
+# File: usr/share/jellybeam/pages/install.py, line: 74
 #: NEEDS WORK
-msgid "How it works"
-msgstr "Nasıl çalışır"
+msgid "Ready to install"
+msgstr "Kuruluma hazır"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 74
+# File: usr/share/jellybeam/pages/install.py, line: 75
 #: NEEDS WORK
-msgid ""
-"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
-"without any setup."
-msgstr ""
-"Docker konteyneri önceden yapılandırılmış sertifikalar içerir. Jellyfin'i hemen herhangi bir "
-"kurulum yapmadan yükleyebilirsiniz."
+msgid "Click the button below to start"
+msgstr "Aşağıdaki butona tıklayarak başlayın"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 83
+# File: usr/share/jellybeam/pages/install.py, line: 104
 #: NEEDS WORK
-msgid "Custom Certificates (Advanced)"
-msgstr "Özel Sertifikalar (Gelişmiş)"
+msgid "Installation progress"
+msgstr "Kurulum ilerlemesi"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 84
+# File: usr/share/jellybeam/pages/install.py, line: 62
 #: NEEDS WORK
-msgid "Only needed if you want to use your own certificates"
-msgstr "Sadece kendi sertifikalarınızı kullanmak istiyorsanız gereklidir."
+msgid "Waiting to start..."
+msgstr "Başlatmak için bekleniyor..."
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 43
+# File: usr/share/jellybeam/pages/install.py, line: 120
 #: NEEDS WORK
-msgid "Author Certificate"
-msgstr "Yazar Sertifikası"
+msgid "Installation status updates"
+msgstr "Kurulum durumu güncellemeleri"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 148
+# File: usr/share/jellybeam/pages/install.py, line: 138
 #: NEEDS WORK
-msgid "Select author.p12 file"
-msgstr "author.p12 dosyasını seçin"
+msgid "Install Jellyfin on TV"
+msgstr "Jellyfin'i TV'ye Kurun"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 46
-# File: usr/share/jellybeam/pages/certificates.py, line: 58
+# File: usr/share/jellybeam/pages/install.py, line: 149
 #: NEEDS WORK
-msgid "Browse"
-msgstr "Gözat"
+msgid "Cancel installation"
+msgstr "Kurulumu iptal et"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 55
+# File: usr/share/jellybeam/pages/install.py, line: 67
 #: NEEDS WORK
-msgid "Distributor Certificate"
-msgstr "Dağıtıcı Sertifikası"
+msgid "Installation Log"
+msgstr "Kurulum Günlüğü"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 162
+# File: usr/share/jellybeam/pages/install.py, line: 139
 #: NEEDS WORK
-msgid "Select distributor.p12 file"
-msgstr "distributor.p12 dosyasını seçin"
+msgid "Click to view detailed output"
+msgstr "Ayrıntılı çıktıyı görüntülemek için tıklayın"
 # 
-# File: usr/share/jellybeam/pages/certificates.py, line: 115
-#: NEEDS WORK
-msgid "Certificate Password"
-msgstr "Sertifika Şifresi"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 132
-#: NEEDS WORK
-msgid "Password for the author P12 certificate"
-msgstr "Yazar P12 sertifikası için şifre"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 122
-#: NEEDS WORK
-msgid "Need help creating certificates?"
-msgstr "Sertifika oluşturma konusunda yardıma mı ihtiyacınız var?"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 123
-#: NEEDS WORK
-msgid "View tutorial on Samsung Developer website"
-msgstr "Samsung Geliştirici web sitesinde eğitimi görüntüle"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 127
-#: NEEDS WORK
-msgid "View Guide"
-msgstr "Kılavuzu Görüntüle"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 114
-#: NEEDS WORK
-msgid "Continue to Installation"
-msgstr "Kuruluma Devam Et"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 226
-#: NEEDS WORK
-msgid "Proceed to install Jellyfin on your TV"
-msgstr "Jellyfin'i TV'nize kurmaya devam edin"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 171
-#: NEEDS WORK
-msgid "Ready to install with built-in certificates"
-msgstr "Kurulum için hazır, yerleşik sertifikalarla birlikte"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 132
-#: NEEDS WORK
-#, python-brace-format
-msgid "Select {cert_type} certificate"
-msgstr "{cert_type} sertifikasını seçin"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 136
-#: NEEDS WORK
-msgid "P12 Certificate Files"
-msgstr "P12 Sertifika Dosyaları"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 212
-# File: usr/share/jellybeam/pages/certificates.py, line: 215
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-# File: usr/share/jellybeam/pages/certificates.py, line: 238
-#: NEEDS WORK
-#, python-brace-format
-msgid "✅ {filename}"
-msgstr "✅ {dosya_adı}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 163
-# File: usr/share/jellybeam/pages/certificates.py, line: 166
-# File: usr/share/jellybeam/pages/certificates.py, line: 185
-# File: usr/share/jellybeam/pages/certificates.py, line: 191
-#: NEEDS WORK
-msgid "Change"
-msgstr "Değiştir"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 251
-#: NEEDS WORK
-msgid "Ready to install with custom certificates"
-msgstr "Özel sertifikalarla kurulum için hazır"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 326
-#: NEEDS WORK
-msgid "author certificate"
-msgstr "yazar sertifikası"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 328
-#: NEEDS WORK
-msgid "distributor certificate"
-msgstr "dağıtıcı sertifikası"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 330
-#: NEEDS WORK
-msgid "password"
-msgstr "şifre"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 331
-#: NEEDS WORK
-#, python-brace-format
-msgid "Missing: {items}"
-msgstr "Eksik: {items}"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 231
-#: NEEDS WORK
-msgid "Installation"
-msgstr "Kurulum"
-# 
-# File: usr/share/jellybeam/pages/certificates.py, line: 310
-#: NEEDS WORK
-msgid "Certificate Error"
-msgstr "Sertifika Hatası"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 60
-#: NEEDS WORK
-msgid "JellyBeam Installer"
-msgstr "JellyBeam Yükleyici"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 63
-#: NEEDS WORK
-msgid "Install Jellyfin on your Samsung Smart TV or projector"
-msgstr "Samsung Akıllı TV'nize veya projektörünüze Jellyfin'i kurun"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 79
-#: NEEDS WORK
-msgid "4 simple steps to get Jellyfin on your Samsung TV"
-msgstr "Jellyfin'i Samsung TV'nize almak için 4 basit adım"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 84
-#: NEEDS WORK
-msgid "Check Requirements"
-msgstr "Gereksinimleri Kontrol Et"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 84
-#: NEEDS WORK
-msgid "Ensure Docker is installed"
-msgstr "Docker'ın yüklü olduğundan emin olun"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-#: NEEDS WORK
-msgid "Connect Device"
-msgstr "Cihaz Bağla"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-#: NEEDS WORK
-msgid "Find your TV on the network"
-msgstr "Ağ üzerindeki TV'nizi bulun"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 86
-#: NEEDS WORK
-msgid "Configure signing (auto by default)"
-msgstr "İmzayı yapılandır (varsayılan olarak otomatik)"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 92
-#: NEEDS WORK
-msgid "Install"
-msgstr "Kurulum"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 87
-#: NEEDS WORK
-msgid "One click to deploy Jellyfin"
-msgstr "Jellyfin'i dağıtmak için bir tıklama"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 68
-#: NEEDS WORK
-msgid "System Requirements"
-msgstr "Sistem Gereksinimleri"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 74
-#: NEEDS WORK
-msgid "Docker Engine"
-msgstr "Docker Motoru"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 79
-#: NEEDS WORK
-msgid "Checking..."
-msgstr "Kontrol ediliyor..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 85
-# File: usr/share/jellybeam/pages/welcome.py, line: 88
-# File: usr/share/jellybeam/pages/welcome.py, line: 194
-#: NEEDS WORK
-msgid "Install Docker"
-msgstr "Docker'ı Yükle"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 86
-#: NEEDS WORK
-msgid "Docker is required but not installed"
-msgstr "Docker gereklidir ancak kurulu değil."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 133
-#: NEEDS WORK
-msgid "Docker Group"
-msgstr "Docker Grubu"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 134
-#: NEEDS WORK
-msgid "User not in docker group"
-msgstr "Kullanıcı docker grubunda değil"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 136
-#: NEEDS WORK
-msgid "Add to group"
-msgstr "Gruba ekle"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 106
-#: NEEDS WORK
-msgid "Configure your Samsung TV"
-msgstr "Samsung TV'nizi Yapılandırın"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 157
-#: NEEDS WORK
-msgid "Continue to Device Setup"
-msgstr "Cihaz Kurulumuna Devam Et"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 135
-#: NEEDS WORK
-msgid "Ready"
-msgstr "Hazır"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 194
-#: NEEDS WORK
-msgid "Permission required"
-msgstr "İzin gerekli"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 142
-#: NEEDS WORK
-msgid "Not running"
-msgstr "Çalışmıyor"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 144
-#: NEEDS WORK
-msgid "Start"
-msgstr "Başla"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 153
-#: NEEDS WORK
-msgid "Not installed"
-msgstr "Yüklenmedi"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 259
-#: NEEDS WORK
-msgid "Added to group"
-msgstr "Gruba eklendi"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 307
-#: NEEDS WORK
-msgid ""
-"Select your distribution:\n"
-"\n"
-"⚠ This will require elevated privileges (sudo). You may be prompted for your password."
-msgstr ""
-"Dağıtımınızı seçin:\n"
-"\n"
-"⚠ Bu, yükseltilmiş ayrıcalıklar (sudo) gerektirecektir. Şifreniz istenebilir."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 199
-#: NEEDS WORK
-msgid "Arch/Manjaro"
-msgstr "Arch/Manjaro"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 200
-#: NEEDS WORK
-msgid "Debian/Ubuntu"
-msgstr "Debian/Ubuntu"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 201
-#: NEEDS WORK
-msgid "Fedora/RHEL"
-msgstr "Fedora/RHEL"
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 331
-#: NEEDS WORK
-msgid "Installing Docker..."
-msgstr "Docker kuruluyor..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 347
-#: NEEDS WORK
-msgid "Docker installed! Checking status..."
-msgstr "Docker yüklendi! Durum kontrol ediliyor..."
-# 
-# File: usr/share/jellybeam/pages/welcome.py, line: 355
-#: NEEDS WORK
-#, python-brace-format
-msgid "Installation failed: {msg}"
-msgstr "Kurulum başarısız: {msg}"
-
-#: NEEDS WORK
-msgid "Apply Server Customizations"
-msgstr "Sunucu Özelleştirmelerini Uygula"
-
-#: NEEDS WORK
-msgid "Check that the server answers before building"
-msgstr "Derlemeden önce sunucunun yanıt verdiğini kontrol et"
-
-#: NEEDS WORK
-msgid "Connected to {name}"
-msgstr "{name} sunucusuna bağlanıldı"
-
-#: NEEDS WORK
-msgid "Could not reach the server"
-msgstr "Sunucuya ulaşılamadı"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Docker hizmeti çalışmıyor"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker bu sistemde kurulu değil"
-
-#: NEEDS WORK
-msgid "Enter a server URL first"
-msgstr "Önce bir sunucu URL'si girin"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Geçersiz sertifika parolası"
-
-#: NEEDS WORK
-msgid "Jellyfin Server URL"
-msgstr "Jellyfin Sunucu URL'si"
-
-#: NEEDS WORK
-msgid "Load the theme and scripts from your Jellyfin server on the TV. The address stays on this computer and is only written into the package you build."
-msgstr "TV'de Jellyfin sunucunuzdaki temayı ve betikleri yükler. Adres bu bilgisayarda kalır ve yalnızca oluşturduğunuz pakete yazılır."
-
-#: NEEDS WORK
-msgid "Load them again every time the app starts on the TV"
-msgstr "Uygulama TV'de her başladığında bunları yeniden yükle"
-
-#: NEEDS WORK
-msgid "Server Customization"
-msgstr "Sunucu Özelleştirmesi"
-
-#: NEEDS WORK
-msgid "Test"
-msgstr "Test Et"
-
-#: NEEDS WORK
-msgid "Test Connection"
-msgstr "Bağlantıyı Test Et"
-
-#: NEEDS WORK
-msgid "Testing…"
-msgstr "Test ediliyor…"
-
-#: NEEDS WORK
-msgid "The address must start with http:// or https://"
-msgstr "Adres http:// veya https:// ile başlamalıdır"
-
-#: NEEDS WORK
-msgid "That does not look like an address"
-msgstr "Bu bir adrese benzemiyor"
-
+# File: usr/share/jellybeam/pages/install.py, line: 184
+# File: usr/share/jellybeam/pages/install.py, line: 186
 #: NEEDS WORK
 msgid "Copy the log"
 msgstr "Günlüğü kopyala"
-
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 307
+#: NEEDS WORK
+msgid "Installation Complete!"
+msgstr "Kurulum Tamamlandı!"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 174
+#: NEEDS WORK
+msgid "Jellyfin is ready!"
+msgstr "Jellyfin hazır!"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 175
+#: NEEDS WORK
+msgid "Open the Jellyfin app on your TV"
+msgstr "Jellyfin uygulamasını TV'nizde açın"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 179
+#: NEEDS WORK
+msgid "Done"
+msgstr "Tamam"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 268
 #: NEEDS WORK
 msgid "Log copied"
 msgstr "Günlük kopyalandı"
-
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
-msgid "Bring Jellyfin to your big screen"
-msgstr "Jellyfin'i büyük ekranınıza taşıyın"
-
+msgid "No device selected - please go back"
+msgstr "Cihaz seçilmedi - lütfen geri dönün"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 206
 #: NEEDS WORK
-msgid "Built by the community"
-msgstr "Topluluk tarafından geliştirildi"
-
+msgid "No TV configured. Please go back and select a device."
+msgstr "TV yapılandırılmadı. Lütfen geri dönün ve bir cihaz seçin."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 231
 #: NEEDS WORK
-msgid "Complete"
-msgstr "Tamamlandı"
-
+msgid "Starting Installation"
+msgstr "Kurulum Başlatılıyor"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 236
 #: NEEDS WORK
-msgid "Docker Powered"
-msgstr "Docker ile çalışır"
-
+msgid "Downloading container..."
+msgstr "İndirme konteyneri..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 237
 #: NEEDS WORK
-msgid "Open Source"
-msgstr "Açık kaynak"
-
+msgid "Pulling Docker image..."
+msgstr "Docker görüntüsü çekiliyor..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 250
 #: NEEDS WORK
-msgid "Samsung & LG TVs"
-msgstr "Samsung & LG TV'ler"
-
+msgid "Container ready!"
+msgstr "Konteyner hazır!"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 254
 #: NEEDS WORK
-msgid "Setup Device"
-msgstr "Cihaz Kurulumu"
-
+msgid "Installing to TV..."
+msgstr "TV'ye Yükleniyor..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 255
 #: NEEDS WORK
-msgid "Simple and reliable"
-msgstr "Basit ve güvenilir"
-
+msgid "Connecting and installing..."
+msgstr "Bağlanıyor ve kurulum yapılıyor..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 256
 #: NEEDS WORK
-msgid "Step {number} of {total}"
-msgstr "Adım {number}/{total}"
-
+msgid "This may take a few minutes..."
+msgstr "Bu birkaç dakika sürebilir..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 275
 #: NEEDS WORK
-msgid "Wide device support"
-msgstr "Geniş cihaz desteği"
-
+msgid "Installing..."
+msgstr "Yükleniyor..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 277
 #: NEEDS WORK
-msgid "Select your distribution:\n\nThis will require elevated privileges (sudo). You may be prompted for your password."
-msgstr "Dağıtımınızı seçin:\n\nBu, yükseltilmiş ayrıcalıklar (sudo) gerektirecektir. Şifreniz istenebilir."
+msgid "Downloading app..."
+msgstr "Uygulama indiriliyor..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 279
+#: NEEDS WORK
+msgid "Transferring..."
+msgstr "Aktarılıyor..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 281
+#: NEEDS WORK
+msgid "Connecting to TV..."
+msgstr "TV'ye bağlanıyor..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 283
+#: NEEDS WORK
+msgid "Finishing..."
+msgstr "Tamamlanıyor..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 364
+#: NEEDS WORK
+msgid "Extracting layers..."
+msgstr "Katmanlar çıkarılıyor..."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 366
+#: NEEDS WORK
+msgid "Download complete"
+msgstr "İndirme tamamlandı"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 216
+#: NEEDS WORK
+msgid "Error"
+msgstr "Hata"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 339
+#: NEEDS WORK
+msgid "Jellyfin is now on your TV"
+msgstr "Jellyfin artık TV'nizde."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 341
+#: NEEDS WORK
+msgid "Reinstall"
+msgstr "Yeniden Yükle"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 348
+#: NEEDS WORK
+msgid "Find Jellyfin in your TV's app list."
+msgstr "Jellyfin'i TV'nizin uygulama listesinden bulun."
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 322
+#: NEEDS WORK
+msgid "Installation Failed"
+msgstr "Kurulum Başarısız"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 362
+#: NEEDS WORK
+msgid "Retry"
+msgstr "Yeniden Dene"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 379
+# File: usr/share/jellybeam/pages/install.py, line: 383
+#: NEEDS WORK
+msgid "Cancelled"
+msgstr "İptal Edildi"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 380
+#: NEEDS WORK
+msgid "Installation was cancelled"
+msgstr "Kurulum iptal edildi"
+# 
+# File: usr/share/jellybeam/pages/install.py, line: 333
+#: NEEDS WORK
+msgid "Installation cancelled"
+msgstr "Kurulum iptal edildi"
