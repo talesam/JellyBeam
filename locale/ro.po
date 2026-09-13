@@ -1304,3 +1304,11 @@ msgstr "Instalarea a fost anulată"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Instalare anulată"
+
+#: NEEDS WORK
+msgid "This TV needs a Samsung certificate"
+msgstr "Acest TV are nevoie de un certificat Samsung"
+
+#: NEEDS WORK
+msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
+msgstr "Tizen {version} acceptă numai pachete semnate cu un certificat emis de Samsung pentru contul dvs., cu acest TV înregistrat. Creați unul în Certificate Manager din Tizen Studio, apoi adăugați-l la Certificate."

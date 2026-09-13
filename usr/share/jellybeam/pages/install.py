@@ -375,12 +375,13 @@ class InstallPage(Gtk.Box):
         if getattr(self, "_tizen8_row", None) is not None:
             return
         row = Adw.ActionRow()
-        row.set_title(_("This TV needs its own certificate"))
+        row.set_title(_("This TV needs a Samsung certificate"))
         row.set_subtitle(
             _(
-                "Tizen {version} refuses the published package, whose signing "
-                "certificate expired. Installing will fail with a certificate "
-                "error."
+                "Tizen {version} only accepts packages signed with a "
+                "certificate issued by Samsung for your account, with this TV "
+                "registered. Create one in Tizen Studio's Certificate Manager, "
+                "then add it under Certificates."
             ).format(version=version)
         )
         row.add_prefix(design.icon_badge("dialog-warning-symbolic", tone="warning"))
@@ -514,10 +515,14 @@ class InstallPage(Gtk.Box):
                     server_url,
                     on_install_complete,
                     progress_callback=on_progress,
+                    cert_password=getattr(self.window, "certificate_password", ""),
                 )
             else:
                 self.docker_service.install_jellyfin_direct_async(
-                    tv_ip, on_install_complete, progress_callback=on_progress
+                    tv_ip,
+                    on_install_complete,
+                    progress_callback=on_progress,
+                    cert_password=getattr(self.window, "certificate_password", ""),
                 )
 
         def on_pull_progress(msg):

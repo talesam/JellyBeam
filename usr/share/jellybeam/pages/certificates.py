@@ -263,7 +263,12 @@ class CertificatesPage(Gtk.ScrolledWindow):
         self._check_certificate_completeness()
 
     def _on_password_changed(self, entry):
-        """Handle password changes (kept in memory only, not persisted)."""
+        """Handle password changes (kept in memory only, not persisted).
+
+        Held on the window rather than in the config file: the installer needs
+        it, and a certificate password does not belong in plain JSON on disk.
+        """
+        self.window.certificate_password = entry.get_text()
         self._check_certificate_completeness()
 
     def _load_certificate_info(self):

@@ -1304,3 +1304,11 @@ msgstr "Asennus peruttiin"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Asennus peruutettu"
+
+#: NEEDS WORK
+msgid "This TV needs a Samsung certificate"
+msgstr "Tämä televisio tarvitsee Samsung-varmenteen"
+
+#: NEEDS WORK
+msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
+msgstr "Tizen {version} hyväksyy vain paketit, jotka on allekirjoitettu Samsungin tilillesi myöntämällä varmenteella, johon tämä televisio on rekisteröity. Luo se Tizen Studion Certificate Managerissa ja lisää se sitten kohtaan Varmenteet."

@@ -70,6 +70,19 @@ JELLYFIN_WWW_DIR = "www"
 # in ~/.config/jellybeam/ -- never in this repository, which is public.
 JELLYFIN_INFO_ENDPOINT = "/System/Info/Public"
 
+# Which published variant to install.
+#
+# OSA carries a second video player built on AVPlay, Tizen's native media API.
+# The standard build plays through the browser's <video>, whose codec support
+# is narrower than the TV's own decoder, so the server ends up transcoding
+# formats the hardware could have played directly. OSA also folds in the
+# OblongIcon and SmartHub builds.
+#
+# Upstream calls the AVPlay support experimental, and it is: a second player
+# means a second set of playback bugs. It fails at playback, never at install,
+# and switching back is one reinstall away.
+JELLYFIN_BUILD_DEFAULT = "Jellyfin-OSA"
+
 # Pre-built Tizen packages. The Docker image installs these instead of
 # compiling jellyfin-tizen, so customizing means unpacking one, editing it and
 # signing it again -- see services/docker.py.
@@ -96,11 +109,8 @@ CUSTOMIZATION_RESOURCES = ("web/cs-nav.js",)
 # expired. The published package is signed with a certificate that lapsed in
 # 2022, so these TVs refuse it and we sign our own instead.
 TIZEN_STRICT_CERT_VERSION = 8
-# Where the generated pair lives, under the Docker workspace.
+# Where the user's certificate is staged for the container to read.
 DEVICE_CERT_DIR = "certs"
-# The pair is created per install and never leaves the machine, so the
-# passphrase only has to satisfy the tooling, which requires one.
-DEVICE_CERT_PASSWORD = "jellybeam"
 
 # Certificate Constants
 CERT_FILE_EXTENSION = ".p12"

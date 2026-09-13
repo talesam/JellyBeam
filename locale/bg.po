@@ -1306,3 +1306,11 @@ msgstr "Инсталацията беше отменена"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Инсталацията е отменена"
+
+#: NEEDS WORK
+msgid "This TV needs a Samsung certificate"
+msgstr "Този телевизор изисква сертификат от Samsung"
+
+#: NEEDS WORK
+msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
+msgstr "Tizen {version} приема само пакети, подписани със сертификат, издаден от Samsung за вашия акаунт, с регистриран този телевизор. Създайте такъв в Certificate Manager на Tizen Studio, след което го добавете в Сертификати."

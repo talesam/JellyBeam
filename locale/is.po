@@ -1306,3 +1306,11 @@ msgstr "Uppsetningu var hætt."
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Uppsetningu aflýst"
+
+#: NEEDS WORK
+msgid "This TV needs a Samsung certificate"
+msgstr "Þetta sjónvarp þarf Samsung-skírteini"
+
+#: NEEDS WORK
+msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
+msgstr "Tizen {version} samþykkir aðeins pakka sem eru undirritaðir með skírteini sem Samsung hefur gefið út fyrir reikninginn þinn, með þessu sjónvarpi skráðu. Búðu til eitt í Certificate Manager í Tizen Studio og bættu því síðan við undir Skírteini."

@@ -6,7 +6,7 @@ import threading
 import os
 import shutil
 import tempfile
-from typing import Callable, Optional, List
+from typing import Callable, List, Optional, Tuple
 
 from gi.repository import GLib
 from utils.i18n import _
@@ -30,13 +30,13 @@ from utils.constants import (
     JELLYFIN_APP_FILENAME,
     JELLYFIN_WWW_DIR,
     JELLYFIN_BUILDS_RELEASES,
+    JELLYFIN_BUILD_DEFAULT,
     TIZEN_SIGN_PROFILE,
     CUSTOMIZATION_PKG_DIR,
     TIZEN_TOOLS_DIR,
     SDB_PORT,
     TIZEN_STRICT_CERT_VERSION,
     DEVICE_CERT_DIR,
-    DEVICE_CERT_PASSWORD,
     CERT_AUTHOR_FILENAME,
     CERT_DISTRIBUTOR_FILENAME,
     CERT_PASSWORD_FILE,
@@ -899,7 +899,8 @@ class DockerService:
         tv_ip: str,
         callback: Callable[[bool, str], None],
         progress_callback: Optional[Callable[[str], None]] = None,
-        build_option: str = "Jellyfin",
+        build_option: str = JELLYFIN_BUILD_DEFAULT,
+        cert_password: str = "",
     ) -> None:
         """
         Install Jellyfin directly using the Georift container.
@@ -913,7 +914,8 @@ class DockerService:
             tv_ip: IP address of the Samsung TV
             callback: Callback function (success: bool, message: str)
             progress_callback: Optional callback for progress updates
-            build_option: Build variant (Jellyfin, Jellyfin-TrueHD, etc.)
+            build_option: Published variant to install; see
+                JELLYFIN_BUILD_DEFAULT.
         """
 
         def install_direct():
@@ -927,7 +929,8 @@ class DockerService:
                 log_progress(f"Starting Jellyfin installation to {tv_ip}...")
                 log_progress(f"Using container: {self.image_name}:{self.image_tag}")
 
-                certs = self.ensure_device_certificate(tv_ip, log_progress)
+                par = self.device_certificate(log_progress, cert_password)
+                certs, senha = par if par else (None, "")
 
                 cmd = ["docker", "run", "--rm"]
                 if certs:
@@ -941,7 +944,7 @@ class DockerService:
                 cmd += [f"{self.image_name}:{self.image_tag}", tv_ip, build_option]
                 if certs:
                     # Third argument is the release URL; empty means latest.
-                    cmd += ["", DEVICE_CERT_PASSWORD]
+                    cmd += ["", senha]
 
                 log_progress(f"Executing: {' '.join(cmd)}")
 
@@ -1021,57 +1024,45 @@ class DockerService:
         process.wait(timeout=timeout)
         return process.returncode
 
-    def ensure_device_certificate(
-        self, tv_ip: str, log_progress: Callable[[str], None]
-    ) -> Optional[str]:
-        """Create a signing pair for this TV, if its Tizen demands one.
+    def device_certificate(
+        self, log_progress: Callable[[str], None], password: str = ""
+    ) -> Optional[Tuple[str, str]]:
+        """The user's own signing certificate, when they have supplied one.
 
-        Returns the host directory holding author.p12 and distributor.p12, or
-        None when the TV accepts the published package as published.
+        Returns (directory holding author.p12 and distributor.p12, password),
+        or None to install the package as published.
 
-        The pair is self-signed and generated here rather than obtained from
-        Samsung: issuing a real Samsung certificate needs an account login,
-        which cannot be reduced to a button. What Tizen checks on install is
-        that the chain is inside its validity dates and that the distributor
-        certificate names this TV's DUID -- both of which we can satisfy
-        locally. The DUID is read from the TV, never typed.
+        There is deliberately no certificate generated here. A self-signed
+        pair does not work: the TV validates the chain against roots baked
+        into its firmware, and that trust store cannot be written to. An
+        earlier attempt generated one and a Tizen 9 TV refused it with the
+        same error as before -- the certificate has to be issued by Samsung,
+        against the user's own account, with their TV's id registered.
+
+        So the app carries the certificate the user provides rather than
+        pretending it can mint one.
         """
-        version = self.platform_version(tv_ip)
-        if not self.needs_own_certificate(version):
-            self.logger.info(f"Tizen {version or 'unknown'}: published package is fine")
+        if self.config.get("certificates.use_default", True):
             return None
 
-        log_progress(f"Tizen {version}: signing with a certificate for this TV...")
+        autor = self.config.get("certificates.author_cert_path", "")
+        dist = self.config.get("certificates.distributor_cert_path", "")
+        # The password arrives as an argument, never from the config file: it
+        # is a credential and that file is plain JSON on disk.
+        senha = password
+
+        if not (autor and dist):
+            return None
+        if not (os.path.isfile(autor) and os.path.isfile(dist)):
+            self.logger.warning("Configured certificate files are missing")
+            return None
+
         destino = os.path.join(self.workspace_host, DEVICE_CERT_DIR)
         os.makedirs(destino, exist_ok=True)
-
-        certs = f"{self.workspace_container}/{DEVICE_CERT_DIR}"
-        script = f"""set -e
-export PATH={TIZEN_TOOLS_DIR}:$PATH
-sdb connect {tv_ip} >/dev/null 2>&1
-sleep 1
-DUID=$(sdb -s {tv_ip}:{SDB_PORT} shell 0 getduid 2>/dev/null | tr -d '\r\n')
-if [ -z "$DUID" ]; then echo "Could not read the TV id"; exit 1; fi
-echo "TV id: $DUID"
-cd {certs}
-openssl req -x509 -newkey rsa:2048 -keyout a.key -out a.crt -days 730 -nodes \
-  -subj "/CN=JellyBeam/O=JellyBeam" 2>/dev/null
-openssl pkcs12 -export -out author.p12 -inkey a.key -in a.crt \
-  -name usercertificate -passout pass:{DEVICE_CERT_PASSWORD}
-# The DUID goes in subjectAltName: that is the whole of what the Certificate
-# Manager asks you to paste in by hand.
-openssl req -x509 -newkey rsa:2048 -keyout d.key -out d.crt -days 730 -nodes \
-  -subj "/CN=TizenSDK/O=Tizen/C=KR" \
-  -addext "subjectAltName=URI:URN:tizen:packageid=,URI:URN:tizen:deviceid=$DUID" 2>/dev/null
-openssl pkcs12 -export -out distributor.p12 -inkey d.key -in d.crt \
-  -name usercertificate -passout pass:{DEVICE_CERT_PASSWORD}
-rm -f a.key a.crt d.key d.crt
-chown -R {os.getuid()}:{os.getgid()} {certs}
-echo "Certificate ready"
-"""
-        if self._run_in_image(script, log_progress) != 0:
-            raise DockerError("Could not create the certificate for this TV")
-        return destino
+        shutil.copy2(autor, os.path.join(destino, CERT_AUTHOR_FILENAME))
+        shutil.copy2(dist, os.path.join(destino, CERT_DISTRIBUTOR_FILENAME))
+        log_progress("Signing with your own certificate...")
+        return destino, senha
 
     def install_jellyfin_customized_async(
         self,
@@ -1079,7 +1070,8 @@ echo "Certificate ready"
         server_url: str,
         callback: Callable[[bool, str], None],
         progress_callback: Optional[Callable[[str], None]] = None,
-        build_option: str = "Jellyfin",
+        build_option: str = JELLYFIN_BUILD_DEFAULT,
+        cert_password: str = "",
     ) -> None:
         """Install a pre-built package with the server customizations added.
 
@@ -1131,7 +1123,8 @@ echo "Package unpacked"
                 resources = customization.inject(www, server_url)
                 log_progress(f"Injected {len(resources)} customization resource(s)")
 
-                certs = self.ensure_device_certificate(tv_ip, log_progress)
+                par = self.device_certificate(log_progress, cert_password)
+                certs, senha = par if par else (None, "")
                 if certs:
                     # A profile pointing at the pair just generated. The
                     # built-in 'dev' profile signs with the image's own
@@ -1141,7 +1134,7 @@ echo "Package unpacked"
                     prep = f"""set -e
 cp /home/developer/profile.xml /tmp/p.xml
 sed -i 's|/certificates/|{ws}/{DEVICE_CERT_DIR}/|g' /tmp/p.xml
-sed -i 's/_CERTIFICATEPASSWORD_/{DEVICE_CERT_PASSWORD}/' /tmp/p.xml
+sed -i 's/_CERTIFICATEPASSWORD_/{senha}/' /tmp/p.xml
 sed -i '/<\\/profile>/ r /tmp/p.xml' \
   /home/developer/tizen-studio-data/profile/profiles.xml
 """

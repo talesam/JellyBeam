@@ -1332,3 +1332,11 @@ msgstr "Installation was cancelled"
 # File: usr/share/jellybeam/pages/install.py, line: 669
 msgid "Installation cancelled"
 msgstr "Installation cancelled"
+
+#: NEEDS WORK
+msgid "This TV needs a Samsung certificate"
+msgstr "This TV needs a Samsung certificate"
+
+#: NEEDS WORK
+msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
+msgstr "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."

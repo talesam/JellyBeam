@@ -1304,3 +1304,11 @@ msgstr "Kurulum iptal edildi"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Kurulum iptal edildi"
+
+#: NEEDS WORK
+msgid "This TV needs a Samsung certificate"
+msgstr "Bu TV bir Samsung sertifikası gerektiriyor"
+
+#: NEEDS WORK
+msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
+msgstr "Tizen {version}, yalnızca hesabınız için Samsung tarafından verilen ve bu TV'nin kayıtlı olduğu bir sertifikayla imzalanmış paketleri kabul eder. Bunu Tizen Studio'nun Certificate Manager'ında oluşturun, ardından Sertifikalar altına ekleyin."

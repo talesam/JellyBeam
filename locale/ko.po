@@ -1297,3 +1297,11 @@ msgstr "설치가 취소되었습니다"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "설치가 취소되었습니다"
+
+#: NEEDS WORK
+msgid "This TV needs a Samsung certificate"
+msgstr "이 TV에는 Samsung 인증서가 필요합니다"
+
+#: NEEDS WORK
+msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
+msgstr "Tizen {version}은(는) 이 TV가 등록된 상태로 사용자 계정에 대해 Samsung이 발급한 인증서로 서명된 패키지만 허용합니다. Tizen Studio의 Certificate Manager에서 인증서를 생성한 다음 인증서 화면에서 추가하세요."

@@ -1306,3 +1306,11 @@ msgstr "Η εγκατάσταση ακυρώθηκε"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Η εγκατάσταση ακυρώθηκε"
+
+#: NEEDS WORK
+msgid "This TV needs a Samsung certificate"
+msgstr "Αυτή η τηλεόραση χρειάζεται πιστοποιητικό Samsung"
+
+#: NEEDS WORK
+msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
+msgstr "Το Tizen {version} δέχεται μόνο πακέτα υπογεγραμμένα με πιστοποιητικό που έχει εκδοθεί από τη Samsung για τον λογαριασμό σας, με αυτήν την τηλεόραση καταχωρημένη. Δημιουργήστε ένα στο Certificate Manager του Tizen Studio και προσθέστε το στη συνέχεια στην ενότητα Πιστοποιητικά."
