@@ -1279,3 +1279,15 @@ msgstr "インストールがキャンセルされました"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "インストールがキャンセルされました"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Dockerデーモンが実行されていません"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "このシステムにはDockerがインストールされていません"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "証明書のパスワードが正しくありません"

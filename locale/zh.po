@@ -1279,3 +1279,15 @@ msgstr "安装已取消"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "安装已取消"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker 守护进程未运行"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "此系统未安装 Docker"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "证书密码无效"

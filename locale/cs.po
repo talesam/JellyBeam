@@ -1284,3 +1284,15 @@ msgstr "Instalace byla zrušena"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Instalace zrušena"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Služba Docker neběží"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker není v tomto systému nainstalován"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Neplatné heslo certifikátu"

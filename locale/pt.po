@@ -1284,3 +1284,15 @@ msgstr "A instalação foi cancelada"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Instalação cancelada"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "O serviço do Docker não está em execução"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "O Docker não está instalado neste sistema"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Senha do certificado inválida"

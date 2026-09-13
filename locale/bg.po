@@ -1286,3 +1286,15 @@ msgstr "Инсталацията беше отменена"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Инсталацията е отменена"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Демонът на Docker не работи"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker не е инсталиран на тази система"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Невалидна парола за сертификат"

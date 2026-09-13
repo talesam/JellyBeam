@@ -1284,3 +1284,15 @@ msgstr "Installeerimine tühistati"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installeerimine tühistatud"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Dockeri teenus ei tööta"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker ei ole selles süsteemis installitud"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Sertifikaadi parool on vale"

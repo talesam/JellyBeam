@@ -1312,3 +1312,15 @@ msgstr "Installation was cancelled"
 # File: usr/share/jellybeam/pages/install.py, line: 605
 msgid "Installation cancelled"
 msgstr "Installation cancelled"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker daemon is not running"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker is not installed on this system"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Invalid certificate password"

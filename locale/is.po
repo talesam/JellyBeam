@@ -1286,3 +1286,15 @@ msgstr "Uppsetningu var hætt."
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Uppsetningu aflýst"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker-þjónustan er ekki í gangi"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker er ekki uppsett á þessu kerfi"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Ógilt lykilorð skírteinis"

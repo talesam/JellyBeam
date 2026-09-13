@@ -1286,3 +1286,15 @@ msgstr "Installation avbröts"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installation avbruten"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker-tjänsten körs inte"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker är inte installerat på det här systemet"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Ogiltigt certifikatlösenord"

@@ -1279,3 +1279,15 @@ msgstr "설치가 취소되었습니다"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "설치가 취소되었습니다"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker 데몬이 실행되고 있지 않습니다"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "이 시스템에 Docker가 설치되어 있지 않습니다"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "인증서 비밀번호가 올바르지 않습니다"

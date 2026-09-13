@@ -1284,3 +1284,15 @@ msgstr "Asennus peruttiin"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Asennus peruutettu"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker-taustaprosessi ei ole käynnissä"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Dockeria ei ole asennettu tähän järjestelmään"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Varmenteen salasana on virheellinen"

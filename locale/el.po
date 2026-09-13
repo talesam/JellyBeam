@@ -1286,3 +1286,15 @@ msgstr "Η εγκατάσταση ακυρώθηκε"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Η εγκατάσταση ακυρώθηκε"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Η υπηρεσία Docker δεν εκτελείται"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Το Docker δεν είναι εγκατεστημένο σε αυτό το σύστημα"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Μη έγκυρος κωδικός πρόσβασης πιστοποιητικού"

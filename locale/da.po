@@ -1284,3 +1284,15 @@ msgstr "Installation blev annulleret"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installation annulleret"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker-dæmonen kører ikke"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker er ikke installeret på dette system"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Ugyldig certifikatadgangskode"
