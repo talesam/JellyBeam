@@ -66,7 +66,7 @@ class CertificatesPage(Gtk.ScrolledWindow):
         self.use_default_row = Adw.SwitchRow()
         self.use_default_row.set_title(_("Use Built-in Certificates"))
         self.use_default_row.set_subtitle(_("Recommended - No Tizen Studio required"))
-        default_icon = Gtk.Image.new_from_icon_name("emblem-default-symbolic")
+        default_icon = Gtk.Image.new_from_icon_name("security-medium-symbolic")
         self.use_default_row.add_prefix(default_icon)
 
         # Load saved preference
@@ -109,7 +109,7 @@ class CertificatesPage(Gtk.ScrolledWindow):
         self.author_cert_button.connect(
             "clicked", lambda b: self._browse_file("author")
         )
-        self.author_cert_ok = Gtk.Image.new_from_icon_name("emblem-ok-symbolic")
+        self.author_cert_ok = Gtk.Image.new_from_icon_name("object-select-symbolic")
         self.author_cert_ok.add_css_class("success")
         self.author_cert_ok.set_visible(False)
         self.author_cert_row.add_suffix(self.author_cert_ok)
@@ -120,7 +120,7 @@ class CertificatesPage(Gtk.ScrolledWindow):
         self.dist_cert_row = Adw.ActionRow()
         self.dist_cert_row.set_title(_("Distributor Certificate"))
         self.dist_cert_row.set_subtitle(_("Select distributor.p12 file"))
-        dist_icon = Gtk.Image.new_from_icon_name("emblem-documents-symbolic")
+        dist_icon = Gtk.Image.new_from_icon_name("text-x-generic-symbolic")
         self.dist_cert_row.add_prefix(dist_icon)
 
         self.dist_cert_button = Gtk.Button.new_with_label(_("Browse"))
@@ -128,7 +128,7 @@ class CertificatesPage(Gtk.ScrolledWindow):
         self.dist_cert_button.connect(
             "clicked", lambda b: self._browse_file("distributor")
         )
-        self.dist_cert_ok = Gtk.Image.new_from_icon_name("emblem-ok-symbolic")
+        self.dist_cert_ok = Gtk.Image.new_from_icon_name("object-select-symbolic")
         self.dist_cert_ok.add_css_class("success")
         self.dist_cert_ok.set_visible(False)
         self.dist_cert_row.add_suffix(self.dist_cert_ok)

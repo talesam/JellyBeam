@@ -179,7 +179,7 @@ def status_pill(text: str, ok: bool = False) -> Gtk.Box:
     box.add_css_class("jb-pill")
     box.add_css_class("jb-pill-ok" if ok else "jb-pill-idle")
     if ok:
-        box.append(Gtk.Image.new_from_icon_name("emblem-ok-symbolic"))
+        box.append(Gtk.Image.new_from_icon_name("object-select-symbolic"))
     label = Gtk.Label(label=text)
     box.append(label)
     return box

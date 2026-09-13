@@ -83,7 +83,7 @@ class WelcomePage(Gtk.Box):
                         _("Simple and reliable"),
                     ),
                     (
-                        "emblem-favorite-symbolic",
+                        "starred-symbolic",
                         _("Open Source"),
                         _("Built by the community"),
                     ),
@@ -206,7 +206,7 @@ class WelcomePage(Gtk.Box):
 
             if is_installed and is_running:
                 # Docker is ready
-                success_icon = Gtk.Image.new_from_icon_name("emblem-ok-symbolic")
+                success_icon = Gtk.Image.new_from_icon_name("object-select-symbolic")
                 success_icon.add_css_class("success")
                 self.docker_row.add_suffix(success_icon)
                 self.docker_row.set_subtitle(_("Ready"))
