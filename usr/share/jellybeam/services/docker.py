@@ -9,6 +9,7 @@ import tempfile
 from typing import Callable, Optional, List
 
 from gi.repository import GLib
+from utils.i18n import _
 from utils.logger import Logger
 from utils.constants import (
     DOCKER_CONTAINER_NAME,
@@ -17,6 +18,8 @@ from utils.constants import (
     DOCKER_WORKSPACE_HOST,
     DOCKER_WORKSPACE_CONTAINER,
     DOCKER_START_COMMANDS,
+    PKEXEC_DISMISSED,
+    PKEXEC_NOT_AUTHORIZED,
     DOCKER_INSTALL_COMMANDS,
     TIZEN_SDK_DIR,
     TIZEN_SDK_URL,
@@ -279,8 +282,17 @@ class DockerService:
         self.logger.debug(f"Running with sg docker: {' '.join(sg_cmd)}")
         return subprocess.run(sg_cmd, **kwargs)
 
-    def start_docker_async(self, callback: Callable[[bool], None]) -> None:
-        """Start Docker service asynchronously."""
+    def start_docker_async(self, callback: Callable[[bool, str], None]) -> None:
+        """Start the Docker daemon, asking for authorisation graphically.
+
+        Through pkexec rather than sudo. sudo wants a terminal: with the output
+        captured its prompt went into a pipe, so launched from the menu nothing
+        appeared on screen and the app hung until the timeout. pkexec puts up
+        the desktop's own password dialog.
+
+        The fallbacks are chained inside a single script so the user is asked
+        for the password once, not once per attempt.
+        """
 
         def start_docker():
             import time
@@ -288,59 +300,63 @@ class DockerService:
             try:
                 self.logger.info("Attempting to start Docker service")
 
-                for cmd in DOCKER_START_COMMANDS:
-                    try:
-                        self.logger.debug(f"Trying command: {' '.join(cmd)}")
-                        result = subprocess.run(
-                            cmd,
-                            capture_output=True,
-                            text=True,
-                            timeout=TIMEOUT_DOCKER_START,
-                        )
+                # `a || b || c`: first one that works wins, single prompt.
+                script = " || ".join(
+                    " ".join(cmd) for cmd in DOCKER_START_COMMANDS
+                )
+                self.logger.debug(f"pkexec script: {script}")
 
-                        if result.returncode == 0:
-                            self.logger.info(
-                                f"Docker start command succeeded: {' '.join(cmd)}"
-                            )
+                result = subprocess.run(
+                    ["pkexec", "sh", "-c", script],
+                    capture_output=True,
+                    text=True,
+                    timeout=TIMEOUT_DOCKER_START,
+                )
 
-                            # Wait for Docker to fully start
-                            # systemctl may return before daemon is fully ready
-                            max_retries = 3
-                            wait_times = [2, 3, 5]  # Total ~10s
+                if result.returncode == PKEXEC_DISMISSED:
+                    self.logger.info("Authorisation dialog dismissed by the user")
+                    GLib.idle_add(
+                        callback, False, _("Authorization was cancelled")
+                    )
+                    return
+                if result.returncode == PKEXEC_NOT_AUTHORIZED:
+                    self.logger.warning("pkexec refused: not authorised")
+                    GLib.idle_add(
+                        callback, False, _("Could not get administrator access")
+                    )
+                    return
+                if result.returncode != 0:
+                    erro = (result.stderr or "").strip()
+                    self.logger.error(f"Docker start failed: {erro[:200]}")
+                    GLib.idle_add(callback, False, _("Could not start Docker"))
+                    return
 
-                            for attempt in range(max_retries):
-                                time.sleep(wait_times[attempt])
-                                self.logger.debug(
-                                    f"Checking if Docker is running (attempt {attempt + 1}/{max_retries})"
-                                )
+                # systemctl returns before the daemon is actually accepting
+                # connections, so the answer is polled rather than assumed.
+                for espera in (2, 3, 5):
+                    time.sleep(espera)
+                    if self.is_docker_running():
+                        self.logger.info("Docker started successfully")
+                        GLib.idle_add(callback, True, "")
+                        return
 
-                                if self.is_docker_running():
-                                    self.logger.info("Docker started successfully")
-                                    GLib.idle_add(callback, True)
-                                    return
+                self.logger.error("Docker daemon did not come up in time")
+                GLib.idle_add(callback, False, _("Docker did not start in time"))
 
-                            # After retries, report failure and exit
-                            self.logger.error(
-                                "Docker daemon did not start within expected time"
-                            )
-                            GLib.idle_add(callback, False)
-                            return  # Exit here, don't try fallback commands
-                        else:
-                            self.logger.warning(f"Command failed: {result.stderr}")
-
-                    except subprocess.TimeoutExpired:
-                        self.logger.warning(f"Command timed out: {' '.join(cmd)}")
-                        continue
-                    except FileNotFoundError:
-                        self.logger.debug(f"Command not found: {' '.join(cmd)}")
-                        continue
-
-                self.logger.error("All Docker start attempts failed")
-                GLib.idle_add(callback, False)
-
+            except subprocess.TimeoutExpired:
+                self.logger.error("Docker start timed out")
+                GLib.idle_add(callback, False, _("Docker did not start in time"))
+            except FileNotFoundError:
+                # No polkit agent installed; sudo would not have worked either.
+                self.logger.error("pkexec not found")
+                GLib.idle_add(
+                    callback,
+                    False,
+                    _("pkexec was not found. Start Docker manually."),
+                )
             except Exception as e:
                 self.logger.exception(f"Unexpected error starting Docker: {e}")
-                GLib.idle_add(callback, False)
+                GLib.idle_add(callback, False, str(e))
 
         thread = threading.Thread(target=start_docker, daemon=True)
         thread.start()

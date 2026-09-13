@@ -1228,3 +1228,43 @@ msgstr "Uppsetningu var hætt."
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Uppsetningu aflýst"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "Hætt var við auðkenningu"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Ekki tókst að fá kerfisstjórnaraðgang"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Ekki tókst að ræsa Docker"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker-þjónustan er ekki í gangi"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker ræstist ekki í tæka tíð"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker er ekki uppsett á þessu kerfi"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Ógilt lykilorð skírteinis"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Samsung sjónvörp"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "Sjónvörp og skjávarpar"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec fannst ekki. Ræstu Docker handvirkt."

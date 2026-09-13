@@ -1228,3 +1228,43 @@ msgstr "A telepítés megszakítva lett"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Telepítés megszakítva"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "A hitelesítés megszakadt"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Nem sikerült rendszergazdai jogosultságot szerezni"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "A Docker indítása sikertelen"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "A Docker szolgáltatás nem fut"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "A Docker nem indult el időben"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "A Docker nincs telepítve ezen a rendszeren"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Érvénytelen tanúsítványjelszó"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Samsung TV-k"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "TV-k és projektorok"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "A pkexec nem található. Indítsa el a Dockert manuálisan."

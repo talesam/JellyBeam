@@ -1224,3 +1224,43 @@ msgstr "ההתקנה בוטלה"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "התקנה בוטלה"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "ההרשאה בוטלה"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "לא ניתן היה לקבל הרשאות מנהל"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "לא ניתן היה להפעיל את Docker"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "שירות Docker אינו פועל"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker לא הופעל בזמן"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker אינו מותקן במערכת זו"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "סיסמת האישור אינה תקינה"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "טלוויזיות Samsung"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "טלוויזיות ומקרנים"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec לא נמצא. הפעל את Docker באופן ידני."

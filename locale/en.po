@@ -1254,3 +1254,43 @@ msgstr "Installation was cancelled"
 # File: usr/share/jellybeam/pages/install.py, line: 605
 msgid "Installation cancelled"
 msgstr "Installation cancelled"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "Authorization was cancelled"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Could not get administrator access"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Could not start Docker"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker daemon is not running"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker did not start in time"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker is not installed on this system"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Invalid certificate password"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Samsung TVs"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "TVs and projectors"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec was not found. Start Docker manually."

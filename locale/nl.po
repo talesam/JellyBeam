@@ -1228,3 +1228,43 @@ msgstr "Installatie is geannuleerd"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installatie geannuleerd"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "Autorisatie is geannuleerd"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Kon geen beheerderstoegang verkrijgen"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Kon Docker niet starten"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker-service draait niet"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker is niet op tijd gestart"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker is niet geïnstalleerd op dit systeem"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Ongeldig certificaatwachtwoord"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Samsung-tv's"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "Tv's en projectoren"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec is niet gevonden. Start Docker handmatig."

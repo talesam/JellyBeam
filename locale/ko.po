@@ -1222,3 +1222,43 @@ msgstr "설치가 취소되었습니다"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "설치가 취소되었습니다"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "인증이 취소되었습니다"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "관리자 권한을 얻지 못했습니다"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Docker를 시작할 수 없습니다"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker 데몬이 실행되고 있지 않습니다"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker가 제시간에 시작되지 않았습니다"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "이 시스템에 Docker가 설치되어 있지 않습니다"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "인증서 비밀번호가 올바르지 않습니다"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Samsung TV"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "TV 및 프로젝터"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec를 찾을 수 없습니다. Docker를 수동으로 시작하세요."

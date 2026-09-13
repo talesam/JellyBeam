@@ -8,6 +8,7 @@ from gi.repository import Gtk, Adw, GLib
 from services.docker import DockerService
 from utils import design
 from utils.i18n import _
+from utils.ui_helpers import ErrorNotification
 
 
 class WelcomePage(Gtk.Box):
@@ -73,8 +74,8 @@ class WelcomePage(Gtk.Box):
                 [
                     (
                         "tv-symbolic",
-                        _("Samsung & LG TVs"),
-                        _("Wide device support"),
+                        _("Samsung TVs"),
+                        _("TVs and projectors"),
                     ),
                     (
                         "package-x-generic-symbolic",
@@ -253,11 +254,17 @@ class WelcomePage(Gtk.Box):
         spinner.start()
         self.docker_row.add_suffix(spinner)
 
-        def on_docker_started(success):
+        def on_docker_started(success, message):
             button.set_sensitive(True)
             self.docker_row.remove(spinner)
             if success:
                 self._check_docker_status()
+            elif message:
+                # Silence here was the actual bug the user reported: the
+                # password dialog never showed and nothing said why.
+                ErrorNotification.show_error_dialog(
+                    self.window, _("Could not start Docker"), message
+                )
 
         self.docker_service.start_docker_async(on_docker_started)
 

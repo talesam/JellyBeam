@@ -1226,3 +1226,43 @@ msgstr "Installasjonen ble avbrutt"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installasjon avbrutt"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "Autorisasjon ble avbrutt"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Kunne ikke få administratortilgang"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Kunne ikke starte Docker"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker-tjenesten kjører ikke"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker startet ikke i tide"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker er ikke installert på dette systemet"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Ugyldig sertifikatpassord"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Samsung-TV-er"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "TV-er og prosjektorer"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec ble ikke funnet. Start Docker manuelt."

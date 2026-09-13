@@ -1229,3 +1229,43 @@ msgstr "L'installation a été annulée"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installation annulée"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "L'autorisation a été annulée"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Impossible d'obtenir les droits d'administrateur"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Impossible de démarrer Docker"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Le service Docker n'est pas en cours d'exécution"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker n'a pas démarré à temps"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker n'est pas installé sur ce système"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Mot de passe de certificat invalide"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Téléviseurs Samsung"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "Téléviseurs et projecteurs"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec est introuvable. Démarrez Docker manuellement."

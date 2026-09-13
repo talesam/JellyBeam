@@ -1226,3 +1226,43 @@ msgstr "Встановлення було скасовано"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Інсталяцію скасовано"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "Авторизацію скасовано"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Не вдалося отримати права адміністратора"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Не вдалося запустити Docker"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Служба Docker не запущена"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker не запустився вчасно"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker не встановлено в цій системі"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Невірний пароль сертифіката"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Телевізори Samsung"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "Телевізори та проєктори"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec не знайдено. Запустіть Docker вручну."

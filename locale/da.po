@@ -1226,3 +1226,43 @@ msgstr "Installation blev annulleret"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installation annulleret"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "Godkendelse blev annulleret"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Kunne ikke få administratoradgang"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Kunne ikke starte Docker"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker-dæmonen kører ikke"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker startede ikke rettidigt"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker er ikke installeret på dette system"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Ugyldig certifikatadgangskode"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Samsung-tv'er"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "Tv'er og projektorer"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec blev ikke fundet. Start Docker manuelt."

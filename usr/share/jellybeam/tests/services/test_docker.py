@@ -118,6 +118,73 @@ class TestDockerServiceAsync:
 
     @patch("subprocess.run")
     @patch("services.docker.GLib")
+    def test_start_docker_asks_through_pkexec_not_sudo(
+        self, mock_glib, mock_run, docker_service
+    ):
+        """The reported bug: sudo's prompt went to a pipe and never showed.
+
+        sudo needs a terminal. Captured, its prompt is invisible and the app
+        hangs; pkexec puts up the desktop's own dialog instead.
+        """
+        mock_run.return_value = Mock(returncode=0, stderr="")
+        done = threading.Event()
+        mock_glib.idle_add.side_effect = lambda fn, *a, **kw: done.set()
+
+        docker_service.start_docker_async(Mock())
+        done.wait(timeout=2)
+
+        chamadas = [c.args[0] for c in mock_run.call_args_list if c.args]
+        primeira = chamadas[0]
+        assert primeira[0] == "pkexec", primeira
+        assert "sudo" not in primeira, primeira
+        # One prompt, not one per fallback.
+        assert primeira[1:3] == ["sh", "-c"]
+        assert "||" in primeira[3]
+
+    @patch("subprocess.run")
+    @patch("services.docker.GLib")
+    def test_start_docker_says_when_the_dialog_is_dismissed(
+        self, mock_glib, mock_run, docker_service
+    ):
+        """Cancelling the password dialog must explain itself, not fail mutely."""
+        mock_run.return_value = Mock(returncode=126, stderr="")
+        recebido = []
+        done = threading.Event()
+
+        def capture(fn, *a, **kw):
+            recebido.append(a)
+            done.set()
+
+        mock_glib.idle_add.side_effect = capture
+        docker_service.start_docker_async(Mock())
+        done.wait(timeout=2)
+
+        assert recebido, "callback never ran"
+        ok, mensagem = recebido[0][0], recebido[0][1]
+        assert ok is False
+        assert mensagem, "a dismissed dialog must come with a reason"
+
+    @patch("subprocess.run", side_effect=FileNotFoundError)
+    @patch("services.docker.GLib")
+    def test_start_docker_survives_missing_pkexec(
+        self, mock_glib, mock_run, docker_service
+    ):
+        """No polkit agent is a plausible setup; it must not raise."""
+        recebido = []
+        done = threading.Event()
+
+        def capture(fn, *a, **kw):
+            recebido.append(a)
+            done.set()
+
+        mock_glib.idle_add.side_effect = capture
+        docker_service.start_docker_async(Mock())
+        done.wait(timeout=2)
+
+        assert recebido and recebido[0][0] is False
+
+    @patch("subprocess.run")
+    @patch("services.docker.GLib")
     def test_prepare_environment_async(self, mock_glib, mock_run, docker_service):
         """Test preparing Docker environment."""
         mock_run.return_value = Mock(returncode=0)

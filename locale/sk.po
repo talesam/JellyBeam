@@ -1226,3 +1226,43 @@ msgstr "Inštalácia bola zrušená"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Inštalácia zrušená"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "Autorizácia bola zrušená"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Nepodarilo sa získať prístup správcu"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Docker sa nepodarilo spustiť"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Služba Docker nie je spustená"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker sa nespustil včas"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker nie je nainštalovaný v tomto systéme"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Neplatné heslo certifikátu"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Televízory Samsung"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "Televízory a projektory"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec sa nenašiel. Spustite Docker manuálne."

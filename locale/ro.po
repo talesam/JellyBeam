@@ -1226,3 +1226,43 @@ msgstr "Instalarea a fost anulată"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Instalare anulată"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "Autorizarea a fost anulată"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Nu s-a putut obține accesul de administrator"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Docker nu a putut fi pornit"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Serviciul Docker nu rulează"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker nu a pornit la timp"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker nu este instalat pe acest sistem"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Parolă certificat nevalidă"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Televizoare Samsung"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "Televizoare și proiectoare"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec nu a fost găsit. Porniți Docker manual."

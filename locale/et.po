@@ -1226,3 +1226,43 @@ msgstr "Installeerimine tühistati"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installeerimine tühistatud"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "Autoriseerimine tühistati"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Administraatoriõigusi ei õnnestunud saada"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Dockerit ei õnnestunud käivitada"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Dockeri teenus ei tööta"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker ei käivitunud õigeaegselt"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker ei ole selles süsteemis installitud"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Sertifikaadi parool on vale"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Samsungi telerid"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "Telerid ja projektorid"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec'i ei leitud. Käivitage Docker käsitsi."

@@ -155,12 +155,21 @@ DOCKER_INSTALL_COMMANDS = {
     ],
 }
 
-# Docker Start Commands (fallback options)
+# Docker Start Commands, in order of preference.
+#
+# No "sudo" here: these run through pkexec, which already gives root and,
+# unlike sudo, asks for the password in a graphical dialog. With sudo the
+# prompt went to a pipe, so nothing appeared on screen and the app simply
+# hung -- a user hit exactly that.
 DOCKER_START_COMMANDS = [
-    ["sudo", "systemctl", "start", "docker"],
-    ["sudo", "service", "docker", "start"],
-    ["sudo", "/etc/init.d/docker", "start"],
+    ["systemctl", "start", "docker"],
+    ["service", "docker", "start"],
+    ["/etc/init.d/docker", "start"],
 ]
+
+# pkexec's own exit codes, distinct from the command it ran.
+PKEXEC_DISMISSED = 126
+PKEXEC_NOT_AUTHORIZED = 127
 
 # Configuration Paths
 CONFIG_DIR_NAME = ".config/jellybeam"

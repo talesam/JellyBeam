@@ -1222,3 +1222,43 @@ msgstr "安装已取消"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "安装已取消"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "授权已取消"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "无法获取管理员权限"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "无法启动 Docker"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker 守护进程未运行"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker 未能及时启动"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "此系统未安装 Docker"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "证书密码无效"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Samsung 电视"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "电视和投影仪"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "未找到 pkexec。请手动启动 Docker。"

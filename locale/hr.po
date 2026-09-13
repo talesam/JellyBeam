@@ -1226,3 +1226,43 @@ msgstr "Instalacija je otkazana"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Instalacija otkazana"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "Autorizacija je otkazana"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Nije moguće dobiti administratorski pristup"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Docker se nije uspio pokrenuti"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Docker servis nije pokrenut"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker se nije pokrenuo na vrijeme"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker nije instaliran na ovom sustavu"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Neispravna lozinka certifikata"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Samsung televizori"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "Televizori i projektori"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec nije pronađen. Pokrenite Docker ručno."

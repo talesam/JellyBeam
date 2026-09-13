@@ -1222,3 +1222,43 @@ msgstr "インストールがキャンセルされました"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "インストールがキャンセルされました"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "認証がキャンセルされました"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "管理者権限を取得できませんでした"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Dockerを起動できませんでした"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Dockerデーモンが実行されていません"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Dockerが時間内に起動しませんでした"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "このシステムにはDockerがインストールされていません"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "証明書のパスワードが正しくありません"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Samsungテレビ"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "テレビとプロジェクター"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexecが見つかりませんでした。Dockerを手動で起動してください。"

@@ -1226,3 +1226,43 @@ msgstr "Установка была отменена"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Установка отменена"
+
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "Авторизация была отменена"
+
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Не удалось получить права администратора"
+
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Не удалось запустить Docker"
+
+#: NEEDS WORK
+msgid "Docker daemon is not running"
+msgstr "Служба Docker не запущена"
+
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker не запустился вовремя"
+
+#: NEEDS WORK
+msgid "Docker is not installed on this system"
+msgstr "Docker не установлен в этой системе"
+
+#: NEEDS WORK
+msgid "Invalid certificate password"
+msgstr "Неверный пароль сертификата"
+
+#: NEEDS WORK
+msgid "Samsung TVs"
+msgstr "Телевизоры Samsung"
+
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "Телевизоры и проекторы"
+
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec не найден. Запустите Docker вручную."
