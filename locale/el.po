@@ -1298,3 +1298,11 @@ msgstr "Το Docker δεν είναι εγκατεστημένο σε αυτό �
 #: NEEDS WORK
 msgid "Invalid certificate password"
 msgstr "Μη έγκυρος κωδικός πρόσβασης πιστοποιητικού"
+
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Αυτή η τηλεόραση χρειάζεται δικό της πιστοποιητικό"
+
+#: NEEDS WORK
+msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
+msgstr "Το Tizen {version} απορρίπτει το δημοσιευμένο πακέτο, του οποίου το πιστοποιητικό υπογραφής έχει λήξει. Η εγκατάσταση θα αποτύχει με σφάλμα πιστοποιητικού."

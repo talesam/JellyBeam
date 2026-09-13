@@ -1296,3 +1296,11 @@ msgstr "Docker ei ole selles süsteemis installitud"
 #: NEEDS WORK
 msgid "Invalid certificate password"
 msgstr "Sertifikaadi parool on vale"
+
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "See teler vajab enda sertifikaati"
+
+#: NEEDS WORK
+msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
+msgstr "Tizen {version} lükkab avaldatud paketi tagasi, kuna selle allkirjastamissertifikaat on aegunud. Installimine nurjub sertifikaadi veaga."

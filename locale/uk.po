@@ -1296,3 +1296,11 @@ msgstr "Docker не встановлено в цій системі"
 #: NEEDS WORK
 msgid "Invalid certificate password"
 msgstr "Невірний пароль сертифіката"
+
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Цьому телевізору потрібен власний сертифікат"
+
+#: NEEDS WORK
+msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
+msgstr "Tizen {version} відхиляє опублікований пакет, термін дії сертифіката підписування якого закінчився. Встановлення завершиться помилкою сертифіката."

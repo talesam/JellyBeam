@@ -50,6 +50,8 @@ TIZEN_SDK_VERSION = "4.6"
 TIZEN_SDK_URL = f"http://download.tizen.org/sdk/Installer/tizen-studio_{TIZEN_SDK_VERSION}/web-cli_Tizen_Studio_{TIZEN_SDK_VERSION}_ubuntu-64.bin"
 TIZEN_SDK_DIR = "tizen-studio"
 TIZEN_TOOLS_PATH = "tizen-studio/tools/ide/bin/tizen"
+# Where sdb lives inside the image, for commands run by hand there.
+TIZEN_TOOLS_DIR = "/tizen-studio/tools"
 TIZEN_SDK_BIN_NAME = "tizen-studio.bin"
 
 # Jellyfin Constants

@@ -1296,3 +1296,11 @@ msgstr "Docker nie je nainštalovaný v tomto systéme"
 #: NEEDS WORK
 msgid "Invalid certificate password"
 msgstr "Neplatné heslo certifikátu"
+
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Tento televízor potrebuje vlastný certifikát"
+
+#: NEEDS WORK
+msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
+msgstr "Tizen {version} odmieta zverejnený balík, ktorého podpisový certifikát vypršal. Inštalácia zlyhá s chybou certifikátu."

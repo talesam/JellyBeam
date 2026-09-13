@@ -1294,3 +1294,11 @@ msgstr "Docker אינו מותקן במערכת זו"
 #: NEEDS WORK
 msgid "Invalid certificate password"
 msgstr "סיסמת האישור אינה תקינה"
+
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "לטלוויזיה הזו נדרשת תעודה משלה"
+
+#: NEEDS WORK
+msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
+msgstr "Tizen {version} דוחה את החבילה שפורסמה, מכיוון שתוקף תעודת החתימה שלה פג. ההתקנה תיכשל עם שגיאת תעודה."

@@ -1298,3 +1298,11 @@ msgstr "Docker er ekki uppsett á þessu kerfi"
 #: NEEDS WORK
 msgid "Invalid certificate password"
 msgstr "Ógilt lykilorð skírteinis"
+
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Þetta sjónvarp þarf sitt eigið skírteini"
+
+#: NEEDS WORK
+msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
+msgstr "Tizen {version} hafnar útgefnum pakka þar sem undirritunarskírteinið er útrunnið. Uppsetningin mun mistakast með skírteinisvillu."

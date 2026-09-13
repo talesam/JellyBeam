@@ -1296,3 +1296,11 @@ msgstr "Docker bu sistemde yüklü değil"
 #: NEEDS WORK
 msgid "Invalid certificate password"
 msgstr "Geçersiz sertifika parolası"
+
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Bu TV kendi sertifikasına ihtiyaç duyuyor"
+
+#: NEEDS WORK
+msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
+msgstr "Tizen {version}, imzalama sertifikasının süresi dolmuş olan yayınlanan paketi reddediyor. Kurulum bir sertifika hatasıyla başarısız olacak."

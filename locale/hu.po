@@ -1298,3 +1298,11 @@ msgstr "A Docker nincs telepítve ezen a rendszeren"
 #: NEEDS WORK
 msgid "Invalid certificate password"
 msgstr "Érvénytelen tanúsítványjelszó"
+
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "Ennek a TV-nek saját tanúsítványra van szüksége"
+
+#: NEEDS WORK
+msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
+msgstr "A Tizen {version} elutasítja a közzétett csomagot, amelynek aláíró tanúsítványa lejárt. A telepítés tanúsítványhibával fog meghiúsulni."

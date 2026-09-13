@@ -1288,3 +1288,11 @@ msgstr  ""
 # File: usr/share/jellybeam/pages/install.py, line: 605
 msgid   "Installation cancelled"
 msgstr  ""
+
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr ""
+
+#: NEEDS WORK
+msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
+msgstr ""

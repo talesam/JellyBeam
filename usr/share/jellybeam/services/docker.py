@@ -32,6 +32,8 @@ from utils.constants import (
     JELLYFIN_BUILDS_RELEASES,
     TIZEN_SIGN_PROFILE,
     CUSTOMIZATION_PKG_DIR,
+    TIZEN_TOOLS_DIR,
+    SDB_PORT,
     CERT_AUTHOR_FILENAME,
     CERT_DISTRIBUTOR_FILENAME,
     CERT_PASSWORD_FILE,
@@ -1134,6 +1136,50 @@ fi
                 GLib.idle_add(callback, False, str(e))
 
         threading.Thread(target=install, daemon=True).start()
+
+    def tv_platform_version_async(
+        self, tv_ip: str, callback: Callable[[str], None]
+    ) -> None:
+        """Read the TV's Tizen version, empty string when unavailable.
+
+        Only sdb knows this: the TV's HTTP interface answers
+        firmwareVersion "Unknown". Developer Mode therefore has to be on,
+        which it is by the time this matters.
+
+        Worth showing because the version decides whether the published
+        package installs at all: Tizen 8 enforces the certificate chain
+        expiry and rejects it, while 6.x and 7.x accept it.
+        """
+
+        def run() -> None:
+            versao = ""
+            try:
+                script = (
+                    f"export PATH={TIZEN_TOOLS_DIR}:$PATH; "
+                    f"sdb connect {tv_ip} >/dev/null 2>&1; sleep 1; "
+                    f"sdb -s {tv_ip}:{SDB_PORT} capability 2>/dev/null "
+                    "| grep '^platform_version:'"
+                )
+                r = subprocess.run(
+                    self._wrap_cmd(
+                        [
+                            "docker", "run", "--rm", "--network", "host",
+                            "--entrypoint", "sh",
+                            f"{self.image_name}:{self.image_tag}", "-c", script,
+                        ]
+                    ),
+                    capture_output=True,
+                    text=True,
+                    timeout=TIMEOUT_DOCKER_EXEC_MEDIUM,
+                )
+                saida = (r.stdout or "").strip()
+                if ":" in saida:
+                    versao = saida.split(":", 1)[1].strip()
+            except Exception as e:
+                self.logger.debug(f"Could not read the Tizen version: {e}")
+            GLib.idle_add(callback, versao)
+
+        threading.Thread(target=run, daemon=True).start()
 
     def stop_all_processes(self) -> None:
         """Stop all running Docker processes."""

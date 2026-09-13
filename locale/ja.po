@@ -1291,3 +1291,11 @@ msgstr "このシステムにはDockerがインストールされていません
 #: NEEDS WORK
 msgid "Invalid certificate password"
 msgstr "証明書のパスワードが正しくありません"
+
+#: NEEDS WORK
+msgid "This TV needs its own certificate"
+msgstr "このテレビには専用の証明書が必要です"
+
+#: NEEDS WORK
+msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
+msgstr "Tizen {version} は、署名証明書の有効期限が切れている公開パッケージを拒否します。インストールは証明書エラーで失敗します。"

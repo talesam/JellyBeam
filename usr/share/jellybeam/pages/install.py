@@ -332,6 +332,53 @@ class InstallPage(Gtk.Box):
     def _on_page_shown(self, widget):
         """Called when page becomes visible - update device info."""
         self._update_tv_info()
+        self._fetch_tizen_version()
+
+    def _fetch_tizen_version(self):
+        """Read the TV's Tizen version and warn when it will reject the package.
+
+        Tizen 8 checks that the signing chain has not expired. The published
+        package is signed with a certificate that lapsed in 2022, so it
+        installs on 6.x and 7.x and is refused on 8. Saying so before the
+        install spares a ten-minute round trip ending in a certificate error.
+        """
+        tv_ip = self.window.config_manager.get("device.ip")
+        if not tv_ip:
+            return
+
+        def on_version(version):
+            if not version:
+                return
+            self.window.config_manager.set("device.tizen_version", version)
+            base = self.tv_info_row.get_subtitle() or ""
+            self.tv_info_row.set_subtitle(f"{base}  |  Tizen {version}")
+
+            try:
+                maior = int(version.split(".")[0])
+            except (ValueError, IndexError):
+                return
+            if maior >= 8:
+                self._show_tizen8_warning(version)
+            return False
+
+        self.docker_service.tv_platform_version_async(tv_ip, on_version)
+
+    def _show_tizen8_warning(self, version):
+        """Tell the user, once, that this TV needs its own certificate."""
+        if getattr(self, "_tizen8_row", None) is not None:
+            return
+        row = Adw.ActionRow()
+        row.set_title(_("This TV needs its own certificate"))
+        row.set_subtitle(
+            _(
+                "Tizen {version} refuses the published package, whose signing "
+                "certificate expired. Installing will fail with a certificate "
+                "error."
+            ).format(version=version)
+        )
+        row.add_prefix(design.icon_badge("dialog-warning-symbolic", tone="warning"))
+        self._tizen8_row = row
+        self.progress_group.add(row)
 
     def _update_tv_info(self):
         """Update TV info display."""
