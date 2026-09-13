@@ -45,6 +45,35 @@ msgstr "Docker не стартира навреме"
 msgid "pkexec was not found. Start Docker manually."
 msgstr "pkexec не бе намерен. Стартирайте Docker ръчно."
 # 
+# File: usr/share/jellybeam/services/device.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"The TV answered, but Developer Mode is not active yet.\n"
+"\n"
+"On the TV, check that:\n"
+"  • Developer Mode is On\n"
+"  • the Host PC IP is {ip}\n"
+"  • the TV was unplugged from the wall after that\n"
+"\n"
+"Switching it off with the remote is not enough: that only puts it on standby. The installation port "
+"opens on a real restart."
+msgstr ""
+"Телевизорът отговори, но режимът за разработчици още не е активен.\n"
+"\n"
+"На телевизора проверете дали:\n"
+"  • Режимът за разработчици е включен\n"
+"  • IP адресът на компютъра (Host PC IP) е {ip}\n"
+"  • телевизорът е бил изваден от контакта след това\n"
+"\n"
+"Изключването с дистанционното не е достатъчно: то само го поставя в режим на готовност (standby). "
+"Портът за инсталиране се отваря само при истинско рестартиране."
+# 
+# File: usr/share/jellybeam/services/device.py, line: 339
+#: NEEDS WORK
+msgid "your computer's IP"
+msgstr "IP адресът на вашия компютър"
+# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -416,15 +445,15 @@ msgstr "Копирай IP"
 msgid "Copy local IP address to clipboard"
 msgstr "Копирай локалния IP адрес в клипборда"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 131
+# File: usr/share/jellybeam/pages/device.py, line: 130
 #: NEEDS WORK
-msgid "7. Restart TV"
-msgstr "7. Рестартиране на телевизора"
+msgid "7. Unplug the TV from the wall"
+msgstr "7. Изключете телевизора от контакта"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 116
+# File: usr/share/jellybeam/pages/device.py, line: 135
 #: NEEDS WORK
-msgid "Turn off and on your TV"
-msgstr "Изключете и включете телевизора си"
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "Изчакайте няколко секунди и го включете отново. Дистанционното не е достатъчно"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 162
 #: NEEDS WORK
@@ -1257,63 +1286,3 @@ msgstr "Инсталацията беше отменена"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Инсталацията е отменена"
-
-#: NEEDS WORK
-msgid "Authorization was cancelled"
-msgstr "Оторизацията беше отменена"
-
-#: NEEDS WORK
-msgid "Could not get administrator access"
-msgstr "Не бе получен администраторски достъп"
-
-#: NEEDS WORK
-msgid "Could not start Docker"
-msgstr "Docker не можа да се стартира"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Демонът на Docker не работи"
-
-#: NEEDS WORK
-msgid "Docker did not start in time"
-msgstr "Docker не стартира навреме"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker не е инсталиран на тази система"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Невалидна парола за сертификат"
-
-#: NEEDS WORK
-msgid "Samsung TVs"
-msgstr "Samsung телевизори"
-
-#: NEEDS WORK
-msgid "TVs and projectors"
-msgstr "Телевизори и проектори"
-
-#: NEEDS WORK
-msgid "pkexec was not found. Start Docker manually."
-msgstr "pkexec не бе намерен. Стартирайте Docker ръчно."
-
-#: NEEDS WORK
-msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was turned off and on again after that\n\nThe TV only opens the installation port after a restart."
-msgstr "Телевизорът отговори, но режимът за разработчици все още не е активен.\n\nНа телевизора проверете дали:\n  • Режим за разработчици е Включен\n  • IP адресът на хост компютъра е {ip}\n  • телевизорът е бил изключен и включен отново след това\n\nТелевизорът отваря порта за инсталиране едва след рестартиране."
-
-#: NEEDS WORK
-msgid "your computer's IP"
-msgstr "IP адресът на вашия компютър"
-
-#: NEEDS WORK
-msgid "7. Unplug the TV from the wall"
-msgstr "7. Изключете телевизора от контакта"
-
-#: NEEDS WORK
-msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
-msgstr "Телевизорът отговори, но режимът за разработчици още не е активен.\n\nНа телевизора проверете дали:\n  • Режимът за разработчици е включен\n  • IP адресът на компютъра (Host PC IP) е {ip}\n  • телевизорът е бил изваден от контакта след това\n\nИзключването с дистанционното не е достатъчно: то само го поставя в режим на готовност (standby). Портът за инсталиране се отваря само при истинско рестартиране."
-
-#: NEEDS WORK
-msgid "Wait a few seconds and plug it back in. The remote is not enough"
-msgstr "Изчакайте няколко секунди и го включете отново. Дистанционното не е достатъчно"

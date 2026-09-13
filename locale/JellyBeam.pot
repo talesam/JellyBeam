@@ -7,7 +7,7 @@
 msgid   ""
 msgstr  "Project-Id-Version: JellyBeam\n"
         "Report-Msgid-Bugs-To: \n"
-        "POT-Creation-Date: 2026-09-13 02:45+0000\n"
+        "POT-Creation-Date: 2026-09-13 19:50+0000\n"
         "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
         "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
         "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,6 +43,25 @@ msgstr  ""
 #
 # File: usr/share/jellybeam/services/docker.py, line: 355
 msgid   "pkexec was not found. Start Docker manually."
+msgstr  ""
+
+#
+# File: usr/share/jellybeam/services/device.py, line: 331
+#, python-brace-format
+msgid   "The TV answered, but Developer Mode is not active yet.\n"
+        "\n"
+        "On the TV, check that:\n"
+        "  • Developer Mode is On\n"
+        "  • the Host PC IP is {ip}\n"
+        "  • the TV was unplugged from the wall after that\n"
+        "\n"
+        "Switching it off with the remote is not enough: that only puts it on "
+        "standby. The installation port opens on a real restart."
+msgstr  ""
+
+#
+# File: usr/share/jellybeam/services/device.py, line: 339
+msgid   "your computer's IP"
 msgstr  ""
 
 #
@@ -113,9 +132,9 @@ msgstr  ""
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
 # File: usr/share/jellybeam/utils/design.py, line: 190
-# File: usr/share/jellybeam/pages/device.py, line: 226
-# File: usr/share/jellybeam/pages/device.py, line: 316
-# File: usr/share/jellybeam/pages/device.py, line: 420
+# File: usr/share/jellybeam/pages/device.py, line: 231
+# File: usr/share/jellybeam/pages/device.py, line: 321
+# File: usr/share/jellybeam/pages/device.py, line: 425
 msgid   "Connect"
 msgstr  ""
 
@@ -425,186 +444,186 @@ msgstr  ""
 
 #
 # File: usr/share/jellybeam/pages/device.py, line: 130
-msgid   "7. Restart TV"
+msgid   "7. Unplug the TV from the wall"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 131
-msgid   "Turn off and on your TV"
-msgstr  ""
-
-#
-# File: usr/share/jellybeam/pages/device.py, line: 138
-msgid   "Confirmation"
+# File: usr/share/jellybeam/pages/device.py, line: 135
+msgid   "Wait a few seconds and plug it back in. The remote is not enough"
 msgstr  ""
 
 #
 # File: usr/share/jellybeam/pages/device.py, line: 143
-# File: usr/share/jellybeam/pages/device.py, line: 155
+msgid   "Confirmation"
+msgstr  ""
+
+#
+# File: usr/share/jellybeam/pages/device.py, line: 148
+# File: usr/share/jellybeam/pages/device.py, line: 160
 msgid   "Developer Mode Enabled"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 145
+# File: usr/share/jellybeam/pages/device.py, line: 150
 msgid   "I confirm I have completed the steps above on my TV"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 166
+# File: usr/share/jellybeam/pages/device.py, line: 171
 msgid   "Device Discovery"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 172
+# File: usr/share/jellybeam/pages/device.py, line: 177
 msgid   "Scan Network"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 174
+# File: usr/share/jellybeam/pages/device.py, line: 179
 msgid   "Automatically discover Samsung devices on your network"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 177
-# File: usr/share/jellybeam/pages/device.py, line: 280
+# File: usr/share/jellybeam/pages/device.py, line: 182
+# File: usr/share/jellybeam/pages/device.py, line: 285
 msgid   "Scan"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 180
+# File: usr/share/jellybeam/pages/device.py, line: 185
 msgid   "Scan network for Samsung devices"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 189
+# File: usr/share/jellybeam/pages/device.py, line: 194
 msgid   "Discovered Devices"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 190
+# File: usr/share/jellybeam/pages/device.py, line: 195
 msgid   "Select your target device"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 198
+# File: usr/share/jellybeam/pages/device.py, line: 203
 msgid   "Manual Connection"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 199
+# File: usr/share/jellybeam/pages/device.py, line: 204
 msgid   "Enter device details manually"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 205
-# File: usr/share/jellybeam/pages/device.py, line: 369
+# File: usr/share/jellybeam/pages/device.py, line: 210
+# File: usr/share/jellybeam/pages/device.py, line: 374
 msgid   "Device IP Address"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 209
+# File: usr/share/jellybeam/pages/device.py, line: 214
 msgid   "Enter the Samsung TV IP address, for example 192.168.1.100"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 223
+# File: usr/share/jellybeam/pages/device.py, line: 228
 msgid   "Connect to Device"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 224
+# File: usr/share/jellybeam/pages/device.py, line: 229
 msgid   "Establish connection with your TV"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 230
+# File: usr/share/jellybeam/pages/device.py, line: 235
 msgid   "Connect to Samsung TV"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 255
+# File: usr/share/jellybeam/pages/device.py, line: 260
 msgid   "Unable to determine IP"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 263
+# File: usr/share/jellybeam/pages/device.py, line: 268
 msgid   "Copied!"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 270
+# File: usr/share/jellybeam/pages/device.py, line: 275
 msgid   "Scanning..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 298
+# File: usr/share/jellybeam/pages/device.py, line: 303
 msgid   "No devices found"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 299
+# File: usr/share/jellybeam/pages/device.py, line: 304
 msgid   "Try manual connection or check network"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 309
+# File: usr/share/jellybeam/pages/device.py, line: 314
 msgid   "Unknown Device"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 311
+# File: usr/share/jellybeam/pages/device.py, line: 316
 #, python-brace-format
 msgid   "IP: {ip} | Model: {model}"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 312
+# File: usr/share/jellybeam/pages/device.py, line: 317
 msgid   "Unknown"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 330
+# File: usr/share/jellybeam/pages/device.py, line: 335
 msgid   "Found 1 device - Select your target device"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 332
+# File: usr/share/jellybeam/pages/device.py, line: 337
 #, python-brace-format
 msgid   "Found {count} devices - Select your target device"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 365
+# File: usr/share/jellybeam/pages/device.py, line: 370
 msgid   "Device IP Address — Invalid format (e.g. 192.168.1.100)"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 399
+# File: usr/share/jellybeam/pages/device.py, line: 404
 msgid   "Please enter a device IP address"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 403
+# File: usr/share/jellybeam/pages/device.py, line: 408
 msgid   "Please enter a valid IP address"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 416
+# File: usr/share/jellybeam/pages/device.py, line: 421
 msgid   "Connecting..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 423
+# File: usr/share/jellybeam/pages/device.py, line: 428
 msgid   "Connected successfully!"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 431
+# File: usr/share/jellybeam/pages/device.py, line: 436
 msgid   "Connection Failed"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/device.py, line: 432
+# File: usr/share/jellybeam/pages/device.py, line: 437
 #, python-brace-format
 msgid   "Connection failed: {message}"
 msgstr  ""
@@ -612,7 +631,7 @@ msgstr  ""
 #
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
-# File: usr/share/jellybeam/pages/device.py, line: 440
+# File: usr/share/jellybeam/pages/device.py, line: 445
 # File: usr/share/jellybeam/pages/welcome.py, line: 108
 msgid   "Certificates"
 msgstr  ""
@@ -1269,63 +1288,3 @@ msgstr  ""
 # File: usr/share/jellybeam/pages/install.py, line: 605
 msgid   "Installation cancelled"
 msgstr  ""
-
-#: NEEDS WORK
-msgid "Authorization was cancelled"
-msgstr ""
-
-#: NEEDS WORK
-msgid "Could not get administrator access"
-msgstr ""
-
-#: NEEDS WORK
-msgid "Could not start Docker"
-msgstr ""
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr ""
-
-#: NEEDS WORK
-msgid "Docker did not start in time"
-msgstr ""
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr ""
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr ""
-
-#: NEEDS WORK
-msgid "Samsung TVs"
-msgstr ""
-
-#: NEEDS WORK
-msgid "TVs and projectors"
-msgstr ""
-
-#: NEEDS WORK
-msgid "pkexec was not found. Start Docker manually."
-msgstr ""
-
-#: NEEDS WORK
-msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was turned off and on again after that\n\nThe TV only opens the installation port after a restart."
-msgstr ""
-
-#: NEEDS WORK
-msgid "your computer's IP"
-msgstr ""
-
-#: NEEDS WORK
-msgid "7. Unplug the TV from the wall"
-msgstr ""
-
-#: NEEDS WORK
-msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
-msgstr ""
-
-#: NEEDS WORK
-msgid "Wait a few seconds and plug it back in. The remote is not enough"
-msgstr ""

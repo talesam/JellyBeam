@@ -45,6 +45,35 @@ msgstr "Το Docker δεν εκκινήθηκε εγκαίρως"
 msgid "pkexec was not found. Start Docker manually."
 msgstr "Το pkexec δεν βρέθηκε. Εκκινήστε το Docker χειροκίνητα."
 # 
+# File: usr/share/jellybeam/services/device.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"The TV answered, but Developer Mode is not active yet.\n"
+"\n"
+"On the TV, check that:\n"
+"  • Developer Mode is On\n"
+"  • the Host PC IP is {ip}\n"
+"  • the TV was unplugged from the wall after that\n"
+"\n"
+"Switching it off with the remote is not enough: that only puts it on standby. The installation port "
+"opens on a real restart."
+msgstr ""
+"Η τηλεόραση απάντησε, αλλά η Λειτουργία προγραμματιστή δεν είναι ακόμη ενεργή.\n"
+"\n"
+"Στην τηλεόραση, ελέγξτε ότι:\n"
+"  • Η Λειτουργία προγραμματιστή είναι ενεργοποιημένη\n"
+"  • Η IP του υπολογιστή (Host PC IP) είναι {ip}\n"
+"  • η τηλεόραση βγήκε από την πρίζα μετά από αυτό\n"
+"\n"
+"Το σβήσιμο με το τηλεχειριστήριο δεν αρκεί: απλώς τη θέτει σε αναμονή. Η θύρα εγκατάστασης ανοίγει "
+"μόνο με πραγματική επανεκκίνηση."
+# 
+# File: usr/share/jellybeam/services/device.py, line: 339
+#: NEEDS WORK
+msgid "your computer's IP"
+msgstr "η IP διεύθυνση του υπολογιστή σας"
+# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -416,15 +445,15 @@ msgstr "Αντιγραφή IP"
 msgid "Copy local IP address to clipboard"
 msgstr "Αντιγραφή τοπικής διεύθυνσης IP στο πρόχειρο"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 131
+# File: usr/share/jellybeam/pages/device.py, line: 130
 #: NEEDS WORK
-msgid "7. Restart TV"
-msgstr "7. Επανεκκίνηση τηλεόρασης"
+msgid "7. Unplug the TV from the wall"
+msgstr "7. Βγάλτε την τηλεόραση από την πρίζα"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 116
+# File: usr/share/jellybeam/pages/device.py, line: 135
 #: NEEDS WORK
-msgid "Turn off and on your TV"
-msgstr "Απενεργοποιήστε και ενεργοποιήστε την τηλεόρασή σας"
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "Περιμένετε λίγα δευτερόλεπτα και βάλτε την ξανά στην πρίζα. Το τηλεχειριστήριο δεν αρκεί"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 162
 #: NEEDS WORK
@@ -1257,63 +1286,3 @@ msgstr "Η εγκατάσταση ακυρώθηκε"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Η εγκατάσταση ακυρώθηκε"
-
-#: NEEDS WORK
-msgid "Authorization was cancelled"
-msgstr "Η εξουσιοδότηση ακυρώθηκε"
-
-#: NEEDS WORK
-msgid "Could not get administrator access"
-msgstr "Δεν ήταν δυνατή η απόκτηση διαχειριστικών δικαιωμάτων"
-
-#: NEEDS WORK
-msgid "Could not start Docker"
-msgstr "Δεν ήταν δυνατή η εκκίνηση του Docker"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Η υπηρεσία Docker δεν εκτελείται"
-
-#: NEEDS WORK
-msgid "Docker did not start in time"
-msgstr "Το Docker δεν εκκινήθηκε εγκαίρως"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Το Docker δεν είναι εγκατεστημένο σε αυτό το σύστημα"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Μη έγκυρος κωδικός πρόσβασης πιστοποιητικού"
-
-#: NEEDS WORK
-msgid "Samsung TVs"
-msgstr "Τηλεοράσεις Samsung"
-
-#: NEEDS WORK
-msgid "TVs and projectors"
-msgstr "Τηλεοράσεις και προβολείς"
-
-#: NEEDS WORK
-msgid "pkexec was not found. Start Docker manually."
-msgstr "Το pkexec δεν βρέθηκε. Εκκινήστε το Docker χειροκίνητα."
-
-#: NEEDS WORK
-msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was turned off and on again after that\n\nThe TV only opens the installation port after a restart."
-msgstr "Η τηλεόραση απάντησε, αλλά η Λειτουργία προγραμματιστή δεν είναι ακόμη ενεργή.\n\nΣτην τηλεόραση, ελέγξτε ότι:\n  • Η Λειτουργία προγραμματιστή είναι Ενεργοποιημένη\n  • η IP του υπολογιστή host είναι {ip}\n  • η τηλεόραση απενεργοποιήθηκε και ενεργοποιήθηκε ξανά μετά από αυτό\n\nΗ τηλεόραση ανοίγει τη θύρα εγκατάστασης μόνο μετά από επανεκκίνηση."
-
-#: NEEDS WORK
-msgid "your computer's IP"
-msgstr "η IP διεύθυνση του υπολογιστή σας"
-
-#: NEEDS WORK
-msgid "7. Unplug the TV from the wall"
-msgstr "7. Βγάλτε την τηλεόραση από την πρίζα"
-
-#: NEEDS WORK
-msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
-msgstr "Η τηλεόραση απάντησε, αλλά η Λειτουργία προγραμματιστή δεν είναι ακόμη ενεργή.\n\nΣτην τηλεόραση, ελέγξτε ότι:\n  • Η Λειτουργία προγραμματιστή είναι ενεργοποιημένη\n  • Η IP του υπολογιστή (Host PC IP) είναι {ip}\n  • η τηλεόραση βγήκε από την πρίζα μετά από αυτό\n\nΤο σβήσιμο με το τηλεχειριστήριο δεν αρκεί: απλώς τη θέτει σε αναμονή. Η θύρα εγκατάστασης ανοίγει μόνο με πραγματική επανεκκίνηση."
-
-#: NEEDS WORK
-msgid "Wait a few seconds and plug it back in. The remote is not enough"
-msgstr "Περιμένετε λίγα δευτερόλεπτα και βάλτε την ξανά στην πρίζα. Το τηλεχειριστήριο δεν αρκεί"

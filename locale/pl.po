@@ -45,6 +45,35 @@ msgstr "Docker nie uruchomił się na czas"
 msgid "pkexec was not found. Start Docker manually."
 msgstr "Nie znaleziono pkexec. Uruchom Docker ręcznie."
 # 
+# File: usr/share/jellybeam/services/device.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"The TV answered, but Developer Mode is not active yet.\n"
+"\n"
+"On the TV, check that:\n"
+"  • Developer Mode is On\n"
+"  • the Host PC IP is {ip}\n"
+"  • the TV was unplugged from the wall after that\n"
+"\n"
+"Switching it off with the remote is not enough: that only puts it on standby. The installation port "
+"opens on a real restart."
+msgstr ""
+"Telewizor odpowiedział, ale Tryb programisty nie jest jeszcze aktywny.\n"
+"\n"
+"Na telewizorze sprawdź, czy:\n"
+"  • Tryb programisty jest włączony\n"
+"  • adres IP komputera (Host PC IP) to {ip}\n"
+"  • telewizor został potem odłączony od gniazdka\n"
+"\n"
+"Wyłączenie pilotem to za mało: telewizor przechodzi wtedy tylko w stan gotowości (standby). Port "
+"instalacyjny otwiera się dopiero po prawdziwym ponownym uruchomieniu."
+# 
+# File: usr/share/jellybeam/services/device.py, line: 339
+#: NEEDS WORK
+msgid "your computer's IP"
+msgstr "adres IP Twojego komputera"
+# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -416,15 +445,15 @@ msgstr "Kopiuj IP"
 msgid "Copy local IP address to clipboard"
 msgstr "Skopiuj lokalny adres IP do schowka"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 131
+# File: usr/share/jellybeam/pages/device.py, line: 130
 #: NEEDS WORK
-msgid "7. Restart TV"
-msgstr "7. Uruchom ponownie telewizor"
+msgid "7. Unplug the TV from the wall"
+msgstr "7. Odłącz telewizor od gniazdka"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 116
+# File: usr/share/jellybeam/pages/device.py, line: 135
 #: NEEDS WORK
-msgid "Turn off and on your TV"
-msgstr "Wyłącz i włącz telewizor"
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "Poczekaj kilka sekund i podłącz go ponownie. Pilot to za mało"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 162
 #: NEEDS WORK
@@ -1255,63 +1284,3 @@ msgstr "Instalacja została anulowana"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Instalacja anulowana"
-
-#: NEEDS WORK
-msgid "Authorization was cancelled"
-msgstr "Autoryzacja została anulowana"
-
-#: NEEDS WORK
-msgid "Could not get administrator access"
-msgstr "Nie udało się uzyskać uprawnień administratora"
-
-#: NEEDS WORK
-msgid "Could not start Docker"
-msgstr "Nie udało się uruchomić Dockera"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Usługa Dockera nie działa"
-
-#: NEEDS WORK
-msgid "Docker did not start in time"
-msgstr "Docker nie uruchomił się na czas"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker nie jest zainstalowany w tym systemie"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Nieprawidłowe hasło certyfikatu"
-
-#: NEEDS WORK
-msgid "Samsung TVs"
-msgstr "Telewizory Samsung"
-
-#: NEEDS WORK
-msgid "TVs and projectors"
-msgstr "Telewizory i projektory"
-
-#: NEEDS WORK
-msgid "pkexec was not found. Start Docker manually."
-msgstr "Nie znaleziono pkexec. Uruchom Docker ręcznie."
-
-#: NEEDS WORK
-msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was turned off and on again after that\n\nThe TV only opens the installation port after a restart."
-msgstr "Telewizor odpowiedział, ale Tryb dewelopera nie jest jeszcze aktywny.\n\nSprawdź na telewizorze, czy:\n  • Tryb dewelopera jest Włączony\n  • adres IP hosta PC to {ip}\n  • telewizor został po tym wyłączony i ponownie włączony\n\nTelewizor otwiera port instalacyjny dopiero po ponownym uruchomieniu."
-
-#: NEEDS WORK
-msgid "your computer's IP"
-msgstr "adres IP Twojego komputera"
-
-#: NEEDS WORK
-msgid "7. Unplug the TV from the wall"
-msgstr "7. Odłącz telewizor od gniazdka"
-
-#: NEEDS WORK
-msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
-msgstr "Telewizor odpowiedział, ale Tryb programisty nie jest jeszcze aktywny.\n\nNa telewizorze sprawdź, czy:\n  • Tryb programisty jest włączony\n  • adres IP komputera (Host PC IP) to {ip}\n  • telewizor został potem odłączony od gniazdka\n\nWyłączenie pilotem to za mało: telewizor przechodzi wtedy tylko w stan gotowości (standby). Port instalacyjny otwiera się dopiero po prawdziwym ponownym uruchomieniu."
-
-#: NEEDS WORK
-msgid "Wait a few seconds and plug it back in. The remote is not enough"
-msgstr "Poczekaj kilka sekund i podłącz go ponownie. Pilot to za mało"

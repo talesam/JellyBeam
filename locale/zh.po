@@ -45,6 +45,34 @@ msgstr "Docker 未能及时启动"
 msgid "pkexec was not found. Start Docker manually."
 msgstr "未找到 pkexec。请手动启动 Docker。"
 # 
+# File: usr/share/jellybeam/services/device.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"The TV answered, but Developer Mode is not active yet.\n"
+"\n"
+"On the TV, check that:\n"
+"  • Developer Mode is On\n"
+"  • the Host PC IP is {ip}\n"
+"  • the TV was unplugged from the wall after that\n"
+"\n"
+"Switching it off with the remote is not enough: that only puts it on standby. The installation port "
+"opens on a real restart."
+msgstr ""
+"电视已响应，但开发者模式尚未激活。\n"
+"\n"
+"请在电视上检查：\n"
+"  • 开发者模式已开启\n"
+"  • 主机IP（Host PC IP）为 {ip}\n"
+"  • 之后已将电视从插座上拔下\n"
+"\n"
+"仅用遥控器关机是不够的：那只会让电视进入待机状态。安装端口只有在真正重启后才会打开。"
+# 
+# File: usr/share/jellybeam/services/device.py, line: 339
+#: NEEDS WORK
+msgid "your computer's IP"
+msgstr "您电脑的IP"
+# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -414,15 +442,15 @@ msgstr "复制IP"
 msgid "Copy local IP address to clipboard"
 msgstr "复制本地IP地址到剪贴板"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 131
+# File: usr/share/jellybeam/pages/device.py, line: 130
 #: NEEDS WORK
-msgid "7. Restart TV"
-msgstr "7. 重启电视"
+msgid "7. Unplug the TV from the wall"
+msgstr "7. 从墙上插座拔掉电视电源"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 116
+# File: usr/share/jellybeam/pages/device.py, line: 135
 #: NEEDS WORK
-msgid "Turn off and on your TV"
-msgstr "关闭和打开您的电视"
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "等几秒钟后再插回去。遥控器是不够的"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 162
 #: NEEDS WORK
@@ -1251,63 +1279,3 @@ msgstr "安装已取消"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "安装已取消"
-
-#: NEEDS WORK
-msgid "Authorization was cancelled"
-msgstr "授权已取消"
-
-#: NEEDS WORK
-msgid "Could not get administrator access"
-msgstr "无法获取管理员权限"
-
-#: NEEDS WORK
-msgid "Could not start Docker"
-msgstr "无法启动 Docker"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Docker 守护进程未运行"
-
-#: NEEDS WORK
-msgid "Docker did not start in time"
-msgstr "Docker 未能及时启动"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "此系统未安装 Docker"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "证书密码无效"
-
-#: NEEDS WORK
-msgid "Samsung TVs"
-msgstr "Samsung 电视"
-
-#: NEEDS WORK
-msgid "TVs and projectors"
-msgstr "电视和投影仪"
-
-#: NEEDS WORK
-msgid "pkexec was not found. Start Docker manually."
-msgstr "未找到 pkexec。请手动启动 Docker。"
-
-#: NEEDS WORK
-msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was turned off and on again after that\n\nThe TV only opens the installation port after a restart."
-msgstr "电视已响应,但开发者模式尚未激活。\n\n请在电视上检查:\n  • 开发者模式已开启\n  • 主机PC IP为{ip}\n  • 之后电视已关闭并重新打开\n\n电视只有在重启后才会打开安装端口。"
-
-#: NEEDS WORK
-msgid "your computer's IP"
-msgstr "您电脑的IP"
-
-#: NEEDS WORK
-msgid "7. Unplug the TV from the wall"
-msgstr "7. 从墙上插座拔掉电视电源"
-
-#: NEEDS WORK
-msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
-msgstr "电视已响应，但开发者模式尚未激活。\n\n请在电视上检查：\n  • 开发者模式已开启\n  • 主机IP（Host PC IP）为 {ip}\n  • 之后已将电视从插座上拔下\n\n仅用遥控器关机是不够的：那只会让电视进入待机状态。安装端口只有在真正重启后才会打开。"
-
-#: NEEDS WORK
-msgid "Wait a few seconds and plug it back in. The remote is not enough"
-msgstr "等几秒钟后再插回去。遥控器是不够的"

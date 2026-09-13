@@ -45,6 +45,35 @@ msgstr "Docker startede ikke rettidigt"
 msgid "pkexec was not found. Start Docker manually."
 msgstr "pkexec blev ikke fundet. Start Docker manuelt."
 # 
+# File: usr/share/jellybeam/services/device.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid ""
+"The TV answered, but Developer Mode is not active yet.\n"
+"\n"
+"On the TV, check that:\n"
+"  • Developer Mode is On\n"
+"  • the Host PC IP is {ip}\n"
+"  • the TV was unplugged from the wall after that\n"
+"\n"
+"Switching it off with the remote is not enough: that only puts it on standby. The installation port "
+"opens on a real restart."
+msgstr ""
+"Fjernsynet svarede, men udviklertilstand er endnu ikke aktiveret.\n"
+"\n"
+"Kontrollér på fjernsynet, at:\n"
+"  • Udviklertilstand er slået til\n"
+"  • Host PC IP er {ip}\n"
+"  • fjernsynet blev taget ud af stikkontakten bagefter\n"
+"\n"
+"Det er ikke nok at slukke med fjernbetjeningen: det sætter kun fjernsynet i standby. "
+"Installationsporten åbner først ved en rigtig genstart."
+# 
+# File: usr/share/jellybeam/services/device.py, line: 339
+#: NEEDS WORK
+msgid "your computer's IP"
+msgstr "din computers IP-adresse"
+# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -416,15 +445,15 @@ msgstr "Kopier IP"
 msgid "Copy local IP address to clipboard"
 msgstr "Kopier lokal IP-adresse til udklipsholder"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 131
+# File: usr/share/jellybeam/pages/device.py, line: 130
 #: NEEDS WORK
-msgid "7. Restart TV"
-msgstr "7. Genstart TV"
+msgid "7. Unplug the TV from the wall"
+msgstr "7. Tag stikket til fjernsynet ud af væggen"
 # 
-# File: usr/share/jellybeam/pages/device.py, line: 116
+# File: usr/share/jellybeam/pages/device.py, line: 135
 #: NEEDS WORK
-msgid "Turn off and on your TV"
-msgstr "Sluk og tænd dit TV"
+msgid "Wait a few seconds and plug it back in. The remote is not enough"
+msgstr "Vent et par sekunder, og sæt det i igen. Fjernbetjeningen er ikke nok"
 # 
 # File: usr/share/jellybeam/pages/device.py, line: 162
 #: NEEDS WORK
@@ -1255,63 +1284,3 @@ msgstr "Installation blev annulleret"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installation annulleret"
-
-#: NEEDS WORK
-msgid "Authorization was cancelled"
-msgstr "Godkendelse blev annulleret"
-
-#: NEEDS WORK
-msgid "Could not get administrator access"
-msgstr "Kunne ikke få administratoradgang"
-
-#: NEEDS WORK
-msgid "Could not start Docker"
-msgstr "Kunne ikke starte Docker"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Docker-dæmonen kører ikke"
-
-#: NEEDS WORK
-msgid "Docker did not start in time"
-msgstr "Docker startede ikke rettidigt"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker er ikke installeret på dette system"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Ugyldig certifikatadgangskode"
-
-#: NEEDS WORK
-msgid "Samsung TVs"
-msgstr "Samsung-tv'er"
-
-#: NEEDS WORK
-msgid "TVs and projectors"
-msgstr "Tv'er og projektorer"
-
-#: NEEDS WORK
-msgid "pkexec was not found. Start Docker manually."
-msgstr "pkexec blev ikke fundet. Start Docker manuelt."
-
-#: NEEDS WORK
-msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was turned off and on again after that\n\nThe TV only opens the installation port after a restart."
-msgstr "TV'et svarede, men Udviklertilstand er endnu ikke aktiv.\n\nKontrollér på TV'et, at:\n  • Udviklertilstand er Til\n  • Vært-pc's IP er {ip}\n  • TV'et blev slukket og tændt igen bagefter\n\nTV'et åbner først installationsporten efter en genstart."
-
-#: NEEDS WORK
-msgid "your computer's IP"
-msgstr "din computers IP-adresse"
-
-#: NEEDS WORK
-msgid "7. Unplug the TV from the wall"
-msgstr "7. Tag stikket til fjernsynet ud af væggen"
-
-#: NEEDS WORK
-msgid "The TV answered, but Developer Mode is not active yet.\n\nOn the TV, check that:\n  • Developer Mode is On\n  • the Host PC IP is {ip}\n  • the TV was unplugged from the wall after that\n\nSwitching it off with the remote is not enough: that only puts it on standby. The installation port opens on a real restart."
-msgstr "Fjernsynet svarede, men udviklertilstand er endnu ikke aktiveret.\n\nKontrollér på fjernsynet, at:\n  • Udviklertilstand er slået til\n  • Host PC IP er {ip}\n  • fjernsynet blev taget ud af stikkontakten bagefter\n\nDet er ikke nok at slukke med fjernbetjeningen: det sætter kun fjernsynet i standby. Installationsporten åbner først ved en rigtig genstart."
-
-#: NEEDS WORK
-msgid "Wait a few seconds and plug it back in. The remote is not enough"
-msgstr "Vent et par sekunder, og sæt det i igen. Fjernbetjeningen er ikke nok"
