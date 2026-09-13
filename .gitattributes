@@ -1,0 +1,15 @@
+# Translations are generated wholesale by the translation workflow, and merging
+# them line by line does not work: git happily interleaves two full rewrites of
+# the same catalogue and produces duplicate msgid entries, which msgfmt then
+# refuses for the whole file. That happened four times, each one silently
+# breaking all 28 languages until someone tried to compile them.
+#
+# Marking them binary makes git refuse the automatic merge and report a
+# conflict instead. Failing loudly is the point: the fix is always to take one
+# side whole -- normally the workflow's, which regenerates from the current
+# source -- never to blend them.
+locale/*.po binary
+locale/*.pot binary
+
+# Compiled catalogues are build output; there is nothing to merge in them.
+usr/share/locale/**/*.mo binary
