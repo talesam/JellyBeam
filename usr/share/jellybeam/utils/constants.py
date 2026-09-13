@@ -92,6 +92,16 @@ CUSTOMIZATION_MARKER_END = "<!-- JellyBeam:end -->"
 # TV hardware.
 CUSTOMIZATION_RESOURCES = ("web/cs-nav.js",)
 
+# From this Tizen version on, the TV verifies that the signing chain has not
+# expired. The published package is signed with a certificate that lapsed in
+# 2022, so these TVs refuse it and we sign our own instead.
+TIZEN_STRICT_CERT_VERSION = 8
+# Where the generated pair lives, under the Docker workspace.
+DEVICE_CERT_DIR = "certs"
+# The pair is created per install and never leaves the machine, so the
+# passphrase only has to satisfy the tooling, which requires one.
+DEVICE_CERT_PASSWORD = "jellybeam"
+
 # Certificate Constants
 CERT_FILE_EXTENSION = ".p12"
 CERT_AUTHOR_FILENAME = "author.p12"

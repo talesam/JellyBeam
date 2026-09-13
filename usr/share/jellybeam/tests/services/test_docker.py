@@ -194,3 +194,31 @@ class TestDockerServiceAsync:
         mock_glib.idle_add.side_effect = lambda fn, *a, **kw: done.set()
         docker_service.prepare_environment_async(mock_callback)
         done.wait(timeout=2)
+
+
+class TestCertificateDecision:
+    """Only Tizen 8+ gets its own certificate.
+
+    Earlier versions install the published package as published, which is
+    faster and long proven. Generating a certificate for them would change
+    a working path for no gain.
+    """
+
+    @pytest.fixture
+    def docker_service(self, mock_logger):
+        return DockerService(logger=mock_logger)
+
+    @pytest.mark.parametrize("version", ["6.5", "7.0", "7.6"])
+    def test_older_tizen_uses_the_published_package(self, version, docker_service):
+        assert docker_service.needs_own_certificate(version) is False
+
+    @pytest.mark.parametrize("version", ["8.0", "9.0", "10.1"])
+    def test_tizen_8_and_newer_need_their_own(self, version, docker_service):
+        # 10.1 matters: compared as text it sorts below "8".
+        assert docker_service.needs_own_certificate(version) is True
+
+    @pytest.mark.parametrize("version", ["", None, "unknown", "x.y"])
+    def test_unreadable_version_keeps_the_old_path(self, version, docker_service):
+        # Guessing "needs a certificate" here would break every TV whose
+        # version we simply failed to read.
+        assert docker_service.needs_own_certificate(version) is False

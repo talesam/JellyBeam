@@ -34,6 +34,9 @@ from utils.constants import (
     CUSTOMIZATION_PKG_DIR,
     TIZEN_TOOLS_DIR,
     SDB_PORT,
+    TIZEN_STRICT_CERT_VERSION,
+    DEVICE_CERT_DIR,
+    DEVICE_CERT_PASSWORD,
     CERT_AUTHOR_FILENAME,
     CERT_DISTRIBUTOR_FILENAME,
     CERT_PASSWORD_FILE,
@@ -924,16 +927,21 @@ class DockerService:
                 log_progress(f"Starting Jellyfin installation to {tv_ip}...")
                 log_progress(f"Using container: {self.image_name}:{self.image_tag}")
 
-                # Run the Georift container with the TV IP
-                # Format: docker run --rm <image> <tv_ip> [build_option]
-                cmd = [
-                    "docker",
-                    "run",
-                    "--rm",
-                    f"{self.image_name}:{self.image_tag}",
-                    tv_ip,
-                    build_option,
-                ]
+                certs = self.ensure_device_certificate(tv_ip, log_progress)
+
+                cmd = ["docker", "run", "--rm"]
+                if certs:
+                    # The image signs with these when both files are present
+                    # and a password arrives as the fourth argument.
+                    cmd += [
+                        "-v", f"{certs}/{CERT_AUTHOR_FILENAME}:/certificates/author.p12",
+                        "-v",
+                        f"{certs}/{CERT_DISTRIBUTOR_FILENAME}:/certificates/distributor.p12",
+                    ]
+                cmd += [f"{self.image_name}:{self.image_tag}", tv_ip, build_option]
+                if certs:
+                    # Third argument is the release URL; empty means latest.
+                    cmd += ["", DEVICE_CERT_PASSWORD]
 
                 log_progress(f"Executing: {' '.join(cmd)}")
 
@@ -1013,6 +1021,58 @@ class DockerService:
         process.wait(timeout=timeout)
         return process.returncode
 
+    def ensure_device_certificate(
+        self, tv_ip: str, log_progress: Callable[[str], None]
+    ) -> Optional[str]:
+        """Create a signing pair for this TV, if its Tizen demands one.
+
+        Returns the host directory holding author.p12 and distributor.p12, or
+        None when the TV accepts the published package as published.
+
+        The pair is self-signed and generated here rather than obtained from
+        Samsung: issuing a real Samsung certificate needs an account login,
+        which cannot be reduced to a button. What Tizen checks on install is
+        that the chain is inside its validity dates and that the distributor
+        certificate names this TV's DUID -- both of which we can satisfy
+        locally. The DUID is read from the TV, never typed.
+        """
+        version = self.platform_version(tv_ip)
+        if not self.needs_own_certificate(version):
+            self.logger.info(f"Tizen {version or 'unknown'}: published package is fine")
+            return None
+
+        log_progress(f"Tizen {version}: signing with a certificate for this TV...")
+        destino = os.path.join(self.workspace_host, DEVICE_CERT_DIR)
+        os.makedirs(destino, exist_ok=True)
+
+        certs = f"{self.workspace_container}/{DEVICE_CERT_DIR}"
+        script = f"""set -e
+export PATH={TIZEN_TOOLS_DIR}:$PATH
+sdb connect {tv_ip} >/dev/null 2>&1
+sleep 1
+DUID=$(sdb -s {tv_ip}:{SDB_PORT} shell 0 getduid 2>/dev/null | tr -d '\r\n')
+if [ -z "$DUID" ]; then echo "Could not read the TV id"; exit 1; fi
+echo "TV id: $DUID"
+cd {certs}
+openssl req -x509 -newkey rsa:2048 -keyout a.key -out a.crt -days 730 -nodes \
+  -subj "/CN=JellyBeam/O=JellyBeam" 2>/dev/null
+openssl pkcs12 -export -out author.p12 -inkey a.key -in a.crt \
+  -name usercertificate -passout pass:{DEVICE_CERT_PASSWORD}
+# The DUID goes in subjectAltName: that is the whole of what the Certificate
+# Manager asks you to paste in by hand.
+openssl req -x509 -newkey rsa:2048 -keyout d.key -out d.crt -days 730 -nodes \
+  -subj "/CN=TizenSDK/O=Tizen/C=KR" \
+  -addext "subjectAltName=URI:URN:tizen:packageid=,URI:URN:tizen:deviceid=$DUID" 2>/dev/null
+openssl pkcs12 -export -out distributor.p12 -inkey d.key -in d.crt \
+  -name usercertificate -passout pass:{DEVICE_CERT_PASSWORD}
+rm -f a.key a.crt d.key d.crt
+chown -R {os.getuid()}:{os.getgid()} {certs}
+echo "Certificate ready"
+"""
+        if self._run_in_image(script, log_progress) != 0:
+            raise DockerError("Could not create the certificate for this TV")
+        return destino
+
     def install_jellyfin_customized_async(
         self,
         tv_ip: str,
@@ -1071,12 +1131,30 @@ echo "Package unpacked"
                 resources = customization.inject(www, server_url)
                 log_progress(f"Injected {len(resources)} customization resource(s)")
 
+                certs = self.ensure_device_certificate(tv_ip, log_progress)
+                if certs:
+                    # A profile pointing at the pair just generated. The
+                    # built-in 'dev' profile signs with the image's own
+                    # certificate, which expired in 2022 and is exactly what
+                    # this TV refuses.
+                    perfil = "custom"
+                    prep = f"""set -e
+cp /home/developer/profile.xml /tmp/p.xml
+sed -i 's|/certificates/|{ws}/{DEVICE_CERT_DIR}/|g' /tmp/p.xml
+sed -i 's/_CERTIFICATEPASSWORD_/{DEVICE_CERT_PASSWORD}/' /tmp/p.xml
+sed -i '/<\\/profile>/ r /tmp/p.xml' \
+  /home/developer/tizen-studio-data/profile/profiles.xml
+"""
+                else:
+                    perfil = TIZEN_SIGN_PROFILE
+                    prep = ""
+
                 log_progress("Signing and installing...")
-                finish = f"""cd {pkg} || exit 1
+                finish = prep + f"""cd {pkg} || exit 1
 # The old signatures no longer match the edited files.
 rm -f author-signature.xml signature1.xml
 cd {ws} || exit 1
-tizen package -t wgt -s {TIZEN_SIGN_PROFILE} -- {CUSTOMIZATION_PKG_DIR} || exit 1
+tizen package -t wgt -s {perfil} -- {CUSTOMIZATION_PKG_DIR} || exit 1
 WGT=$(ls {pkg}/*.wgt | head -1)
 echo "Signed: $WGT"
 sdb connect {tv_ip}
@@ -1137,6 +1215,48 @@ fi
 
         threading.Thread(target=install, daemon=True).start()
 
+    def platform_version(self, tv_ip: str) -> str:
+        """The TV's Tizen version, or empty string. Blocking; call off the UI."""
+        try:
+            script = (
+                f"export PATH={TIZEN_TOOLS_DIR}:$PATH; "
+                f"sdb connect {tv_ip} >/dev/null 2>&1; sleep 1; "
+                f"sdb -s {tv_ip}:{SDB_PORT} capability 2>/dev/null "
+                "| grep '^platform_version:'"
+            )
+            r = subprocess.run(
+                self._wrap_cmd(
+                    [
+                        "docker", "run", "--rm", "--network", "host",
+                        "--entrypoint", "sh",
+                        f"{self.image_name}:{self.image_tag}", "-c", script,
+                    ]
+                ),
+                capture_output=True,
+                text=True,
+                timeout=TIMEOUT_DOCKER_EXEC_MEDIUM,
+            )
+            saida = (r.stdout or "").strip()
+            if ":" in saida:
+                return saida.split(":", 1)[1].strip()
+        except Exception as e:
+            self.logger.debug(f"Could not read the Tizen version: {e}")
+        return ""
+
+    def needs_own_certificate(self, version: str) -> bool:
+        """Whether this Tizen refuses the published package's expired chain.
+
+        Tizen 8 began enforcing the signing chain's validity dates. Earlier
+        versions install the published package happily, so they are left on
+        the faster path.
+        """
+        try:
+            return int(version.split(".")[0]) >= TIZEN_STRICT_CERT_VERSION
+        except (ValueError, IndexError, AttributeError):
+            # Unknown version: assume the lenient path, which is what every
+            # TV did before Tizen 8 and what most in the wild still do.
+            return False
+
     def tv_platform_version_async(
         self, tv_ip: str, callback: Callable[[str], None]
     ) -> None:
@@ -1152,32 +1272,7 @@ fi
         """
 
         def run() -> None:
-            versao = ""
-            try:
-                script = (
-                    f"export PATH={TIZEN_TOOLS_DIR}:$PATH; "
-                    f"sdb connect {tv_ip} >/dev/null 2>&1; sleep 1; "
-                    f"sdb -s {tv_ip}:{SDB_PORT} capability 2>/dev/null "
-                    "| grep '^platform_version:'"
-                )
-                r = subprocess.run(
-                    self._wrap_cmd(
-                        [
-                            "docker", "run", "--rm", "--network", "host",
-                            "--entrypoint", "sh",
-                            f"{self.image_name}:{self.image_tag}", "-c", script,
-                        ]
-                    ),
-                    capture_output=True,
-                    text=True,
-                    timeout=TIMEOUT_DOCKER_EXEC_MEDIUM,
-                )
-                saida = (r.stdout or "").strip()
-                if ":" in saida:
-                    versao = saida.split(":", 1)[1].strip()
-            except Exception as e:
-                self.logger.debug(f"Could not read the Tizen version: {e}")
-            GLib.idle_add(callback, versao)
+            GLib.idle_add(callback, self.platform_version(tv_ip))
 
         threading.Thread(target=run, daemon=True).start()
 
