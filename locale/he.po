@@ -1310,3 +1310,31 @@ msgstr "לטלוויזיה זו נדרשת תעודת Samsung"
 #: NEEDS WORK
 msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
 msgstr "Tizen {version} מקבל רק חבילות חתומות בתעודה שהונפקה על ידי Samsung עבור החשבון שלך, כאשר טלוויזיה זו רשומה אליה. צרו תעודה כזו ב-Certificate Manager של Tizen Studio, ולאחר מכן הוסיפו אותה תחת תעודות."
+
+#: NEEDS WORK
+msgid "Certificate created for this TV"
+msgstr "האישור נוצר עבור טלוויזיה זו"
+
+#: NEEDS WORK
+msgid "Connect to your TV first"
+msgstr "יש לחבר תחילה את הטלוויזיה"
+
+#: NEEDS WORK
+msgid "Could not create the certificate"
+msgstr "לא ניתן היה ליצור את האישור"
+
+#: NEEDS WORK
+msgid "Create"
+msgstr "יצירה"
+
+#: NEEDS WORK
+msgid "Create with your Samsung account"
+msgstr "יצירה עם חשבון Samsung"
+
+#: NEEDS WORK
+msgid "Signs in through your browser and fills in the fields above"
+msgstr "מתחבר דרך הדפדפן שלך וממלא את השדות שלמעלה"
+
+#: NEEDS WORK
+msgid "Working..."
+msgstr "פועל..."

@@ -1312,3 +1312,31 @@ msgstr "See teler vajab Samsungi sertifikaati"
 #: NEEDS WORK
 msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
 msgstr "Tizen {version} aktsepteerib ainult pakette, mis on allkirjastatud Samsungi poolt teie konto jaoks väljastatud sertifikaadiga, kuhu see teler on registreeritud. Looge see Tizen Studio Certificate Manageris ja lisage see seejärel jaotisesse Sertifikaadid."
+
+#: NEEDS WORK
+msgid "Certificate created for this TV"
+msgstr "Sertifikaat loodi selle teleri jaoks"
+
+#: NEEDS WORK
+msgid "Connect to your TV first"
+msgstr "Ühendage kõigepealt oma teler"
+
+#: NEEDS WORK
+msgid "Could not create the certificate"
+msgstr "Sertifikaati ei õnnestunud luua"
+
+#: NEEDS WORK
+msgid "Create"
+msgstr "Loo"
+
+#: NEEDS WORK
+msgid "Create with your Samsung account"
+msgstr "Loo Samsungi kontoga"
+
+#: NEEDS WORK
+msgid "Signs in through your browser and fills in the fields above"
+msgstr "Logib sisse teie brauseri kaudu ja täidab ülaltoodud väljad"
+
+#: NEEDS WORK
+msgid "Working..."
+msgstr "Töötab..."

@@ -1236,6 +1236,36 @@ fi
             self.logger.debug(f"Could not read the Tizen version: {e}")
         return ""
 
+    def read_duid(self, tv_ip: str) -> str:
+        """The TV's device id, or empty string.
+
+        Answered by a whitelisted sdb command that works even though these
+        sets refuse a shell. It is what the distributor certificate has to
+        name, and what Samsung's Certificate Manager asks people to paste in.
+        """
+        try:
+            script = (
+                f"export PATH={TIZEN_TOOLS_DIR}:$PATH; "
+                f"sdb connect {tv_ip} >/dev/null 2>&1; sleep 1; "
+                f"sdb -s {tv_ip}:{SDB_PORT} shell 0 getduid 2>/dev/null"
+            )
+            r = subprocess.run(
+                self._wrap_cmd(
+                    [
+                        "docker", "run", "--rm", "--network", "host",
+                        "--entrypoint", "sh",
+                        f"{self.image_name}:{self.image_tag}", "-c", script,
+                    ]
+                ),
+                capture_output=True,
+                text=True,
+                timeout=TIMEOUT_DOCKER_EXEC_MEDIUM,
+            )
+            return (r.stdout or "").strip()
+        except Exception as e:
+            self.logger.debug(f"Could not read the TV id: {e}")
+            return ""
+
     def needs_own_certificate(self, version: str) -> bool:
         """Whether this Tizen refuses the published package's expired chain.
 

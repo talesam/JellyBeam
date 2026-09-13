@@ -349,6 +349,13 @@ class CustomizationInjectionError(CustomizationError):
         super().__init__("Customization injection failed", {"reason": reason})
 
 
+class SamsungCertificateError(JellyBeamError):
+    """Could not obtain a signing certificate from Samsung."""
+
+    def __init__(self, reason: str) -> None:
+        super().__init__("Samsung certificate request failed", {"reason": reason})
+
+
 class CustomizationServerError(CustomizationError):
     """The Jellyfin server did not answer as expected."""
 

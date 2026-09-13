@@ -1314,3 +1314,31 @@ msgstr "Þetta sjónvarp þarf Samsung-skírteini"
 #: NEEDS WORK
 msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
 msgstr "Tizen {version} samþykkir aðeins pakka sem eru undirritaðir með skírteini sem Samsung hefur gefið út fyrir reikninginn þinn, með þessu sjónvarpi skráðu. Búðu til eitt í Certificate Manager í Tizen Studio og bættu því síðan við undir Skírteini."
+
+#: NEEDS WORK
+msgid "Certificate created for this TV"
+msgstr "Skírteini búið til fyrir þetta sjónvarp"
+
+#: NEEDS WORK
+msgid "Connect to your TV first"
+msgstr "Tengdu sjónvarpið fyrst"
+
+#: NEEDS WORK
+msgid "Could not create the certificate"
+msgstr "Ekki tókst að búa til skírteinið"
+
+#: NEEDS WORK
+msgid "Create"
+msgstr "Búa til"
+
+#: NEEDS WORK
+msgid "Create with your Samsung account"
+msgstr "Búa til með Samsung reikningi"
+
+#: NEEDS WORK
+msgid "Signs in through your browser and fills in the fields above"
+msgstr "Skráir þig inn í gegnum vafrann þinn og fyllir út reitina hér fyrir ofan"
+
+#: NEEDS WORK
+msgid "Working..."
+msgstr "Í vinnslu..."

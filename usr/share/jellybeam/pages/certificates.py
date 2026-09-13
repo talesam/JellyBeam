@@ -1,12 +1,15 @@
 # pages/certificates.py
 import gi
 import webbrowser
+from pathlib import Path
 
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 
-from gi.repository import Gtk, Adw, Gio
+from gi.repository import Gtk, Adw, GLib, Gio
 from services.certificates import CertificateService
+from services.docker import DockerService
+from services.samsung_cert import SamsungCertificateFlow
 from utils import design
 from utils.i18n import _
 from utils.ui_helpers import ErrorNotification
@@ -19,6 +22,13 @@ class CertificatesPage(Gtk.ScrolledWindow):
         super().__init__()
 
         self.window = window
+        # Issues a Samsung certificate without Tizen Studio; the cache keeps
+        # the CA files so the 44 MB extension is fetched only once.
+        self.cert_service_samsung = SamsungCertificateFlow(
+            DockerService(logger=window.logger, config=window.config_manager),
+            Path(GLib.get_user_cache_dir()) / "jellybeam" / "samsung-cert",
+            Path(GLib.get_user_data_dir()) / "jellybeam" / "certificates",
+        )
         self.cert_service = CertificateService(logger=window.logger)
 
         # Configure scrolled window
@@ -145,6 +155,20 @@ class CertificatesPage(Gtk.ScrolledWindow):
         self.password_row.connect("changed", self._on_password_changed)
         self.custom_group.add(self.password_row)
 
+        # Create the certificate with Samsung, without Tizen Studio
+        create_row = Adw.ActionRow()
+        create_row.set_title(_("Create with your Samsung account"))
+        create_row.set_subtitle(
+            _("Signs in through your browser and fills in the fields above")
+        )
+        create_row.add_prefix(design.icon_badge("dialog-password-symbolic", tone="accent"))
+        self.create_cert_button = Gtk.Button.new_with_label(_("Create"))
+        self.create_cert_button.set_valign(Gtk.Align.CENTER)
+        self.create_cert_button.add_css_class("suggested-action")
+        self.create_cert_button.connect("clicked", self._on_create_certificate)
+        create_row.add_suffix(self.create_cert_button)
+        self.custom_group.add(create_row)
+
         # Help link
         help_row = Adw.ActionRow()
         help_row.set_title(_("Need help creating certificates?"))
@@ -261,6 +285,46 @@ class CertificatesPage(Gtk.ScrolledWindow):
             self.dist_cert_button.set_label(_("Change"))
 
         self._check_certificate_completeness()
+
+    def _on_create_certificate(self, button):
+        """Obtain a Samsung certificate for the connected TV.
+
+        Everything except the sign-in is automated: the TV id is read from the
+        set, the key pairs and requests are built here, and Samsung issues the
+        certificates over its API. The sign-in itself opens in the user's own
+        browser rather than inside this window -- their password manager
+        works there, and they can see it really is samsung.com.
+        """
+        tv_ip = self.window.config_manager.get("device.ip", "")
+        if not tv_ip:
+            self._show_error(_("Connect to your TV first"))
+            return
+
+        button.set_sensitive(False)
+        button.set_label(_("Working..."))
+
+        def log(msg):
+            GLib.idle_add(self.window.logger.info, msg)
+
+        def done(ok, message, author="", dist="", password=""):
+            button.set_sensitive(True)
+            button.set_label(_("Create"))
+            if not ok:
+                ErrorNotification.show_error_dialog(
+                    self.window, _("Could not create the certificate"), message
+                )
+                return False
+            # Fill in the fields the user would otherwise have browsed for.
+            self.window.config_manager.set("certificates.author_cert_path", author)
+            self.window.config_manager.set("certificates.distributor_cert_path", dist)
+            self.window.certificate_password = password
+            self.password_row.set_text(password)
+            self.use_default_row.set_active(False)
+            self._load_certificate_info()
+            self._show_success(_("Certificate created for this TV"))
+            return False
+
+        self.cert_service_samsung.create_async(tv_ip, log, done)
 
     def _on_password_changed(self, entry):
         """Handle password changes (kept in memory only, not persisted).

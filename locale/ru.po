@@ -1312,3 +1312,31 @@ msgstr "Этому телевизору нужен сертификат Samsung"
 #: NEEDS WORK
 msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
 msgstr "Tizen {version} принимает только пакеты, подписанные сертификатом, выданным Samsung для вашей учётной записи, с зарегистрированным этим телевизором. Создайте его в Certificate Manager в Tizen Studio, а затем добавьте в разделе Сертификаты."
+
+#: NEEDS WORK
+msgid "Certificate created for this TV"
+msgstr "Сертификат создан для этого телевизора"
+
+#: NEEDS WORK
+msgid "Connect to your TV first"
+msgstr "Сначала подключите телевизор"
+
+#: NEEDS WORK
+msgid "Could not create the certificate"
+msgstr "Не удалось создать сертификат"
+
+#: NEEDS WORK
+msgid "Create"
+msgstr "Создать"
+
+#: NEEDS WORK
+msgid "Create with your Samsung account"
+msgstr "Создать с помощью учётной записи Samsung"
+
+#: NEEDS WORK
+msgid "Signs in through your browser and fills in the fields above"
+msgstr "Выполняет вход через ваш браузер и заполняет поля выше"
+
+#: NEEDS WORK
+msgid "Working..."
+msgstr "Выполняется..."

@@ -1312,3 +1312,31 @@ msgstr "Tämä televisio tarvitsee Samsung-varmenteen"
 #: NEEDS WORK
 msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
 msgstr "Tizen {version} hyväksyy vain paketit, jotka on allekirjoitettu Samsungin tilillesi myöntämällä varmenteella, johon tämä televisio on rekisteröity. Luo se Tizen Studion Certificate Managerissa ja lisää se sitten kohtaan Varmenteet."
+
+#: NEEDS WORK
+msgid "Certificate created for this TV"
+msgstr "Varmenne luotu tälle televisiolle"
+
+#: NEEDS WORK
+msgid "Connect to your TV first"
+msgstr "Yhdistä ensin televisioosi"
+
+#: NEEDS WORK
+msgid "Could not create the certificate"
+msgstr "Varmenteen luonti epäonnistui"
+
+#: NEEDS WORK
+msgid "Create"
+msgstr "Luo"
+
+#: NEEDS WORK
+msgid "Create with your Samsung account"
+msgstr "Luo Samsung-tilillä"
+
+#: NEEDS WORK
+msgid "Signs in through your browser and fills in the fields above"
+msgstr "Kirjautuu sisään selaimesi kautta ja täyttää yllä olevat kentät"
+
+#: NEEDS WORK
+msgid "Working..."
+msgstr "Työskennellään..."
