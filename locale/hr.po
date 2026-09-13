@@ -16,6 +16,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
+# File: usr/share/jellybeam/services/docker.py, line: 319
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "Autorizacija je otkazana"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 325
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Nije moguće dobiti administratorski pristup"
+# 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 331
+# File: usr/share/jellybeam/pages/welcome.py, line: 266
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Docker se nije uspio pokrenuti"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 344
+# File: usr/share/jellybeam/services/docker.py, line: 348
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker se nije pokrenuo na vrijeme"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 355
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec nije pronađen. Pokrenite Docker ručno."
+# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -586,15 +615,15 @@ msgstr "JellyBeam Instalater"
 msgid "Install Jellyfin on your Samsung Smart TV or projector"
 msgstr "Instalirajte Jellyfin na svoj Samsung Smart TV ili projektor"
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 76
-#: NEEDS WORK
-msgid "Samsung & LG TVs"
-msgstr "Samsung & LG televizori"
-# 
 # File: usr/share/jellybeam/pages/welcome.py, line: 77
 #: NEEDS WORK
-msgid "Wide device support"
-msgstr "Široka podrška uređaja"
+msgid "Samsung TVs"
+msgstr "Samsung televizori"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 78
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "Televizori i projektori"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 81
 #: NEEDS WORK
@@ -1226,43 +1255,3 @@ msgstr "Instalacija je otkazana"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Instalacija otkazana"
-
-#: NEEDS WORK
-msgid "Authorization was cancelled"
-msgstr "Autorizacija je otkazana"
-
-#: NEEDS WORK
-msgid "Could not get administrator access"
-msgstr "Nije moguće dobiti administratorski pristup"
-
-#: NEEDS WORK
-msgid "Could not start Docker"
-msgstr "Docker se nije uspio pokrenuti"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Docker servis nije pokrenut"
-
-#: NEEDS WORK
-msgid "Docker did not start in time"
-msgstr "Docker se nije pokrenuo na vrijeme"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker nije instaliran na ovom sustavu"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Neispravna lozinka certifikata"
-
-#: NEEDS WORK
-msgid "Samsung TVs"
-msgstr "Samsung televizori"
-
-#: NEEDS WORK
-msgid "TVs and projectors"
-msgstr "Televizori i projektori"
-
-#: NEEDS WORK
-msgid "pkexec was not found. Start Docker manually."
-msgstr "pkexec nije pronađen. Pokrenite Docker ručno."

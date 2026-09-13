@@ -16,6 +16,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
+# File: usr/share/jellybeam/services/docker.py, line: 319
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "Autorisatie is geannuleerd"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 325
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Kon geen beheerderstoegang verkrijgen"
+# 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 331
+# File: usr/share/jellybeam/pages/welcome.py, line: 266
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Kon Docker niet starten"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 344
+# File: usr/share/jellybeam/services/docker.py, line: 348
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker is niet op tijd gestart"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 355
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec is niet gevonden. Start Docker handmatig."
+# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -586,15 +615,15 @@ msgstr "JellyBeam Installer"
 msgid "Install Jellyfin on your Samsung Smart TV or projector"
 msgstr "Installeer Jellyfin op je Samsung Smart TV of projector"
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 76
-#: NEEDS WORK
-msgid "Samsung & LG TVs"
-msgstr "Samsung & LG tv's"
-# 
 # File: usr/share/jellybeam/pages/welcome.py, line: 77
 #: NEEDS WORK
-msgid "Wide device support"
-msgstr "Brede apparaatondersteuning"
+msgid "Samsung TVs"
+msgstr "Samsung-tv's"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 78
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "Tv's en projectoren"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 81
 #: NEEDS WORK
@@ -1228,43 +1257,3 @@ msgstr "Installatie is geannuleerd"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installatie geannuleerd"
-
-#: NEEDS WORK
-msgid "Authorization was cancelled"
-msgstr "Autorisatie is geannuleerd"
-
-#: NEEDS WORK
-msgid "Could not get administrator access"
-msgstr "Kon geen beheerderstoegang verkrijgen"
-
-#: NEEDS WORK
-msgid "Could not start Docker"
-msgstr "Kon Docker niet starten"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Docker-service draait niet"
-
-#: NEEDS WORK
-msgid "Docker did not start in time"
-msgstr "Docker is niet op tijd gestart"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker is niet geïnstalleerd op dit systeem"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Ongeldig certificaatwachtwoord"
-
-#: NEEDS WORK
-msgid "Samsung TVs"
-msgstr "Samsung-tv's"
-
-#: NEEDS WORK
-msgid "TVs and projectors"
-msgstr "Tv's en projectoren"
-
-#: NEEDS WORK
-msgid "pkexec was not found. Start Docker manually."
-msgstr "pkexec is niet gevonden. Start Docker handmatig."

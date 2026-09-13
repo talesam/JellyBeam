@@ -16,6 +16,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
+# File: usr/share/jellybeam/services/docker.py, line: 319
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "認証がキャンセルされました"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 325
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "管理者権限を取得できませんでした"
+# 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 331
+# File: usr/share/jellybeam/pages/welcome.py, line: 266
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Dockerを起動できませんでした"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 344
+# File: usr/share/jellybeam/services/docker.py, line: 348
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Dockerが時間内に起動しませんでした"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 355
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexecが見つかりませんでした。Dockerを手動で起動してください。"
+# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -584,15 +613,15 @@ msgstr "ジェリーチザンインストーラー"
 msgid "Install Jellyfin on your Samsung Smart TV or projector"
 msgstr "Samsung Smart TV またはプロジェクターに Jellyfin をインストールする"
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 76
-#: NEEDS WORK
-msgid "Samsung & LG TVs"
-msgstr "Samsung & LG テレビ"
-# 
 # File: usr/share/jellybeam/pages/welcome.py, line: 77
 #: NEEDS WORK
-msgid "Wide device support"
-msgstr "幅広いデバイス対応"
+msgid "Samsung TVs"
+msgstr "Samsungテレビ"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 78
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "テレビとプロジェクター"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 81
 #: NEEDS WORK
@@ -1222,43 +1251,3 @@ msgstr "インストールがキャンセルされました"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "インストールがキャンセルされました"
-
-#: NEEDS WORK
-msgid "Authorization was cancelled"
-msgstr "認証がキャンセルされました"
-
-#: NEEDS WORK
-msgid "Could not get administrator access"
-msgstr "管理者権限を取得できませんでした"
-
-#: NEEDS WORK
-msgid "Could not start Docker"
-msgstr "Dockerを起動できませんでした"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Dockerデーモンが実行されていません"
-
-#: NEEDS WORK
-msgid "Docker did not start in time"
-msgstr "Dockerが時間内に起動しませんでした"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "このシステムにはDockerがインストールされていません"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "証明書のパスワードが正しくありません"
-
-#: NEEDS WORK
-msgid "Samsung TVs"
-msgstr "Samsungテレビ"
-
-#: NEEDS WORK
-msgid "TVs and projectors"
-msgstr "テレビとプロジェクター"
-
-#: NEEDS WORK
-msgid "pkexec was not found. Start Docker manually."
-msgstr "pkexecが見つかりませんでした。Dockerを手動で起動してください。"

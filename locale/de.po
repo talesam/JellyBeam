@@ -16,6 +16,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
+# File: usr/share/jellybeam/services/docker.py, line: 319
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "Autorisierung wurde abgebrochen"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 325
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Administratorzugriff konnte nicht erlangt werden"
+# 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 331
+# File: usr/share/jellybeam/pages/welcome.py, line: 266
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Docker konnte nicht gestartet werden"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 344
+# File: usr/share/jellybeam/services/docker.py, line: 348
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Docker wurde nicht rechtzeitig gestartet"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 355
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "pkexec wurde nicht gefunden. Starten Sie Docker manuell."
+# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -586,15 +615,15 @@ msgstr "JellyBeam Installer"
 msgid "Install Jellyfin on your Samsung Smart TV or projector"
 msgstr "Installieren Sie Jellyfin auf Ihrem Samsung Smart TV oder Projektor."
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 76
-#: NEEDS WORK
-msgid "Samsung & LG TVs"
-msgstr "Samsung & LG Fernseher"
-# 
 # File: usr/share/jellybeam/pages/welcome.py, line: 77
 #: NEEDS WORK
-msgid "Wide device support"
-msgstr "Breite Geräteunterstützung"
+msgid "Samsung TVs"
+msgstr "Samsung-Fernseher"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 78
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "Fernseher und Projektoren"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 81
 #: NEEDS WORK
@@ -1228,43 +1257,3 @@ msgstr "Installation wurde abgebrochen"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installation abgebrochen"
-
-#: NEEDS WORK
-msgid "Authorization was cancelled"
-msgstr "Autorisierung wurde abgebrochen"
-
-#: NEEDS WORK
-msgid "Could not get administrator access"
-msgstr "Administratorzugriff konnte nicht erlangt werden"
-
-#: NEEDS WORK
-msgid "Could not start Docker"
-msgstr "Docker konnte nicht gestartet werden"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Docker-Dienst läuft nicht"
-
-#: NEEDS WORK
-msgid "Docker did not start in time"
-msgstr "Docker wurde nicht rechtzeitig gestartet"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Docker ist auf diesem System nicht installiert"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Ungültiges Zertifikatspasswort"
-
-#: NEEDS WORK
-msgid "Samsung TVs"
-msgstr "Samsung-Fernseher"
-
-#: NEEDS WORK
-msgid "TVs and projectors"
-msgstr "Fernseher und Projektoren"
-
-#: NEEDS WORK
-msgid "pkexec was not found. Start Docker manually."
-msgstr "pkexec wurde nicht gefunden. Starten Sie Docker manuell."

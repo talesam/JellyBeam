@@ -7,7 +7,7 @@
 msgid   ""
 msgstr  "Project-Id-Version: JellyBeam\n"
         "Report-Msgid-Bugs-To: \n"
-        "POT-Creation-Date: 2026-09-13 00:56+0000\n"
+        "POT-Creation-Date: 2026-09-13 02:45+0000\n"
         "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
         "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
         "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,6 +15,35 @@ msgstr  "Project-Id-Version: JellyBeam\n"
         "MIME-Version: 1.0\n"
         "Content-Type: text/plain; charset=UTF-8\n"
         "Content-Transfer-Encoding: 8bit\n"
+
+#
+# File: usr/share/jellybeam/services/docker.py, line: 319
+msgid   "Authorization was cancelled"
+msgstr  ""
+
+#
+# File: usr/share/jellybeam/services/docker.py, line: 325
+msgid   "Could not get administrator access"
+msgstr  ""
+
+#
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+#
+# File: usr/share/jellybeam/services/docker.py, line: 331
+# File: usr/share/jellybeam/pages/welcome.py, line: 266
+msgid   "Could not start Docker"
+msgstr  ""
+
+#
+# File: usr/share/jellybeam/services/docker.py, line: 344
+# File: usr/share/jellybeam/services/docker.py, line: 348
+msgid   "Docker did not start in time"
+msgstr  ""
+
+#
+# File: usr/share/jellybeam/services/docker.py, line: 355
+msgid   "pkexec was not found. Start Docker manually."
+msgstr  ""
 
 #
 # File: usr/share/jellybeam/app.py, line: 100
@@ -69,7 +98,7 @@ msgstr  ""
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
 # File: usr/share/jellybeam/utils/ui_helpers.py, line: 160
-# File: usr/share/jellybeam/pages/welcome.py, line: 337
+# File: usr/share/jellybeam/pages/welcome.py, line: 344
 # File: usr/share/jellybeam/pages/preferences.py, line: 337
 # File: usr/share/jellybeam/pages/install.py, line: 156
 msgid   "Cancel"
@@ -94,8 +123,8 @@ msgstr  ""
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
 # File: usr/share/jellybeam/utils/design.py, line: 190
-# File: usr/share/jellybeam/pages/welcome.py, line: 108
-# File: usr/share/jellybeam/pages/welcome.py, line: 146
+# File: usr/share/jellybeam/pages/welcome.py, line: 109
+# File: usr/share/jellybeam/pages/welcome.py, line: 147
 msgid   "Install"
 msgstr  ""
 
@@ -144,7 +173,7 @@ msgstr  ""
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
 # File: usr/share/jellybeam/pages/certificates.py, line: 80
-# File: usr/share/jellybeam/pages/welcome.py, line: 98
+# File: usr/share/jellybeam/pages/welcome.py, line: 99
 msgid   "How it works"
 msgstr  ""
 
@@ -230,8 +259,8 @@ msgstr  ""
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
 # File: usr/share/jellybeam/pages/certificates.py, line: 176
-# File: usr/share/jellybeam/pages/welcome.py, line: 170
-# File: usr/share/jellybeam/pages/welcome.py, line: 173
+# File: usr/share/jellybeam/pages/welcome.py, line: 171
+# File: usr/share/jellybeam/pages/welcome.py, line: 174
 msgid   "Continue"
 msgstr  ""
 
@@ -299,7 +328,7 @@ msgstr  ""
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
 # File: usr/share/jellybeam/pages/device.py, line: 56
-# File: usr/share/jellybeam/pages/welcome.py, line: 317
+# File: usr/share/jellybeam/pages/welcome.py, line: 324
 msgid   "Device Setup"
 msgstr  ""
 
@@ -584,169 +613,169 @@ msgstr  ""
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
 # File: usr/share/jellybeam/pages/device.py, line: 440
-# File: usr/share/jellybeam/pages/welcome.py, line: 107
+# File: usr/share/jellybeam/pages/welcome.py, line: 108
 msgid   "Certificates"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 65
+# File: usr/share/jellybeam/pages/welcome.py, line: 66
 msgid   "JellyBeam Installer"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 66
+# File: usr/share/jellybeam/pages/welcome.py, line: 67
 msgid   "Install Jellyfin on your Samsung Smart TV or projector"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 76
-msgid   "Samsung & LG TVs"
-msgstr  ""
-
-#
 # File: usr/share/jellybeam/pages/welcome.py, line: 77
-msgid   "Wide device support"
+msgid   "Samsung TVs"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 81
-msgid   "Docker Powered"
+# File: usr/share/jellybeam/pages/welcome.py, line: 78
+msgid   "TVs and projectors"
 msgstr  ""
 
 #
 # File: usr/share/jellybeam/pages/welcome.py, line: 82
+msgid   "Docker Powered"
+msgstr  ""
+
+#
+# File: usr/share/jellybeam/pages/welcome.py, line: 83
 msgid   "Simple and reliable"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 86
+# File: usr/share/jellybeam/pages/welcome.py, line: 87
 msgid   "Open Source"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 87
+# File: usr/share/jellybeam/pages/welcome.py, line: 88
 msgid   "Built by the community"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 100
+# File: usr/share/jellybeam/pages/welcome.py, line: 101
 msgid   "4 simple steps to get Jellyfin on your Samsung TV"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 105
+# File: usr/share/jellybeam/pages/welcome.py, line: 106
 msgid   "Check Requirements"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 105
+# File: usr/share/jellybeam/pages/welcome.py, line: 106
 msgid   "Ensure Docker is installed"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 106
+# File: usr/share/jellybeam/pages/welcome.py, line: 107
 msgid   "Connect Device"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 106
+# File: usr/share/jellybeam/pages/welcome.py, line: 107
 msgid   "Find your TV on the network"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 107
+# File: usr/share/jellybeam/pages/welcome.py, line: 108
 msgid   "Configure signing (auto by default)"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 108
+# File: usr/share/jellybeam/pages/welcome.py, line: 109
 msgid   "One click to deploy Jellyfin"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 127
+# File: usr/share/jellybeam/pages/welcome.py, line: 128
 msgid   "System Requirements"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 132
+# File: usr/share/jellybeam/pages/welcome.py, line: 133
 msgid   "Docker Engine"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 133
-# File: usr/share/jellybeam/pages/welcome.py, line: 313
+# File: usr/share/jellybeam/pages/welcome.py, line: 134
+# File: usr/share/jellybeam/pages/welcome.py, line: 320
 msgid   "Checking..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 143
-# File: usr/share/jellybeam/pages/welcome.py, line: 328
+# File: usr/share/jellybeam/pages/welcome.py, line: 144
+# File: usr/share/jellybeam/pages/welcome.py, line: 335
 msgid   "Install Docker"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 144
+# File: usr/share/jellybeam/pages/welcome.py, line: 145
 msgid   "Docker is required but not installed"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 154
+# File: usr/share/jellybeam/pages/welcome.py, line: 155
 msgid   "Docker Group"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 155
+# File: usr/share/jellybeam/pages/welcome.py, line: 156
 msgid   "User not in docker group"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 157
+# File: usr/share/jellybeam/pages/welcome.py, line: 158
 msgid   "Add to group"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 171
+# File: usr/share/jellybeam/pages/welcome.py, line: 172
 msgid   "Configure your Samsung TV"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 178
+# File: usr/share/jellybeam/pages/welcome.py, line: 179
 msgid   "Continue to Device Setup"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 211
+# File: usr/share/jellybeam/pages/welcome.py, line: 212
 msgid   "Ready"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 218
+# File: usr/share/jellybeam/pages/welcome.py, line: 219
 msgid   "Permission required"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 225
+# File: usr/share/jellybeam/pages/welcome.py, line: 226
 msgid   "Not running"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 227
+# File: usr/share/jellybeam/pages/welcome.py, line: 228
 msgid   "Start"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 236
+# File: usr/share/jellybeam/pages/welcome.py, line: 237
 msgid   "Not installed"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 283
+# File: usr/share/jellybeam/pages/welcome.py, line: 290
 msgid   "Added to group"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 331
+# File: usr/share/jellybeam/pages/welcome.py, line: 338
 msgid   "Select your distribution:\n"
         "\n"
         "This will require elevated privileges (sudo). You may be prompted "
@@ -754,32 +783,32 @@ msgid   "Select your distribution:\n"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 338
+# File: usr/share/jellybeam/pages/welcome.py, line: 345
 msgid   "Arch/Manjaro"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 339
+# File: usr/share/jellybeam/pages/welcome.py, line: 346
 msgid   "Debian/Ubuntu"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 340
+# File: usr/share/jellybeam/pages/welcome.py, line: 347
 msgid   "Fedora/RHEL"
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 355
+# File: usr/share/jellybeam/pages/welcome.py, line: 362
 msgid   "Installing Docker..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 371
+# File: usr/share/jellybeam/pages/welcome.py, line: 378
 msgid   "Docker installed! Checking status..."
 msgstr  ""
 
 #
-# File: usr/share/jellybeam/pages/welcome.py, line: 379
+# File: usr/share/jellybeam/pages/welcome.py, line: 386
 #, python-brace-format
 msgid   "Installation failed: {msg}"
 msgstr  ""
@@ -1240,43 +1269,3 @@ msgstr  ""
 # File: usr/share/jellybeam/pages/install.py, line: 605
 msgid   "Installation cancelled"
 msgstr  ""
-
-#: NEEDS WORK
-msgid "Authorization was cancelled"
-msgstr ""
-
-#: NEEDS WORK
-msgid "Could not get administrator access"
-msgstr ""
-
-#: NEEDS WORK
-msgid "Could not start Docker"
-msgstr ""
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr ""
-
-#: NEEDS WORK
-msgid "Docker did not start in time"
-msgstr ""
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr ""
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr ""
-
-#: NEEDS WORK
-msgid "Samsung TVs"
-msgstr ""
-
-#: NEEDS WORK
-msgid "TVs and projectors"
-msgstr ""
-
-#: NEEDS WORK
-msgid "pkexec was not found. Start Docker manually."
-msgstr ""

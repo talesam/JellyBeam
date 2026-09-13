@@ -16,6 +16,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
+# File: usr/share/jellybeam/services/docker.py, line: 319
+#: NEEDS WORK
+msgid "Authorization was cancelled"
+msgstr "Η εξουσιοδότηση ακυρώθηκε"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 325
+#: NEEDS WORK
+msgid "Could not get administrator access"
+msgstr "Δεν ήταν δυνατή η απόκτηση διαχειριστικών δικαιωμάτων"
+# 
+# #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 331
+# File: usr/share/jellybeam/pages/welcome.py, line: 266
+#: NEEDS WORK
+msgid "Could not start Docker"
+msgstr "Δεν ήταν δυνατή η εκκίνηση του Docker"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 344
+# File: usr/share/jellybeam/services/docker.py, line: 348
+#: NEEDS WORK
+msgid "Docker did not start in time"
+msgstr "Το Docker δεν εκκινήθηκε εγκαίρως"
+# 
+# File: usr/share/jellybeam/services/docker.py, line: 355
+#: NEEDS WORK
+msgid "pkexec was not found. Start Docker manually."
+msgstr "Το pkexec δεν βρέθηκε. Εκκινήστε το Docker χειροκίνητα."
+# 
 # File: usr/share/jellybeam/app.py, line: 84
 #: NEEDS WORK
 msgid "Go Back"
@@ -586,15 +615,15 @@ msgstr "JellyBeam Εγκαταστάτης"
 msgid "Install Jellyfin on your Samsung Smart TV or projector"
 msgstr "Εγκαταστήστε το Jellyfin στην έξυπνη τηλεόραση Samsung ή στον προβολέα σας"
 # 
-# File: usr/share/jellybeam/pages/welcome.py, line: 76
-#: NEEDS WORK
-msgid "Samsung & LG TVs"
-msgstr "Τηλεοράσεις Samsung & LG"
-# 
 # File: usr/share/jellybeam/pages/welcome.py, line: 77
 #: NEEDS WORK
-msgid "Wide device support"
-msgstr "Ευρεία υποστήριξη συσκευών"
+msgid "Samsung TVs"
+msgstr "Τηλεοράσεις Samsung"
+# 
+# File: usr/share/jellybeam/pages/welcome.py, line: 78
+#: NEEDS WORK
+msgid "TVs and projectors"
+msgstr "Τηλεοράσεις και προβολείς"
 # 
 # File: usr/share/jellybeam/pages/welcome.py, line: 81
 #: NEEDS WORK
@@ -1228,43 +1257,3 @@ msgstr "Η εγκατάσταση ακυρώθηκε"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Η εγκατάσταση ακυρώθηκε"
-
-#: NEEDS WORK
-msgid "Authorization was cancelled"
-msgstr "Η εξουσιοδότηση ακυρώθηκε"
-
-#: NEEDS WORK
-msgid "Could not get administrator access"
-msgstr "Δεν ήταν δυνατή η απόκτηση διαχειριστικών δικαιωμάτων"
-
-#: NEEDS WORK
-msgid "Could not start Docker"
-msgstr "Δεν ήταν δυνατή η εκκίνηση του Docker"
-
-#: NEEDS WORK
-msgid "Docker daemon is not running"
-msgstr "Η υπηρεσία Docker δεν εκτελείται"
-
-#: NEEDS WORK
-msgid "Docker did not start in time"
-msgstr "Το Docker δεν εκκινήθηκε εγκαίρως"
-
-#: NEEDS WORK
-msgid "Docker is not installed on this system"
-msgstr "Το Docker δεν είναι εγκατεστημένο σε αυτό το σύστημα"
-
-#: NEEDS WORK
-msgid "Invalid certificate password"
-msgstr "Μη έγκυρος κωδικός πρόσβασης πιστοποιητικού"
-
-#: NEEDS WORK
-msgid "Samsung TVs"
-msgstr "Τηλεοράσεις Samsung"
-
-#: NEEDS WORK
-msgid "TVs and projectors"
-msgstr "Τηλεοράσεις και προβολείς"
-
-#: NEEDS WORK
-msgid "pkexec was not found. Start Docker manually."
-msgstr "Το pkexec δεν βρέθηκε. Εκκινήστε το Docker χειροκίνητα."
