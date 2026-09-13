@@ -348,16 +348,23 @@ class InstallPage(Gtk.Box):
 
         def on_version(version):
             if not version:
-                return
-            self.window.config_manager.set("device.tizen_version", version)
-            base = self.tv_info_row.get_subtitle() or ""
-            self.tv_info_row.set_subtitle(f"{base}  |  Tizen {version}")
+                # Saying nothing here is how this went unnoticed: the row just
+                # looked as if the feature did not exist. The usual cause is
+                # the TV refusing sdb because the Host PC IP it has stored no
+                # longer matches this computer.
+                self._tv_version_note = _("Tizen version unavailable")
+                self._render_tv_subtitle()
+                self.window.logger.info(
+                    "Could not read the Tizen version; sdb likely refused the "
+                    "connection. Check the Host PC IP stored on the TV."
+                )
+                return False
 
-            try:
-                maior = int(version.split(".")[0])
-            except (ValueError, IndexError):
-                return
-            if maior >= 8:
+            self.window.config_manager.set("device.tizen_version", version)
+            self._tv_version_note = f"Tizen {version}"
+            self._render_tv_subtitle()
+
+            if self.docker_service.needs_own_certificate(version):
                 self._show_tizen8_warning(version)
             return False
 
@@ -390,16 +397,26 @@ class InstallPage(Gtk.Box):
             # Show device name as title, IP and model as subtitle
             if tv_name:
                 self.tv_info_row.set_title(tv_name)
-                subtitle = f"IP: {tv_ip}"
+                self._tv_subtitle_base = f"IP: {tv_ip}"
                 if tv_model:
-                    subtitle += f" | {tv_model}"
-                self.tv_info_row.set_subtitle(subtitle)
+                    self._tv_subtitle_base += f" | {tv_model}"
             else:
                 self.tv_info_row.set_title(_("Target Device"))
-                self.tv_info_row.set_subtitle(tv_ip)
+                self._tv_subtitle_base = tv_ip
         else:
             self.tv_info_row.set_title(_("Target Device"))
-            self.tv_info_row.set_subtitle(_("No device selected - please go back"))
+            self._tv_subtitle_base = _("No device selected - please go back")
+        self._render_tv_subtitle()
+
+    def _render_tv_subtitle(self):
+        """Rebuild the subtitle from its parts, never append to the widget.
+
+        Appending to whatever the row already showed duplicated the version
+        every time the page was revisited.
+        """
+        texto = getattr(self, "_tv_subtitle_base", "")
+        extra = getattr(self, "_tv_version_note", "")
+        self.tv_info_row.set_subtitle(f"{texto}  |  {extra}" if extra else texto)
 
     def _on_start_installation(self, button):
         """Start the installation process."""

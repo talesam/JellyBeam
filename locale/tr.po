@@ -1304,3 +1304,7 @@ msgstr "Bu TV kendi sertifikasına ihtiyaç duyuyor"
 #: NEEDS WORK
 msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
 msgstr "Tizen {version}, imzalama sertifikasının süresi dolmuş olan yayınlanan paketi reddediyor. Kurulum bir sertifika hatasıyla başarısız olacak."
+
+#: NEEDS WORK
+msgid "Tizen version unavailable"
+msgstr "Tizen sürümü kullanılamıyor"

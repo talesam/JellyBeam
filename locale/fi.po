@@ -1304,3 +1304,7 @@ msgstr "Tämä TV tarvitsee oman varmenteen"
 #: NEEDS WORK
 msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
 msgstr "Tizen {version} hylkää julkaistun paketin, jonka allekirjoitusvarmenne on vanhentunut. Asennus epäonnistuu varmennevirheeseen."
+
+#: NEEDS WORK
+msgid "Tizen version unavailable"
+msgstr "Tizen-versio ei saatavilla"

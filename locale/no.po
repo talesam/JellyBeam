@@ -1304,3 +1304,7 @@ msgstr "Denne TV-en trenger sitt eget sertifikat"
 #: NEEDS WORK
 msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
 msgstr "Tizen {version} avviser den publiserte pakken, hvis signeringssertifikat er utløpt. Installasjonen vil mislykkes med en sertifikatfeil."
+
+#: NEEDS WORK
+msgid "Tizen version unavailable"
+msgstr "Tizen-versjon utilgjengelig"

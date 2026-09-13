@@ -1299,3 +1299,7 @@ msgstr "이 TV에는 자체 인증서가 필요합니다"
 #: NEEDS WORK
 msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
 msgstr "Tizen {version}은(는) 서명 인증서가 만료된 게시된 패키지를 거부합니다. 설치는 인증서 오류로 실패합니다."
+
+#: NEEDS WORK
+msgid "Tizen version unavailable"
+msgstr "Tizen 버전 확인 불가"

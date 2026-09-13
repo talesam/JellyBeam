@@ -1306,3 +1306,7 @@ msgstr "Este televisor necesita su propio certificado"
 #: NEEDS WORK
 msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
 msgstr "Tizen {version} rechaza el paquete publicado, cuyo certificado de firma ha caducado. La instalación fallará con un error de certificado."
+
+#: NEEDS WORK
+msgid "Tizen version unavailable"
+msgstr "Versión de Tizen no disponible"

@@ -1302,3 +1302,7 @@ msgstr "לטלוויזיה הזו נדרשת תעודה משלה"
 #: NEEDS WORK
 msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
 msgstr "Tizen {version} דוחה את החבילה שפורסמה, מכיוון שתוקף תעודת החתימה שלה פג. ההתקנה תיכשל עם שגיאת תעודה."
+
+#: NEEDS WORK
+msgid "Tizen version unavailable"
+msgstr "גרסת Tizen לא זמינה"

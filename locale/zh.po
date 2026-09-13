@@ -1299,3 +1299,7 @@ msgstr "此电视需要专属证书"
 #: NEEDS WORK
 msgid "Tizen {version} refuses the published package, whose signing certificate expired. Installing will fail with a certificate error."
 msgstr "Tizen {version} 会拒绝已发布的软件包,因为其签名证书已过期,安装将因证书错误而失败。"
+
+#: NEEDS WORK
+msgid "Tizen version unavailable"
+msgstr "Tizen 版本不可用"
