@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JellyBeam\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-14 02:42+0000\n"
+"POT-Creation-Date: 2026-09-14 14:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,13 +38,13 @@ msgid "Requesting the distributor certificate..."
 msgstr "Requesting the distributor certificate..."
 
 #
-# File: usr/share/jellybeam/services/samsung_cert.py, line: 520
+# File: usr/share/jellybeam/services/samsung_cert.py, line: 538
 #, python-brace-format
 msgid "TV id: {duid}"
 msgstr "TV id: {duid}"
 
 #
-# File: usr/share/jellybeam/services/samsung_cert.py, line: 522
+# File: usr/share/jellybeam/services/samsung_cert.py, line: 540
 msgid ""
 "Opening the Samsung sign-in in your browser. Log in there; this window will "
 "continue by itself."
