@@ -1,8 +1,10 @@
-"""tv-search-throttle.js: the search gate and the result cap, run as real JS.
+"""tv-search-throttle.js: the typing gate and the result cap, run as real JS.
 
-Measured on an LSP3: typing "top" fired 18 requests (7 per key, no debounce)
-and the last answer landed 4 s after the last key. The gate lets only the
-requests for the term the user settled on reach the network.
+Measured on an LSP3: typing "top" fired 21 requests (7 per key, no debounce)
+and the last answer landed 4 s after the last key. A first version gated the
+requests and aborted superseded ones; React Query retried the aborts and the
+on-screen keyboard became unusable. The gate now sits on the input event, so
+React sees one change per pause in typing and nothing is ever cancelled.
 """
 
 import json
@@ -46,47 +48,37 @@ class TestUrlHelpers:
             "https://x/Items?searchTerm=t",
         ]
 
-    def test_path_and_term(self):
-        assert _node("process.stdout.write(JSON.stringify(["
-                     "S.pathOf('https://x/Items?searchTerm=top%20gun&a=1'), S.termOf('https://x/Items?searchTerm=top%20gun&a=1')]))") == [
-            "https://x/Items", "top%20gun"]
 
-
-class TestGate:
+class TestDebounce:
     """A manual scheduler stands in for setTimeout so the order is exact."""
 
-    GATE = """
-var queue = [];
-var gate = S.createGate(500, function (fn, ms) { queue.push(fn); });
-var log = [];
-function req(path, term) { gate.request(path, term, function () { log.push('send ' + path + ' ' + term); }, function () { log.push('cancel ' + path + ' ' + term); }); }
+    SETUP = """
+var timers = {}; var next = 1; var log = [];
+var later = S.createDebounce(500,
+    function (fn, ms) { var h = next++; timers[h] = fn; return h; },
+    function (h) { delete timers[h]; log.push('cancel ' + h); });
+function fire() { Object.keys(timers).forEach(function (h) { var fn = timers[h]; delete timers[h]; fn(); }); }
 """
 
-    def test_intermediate_terms_are_cancelled_final_one_is_sent(self):
-        log = _node(self.GATE + """
-req('/Items', 't'); req('/Persons', 't');
-req('/Items', 'to'); req('/Persons', 'to');
-req('/Items', 'top'); req('/Persons', 'top');
-while (queue.length) { queue.shift()(); }
+    def test_only_the_last_callback_runs(self):
+        log = _node(self.SETUP + """
+later(function () { log.push('t'); }); later(function () { log.push('to'); }); later(function () { log.push('top'); });
+fire(); process.stdout.write(JSON.stringify(log));""")
+        assert [x for x in log if not x.startswith("cancel")] == ["top"]
+        assert len([x for x in log if x.startswith("cancel")]) == 2
+
+    def test_separate_pauses_each_run(self):
+        log = _node(self.SETUP + """
+later(function () { log.push('top'); }); fire();
+later(function () { log.push('top gun'); }); fire();
 process.stdout.write(JSON.stringify(log));""")
-        assert [x for x in log if x.startswith("send")] == ["send /Items top", "send /Persons top"]
-        assert len([x for x in log if x.startswith("cancel")]) == 4
+        assert log == ["top", "top gun"]
 
-    def test_a_single_term_goes_through(self):
-        log = _node(self.GATE + "req('/Items', 'gun'); while (queue.length) { queue.shift()(); } process.stdout.write(JSON.stringify(log));")
-        assert log == ["send /Items gun"]
-
-    def test_endpoints_are_independent(self):
-        """A new term on one endpoint does not cancel another endpoint's request."""
-        log = _node(self.GATE + """
-req('/Items', 'a'); req('/Persons', 'a'); req('/Items', 'ab');
-while (queue.length) { queue.shift()(); }
-process.stdout.write(JSON.stringify(log));""")
-        assert "send /Persons a" in log and "send /Items ab" in log and "cancel /Items a" in log
-
-    def test_same_term_repeated_is_not_cancelled(self):
-        log = _node(self.GATE + "req('/Items', 'x'); req('/Items', 'x'); while (queue.length) { queue.shift()(); } process.stdout.write(JSON.stringify(log));")
-        assert log == ["send /Items x", "send /Items x"]
+    def test_nothing_is_ever_aborted_at_the_network(self):
+        """The earlier design's mistake, pinned: no abort anywhere in the file."""
+        fonte = SCRIPT.read_text(encoding="utf-8")
+        assert ".abort(" not in fonte
+        assert "AbortError" not in fonte
 
 
 def test_script_parses():
