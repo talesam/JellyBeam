@@ -1,7 +1,7 @@
 # JellyBeam
 
 <p align="center">
-  <img src="https://github.com/talesam/JellyBeam/blob/main/usr/share/icons/hicolor/scalable/apps/jellybeam.svg" alt="JellyBeam Logo" width="128">
+  <img src="usr/share/icons/hicolor/scalable/apps/jellybeam.svg" alt="JellyBeam Logo" width="128">
 </p>
 
 <p align="center">
