@@ -85,6 +85,8 @@ class TestAvplayPatch:
         modo4k = fonte.index("'SET_MODE_4K', 'TRUE'")
         prepare = fonte.index("prepareAsync(")
         assert abrir < modo4k < prepare
+        # Only on a UHD panel: on a 1080p set it stopped playback outright.
+        assert "isUdPanelSupported()" in fonte
 
     def test_holds_the_screen_only_while_playing(self, tmp_path):
         customization.patch_avplay(_pkg(tmp_path))

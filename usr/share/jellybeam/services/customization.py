@@ -149,12 +149,17 @@ _AVPLAY_RECT_FOLLOWUP = (
 # costs that hook and nothing else.
 _AVPLAY_OPEN_ANCHOR = "            webapis.avplay.open(options.url);"
 _AVPLAY_HOOKS = (
-    # UHD sets only decode above 1080p when told so before prepare; on a
-    # 1080p set the property is ignored.
+    # UHD sets only decode above 1080p when told so before prepare. It is NOT
+    # harmless elsewhere: on a 1080p set (LSP3) playback stopped working
+    # altogether with it on. So it is set only where the panel is UHD, which
+    # productinfo can tell -- that privilege is already in the manifest.
     (
         _AVPLAY_OPEN_ANCHOR,
-        "            try { webapis.avplay.setStreamingProperty('SET_MODE_4K', 'TRUE'); }"
-        " catch (e) { console.warn('SET_MODE_4K failed', e); }",
+        "            try {\n"
+        "                if (webapis.productinfo.isUdPanelSupported()) {\n"
+        "                    webapis.avplay.setStreamingProperty('SET_MODE_4K', 'TRUE');\n"
+        "                }\n"
+        "            } catch (e) { console.warn('SET_MODE_4K skipped', e); }",
     ),
     (
         "        webapis.avplay.pause();\n        this.Events.trigger(this, 'pause');",
