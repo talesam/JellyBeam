@@ -104,6 +104,11 @@ CUSTOMIZATION_MARKER_END = "<!-- JellyBeam:end -->"
 # but it costs a failed request at every app start, which is worth avoiding on
 # TV hardware.
 CUSTOMIZATION_RESOURCES = ("web/cs-nav.js",)
+# The launcher tile on Samsung sets is square; the OSA build ships the wide
+# 1920x1080 wordmark as its icon and it gets squashed. The customized build
+# swaps in a square icon built on the official Jellyfin symbol (CC BY-SA 4.0).
+JELLYFIN_ICON_FILE = "icon.png"
+CUSTOMIZATION_ICON = "tv-icon.png"
 
 # From this Tizen version on, the TV verifies that the signing chain has not
 # expired. The published package is signed with a certificate that lapsed in

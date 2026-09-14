@@ -1122,6 +1122,10 @@ echo "Package unpacked"
                 )
                 resources = customization.inject(www, server_url)
                 log_progress(f"Injected {len(resources)} customization resource(s)")
+                customization.replace_icon(
+                    os.path.join(self.workspace_host, CUSTOMIZATION_PKG_DIR)
+                )
+                log_progress("Replaced the launcher icon with the square one")
 
                 par = self.device_certificate(log_progress, cert_password)
                 certs, senha = par if par else (None, "")

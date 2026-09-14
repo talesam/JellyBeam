@@ -112,6 +112,8 @@ GPL-3.0 License - See [LICENSE](LICENSE)
 
 ## 🙏 Acknowledgments
 
-- [Jellyfin](https://jellyfin.org/) - The Free Software Media System
+- [Jellyfin](https://jellyfin.org/) - The Free Software Media System. The TV
+  launcher icon in `assets/` is built on the Jellyfin symbol, © Jellyfin
+  contributors, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - [install-jellyfin-tizen](https://github.com/Georift/install-jellyfin-tizen) - Original installation scripts
 - [GNOME](https://gnome.org/) - GTK4 and Libadwaita

@@ -34,9 +34,11 @@ from urllib.parse import urlparse
 from gi.repository import GLib
 
 from utils.constants import (
+    CUSTOMIZATION_ICON,
     CUSTOMIZATION_MARKER_END,
     CUSTOMIZATION_MARKER_START,
     CUSTOMIZATION_RESOURCES,
+    JELLYFIN_ICON_FILE,
     JELLYFIN_INFO_ENDPOINT,
     TIMEOUT_HTTP_REQUEST,
 )
@@ -62,6 +64,29 @@ _BLOCK_PATTERN = re.compile(
 _ACCEPTED_SCHEMES = ("http", "https")
 
 PathLike = Union[str, Path]
+
+# Files shipped with the app itself (usr/share/jellybeam/assets), as opposed
+# to the ones fetched from the server at run time.
+ASSETS_DIR = Path(__file__).resolve().parent.parent / "assets"
+
+
+def replace_icon(pkg_dir: PathLike, icon: Optional[PathLike] = None) -> Path:
+    """Overwrite the package's launcher icon with the square one we ship.
+
+    The OSA build's icon is the 1920x1080 wordmark, and the launcher tile on
+    Samsung sets is square, so it comes out squashed with the text illegible.
+    Only an existing icon.png is replaced: its absence means pkg_dir is not
+    the unpacked .wgt, and creating one there would just hide that.
+    """
+    destino = Path(pkg_dir) / JELLYFIN_ICON_FILE
+    if not destino.is_file():
+        raise CustomizationInjectionError(f"no {JELLYFIN_ICON_FILE} in {pkg_dir}")
+    origem = Path(icon) if icon else ASSETS_DIR / CUSTOMIZATION_ICON
+    if not origem.is_file():
+        raise CustomizationInjectionError(f"icon not found: {origem}")
+    destino.write_bytes(origem.read_bytes())
+    _logger.info("Replaced %s with %s", destino, origem.name)
+    return destino
 
 
 def has_scheme(url: str) -> bool:
