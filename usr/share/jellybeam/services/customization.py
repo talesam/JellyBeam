@@ -127,21 +127,88 @@ _AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
         try {{ localStorage.setItem(this._displayModeKey, value); }} catch (e) {{}}
         this._applyDisplayMethod();
     }};
-    // Nothing in the stock app stops the set dimming or starting its screen
-    // saver during a film. Held only while playing; released on pause/stop.
+    // Nothing in the stock app stops the set starting its screen saver during
+    // a film. tizen.power does not exist on Samsung TVs (checked on a real
+    // set); the TV API is AppCommon.setScreenSaver, public, since Tizen 2.3.
     this._keepScreenOn = function (on) {{
         try {{
-            if (on) {{ tizen.power.request('SCREEN', 'SCREEN_NORMAL'); }}
-            else {{ tizen.power.release('SCREEN'); }}
+            var st = webapis.appcommon.AppCommonScreenSaverState;
+            webapis.appcommon.setScreenSaver(on ? st.SCREEN_SAVER_OFF : st.SCREEN_SAVER_ON);
         }} catch (e) {{
-            console.warn('power request failed', e);
+            console.warn('setScreenSaver failed', e);
         }}
+    }};
+    // AVPlay parses the subtitle file and hands each cue to onsubtitlechange;
+    // it does not draw anything. The stock player only logs the text, so
+    // subtitles never appear. This draws them, styled from the Jellyfin
+    // "Subtitles" appearance settings the user already has a menu for.
+    this._subtitleTimer = null;
+    this._subtitleAppearance = function () {{
+        var raw = null;
+        try {{
+            for (var i = 0; i < localStorage.length; i++) {{
+                var k = localStorage.key(i);
+                if (k && k.indexOf('subtitleappearance') !== -1) {{ raw = localStorage.getItem(k); }}
+            }}
+            return raw ? JSON.parse(raw) : {{}};
+        }} catch (e) {{ return {{}}; }}
+    }};
+    this._subtitleEl = function () {{
+        var el = document.getElementById('jellybeam-subtitles');
+        if (!el) {{
+            el = document.createElement('div');
+            el.id = 'jellybeam-subtitles';
+            el.style.cssText = 'position:fixed;left:5%;right:5%;text-align:center;' +
+                'z-index:100000;pointer-events:none;line-height:1.35;display:none;';
+            document.body.appendChild(el);
+        }}
+        var a = this._subtitleAppearance();
+        var sizes = {{ smaller: 0.8, small: 0.9, medium: 1, large: 1.2, larger: 1.5, extralarge: 1.8 }};
+        el.style.fontSize = ((sizes[a.textSize] || 1) * 4.3) + 'vh';
+        var fonts = {{
+            typewriter: '"Courier New", monospace', print: 'Georgia, serif',
+            console: 'Consolas, "Lucida Console", monospace', cursive: '"Brush Script MT", cursive',
+            casual: '"Comic Sans MS", cursive', smallcaps: 'inherit'
+        }};
+        el.style.fontFamily = fonts[a.font] || 'inherit';
+        el.style.fontVariant = a.font === 'smallcaps' ? 'small-caps' : 'normal';
+        el.style.fontWeight = a.textWeight === 'bold' ? 'bold' : 'normal';
+        el.style.color = a.textColor || '#ffffff';
+        var shadows = {{
+            none: 'none', raised: '#000 -1px -1px 0, #fff 1px 1px 0',
+            depressed: '#fff -1px -1px 0, #000 1px 1px 0',
+            uniform: '#000 -2px -2px 0, #000 2px -2px 0, #000 -2px 2px 0, #000 2px 2px 0'
+        }};
+        el.style.textShadow = shadows[a.dropShadow] || '#000 0 0 7px, #000 0 0 7px';
+        var pos = parseInt(a.verticalPosition, 10); if (isNaN(pos)) {{ pos = -3; }}
+        el.style.top = ''; el.style.bottom = '';
+        if (pos < 0) {{ el.style.bottom = (-pos * 2.6) + 'vh'; }} else {{ el.style.top = (pos * 2.6 + 2) + 'vh'; }}
+        el.setAttribute('data-bg', a.textBackground || 'transparent');
+        return el;
+    }};
+    this._showSubtitle = function (text, duration) {{
+        var el = this._subtitleEl();
+        var safe = String(text || '')
+            .replace(/\\r?\\n/g, '<br>')
+            .replace(/<(?!\\/?(i|b|u|br)\\b)[^>]*>/gi, '');
+        el.innerHTML = safe.trim() ? '<span style="background:' + el.getAttribute('data-bg') +
+            ';padding:0 .3em;border-radius:.15em;box-decoration-break:clone;">' + safe + '</span>' : '';
+        el.style.display = safe.trim() ? 'block' : 'none';
+        if (this._subtitleTimer) {{ clearTimeout(this._subtitleTimer); }}
+        var ms = parseInt(duration, 10);
+        if (ms > 0) {{ this._subtitleTimer = setTimeout(function () {{ el.style.display = 'none'; }}, ms + 150); }}
+    }};
+    this._hideSubtitle = function () {{
+        if (this._subtitleTimer) {{ clearTimeout(this._subtitleTimer); }}
+        var el = document.getElementById('jellybeam-subtitles');
+        if (el) {{ el.style.display = 'none'; el.innerHTML = ''; }}
     }};
 
 """
 _AVPLAY_RECT_FOLLOWUP = (
     "            self._applyDisplayMethod();\n"
     "            self._keepScreenOn(true);\n"
+    "            self._hideSubtitle();\n"
 )
 
 # Optional hooks: each is (anchor, line to insert after it). Missing ones are
@@ -172,33 +239,21 @@ _AVPLAY_HOOKS = (
     (
         "            webapis.avplay.pause();\n"
         "            console.debug('stop 2', webapis.avplay.getState());",
-        "            this._keepScreenOn(false);",
+        "            this._keepScreenOn(false);\n            this._hideSubtitle();",
+    ),
+    # Each cue AVPlay parses arrives here with its duration in ms. Seen on a
+    # real set: the text arrives, and nothing else in the app draws it.
+    (
+        "                onsubtitlechange: function (duration, text, data3, data4) {\n"
+        '                    console.debug("subtitleText: " + text);',
+        "                    self._showSubtitle(text, duration);",
+    ),
+    # Subtitles switched off in the menu.
+    (
+        "            webapis.avplay.setSilentSubtitle(true);",
+        "            this._hideSubtitle();",
     ),
 )
-
-# The power API above needs a privilege the stock manifest does not ask for.
-# Public level: no partner certificate involved.
-CONFIG_FILE = "config.xml"
-POWER_PRIVILEGE = "http://tizen.org/privilege/power"
-_CONFIG_END = "</widget>"
-
-
-def patch_config_privileges(pkg_dir: PathLike, privileges=(POWER_PRIVILEGE,)) -> bool:
-    """Add the given privileges to the package manifest if they are missing."""
-    arquivo = Path(pkg_dir) / CONFIG_FILE
-    if not arquivo.is_file():
-        raise CustomizationInjectionError(f"no {CONFIG_FILE} in {pkg_dir}")
-    fonte = arquivo.read_text(encoding="utf-8")
-    faltam = [p for p in privileges if f'name="{p}"' not in fonte]
-    if not faltam:
-        return False
-    if _CONFIG_END not in fonte:
-        raise CustomizationInjectionError(f"{CONFIG_FILE} has no closing {_CONFIG_END}")
-    linhas = "".join(f'    <tizen:privilege name="{p}"/>\n' for p in faltam)
-    fonte = fonte.replace(_CONFIG_END, linhas + _CONFIG_END, 1)
-    arquivo.write_text(fonte, encoding="utf-8")
-    _logger.info("Added privilege(s) to %s: %s", CONFIG_FILE, ", ".join(faltam))
-    return True
 
 
 def patch_avplay(pkg_dir: PathLike) -> bool:

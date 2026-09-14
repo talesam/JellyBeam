@@ -293,16 +293,24 @@ da API. O build customizado aplica um patch nesse arquivo (ver
   16:9. Padrão `LETTER_BOX`; `AUTO_ASPECT_RATIO` foi testado no LSP3 e esticou
   igual ao `FULL_SCREEN`, apesar da referência dizer que segue o DAR/PAR.
   Menu "Proporção" do jellyfin-web habilitado via `supports('SetAspectRatio')`.
-- ✅ **4K** — `setStreamingProperty('SET_MODE_4K')` antes do `prepare`; em
-  aparelho 1080p é ignorado.
-- ✅ **Tela acesa** — `tizen.power.request('SCREEN')` enquanto reproduz,
-  liberado em pause/stop. Exige o privilégio `power` no `config.xml`, que o
-  patch adiciona (`patch_config_privileges`).
-- ⏳ **Legendas** — o `onsubtitlechange` do player só escreve no console. Pela
-  referência AVPlay, quem desenha a legenda é o app. Confirmar na TV se as
-  legendas aparecem no build OSA; se não, o patch precisa desenhá-las (com o
-  tamanho/estilo das preferências do jellyfin-web). Se aparecem, é a TV que
-  desenha e tamanho não é controlável por API.
+- ✅ **4K** — `setStreamingProperty('SET_MODE_4K')` antes do `prepare`, **só
+  se** `productinfo.isUdPanelSupported()`. Não é inofensivo em 1080p: no LSP3
+  derrubou a reprodução inteira (tela escura).
+- ✅ **Tela acesa** — `webapis.appcommon.setScreenSaver(SCREEN_SAVER_OFF)`
+  enquanto reproduz, `ON` em pause/stop. `tizen.power` **não existe** na TV
+  (sonda no LSP3: `undefined`); AppCommon é pública, desde Tizen 2.3, sem
+  privilégio. O privilégio `power` que chegou a ser adicionado ao manifesto
+  foi removido.
+- ✅ **Legendas** — confirmado pelo inspetor remoto no LSP3: o `.vtt` externo
+  baixa, o AVPlay lê e entrega cada cue em `onsubtitlechange` com duração, e
+  o player só escrevia no console — **ninguém desenhava**. O patch desenha
+  numa camada HTML, com tamanho/fonte/cor/sombra/posição lidos das
+  preferências de legenda do jellyfin-web (`*subtitleappearance*` no
+  `localStorage`), sanitizando o HTML das cues (só `<i> <b> <u> <br>`).
+- 🔧 **Depuração na TV** — `sdb shell 0 debug <app-id>` abre o inspetor numa
+  porta; `http://<tv>:<porta>/json` lista a página e o WebSocket do DevTools
+  é acessível direto pela rede, sem `sdb forward`. A sessão cai a cada ~20 s
+  (reconectar). `dlog` vem vazio em firmware de consumidor.
 - ⏳ **Buffer** — `setBufferingParam` para reduzir a espera ao pular cena.
   Precisa de teste na rede real para não piorar.
 - ❌ **Velocidade** — `setSpeed` só aceita múltiplos inteiros e altera o
