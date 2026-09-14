@@ -444,40 +444,58 @@ class SamsungCertificate:
 
         # The leaf alone is not enough: the TV checks the chain, so the CA goes
         # into the bundle with it.
-        cadeia = destino / f"{nome}-chain.crt"
-        cadeia.write_bytes(crt.read_bytes() + b"\n" + ca.read_bytes())
-
-        self._openssl(
-            [
-                "pkcs12", "-export", "-out", str(p12),
-                "-inkey", str(chave), "-in", str(cadeia),
-                "-name", "usercertificate", "-passout", f"pass:{password}",
-            ],
-            allow_legacy=True,
-        )
-        for lixo in (chave, csr, crt, cadeia):
+        write_legacy_p12(p12, chave.read_bytes(), crt.read_bytes(), ca.read_bytes(), password)
+        for lixo in (chave, csr, crt):
             lixo.unlink(missing_ok=True)
         return p12
 
     @staticmethod
-    def _openssl(args, allow_legacy: bool = False) -> None:
-        """Run openssl, retrying with -legacy where OpenSSL 3 needs it.
+    def _openssl(args) -> None:
+        """Run openssl for the key and the request; both work on any version."""
+        r = subprocess.run(["openssl", *args], capture_output=True, text=True, timeout=60)
+        if r.returncode != 0:
+            raise SamsungCertificateError(f"openssl failed: {(r.stderr or '').strip()[:200]}")
 
-        Tizen's tooling reads only the old PKCS#12 encryption. OpenSSL 3 stopped
-        writing it by default and takes -legacy to go back; OpenSSL 1.1 writes it
-        already and rejects the flag. Which one is installed varies by distro, so
-        the flag is tried and dropped rather than guessed.
-        """
-        tentativas = [args + ["-legacy"], args] if allow_legacy else [args]
-        erro = ""
-        for tentativa in tentativas:
-            r = subprocess.run(
-                ["openssl", *tentativa], capture_output=True, text=True, timeout=60
-            )
-            if r.returncode == 0:
-                return
-            erro = (r.stderr or "").strip()
-        raise SamsungCertificateError(f"openssl failed: {erro[:200]}")
+
+def write_legacy_p12(p12: Path, key_pem: bytes, cert_pem: bytes, ca_pem: bytes, password: str) -> None:
+    """Write a PKCS#12 in the old encryption Tizen's tooling can read.
+
+    Tizen's CLI is Java of a certain age: it opens only PKCS#12 files using
+    the PBES1 algorithms (3DES/RC2 with SHA-1), and treats anything newer as
+    a wrong password -- which is how it fails, with a prompt for the "Author
+    password" in the middle of an unattended install.
+
+    This used to be `openssl pkcs12 -export -legacy`, falling back to no flag
+    when the flag was refused. That fallback is what bit: on a distro without
+    OpenSSL's legacy provider the flag fails, the fallback writes a modern
+    file, and the install dies later with no hint of why. Doing it in-process
+    with the algorithms named explicitly cannot silently degrade.
+    """
+    from cryptography import x509
+    from cryptography.hazmat.primitives import hashes
+    from cryptography.hazmat.primitives.serialization import (
+        PrivateFormat,
+        load_pem_private_key,
+        pkcs12,
+    )
+
+    chave = load_pem_private_key(key_pem, password=None)
+    folha = x509.load_pem_x509_certificate(cert_pem)
+    cadeia = x509.load_pem_x509_certificates(ca_pem)
+    legado = (
+        PrivateFormat.PKCS12.encryption_builder()
+        .kdf_rounds(2048)
+        .key_cert_algorithm(pkcs12.PBES.PBESv1SHA1And3KeyTripleDESCBC)
+        .hmac_hash(hashes.SHA1())
+        .build(password.encode("utf-8"))
+    )
+    dados = pkcs12.serialize_key_and_certificates(
+        b"usercertificate", chave, folha, cadeia, legado
+    )
+    # Prove it opens with this password before anything downstream trusts it.
+    pkcs12.load_key_and_certificates(dados, password.encode("utf-8"))
+    p12.write_bytes(dados)
+    p12.chmod(0o600)
 
 
 class SamsungCertificateFlow:

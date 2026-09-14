@@ -120,6 +120,73 @@ class TestErrorDescription:
         assert "400" in _error_description(_http_error(b"<html>nope</html>"))
 
 
+class TestLegacyP12:
+    """Tizen's CLI reads only PBES1 PKCS#12; a modern file reads as a wrong password."""
+
+    @staticmethod
+    def _self_signed(cn: str):
+        import datetime
+
+        from cryptography import x509
+        from cryptography.hazmat.primitives import hashes, serialization
+        from cryptography.hazmat.primitives.asymmetric import rsa
+        from cryptography.x509.oid import NameOID
+
+        chave = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+        nome = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, cn)])
+        agora = datetime.datetime.now(datetime.timezone.utc)
+        cert = (
+            x509.CertificateBuilder()
+            .subject_name(nome).issuer_name(nome).public_key(chave.public_key())
+            .serial_number(1).not_valid_before(agora)
+            .not_valid_after(agora + datetime.timedelta(days=1))
+            .sign(chave, hashes.SHA256())
+        )
+        return (
+            chave.private_bytes(
+                serialization.Encoding.PEM,
+                serialization.PrivateFormat.TraditionalOpenSSL,
+                serialization.NoEncryption(),
+            ),
+            cert.public_bytes(serialization.Encoding.PEM),
+        )
+
+    def test_writes_pbes1_that_openssl_legacy_reads(self, tmp_path):
+        import subprocess
+
+        from services.samsung_cert import write_legacy_p12
+
+        chave, folha = self._self_signed("leaf")
+        _, ca = self._self_signed("ca")
+        p12 = tmp_path / "author.p12"
+        write_legacy_p12(p12, chave, folha, ca, "s3cret")
+        assert p12.stat().st_mode & 0o777 == 0o600
+
+        info = subprocess.run(
+            ["openssl", "pkcs12", "-info", "-in", str(p12), "-passin", "pass:s3cret",
+             "-nokeys", "-noout", "-legacy"],
+            capture_output=True, text=True, timeout=30,
+        )
+        if info.returncode != 0:
+            pytest.skip("host openssl has no legacy provider; cannot inspect")
+        assert "3-KeyTripleDES" in info.stderr
+        assert "MAC: sha1" in info.stderr
+        assert "AES" not in info.stderr and "PBKDF2" not in info.stderr
+
+    def test_bundle_carries_leaf_and_ca(self, tmp_path):
+        from cryptography.hazmat.primitives.serialization import pkcs12
+
+        from services.samsung_cert import write_legacy_p12
+
+        chave, folha = self._self_signed("leaf")
+        _, ca = self._self_signed("ca")
+        p12 = tmp_path / "d.p12"
+        write_legacy_p12(p12, chave, folha, ca, "pw")
+        k, c, extras = pkcs12.load_key_and_certificates(p12.read_bytes(), b"pw")
+        assert k is not None and c is not None
+        assert len(extras) == 1  # the CA travels with the leaf
+
+
 class TestSavedPassword:
     def test_round_trips_and_is_private(self, tmp_path):
         SamsungCertificate.save_password(tmp_path, "s3cret")
