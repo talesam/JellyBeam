@@ -239,13 +239,18 @@ class TestDeviceProfile:
         # Audio profiles are left alone.
         assert any(t["Type"] == "Audio" for t in perfil["TranscodingProfiles"])
 
-    def test_no_resolution_limit_is_declared(self, tmp_path):
-        """A 1080p panel still decodes 4K; a limit would force a transcode
-        that a server with transcoding disabled cannot serve."""
-        for uhd in (False, True):
-            perfil = self._run(tmp_path, uhd=uhd)
-            conds = [c for cp in perfil["CodecProfiles"] for c in cp.get("Conditions", [])]
-            assert not any(c["Property"] in ("Width", "Height") for c in conds)
+    def test_fhd_panel_declares_1080p_limit(self, tmp_path):
+        """Measured on an LSP3: AVPlay prepares 1080p SDR/HDR, refuses 4K SDR/HDR.
+        Declaring the limit lets the server pick the 1080p version of an item."""
+        perfil = self._run(tmp_path, uhd=False)
+        conds = [c for cp in perfil["CodecProfiles"] for c in cp.get("Conditions", [])]
+        assert any(c["Property"] == "Width" and c["Value"] == "1920" for c in conds)
+        assert any(c["Property"] == "Height" and c["Value"] == "1080" for c in conds)
+
+    def test_uhd_panel_keeps_full_resolution(self, tmp_path):
+        perfil = self._run(tmp_path, uhd=True)
+        conds = [c for cp in perfil["CodecProfiles"] for c in cp.get("Conditions", [])]
+        assert not any(c["Property"] in ("Width", "Height") for c in conds)
 
 
 class TestRobustness:

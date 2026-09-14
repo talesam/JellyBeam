@@ -307,6 +307,14 @@ da API. O build customizado aplica um patch nesse arquivo (ver
   numa camada HTML, com tamanho/fonte/cor/sombra/posição lidos das
   preferências de legenda do jellyfin-web (`*subtitleappearance*` no
   `localStorage`), sanitizando o HTML das cues (só `<i> <b> <u> <br>`).
+- ✅ **4K em painel FHD** — medido no LSP3 com clipes HEVC sintéticos servidos
+  por HTTP: 1080p SDR e HDR → `READY`; 4K SDR e HDR → `CONNECTION_FAILED`.
+  O AVPlay de modelos FHD não decodifica acima de 1080p (HDR não é o fator;
+  o e-Manual fala em 4K só via USB). O perfil declara `Width ≤ 1920` quando
+  `isUdPanelSupported()` é falso, e o Jellyfin escolhe a versão 1080p do item.
+  Arquivos 4K para TVs UHD: HEVC Main/Main10, level 5.1, MP4 `hvc1`; nunca
+  h264 acima de 1080p nem etiqueta HDR em 8 bits (o big-video-converter foi
+  corrigido para isso em 14/09/2026).
 - 🔧 **Depuração na TV** — `sdb shell 0 debug <app-id>` abre o inspetor numa
   porta; `http://<tv>:<porta>/json` lista a página e o WebSocket do DevTools
   é acessível direto pela rede, sem `sdb forward`. A sessão cai a cada ~20 s

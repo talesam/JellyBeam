@@ -278,14 +278,31 @@ _AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
     // transcoding profile with an empty Protocol first, the server answers
     // with a progressive stream, and AVPlay fails to open it
     // (PLAYER_ERROR_CONNECTION_FAILED). HLS, further down the list, works.
-    // No resolution limit is declared on purpose: a 1080p panel can still
-    // decode 4K (the LSP3 does), and a limit would force a transcode that
-    // servers with transcoding disabled cannot provide.
+    //
+    // On a non-UHD panel the profile also declares 1920x1080 as the limit.
+    // Measured on an LSP3 (FHD) by feeding AVPlay synthetic HEVC clips over
+    // HTTP: 1080p SDR and 1080p HDR prepare fine; 4K SDR and 4K HDR both fail
+    // with CONNECTION_FAILED. Resolution is the discriminator, not HDR, and
+    // not the file -- matching Samsung's FHD-platform spec (HEVC/H.264 up to
+    // FHD, level 4.1). With the limit declared, a server that cannot
+    // transcode picks the item's 1080p version instead of failing on the 4K
+    // one; a UHD panel gets no limit.
     this._tuneDeviceProfile = function (p) {{
         if (!p) {{ return p; }}
         p.TranscodingProfiles = (p.TranscodingProfiles || []).filter(function (t) {{
             return t.Type !== 'Video' || t.Protocol === 'hls';
         }});
+        var uhd = false;
+        try {{ uhd = !!webapis.productinfo.isUdPanelSupported(); }} catch (e) {{}}
+        if (!uhd) {{
+            p.CodecProfiles = (p.CodecProfiles || []).concat([{{
+                Type: 'Video',
+                Conditions: [
+                    {{ Condition: 'LessThanEqual', Property: 'Width', Value: '1920', IsRequired: false }},
+                    {{ Condition: 'LessThanEqual', Property: 'Height', Value: '1080', IsRequired: false }}
+                ]
+            }}]);
+        }}
         return p;
     }};
     // getDeviceProfile is defined further down this constructor; wrap it once
