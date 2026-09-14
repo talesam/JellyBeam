@@ -278,25 +278,14 @@ _AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
     // transcoding profile with an empty Protocol first, the server answers
     // with a progressive stream, and AVPlay fails to open it
     // (PLAYER_ERROR_CONNECTION_FAILED). HLS, further down the list, works.
-    // The profile also sets no size limit, so the server allows direct play
-    // of 4K on a panel that cannot decode it, which fails first and wastes
-    // the retry on the same progressive stream.
+    // No resolution limit is declared on purpose: a 1080p panel can still
+    // decode 4K (the LSP3 does), and a limit would force a transcode that
+    // servers with transcoding disabled cannot provide.
     this._tuneDeviceProfile = function (p) {{
         if (!p) {{ return p; }}
         p.TranscodingProfiles = (p.TranscodingProfiles || []).filter(function (t) {{
             return t.Type !== 'Video' || t.Protocol === 'hls';
         }});
-        var uhd = false;
-        try {{ uhd = !!webapis.productinfo.isUdPanelSupported(); }} catch (e) {{}}
-        if (!uhd) {{
-            p.CodecProfiles = (p.CodecProfiles || []).concat([{{
-                Type: 'Video',
-                Conditions: [
-                    {{ Condition: 'LessThanEqual', Property: 'Width', Value: '1920', IsRequired: false }},
-                    {{ Condition: 'LessThanEqual', Property: 'Height', Value: '1080', IsRequired: false }}
-                ]
-            }}]);
-        }}
         return p;
     }};
     // getDeviceProfile is defined further down this constructor; wrap it once

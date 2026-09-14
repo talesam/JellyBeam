@@ -239,16 +239,13 @@ class TestDeviceProfile:
         # Audio profiles are left alone.
         assert any(t["Type"] == "Audio" for t in perfil["TranscodingProfiles"])
 
-    def test_1080p_panel_declares_its_size_so_4k_is_transcoded(self, tmp_path):
-        perfil = self._run(tmp_path, uhd=False)
-        conds = [c for cp in perfil["CodecProfiles"] for c in cp.get("Conditions", [])]
-        assert {"Property": "Width", "Value": "1920"}.items() <= [c for c in conds if c["Property"] == "Width"][0].items()
-        assert any(c["Property"] == "Height" and c["Value"] == "1080" for c in conds)
-
-    def test_uhd_panel_keeps_full_resolution(self, tmp_path):
-        perfil = self._run(tmp_path, uhd=True)
-        conds = [c for cp in perfil["CodecProfiles"] for c in cp.get("Conditions", [])]
-        assert not any(c["Property"] in ("Width", "Height") for c in conds)
+    def test_no_resolution_limit_is_declared(self, tmp_path):
+        """A 1080p panel still decodes 4K; a limit would force a transcode
+        that a server with transcoding disabled cannot serve."""
+        for uhd in (False, True):
+            perfil = self._run(tmp_path, uhd=uhd)
+            conds = [c for cp in perfil["CodecProfiles"] for c in cp.get("Conditions", [])]
+            assert not any(c["Property"] in ("Width", "Height") for c in conds)
 
 
 class TestRobustness:
