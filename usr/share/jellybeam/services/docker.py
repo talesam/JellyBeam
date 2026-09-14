@@ -1126,10 +1126,12 @@ echo "Package unpacked"
                     os.path.join(self.workspace_host, CUSTOMIZATION_PKG_DIR)
                 )
                 log_progress("Replaced the launcher icon with the square one")
-                if customization.patch_avplay(
-                    os.path.join(self.workspace_host, CUSTOMIZATION_PKG_DIR)
-                ):
-                    log_progress("Native player: aspect ratio now follows the video")
+                pkg_host = os.path.join(self.workspace_host, CUSTOMIZATION_PKG_DIR)
+                if customization.patch_avplay(pkg_host):
+                    customization.patch_config_privileges(pkg_host)
+                    log_progress(
+                        "Native player: video ratio kept, 4K mode on, screen stays awake"
+                    )
                 else:
                     log_progress("Native player not patched (not present or changed)")
 

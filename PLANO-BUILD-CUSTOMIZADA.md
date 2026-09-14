@@ -282,6 +282,35 @@ sem entregar instalação seria prometer o que não existe.
 15. Teste de fumaça pós-instalação: abrir o app e conferir que os recursos
     carregaram
 
+### Fase 5 — player nativo (build OSA)
+
+O build OSA troca o `<video>` HTML5 pelo AVPlay da Samsung. Ganha codecs e
+perde configuração: o `avplayVideoPlayer.js` do jellyfin-tizen usa o mínimo
+da API. O build customizado aplica um patch nesse arquivo (ver
+`customization.patch_avplay`); o que já está feito e o que falta:
+
+- ✅ **Proporção** — `setDisplayMethod`. Sem ele a plataforma estica tudo para
+  16:9. Padrão `LETTER_BOX`; `AUTO_ASPECT_RATIO` foi testado no LSP3 e esticou
+  igual ao `FULL_SCREEN`, apesar da referência dizer que segue o DAR/PAR.
+  Menu "Proporção" do jellyfin-web habilitado via `supports('SetAspectRatio')`.
+- ✅ **4K** — `setStreamingProperty('SET_MODE_4K')` antes do `prepare`; em
+  aparelho 1080p é ignorado.
+- ✅ **Tela acesa** — `tizen.power.request('SCREEN')` enquanto reproduz,
+  liberado em pause/stop. Exige o privilégio `power` no `config.xml`, que o
+  patch adiciona (`patch_config_privileges`).
+- ⏳ **Legendas** — o `onsubtitlechange` do player só escreve no console. Pela
+  referência AVPlay, quem desenha a legenda é o app. Confirmar na TV se as
+  legendas aparecem no build OSA; se não, o patch precisa desenhá-las (com o
+  tamanho/estilo das preferências do jellyfin-web). Se aparecem, é a TV que
+  desenha e tamanho não é controlável por API.
+- ⏳ **Buffer** — `setBufferingParam` para reduzir a espera ao pular cena.
+  Precisa de teste na rede real para não piorar.
+- ❌ **Velocidade** — `setSpeed` só aceita múltiplos inteiros e altera o
+  áudio fora de 1×. Não é o 1,25×/1,5× que se espera; não vale expor.
+- ⏳ **Codecs** — o perfil declara h264/hevc/vp9 e áudio até eac3/flac. AV1,
+  DTS e TrueHD dependem do modelo; declarar às cegas dá tela preta ou vídeo
+  mudo. Só com detecção em tempo de execução (`webapis.productinfo`).
+
 ---
 
 ## 7. O que este plano **não** resolve

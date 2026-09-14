@@ -127,9 +127,73 @@ _AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
         try {{ localStorage.setItem(this._displayModeKey, value); }} catch (e) {{}}
         this._applyDisplayMethod();
     }};
+    // Nothing in the stock app stops the set dimming or starting its screen
+    // saver during a film. Held only while playing; released on pause/stop.
+    this._keepScreenOn = function (on) {{
+        try {{
+            if (on) {{ tizen.power.request('SCREEN', 'SCREEN_NORMAL'); }}
+            else {{ tizen.power.release('SCREEN'); }}
+        }} catch (e) {{
+            console.warn('power request failed', e);
+        }}
+    }};
 
 """
-_AVPLAY_RECT_FOLLOWUP = "            self._applyDisplayMethod();\n"
+_AVPLAY_RECT_FOLLOWUP = (
+    "            self._applyDisplayMethod();\n"
+    "            self._keepScreenOn(true);\n"
+)
+
+# Optional hooks: each is (anchor, line to insert after it). Missing ones are
+# skipped one by one with a warning, so an upstream edit to, say, pause()
+# costs that hook and nothing else.
+_AVPLAY_OPEN_ANCHOR = "            webapis.avplay.open(options.url);"
+_AVPLAY_HOOKS = (
+    # UHD sets only decode above 1080p when told so before prepare; on a
+    # 1080p set the property is ignored.
+    (
+        _AVPLAY_OPEN_ANCHOR,
+        "            try { webapis.avplay.setStreamingProperty('SET_MODE_4K', 'TRUE'); }"
+        " catch (e) { console.warn('SET_MODE_4K failed', e); }",
+    ),
+    (
+        "        webapis.avplay.pause();\n        this.Events.trigger(this, 'pause');",
+        "        this._keepScreenOn(false);",
+    ),
+    (
+        "        webapis.avplay.play();\n        this.Events.trigger(this, 'unpause');",
+        "        this._keepScreenOn(true);",
+    ),
+    (
+        "            webapis.avplay.pause();\n"
+        "            console.debug('stop 2', webapis.avplay.getState());",
+        "            this._keepScreenOn(false);",
+    ),
+)
+
+# The power API above needs a privilege the stock manifest does not ask for.
+# Public level: no partner certificate involved.
+CONFIG_FILE = "config.xml"
+POWER_PRIVILEGE = "http://tizen.org/privilege/power"
+_CONFIG_END = "</widget>"
+
+
+def patch_config_privileges(pkg_dir: PathLike, privileges=(POWER_PRIVILEGE,)) -> bool:
+    """Add the given privileges to the package manifest if they are missing."""
+    arquivo = Path(pkg_dir) / CONFIG_FILE
+    if not arquivo.is_file():
+        raise CustomizationInjectionError(f"no {CONFIG_FILE} in {pkg_dir}")
+    fonte = arquivo.read_text(encoding="utf-8")
+    faltam = [p for p in privileges if f'name="{p}"' not in fonte]
+    if not faltam:
+        return False
+    if _CONFIG_END not in fonte:
+        raise CustomizationInjectionError(f"{CONFIG_FILE} has no closing {_CONFIG_END}")
+    linhas = "".join(f'    <tizen:privilege name="{p}"/>\n' for p in faltam)
+    fonte = fonte.replace(_CONFIG_END, linhas + _CONFIG_END, 1)
+    arquivo.write_text(fonte, encoding="utf-8")
+    _logger.info("Added privilege(s) to %s: %s", CONFIG_FILE, ", ".join(faltam))
+    return True
 
 
 def patch_avplay(pkg_dir: PathLike) -> bool:
@@ -154,6 +218,11 @@ def patch_avplay(pkg_dir: PathLike) -> bool:
     fonte = fonte.replace(
         _AVPLAY_RECT_ANCHOR, _AVPLAY_RECT_ANCHOR + "\n" + _AVPLAY_RECT_FOLLOWUP, 1
     )
+    for ancora, insercao in _AVPLAY_HOOKS:
+        if ancora in fonte:
+            fonte = fonte.replace(ancora, ancora + "\n" + insercao, 1)
+        else:
+            _logger.warning("%s: hook anchor missing, skipped: %r", AVPLAY_FILE, ancora[:40])
     arquivo.write_text(fonte, encoding="utf-8")
     _logger.info("Patched %s with the aspect-ratio setting", AVPLAY_FILE)
     return True
