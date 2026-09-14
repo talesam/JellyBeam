@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JellyBeam\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-14 01:09+0000\n"
+"POT-Creation-Date: 2026-09-14 02:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,41 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#
+# File: usr/share/jellybeam/services/samsung_cert.py, line: 103
+msgid "Downloading Samsung's certificate tooling (44 MB, once)..."
+msgstr "Downloading Samsung's certificate tooling (44 MB, once)..."
+
+#
+# File: usr/share/jellybeam/services/samsung_cert.py, line: 186
+msgid "Samsung certificate tooling ready"
+msgstr "Samsung certificate tooling ready"
+
+#
+# File: usr/share/jellybeam/services/samsung_cert.py, line: 340
+msgid "Requesting the author certificate..."
+msgstr "Requesting the author certificate..."
+
+#
+# File: usr/share/jellybeam/services/samsung_cert.py, line: 353
+msgid "Requesting the distributor certificate..."
+msgstr "Requesting the distributor certificate..."
+
+#
+# File: usr/share/jellybeam/services/samsung_cert.py, line: 520
+#, python-brace-format
+msgid "TV id: {duid}"
+msgstr "TV id: {duid}"
+
+#
+# File: usr/share/jellybeam/services/samsung_cert.py, line: 522
+msgid ""
+"Opening the Samsung sign-in in your browser. Log in there; this window will "
+"continue by itself."
+msgstr ""
+"Opening the Samsung sign-in in your browser. Log in there; this window will "
+"continue by itself."
 
 #
 # File: usr/share/jellybeam/services/docker.py, line: 324
@@ -274,7 +309,7 @@ msgstr "Signs in through your browser and fills in the fields above"
 
 #
 # File: usr/share/jellybeam/pages/certificates.py, line: 165
-# File: usr/share/jellybeam/pages/certificates.py, line: 311
+# File: usr/share/jellybeam/pages/certificates.py, line: 317
 msgid "Create"
 msgstr "Create"
 
@@ -332,8 +367,8 @@ msgstr "P12 Certificate Files"
 #
 # File: usr/share/jellybeam/pages/certificates.py, line: 281
 # File: usr/share/jellybeam/pages/certificates.py, line: 285
-# File: usr/share/jellybeam/pages/certificates.py, line: 346
-# File: usr/share/jellybeam/pages/certificates.py, line: 354
+# File: usr/share/jellybeam/pages/certificates.py, line: 356
+# File: usr/share/jellybeam/pages/certificates.py, line: 364
 msgid "Change"
 msgstr "Change"
 
@@ -348,48 +383,48 @@ msgid "Working..."
 msgstr "Working..."
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 314
+# File: usr/share/jellybeam/pages/certificates.py, line: 322
 msgid "Could not create the certificate"
 msgstr "Could not create the certificate"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 324
+# File: usr/share/jellybeam/pages/certificates.py, line: 332
 msgid "Certificate created for this TV"
 msgstr "Certificate created for this TV"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 367
+# File: usr/share/jellybeam/pages/certificates.py, line: 388
 msgid "Ready to install with custom certificates"
 msgstr "Ready to install with custom certificates"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 372
+# File: usr/share/jellybeam/pages/certificates.py, line: 393
 msgid "author certificate"
 msgstr "author certificate"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 374
+# File: usr/share/jellybeam/pages/certificates.py, line: 395
 msgid "distributor certificate"
 msgstr "distributor certificate"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 376
+# File: usr/share/jellybeam/pages/certificates.py, line: 397
 msgid "password"
 msgstr "password"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 378
+# File: usr/share/jellybeam/pages/certificates.py, line: 399
 #, python-brace-format
 msgid "Missing: {items}"
 msgstr "Missing: {items}"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 383
+# File: usr/share/jellybeam/pages/certificates.py, line: 404
 msgid "Installation"
 msgstr "Installation"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 389
+# File: usr/share/jellybeam/pages/certificates.py, line: 410
 msgid "Certificate Error"
 msgstr "Certificate Error"
 

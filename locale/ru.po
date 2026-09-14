@@ -16,6 +16,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: attranslate\n"
 # 
+# File: usr/share/jellybeam/services/samsung_cert.py, line: 103
+#: NEEDS WORK
+msgid "Downloading Samsung's certificate tooling (44 MB, once)..."
+msgstr "Загрузка инструментария сертификатов Samsung (44 МБ, один раз)..."
+# 
+# File: usr/share/jellybeam/services/samsung_cert.py, line: 186
+#: NEEDS WORK
+msgid "Samsung certificate tooling ready"
+msgstr "Инструменты сертификатов Samsung готовы"
+# 
+# File: usr/share/jellybeam/services/samsung_cert.py, line: 340
+#: NEEDS WORK
+msgid "Requesting the author certificate..."
+msgstr "Запрос сертификата автора..."
+# 
+# File: usr/share/jellybeam/services/samsung_cert.py, line: 353
+#: NEEDS WORK
+msgid "Requesting the distributor certificate..."
+msgstr "Запрос сертификата дистрибьютора..."
+# 
+# File: usr/share/jellybeam/services/samsung_cert.py, line: 520
+#: NEEDS WORK
+#, python-brace-format
+msgid "TV id: {duid}"
+msgstr "ID телевизора: {duid}"
+# 
+# File: usr/share/jellybeam/services/samsung_cert.py, line: 522
+#: NEEDS WORK
+msgid "Opening the Samsung sign-in in your browser. Log in there; this window will continue by itself."
+msgstr "Открытие входа в Samsung в вашем браузере. Войдите там; это окно продолжит само собой."
+# 
 # File: usr/share/jellybeam/services/docker.py, line: 319
 #: NEEDS WORK
 msgid "Authorization was cancelled"
