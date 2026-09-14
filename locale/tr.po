@@ -249,6 +249,22 @@ msgstr "Sertifika Şifresi"
 msgid "Password for the author P12 certificate"
 msgstr "Yazar P12 sertifikası için şifre"
 # 
+# File: usr/share/jellybeam/pages/certificates.py, line: 160
+#: NEEDS WORK
+msgid "Create with your Samsung account"
+msgstr "Samsung hesabınızla oluştur"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
+#: NEEDS WORK
+msgid "Signs in through your browser and fills in the fields above"
+msgstr "Tarayıcınız üzerinden oturum açar ve yukarıdaki alanları doldurur"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 165
+# File: usr/share/jellybeam/pages/certificates.py, line: 311
+#: NEEDS WORK
+msgid "Create"
+msgstr "Oluştur"
+# 
 # File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
 msgid "Need help creating certificates?"
@@ -308,6 +324,26 @@ msgstr "P12 Sertifika Dosyaları"
 #: NEEDS WORK
 msgid "Change"
 msgstr "Değiştir"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 300
+#: NEEDS WORK
+msgid "Connect to your TV first"
+msgstr "Önce TV'nizi bağlayın"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 304
+#: NEEDS WORK
+msgid "Working..."
+msgstr "Çalışıyor..."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 314
+#: NEEDS WORK
+msgid "Could not create the certificate"
+msgstr "Sertifika oluşturulamadı"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 324
+#: NEEDS WORK
+msgid "Certificate created for this TV"
+msgstr "Bu TV için sertifika oluşturuldu"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 251
 #: NEEDS WORK
@@ -1166,18 +1202,20 @@ msgstr "Tizen sürümü kullanılamıyor"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 378
 #: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Bu TV kendi sertifikasına ihtiyaç duyuyor"
+msgid "This TV needs a Samsung certificate"
+msgstr "Bu TV bir Samsung sertifikası gerektiriyor"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 381
 #: NEEDS WORK
 #, python-brace-format
 msgid ""
-"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
-"fail with a certificate error."
+"Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, "
+"with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under "
+"Certificates."
 msgstr ""
-"Tizen {version}, imzalama sertifikasının süresi dolmuş olan yayınlanan paketi reddediyor. Kurulum "
-"bir sertifika hatasıyla başarısız olacak."
+"Tizen {version}, yalnızca hesabınız için Samsung tarafından verilen ve bu TV'nin kayıtlı olduğu bir "
+"sertifikayla imzalanmış paketleri kabul eder. Bunu Tizen Studio'nun Certificate Manager'ında "
+"oluşturun, ardından Sertifikalar altına ekleyin."
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
@@ -1304,39 +1342,3 @@ msgstr "Kurulum iptal edildi"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Kurulum iptal edildi"
-
-#: NEEDS WORK
-msgid "This TV needs a Samsung certificate"
-msgstr "Bu TV bir Samsung sertifikası gerektiriyor"
-
-#: NEEDS WORK
-msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
-msgstr "Tizen {version}, yalnızca hesabınız için Samsung tarafından verilen ve bu TV'nin kayıtlı olduğu bir sertifikayla imzalanmış paketleri kabul eder. Bunu Tizen Studio'nun Certificate Manager'ında oluşturun, ardından Sertifikalar altına ekleyin."
-
-#: NEEDS WORK
-msgid "Certificate created for this TV"
-msgstr "Bu TV için sertifika oluşturuldu"
-
-#: NEEDS WORK
-msgid "Connect to your TV first"
-msgstr "Önce TV'nizi bağlayın"
-
-#: NEEDS WORK
-msgid "Could not create the certificate"
-msgstr "Sertifika oluşturulamadı"
-
-#: NEEDS WORK
-msgid "Create"
-msgstr "Oluştur"
-
-#: NEEDS WORK
-msgid "Create with your Samsung account"
-msgstr "Samsung hesabınızla oluştur"
-
-#: NEEDS WORK
-msgid "Signs in through your browser and fills in the fields above"
-msgstr "Tarayıcınız üzerinden oturum açar ve yukarıdaki alanları doldurur"
-
-#: NEEDS WORK
-msgid "Working..."
-msgstr "Çalışıyor..."

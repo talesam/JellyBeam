@@ -249,6 +249,22 @@ msgstr "Senha do Certificado"
 msgid "Password for the author P12 certificate"
 msgstr "Senha para o certificado P12 do autor"
 # 
+# File: usr/share/jellybeam/pages/certificates.py, line: 160
+#: NEEDS WORK
+msgid "Create with your Samsung account"
+msgstr "Criar com sua conta Samsung"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
+#: NEEDS WORK
+msgid "Signs in through your browser and fills in the fields above"
+msgstr "Faz login pelo seu navegador e preenche os campos acima"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 165
+# File: usr/share/jellybeam/pages/certificates.py, line: 311
+#: NEEDS WORK
+msgid "Create"
+msgstr "Criar"
+# 
 # File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
 msgid "Need help creating certificates?"
@@ -308,6 +324,26 @@ msgstr "Arquivos de Certificado P12"
 #: NEEDS WORK
 msgid "Change"
 msgstr "Alterar"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 300
+#: NEEDS WORK
+msgid "Connect to your TV first"
+msgstr "Conecte-se à sua TV primeiro"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 304
+#: NEEDS WORK
+msgid "Working..."
+msgstr "Processando..."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 314
+#: NEEDS WORK
+msgid "Could not create the certificate"
+msgstr "Não foi possível criar o certificado"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 324
+#: NEEDS WORK
+msgid "Certificate created for this TV"
+msgstr "Certificado criado para esta TV"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 251
 #: NEEDS WORK
@@ -1166,18 +1202,20 @@ msgstr "Versão do Tizen indisponível"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 378
 #: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Esta TV precisa do próprio certificado"
+msgid "This TV needs a Samsung certificate"
+msgstr "Esta TV precisa de um certificado da Samsung"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 381
 #: NEEDS WORK
 #, python-brace-format
 msgid ""
-"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
-"fail with a certificate error."
+"Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, "
+"with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under "
+"Certificates."
 msgstr ""
-"O Tizen {version} rejeita o pacote publicado, cujo certificado de assinatura expirou. A instalação "
-"falhará com um erro de certificado."
+"O Tizen {version} aceita apenas pacotes assinados com um certificado emitido pela Samsung para sua "
+"conta, com esta TV registrada. Crie um no Certificate Manager do Tizen Studio e depois adicione-o "
+"em Certificados."
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
@@ -1304,39 +1342,3 @@ msgstr "A instalação foi cancelada"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Instalação cancelada"
-
-#: NEEDS WORK
-msgid "This TV needs a Samsung certificate"
-msgstr "Esta TV precisa de um certificado da Samsung"
-
-#: NEEDS WORK
-msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
-msgstr "O Tizen {version} aceita apenas pacotes assinados com um certificado emitido pela Samsung para sua conta, com esta TV registrada. Crie um no Certificate Manager do Tizen Studio e depois adicione-o em Certificados."
-
-#: NEEDS WORK
-msgid "Certificate created for this TV"
-msgstr "Certificado criado para esta TV"
-
-#: NEEDS WORK
-msgid "Connect to your TV first"
-msgstr "Conecte-se à sua TV primeiro"
-
-#: NEEDS WORK
-msgid "Could not create the certificate"
-msgstr "Não foi possível criar o certificado"
-
-#: NEEDS WORK
-msgid "Create"
-msgstr "Criar"
-
-#: NEEDS WORK
-msgid "Create with your Samsung account"
-msgstr "Criar com sua conta Samsung"
-
-#: NEEDS WORK
-msgid "Signs in through your browser and fills in the fields above"
-msgstr "Faz login pelo seu navegador e preenche os campos acima"
-
-#: NEEDS WORK
-msgid "Working..."
-msgstr "Processando..."

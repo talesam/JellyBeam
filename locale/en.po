@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JellyBeam\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-13 22:27+0000\n"
+"POT-Creation-Date: 2026-09-14 01:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -175,40 +175,40 @@ msgid "Bring Jellyfin to your big screen"
 msgstr "Bring Jellyfin to your big screen"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 52
+# File: usr/share/jellybeam/pages/certificates.py, line: 62
 msgid "Developer Certificates"
 msgstr "Developer Certificates"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 53
+# File: usr/share/jellybeam/pages/certificates.py, line: 63
 msgid "Certificates are required to install apps on Samsung TVs"
 msgstr "Certificates are required to install apps on Samsung TVs"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 62
+# File: usr/share/jellybeam/pages/certificates.py, line: 72
 msgid "Certificate Mode"
 msgstr "Certificate Mode"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 67
+# File: usr/share/jellybeam/pages/certificates.py, line: 77
 msgid "Use Built-in Certificates"
 msgstr "Use Built-in Certificates"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 68
+# File: usr/share/jellybeam/pages/certificates.py, line: 78
 msgid "Recommended - No Tizen Studio required"
 msgstr "Recommended - No Tizen Studio required"
 
 #
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 80
+# File: usr/share/jellybeam/pages/certificates.py, line: 90
 # File: usr/share/jellybeam/pages/welcome.py, line: 99
 msgid "How it works"
 msgstr "How it works"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 83
+# File: usr/share/jellybeam/pages/certificates.py, line: 93
 msgid ""
 "The Docker container includes pre-configured certificates. You can install "
 "Jellyfin immediately without any setup."
@@ -217,143 +217,179 @@ msgstr ""
 "Jellyfin immediately without any setup."
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 94
+# File: usr/share/jellybeam/pages/certificates.py, line: 104
 msgid "Custom Certificates (Advanced)"
 msgstr "Custom Certificates (Advanced)"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 96
+# File: usr/share/jellybeam/pages/certificates.py, line: 106
 msgid "Only needed if you want to use your own certificates"
 msgstr "Only needed if you want to use your own certificates"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 102
+# File: usr/share/jellybeam/pages/certificates.py, line: 112
 msgid "Author Certificate"
 msgstr "Author Certificate"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 103
+# File: usr/share/jellybeam/pages/certificates.py, line: 113
 msgid "Select author.p12 file"
 msgstr "Select author.p12 file"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 107
-# File: usr/share/jellybeam/pages/certificates.py, line: 126
+# File: usr/share/jellybeam/pages/certificates.py, line: 117
+# File: usr/share/jellybeam/pages/certificates.py, line: 136
 msgid "Browse"
 msgstr "Browse"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 121
+# File: usr/share/jellybeam/pages/certificates.py, line: 131
 msgid "Distributor Certificate"
 msgstr "Distributor Certificate"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 122
+# File: usr/share/jellybeam/pages/certificates.py, line: 132
 msgid "Select distributor.p12 file"
 msgstr "Select distributor.p12 file"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 140
+# File: usr/share/jellybeam/pages/certificates.py, line: 150
 msgid "Certificate Password"
 msgstr "Certificate Password"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 143
+# File: usr/share/jellybeam/pages/certificates.py, line: 153
 msgid "Password for the author P12 certificate"
 msgstr "Password for the author P12 certificate"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 150
+# File: usr/share/jellybeam/pages/certificates.py, line: 160
+msgid "Create with your Samsung account"
+msgstr "Create with your Samsung account"
+
+#
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
+msgid "Signs in through your browser and fills in the fields above"
+msgstr "Signs in through your browser and fills in the fields above"
+
+#
+# File: usr/share/jellybeam/pages/certificates.py, line: 165
+# File: usr/share/jellybeam/pages/certificates.py, line: 311
+msgid "Create"
+msgstr "Create"
+
+#
+# File: usr/share/jellybeam/pages/certificates.py, line: 174
 msgid "Need help creating certificates?"
 msgstr "Need help creating certificates?"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 151
+# File: usr/share/jellybeam/pages/certificates.py, line: 175
 msgid "View tutorial on Samsung Developer website"
 msgstr "View tutorial on Samsung Developer website"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 155
+# File: usr/share/jellybeam/pages/certificates.py, line: 179
 msgid "View Guide"
 msgstr "View Guide"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 173
-# File: usr/share/jellybeam/pages/certificates.py, line: 180
+# File: usr/share/jellybeam/pages/certificates.py, line: 197
+# File: usr/share/jellybeam/pages/certificates.py, line: 204
 msgid "Continue to Installation"
 msgstr "Continue to Installation"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 174
+# File: usr/share/jellybeam/pages/certificates.py, line: 198
 msgid "Proceed to install Jellyfin on your TV"
 msgstr "Proceed to install Jellyfin on your TV"
 
 #
 # #-#-#-#-#  JellyBeam.pot (JellyBeam)  #-#-#-#-#
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 176
+# File: usr/share/jellybeam/pages/certificates.py, line: 200
 # File: usr/share/jellybeam/pages/welcome.py, line: 171
 # File: usr/share/jellybeam/pages/welcome.py, line: 174
 msgid "Continue"
 msgstr "Continue"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 211
+# File: usr/share/jellybeam/pages/certificates.py, line: 235
 msgid "Ready to install with built-in certificates"
 msgstr "Ready to install with built-in certificates"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 221
+# File: usr/share/jellybeam/pages/certificates.py, line: 245
 #, python-brace-format
 msgid "Select {cert_type} certificate"
 msgstr "Select {cert_type} certificate"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 226
+# File: usr/share/jellybeam/pages/certificates.py, line: 250
 msgid "P12 Certificate Files"
 msgstr "P12 Certificate Files"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 257
-# File: usr/share/jellybeam/pages/certificates.py, line: 261
-# File: usr/share/jellybeam/pages/certificates.py, line: 277
+# File: usr/share/jellybeam/pages/certificates.py, line: 281
 # File: usr/share/jellybeam/pages/certificates.py, line: 285
+# File: usr/share/jellybeam/pages/certificates.py, line: 346
+# File: usr/share/jellybeam/pages/certificates.py, line: 354
 msgid "Change"
 msgstr "Change"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 298
+# File: usr/share/jellybeam/pages/certificates.py, line: 300
+msgid "Connect to your TV first"
+msgstr "Connect to your TV first"
+
+#
+# File: usr/share/jellybeam/pages/certificates.py, line: 304
+msgid "Working..."
+msgstr "Working..."
+
+#
+# File: usr/share/jellybeam/pages/certificates.py, line: 314
+msgid "Could not create the certificate"
+msgstr "Could not create the certificate"
+
+#
+# File: usr/share/jellybeam/pages/certificates.py, line: 324
+msgid "Certificate created for this TV"
+msgstr "Certificate created for this TV"
+
+#
+# File: usr/share/jellybeam/pages/certificates.py, line: 367
 msgid "Ready to install with custom certificates"
 msgstr "Ready to install with custom certificates"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 303
+# File: usr/share/jellybeam/pages/certificates.py, line: 372
 msgid "author certificate"
 msgstr "author certificate"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 305
+# File: usr/share/jellybeam/pages/certificates.py, line: 374
 msgid "distributor certificate"
 msgstr "distributor certificate"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 307
+# File: usr/share/jellybeam/pages/certificates.py, line: 376
 msgid "password"
 msgstr "password"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 309
+# File: usr/share/jellybeam/pages/certificates.py, line: 378
 #, python-brace-format
 msgid "Missing: {items}"
 msgstr "Missing: {items}"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 314
+# File: usr/share/jellybeam/pages/certificates.py, line: 383
 msgid "Installation"
 msgstr "Installation"
 
 #
-# File: usr/share/jellybeam/pages/certificates.py, line: 320
+# File: usr/share/jellybeam/pages/certificates.py, line: 389
 msgid "Certificate Error"
 msgstr "Certificate Error"
 
@@ -1081,7 +1117,7 @@ msgstr ""
 #
 # File: usr/share/jellybeam/pages/install.py, line: 64
 # File: usr/share/jellybeam/pages/install.py, line: 146
-# File: usr/share/jellybeam/pages/install.py, line: 665
+# File: usr/share/jellybeam/pages/install.py, line: 670
 msgid "Install Jellyfin"
 msgstr "Install Jellyfin"
 
@@ -1092,8 +1128,8 @@ msgstr "One-click installation to your Samsung TV"
 
 #
 # File: usr/share/jellybeam/pages/install.py, line: 75
-# File: usr/share/jellybeam/pages/install.py, line: 404
-# File: usr/share/jellybeam/pages/install.py, line: 407
+# File: usr/share/jellybeam/pages/install.py, line: 405
+# File: usr/share/jellybeam/pages/install.py, line: 408
 msgid "Target Device"
 msgstr "Target Device"
 
@@ -1160,8 +1196,8 @@ msgstr "Copy the log"
 
 #
 # File: usr/share/jellybeam/pages/install.py, line: 220
-# File: usr/share/jellybeam/pages/install.py, line: 618
-# File: usr/share/jellybeam/pages/install.py, line: 627
+# File: usr/share/jellybeam/pages/install.py, line: 623
+# File: usr/share/jellybeam/pages/install.py, line: 632
 msgid "Installation Complete!"
 msgstr "Installation Complete!"
 
@@ -1192,179 +1228,145 @@ msgstr "Tizen version unavailable"
 
 #
 # File: usr/share/jellybeam/pages/install.py, line: 378
-msgid "This TV needs its own certificate"
-msgstr "This TV needs its own certificate"
+msgid "This TV needs a Samsung certificate"
+msgstr "This TV needs a Samsung certificate"
 
 #
 # File: usr/share/jellybeam/pages/install.py, line: 381
 #, python-brace-format
 msgid ""
-"Tizen {version} refuses the published package, whose signing certificate "
-"expired. Installing will fail with a certificate error."
+"Tizen {version} only accepts packages signed with a certificate issued by "
+"Samsung for your account, with this TV registered. Create one in Tizen "
+"Studio's Certificate Manager, then add it under Certificates."
 msgstr ""
-"Tizen {version} refuses the published package, whose signing certificate "
-"expired. Installing will fail with a certificate error."
+"Tizen {version} only accepts packages signed with a certificate issued by "
+"Samsung for your account, with this TV registered. Create one in Tizen "
+"Studio's Certificate Manager, then add it under Certificates."
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 408
+# File: usr/share/jellybeam/pages/install.py, line: 409
 msgid "No device selected - please go back"
 msgstr "No device selected - please go back"
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 428
+# File: usr/share/jellybeam/pages/install.py, line: 429
 msgid "No TV configured. Please go back and select a device."
 msgstr "No TV configured. Please go back and select a device."
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 451
+# File: usr/share/jellybeam/pages/install.py, line: 452
 msgid "Starting Installation"
 msgstr "Starting Installation"
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 456
-# File: usr/share/jellybeam/pages/install.py, line: 528
+# File: usr/share/jellybeam/pages/install.py, line: 457
+# File: usr/share/jellybeam/pages/install.py, line: 533
 msgid "Downloading container..."
 msgstr "Downloading container..."
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 457
+# File: usr/share/jellybeam/pages/install.py, line: 458
 msgid "Pulling Docker image..."
 msgstr "Pulling Docker image..."
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 468
+# File: usr/share/jellybeam/pages/install.py, line: 469
 msgid "Container ready!"
 msgstr "Container ready!"
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 472
+# File: usr/share/jellybeam/pages/install.py, line: 473
 msgid "Installing to TV..."
 msgstr "Installing to TV..."
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 473
+# File: usr/share/jellybeam/pages/install.py, line: 474
 msgid "Connecting and installing..."
 msgstr "Connecting and installing..."
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 474
+# File: usr/share/jellybeam/pages/install.py, line: 475
 msgid "This may take a few minutes..."
 msgstr "This may take a few minutes..."
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 496
+# File: usr/share/jellybeam/pages/install.py, line: 497
 msgid "Installing..."
 msgstr "Installing..."
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 498
+# File: usr/share/jellybeam/pages/install.py, line: 499
 msgid "Downloading app..."
 msgstr "Downloading app..."
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 500
+# File: usr/share/jellybeam/pages/install.py, line: 501
 msgid "Transferring..."
 msgstr "Transferring..."
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 502
+# File: usr/share/jellybeam/pages/install.py, line: 503
 msgid "Connecting to TV..."
 msgstr "Connecting to TV..."
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 504
+# File: usr/share/jellybeam/pages/install.py, line: 505
 msgid "Finishing..."
 msgstr "Finishing..."
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 530
+# File: usr/share/jellybeam/pages/install.py, line: 535
 msgid "Extracting layers..."
 msgstr "Extracting layers..."
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 532
+# File: usr/share/jellybeam/pages/install.py, line: 537
 msgid "Download complete"
 msgstr "Download complete"
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 603
+# File: usr/share/jellybeam/pages/install.py, line: 608
 msgid "Error"
 msgstr "Error"
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 619
+# File: usr/share/jellybeam/pages/install.py, line: 624
 msgid "Jellyfin is now on your TV"
 msgstr "Jellyfin is now on your TV"
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 621
+# File: usr/share/jellybeam/pages/install.py, line: 626
 msgid "Reinstall"
 msgstr "Reinstall"
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 628
+# File: usr/share/jellybeam/pages/install.py, line: 633
 msgid "Find Jellyfin in your TV's app list."
 msgstr "Find Jellyfin in your TV's app list."
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 637
-# File: usr/share/jellybeam/pages/install.py, line: 645
+# File: usr/share/jellybeam/pages/install.py, line: 642
+# File: usr/share/jellybeam/pages/install.py, line: 650
 msgid "Installation Failed"
 msgstr "Installation Failed"
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 640
+# File: usr/share/jellybeam/pages/install.py, line: 645
 msgid "Retry"
 msgstr "Retry"
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 658
 # File: usr/share/jellybeam/pages/install.py, line: 663
+# File: usr/share/jellybeam/pages/install.py, line: 668
 msgid "Cancelled"
 msgstr "Cancelled"
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 659
+# File: usr/share/jellybeam/pages/install.py, line: 664
 msgid "Installation was cancelled"
 msgstr "Installation was cancelled"
 
 #
-# File: usr/share/jellybeam/pages/install.py, line: 669
+# File: usr/share/jellybeam/pages/install.py, line: 674
 msgid "Installation cancelled"
 msgstr "Installation cancelled"
-
-#: NEEDS WORK
-msgid "This TV needs a Samsung certificate"
-msgstr "This TV needs a Samsung certificate"
-
-#: NEEDS WORK
-msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
-msgstr "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
-
-#: NEEDS WORK
-msgid "Certificate created for this TV"
-msgstr "Certificate created for this TV"
-
-#: NEEDS WORK
-msgid "Connect to your TV first"
-msgstr "Connect to your TV first"
-
-#: NEEDS WORK
-msgid "Could not create the certificate"
-msgstr "Could not create the certificate"
-
-#: NEEDS WORK
-msgid "Create"
-msgstr "Create"
-
-#: NEEDS WORK
-msgid "Create with your Samsung account"
-msgstr "Create with your Samsung account"
-
-#: NEEDS WORK
-msgid "Signs in through your browser and fills in the fields above"
-msgstr "Signs in through your browser and fills in the fields above"
-
-#: NEEDS WORK
-msgid "Working..."
-msgstr "Working..."

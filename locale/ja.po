@@ -246,6 +246,22 @@ msgstr "証明書パスワード"
 msgid "Password for the author P12 certificate"
 msgstr "著者P12証明書のパスワード"
 # 
+# File: usr/share/jellybeam/pages/certificates.py, line: 160
+#: NEEDS WORK
+msgid "Create with your Samsung account"
+msgstr "Samsungアカウントで作成"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
+#: NEEDS WORK
+msgid "Signs in through your browser and fills in the fields above"
+msgstr "ブラウザでサインインし、上の項目を自動入力します"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 165
+# File: usr/share/jellybeam/pages/certificates.py, line: 311
+#: NEEDS WORK
+msgid "Create"
+msgstr "作成"
+# 
 # File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
 msgid "Need help creating certificates?"
@@ -305,6 +321,26 @@ msgstr "P12証明書ファイル"
 #: NEEDS WORK
 msgid "Change"
 msgstr "変更"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 300
+#: NEEDS WORK
+msgid "Connect to your TV first"
+msgstr "先にテレビに接続してください"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 304
+#: NEEDS WORK
+msgid "Working..."
+msgstr "処理中..."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 314
+#: NEEDS WORK
+msgid "Could not create the certificate"
+msgstr "証明書を作成できませんでした"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 324
+#: NEEDS WORK
+msgid "Certificate created for this TV"
+msgstr "このテレビ用の証明書を作成しました"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 251
 #: NEEDS WORK
@@ -1161,16 +1197,19 @@ msgstr "Tizenバージョン取得不可"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 378
 #: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "このテレビには専用の証明書が必要です"
+msgid "This TV needs a Samsung certificate"
+msgstr "このテレビにはSamsung証明書が必要です"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 381
 #: NEEDS WORK
 #, python-brace-format
 msgid ""
-"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
-"fail with a certificate error."
-msgstr "Tizen {version} は、署名証明書の有効期限が切れている公開パッケージを拒否します。インストールは証明書エラーで失敗します。"
+"Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, "
+"with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under "
+"Certificates."
+msgstr ""
+"Tizen {version}は、このテレビが登録された、お使いのアカウント向けにSamsungが発行した証明書で署名されたパッケージのみを受け付けます。Tizen "
+"StudioのCertificate Managerで証明書を作成し、「証明書」に追加してください。"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
@@ -1297,39 +1336,3 @@ msgstr "インストールがキャンセルされました"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "インストールがキャンセルされました"
-
-#: NEEDS WORK
-msgid "This TV needs a Samsung certificate"
-msgstr "このテレビにはSamsung証明書が必要です"
-
-#: NEEDS WORK
-msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
-msgstr "Tizen {version}は、このテレビが登録された、お使いのアカウント向けにSamsungが発行した証明書で署名されたパッケージのみを受け付けます。Tizen StudioのCertificate Managerで証明書を作成し、「証明書」に追加してください。"
-
-#: NEEDS WORK
-msgid "Certificate created for this TV"
-msgstr "このテレビ用の証明書を作成しました"
-
-#: NEEDS WORK
-msgid "Connect to your TV first"
-msgstr "先にテレビに接続してください"
-
-#: NEEDS WORK
-msgid "Could not create the certificate"
-msgstr "証明書を作成できませんでした"
-
-#: NEEDS WORK
-msgid "Create"
-msgstr "作成"
-
-#: NEEDS WORK
-msgid "Create with your Samsung account"
-msgstr "Samsungアカウントで作成"
-
-#: NEEDS WORK
-msgid "Signs in through your browser and fills in the fields above"
-msgstr "ブラウザでサインインし、上の項目を自動入力します"
-
-#: NEEDS WORK
-msgid "Working..."
-msgstr "処理中..."

@@ -249,6 +249,22 @@ msgstr "Sertifikatpassord"
 msgid "Password for the author P12 certificate"
 msgstr "Passord for forfatter P12-sertifikatet"
 # 
+# File: usr/share/jellybeam/pages/certificates.py, line: 160
+#: NEEDS WORK
+msgid "Create with your Samsung account"
+msgstr "Opprett med Samsung-kontoen din"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
+#: NEEDS WORK
+msgid "Signs in through your browser and fills in the fields above"
+msgstr "Logger på via nettleseren din og fyller ut feltene ovenfor"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 165
+# File: usr/share/jellybeam/pages/certificates.py, line: 311
+#: NEEDS WORK
+msgid "Create"
+msgstr "Opprett"
+# 
 # File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
 msgid "Need help creating certificates?"
@@ -308,6 +324,26 @@ msgstr "P12 sertifikatfiler"
 #: NEEDS WORK
 msgid "Change"
 msgstr "Endre"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 300
+#: NEEDS WORK
+msgid "Connect to your TV first"
+msgstr "Koble til TV-en din først"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 304
+#: NEEDS WORK
+msgid "Working..."
+msgstr "Arbeider..."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 314
+#: NEEDS WORK
+msgid "Could not create the certificate"
+msgstr "Kunne ikke opprette sertifikatet"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 324
+#: NEEDS WORK
+msgid "Certificate created for this TV"
+msgstr "Sertifikat opprettet for denne TV-en"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 251
 #: NEEDS WORK
@@ -1166,18 +1202,20 @@ msgstr "Tizen-versjon utilgjengelig"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 378
 #: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Denne TV-en trenger sitt eget sertifikat"
+msgid "This TV needs a Samsung certificate"
+msgstr "Denne TV-en trenger et Samsung-sertifikat"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 381
 #: NEEDS WORK
 #, python-brace-format
 msgid ""
-"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
-"fail with a certificate error."
+"Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, "
+"with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under "
+"Certificates."
 msgstr ""
-"Tizen {version} avviser den publiserte pakken, hvis signeringssertifikat er utløpt. Installasjonen "
-"vil mislykkes med en sertifikatfeil."
+"Tizen {version} godtar bare pakker signert med et sertifikat utstedt av Samsung for kontoen din, "
+"med denne TV-en registrert. Opprett et i Certificate Manager i Tizen Studio, og legg det deretter "
+"til under Sertifikater."
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
@@ -1304,39 +1342,3 @@ msgstr "Installasjonen ble avbrutt"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installasjon avbrutt"
-
-#: NEEDS WORK
-msgid "This TV needs a Samsung certificate"
-msgstr "Denne TV-en trenger et Samsung-sertifikat"
-
-#: NEEDS WORK
-msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
-msgstr "Tizen {version} godtar bare pakker signert med et sertifikat utstedt av Samsung for kontoen din, med denne TV-en registrert. Opprett et i Certificate Manager i Tizen Studio, og legg det deretter til under Sertifikater."
-
-#: NEEDS WORK
-msgid "Certificate created for this TV"
-msgstr "Sertifikat opprettet for denne TV-en"
-
-#: NEEDS WORK
-msgid "Connect to your TV first"
-msgstr "Koble til TV-en din først"
-
-#: NEEDS WORK
-msgid "Could not create the certificate"
-msgstr "Kunne ikke opprette sertifikatet"
-
-#: NEEDS WORK
-msgid "Create"
-msgstr "Opprett"
-
-#: NEEDS WORK
-msgid "Create with your Samsung account"
-msgstr "Opprett med Samsung-kontoen din"
-
-#: NEEDS WORK
-msgid "Signs in through your browser and fills in the fields above"
-msgstr "Logger på via nettleseren din og fyller ut feltene ovenfor"
-
-#: NEEDS WORK
-msgid "Working..."
-msgstr "Arbeider..."

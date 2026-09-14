@@ -249,6 +249,22 @@ msgstr "Tanúsítvány Jelszó"
 msgid "Password for the author P12 certificate"
 msgstr "Jelszó a szerző P12 tanúsítványhoz"
 # 
+# File: usr/share/jellybeam/pages/certificates.py, line: 160
+#: NEEDS WORK
+msgid "Create with your Samsung account"
+msgstr "Létrehozás Samsung-fiókkal"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
+#: NEEDS WORK
+msgid "Signs in through your browser and fills in the fields above"
+msgstr "Bejelentkezik a böngészőjén keresztül, és kitölti a fenti mezőket"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 165
+# File: usr/share/jellybeam/pages/certificates.py, line: 311
+#: NEEDS WORK
+msgid "Create"
+msgstr "Létrehozás"
+# 
 # File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
 msgid "Need help creating certificates?"
@@ -308,6 +324,26 @@ msgstr "P12 tanúsítványfájlok"
 #: NEEDS WORK
 msgid "Change"
 msgstr "Változtatás"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 300
+#: NEEDS WORK
+msgid "Connect to your TV first"
+msgstr "Először csatlakoztassa a tévéjét"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 304
+#: NEEDS WORK
+msgid "Working..."
+msgstr "Folyamatban..."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 314
+#: NEEDS WORK
+msgid "Could not create the certificate"
+msgstr "A tanúsítványt nem sikerült létrehozni"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 324
+#: NEEDS WORK
+msgid "Certificate created for this TV"
+msgstr "A tanúsítvány elkészült ehhez a tévéhez"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 251
 #: NEEDS WORK
@@ -1168,18 +1204,20 @@ msgstr "Tizen-verzió nem elérhető"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 378
 #: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Ennek a TV-nek saját tanúsítványra van szüksége"
+msgid "This TV needs a Samsung certificate"
+msgstr "Ehhez a TV-hez Samsung tanúsítvány szükséges"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 381
 #: NEEDS WORK
 #, python-brace-format
 msgid ""
-"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
-"fail with a certificate error."
+"Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, "
+"with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under "
+"Certificates."
 msgstr ""
-"A Tizen {version} elutasítja a közzétett csomagot, amelynek aláíró tanúsítványa lejárt. A telepítés "
-"tanúsítványhibával fog meghiúsulni."
+"A Tizen {version} csak olyan csomagokat fogad el, amelyeket a Samsung a fiókjához kiállított, ehhez "
+"a TV-hez regisztrált tanúsítvánnyal írtak alá. Hozzon létre egyet a Tizen Studio Certificate "
+"Managerében, majd adja hozzá a Tanúsítványok alatt."
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
@@ -1306,39 +1344,3 @@ msgstr "A telepítés megszakítva lett"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Telepítés megszakítva"
-
-#: NEEDS WORK
-msgid "This TV needs a Samsung certificate"
-msgstr "Ehhez a TV-hez Samsung tanúsítvány szükséges"
-
-#: NEEDS WORK
-msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
-msgstr "A Tizen {version} csak olyan csomagokat fogad el, amelyeket a Samsung a fiókjához kiállított, ehhez a TV-hez regisztrált tanúsítvánnyal írtak alá. Hozzon létre egyet a Tizen Studio Certificate Managerében, majd adja hozzá a Tanúsítványok alatt."
-
-#: NEEDS WORK
-msgid "Certificate created for this TV"
-msgstr "A tanúsítvány elkészült ehhez a tévéhez"
-
-#: NEEDS WORK
-msgid "Connect to your TV first"
-msgstr "Először csatlakoztassa a tévéjét"
-
-#: NEEDS WORK
-msgid "Could not create the certificate"
-msgstr "A tanúsítványt nem sikerült létrehozni"
-
-#: NEEDS WORK
-msgid "Create"
-msgstr "Létrehozás"
-
-#: NEEDS WORK
-msgid "Create with your Samsung account"
-msgstr "Létrehozás Samsung-fiókkal"
-
-#: NEEDS WORK
-msgid "Signs in through your browser and fills in the fields above"
-msgstr "Bejelentkezik a böngészőjén keresztül, és kitölti a fenti mezőket"
-
-#: NEEDS WORK
-msgid "Working..."
-msgstr "Folyamatban..."

@@ -249,6 +249,22 @@ msgstr "Hasło certyfikatu"
 msgid "Password for the author P12 certificate"
 msgstr "Hasło do certyfikatu P12 autora"
 # 
+# File: usr/share/jellybeam/pages/certificates.py, line: 160
+#: NEEDS WORK
+msgid "Create with your Samsung account"
+msgstr "Utwórz za pomocą konta Samsung"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
+#: NEEDS WORK
+msgid "Signs in through your browser and fills in the fields above"
+msgstr "Loguje się przez przeglądarkę i wypełnia powyższe pola"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 165
+# File: usr/share/jellybeam/pages/certificates.py, line: 311
+#: NEEDS WORK
+msgid "Create"
+msgstr "Utwórz"
+# 
 # File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
 msgid "Need help creating certificates?"
@@ -308,6 +324,26 @@ msgstr "Pliki certyfikatów P12"
 #: NEEDS WORK
 msgid "Change"
 msgstr "Zmień"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 300
+#: NEEDS WORK
+msgid "Connect to your TV first"
+msgstr "Najpierw połącz się z telewizorem"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 304
+#: NEEDS WORK
+msgid "Working..."
+msgstr "Trwa praca..."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 314
+#: NEEDS WORK
+msgid "Could not create the certificate"
+msgstr "Nie można utworzyć certyfikatu"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 324
+#: NEEDS WORK
+msgid "Certificate created for this TV"
+msgstr "Utworzono certyfikat dla tego telewizora"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 251
 #: NEEDS WORK
@@ -1166,18 +1202,20 @@ msgstr "Wersja Tizen niedostępna"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 378
 #: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Ten telewizor wymaga własnego certyfikatu"
+msgid "This TV needs a Samsung certificate"
+msgstr "Ten telewizor wymaga certyfikatu Samsung"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 381
 #: NEEDS WORK
 #, python-brace-format
 msgid ""
-"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
-"fail with a certificate error."
+"Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, "
+"with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under "
+"Certificates."
 msgstr ""
-"Tizen {version} odrzuca opublikowany pakiet, którego certyfikat podpisywania wygasł. Instalacja "
-"zakończy się błędem certyfikatu."
+"Tizen {version} akceptuje wyłącznie pakiety podpisane certyfikatem wydanym przez Samsung dla "
+"Twojego konta, z zarejestrowanym tym telewizorem. Utwórz go w Certificate Manager w Tizen Studio, a "
+"następnie dodaj go w sekcji Certyfikaty."
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
@@ -1304,39 +1342,3 @@ msgstr "Instalacja została anulowana"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Instalacja anulowana"
-
-#: NEEDS WORK
-msgid "This TV needs a Samsung certificate"
-msgstr "Ten telewizor wymaga certyfikatu Samsung"
-
-#: NEEDS WORK
-msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
-msgstr "Tizen {version} akceptuje wyłącznie pakiety podpisane certyfikatem wydanym przez Samsung dla Twojego konta, z zarejestrowanym tym telewizorem. Utwórz go w Certificate Manager w Tizen Studio, a następnie dodaj go w sekcji Certyfikaty."
-
-#: NEEDS WORK
-msgid "Certificate created for this TV"
-msgstr "Utworzono certyfikat dla tego telewizora"
-
-#: NEEDS WORK
-msgid "Connect to your TV first"
-msgstr "Najpierw połącz się z telewizorem"
-
-#: NEEDS WORK
-msgid "Could not create the certificate"
-msgstr "Nie można utworzyć certyfikatu"
-
-#: NEEDS WORK
-msgid "Create"
-msgstr "Utwórz"
-
-#: NEEDS WORK
-msgid "Create with your Samsung account"
-msgstr "Utwórz za pomocą konta Samsung"
-
-#: NEEDS WORK
-msgid "Signs in through your browser and fills in the fields above"
-msgstr "Loguje się przez przeglądarkę i wypełnia powyższe pola"
-
-#: NEEDS WORK
-msgid "Working..."
-msgstr "Trwa praca..."

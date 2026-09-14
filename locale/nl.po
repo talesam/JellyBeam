@@ -249,6 +249,22 @@ msgstr "Certificaatwachtwoord"
 msgid "Password for the author P12 certificate"
 msgstr "Wachtwoord voor het auteur P12-certificaat"
 # 
+# File: usr/share/jellybeam/pages/certificates.py, line: 160
+#: NEEDS WORK
+msgid "Create with your Samsung account"
+msgstr "Aanmaken met uw Samsung-account"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
+#: NEEDS WORK
+msgid "Signs in through your browser and fills in the fields above"
+msgstr "Meldt zich aan via uw browser en vult de bovenstaande velden in"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 165
+# File: usr/share/jellybeam/pages/certificates.py, line: 311
+#: NEEDS WORK
+msgid "Create"
+msgstr "Aanmaken"
+# 
 # File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
 msgid "Need help creating certificates?"
@@ -308,6 +324,26 @@ msgstr "P12-certificaatbestanden"
 #: NEEDS WORK
 msgid "Change"
 msgstr "Wijzig"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 300
+#: NEEDS WORK
+msgid "Connect to your TV first"
+msgstr "Maak eerst verbinding met uw tv"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 304
+#: NEEDS WORK
+msgid "Working..."
+msgstr "Bezig..."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 314
+#: NEEDS WORK
+msgid "Could not create the certificate"
+msgstr "Certificaat kon niet worden aangemaakt"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 324
+#: NEEDS WORK
+msgid "Certificate created for this TV"
+msgstr "Certificaat aangemaakt voor deze tv"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 251
 #: NEEDS WORK
@@ -1168,18 +1204,20 @@ msgstr "Tizen-versie niet beschikbaar"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 378
 #: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Deze tv heeft een eigen certificaat nodig"
+msgid "This TV needs a Samsung certificate"
+msgstr "Deze tv heeft een Samsung-certificaat nodig"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 381
 #: NEEDS WORK
 #, python-brace-format
 msgid ""
-"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
-"fail with a certificate error."
+"Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, "
+"with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under "
+"Certificates."
 msgstr ""
-"Tizen {version} weigert het gepubliceerde pakket, waarvan het ondertekeningscertificaat is "
-"verlopen. Installeren mislukt met een certificaatfout."
+"Tizen {version} accepteert alleen pakketten die zijn ondertekend met een certificaat dat door "
+"Samsung is uitgegeven voor uw account, waarbij deze tv is geregistreerd. Maak er een aan in de "
+"Certificate Manager van Tizen Studio en voeg het vervolgens toe onder Certificaten."
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
@@ -1306,39 +1344,3 @@ msgstr "Installatie is geannuleerd"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Installatie geannuleerd"
-
-#: NEEDS WORK
-msgid "This TV needs a Samsung certificate"
-msgstr "Deze tv heeft een Samsung-certificaat nodig"
-
-#: NEEDS WORK
-msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
-msgstr "Tizen {version} accepteert alleen pakketten die zijn ondertekend met een certificaat dat door Samsung is uitgegeven voor uw account, waarbij deze tv is geregistreerd. Maak er een aan in de Certificate Manager van Tizen Studio en voeg het vervolgens toe onder Certificaten."
-
-#: NEEDS WORK
-msgid "Certificate created for this TV"
-msgstr "Certificaat aangemaakt voor deze tv"
-
-#: NEEDS WORK
-msgid "Connect to your TV first"
-msgstr "Maak eerst verbinding met uw tv"
-
-#: NEEDS WORK
-msgid "Could not create the certificate"
-msgstr "Certificaat kon niet worden aangemaakt"
-
-#: NEEDS WORK
-msgid "Create"
-msgstr "Aanmaken"
-
-#: NEEDS WORK
-msgid "Create with your Samsung account"
-msgstr "Aanmaken met uw Samsung-account"
-
-#: NEEDS WORK
-msgid "Signs in through your browser and fills in the fields above"
-msgstr "Meldt zich aan via uw browser en vult de bovenstaande velden in"
-
-#: NEEDS WORK
-msgid "Working..."
-msgstr "Bezig..."

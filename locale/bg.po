@@ -249,6 +249,22 @@ msgstr "Парола на сертификата"
 msgid "Password for the author P12 certificate"
 msgstr "Парола за сертификат P12 на автора"
 # 
+# File: usr/share/jellybeam/pages/certificates.py, line: 160
+#: NEEDS WORK
+msgid "Create with your Samsung account"
+msgstr "Създаване с акаунт в Samsung"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 162
+#: NEEDS WORK
+msgid "Signs in through your browser and fills in the fields above"
+msgstr "Влиза през браузъра ви и попълва полетата по-горе"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 165
+# File: usr/share/jellybeam/pages/certificates.py, line: 311
+#: NEEDS WORK
+msgid "Create"
+msgstr "Създаване"
+# 
 # File: usr/share/jellybeam/pages/certificates.py, line: 122
 #: NEEDS WORK
 msgid "Need help creating certificates?"
@@ -308,6 +324,26 @@ msgstr "P12 сертификатни файлове"
 #: NEEDS WORK
 msgid "Change"
 msgstr "Промяна"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 300
+#: NEEDS WORK
+msgid "Connect to your TV first"
+msgstr "Първо свържете телевизора си"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 304
+#: NEEDS WORK
+msgid "Working..."
+msgstr "Изпълнява се..."
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 314
+#: NEEDS WORK
+msgid "Could not create the certificate"
+msgstr "Сертификатът не можа да бъде създаден"
+# 
+# File: usr/share/jellybeam/pages/certificates.py, line: 324
+#: NEEDS WORK
+msgid "Certificate created for this TV"
+msgstr "Сертификатът е създаден за този телевизор"
 # 
 # File: usr/share/jellybeam/pages/certificates.py, line: 251
 #: NEEDS WORK
@@ -1168,18 +1204,20 @@ msgstr "Версия на Tizen недостъпна"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 378
 #: NEEDS WORK
-msgid "This TV needs its own certificate"
-msgstr "Този телевизор се нуждае от собствен сертификат"
+msgid "This TV needs a Samsung certificate"
+msgstr "Този телевизор изисква сертификат от Samsung"
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 381
 #: NEEDS WORK
 #, python-brace-format
 msgid ""
-"Tizen {version} refuses the published package, whose signing certificate expired. Installing will "
-"fail with a certificate error."
+"Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, "
+"with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under "
+"Certificates."
 msgstr ""
-"Tizen {version} отхвърля публикувания пакет, чийто сертификат за подписване е изтекъл. "
-"Инсталирането ще завърши с грешка в сертификата."
+"Tizen {version} приема само пакети, подписани със сертификат, издаден от Samsung за вашия акаунт, с "
+"регистриран този телевизор. Създайте такъв в Certificate Manager на Tizen Studio, след което го "
+"добавете в Сертификати."
 # 
 # File: usr/share/jellybeam/pages/install.py, line: 197
 #: NEEDS WORK
@@ -1306,39 +1344,3 @@ msgstr "Инсталацията беше отменена"
 #: NEEDS WORK
 msgid "Installation cancelled"
 msgstr "Инсталацията е отменена"
-
-#: NEEDS WORK
-msgid "This TV needs a Samsung certificate"
-msgstr "Този телевизор изисква сертификат от Samsung"
-
-#: NEEDS WORK
-msgid "Tizen {version} only accepts packages signed with a certificate issued by Samsung for your account, with this TV registered. Create one in Tizen Studio's Certificate Manager, then add it under Certificates."
-msgstr "Tizen {version} приема само пакети, подписани със сертификат, издаден от Samsung за вашия акаунт, с регистриран този телевизор. Създайте такъв в Certificate Manager на Tizen Studio, след което го добавете в Сертификати."
-
-#: NEEDS WORK
-msgid "Certificate created for this TV"
-msgstr "Сертификатът е създаден за този телевизор"
-
-#: NEEDS WORK
-msgid "Connect to your TV first"
-msgstr "Първо свържете телевизора си"
-
-#: NEEDS WORK
-msgid "Could not create the certificate"
-msgstr "Сертификатът не можа да бъде създаден"
-
-#: NEEDS WORK
-msgid "Create"
-msgstr "Създаване"
-
-#: NEEDS WORK
-msgid "Create with your Samsung account"
-msgstr "Създаване с акаунт в Samsung"
-
-#: NEEDS WORK
-msgid "Signs in through your browser and fills in the fields above"
-msgstr "Влиза през браузъра ви и попълва полетата по-горе"
-
-#: NEEDS WORK
-msgid "Working..."
-msgstr "Изпълнява се..."
