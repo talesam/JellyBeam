@@ -36,6 +36,7 @@ import secrets
 import shutil
 import subprocess
 import threading
+import urllib.error
 import urllib.parse
 import urllib.request
 import webbrowser
@@ -43,14 +44,16 @@ import zipfile
 
 from gi.repository import GLib
 from pathlib import Path
-from typing import Callable, Dict, Optional, Tuple
+from typing import Callable, Dict, List, Optional, Tuple
 
+from utils.i18n import _
 from utils.constants import (
+    SAMSUNG_CERT_AUTHOR_API,
     SAMSUNG_CERT_CA_AUTHOR,
     SAMSUNG_CERT_CA_DISTRIBUTOR,
+    SAMSUNG_CERT_DISTRIBUTOR_API,
     SAMSUNG_CERT_EXTENSION_INFO,
     SAMSUNG_CERT_EXTENSION_ZIP,
-    SAMSUNG_DEV_API,
     TIMEOUT_HTTP_REQUEST,
 )
 from utils.exceptions import SamsungCertificateError
@@ -96,7 +99,7 @@ class SamsungCertificate:
         if autor and dist and cid:
             return {"author_ca": autor, "distributor_ca": dist, "login_url": cid}
 
-        log("Fetching Samsung's certificate tooling...")
+        log(_("Downloading Samsung's certificate tooling (44 MB, once)..."))
         versao = self._latest_extension_version()
         url = SAMSUNG_CERT_EXTENSION_ZIP.format(version=versao)
         _logger.info("Downloading certificate extension %s", versao)
@@ -179,7 +182,7 @@ class SamsungCertificate:
             if not url:
                 raise SamsungCertificateError("could not find the sign-in URL")
             (self.cache / LOGIN_URL_FILE).write_text(url, encoding="utf-8")
-        log("Samsung certificate tooling ready")
+        log(_("Samsung certificate tooling ready"))
 
     @staticmethod
     def _login_url_from_jar(z: zipfile.ZipFile) -> str:
@@ -329,26 +332,35 @@ class SamsungCertificate:
         """Ask Samsung for both certificates and write the two .p12 files."""
         destino.mkdir(parents=True, exist_ok=True)
 
-        log("Requesting the author certificate...")
+        # The field lists below mirror CertificateGenerator.fetchCRT in the
+        # Certificate Manager, in its order. The distributor one really does
+        # carry platform twice -- Gear2 from DistributorGenerator, then VD for
+        # television mode -- and that is what the server has been accepting.
+        log(_("Requesting the author certificate..."))
         autor = self._one(
             destino,
             "author",
             subject="/CN=JellyBeam",
-            endpoint=f"{SAMSUNG_DEV_API}/apis/v2/authors",
-            extra={"platform": "VD"},
+            endpoint=SAMSUNG_CERT_AUTHOR_API,
+            extra=[("platform", "VD")],
             ca=cas["author_ca"],
             access_token=access_token,
             user_id=user_id,
             password=password,
         )
 
-        log("Requesting the distributor certificate...")
+        log(_("Requesting the distributor certificate..."))
         dist = self._one(
             destino,
             "distributor",
             subject="/CN=TizenSDK",
-            endpoint=f"{SAMSUNG_DEV_API}/apis/v2/distributors",
-            extra={"privilege_level": "Public", "developer_type": "Individual"},
+            endpoint=SAMSUNG_CERT_DISTRIBUTOR_API,
+            extra=[
+                ("privilege_level", "Public"),
+                ("developer_type", "Individual"),
+                ("platform", "Gear2"),
+                ("platform", "VD"),
+            ],
             ca=cas["distributor_ca"],
             access_token=access_token,
             user_id=user_id,
@@ -365,7 +377,7 @@ class SamsungCertificate:
         nome: str,
         subject: str,
         endpoint: str,
-        extra: Dict[str, str],
+        extra: List[Tuple[str, str]],
         ca: Path,
         access_token: str,
         user_id: str,
@@ -384,7 +396,7 @@ class SamsungCertificate:
         self._openssl(pedido)
 
         corpo, tipo = _multipart(
-            {"access_token": access_token, "user_id": user_id, **extra},
+            [("access_token", access_token), ("user_id", user_id), *extra],
             {"csr": (csr.name, csr.read_bytes())},
         )
         pedido_http = urllib.request.Request(
@@ -393,8 +405,14 @@ class SamsungCertificate:
         try:
             with urllib.request.urlopen(pedido_http, timeout=60) as r:
                 resposta = r.read()
+        except urllib.error.HTTPError as e:
+            # Refusals come back as JSON with a description; that line is the
+            # useful one, not the status code.
+            raise SamsungCertificateError(
+                f"Samsung refused the request: {_error_description(e)}"
+            ) from e
         except OSError as e:
-            raise SamsungCertificateError(f"Samsung refused the request: {e}") from e
+            raise SamsungCertificateError(f"could not reach Samsung: {e}") from e
 
         if b"-----BEGIN CERTIFICATE-----" not in resposta:
             trecho = resposta[:200].decode("utf-8", "replace").strip()
@@ -466,9 +484,9 @@ class SamsungCertificateFlow:
                     raise SamsungCertificateError(
                         "could not read the TV id; is Developer Mode on?"
                     )
-                log(f"TV id: {duid}")
+                log(_("TV id: {duid}").format(duid=duid))
 
-                log("Waiting for the Samsung sign-in in your browser...")
+                log(_("Opening the Samsung sign-in in your browser. Log in there; this window will continue by itself."))
                 webbrowser.open(url)
 
                 dados = self.cert.wait_for_token(porta, caminho)
@@ -496,11 +514,28 @@ class SamsungCertificateFlow:
         threading.Thread(target=run, daemon=True).start()
 
 
-def _multipart(campos: Dict[str, str], arquivos: Dict) -> Tuple[bytes, str]:
-    """Build a multipart/form-data body; the API accepts nothing else."""
+def _error_description(e: urllib.error.HTTPError) -> str:
+    """The description in Samsung's JSON error, or the bare status.
+
+    Observed shape: {"error": {"status": 400, "code": "201", "description":
+    "Userid or accesstoken token is required."}}.
+    """
+    try:
+        corpo = json.loads(e.read().decode("utf-8", "replace"))
+        erro = corpo.get("error", corpo) if isinstance(corpo, dict) else {}
+        return str(erro.get("description") or erro.get("message") or e)
+    except (ValueError, AttributeError, OSError):
+        return str(e)
+
+
+def _multipart(campos: List[Tuple[str, str]], arquivos: Dict) -> Tuple[bytes, str]:
+    """Build a multipart/form-data body; the API accepts nothing else.
+
+    Fields are a list, not a dict: the distributor request repeats a name.
+    """
     limite = f"----JellyBeam{secrets.token_hex(12)}"
     partes = []
-    for chave, valor in campos.items():
+    for chave, valor in campos:
         partes.append(
             f"--{limite}\r\nContent-Disposition: form-data; name=\"{chave}\"\r\n\r\n"
             f"{valor}\r\n".encode()

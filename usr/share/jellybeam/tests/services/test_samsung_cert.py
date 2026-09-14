@@ -9,11 +9,12 @@ registered", and no login ever happened.
 
 import io
 import json
+import urllib.error
 import zipfile
 
 import pytest
 
-from services.samsung_cert import SamsungCertificate
+from services.samsung_cert import SamsungCertificate, _error_description, _multipart
 from utils.exceptions import SamsungCertificateError
 
 REAL_URL = (
@@ -96,3 +97,34 @@ class TestParseCallback:
     def test_unreadable_json_is_reported(self):
         with pytest.raises(SamsungCertificateError):
             SamsungCertificate.parse_callback("code={not json")
+
+
+def _http_error(body: bytes) -> urllib.error.HTTPError:
+    return urllib.error.HTTPError(
+        "https://svdca.samsungqbe.com/apis/v3/authors", 400, "Bad Request", {}, io.BytesIO(body)
+    )
+
+
+class TestErrorDescription:
+    def test_reads_the_nested_description_samsung_sends(self):
+        """Body observed from the live host on an empty request."""
+        corpo = (
+            b'{"error":{"status":400,"code":"201",'
+            b'"description":"Userid or accesstoken token is required."}}'
+        )
+        assert _error_description(_http_error(corpo)) == (
+            "Userid or accesstoken token is required."
+        )
+
+    def test_falls_back_to_the_status_when_the_body_is_not_json(self):
+        assert "400" in _error_description(_http_error(b"<html>nope</html>"))
+
+
+class TestMultipart:
+    def test_keeps_a_repeated_field_name(self):
+        """The distributor request sends platform twice; a dict would drop one."""
+        corpo, tipo = _multipart(
+            [("platform", "Gear2"), ("platform", "VD")], {"csr": ("d.csr", b"x")}
+        )
+        assert corpo.count(b'name="platform"') == 2
+        assert tipo.startswith("multipart/form-data; boundary=")

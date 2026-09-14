@@ -302,13 +302,21 @@ class CertificatesPage(Gtk.ScrolledWindow):
 
         button.set_sensitive(False)
         button.set_label(_("Working..."))
+        row = button.get_ancestor(Adw.ActionRow)
+        subtitle_before = row.get_subtitle() if row else ""
 
         def log(msg):
-            GLib.idle_add(self.window.logger.info, msg)
+            # The row's subtitle is the only place the user is looking: the
+            # log file is not, and neither is the terminal.
+            self.window.logger.info(msg)
+            if row:
+                GLib.idle_add(row.set_subtitle, msg)
 
         def done(ok, message, author="", dist="", password=""):
             button.set_sensitive(True)
             button.set_label(_("Create"))
+            if row:
+                row.set_subtitle(subtitle_before)
             if not ok:
                 ErrorNotification.show_error_dialog(
                     self.window, _("Could not create the certificate"), message

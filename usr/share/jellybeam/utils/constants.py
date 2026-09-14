@@ -126,7 +126,11 @@ SAMSUNG_CERT_EXTENSION_ZIP = (
     "https://download.tizen.org/sdk/extensions/"
     "tizen-certificate-extension_{version}.zip"
 )
-SAMSUNG_DEV_API = "https://dev.tizen.samsung.com"
+# The issuing host, as compiled into the Certificate Manager (CertConstant
+# AUTHOR_URL / DISTRIBUTOR_URL). It is not dev.tizen.samsung.com, which is what
+# blog posts name and which times out.
+SAMSUNG_CERT_AUTHOR_API = "https://svdca.samsungqbe.com/apis/v3/authors"
+SAMSUNG_CERT_DISTRIBUTOR_API = "https://svdca.samsungqbe.com/apis/v3/distributors"
 # VD is Samsung's name for the TV platform; the watch and phone CAs in the
 # same directory are for other devices and will not validate on a television.
 SAMSUNG_CERT_CA_AUTHOR = "vd_tizen_dev_author_ca.cer"
