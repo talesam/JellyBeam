@@ -42,8 +42,11 @@ def test_adds_the_feature_and_applies_it_before_prepare(tmp_path):
         assert metodo in fonte
 
     # The default keeps the video's own shape, and it is applied in IDLE:
-    # after the display rect is set, before prepareAsync.
-    assert "PLAYER_DISPLAY_MODE_AUTO_ASPECT_RATIO" in fonte
+    # after the display rect is set, before prepareAsync. LETTER_BOX, not
+    # AUTO_ASPECT_RATIO: the latter stretched on a real set.
+    assert "PLAYER_DISPLAY_MODE_LETTER_BOX" in fonte
+    assert "AUTO_ASPECT_RATIO" not in fonte
+    assert "'letterbox';" in fonte  # the fallback when nothing is saved
     rect = fonte.index("setDisplayRect(")
     apply = fonte.index("self._applyDisplayMethod();")
     prepare = fonte.index("prepareAsync(")

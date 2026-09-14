@@ -85,17 +85,20 @@ _AVPLAY_RECT_ANCHOR = (
 # The AVPlay display method is what decides whether the picture keeps its
 # shape. The stock player never sets it, so the platform default applies and
 # stretches every film to the full 16:9 panel. This adds the aspect-ratio
-# feature jellyfin-web already knows how to show a menu for, mapped onto the
-# three AVPlay modes, with "auto" -- the video's own DAR/PAR -- as default.
+# feature jellyfin-web already knows how to show a menu for.
+#
+# Only two of AVPlay's three modes are offered. AUTO_ASPECT_RATIO is documented
+# as following the video's DAR/PAR, but on a real set (LSP3, Tizen 6) it
+# stretched exactly like FULL_SCREEN -- so LETTER_BOX, the one that actually
+# kept the shape, is the default and is labelled as "the video's ratio".
 _AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
     this._displayModes = {{
-        auto: 'PLAYER_DISPLAY_MODE_AUTO_ASPECT_RATIO',
         letterbox: 'PLAYER_DISPLAY_MODE_LETTER_BOX',
         fill: 'PLAYER_DISPLAY_MODE_FULL_SCREEN'
     }};
     this._displayModeKey = 'jellybeam-avplay-display';
     this._applyDisplayMethod = function () {{
-        var mode = this._displayModes[this.getAspectRatio()] || this._displayModes.auto;
+        var mode = this._displayModes[this.getAspectRatio()] || this._displayModes.letterbox;
         try {{
             webapis.avplay.setDisplayMethod(mode);
         }} catch (e) {{
@@ -106,16 +109,18 @@ _AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
         return feature === 'SetAspectRatio';
     }};
     this.getSupportedAspectRatios = function () {{
+        // jellyfin-web shows these names as they are; the player has no
+        // access to its translations, so the set's language decides.
+        var pt = /^pt/i.test(navigator.language || '');
         return [
-            {{ name: 'Auto', id: 'auto' }},
-            {{ name: 'Letterbox', id: 'letterbox' }},
-            {{ name: 'Fill', id: 'fill' }}
+            {{ name: pt ? 'Proporção do vídeo' : 'Video ratio', id: 'letterbox' }},
+            {{ name: pt ? 'Preencher a tela' : 'Fill the screen', id: 'fill' }}
         ];
     }};
     this.getAspectRatio = function () {{
         var saved = '';
         try {{ saved = localStorage.getItem(this._displayModeKey) || ''; }} catch (e) {{}}
-        return this._displayModes[saved] ? saved : 'auto';
+        return this._displayModes[saved] ? saved : 'letterbox';
     }};
     this.setAspectRatio = function (value) {{
         if (!this._displayModes[value]) {{ return; }}
