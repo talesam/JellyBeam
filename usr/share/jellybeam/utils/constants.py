@@ -115,9 +115,10 @@ DEVICE_CERT_DIR = "certs"
 # Samsung certificate issuance.
 #
 # Not a published API: this is the flow Tizen Studio's Certificate Manager
-# uses. The client id and the CA files are read out of the official Samsung
+# uses. The sign-in URL and the CA files are read out of the official Samsung
 # Certificate Extension at run time instead of being written here -- the
-# client id has already changed once in the wild.
+# service id has already changed once in the wild, and the loopback address
+# Samsung redirects to is one it registered, not one we may choose.
 SAMSUNG_CERT_EXTENSION_INFO = (
     "https://download.tizen.org/sdk/tizenstudio/official/extension_info.xml"
 )
@@ -125,7 +126,6 @@ SAMSUNG_CERT_EXTENSION_ZIP = (
     "https://download.tizen.org/sdk/extensions/"
     "tizen-certificate-extension_{version}.zip"
 )
-SAMSUNG_CERT_LOGIN = "https://account.samsung.com/accounts/TDC/signInGate"
 SAMSUNG_DEV_API = "https://dev.tizen.samsung.com"
 # VD is Samsung's name for the TV platform; the watch and phone CAs in the
 # same directory are for other devices and will not validate on a television.

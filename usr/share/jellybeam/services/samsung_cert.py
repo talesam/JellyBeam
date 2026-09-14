@@ -16,18 +16,24 @@ password.
 
 Nothing here is a published API; it is the flow the Certificate Manager uses,
 and Samsung may change it. Rather than hardcode what would then break, the
-client id and the CA certificates are read at run time out of the official
+sign-in URL and the CA certificates are read at run time out of the official
 Samsung Certificate Extension.
+
+Reading the sign-in URL rather than composing one is not a nicety. Samsung
+only honours redirect targets it has registered, and the registered one is a
+fixed loopback address -- a port and path chosen years ago, not one this app
+may pick. Building the URL by hand gets "redirect_uri is not registered" and
+no login at all.
 """
 
 from __future__ import annotations
 
 import http.server
+import json
 import logging
 import re
 import secrets
 import shutil
-import socket
 import subprocess
 import threading
 import urllib.parse
@@ -44,13 +50,19 @@ from utils.constants import (
     SAMSUNG_CERT_CA_DISTRIBUTOR,
     SAMSUNG_CERT_EXTENSION_INFO,
     SAMSUNG_CERT_EXTENSION_ZIP,
-    SAMSUNG_CERT_LOGIN,
     SAMSUNG_DEV_API,
     TIMEOUT_HTTP_REQUEST,
 )
 from utils.exceptions import SamsungCertificateError
 
 _logger = logging.getLogger(__name__)
+
+LOGIN_URL_FILE = "login_url.txt"
+
+# A printable run starting at Samsung's account host. Class files store string
+# constants as bare UTF-8, so the run ends where the next pool entry's tag byte
+# begins; the character class below is what a URL may legally contain.
+_LOGIN_URL = re.compile(rb"https://account\.samsung\.com/[A-Za-z0-9_./?=&:%~+-]+")
 
 
 class SamsungCertificate:
@@ -71,17 +83,18 @@ class SamsungCertificate:
         return caminho if caminho.is_file() and caminho.stat().st_size else None
 
     def ensure_extension(self, log: Callable[[str], None]) -> Dict[str, Path]:
-        """Return the CA files and client id, downloading them once.
+        """Return the CA files and the sign-in URL, downloading them once.
 
         Read from the Samsung Certificate Extension rather than written into
-        this file: the client id has already changed once in the wild, and the
-        CAs will eventually roll over too.
+        this file: the service id has already changed once in the wild, the
+        loopback port belongs to Samsung's registration rather than to us, and
+        the CAs will eventually roll over too.
         """
         autor = self._cached(SAMSUNG_CERT_CA_AUTHOR)
         dist = self._cached(SAMSUNG_CERT_CA_DISTRIBUTOR)
-        cid = self._cached("client_id.txt")
+        cid = self._cached(LOGIN_URL_FILE)
         if autor and dist and cid:
-            return {"author_ca": autor, "distributor_ca": dist, "client_id": cid}
+            return {"author_ca": autor, "distributor_ca": dist, "login_url": cid}
 
         log("Fetching Samsung's certificate tooling...")
         versao = self._latest_extension_version()
@@ -102,12 +115,12 @@ class SamsungCertificate:
 
         autor = self._cached(SAMSUNG_CERT_CA_AUTHOR)
         dist = self._cached(SAMSUNG_CERT_CA_DISTRIBUTOR)
-        cid = self._cached("client_id.txt")
+        cid = self._cached(LOGIN_URL_FILE)
         if not (autor and dist and cid):
             raise SamsungCertificateError(
                 "the extension did not contain the expected certificates"
             )
-        return {"author_ca": autor, "distributor_ca": dist, "client_id": cid}
+        return {"author_ca": autor, "distributor_ca": dist, "login_url": cid}
 
     def _latest_extension_version(self) -> str:
         """Ask Samsung which version of the extension is current."""
@@ -159,62 +172,100 @@ class SamsungCertificate:
                     raise SamsungCertificateError(f"{destino} missing from the plugin")
                 (self.cache / destino).write_bytes(z.read(nome))
 
-            # The client id is compiled into the sign-in dialog; the class file
-            # is searched rather than parsed, which is enough for a token.
-            cid = self._client_id_from_jar(z)
-            if not cid:
-                raise SamsungCertificateError("could not find the sign-in client id")
-            (self.cache / "client_id.txt").write_text(cid, encoding="utf-8")
+            # The whole sign-in URL is compiled into the dialog as one string
+            # constant, redirect target included. Taking it whole is what keeps
+            # the redirect registered.
+            url = self._login_url_from_jar(z)
+            if not url:
+                raise SamsungCertificateError("could not find the sign-in URL")
+            (self.cache / LOGIN_URL_FILE).write_text(url, encoding="utf-8")
         log("Samsung certificate tooling ready")
 
     @staticmethod
-    def _client_id_from_jar(z: zipfile.ZipFile) -> str:
-        """Pull the sign-in client id out of the compiled dialog.
+    def _login_url_from_jar(z: zipfile.ZipFile) -> str:
+        """Pull the sign-in URL out of the compiled dialog.
 
-        It is a ten-character token mixing letters and digits, stored as a
-        string constant. Reading the class file beats writing the value here:
-        Samsung has already rotated it once.
+        Class files store string constants as plain UTF-8 runs, so the URL can
+        be found without parsing the constant pool: the surrounding bytes are
+        pool tags and lengths, which are not printable and end the match.
         """
         for nome in z.namelist():
             if "SigninDialog" not in nome:
                 continue
-            dados = z.read(nome)
-            for m in re.finditer(rb"(?<![A-Za-z0-9])([a-z0-9]{10})(?![A-Za-z0-9])", dados):
-                candidato = m.group(1).decode()
-                if any(c.isdigit() for c in candidato) and any(
-                    c.isalpha() for c in candidato
-                ):
+            for m in _LOGIN_URL.finditer(z.read(nome)):
+                candidato = m.group(0).decode()
+                # The dialog holds several account.samsung.com URLs; the one
+                # that starts a login is the one naming where to come back to.
+                if "redirect_uri=" in candidato:
                     return candidato
         return ""
+
+    @staticmethod
+    def redirect_target(login_url: str) -> Tuple[int, str]:
+        """Return the loopback port and path Samsung will call back on."""
+        alvo = urllib.parse.parse_qs(
+            urllib.parse.urlparse(login_url).query
+        ).get("redirect_uri", [""])[0]
+        partes = urllib.parse.urlparse(alvo)
+        if partes.hostname not in ("localhost", "127.0.0.1") or not partes.port:
+            raise SamsungCertificateError(
+                f"unexpected sign-in redirect target: {alvo or login_url}"
+            )
+        return partes.port, partes.path or "/"
 
     # ------------------------------------------------------------------
     # The login, in the user's own browser
     # ------------------------------------------------------------------
 
-    def login_url(self, client_id: str, port: int, state: str) -> str:
-        return (
-            f"{SAMSUNG_CERT_LOGIN}?clientId={client_id}&tokenType=TOKEN"
-            f"&redirect_uri=http://127.0.0.1:{port}/callback&state={state}"
-        )
+    @staticmethod
+    def parse_callback(corpo: str) -> Dict[str, str]:
+        """Read the account details out of the callback Samsung posts.
 
-    def wait_for_token(self, port: int, state: str, timeout: int = 300) -> Dict:
-        """Serve loopback until Samsung redirects back with the token.
+        The body is one form field carrying a JSON document. Older builds sent
+        the fields as a query string instead, and both shapes still turn up, so
+        both are read.
+        """
+        campos = urllib.parse.parse_qs(corpo)
+        carga = (campos.get("code") or campos.get("response") or [corpo])[0].strip()
+
+        dados: Dict[str, str] = {}
+        if carga.startswith("{"):
+            try:
+                dados = {k: str(v) for k, v in json.loads(carga).items()}
+            except ValueError as e:
+                raise SamsungCertificateError(f"unreadable sign-in reply: {e}") from e
+        else:
+            dados = {
+                k: v[0]
+                for k, v in urllib.parse.parse_qs(carga.lstrip("?")).items()
+            }
+
+        return {
+            "access_token": dados.get("access_token", ""),
+            # Samsung spells it userId here and user_id in the issuing API.
+            "user_id": dados.get("userId") or dados.get("user_id", ""),
+            "email": dados.get("inputEmailID", "").replace("%40", "@"),
+        }
+
+    def wait_for_token(self, port: int, path: str, timeout: int = 300) -> Dict[str, str]:
+        """Serve loopback until Samsung posts the account details back.
 
         Bound to 127.0.0.1 and shut down as soon as the answer arrives, so
         nothing is reachable from the network and nothing outlives the login.
+        The port is Samsung's, not ours, so it cannot be moved out of the way
+        if something else holds it -- hence the explicit message.
         """
-        resultado: Dict = {}
+        resultado: Dict[str, str] = {}
+        falha: Dict[str, str] = {}
         pronto = threading.Event()
+        cert = self
 
         class Handler(http.server.BaseHTTPRequestHandler):
-            def do_GET(self):  # noqa: N802 - required name
-                partes = urllib.parse.urlparse(self.path)
-                campos = urllib.parse.parse_qs(partes.query)
-                if campos.get("state", [""])[0] != state:
-                    # Only our own redirect may deliver a token.
-                    self.send_error(400)
-                    return
-                resultado.update({k: v[0] for k, v in campos.items()})
+            def _entregar(self, corpo: str) -> None:
+                try:
+                    resultado.update(cert.parse_callback(corpo))
+                except SamsungCertificateError as e:
+                    falha["reason"] = str(e)
                 self.send_response(200)
                 self.send_header("Content-Type", "text/html; charset=utf-8")
                 self.end_headers()
@@ -225,10 +276,30 @@ class SamsungCertificate:
                 )
                 pronto.set()
 
+            def do_POST(self):  # noqa: N802 - required name
+                if urllib.parse.urlparse(self.path).path != path:
+                    self.send_error(404)
+                    return
+                tamanho = int(self.headers.get("Content-Length") or 0)
+                self._entregar(self.rfile.read(tamanho).decode("utf-8", "replace"))
+
+            def do_GET(self):  # noqa: N802 - required name
+                partes = urllib.parse.urlparse(self.path)
+                if partes.path != path:
+                    self.send_error(404)
+                    return
+                self._entregar(partes.query)
+
             def log_message(self, *args):
                 pass
 
-        servidor = http.server.HTTPServer(("127.0.0.1", port), Handler)
+        try:
+            servidor = http.server.HTTPServer(("127.0.0.1", port), Handler)
+        except OSError as e:
+            raise SamsungCertificateError(
+                f"port {port} is busy, and Samsung only accepts that one: {e}"
+            ) from e
+
         threading.Thread(target=servidor.serve_forever, daemon=True).start()
         try:
             if not pronto.wait(timeout):
@@ -236,17 +307,10 @@ class SamsungCertificate:
         finally:
             servidor.shutdown()
             servidor.server_close()
+
+        if falha:
+            raise SamsungCertificateError(falha["reason"])
         return resultado
-
-    @staticmethod
-    def free_port() -> int:
-        with socket.socket() as s:
-            s.bind(("127.0.0.1", 0))
-            return s.getsockname()[1]
-
-    @staticmethod
-    def new_state() -> str:
-        return secrets.token_urlsafe(16)
 
     # ------------------------------------------------------------------
     # Issuing the pair
@@ -394,7 +458,8 @@ class SamsungCertificateFlow:
         def run() -> None:
             try:
                 cas = self.cert.ensure_extension(log)
-                client_id = cas["client_id"].read_text(encoding="utf-8").strip()
+                url = cas["login_url"].read_text(encoding="utf-8").strip()
+                porta, caminho = self.cert.redirect_target(url)
 
                 duid = self.docker.read_duid(tv_ip)
                 if not duid:
@@ -403,15 +468,12 @@ class SamsungCertificateFlow:
                     )
                 log(f"TV id: {duid}")
 
-                porta = self.cert.free_port()
-                state = self.cert.new_state()
-                url = self.cert.login_url(client_id, porta, state)
                 log("Waiting for the Samsung sign-in in your browser...")
                 webbrowser.open(url)
 
-                dados = self.cert.wait_for_token(porta, state)
+                dados = self.cert.wait_for_token(porta, caminho)
                 token = dados.get("access_token", "")
-                user = dados.get("userId") or dados.get("user_id", "")
+                user = dados.get("user_id", "")
                 if not (token and user):
                     raise SamsungCertificateError(
                         "the sign-in did not return a token"
