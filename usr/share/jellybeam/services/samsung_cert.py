@@ -48,6 +48,7 @@ from typing import Callable, Dict, List, Optional, Tuple
 
 from utils.i18n import _
 from utils.constants import (
+    CERT_PASSWORD_FILE,
     SAMSUNG_CERT_AUTHOR_API,
     SAMSUNG_CERT_CA_AUTHOR,
     SAMSUNG_CERT_CA_DISTRIBUTOR,
@@ -369,7 +370,29 @@ class SamsungCertificate:
             # value the Certificate Manager asks people to paste by hand.
             san=f"URI:URN:tizen:packageid=,URI:URN:tizen:deviceid={duid}",
         )
+        self.save_password(destino, password)
         return autor, dist
+
+    @staticmethod
+    def save_password(destino: Path, password: str) -> None:
+        """Keep the generated password beside the .p12 files it opens.
+
+        The password is random and the user never sees it, so without this the
+        certificate is unusable the next time the app opens. Kept as a 0600
+        file next to 0600 files, which is the same protection the .p12 has --
+        and what Tizen Studio does, less the reversible obfuscation.
+        """
+        arquivo = destino / CERT_PASSWORD_FILE
+        arquivo.write_text(password, encoding="utf-8")
+        arquivo.chmod(0o600)
+
+    @staticmethod
+    def load_password(destino: Path) -> str:
+        """The password saved by save_password, or '' if there is none."""
+        try:
+            return (destino / CERT_PASSWORD_FILE).read_text(encoding="utf-8").strip()
+        except OSError:
+            return ""
 
     def _one(
         self,
@@ -464,6 +487,16 @@ class SamsungCertificateFlow:
         self.docker = docker_service
         self.cert = SamsungCertificate(cache_dir)
         self.destino = destino
+
+    def owns(self, cert_path: str) -> bool:
+        """True if the certificate at cert_path was issued by this flow."""
+        try:
+            return Path(cert_path).resolve().parent == self.destino.resolve()
+        except (OSError, ValueError):
+            return False
+
+    def saved_password(self) -> str:
+        return self.cert.load_password(self.destino)
 
     def create_async(
         self,

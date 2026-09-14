@@ -335,10 +335,12 @@ class CertificatesPage(Gtk.ScrolledWindow):
         self.cert_service_samsung.create_async(tv_ip, log, done)
 
     def _on_password_changed(self, entry):
-        """Handle password changes (kept in memory only, not persisted).
+        """Handle password changes.
 
         Held on the window rather than in the config file: the installer needs
         it, and a certificate password does not belong in plain JSON on disk.
+        The one exception is the certificate this app issues itself, whose
+        random password is kept beside its .p12 files (see save_password).
         """
         self.window.certificate_password = entry.get_text()
         self._check_certificate_completeness()
@@ -360,6 +362,17 @@ class CertificatesPage(Gtk.ScrolledWindow):
             self.dist_cert_row.set_subtitle(filename)
             self.dist_cert_ok.set_visible(True)
             self.dist_cert_button.set_label(_("Change"))
+
+        # A certificate this app issued comes with its own password; the user
+        # never saw it, so it is the one case where it is filled in for them.
+        if (
+            author_path
+            and not self.password_row.get_text()
+            and self.cert_service_samsung.owns(author_path)
+        ):
+            saved = self.cert_service_samsung.saved_password()
+            if saved:
+                self.password_row.set_text(saved)
 
     def _check_certificate_completeness(self):
         """Check if all required certificate info is provided for custom mode."""

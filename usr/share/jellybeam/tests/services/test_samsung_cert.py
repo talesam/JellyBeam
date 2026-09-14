@@ -120,6 +120,16 @@ class TestErrorDescription:
         assert "400" in _error_description(_http_error(b"<html>nope</html>"))
 
 
+class TestSavedPassword:
+    def test_round_trips_and_is_private(self, tmp_path):
+        SamsungCertificate.save_password(tmp_path, "s3cret")
+        assert SamsungCertificate.load_password(tmp_path) == "s3cret"
+        assert (tmp_path / ".password").stat().st_mode & 0o777 == 0o600
+
+    def test_missing_file_is_empty_not_an_error(self, tmp_path):
+        assert SamsungCertificate.load_password(tmp_path) == ""
+
+
 class TestMultipart:
     def test_keeps_a_repeated_field_name(self):
         """The distributor request sends platform twice; a dict would drop one."""
