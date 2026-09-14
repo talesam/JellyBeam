@@ -1126,6 +1126,12 @@ echo "Package unpacked"
                     os.path.join(self.workspace_host, CUSTOMIZATION_PKG_DIR)
                 )
                 log_progress("Replaced the launcher icon with the square one")
+                if customization.patch_avplay(
+                    os.path.join(self.workspace_host, CUSTOMIZATION_PKG_DIR)
+                ):
+                    log_progress("Native player: aspect ratio now follows the video")
+                else:
+                    log_progress("Native player not patched (not present or changed)")
 
                 par = self.device_certificate(log_progress, cert_password)
                 certs, senha = par if par else (None, "")

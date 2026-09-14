@@ -1,0 +1,68 @@
+"""The AVPlay player stretches video unless told otherwise; the patch tells it.
+
+The fixture below is the shape of jellyfin-tizen's avplayVideoPlayer.js around
+the two anchors the patch relies on, not the whole file.
+"""
+
+from services import customization
+from services.customization import AVPLAY_FILE
+
+FIXTURE = """function _AvplayVideoPlayer(modules) {
+    this.name = "AVPlay Video Player";
+
+    this.canPlayMediaType = function (mediaType) {
+        return (mediaType || '').toLowerCase() === 'video';
+    };
+
+    this.setCurrentSrc = function (elem, options) {
+        var self = this;
+        return new Promise(function (resolve, reject) {
+            webapis.avplay.open(options.url);
+            webapis.avplay.setDisplayRect(elem.offsetLeft, elem.offsetTop, elem.offsetWidth, elem.offsetHeight);
+
+            webapis.avplay.prepareAsync(resolve, reject);
+        });
+    }
+}
+"""
+
+
+def _pkg(tmp_path, source=FIXTURE):
+    (tmp_path / AVPLAY_FILE).write_text(source, encoding="utf-8")
+    return tmp_path
+
+
+def test_adds_the_feature_and_applies_it_before_prepare(tmp_path):
+    assert customization.patch_avplay(_pkg(tmp_path)) is True
+    fonte = (tmp_path / AVPLAY_FILE).read_text(encoding="utf-8")
+
+    # jellyfin-web asks for these to show the aspect-ratio menu.
+    for metodo in ("this.supports", "this.getSupportedAspectRatios",
+                   "this.getAspectRatio", "this.setAspectRatio"):
+        assert metodo in fonte
+
+    # The default keeps the video's own shape, and it is applied in IDLE:
+    # after the display rect is set, before prepareAsync.
+    assert "PLAYER_DISPLAY_MODE_AUTO_ASPECT_RATIO" in fonte
+    rect = fonte.index("setDisplayRect(")
+    apply = fonte.index("self._applyDisplayMethod();")
+    prepare = fonte.index("prepareAsync(")
+    assert rect < apply < prepare
+
+
+def test_is_idempotent(tmp_path):
+    customization.patch_avplay(_pkg(tmp_path))
+    primeira = (tmp_path / AVPLAY_FILE).read_text(encoding="utf-8")
+    assert customization.patch_avplay(tmp_path) is True
+    assert (tmp_path / AVPLAY_FILE).read_text(encoding="utf-8") == primeira
+
+
+def test_standard_build_has_nothing_to_patch(tmp_path):
+    """The HTML5 player keeps the aspect ratio by itself; no file, no patch."""
+    assert customization.patch_avplay(tmp_path) is False
+
+
+def test_upstream_rewrite_is_skipped_not_fatal(tmp_path):
+    _pkg(tmp_path, "function _AvplayVideoPlayer() { /* rewritten */ }\n")
+    assert customization.patch_avplay(tmp_path) is False
+    assert "JellyBeam" not in (tmp_path / AVPLAY_FILE).read_text(encoding="utf-8")

@@ -70,6 +70,90 @@ PathLike = Union[str, Path]
 ASSETS_DIR = Path(__file__).resolve().parent.parent / "assets"
 
 
+AVPLAY_FILE = "avplayVideoPlayer.js"
+_AVPLAY_MARKER = "/* JellyBeam:aspect */"
+
+# Anchors in jellyfin-tizen's AVPlay player. The first is where the player's
+# feature methods start; the second is the call that sizes the video, made in
+# the IDLE state, where setDisplayMethod may also be called.
+_AVPLAY_METHODS_ANCHOR = "    this.canPlayMediaType = function (mediaType) {"
+_AVPLAY_RECT_ANCHOR = (
+    "            webapis.avplay.setDisplayRect("
+    "elem.offsetLeft, elem.offsetTop, elem.offsetWidth, elem.offsetHeight);"
+)
+
+# The AVPlay display method is what decides whether the picture keeps its
+# shape. The stock player never sets it, so the platform default applies and
+# stretches every film to the full 16:9 panel. This adds the aspect-ratio
+# feature jellyfin-web already knows how to show a menu for, mapped onto the
+# three AVPlay modes, with "auto" -- the video's own DAR/PAR -- as default.
+_AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
+    this._displayModes = {{
+        auto: 'PLAYER_DISPLAY_MODE_AUTO_ASPECT_RATIO',
+        letterbox: 'PLAYER_DISPLAY_MODE_LETTER_BOX',
+        fill: 'PLAYER_DISPLAY_MODE_FULL_SCREEN'
+    }};
+    this._displayModeKey = 'jellybeam-avplay-display';
+    this._applyDisplayMethod = function () {{
+        var mode = this._displayModes[this.getAspectRatio()] || this._displayModes.auto;
+        try {{
+            webapis.avplay.setDisplayMethod(mode);
+        }} catch (e) {{
+            console.warn('setDisplayMethod failed', e);
+        }}
+    }};
+    this.supports = function (feature) {{
+        return feature === 'SetAspectRatio';
+    }};
+    this.getSupportedAspectRatios = function () {{
+        return [
+            {{ name: 'Auto', id: 'auto' }},
+            {{ name: 'Letterbox', id: 'letterbox' }},
+            {{ name: 'Fill', id: 'fill' }}
+        ];
+    }};
+    this.getAspectRatio = function () {{
+        var saved = '';
+        try {{ saved = localStorage.getItem(this._displayModeKey) || ''; }} catch (e) {{}}
+        return this._displayModes[saved] ? saved : 'auto';
+    }};
+    this.setAspectRatio = function (value) {{
+        if (!this._displayModes[value]) {{ return; }}
+        try {{ localStorage.setItem(this._displayModeKey, value); }} catch (e) {{}}
+        this._applyDisplayMethod();
+    }};
+
+"""
+_AVPLAY_RECT_FOLLOWUP = "            self._applyDisplayMethod();\n"
+
+
+def patch_avplay(pkg_dir: PathLike) -> bool:
+    """Give the AVPlay player an aspect-ratio setting, defaulting to the video's.
+
+    Returns False when there is nothing to patch: the standard build has no
+    AVPlay player (its HTML5 video keeps the aspect ratio by itself), and an
+    upstream rewrite that moves the anchors is logged rather than fatal --
+    the install still goes through, just without this fix.
+    """
+    arquivo = Path(pkg_dir) / AVPLAY_FILE
+    if not arquivo.is_file():
+        _logger.info("No %s in the package; nothing to patch", AVPLAY_FILE)
+        return False
+    fonte = arquivo.read_text(encoding="utf-8")
+    if _AVPLAY_MARKER in fonte:
+        return True
+    if _AVPLAY_METHODS_ANCHOR not in fonte or _AVPLAY_RECT_ANCHOR not in fonte:
+        _logger.warning("%s changed upstream; aspect-ratio patch skipped", AVPLAY_FILE)
+        return False
+    fonte = fonte.replace(_AVPLAY_METHODS_ANCHOR, _AVPLAY_METHODS + _AVPLAY_METHODS_ANCHOR, 1)
+    fonte = fonte.replace(
+        _AVPLAY_RECT_ANCHOR, _AVPLAY_RECT_ANCHOR + "\n" + _AVPLAY_RECT_FOLLOWUP, 1
+    )
+    arquivo.write_text(fonte, encoding="utf-8")
+    _logger.info("Patched %s with the aspect-ratio setting", AVPLAY_FILE)
+    return True
+
+
 def replace_icon(pkg_dir: PathLike, icon: Optional[PathLike] = None) -> Path:
     """Overwrite the package's launcher icon with the square one we ship.
 
