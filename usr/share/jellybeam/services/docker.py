@@ -6,6 +6,7 @@ import threading
 import os
 import shutil
 import tempfile
+from pathlib import Path
 from typing import Callable, List, Optional, Tuple
 
 from gi.repository import GLib
@@ -53,7 +54,12 @@ from utils.constants import (
     TIMEOUT_DOCKER_SDK_SETUP,
 )
 from utils.config import ConfigManager
-from utils.exceptions import CustomizationError, DockerError
+from utils.exceptions import (
+    AppInstallError,
+    CustomizationError,
+    DockerError,
+    SamsungCertificateError,
+)
 from services import customization
 
 
@@ -1059,10 +1065,24 @@ class DockerService:
 
         destino = os.path.join(self.workspace_host, DEVICE_CERT_DIR)
         os.makedirs(destino, exist_ok=True)
-        shutil.copy2(autor, os.path.join(destino, CERT_AUTHOR_FILENAME))
-        shutil.copy2(dist, os.path.join(destino, CERT_DISTRIBUTOR_FILENAME))
+        # Not copied: rewrapped. The CLI in the container only opens legacy
+        # PKCS#12, and it misreads a password that happens to be valid base64
+        # (see safe_password). Rewrapping with a password of our own makes
+        # both problems impossible whatever the user brought -- and a wrong
+        # user password fails right here, with a message, instead of as an
+        # "Author password:" prompt inside an unattended install.
+        from services.samsung_cert import rewrap_p12, safe_password
+
+        senha_assinatura = safe_password()
+        try:
+            rewrap_p12(Path(autor), senha, Path(destino) / CERT_AUTHOR_FILENAME, senha_assinatura)
+            rewrap_p12(Path(dist), senha, Path(destino) / CERT_DISTRIBUTOR_FILENAME, senha_assinatura)
+        except SamsungCertificateError as e:
+            raise AppInstallError(
+                self.config.get("device.ip", ""), e.details.get("reason", str(e))
+            ) from e
         log_progress("Signing with your own certificate...")
-        return destino, senha
+        return destino, senha_assinatura
 
     def install_jellyfin_customized_async(
         self,

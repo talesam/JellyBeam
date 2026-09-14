@@ -457,6 +457,63 @@ class SamsungCertificate:
             raise SamsungCertificateError(f"openssl failed: {(r.stderr or '').strip()[:200]}")
 
 
+def safe_password() -> str:
+    """A random password the Tizen CLI will take at face value.
+
+    profiles.xml normally holds passwords encrypted and base64-encoded, and
+    the CLI tries to decode the field first, falling back to using it as plain
+    text only when decoding fails. A random alphanumeric string of 16
+    characters IS valid base64: it decodes to garbage, the garbage is used as
+    the password, and the CLI prompts "Author password:" in the middle of an
+    unattended install. Measured in the container: 16 alphanumerics fail;
+    the same string with a '.' in it, or one character shorter, signs fine.
+    About 60% of token_urlsafe(12) outputs have no '-' or '_' and hit this.
+
+    A '.' is outside both base64 alphabets and harmless in XML and sed.
+    """
+    corpo = secrets.token_urlsafe(12).replace("-", "a").replace("_", "b")
+    return f"{corpo[:8]}.{corpo[8:]}"
+
+
+def looks_like_base64(password: str) -> bool:
+    """True if the Tizen CLI would try to decode this instead of using it."""
+    return bool(re.fullmatch(r"[A-Za-z0-9+/]+={0,2}", password)) and len(password) % 4 == 0
+
+
+def rewrap_p12(src: Path, password: str, dst: Path, new_password: str) -> None:
+    """Rewrite a .p12 with a new password, in the legacy encryption.
+
+    Used on the way into the signing container for certificates the user
+    brought themselves: whatever password and PKCS#12 flavour they came with,
+    what the CLI sees is a file it can open. A wrong password fails here, in
+    the app, with a message -- not later as a prompt nobody can answer.
+    """
+    from cryptography.hazmat.primitives import hashes
+    from cryptography.hazmat.primitives.serialization import PrivateFormat, pkcs12
+
+    try:
+        chave, folha, extras = pkcs12.load_key_and_certificates(
+            src.read_bytes(), password.encode("utf-8") or None
+        )
+    except ValueError as e:
+        raise SamsungCertificateError(
+            f"could not open {src.name}: wrong password or unreadable file"
+        ) from e
+    if chave is None or folha is None:
+        raise SamsungCertificateError(f"{src.name} does not hold a key and certificate")
+    legado = (
+        PrivateFormat.PKCS12.encryption_builder()
+        .kdf_rounds(2048)
+        .key_cert_algorithm(pkcs12.PBES.PBESv1SHA1And3KeyTripleDESCBC)
+        .hmac_hash(hashes.SHA1())
+        .build(new_password.encode("utf-8"))
+    )
+    dst.write_bytes(
+        pkcs12.serialize_key_and_certificates(b"usercertificate", chave, folha, extras, legado)
+    )
+    dst.chmod(0o600)
+
+
 def write_legacy_p12(p12: Path, key_pem: bytes, cert_pem: bytes, ca_pem: bytes, password: str) -> None:
     """Write a PKCS#12 in the old encryption Tizen's tooling can read.
 
@@ -548,7 +605,7 @@ class SamsungCertificateFlow:
                         "the sign-in did not return a token"
                     )
 
-                senha = secrets.token_urlsafe(12)
+                senha = safe_password()
                 autor, dist = self.cert.issue(
                     duid, token, user, self.destino, senha, cas, log
                 )

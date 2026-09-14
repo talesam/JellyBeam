@@ -187,6 +187,57 @@ class TestLegacyP12:
         assert len(extras) == 1  # the CA travels with the leaf
 
 
+class TestSafePassword:
+    """The Tizen CLI base64-decodes a password that looks decodable; ours never does."""
+
+    def test_never_looks_like_base64(self):
+        from services.samsung_cert import looks_like_base64, safe_password
+
+        for _ in range(500):
+            assert not looks_like_base64(safe_password())
+
+    def test_detector_matches_what_the_cli_did(self):
+        """Cases measured in the container: the first failed, the rest signed."""
+        from services.samsung_cert import looks_like_base64
+
+        assert looks_like_base64("Abcdefgh12345678")
+        assert not looks_like_base64("Abcdefgh1234567")
+        assert not looks_like_base64("Abcdefg-12345678")
+        assert not looks_like_base64("Abcdefg.12345678")
+
+    def test_is_safe_for_sed_and_xml(self):
+        from services.samsung_cert import safe_password
+
+        for _ in range(200):
+            assert not set(safe_password()) & set("&\\/<>\"'")
+
+
+class TestRewrap:
+    def test_rewraps_with_a_new_password_and_keeps_the_chain(self, tmp_path):
+        from cryptography.hazmat.primitives.serialization import pkcs12
+
+        from services.samsung_cert import rewrap_p12, write_legacy_p12
+
+        chave, folha = TestLegacyP12._self_signed("leaf")
+        _, ca = TestLegacyP12._self_signed("ca")
+        origem = tmp_path / "user.p12"
+        write_legacy_p12(origem, chave, folha, ca, "Abcdefgh12345678")  # a bad one
+        destino = tmp_path / "author.p12"
+        rewrap_p12(origem, "Abcdefgh12345678", destino, "Abcdefg.12345678")
+        k, c, extras = pkcs12.load_key_and_certificates(destino.read_bytes(), b"Abcdefg.12345678")
+        assert k is not None and c is not None and len(extras) == 1
+        assert destino.stat().st_mode & 0o777 == 0o600
+
+    def test_wrong_password_fails_here_with_a_message(self, tmp_path):
+        from services.samsung_cert import rewrap_p12, write_legacy_p12
+
+        chave, folha = TestLegacyP12._self_signed("leaf")
+        origem = tmp_path / "user.p12"
+        write_legacy_p12(origem, chave, folha, folha, "right")
+        with pytest.raises(SamsungCertificateError, match="wrong password"):
+            rewrap_p12(origem, "wrong", tmp_path / "out.p12", "x.y")
+
+
 class TestSavedPassword:
     def test_round_trips_and_is_private(self, tmp_path):
         SamsungCertificate.save_password(tmp_path, "s3cret")
