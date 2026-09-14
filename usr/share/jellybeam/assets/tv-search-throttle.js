@@ -1,25 +1,28 @@
 /* JellyBeam -- make search usable on a television.
  *
- * jellyfin-web's search page has no debounce: every keystroke updates React
- * state, re-renders the page and starts seven queries (people, artists,
- * studios, video, programs, live TV, items), the items one asking for 800
- * results with full fields. A PC absorbs that; on a Tizen set the renders
- * and the responses pile up and the on-screen keyboard itself starts to lag.
+ * jellyfin-web's search page has no debounce: every keystroke starts seven
+ * queries (people, artists, studios, video, programs, live TV, items), the
+ * items one asking for 800 results with full fields. A PC absorbs that; on a
+ * Tizen set each response costs about half a second of network and JSON
+ * parsing, so typing "top" queued 21 requests and the last answer arrived
+ * four seconds after the last key (measured on an LSP3).
  *
- * Two changes:
- *   - typing gate: the browser updates the text field instantly as usual,
- *     but React only hears about it once typing has paused for WAIT ms --
- *     one render, one round of queries. Nothing is cancelled or retried; an
- *     earlier version aborted in-flight requests and React Query's retries
- *     made the keyboard unusable.
- *   - cap: limit=N above MAX_LIMIT becomes MAX_LIMIT on search requests.
+ * The fix acts where requests leave the page and touches nothing the user
+ * types -- two earlier designs taught why:
+ *   - aborting superseded requests made React Query retry them, and the
+ *     retries thrashed the on-screen keyboard;
+ *   - holding the input event back from React lost letters: React restores
+ *     a controlled field to the value it knows on every re-render.
+ * So: a search request waits WAIT ms; if a newer term for the same endpoint
+ * has appeared by then, the older request is simply never sent -- no error,
+ * no abort, nothing to retry. The caller's own cancellation (React Query's
+ * AbortSignal) still works as before. limit=N above MAX_LIMIT is capped.
  */
 (function () {
     'use strict';
 
     var WAIT = 500;
     var MAX_LIMIT = 60;
-    var INPUT_ID = 'searchTextInput';
 
     function isSearch(url) {
         return /[?&]searchTerm=/i.test(String(url));
@@ -32,56 +35,77 @@
         });
     }
 
-    /* Trailing-edge debounce with an injectable scheduler (tests drive it).
-     * Only the callback handed to the last call within `wait` runs. */
-    function createDebounce(wait, schedule, cancel) {
-        var handle = null;
-        return function (fn) {
-            if (handle !== null) { cancel(handle); }
-            handle = schedule(function () { handle = null; fn(); }, wait);
+    function pathOf(url) {
+        var s = String(url);
+        var i = s.indexOf('?');
+        return i < 0 ? s : s.slice(0, i);
+    }
+
+    function termOf(url) {
+        var m = /[?&]searchTerm=([^&]*)/i.exec(String(url));
+        return m ? m[1] : '';
+    }
+
+    /* The gate. `schedule(fn, ms)` is injectable so tests can drive time.
+     * send() runs only if no newer term for that path arrived meanwhile;
+     * otherwise nothing happens at all. */
+    function createGate(wait, schedule) {
+        var latest = {};
+        return {
+            request: function (path, term, send) {
+                latest[path] = term;
+                schedule(function () {
+                    if (latest[path] === term) { send(); }
+                }, wait);
+            }
         };
     }
 
     if (typeof window !== 'undefined') {
-        window.JellyBeamSearch = { isSearch: isSearch, capLimit: capLimit, createDebounce: createDebounce };
+        window.JellyBeamSearch = { isSearch: isSearch, capLimit: capLimit, createGate: createGate, termOf: termOf, pathOf: pathOf };
     }
     if (typeof document === 'undefined') { return; }
 
-    // --- typing gate ---
-    // React listens at its root container; a capturing listener on document
-    // runs first and can keep the event from ever reaching it. The field's
-    // own value is already updated by then, so the user sees every letter.
-    var later = createDebounce(WAIT,
-        function (fn, ms) { return setTimeout(fn, ms); },
-        function (h) { clearTimeout(h); });
-    document.addEventListener('input', function (e) {
-        var t = e.target;
-        if (!t || t.id !== INPUT_ID || e.jellybeamReplay) { return; }
-        e.stopImmediatePropagation();
-        later(function () {
-            var replay = new Event('input', { bubbles: true });
-            replay.jellybeamReplay = true;
-            t.dispatchEvent(replay);
-        });
-    }, true);
+    var gate = createGate(WAIT, function (fn, ms) { setTimeout(fn, ms); });
 
-    // --- result cap ---
+    // --- XMLHttpRequest (axios / @jellyfin/sdk) ---
     if (typeof XMLHttpRequest !== 'undefined') {
-        var open = XMLHttpRequest.prototype.open;
-        XMLHttpRequest.prototype.open = function (method, url) {
+        var proto = XMLHttpRequest.prototype;
+        var open = proto.open;
+        var send = proto.send;
+        proto.open = function (method, url) {
+            this._jbSearch = isSearch(url);
             var args = Array.prototype.slice.call(arguments);
-            if (isSearch(url)) { args[1] = capLimit(url); }
+            if (this._jbSearch) {
+                args[1] = capLimit(url);
+                this._jbPath = pathOf(url);
+                this._jbTerm = termOf(url);
+            }
             return open.apply(this, args);
         };
+        proto.send = function (body) {
+            if (!this._jbSearch) { return send.call(this, body); }
+            var xhr = this;
+            gate.request(xhr._jbPath, xhr._jbTerm, function () {
+                // The caller may have cancelled it in the meantime.
+                if (xhr.readyState === 1) { send.call(xhr, body); }
+            });
+        };
     }
+
+    // --- fetch (legacy ApiClient) ---
     if (typeof window.fetch === 'function') {
         var fetch0 = window.fetch;
         window.fetch = function (input, init) {
             var url = (input && input.url) || input;
-            if (typeof url === 'string' && isSearch(url)) {
-                return fetch0.call(this, capLimit(url), init);
-            }
-            return fetch0.apply(this, arguments);
+            if (typeof url !== 'string' || !isSearch(url)) { return fetch0.apply(this, arguments); }
+            var capped = capLimit(url);
+            var self = this;
+            return new Promise(function (resolve, reject) {
+                gate.request(pathOf(capped), termOf(capped), function () {
+                    fetch0.call(self, capped, init).then(resolve, reject);
+                });
+            });
         };
     }
 })();
