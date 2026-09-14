@@ -1148,7 +1148,10 @@ echo "Package unpacked"
                 log_progress("Replaced the launcher icon with the square one")
                 pkg_host = os.path.join(self.workspace_host, CUSTOMIZATION_PKG_DIR)
                 customization.install_tv_scripts(pkg_host)
-                log_progress("Full HD sets: the 1080p version is preselected")
+                log_progress(
+                    "TV scripts: 1080p version preselected on Full HD sets, "
+                    "search waits for typing to pause"
+                )
                 if customization.patch_avplay(pkg_host):
                     log_progress(
                         "Native player: video ratio kept, subtitles drawn, "

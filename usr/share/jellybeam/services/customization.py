@@ -422,7 +422,7 @@ def patch_avplay(pkg_dir: PathLike) -> bool:
 
 # Scripts that ride inside the package rather than being fetched from the
 # server: they depend on Tizen APIs (webapis.*) and mean nothing elsewhere.
-TV_SCRIPTS = ("tv-fhd-versions.js",)
+TV_SCRIPTS = ("tv-fhd-versions.js", "tv-search-throttle.js")
 _TV_MARKER_START = "<!-- JellyBeam:tv -->"
 _TV_MARKER_END = "<!-- /JellyBeam:tv -->"
 _TV_BLOCK_PATTERN = re.compile(
