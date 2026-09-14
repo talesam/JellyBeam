@@ -420,6 +420,40 @@ def patch_avplay(pkg_dir: PathLike) -> bool:
     return True
 
 
+# Scripts that ride inside the package rather than being fetched from the
+# server: they depend on Tizen APIs (webapis.*) and mean nothing elsewhere.
+TV_SCRIPTS = ("tv-fhd-versions.js",)
+_TV_MARKER_START = "<!-- JellyBeam:tv -->"
+_TV_MARKER_END = "<!-- /JellyBeam:tv -->"
+_TV_BLOCK_PATTERN = re.compile(
+    re.escape(_TV_MARKER_START) + r".*?" + re.escape(_TV_MARKER_END) + r"\n?", re.DOTALL
+)
+
+
+def install_tv_scripts(pkg_dir: PathLike, scripts: Sequence[str] = TV_SCRIPTS) -> List[str]:
+    """Copy the TV-only scripts into www/ and reference them from index.html.
+
+    Kept in its own marked block, separate from the server-resource block, so
+    re-running either one never disturbs the other. Idempotent.
+    """
+    www = Path(pkg_dir) / "www"
+    index = _index_path(www)
+    for nome in scripts:
+        origem = ASSETS_DIR / nome
+        if not origem.is_file():
+            raise CustomizationInjectionError(f"TV script not found: {origem}")
+        (www / nome).write_bytes(origem.read_bytes())
+
+    content = _TV_BLOCK_PATTERN.sub("", index.read_text(encoding="utf-8"))
+    if "</body>" not in content:
+        raise CustomizationInjectionError(f"no </body> found in {index}")
+    tags = "".join(f'<script src="{html.escape(n, quote=True)}" defer></script>\n' for n in scripts)
+    block = f"{_TV_MARKER_START}\n{tags}{_TV_MARKER_END}\n"
+    index.write_text(content.replace("</body>", block + "</body>", 1), encoding="utf-8")
+    _logger.info("Installed %d TV script(s) into %s", len(scripts), www)
+    return list(scripts)
+
+
 def replace_icon(pkg_dir: PathLike, icon: Optional[PathLike] = None) -> Path:
     """Overwrite the package's launcher icon with the square one we ship.
 
