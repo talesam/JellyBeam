@@ -48,13 +48,39 @@ FIXTURE = """function _AvplayVideoPlayer(modules) {
     }
 
     this.setSubtitleStreamIndex = function (streamIndex) {
+        var self = this;
         if (track) {
-            webapis.avplay.setSelectTrack('TEXT', streamIndex);
+            if (track.DeliveryMethod === 'External') {
+                var downloadRequest = new tizen.DownloadRequest(window.ApiClient.getUrl(track.DeliveryUrl), 'wgt-private-tmp');
+                tizen.download.start(downloadRequest, {});
+            } else if (track.DeliveryMethod === 'Embed') {
+                webapis.avplay.setSelectTrack('TEXT', streamIndex);
+            }
         } else {
             webapis.avplay.setSilentSubtitle(true);
         }
     }
+
+    this.setSubtitleOffset = function (offset) {
+        var offsetValue = parseFloat(offset) * 1000;
+    }
 }
+"""
+
+SAMPLE_VTT = """WEBVTT
+
+NOTE a comment block
+
+1
+00:00:01.000 --> 00:00:02.500
+<i>Star City.</i> Luna 16,
+you are crossing 100 km.
+
+00:01:00.000 --> 00:01:01.000 align:start
+Second cue
+
+01:02:03,400 --> 01:02:04,000
+Comma timestamps, SRT style
 """
 
 
@@ -121,8 +147,48 @@ class TestSubtitles:
 
     def test_hidden_when_switched_off_stopped_or_source_changes(self, tmp_path):
         fonte = _patched(tmp_path)
-        assert "webapis.avplay.setSilentSubtitle(true);\n            this._hideSubtitle();" in fonte
-        assert fonte.count("_hideSubtitle();") >= 3  # off, stop, new source
+        assert "webapis.avplay.setSilentSubtitle(true);\n            this._clearVtt();" in fonte
+        assert fonte.count("_clearVtt();") >= 3  # off, stop, new source
+
+    def test_external_subtitles_bypass_tizen_download(self, tmp_path):
+        """tizen.download stalled on the real set; the page fetches the .vtt itself."""
+        fonte = _patched(tmp_path)
+        externo = fonte.index("if (track.DeliveryMethod === 'External') {")
+        nosso = fonte.index("self._loadExternalSubtitle(window.ApiClient.getUrl(track.DeliveryUrl));")
+        download = fonte.index("new tizen.DownloadRequest(")
+        assert externo < nosso < download  # ours runs first and returns
+        assert "this._parseVtt = function" in fonte
+        assert "webapis.avplay.getCurrentTime()" in fonte
+
+    def test_offset_control_shifts_the_clock(self, tmp_path):
+        fonte = _patched(tmp_path)
+        assert "var offsetValue = parseFloat(offset) * 1000;\n        this._vttOffset = offsetValue || 0;" in fonte
+
+    def test_vtt_parser_handles_real_cues(self, tmp_path):
+        """Run the actual JS parser in node against a WebVTT sample."""
+        import json
+        import shutil
+        import subprocess
+
+        if not shutil.which("node"):
+            import pytest
+            pytest.skip("node not available")
+        fonte = _patched(tmp_path)
+        script = (
+            "var webapis={}, tizen={}, window={}; var document={getElementById:function(){return null}};"
+            "var console={debug:function(){},warn:function(){}};"
+            "function localStorage(){}\n"
+            + fonte +
+            "\nvar p = new _AvplayVideoPlayer({});"
+            "process.stdout.write(JSON.stringify(p._parseVtt(" + json.dumps(SAMPLE_VTT) + ")));"
+        )
+        saida = subprocess.run(["node", "-e", script], capture_output=True, text=True, timeout=30)
+        assert saida.returncode == 0, saida.stderr
+        cues = json.loads(saida.stdout)
+        assert [c["start"] for c in cues] == [1000, 60000, 3723400]
+        assert cues[0]["end"] == 2500
+        assert cues[0]["text"] == "<i>Star City.</i> Luna 16,\nyou are crossing 100 km."
+        assert cues[2]["text"] == "Comma timestamps, SRT style"
 
 
 class TestRobustness:

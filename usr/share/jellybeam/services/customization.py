@@ -203,12 +203,82 @@ _AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
         var el = document.getElementById('jellybeam-subtitles');
         if (el) {{ el.style.display = 'none'; el.innerHTML = ''; }}
     }};
+    // External subtitles. The stock player hands the file to tizen.download
+    // and then to setExternalSubtitlePath. Seen on a real set: the download
+    // manager stalls on the server's chunked reply (158 bytes received,
+    // total reported as 0, never completes), so no cue ever arrives. The
+    // page can fetch the same URL itself -- it already talks to the server
+    // for everything else -- so the .vtt is fetched, parsed here, and shown
+    // against the player clock. No AVPlay text track involved.
+    this._vttCues = null;
+    this._vttTimer = null;
+    this._vttOffset = 0;
+    this._vttLast = null;
+    this._parseVtt = function (text) {{
+        var cues = [];
+        var ts = /(?:(\\d+):)?(\\d{{1,2}}):(\\d{{2}})[.,](\\d{{1,3}})/g;
+        var blocks = String(text || '').replace(/\\r/g, '').split(/\\n\\n+/);
+        for (var i = 0; i < blocks.length; i++) {{
+            var lines = blocks[i].split('\\n');
+            var ti = -1;
+            for (var j = 0; j < lines.length; j++) {{ if (lines[j].indexOf('-->') !== -1) {{ ti = j; break; }} }}
+            if (ti < 0) {{ continue; }}
+            var times = lines[ti].match(ts);
+            if (!times || times.length < 2) {{ continue; }}
+            var toMs = function (s) {{
+                var m = /^(?:(\\d+):)?(\\d{{1,2}}):(\\d{{2}})[.,](\\d{{1,3}})$/.exec(s);
+                return ((parseInt(m[1] || '0', 10) * 3600) + (parseInt(m[2], 10) * 60) + parseInt(m[3], 10)) * 1000 +
+                    parseInt((m[4] + '00').slice(0, 3), 10);
+            }};
+            var body = lines.slice(ti + 1).join('\\n').trim();
+            if (body) {{ cues.push({{ start: toMs(times[0]), end: toMs(times[1]), text: body }}); }}
+        }}
+        cues.sort(function (a, b) {{ return a.start - b.start; }});
+        return cues;
+    }};
+    this._clearVtt = function () {{
+        if (this._vttTimer) {{ clearInterval(this._vttTimer); this._vttTimer = null; }}
+        this._vttCues = null; this._vttLast = null;
+        this._hideSubtitle();
+    }};
+    this._tickVtt = function () {{
+        var cues = this._vttCues;
+        if (!cues) {{ return; }}
+        var now;
+        try {{ now = webapis.avplay.getCurrentTime() + (this._vttOffset || 0); }} catch (e) {{ return; }}
+        var active = null;
+        for (var i = 0; i < cues.length; i++) {{
+            if (cues[i].start > now) {{ break; }}
+            if (now < cues[i].end) {{ active = cues[i]; }}
+        }}
+        if (active !== this._vttLast) {{
+            this._vttLast = active;
+            if (active) {{ this._showSubtitle(active.text, 0); }} else {{ this._hideSubtitle(); }}
+        }}
+    }};
+    this._loadExternalSubtitle = function (url) {{
+        var self = this;
+        self._clearVtt();
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.onload = function () {{
+            if (xhr.status < 200 || xhr.status >= 300) {{
+                console.warn('subtitle fetch failed', xhr.status); return;
+            }}
+            self._vttCues = self._parseVtt(xhr.responseText);
+            console.debug('subtitle cues loaded: ' + self._vttCues.length);
+            if (self._vttTimer) {{ clearInterval(self._vttTimer); }}
+            self._vttTimer = setInterval(function () {{ self._tickVtt(); }}, 200);
+        }};
+        xhr.onerror = function () {{ console.warn('subtitle fetch error'); }};
+        xhr.send();
+    }};
 
 """
 _AVPLAY_RECT_FOLLOWUP = (
     "            self._applyDisplayMethod();\n"
     "            self._keepScreenOn(true);\n"
-    "            self._hideSubtitle();\n"
+    "            self._clearVtt();\n"
 )
 
 # Optional hooks: each is (anchor, line to insert after it). Missing ones are
@@ -239,7 +309,7 @@ _AVPLAY_HOOKS = (
     (
         "            webapis.avplay.pause();\n"
         "            console.debug('stop 2', webapis.avplay.getState());",
-        "            this._keepScreenOn(false);\n            this._hideSubtitle();",
+        "            this._keepScreenOn(false);\n            this._clearVtt();",
     ),
     # Each cue AVPlay parses arrives here with its duration in ms. Seen on a
     # real set: the text arrives, and nothing else in the app draws it.
@@ -251,7 +321,22 @@ _AVPLAY_HOOKS = (
     # Subtitles switched off in the menu.
     (
         "            webapis.avplay.setSilentSubtitle(true);",
-        "            this._hideSubtitle();",
+        "            this._clearVtt();",
+    ),
+    # External subtitle chosen: fetch and draw it here instead of handing it
+    # to tizen.download (which stalls) and AVPlay.
+    (
+        "            if (track.DeliveryMethod === 'External') {",
+        "                if (self._loadExternalSubtitle) {\n"
+        "                    self._loadExternalSubtitle(window.ApiClient.getUrl(track.DeliveryUrl));\n"
+        "                    return;\n"
+        "                }",
+    ),
+    # The offset control in the OSD; the stock code has this call commented
+    # out because AVPlay could not take it. Here it just shifts the clock.
+    (
+        "        var offsetValue = parseFloat(offset) * 1000;",
+        "        this._vttOffset = offsetValue || 0; this._vttLast = null;",
     ),
 )
 
