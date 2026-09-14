@@ -14,6 +14,19 @@ FIXTURE = """function _AvplayVideoPlayer(modules) {
         return (mediaType || '').toLowerCase() === 'video';
     };
 
+    this.getDeviceProfile = function (item, options) {
+        return Promise.resolve({
+            MaxStreamingBitrate: 120000000,
+            CodecProfiles: [{ Type: 'Video', Codec: 'h264', Conditions: [] }],
+            TranscodingProfiles: [
+                { Container: 'mkv', Type: 'Video', Protocol: '' },
+                { Container: 'ts', Type: 'Video', Protocol: 'hls' },
+                { Container: 'mp4', Type: 'Video', Protocol: 'http' },
+                { Container: 'aac', Type: 'Audio', Protocol: 'http' }
+            ]
+        });
+    };
+
     this.stop = function (destroyPlayer) {
         if (elem) {
             console.debug('stop 1', webapis.avplay.getState());
@@ -189,6 +202,53 @@ class TestSubtitles:
         assert cues[0]["end"] == 2500
         assert cues[0]["text"] == "<i>Star City.</i> Luna 16,\nyou are crossing 100 km."
         assert cues[2]["text"] == "Comma timestamps, SRT style"
+
+
+class TestDeviceProfile:
+    """What the player announces decides what the server streams."""
+
+    def _run(self, tmp_path, uhd: bool):
+        import json
+        import shutil
+        import subprocess
+
+        if not shutil.which("node"):
+            import pytest
+            pytest.skip("node not available")
+        fonte = _patched(tmp_path)
+        script = (
+            "var webapis={productinfo:{isUdPanelSupported:function(){return " + ("true" if uhd else "false") + "}}};"
+            "var tizen={}, window={}; var document={getElementById:function(){return null}};"
+            "var console={debug:function(){},warn:function(){}}; function localStorage(){}\n"
+            + fonte +
+            "\nvar p = new _AvplayVideoPlayer({});"
+            # The stock method returns a Promise; the wrapper must keep that.
+            "setTimeout(function(){ var r = p.getDeviceProfile({}, {});"
+            " if (typeof r.then !== 'function') { process.stderr.write('not a promise'); process.exit(2); }"
+            " r.then(function(d){ process.stdout.write(JSON.stringify(d)); }); }, 5);"
+        )
+        saida = subprocess.run(["node", "-e", script], capture_output=True, text=True, timeout=30)
+        assert saida.returncode == 0, saida.stderr
+        return json.loads(saida.stdout)
+
+    def test_video_transcodes_only_over_hls(self, tmp_path):
+        """Progressive transcodes failed to open on the set; HLS plays."""
+        perfil = self._run(tmp_path, uhd=False)
+        video = [t for t in perfil["TranscodingProfiles"] if t["Type"] == "Video"]
+        assert [t["Protocol"] for t in video] == ["hls"]
+        # Audio profiles are left alone.
+        assert any(t["Type"] == "Audio" for t in perfil["TranscodingProfiles"])
+
+    def test_1080p_panel_declares_its_size_so_4k_is_transcoded(self, tmp_path):
+        perfil = self._run(tmp_path, uhd=False)
+        conds = [c for cp in perfil["CodecProfiles"] for c in cp.get("Conditions", [])]
+        assert {"Property": "Width", "Value": "1920"}.items() <= [c for c in conds if c["Property"] == "Width"][0].items()
+        assert any(c["Property"] == "Height" and c["Value"] == "1080" for c in conds)
+
+    def test_uhd_panel_keeps_full_resolution(self, tmp_path):
+        perfil = self._run(tmp_path, uhd=True)
+        conds = [c for cp in perfil["CodecProfiles"] for c in cp.get("Conditions", [])]
+        assert not any(c["Property"] in ("Width", "Height") for c in conds)
 
 
 class TestRobustness:

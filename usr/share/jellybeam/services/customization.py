@@ -273,6 +273,47 @@ _AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
         xhr.onerror = function () {{ console.warn('subtitle fetch error'); }};
         xhr.send();
     }};
+    // The device profile the player sends decides what the server streams.
+    // Seen on a 1080p set with a 4K HDR file: the stock profile lists a video
+    // transcoding profile with an empty Protocol first, the server answers
+    // with a progressive stream, and AVPlay fails to open it
+    // (PLAYER_ERROR_CONNECTION_FAILED). HLS, further down the list, works.
+    // The profile also sets no size limit, so the server allows direct play
+    // of 4K on a panel that cannot decode it, which fails first and wastes
+    // the retry on the same progressive stream.
+    this._tuneDeviceProfile = function (p) {{
+        if (!p) {{ return p; }}
+        p.TranscodingProfiles = (p.TranscodingProfiles || []).filter(function (t) {{
+            return t.Type !== 'Video' || t.Protocol === 'hls';
+        }});
+        var uhd = false;
+        try {{ uhd = !!webapis.productinfo.isUdPanelSupported(); }} catch (e) {{}}
+        if (!uhd) {{
+            p.CodecProfiles = (p.CodecProfiles || []).concat([{{
+                Type: 'Video',
+                Conditions: [
+                    {{ Condition: 'LessThanEqual', Property: 'Width', Value: '1920', IsRequired: false }},
+                    {{ Condition: 'LessThanEqual', Property: 'Height', Value: '1080', IsRequired: false }}
+                ]
+            }}]);
+        }}
+        return p;
+    }};
+    // getDeviceProfile is defined further down this constructor; wrap it once
+    // the constructor has finished, which is before any playback starts.
+    var jbSelf = this;
+    setTimeout(function () {{
+        var orig = jbSelf.getDeviceProfile;
+        if (typeof orig !== 'function' || orig._jellybeam) {{ return; }}
+        // The stock method returns a Promise; keep whichever shape it has.
+        jbSelf.getDeviceProfile = function () {{
+            var r = orig.apply(jbSelf, arguments);
+            return (r && typeof r.then === 'function')
+                ? r.then(function (p) {{ return jbSelf._tuneDeviceProfile(p); }})
+                : jbSelf._tuneDeviceProfile(r);
+        }};
+        jbSelf.getDeviceProfile._jellybeam = true;
+    }}, 0);
 
 """
 _AVPLAY_RECT_FOLLOWUP = (
