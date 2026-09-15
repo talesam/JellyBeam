@@ -34,6 +34,7 @@ from urllib.parse import urlparse
 from gi.repository import GLib
 
 from utils.constants import (
+    BRANDING_BANNER,
     BRANDING_DIR,
     BRANDING_PATTERNS,
     CUSTOMIZATION_APP_VERSION,
@@ -505,7 +506,11 @@ def replace_branding(pkg_dir: PathLike) -> List[str]:
             simbolos[tamanho] = candidato
     if not simbolos:
         raise CustomizationInjectionError(f"no branding symbols in {ASSETS_DIR / BRANDING_DIR}")
-    quadrado_grande = simbolos[max(simbolos, key=lambda t: t[0])]
+    # The wide banner (splash screen, header) carries symbol + wordmark; the
+    # square symbols alone go where jellyfin-web wants a square.
+    banner = ASSETS_DIR / BRANDING_DIR / BRANDING_BANNER
+    if not banner.is_file():
+        raise CustomizationInjectionError(f"banner not found: {banner}")
 
     trocados: List[str] = []
     for padrao in BRANDING_PATTERNS:
@@ -514,7 +519,7 @@ def replace_branding(pkg_dir: PathLike) -> List[str]:
             if not tamanho:
                 continue
             if tamanho[0] != tamanho[1]:
-                origem = quadrado_grande  # the wide banner: contain-fit, square is fine
+                origem = banner
             elif tamanho in simbolos:
                 origem = simbolos[tamanho]
             else:

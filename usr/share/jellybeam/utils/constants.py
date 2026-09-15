@@ -113,12 +113,13 @@ CUSTOMIZATION_ICON = "tv-icon.png"
 # says 0.1.0 forever). Bump on EVERY change to what goes to the TV: middle
 # number for a new feature, last number for a fix. It is what Jellyfin shows
 # in the device list, and the only way to know which build a user has.
-CUSTOMIZATION_APP_VERSION = "0.8.2"
-# jellyfin-web's own logo files, replaced by our symbol so the splash, the
-# header and the login screen show the same icon as the launcher tile. Files
-# are matched by pixel size; the wide banners take the square symbol (the
-# CSS uses background-size: contain, so a square works in both places).
+CUSTOMIZATION_APP_VERSION = "0.9.0"
+# jellyfin-web's own logo files, replaced so the splash, the header and the
+# login screen show our branding. Square files are matched by pixel size to a
+# symbol of the same size; the wide banners (splash screen, header) get
+# symbol + "Jellyfin" wordmark.
 BRANDING_DIR = "branding"
+BRANDING_BANNER = "banner.png"
 BRANDING_PATTERNS = (
     "www/banner-light.*.png",
     "www/banner-dark.*.png",

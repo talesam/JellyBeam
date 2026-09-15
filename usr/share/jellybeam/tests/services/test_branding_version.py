@@ -77,8 +77,10 @@ class TestBranding:
         }
         simbolo_536 = (ASSETS_DIR / BRANDING_DIR / "symbol-536.png").read_bytes()
         assert (www / "icon-transparent.abc.png").read_bytes() == simbolo_536
-        # Wide banner -> the largest square symbol; the CSS contain-fits it.
-        assert (www / "banner-light.abc.png").read_bytes() == simbolo_536
+        # Wide banner (splash, header) -> symbol + wordmark, same 1302x378.
+        banner = (ASSETS_DIR / BRANDING_DIR / "banner.png").read_bytes()
+        assert (www / "banner-light.abc.png").read_bytes() == banner
+        assert customization._png_size(banner) == (1302, 378)
         assert customization._png_size((www / "favicons" / "touchicon999.png").read_bytes()) == (999, 999)
         assert (www / "unrelated.png").read_bytes() == _png(536, 536)
 
