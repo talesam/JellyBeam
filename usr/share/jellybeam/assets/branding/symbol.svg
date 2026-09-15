@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs>
+ <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="110" y1="213" x2="496" y2="436">
+  <stop offset="0" stop-color="#AA5CC3"/><stop offset="1" stop-color="#00A4DC"/></linearGradient>
+ <linearGradient id="navy" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#0d1836"/><stop offset="1" stop-color="#000a22"/></linearGradient>
+ <filter id="sh" x="-20%" y="-20%" width="140%" height="150%">
+  <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".45"/></filter>
+</defs><g transform="translate(-26.9,-17.6) scale(0.9369)" opacity=".18"><path d="M256,23.3c-61.6,0-259.8,359.4-229.6,420.1s429.3,60,459.2,0S317.6,23.3,256,23.3z" fill="url(#g)"/></g><g transform="translate(-5.4,4.0) scale(0.9369)" opacity=".38"><path d="M256,23.3c-61.6,0-259.8,359.4-229.6,420.1s429.3,60,459.2,0S317.6,23.3,256,23.3z" fill="url(#g)"/></g><g filter="url(#sh)" transform="translate(16.2,25.5) scale(0.9369)"><path d="M256,23.3c-61.6,0-259.8,359.4-229.6,420.1s429.3,60,459.2,0S317.6,23.3,256,23.3zM406.5,390.8c-19.6,39.3-281.1,39.8-300.9,0s110.1-275.3,150.4-275.3S426.1,351.4,406.5,390.8z" fill="url(#g)"/><path d="M256,201.6c-20.4,0-86.2,119.3-76.2,139.4s142.5,19.9,152.4,0S276.5,201.6,256,201.6z" fill="url(#navy)"/></g></svg>

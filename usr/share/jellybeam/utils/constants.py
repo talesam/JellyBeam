@@ -109,6 +109,24 @@ CUSTOMIZATION_RESOURCES = ("web/cs-nav.js",)
 # swaps in a square icon built on the official Jellyfin symbol (CC BY-SA 4.0).
 JELLYFIN_ICON_FILE = "icon.png"
 CUSTOMIZATION_ICON = "tv-icon.png"
+# Version written into the customized package's config.xml (the upstream .wgt
+# says 0.1.0 forever). Bump on EVERY change to what goes to the TV: middle
+# number for a new feature, last number for a fix. It is what Jellyfin shows
+# in the device list, and the only way to know which build a user has.
+CUSTOMIZATION_APP_VERSION = "0.8.2"
+# jellyfin-web's own logo files, replaced by our symbol so the splash, the
+# header and the login screen show the same icon as the launcher tile. Files
+# are matched by pixel size; the wide banners take the square symbol (the
+# CSS uses background-size: contain, so a square works in both places).
+BRANDING_DIR = "branding"
+BRANDING_PATTERNS = (
+    "www/banner-light.*.png",
+    "www/banner-dark.*.png",
+    "www/icon-transparent.*.png",
+    "www/notificationicon.*.png",
+    "www/touchicon*.png",
+    "www/favicons/touchicon*.png",
+)
 
 # From this Tizen version on, the TV verifies that the signing chain has not
 # expired. The published package is signed with a certificate that lapsed in

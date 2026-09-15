@@ -34,6 +34,9 @@ from urllib.parse import urlparse
 from gi.repository import GLib
 
 from utils.constants import (
+    BRANDING_DIR,
+    BRANDING_PATTERNS,
+    CUSTOMIZATION_APP_VERSION,
     CUSTOMIZATION_ICON,
     CUSTOMIZATION_MARKER_END,
     CUSTOMIZATION_MARKER_START,
@@ -452,6 +455,75 @@ def install_tv_scripts(pkg_dir: PathLike, scripts: Sequence[str] = TV_SCRIPTS) -
     index.write_text(content.replace("</body>", block + "</body>", 1), encoding="utf-8")
     _logger.info("Installed %d TV script(s) into %s", len(scripts), www)
     return list(scripts)
+
+
+CONFIG_FILE = "config.xml"
+_WIDGET_VERSION = re.compile(r'(<widget\b[^>]*?\bversion=")([^"]*)(")')
+
+
+def set_package_version(pkg_dir: PathLike, version: str = CUSTOMIZATION_APP_VERSION) -> str:
+    """Write our version into config.xml's <widget version="...">.
+
+    The upstream package carries 0.1.0 whatever happens; Jellyfin shows this
+    value in its device list, and it is how one tells which build a TV has.
+    Returns the version written.
+    """
+    arquivo = Path(pkg_dir) / CONFIG_FILE
+    if not arquivo.is_file():
+        raise CustomizationInjectionError(f"no {CONFIG_FILE} in {pkg_dir}")
+    if not re.fullmatch(r"\d+\.\d+\.\d+", version):
+        raise CustomizationInjectionError(f"version must be MAJOR.MINOR.PATCH, got {version!r}")
+    fonte = arquivo.read_text(encoding="utf-8")
+    novo, n = _WIDGET_VERSION.subn(rf"\g<1>{version}\g<3>", fonte, count=1)
+    if n != 1:
+        raise CustomizationInjectionError(f"{CONFIG_FILE} has no <widget version=...>")
+    arquivo.write_text(novo, encoding="utf-8")
+    _logger.info("Package version set to %s", version)
+    return version
+
+
+def _png_size(data: bytes) -> Optional[Tuple[int, int]]:
+    """Width and height from a PNG header, or None if it is not a PNG."""
+    if data[:8] != b"\x89PNG\r\n\x1a\n" or len(data) < 24:
+        return None
+    return int.from_bytes(data[16:20], "big"), int.from_bytes(data[20:24], "big")
+
+
+def replace_branding(pkg_dir: PathLike) -> List[str]:
+    """Swap jellyfin-web's logo files for our symbol, matched by pixel size.
+
+    Covers the splash screen, the header logo and the login screen. A file
+    whose size we have no symbol for is left alone (and logged): a wrong-size
+    image would be scaled by the browser, but a missing one would be a hole.
+    Returns the package-relative paths replaced.
+    """
+    raiz = Path(pkg_dir)
+    simbolos: Dict[Tuple[int, int], Path] = {}
+    for candidato in (ASSETS_DIR / BRANDING_DIR).glob("symbol-*.png"):
+        tamanho = _png_size(candidato.read_bytes())
+        if tamanho:
+            simbolos[tamanho] = candidato
+    if not simbolos:
+        raise CustomizationInjectionError(f"no branding symbols in {ASSETS_DIR / BRANDING_DIR}")
+    quadrado_grande = simbolos[max(simbolos, key=lambda t: t[0])]
+
+    trocados: List[str] = []
+    for padrao in BRANDING_PATTERNS:
+        for alvo in sorted(raiz.glob(padrao)):
+            tamanho = _png_size(alvo.read_bytes())
+            if not tamanho:
+                continue
+            if tamanho[0] != tamanho[1]:
+                origem = quadrado_grande  # the wide banner: contain-fit, square is fine
+            elif tamanho in simbolos:
+                origem = simbolos[tamanho]
+            else:
+                _logger.info("No symbol at %sx%s for %s; left as is", tamanho[0], tamanho[1], alvo.name)
+                continue
+            alvo.write_bytes(origem.read_bytes())
+            trocados.append(str(alvo.relative_to(raiz)))
+    _logger.info("Replaced %d branding file(s)", len(trocados))
+    return trocados
 
 
 def replace_icon(pkg_dir: PathLike, icon: Optional[PathLike] = None) -> Path:

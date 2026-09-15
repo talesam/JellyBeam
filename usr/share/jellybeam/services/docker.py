@@ -1147,6 +1147,10 @@ echo "Package unpacked"
                 )
                 log_progress("Replaced the launcher icon with the square one")
                 pkg_host = os.path.join(self.workspace_host, CUSTOMIZATION_PKG_DIR)
+                marca = customization.replace_branding(pkg_host)
+                log_progress(f"Replaced {len(marca)} Jellyfin logo file(s) with our symbol")
+                versao = customization.set_package_version(pkg_host)
+                log_progress(f"Package version: {versao}")
                 customization.install_tv_scripts(pkg_host)
                 log_progress(
                     "TV scripts: 1080p version preselected on Full HD sets, "
