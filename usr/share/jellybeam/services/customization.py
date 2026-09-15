@@ -28,7 +28,7 @@ import threading
 import urllib.error
 import urllib.request
 from pathlib import Path
-from typing import Callable, List, Optional, Sequence, Tuple, Union
+from typing import Callable, Dict, List, Optional, Sequence, Tuple, Union
 from urllib.parse import urlparse
 
 from gi.repository import GLib

@@ -76,14 +76,15 @@ class TestBranding:
             "www/notificationicon.abc.png", "www/touchicon144.abc.png", "www/favicons/touchicon72.png",
         }
         simbolo_536 = (ASSETS_DIR / BRANDING_DIR / "symbol-536.png").read_bytes()
-        simbolo_512 = (ASSETS_DIR / BRANDING_DIR / "symbol-512.png").read_bytes()
         assert (www / "icon-transparent.abc.png").read_bytes() == simbolo_536
-        assert (www / "banner-light.abc.png").read_bytes() == simbolo_512  # wide -> square, contain-fit
+        # Wide banner -> the largest square symbol; the CSS contain-fits it.
+        assert (www / "banner-light.abc.png").read_bytes() == simbolo_536
         assert customization._png_size((www / "favicons" / "touchicon999.png").read_bytes()) == (999, 999)
         assert (www / "unrelated.png").read_bytes() == _png(536, 536)
 
     def test_is_idempotent(self, tmp_path):
-        www = tmp_path / "www"; www.mkdir()
+        www = tmp_path / "www"
+        www.mkdir()
         (www / "icon-transparent.abc.png").write_bytes(_png(536, 536))
         customization.replace_branding(tmp_path)
         primeira = (www / "icon-transparent.abc.png").read_bytes()
