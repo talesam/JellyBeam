@@ -1154,7 +1154,8 @@ echo "Package unpacked"
                 customization.install_tv_scripts(pkg_host)
                 log_progress(
                     "TV scripts: 1080p version preselected on Full HD sets, "
-                    "search waits for typing to pause"
+                    "search waits for typing to pause, episode paused under "
+                    "\"Are you still watching?\""
                 )
                 if customization.patch_avplay(pkg_host):
                     log_progress(
