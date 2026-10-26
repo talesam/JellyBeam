@@ -1,9 +1,12 @@
 # utils/config.py
 from __future__ import annotations
 
+import copy
 import json
 import logging
+import os
 import shutil
+import tempfile
 import threading
 from pathlib import Path
 from typing import Any, Dict
@@ -14,11 +17,11 @@ _logger = logging.getLogger(__name__)
 class ConfigManager:
     """Manages application configuration using JSON files."""
 
-    # Previous project name; settings live here for anyone who installed
-    # before the rename to JellyBeam.
-    LEGACY_CONFIG_DIR: Path = Path.home() / ".config" / "jellytizen"
-
     def __init__(self) -> None:
+        # Previous project name; settings live here for anyone who installed
+        # before the rename to JellyBeam. Resolved here, not at import, so it
+        # follows the same home as config_dir.
+        self.legacy_config_dir: Path = Path.home() / ".config" / "jellytizen"
         self.config_dir: Path = Path.home() / ".config" / "jellybeam"
         self.config_file: Path = self.config_dir / "config.json"
         self.config_dir.mkdir(parents=True, exist_ok=True)
@@ -33,7 +36,7 @@ class ConfigManager:
         Copy rather than move: if the new version misbehaves the user can
         still downgrade and find their settings where they left them.
         """
-        legacy_file = self.LEGACY_CONFIG_DIR / "config.json"
+        legacy_file = self.legacy_config_dir / "config.json"
         if self.config_file.exists() or not legacy_file.is_file():
             return
 
@@ -46,31 +49,45 @@ class ConfigManager:
             _logger.info(f"Migrated configuration from {legacy_file}")
 
     def _load_config(self) -> Dict[str, Any]:
-        """Load configuration from file."""
-        if self.config_file.exists():
+        """Load the file over the defaults, so keys added later have values.
+
+        A file that cannot be read is set aside, not silently replaced: the
+        next set() would otherwise overwrite the user's settings with the
+        defaults.
+        """
+        config = self._default_config()
+        if not self.config_file.exists():
+            return config
+        try:
+            with open(self.config_file, "r") as f:
+                carregado = json.load(f)
+            if not isinstance(carregado, dict):
+                raise ValueError("top level is not an object")
+        except (OSError, ValueError) as e:
+            reserva = self.config_file.with_suffix(".json.broken")
             try:
-                with open(self.config_file, "r") as f:
-                    return json.load(f)
-            except (json.JSONDecodeError, FileNotFoundError):
-                return self._default_config()
-        else:
-            return self._default_config()
+                os.replace(self.config_file, reserva)
+                _logger.warning(f"Unreadable config ({e}); kept as {reserva}, using defaults")
+            except OSError:
+                _logger.warning(f"Unreadable config ({e}); using defaults")
+            return config
+        self._merge_configs(config, carregado)
+        return config
 
     def _default_config(self) -> Dict[str, Any]:
-        """Return default configuration."""
+        """Return default configuration.
+
+        Only keys something reads. Docker image, network, timeouts, window and
+        "advanced" entries used to be listed too; nothing used them (the
+        values are constants in utils/constants.py). Old files that still
+        carry them load fine; the keys are simply ignored.
+        """
         return {
-            "device": {"ip": "", "developer_mode": False, "last_connected": None},
+            "device": {"ip": "", "developer_mode": False},
             "certificates": {
                 "use_default": True,  # Use built-in certificates from Docker container
                 "author_cert_path": "",
                 "distributor_cert_path": "",
-                "profile_name": "JellyBeam",
-            },
-            "docker": {
-                "image": "ghcr.io/georift/install-jellyfin-tizen:latest",
-                "auto_pull": True,
-                "container_name": "jellybeam-builder",
-                "workspace_path": "/tmp/jellybeam",
             },
             # Tags pointing at a Jellyfin server, embedded into the TV build.
             # The URL stays here, in the user's config, and never in the
@@ -79,36 +96,21 @@ class ConfigManager:
                 "enabled": False,
                 "server_url": "",
             },
-            "network": {
-                "scan_timeout": 30,
-                "port_range": "8000-8080",
-                "max_workers": 30,
-                "connection_timeout": 10,
-            },
-            "timeouts": {
-                "docker_operations": 300,
-                "network_scan": 30,
-                "device_connection": 10,
-                "certificate_validation": 30,
-                "sdk_setup": 600,
-            },
-            "ui": {"window_width": 900, "window_height": 700, "theme": "auto"},
-            "logging": {"level": "INFO", "save_to_file": True, "max_log_age_days": 30},
-            "advanced": {"custom_scripts": False, "debug_mode": False},
+            "logging": {"level": "INFO"},
         }
 
     def get(self, key: str, default: Any = None) -> Any:
         """Get configuration value using dot notation."""
         keys = key.split(".")
-        value = self._config
-
-        for k in keys:
-            if isinstance(value, dict) and k in value:
-                value = value[k]
-            else:
-                return default
-
-        return value
+        with self._lock:
+            value = self._config
+            for k in keys:
+                if isinstance(value, dict) and k in value:
+                    value = value[k]
+                else:
+                    return default
+            # A copy for containers: the caller must not edit the live config.
+            return copy.deepcopy(value) if isinstance(value, (dict, list)) else value
 
     def set(self, key: str, value: Any) -> None:
         """Set configuration value using dot notation."""
@@ -129,10 +131,24 @@ class ConfigManager:
             self._save_config()
 
     def _save_config(self) -> None:
-        """Save configuration to file."""
+        """Save atomically, readable by the owner only.
+
+        Written to a temporary file and renamed over the old one: a crash
+        mid-write used to leave a truncated file, which then loaded as
+        defaults. 0600 because it holds the private server address and the
+        certificate paths.
+        """
         try:
-            with open(self.config_file, "w") as f:
-                json.dump(self._config, f, indent=2)
+            fd, tmp = tempfile.mkstemp(dir=self.config_dir, prefix=".config-", suffix=".json")
+            try:
+                with os.fdopen(fd, "w") as f:
+                    json.dump(self._config, f, indent=2)
+                    f.flush()
+                    os.fsync(f.fileno())
+                os.replace(tmp, self.config_file)
+            except BaseException:
+                os.unlink(tmp)
+                raise
         except Exception as e:
             _logger.error(f"Failed to save config: {e}")
 
@@ -169,3 +185,4 @@ class ConfigManager:
                 self._merge_configs(base[key], value)
             else:
                 base[key] = value
+

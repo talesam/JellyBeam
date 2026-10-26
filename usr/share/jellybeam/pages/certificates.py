@@ -75,8 +75,10 @@ class CertificatesPage(Gtk.ScrolledWindow):
         # Toggle for using default certificates
         self.use_default_row = Adw.SwitchRow()
         self.use_default_row.set_title(_("Use Built-in Certificates"))
-        self.use_default_row.set_subtitle(_("Recommended - No Tizen Studio required"))
-        default_icon = Gtk.Image.new_from_icon_name("security-medium-symbolic")
+        # Not "recommended": the image's certificate expired in 2022, which
+        # Tizen 8 and newer refuse (see DockerService.needs_own_certificate).
+        self.use_default_row.set_subtitle(_("Works on TVs up to Tizen 7 - no setup"))
+        default_icon = design.image("security-medium-symbolic")
         self.use_default_row.add_prefix(default_icon)
 
         # Load saved preference
@@ -90,10 +92,13 @@ class CertificatesPage(Gtk.ScrolledWindow):
         self.default_info.set_title(_("How it works"))
         self.default_info.set_subtitle(
             _(
-                "The Docker container includes pre-configured certificates. You can install Jellyfin immediately without any setup."
+                "The Docker container includes pre-configured certificates, "
+                "accepted by TVs up to Tizen 7. Tizen 8 and newer refuse them "
+                "(they expired in 2022): those need a certificate from your "
+                "Samsung account, created below."
             )
         )
-        info_icon = Gtk.Image.new_from_icon_name("dialog-information-symbolic")
+        info_icon = design.image("dialog-information-symbolic")
         self.default_info.add_prefix(info_icon)
         self.default_group.add(self.default_info)
 
@@ -111,7 +116,7 @@ class CertificatesPage(Gtk.ScrolledWindow):
         self.author_cert_row = Adw.ActionRow()
         self.author_cert_row.set_title(_("Author Certificate"))
         self.author_cert_row.set_subtitle(_("Select author.p12 file"))
-        author_icon = Gtk.Image.new_from_icon_name("contact-new-symbolic")
+        author_icon = design.image("contact-new-symbolic")
         self.author_cert_row.add_prefix(author_icon)
 
         self.author_cert_button = Gtk.Button.new_with_label(_("Browse"))
@@ -119,7 +124,7 @@ class CertificatesPage(Gtk.ScrolledWindow):
         self.author_cert_button.connect(
             "clicked", lambda b: self._browse_file("author")
         )
-        self.author_cert_ok = Gtk.Image.new_from_icon_name("object-select-symbolic")
+        self.author_cert_ok = design.image("object-select-symbolic")
         self.author_cert_ok.add_css_class("success")
         self.author_cert_ok.set_visible(False)
         self.author_cert_row.add_suffix(self.author_cert_ok)
@@ -130,7 +135,7 @@ class CertificatesPage(Gtk.ScrolledWindow):
         self.dist_cert_row = Adw.ActionRow()
         self.dist_cert_row.set_title(_("Distributor Certificate"))
         self.dist_cert_row.set_subtitle(_("Select distributor.p12 file"))
-        dist_icon = Gtk.Image.new_from_icon_name("text-x-generic-symbolic")
+        dist_icon = design.image("text-x-generic-symbolic")
         self.dist_cert_row.add_prefix(dist_icon)
 
         self.dist_cert_button = Gtk.Button.new_with_label(_("Browse"))
@@ -138,7 +143,7 @@ class CertificatesPage(Gtk.ScrolledWindow):
         self.dist_cert_button.connect(
             "clicked", lambda b: self._browse_file("distributor")
         )
-        self.dist_cert_ok = Gtk.Image.new_from_icon_name("object-select-symbolic")
+        self.dist_cert_ok = design.image("object-select-symbolic")
         self.dist_cert_ok.add_css_class("success")
         self.dist_cert_ok.set_visible(False)
         self.dist_cert_row.add_suffix(self.dist_cert_ok)
@@ -173,7 +178,7 @@ class CertificatesPage(Gtk.ScrolledWindow):
         help_row = Adw.ActionRow()
         help_row.set_title(_("Need help creating certificates?"))
         help_row.set_subtitle(_("View tutorial on Samsung Developer website"))
-        help_icon = Gtk.Image.new_from_icon_name("help-browser-symbolic")
+        help_icon = design.image("help-browser-symbolic")
         help_row.add_prefix(help_icon)
 
         help_btn = Gtk.Button.new_with_label(_("View Guide"))

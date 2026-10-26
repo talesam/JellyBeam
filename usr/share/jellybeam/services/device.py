@@ -8,7 +8,7 @@ import json
 import urllib.request
 import urllib.error
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from typing import Callable, Optional, List, Dict, Any
+from typing import Callable, Optional, List, Dict, Any, Tuple
 
 from gi.repository import GLib
 from utils.logger import Logger
@@ -245,6 +245,34 @@ class DeviceService:
 
         return None
 
+    def host_ip_mismatch(self, tv_ip: str) -> Optional[Tuple[str, str]]:
+        """(IP the TV accepts sdb from, this computer's IP) when they differ.
+
+        Developer Mode stores one "Host PC IP" and refuses sdb from anything
+        else. When the computer's address changes (DHCP), the install fails
+        with "failed to connect", buried in the log. The TV says which IP it
+        expects in /api/v2/, so the mismatch can be named up front.
+        None when they match or when it cannot be told. Blocking.
+        """
+        try:
+            req = urllib.request.Request(f"http://{tv_ip}:{SAMSUNG_API_PORT}{SAMSUNG_API_ENDPOINT}")
+            req.add_header("User-Agent", f"{APP_NAME}/{APP_VERSION}")
+            with urllib.request.urlopen(req, timeout=TIMEOUT_HTTP_REQUEST) as response:
+                device = json.loads(response.read().decode("utf-8", errors="ignore")).get("device", {})
+        except (OSError, ValueError, AttributeError) as e:
+            self.logger.debug(f"Could not read the developer IP from {tv_ip}: {e}")
+            return None
+        return host_ip_mismatch(device, self._local_ip_towards(tv_ip))
+
+    def _local_ip_towards(self, tv_ip: str) -> Optional[str]:
+        """The address this computer uses to reach the TV (no packet is sent)."""
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+                s.connect((tv_ip, SAMSUNG_API_PORT))
+                return s.getsockname()[0]
+        except OSError:
+            return None
+
     def connect_device_async(
         self, ip: str, developer_mode: bool, callback: Callable[[bool, str], None]
     ) -> None:
@@ -394,3 +422,17 @@ class DeviceService:
                 self.logger.warning(f"Disconnect error: {e}")
 
         self.connected_device = None
+
+
+def host_ip_mismatch(device: Dict[str, Any], local_ip: Optional[str]) -> Optional[Tuple[str, str]]:
+    """Decide from the TV's /api/v2/ "device" block and our own address.
+
+    Only when Developer Mode is on and names a real address: "0.0.0.0" or
+    nothing means it was never set, which fails differently.
+    """
+    if str(device.get("developerMode", "")) != "1" or not local_ip:
+        return None
+    confiado = str(device.get("developerIP") or "").strip()
+    if not confiado or confiado == "0.0.0.0" or confiado == local_ip:
+        return None
+    return confiado, local_ip

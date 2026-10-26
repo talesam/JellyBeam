@@ -41,6 +41,8 @@ class JellyBeamApplication(Adw.Application):
 
         self.config_manager = ConfigManager()
         self.logger = Logger()
+        # The level chosen in Preferences; it used to apply only until restart.
+        self.logger.set_level(self.config_manager.get("logging.level", "INFO"))
         self.logger.info(f"{APP_NAME} {APP_VERSION} starting")
         self.window = None
 
@@ -65,7 +67,7 @@ class JellyBeamWindow(Adw.ApplicationWindow):
         self.logger = logger
 
         # Initialize services with logger
-        self.docker_service = DockerService(logger=logger)
+        self.docker_service = DockerService(logger=logger, config=config_manager)
         self.device_service = DeviceService(logger=logger)
         self.certificate_service = CertificateService(logger=logger)
 
@@ -133,8 +135,12 @@ class JellyBeamWindow(Adw.ApplicationWindow):
         self.certificates_page = CertificatesPage(self)
         self.install_page = InstallPage(self)
 
-        # Add welcome page initially (no title in header bar)
-        nav_page = Adw.NavigationPage(child=self.welcome_page, title="", tag="welcome")
+        # Add welcome page initially. It has a title (screen readers announce
+        # it, and an empty one made Adwaita warn) but the header shows none:
+        # the page's own hero already says it.
+        nav_page = Adw.NavigationPage(
+            child=self.welcome_page, title=_("Welcome"), tag="welcome"
+        )
         self.navigation_view.add(nav_page)
 
     def _on_page_changed(self, nav_view, param):
@@ -148,7 +154,8 @@ class JellyBeamWindow(Adw.ApplicationWindow):
         # Update header title
         visible_page = nav_view.get_visible_page()
         if visible_page:
-            self._title_label.set_label(visible_page.get_title())
+            na_inicial = visible_page.get_tag() == "welcome"
+            self._title_label.set_label("" if na_inicial else visible_page.get_title())
 
     def _on_back_clicked(self, button):
         """Handle back button click."""

@@ -256,3 +256,21 @@ class TestMultipart:
         )
         assert corpo.count(b'name="platform"') == 2
         assert tipo.startswith("multipart/form-data; boundary=")
+
+
+class TestPrivateFiles:
+    def test_created_private_and_existing_ones_tightened(self, tmp_path):
+        import os
+        import stat
+
+        from services.samsung_cert import write_private
+
+        novo = tmp_path / "novo.p12"
+        write_private(novo, b"k")
+        antigo = tmp_path / "antigo.p12"
+        antigo.write_bytes(b"old")
+        antigo.chmod(0o644)
+        write_private(antigo, b"new")
+        for arquivo in (novo, antigo):
+            assert stat.S_IMODE(os.stat(arquivo).st_mode) == 0o600
+        assert antigo.read_bytes() == b"new"

@@ -14,7 +14,7 @@ config (~/.config/jellybeam/), because this repository is public and a
 third-party server address is private data.
 
 Everything here is plain filesystem work on the host: the Docker workspace is
-bind-mounted (/tmp/jellybeam -> /workspace), so the file the container builds
+bind-mounted (/tmp/jellybeam-<uid> -> /workspace), so the file the container builds
 from is directly writable here. No docker exec, no shell quoting.
 """
 
@@ -117,7 +117,7 @@ _AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
         // access to its translations, so the set's language decides.
         var pt = /^pt/i.test(navigator.language || '');
         return [
-            {{ name: pt ? 'Proporção do vídeo' : 'Video ratio', id: 'letterbox' }},
+            {{ name: pt ? 'Propor\\u00e7\\u00e3o do v\\u00eddeo' : 'Video ratio', id: 'letterbox' }},
             {{ name: pt ? 'Preencher a tela' : 'Fill the screen', id: 'fill' }}
         ];
     }};
@@ -148,12 +148,19 @@ _AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
     // "Subtitles" appearance settings the user already has a menu for.
     this._subtitleTimer = null;
     this._subtitleAppearance = function () {{
-        var raw = null;
+        // One key per user ("<userId>-...subtitleappearance..."); the current
+        // user's wins, any other only when there is no such key.
+        var raw = null, mine = null, uid = '';
+        try {{ uid = (window.ApiClient && window.ApiClient.getCurrentUserId()) || ''; }} catch (e) {{}}
         try {{
             for (var i = 0; i < localStorage.length; i++) {{
                 var k = localStorage.key(i);
-                if (k && k.indexOf('subtitleappearance') !== -1) {{ raw = localStorage.getItem(k); }}
+                if (k && k.indexOf('subtitleappearance') !== -1) {{
+                    raw = localStorage.getItem(k);
+                    if (uid && k.indexOf(uid) !== -1) {{ mine = raw; }}
+                }}
             }}
+            raw = mine || raw;
             return raw ? JSON.parse(raw) : {{}};
         }} catch (e) {{ return {{}}; }}
     }};
@@ -187,14 +194,20 @@ _AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
         var pos = parseInt(a.verticalPosition, 10); if (isNaN(pos)) {{ pos = -3; }}
         el.style.top = ''; el.style.bottom = '';
         if (pos < 0) {{ el.style.bottom = (-pos * 2.6) + 'vh'; }} else {{ el.style.top = (pos * 2.6 + 2) + 'vh'; }}
-        el.setAttribute('data-bg', a.textBackground || 'transparent');
+        // Goes into a style attribute below: a colour, or nothing.
+        var bg = String(a.textBackground || '');
+        el.setAttribute('data-bg', /^[#a-z0-9(),.%\\s]+$/i.test(bg) ? bg : 'transparent');
         return el;
     }};
     this._showSubtitle = function (text, duration) {{
         var el = this._subtitleEl();
+        // Formatting tags survive bare (no attributes); every other tag goes.
         var safe = String(text || '')
             .replace(/\\r?\\n/g, '<br>')
-            .replace(/<(?!\\/?(i|b|u|br)\\b)[^>]*>/gi, '');
+            .replace(/<(\\/?)(i|b|u)\\b[^>]*>/gi, '\\u0001$1$2\\u0002')
+            .replace(/<br\\b[^>]*>/gi, '\\u0001br\\u0002')
+            .replace(/<[^>]*>/g, '')
+            .replace(/\\u0001/g, '<').replace(/\\u0002/g, '>');
         el.innerHTML = safe.trim() ? '<span style="background:' + el.getAttribute('data-bg') +
             ';padding:0 .3em;border-radius:.15em;box-decoration-break:clone;">' + safe + '</span>' : '';
         el.style.display = safe.trim() ? 'block' : 'none';
@@ -216,6 +229,7 @@ _AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
     // against the player clock. No AVPlay text track involved.
     this._vttCues = null;
     this._vttTimer = null;
+    this._vttXhr = null;
     this._vttOffset = 0;
     this._vttLast = null;
     this._parseVtt = function (text) {{
@@ -241,6 +255,9 @@ _AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
         return cues;
     }};
     this._clearVtt = function () {{
+        // A reply still on its way must not bring the cues and timer back
+        // after the subtitles were switched off or playback stopped.
+        if (this._vttXhr) {{ try {{ this._vttXhr.abort(); }} catch (e) {{}} this._vttXhr = null; }}
         if (this._vttTimer) {{ clearInterval(this._vttTimer); this._vttTimer = null; }}
         this._vttCues = null; this._vttLast = null;
         this._hideSubtitle();
@@ -264,8 +281,12 @@ _AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
         var self = this;
         self._clearVtt();
         var xhr = new XMLHttpRequest();
+        self._vttXhr = xhr;
         xhr.open('GET', url, true);
+        xhr.timeout = 30000;
         xhr.onload = function () {{
+            if (self._vttXhr !== xhr) {{ return; }}
+            self._vttXhr = null;
             if (xhr.status < 200 || xhr.status >= 300) {{
                 console.warn('subtitle fetch failed', xhr.status); return;
             }}
@@ -324,6 +345,10 @@ _AVPLAY_METHODS = f"""    {_AVPLAY_MARKER}
         }};
         jbSelf.getDeviceProfile._jellybeam = true;
     }}, 0);
+    // tv-still-watching.js pauses through this. A synthetic Pause key is
+    // not enough: jellyfin reads it from KeyboardEvent.code, which engines
+    // before Chromium 48 (Tizen 3) do not carry.
+    window.JellyBeamAvplay = this;
 
 """
 _AVPLAY_RECT_FOLLOWUP = (

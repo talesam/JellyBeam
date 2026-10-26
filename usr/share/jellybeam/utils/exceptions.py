@@ -322,6 +322,13 @@ class AppInstallError(InstallationError):
         super().__init__(message, details)
 
 
+class InstallationCancelledError(InstallationError):
+    """The user cancelled the installation while it was running."""
+
+    def __init__(self) -> None:
+        super().__init__("Installation cancelled")
+
+
 # Server customization errors
 
 

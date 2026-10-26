@@ -73,8 +73,10 @@
         var proto = XMLHttpRequest.prototype;
         var open = proto.open;
         var send = proto.send;
+        var cancel = proto.abort;
         proto.open = function (method, url) {
             this._jbSearch = isSearch(url);
+            this._jbCancelled = false;
             var args = Array.prototype.slice.call(arguments);
             if (this._jbSearch) {
                 args[1] = capLimit(url);
@@ -83,12 +85,19 @@
             }
             return open.apply(this, args);
         };
+        // Only noted, never initiated here. A caller cancelling before the
+        // gate opens leaves readyState at 1 (OPENED, per the XHR spec), so
+        // readyState alone let the cancelled search go out anyway.
+        proto.abort = function () {
+            this._jbCancelled = true;
+            return cancel.apply(this, arguments);
+        };
         proto.send = function (body) {
             if (!this._jbSearch) { return send.call(this, body); }
             var xhr = this;
             gate.request(xhr._jbPath, xhr._jbTerm, function () {
                 // The caller may have cancelled it in the meantime.
-                if (xhr.readyState === 1) { send.call(xhr, body); }
+                if (xhr.readyState === 1 && !xhr._jbCancelled) { send.call(xhr, body); }
             });
         };
     }
@@ -102,8 +111,12 @@
             var capped = capLimit(url);
             var self = this;
             return new Promise(function (resolve, reject) {
+                // A Request keeps its method, headers and signal; a bare URL
+                // would lose them.
+                var target = (typeof Request !== 'undefined' && input instanceof Request)
+                    ? new Request(capped, input) : capped;
                 gate.request(pathOf(capped), termOf(capped), function () {
-                    fetch0.call(self, capped, init).then(resolve, reject);
+                    fetch0.call(self, target, init).then(resolve, reject);
                 });
             });
         };

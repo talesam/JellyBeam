@@ -102,3 +102,29 @@ def test_script_parses():
         pytest.skip("node not available")
     r = subprocess.run(["node", "--check", str(SCRIPT)], capture_output=True, text=True)
     assert r.returncode == 0, r.stderr
+
+
+def test_a_search_cancelled_before_the_gate_opens_is_not_sent():
+    """abort() before send() leaves readyState at OPENED, per the XHR spec."""
+    if not shutil.which("node"):
+        pytest.skip("node not available")
+    fonte = SCRIPT.read_text(encoding="utf-8")
+    prelude = r"""
+var timers = [];
+function setTimeout(fn) { timers.push(fn); }
+var sent = [];
+function XMLHttpRequest() { this.readyState = 0; }
+XMLHttpRequest.prototype.open = function (m, url) { this.readyState = 1; this.url = url; };
+XMLHttpRequest.prototype.send = function () { sent.push(this.url); this.readyState = 4; };
+XMLHttpRequest.prototype.abort = function () { /* OPENED stays OPENED before send */ };
+var window = {}; var document = {};
+"""
+    js = """
+var a = new XMLHttpRequest(); a.open('GET', 'https://x/Items?searchTerm=top'); a.send(); a.abort();
+var b = new XMLHttpRequest(); b.open('GET', 'https://x/Persons?searchTerm=top'); b.send();
+while (timers.length) { timers.shift()(); }
+process.stdout.write(JSON.stringify(sent));
+"""
+    saida = subprocess.run(["node", "-e", prelude + fonte + js], capture_output=True, text=True, timeout=30)
+    assert saida.returncode == 0, saida.stderr
+    assert json.loads(saida.stdout) == ["https://x/Persons?searchTerm=top"]

@@ -152,6 +152,16 @@ def resolve_icon(icon_name: str) -> str:
     return FALLBACK_ICON
 
 
+def image(icon_name: str) -> Gtk.Image:
+    """Gtk.Image for an icon name, through resolve_icon.
+
+    Plain Gtk.Image.new_from_icon_name() draws a broken-image glyph when the
+    user's icon theme lacks the name -- seen with a custom theme that does
+    not inherit Adwaita.
+    """
+    return Gtk.Image.new_from_icon_name(resolve_icon(icon_name))
+
+
 def icon_badge(icon_name: str, tone: str = "", hero: bool = False) -> Gtk.Image:
     """An icon sitting on a rounded, tinted square.
 
@@ -328,7 +338,7 @@ def feature_strip(items: Sequence[Tuple[str, str, str]]) -> Gtk.Box:
 
         cell = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
 
-        image = Gtk.Image.new_from_icon_name(icon_name)
+        image = Gtk.Image.new_from_icon_name(resolve_icon(icon_name))
         image.set_pixel_size(22)
         image.set_valign(Gtk.Align.CENTER)
         image.add_css_class("dim-label")

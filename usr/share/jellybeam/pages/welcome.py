@@ -18,7 +18,7 @@ class WelcomePage(Gtk.Box):
         super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=0)
 
         self.window = window
-        self.docker_service = DockerService(logger=window.logger)
+        self.docker_service = DockerService(logger=window.logger, config=window.config_manager)
 
         self.set_hexpand(True)
         self.set_vexpand(True)
@@ -206,7 +206,7 @@ class WelcomePage(Gtk.Box):
 
             if is_installed and is_running:
                 # Docker is ready
-                success_icon = Gtk.Image.new_from_icon_name("object-select-symbolic")
+                success_icon = design.image("object-select-symbolic")
                 success_icon.add_css_class("success")
                 self.docker_row.add_suffix(success_icon)
                 self.docker_row.set_subtitle(_("Ready"))
@@ -214,14 +214,14 @@ class WelcomePage(Gtk.Box):
 
             elif is_installed and not is_in_group:
                 # Docker installed but user not in docker group
-                warning_icon = Gtk.Image.new_from_icon_name("dialog-warning-symbolic")
+                warning_icon = design.image("dialog-warning-symbolic")
                 self.docker_row.add_suffix(warning_icon)
                 self.docker_row.set_subtitle(_("Permission required"))
                 self.requirements_group.add(self.docker_group_row)
 
             elif is_installed and not is_running:
                 # Docker installed but not running
-                warning_icon = Gtk.Image.new_from_icon_name("dialog-warning-symbolic")
+                warning_icon = design.image("dialog-warning-symbolic")
                 self.docker_row.add_suffix(warning_icon)
                 self.docker_row.set_subtitle(_("Not running"))
 
@@ -232,7 +232,7 @@ class WelcomePage(Gtk.Box):
 
             else:
                 # Docker not installed
-                error_icon = Gtk.Image.new_from_icon_name("dialog-error-symbolic")
+                error_icon = design.image("dialog-error-symbolic")
                 self.docker_row.add_suffix(error_icon)
                 self.docker_row.set_subtitle(_("Not installed"))
                 self.requirements_group.add(self.install_docker_row)
@@ -365,7 +365,7 @@ class DockerInstallDialog(Adw.AlertDialog):
         install_spinner.start()
         self.welcome_page.install_docker_row.add_suffix(install_spinner)
 
-        docker_service = DockerService(logger=self.window.logger)
+        docker_service = DockerService(logger=self.window.logger, config=self.window.config_manager)
 
         def on_progress(msg):
             GLib.idle_add(self.welcome_page.install_docker_row.set_subtitle, msg)

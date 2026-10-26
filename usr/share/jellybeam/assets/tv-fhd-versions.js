@@ -56,12 +56,18 @@
 
     function apply(select) {
         // Once per page: the same menu is reused while the user is on it.
-        if (select.getAttribute('data-jellybeam-page') === window.location.hash) { return; }
+        var page = window.location.hash;
+        if (select.getAttribute('data-jellybeam-page') === page) { return; }
+        if (select.getAttribute('data-jellybeam-pending') === page) { return; }
         var id = itemIdFromHash();
         if (!id || !window.ApiClient) { return; }
-        select.setAttribute('data-jellybeam-page', window.location.hash);
+        select.setAttribute('data-jellybeam-pending', page);
 
         window.ApiClient.getItem(window.ApiClient.getCurrentUserId(), id).then(function (item) {
+            // Marked done only now: a failed request is tried again on the
+            // next change instead of leaving this page without the fix.
+            select.setAttribute('data-jellybeam-page', page);
+            select.removeAttribute('data-jellybeam-pending');
             var best = pickVersion(item.MediaSources || []);
             if (!best || select.value === best) { return; }
             var present = false;
@@ -75,6 +81,7 @@
             select.dispatchEvent(new Event('change', { bubbles: true }));
             console.debug('[JellyBeam] FHD panel: version ' + best.slice(0, 8) + ' preselected');
         }).catch(function (e) {
+            select.removeAttribute('data-jellybeam-pending');
             console.debug('[JellyBeam] version preselect skipped', e);
         });
     }
@@ -84,6 +91,16 @@
         if (select && select.options.length > 1) { apply(select); }
     }
 
-    new MutationObserver(scan).observe(document.documentElement, { childList: true, subtree: true });
+    // The observer sees every change in the page, the video OSD's included
+    // (several a second during playback). One scan per burst, none on the
+    // video page, where there is no version menu.
+    var pending = false;
+    function soon() {
+        if (pending || /^#\/video/.test(window.location.hash)) { return; }
+        pending = true;
+        setTimeout(function () { pending = false; scan(); }, 200);
+    }
+
+    new MutationObserver(soon).observe(document.documentElement, { childList: true, subtree: true });
     window.addEventListener('hashchange', function () { setTimeout(scan, 0); });
 })();

@@ -25,8 +25,9 @@ TIMEOUT_DOCKER_PULL = 300
 TIMEOUT_DOCKER_EXEC_SHORT = 60
 TIMEOUT_DOCKER_EXEC_MEDIUM = 120
 TIMEOUT_DOCKER_EXEC_LONG = 300
-TIMEOUT_DOCKER_SDK_SETUP = 600
-TIMEOUT_DOCKER_INSTALL = 300
+# A whole step: image pull, or package download + signing + install over
+# Wi-Fi. Enforced by a timer that kills the container (DockerService._stream).
+TIMEOUT_DOCKER_INSTALL = 900
 TIMEOUT_SDB_CONNECT = 10
 TIMEOUT_SDB_DEVICES = 5
 TIMEOUT_SDB_DISCONNECT = 10
@@ -45,19 +46,11 @@ DOCKER_IMAGE_TAG = "latest"
 DOCKER_WORKSPACE_HOST = "/tmp/jellybeam"
 DOCKER_WORKSPACE_CONTAINER = "/workspace"
 
-# Tizen SDK Constants
-TIZEN_SDK_VERSION = "4.6"
-TIZEN_SDK_URL = f"http://download.tizen.org/sdk/Installer/tizen-studio_{TIZEN_SDK_VERSION}/web-cli_Tizen_Studio_{TIZEN_SDK_VERSION}_ubuntu-64.bin"
-TIZEN_SDK_DIR = "tizen-studio"
-TIZEN_TOOLS_PATH = "tizen-studio/tools/ide/bin/tizen"
+# Tizen tools in the image
 # Where sdb lives inside the image, for commands run by hand there.
 TIZEN_TOOLS_DIR = "/tizen-studio/tools"
-TIZEN_SDK_BIN_NAME = "tizen-studio.bin"
 
-# Jellyfin Constants
-JELLYFIN_REPO_URL = "https://github.com/jellyfin/jellyfin-tizen.git"
-JELLYFIN_REPO_DIR = "jellyfin-tizen"
-JELLYFIN_APP_FILENAME = "jellyfin.wgt"
+# Jellyfin package
 JELLYFIN_WWW_DIR = "www"
 
 # Server Customization Constants
@@ -113,7 +106,7 @@ CUSTOMIZATION_ICON = "tv-icon.png"
 # says 0.1.0 forever). Bump on EVERY change to what goes to the TV: middle
 # number for a new feature, last number for a fix. It is what Jellyfin shows
 # in the device list, and the only way to know which build a user has.
-CUSTOMIZATION_APP_VERSION = "0.9.2"
+CUSTOMIZATION_APP_VERSION = "0.9.3"
 # jellyfin-web's own logo files, replaced so the splash, the header and the
 # login screen show our branding. Square files are matched by pixel size to a
 # symbol of the same size; the wide banners (splash screen, header) get
@@ -165,7 +158,6 @@ CERT_FILE_EXTENSION = ".p12"
 CERT_AUTHOR_FILENAME = "author.p12"
 CERT_DISTRIBUTOR_FILENAME = "distributor.p12"
 CERT_PASSWORD_FILE = ".password"
-DEFAULT_PROFILE_NAME = "JellyBeam"
 DEFAULT_DEVICE_ID = "DEVICE-001"
 
 # Default Certificate Settings

@@ -15,6 +15,8 @@ depends=(
     'python-cryptography'
     'docker'
     'gettext'
+    # Key and signing request for the Samsung certificate (services/samsung_cert.py).
+    'openssl'
 )
 makedepends=(
     'python-build'
@@ -22,10 +24,7 @@ makedepends=(
     'python-wheel'
     'python-setuptools'
 )
-optdepends=(
-    'tizen-studio: For local Tizen SDK development'
-    'sdb: Samsung Debug Bridge for device connection'
-)
+# No Tizen Studio or sdb on the host: both run inside the Docker image.
 pkgver=$(date +%y.%m.%d)
 pkgrel=$(date +%H%M)
 arch=('any')
@@ -76,6 +75,12 @@ package() {
             cp -a "${srcdir}/${dir}" "${pkgdir}/"
         fi
     done
+
+    # Development files that ride along in the source tree.
+    local app="${pkgdir}/usr/share/${pkgname}"
+    rm -rf "${app}/tests" "${app}/.audit" "${app}/htmlcov" "${app}/.pytest_cache"
+    rm -f "${app}/conftest.py" "${app}/pytest.ini" "${app}/CLAUDE.md" "${app}/.coverage"
+    find "${pkgdir}" -name __pycache__ -type d -prune -exec rm -rf {} +
 
     # Install license file if present
     if [ -f "LICENSE" ]; then

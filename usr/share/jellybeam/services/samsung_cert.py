@@ -31,6 +31,7 @@ from __future__ import annotations
 import http.server
 import json
 import logging
+import os
 import re
 import secrets
 import shutil
@@ -62,6 +63,8 @@ from utils.exceptions import SamsungCertificateError
 _logger = logging.getLogger(__name__)
 
 LOGIN_URL_FILE = "login_url.txt"
+# Upper bound for the sign-in callback body (tokens and ids, well under 4 KB).
+CALLBACK_MAX_BYTES = 64 * 1024
 
 # A printable run starting at Samsung's account host. Class files store string
 # constants as bare UTF-8, so the run ends where the next pool entry's tag byte
@@ -110,7 +113,9 @@ class SamsungCertificate:
         trabalho.mkdir(parents=True)
         arquivo = trabalho / "ext.zip"
         try:
-            urllib.request.urlretrieve(url, arquivo)
+            # urlretrieve has no timeout: a stalled server froze the dialog.
+            with urllib.request.urlopen(url, timeout=60) as r, open(arquivo, "wb") as f:
+                shutil.copyfileobj(r, f)
             self._extract_artifacts(arquivo, trabalho, log)
         except OSError as e:
             raise SamsungCertificateError(f"could not fetch the extension: {e}") from e
@@ -284,7 +289,15 @@ class SamsungCertificate:
                 if urllib.parse.urlparse(self.path).path != path:
                     self.send_error(404)
                     return
-                tamanho = int(self.headers.get("Content-Length") or 0)
+                # Anything on this machine can post here; a body is a few
+                # hundred bytes of tokens, so refuse what cannot be one.
+                try:
+                    tamanho = int(self.headers.get("Content-Length") or 0)
+                except ValueError:
+                    tamanho = -1
+                if not 0 <= tamanho <= CALLBACK_MAX_BYTES:
+                    self.send_error(413)
+                    return
                 self._entregar(self.rfile.read(tamanho).decode("utf-8", "replace"))
 
             def do_GET(self):  # noqa: N802 - required name
@@ -383,8 +396,7 @@ class SamsungCertificate:
         and what Tizen Studio does, less the reversible obfuscation.
         """
         arquivo = destino / CERT_PASSWORD_FILE
-        arquivo.write_text(password, encoding="utf-8")
-        arquivo.chmod(0o600)
+        write_private(arquivo, password.encode("utf-8"))
 
     @staticmethod
     def load_password(destino: Path) -> str:
@@ -457,6 +469,21 @@ class SamsungCertificate:
             raise SamsungCertificateError(f"openssl failed: {(r.stderr or '').strip()[:200]}")
 
 
+def write_private(path: Path, data: bytes) -> None:
+    """Write a file only its owner can read, from the moment it exists.
+
+    write_bytes() followed by chmod() leaves the file at the umask's mode
+    (usually 0644) in between -- long enough for a key or a password on a
+    shared machine.
+    """
+    fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
+    try:
+        os.fchmod(fd, 0o600)  # an existing file keeps its old mode otherwise
+        os.write(fd, data)
+    finally:
+        os.close(fd)
+
+
 def safe_password() -> str:
     """A random password the Tizen CLI will take at face value.
 
@@ -508,10 +535,9 @@ def rewrap_p12(src: Path, password: str, dst: Path, new_password: str) -> None:
         .hmac_hash(hashes.SHA1())
         .build(new_password.encode("utf-8"))
     )
-    dst.write_bytes(
-        pkcs12.serialize_key_and_certificates(b"usercertificate", chave, folha, extras, legado)
+    write_private(
+        dst, pkcs12.serialize_key_and_certificates(b"usercertificate", chave, folha, extras, legado)
     )
-    dst.chmod(0o600)
 
 
 def write_legacy_p12(p12: Path, key_pem: bytes, cert_pem: bytes, ca_pem: bytes, password: str) -> None:
@@ -551,8 +577,7 @@ def write_legacy_p12(p12: Path, key_pem: bytes, cert_pem: bytes, ca_pem: bytes, 
     )
     # Prove it opens with this password before anything downstream trusts it.
     pkcs12.load_key_and_certificates(dados, password.encode("utf-8"))
-    p12.write_bytes(dados)
-    p12.chmod(0o600)
+    write_private(p12, dados)
 
 
 class SamsungCertificateFlow:

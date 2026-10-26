@@ -278,3 +278,30 @@ class TestDeveloperModeDiagnosis:
         done.wait(timeout=2)
 
         assert recebido and recebido[0][0] is True
+
+
+class TestHostIpMismatch:
+    """The TV names the one computer it accepts sdb from (Developer Mode)."""
+
+    @pytest.mark.parametrize(
+        "device,local,esperado",
+        [
+            ({"developerMode": "1", "developerIP": "192.168.68.121"}, "192.168.68.119", ("192.168.68.121", "192.168.68.119")),
+            ({"developerMode": "1", "developerIP": "192.168.68.119"}, "192.168.68.119", None),
+            ({"developerMode": "0", "developerIP": "192.168.68.121"}, "192.168.68.119", None),
+            ({"developerMode": "1", "developerIP": "0.0.0.0"}, "192.168.68.119", None),
+            ({"developerMode": "1"}, "192.168.68.119", None),
+            ({"developerMode": "1", "developerIP": "192.168.68.121"}, None, None),
+        ],
+    )
+    def test_decision(self, device, local, esperado):
+        from services.device import host_ip_mismatch
+
+        assert host_ip_mismatch(device, local) == esperado
+
+    def test_unreachable_tv_is_not_reported_as_a_mismatch(self, mock_logger):
+        from services.device import DeviceService
+
+        service = DeviceService(logger=mock_logger)
+        with patch("urllib.request.urlopen", side_effect=OSError("no route")):
+            assert service.host_ip_mismatch("192.168.68.112") is None

@@ -359,11 +359,14 @@ class DevicePage(Gtk.ScrolledWindow):
 
     def _on_ip_changed(self, entry):
         """Handle IP address changes."""
-        ip = entry.get_text()
-        self.window.config_manager.set("device.ip", ip)
+        ip = entry.get_text().strip()
 
-        # Validate IP
+        # Validate IP. Saved only when valid: whatever is in the config ends
+        # up in the install's shell scripts, and half-typed values used to be
+        # saved on every keystroke.
         is_valid = self.validator.is_valid_ip(ip)
+        if is_valid:
+            self.window.config_manager.set("device.ip", ip)
         if ip and not is_valid:
             entry.add_css_class("error")
             entry.set_title(

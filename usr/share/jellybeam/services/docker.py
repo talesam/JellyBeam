@@ -1,13 +1,15 @@
 # services/docker.py
 from __future__ import annotations
 
+import ipaddress
+import os
+import shlex
+import shutil
 import subprocess
 import threading
-import os
-import shutil
-import tempfile
+import uuid
 from pathlib import Path
-from typing import Callable, List, Optional, Tuple
+from typing import Callable, Dict, List, Optional, Tuple
 
 from gi.repository import GLib
 from utils.i18n import _
@@ -22,13 +24,6 @@ from utils.constants import (
     PKEXEC_DISMISSED,
     PKEXEC_NOT_AUTHORIZED,
     DOCKER_INSTALL_COMMANDS,
-    TIZEN_SDK_DIR,
-    TIZEN_SDK_URL,
-    TIZEN_SDK_BIN_NAME,
-    TIZEN_TOOLS_PATH,
-    JELLYFIN_REPO_URL,
-    JELLYFIN_REPO_DIR,
-    JELLYFIN_APP_FILENAME,
     JELLYFIN_WWW_DIR,
     JELLYFIN_BUILDS_RELEASES,
     JELLYFIN_BUILD_DEFAULT,
@@ -40,27 +35,36 @@ from utils.constants import (
     DEVICE_CERT_DIR,
     CERT_AUTHOR_FILENAME,
     CERT_DISTRIBUTOR_FILENAME,
-    CERT_PASSWORD_FILE,
-    DEFAULT_PROFILE_NAME,
-    DEFAULT_DEVICE_ID,
     TIMEOUT_DOCKER_VERSION,
     TIMEOUT_DOCKER_INFO,
     TIMEOUT_DOCKER_START,
     TIMEOUT_DOCKER_STOP,
     TIMEOUT_DOCKER_INSTALL,
-    TIMEOUT_DOCKER_EXEC_SHORT,
     TIMEOUT_DOCKER_EXEC_MEDIUM,
     TIMEOUT_DOCKER_EXEC_LONG,
-    TIMEOUT_DOCKER_SDK_SETUP,
 )
 from utils.config import ConfigManager
 from utils.exceptions import (
     AppInstallError,
     CustomizationError,
     DockerError,
+    InstallationCancelledError,
     SamsungCertificateError,
 )
 from services import customization
+
+
+def checked_tv_ip(tv_ip: str) -> str:
+    """The TV address as a plain dotted IPv4, else AppInstallError.
+
+    It ends up inside shell scripts run in the container (sdb connect ...),
+    and it comes from a text field and from a JSON file anyone can edit --
+    "1.2.3.4; anything" must never reach a shell.
+    """
+    try:
+        return str(ipaddress.IPv4Address(str(tv_ip).strip()))
+    except ValueError as e:
+        raise AppInstallError(str(tv_ip), "not a valid IPv4 address") from e
 
 
 class DockerService:
@@ -84,8 +88,14 @@ class DockerService:
         self.container_name: str = DOCKER_CONTAINER_NAME
         self.image_name: str = DOCKER_IMAGE_NAME
         self.image_tag: str = DOCKER_IMAGE_TAG
-        self.workspace_host: str = DOCKER_WORKSPACE_HOST
+        # One per user: a shared /tmp path could be created first, or have
+        # files swapped between download and signing, by another account.
+        self.workspace_host: str = f"{DOCKER_WORKSPACE_HOST}-{os.getuid()}"
         self.workspace_container: str = DOCKER_WORKSPACE_CONTAINER
+        # Containers and docker clients running now, so Cancel can stop them.
+        self._runs: Dict[str, Tuple[subprocess.Popen, Optional[str]]] = {}
+        self._runs_lock = threading.Lock()
+        self._cancelled = threading.Event()
 
     def is_docker_installed(self) -> bool:
         """Check if Docker is installed."""
@@ -266,7 +276,9 @@ class DockerService:
     def _wrap_cmd(self, cmd: List[str]) -> List[str]:
         """Wrap command with 'sg docker' if the current process lacks the group."""
         if self._needs_sg():
-            return ["sg", "docker", "-c", " ".join(cmd)]
+            # sg hands its argument to a shell: each word must arrive quoted,
+            # or a multi-line script passed to "sh -c" is torn apart.
+            return ["sg", "docker", "-c", shlex.join(cmd)]
         return cmd
 
     def run_with_docker_group(
@@ -289,8 +301,8 @@ class DockerService:
 
         # Otherwise, try with sg docker (runs command with group privileges)
         # This works even if user was just added to group without logout
-        sg_cmd = ["sg", "docker", "-c", " ".join(cmd)]
-        self.logger.debug(f"Running with sg docker: {' '.join(sg_cmd)}")
+        sg_cmd = ["sg", "docker", "-c", shlex.join(cmd)]
+        self.logger.debug(f"Running with sg docker: {shlex.join(sg_cmd)}")
         return subprocess.run(sg_cmd, **kwargs)
 
     def start_docker_async(self, callback: Callable[[bool, str], None]) -> None:
@@ -496,7 +508,12 @@ class DockerService:
         callback: Callable[[bool, str], None],
         progress_callback: Optional[Callable[[str], None]] = None,
     ) -> None:
-        """Prepare Docker environment for Tizen development."""
+        """Pull the builder image, so the install steps start right away.
+
+        It used to create a "jellybeam-builder" container as well. Nothing
+        ever ran in it -- every step runs its own throwaway container -- and
+        it was the one Cancel tried to stop.
+        """
 
         def prepare():
             try:
@@ -506,78 +523,30 @@ class DockerService:
                         GLib.idle_add(progress_callback, msg)
                     self.logger.info(msg)
 
+                self._cancelled.clear()
                 log_progress(
                     f"Pulling Tizen builder image: {self.image_name}:{self.image_tag}"
                 )
-
-                # Pull the Tizen builder image with real-time output
-                pull_cmd = self._wrap_cmd(
-                    ["docker", "pull", f"{self.image_name}:{self.image_tag}"]
+                codigo = self._stream(
+                    ["docker", "pull", f"{self.image_name}:{self.image_tag}"],
+                    log_progress,
+                    TIMEOUT_DOCKER_INSTALL,
                 )
-                process = subprocess.Popen(
-                    pull_cmd,
-                    stdout=subprocess.PIPE,
-                    stderr=subprocess.STDOUT,
-                    text=True,
-                    bufsize=1,
-                )
-
-                for line in iter(process.stdout.readline, ""):
-                    line = line.strip()
-                    if line:
-                        log_progress(line)
-
-                process.wait()
-
-                if process.returncode != 0:
-                    error_msg = "Failed to pull Tizen builder image"
-                    self.logger.error(error_msg)
-                    GLib.idle_add(callback, False, error_msg)
+                if codigo != 0:
+                    self.logger.error("Failed to pull Tizen builder image")
+                    GLib.idle_add(callback, False, _("Failed to pull Tizen builder image"))
                     return
 
                 self.logger.info("Docker image pulled successfully")
-
-                # Create container if it doesn't exist
-                try:
-                    self.run_with_docker_group(
-                        ["docker", "inspect", self.container_name],
-                        capture_output=True,
-                        check=True,
-                        timeout=TIMEOUT_DOCKER_INFO,
-                    )
-                    self.logger.info(f"Container {self.container_name} already exists")
-                except subprocess.CalledProcessError:
-                    # Container doesn't exist, create it
-                    self.logger.info(f"Creating container: {self.container_name}")
-                    result = self.run_with_docker_group(
-                        [
-                            "docker",
-                            "create",
-                            "--name",
-                            self.container_name,
-                            "-v",
-                            f"{self.workspace_host}:{self.workspace_container}",
-                            f"{self.image_name}:{self.image_tag}",
-                        ],
-                        capture_output=True,
-                        text=True,
-                        timeout=TIMEOUT_DOCKER_EXEC_SHORT,
-                    )
-
-                    if result.returncode != 0:
-                        error_msg = f"Failed to create container: {result.stderr}"
-                        self.logger.error(error_msg)
-                        GLib.idle_add(callback, False, error_msg)
-                        return
-
-                    self.logger.info("Container created successfully")
-
                 GLib.idle_add(callback, True, "Environment ready")
 
-            except subprocess.TimeoutExpired as e:
-                error_msg = f"Docker operation timed out: {e}"
-                self.logger.error(error_msg)
-                GLib.idle_add(callback, False, error_msg)
+            except InstallationCancelledError:
+                GLib.idle_add(callback, False, _("Installation cancelled"))
+            except subprocess.TimeoutExpired:
+                self.logger.error("Pulling the builder image timed out")
+                GLib.idle_add(callback, False, _("Downloading the Docker image timed out"))
+            except FileNotFoundError:
+                GLib.idle_add(callback, False, _("Docker executable not found"))
             except Exception as e:
                 self.logger.exception(f"Error preparing environment: {e}")
                 GLib.idle_add(callback, False, str(e))
@@ -585,320 +554,140 @@ class DockerService:
         thread = threading.Thread(target=prepare, daemon=True)
         thread.start()
 
-    def setup_tizen_sdk_async(self, callback: Callable[[bool, str], None]) -> None:
-        """Setup Tizen SDK in Docker container."""
+    # ------------------------------------------------------------------
+    # Running containers
+    # ------------------------------------------------------------------
 
-        def setup_sdk():
+    def _new_name(self) -> str:
+        """A unique container name, so the container can be killed by name."""
+        return f"{self.container_name}-{uuid.uuid4().hex[:10]}"
+
+    def _kill(self, process: subprocess.Popen, name: Optional[str]) -> None:
+        """Stop a run: the container by name, then the docker client.
+
+        Killing only the client leaves a --rm container running on its own.
+        """
+        if name:
             try:
-                self.logger.info("Starting Tizen SDK setup")
-
-                # Start container
                 subprocess.run(
-                    ["docker", "start", self.container_name],
-                    check=True,
-                    timeout=TIMEOUT_DOCKER_START,
-                )
-                self.logger.info("Container started")
-
-                # Download and setup Tizen SDK
-                setup_script = f"""
-                cd {self.workspace_container}
-                if [ ! -d "{TIZEN_SDK_DIR}" ]; then
-                    wget -O {TIZEN_SDK_BIN_NAME} {TIZEN_SDK_URL}
-                    chmod +x {TIZEN_SDK_BIN_NAME}
-                    ./{TIZEN_SDK_BIN_NAME} --accept-license
-                fi
-                """
-
-                self.logger.debug("Executing SDK setup script")
-                result = subprocess.run(
-                    ["docker", "exec", self.container_name, "bash", "-c", setup_script],
+                    self._wrap_cmd(["docker", "kill", name]),
                     capture_output=True,
-                    text=True,
-                    timeout=TIMEOUT_DOCKER_SDK_SETUP,
+                    timeout=TIMEOUT_DOCKER_STOP,
                 )
+            except (subprocess.SubprocessError, OSError) as e:
+                self.logger.debug(f"docker kill {name}: {e}")
+        try:
+            process.kill()
+        except OSError:
+            pass
 
-                if result.returncode == 0:
-                    self.logger.info("Tizen SDK setup completed successfully")
-                    GLib.idle_add(callback, True, "Tizen SDK ready")
-                else:
-                    error_msg = f"SDK setup failed: {result.stderr}"
-                    self.logger.error(error_msg)
-                    GLib.idle_add(callback, False, error_msg)
-
-            except subprocess.TimeoutExpired as e:
-                error_msg = f"SDK setup timed out: {e}"
-                self.logger.error(error_msg)
-                GLib.idle_add(callback, False, error_msg)
-            except Exception as e:
-                self.logger.exception(f"Error setting up Tizen SDK: {e}")
-                GLib.idle_add(callback, False, str(e))
-
-        thread = threading.Thread(target=setup_sdk, daemon=True)
-        thread.start()
-
-    def setup_certificates_async(
+    def _stream(
         self,
-        author_cert: str,
-        dist_cert: str,
-        password: str,
-        callback: Callable[[bool, str], None],
-        use_default: bool = False,
-    ) -> None:
+        cmd: List[str],
+        log_progress: Callable[[str], None],
+        timeout: int,
+        name: Optional[str] = None,
+        collect: Optional[List[str]] = None,
+    ) -> int:
+        """Run a docker command, streaming its output line by line.
+
+        A timer enforces the timeout. Reading stdout to the end and only then
+        calling wait(timeout) bounded nothing: a stalled sdb or wget never
+        closes stdout, and the window spun forever. Cancel goes through the
+        same kill.
+
+        Raises InstallationCancelledError after Cancel, TimeoutExpired after
+        the timeout; returns the exit code otherwise.
         """
-        Setup certificates in Docker environment.
-
-        Args:
-            author_cert: Path to author certificate (ignored if use_default=True)
-            dist_cert: Path to distributor certificate (ignored if use_default=True)
-            password: Certificate password (ignored if use_default=True)
-            callback: Callback function (success: bool, message: str)
-            use_default: If True, skip certificate setup and use container's built-in certs
-        """
-
-        def setup_certs():
-            password_file = None
-            try:
-                # If using default certificates, skip the setup
-                if use_default:
-                    self.logger.info(
-                        "Using built-in certificates from Docker container"
-                    )
-                    GLib.idle_add(callback, True, "Using built-in certificates")
-                    return
-
-                self.logger.info("Setting up custom certificates")
-
-                # Create workspace directory
-                os.makedirs(self.workspace_host, exist_ok=True)
-
-                # Copy certificates to workspace
-                shutil.copy2(
-                    author_cert, f"{self.workspace_host}/{CERT_AUTHOR_FILENAME}"
-                )
-                shutil.copy2(
-                    dist_cert, f"{self.workspace_host}/{CERT_DISTRIBUTOR_FILENAME}"
-                )
-                self.logger.info("Certificates copied to workspace")
-
-                # Create temporary password file
-                with tempfile.NamedTemporaryFile(
-                    mode="w", delete=False, suffix=".txt"
-                ) as f:
-                    password_file = f.name
-                    f.write(password)
-
-                # Copy password file to workspace
-                shutil.copy2(
-                    password_file, f"{self.workspace_host}/{CERT_PASSWORD_FILE}"
-                )
-                self.logger.debug("Password file created securely")
-
-                # Create certificate profile
-                cert_script = f"""
-                cd {self.workspace_container}
-                PASSWORD=$(cat {CERT_PASSWORD_FILE})
-                {TIZEN_TOOLS_PATH} security-profiles add -n {DEFAULT_PROFILE_NAME} -a {CERT_AUTHOR_FILENAME} -p "$PASSWORD"
-                {TIZEN_TOOLS_PATH} package -t tpk -s {DEFAULT_PROFILE_NAME}
-                rm -f {CERT_PASSWORD_FILE}
-                """
-
-                self.logger.debug("Executing certificate setup script")
-                result = subprocess.run(
-                    ["docker", "exec", self.container_name, "bash", "-c", cert_script],
-                    capture_output=True,
-                    text=True,
-                    timeout=TIMEOUT_DOCKER_EXEC_SHORT,
-                )
-
-                if result.returncode == 0:
-                    self.logger.info("Certificates configured successfully")
-                    GLib.idle_add(callback, True, "Certificates configured")
-                else:
-                    error_msg = f"Certificate setup failed: {result.stderr}"
-                    self.logger.error(error_msg)
-                    GLib.idle_add(callback, False, error_msg)
-
-            except Exception as e:
-                self.logger.exception(f"Error setting up certificates: {e}")
-                GLib.idle_add(callback, False, str(e))
-            finally:
-                # Clean up temporary password file
-                if password_file and os.path.exists(password_file):
-                    try:
-                        os.unlink(password_file)
-                        self.logger.debug("Temporary password file removed")
-                    except OSError as e:
-                        self.logger.warning(f"Failed to remove password file: {e}")
-
-        thread = threading.Thread(target=setup_certs, daemon=True)
-        thread.start()
-
-    def _apply_customization(self) -> str:
-        """Edit the cloned www/index.html according to the user's config.
-
-        Runs on the host: the workspace is bind-mounted, so this is the same
-        file the container is about to build from.
-
-        When the feature is off we still call remove(), otherwise turning it
-        off would leave tags behind from an earlier build over the same
-        workspace and appear to have no effect.
-
-        Returns:
-            A short line describing what happened, for the build log.
-
-        Raises:
-            CustomizationError: only when the feature is enabled and the
-                injection could not be done. Failing the build is deliberate:
-                a silently uncustomized package looks identical to a good one,
-                and the user would only find out on the TV.
-        """
-        www_dir = os.path.join(
-            self.workspace_host, JELLYFIN_REPO_DIR, JELLYFIN_WWW_DIR
+        if self._cancelled.is_set():
+            raise InstallationCancelledError()
+        process = subprocess.Popen(
+            self._wrap_cmd(cmd),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            bufsize=1,
         )
-        enabled = self.config.get("customization.enabled", False)
-        server_url = self.config.get("customization.server_url", "")
+        chave = name or f"pid-{process.pid}"
+        with self._runs_lock:
+            self._runs[chave] = (process, name)
+        expirou = threading.Event()
 
-        if not enabled or not server_url:
-            try:
-                if customization.remove(www_dir):
-                    self.logger.info("Removed customization tags from a previous build")
-                    return "customization disabled (previous tags removed)"
-            except CustomizationError as e:
-                # Nothing was asked of us, so a failure here is not worth
-                # aborting the build over.
-                self.logger.debug(f"Nothing to clean up: {e}")
-            return "customization disabled"
+        def estourou() -> None:
+            expirou.set()
+            self._kill(process, name)
 
-        resources = customization.inject(www_dir, server_url)
-        self.logger.info(f"Customization applied: {len(resources)} resource(s)")
-        return f"customization applied ({len(resources)} resources)"
+        timer = threading.Timer(timeout, estourou)
+        timer.daemon = True
+        timer.start()
+        try:
+            for line in iter(process.stdout.readline, ""):
+                line = line.strip()
+                if line:
+                    if collect is not None:
+                        collect.append(line)
+                    log_progress(line)
+            process.wait()
+        finally:
+            timer.cancel()
+            with self._runs_lock:
+                self._runs.pop(chave, None)
+        if self._cancelled.is_set():
+            raise InstallationCancelledError()
+        if expirou.is_set():
+            raise subprocess.TimeoutExpired(cmd, timeout)
+        return process.returncode
 
-    def build_jellyfin_app_async(self, callback: Callable[[bool, str], None]) -> None:
-        """Clone jellyfin-tizen, apply customizations, then build and package.
+    def _prepare_workspace(self) -> None:
+        """Create the per-user workspace, private, and make sure it is ours."""
+        os.makedirs(self.workspace_host, mode=0o700, exist_ok=True)
+        info = os.lstat(self.workspace_host)
+        if os.path.islink(self.workspace_host) or info.st_uid != os.getuid():
+            raise AppInstallError(
+                "", f"{self.workspace_host} belongs to someone else; remove it and retry"
+            )
+        os.chmod(self.workspace_host, 0o700)
 
-        Split into two docker exec calls so the customization step can edit
-        www/index.html in between. It has to happen before build-web, because
-        build-web is what decides which files enter the package -- editing
-        .buildResult afterwards would be betting that package does not redo it.
+    def _discard_certs(self) -> None:
+        """Delete the rewrapped certificates once the install is over.
+
+        They hold the user's private key under a password that also went
+        through the install; nothing needs them after signing.
         """
+        shutil.rmtree(os.path.join(self.workspace_host, DEVICE_CERT_DIR), ignore_errors=True)
 
-        def build_app():
-            try:
-                self.logger.info("Starting Jellyfin app build")
+    def _run_in_image(
+        self,
+        script: str,
+        log_progress: Callable[[str], None],
+        timeout: int = TIMEOUT_DOCKER_EXEC_LONG,
+    ) -> int:
+        """Run a shell script in the builder image with the workspace mounted.
 
-                clone_script = f"""
-                cd {self.workspace_container}
-                if [ ! -d "{JELLYFIN_REPO_DIR}" ]; then
-                    git clone {JELLYFIN_REPO_URL}
-                fi
-                """
+        The image's entrypoint installs Jellyfin on its own, so it is replaced
+        by a shell here: we need its tools (sdb, tizen, unzip) but our own
+        sequence of steps.
+        """
+        name = self._new_name()
+        cmd = [
+            "docker",
+            "run",
+            "--rm",
+            "--name",
+            name,
+            "-v",
+            f"{self.workspace_host}:{self.workspace_container}",
+            "--entrypoint",
+            "sh",
+            f"{self.image_name}:{self.image_tag}",
+            "-c",
+            script,
+        ]
+        return self._stream(cmd, log_progress, timeout, name)
 
-                self.logger.debug("Cloning jellyfin-tizen")
-                result = subprocess.run(
-                    ["docker", "exec", self.container_name, "bash", "-c", clone_script],
-                    capture_output=True,
-                    text=True,
-                    timeout=TIMEOUT_DOCKER_EXEC_LONG,
-                )
-                if result.returncode != 0:
-                    error_msg = f"Clone failed: {result.stderr}"
-                    self.logger.error(error_msg)
-                    GLib.idle_add(callback, False, error_msg)
-                    return
-
-                try:
-                    customization_note = self._apply_customization()
-                except CustomizationError as e:
-                    error_msg = f"Build aborted: {e}"
-                    self.logger.error(error_msg)
-                    GLib.idle_add(callback, False, error_msg)
-                    return
-
-                build_script = f"""
-                cd {self.workspace_container}/{JELLYFIN_REPO_DIR}
-                {TIZEN_TOOLS_PATH} build-web
-                {TIZEN_TOOLS_PATH} package -t wgt -s {DEFAULT_PROFILE_NAME}
-                """
-
-                self.logger.debug("Executing build script")
-                result = subprocess.run(
-                    ["docker", "exec", self.container_name, "bash", "-c", build_script],
-                    capture_output=True,
-                    text=True,
-                    timeout=TIMEOUT_DOCKER_EXEC_LONG,
-                )
-
-                if result.returncode == 0:
-                    self.logger.info("Application built successfully")
-                    GLib.idle_add(
-                        callback,
-                        True,
-                        f"Application built successfully ({customization_note})",
-                    )
-                else:
-                    error_msg = f"Build failed: {result.stderr}"
-                    self.logger.error(error_msg)
-                    GLib.idle_add(callback, False, error_msg)
-
-            except subprocess.TimeoutExpired as e:
-                error_msg = f"Build timed out: {e}"
-                self.logger.error(error_msg)
-                GLib.idle_add(callback, False, error_msg)
-            except Exception as e:
-                self.logger.exception(f"Error building application: {e}")
-                GLib.idle_add(callback, False, str(e))
-
-        thread = threading.Thread(target=build_app, daemon=True)
-        thread.start()
-
-    def install_app_on_device_async(
-        self, callback: Callable[[bool, str], None]
-    ) -> None:
-        """Install the built application on the target device."""
-
-        def install_app():
-            try:
-                self.logger.info("Installing application on device")
-
-                install_script = f"""
-                cd {self.workspace_container}/{JELLYFIN_REPO_DIR}
-                {TIZEN_TOOLS_PATH} install -n {JELLYFIN_APP_FILENAME} -t {DEFAULT_DEVICE_ID}
-                """
-
-                self.logger.debug("Executing install script")
-                result = subprocess.run(
-                    [
-                        "docker",
-                        "exec",
-                        self.container_name,
-                        "bash",
-                        "-c",
-                        install_script,
-                    ],
-                    capture_output=True,
-                    text=True,
-                    timeout=TIMEOUT_DOCKER_EXEC_MEDIUM,
-                )
-
-                if result.returncode == 0:
-                    self.logger.info("Application installed successfully")
-                    GLib.idle_add(callback, True, "Application installed successfully")
-                else:
-                    error_msg = f"Installation failed: {result.stderr}"
-                    self.logger.error(error_msg)
-                    GLib.idle_add(callback, False, error_msg)
-
-            except subprocess.TimeoutExpired as e:
-                error_msg = f"Installation timed out: {e}"
-                self.logger.error(error_msg)
-                GLib.idle_add(callback, False, error_msg)
-            except Exception as e:
-                self.logger.exception(f"Error installing application: {e}")
-                GLib.idle_add(callback, False, str(e))
-
-        thread = threading.Thread(target=install_app, daemon=True)
-        thread.start()
+    # ------------------------------------------------------------------
+    # Installing
+    # ------------------------------------------------------------------
 
     def install_jellyfin_direct_async(
         self,
@@ -932,13 +721,16 @@ class DockerService:
                         GLib.idle_add(progress_callback, msg)
                     self.logger.info(msg)
 
-                log_progress(f"Starting Jellyfin installation to {tv_ip}...")
+                self._cancelled.clear()
+                ip = checked_tv_ip(tv_ip)
+                log_progress(f"Starting Jellyfin installation to {ip}...")
                 log_progress(f"Using container: {self.image_name}:{self.image_tag}")
 
-                par = self.device_certificate(log_progress, cert_password)
+                par = self.device_certificate(log_progress, cert_password, ip)
                 certs, senha = par if par else (None, "")
 
-                cmd = ["docker", "run", "--rm"]
+                name = self._new_name()
+                cmd = ["docker", "run", "--rm", "--name", name]
                 if certs:
                     # The image signs with these when both files are present
                     # and a password arrives as the fourth argument.
@@ -947,91 +739,54 @@ class DockerService:
                         "-v",
                         f"{certs}/{CERT_DISTRIBUTOR_FILENAME}:/certificates/distributor.p12",
                     ]
-                cmd += [f"{self.image_name}:{self.image_tag}", tv_ip, build_option]
+                cmd += [f"{self.image_name}:{self.image_tag}", ip, build_option]
                 if certs:
                     # Third argument is the release URL; empty means latest.
                     cmd += ["", senha]
 
-                log_progress(f"Executing: {' '.join(cmd)}")
+                # The password goes to the log masked: this line is shown in
+                # the window, copied with "Copy log" and kept in the log file.
+                visivel = ["***" if senha and arg == senha else arg for arg in cmd]
+                log_progress(f"Executing: {shlex.join(visivel)}")
 
-                # Run with real-time output capture (use sg docker if needed)
-                run_cmd = self._wrap_cmd(cmd)
-                process = subprocess.Popen(
-                    run_cmd,
-                    stdout=subprocess.PIPE,
-                    stderr=subprocess.STDOUT,
-                    text=True,
-                    bufsize=1,
+                output_lines: List[str] = []
+                codigo = self._stream(
+                    cmd, log_progress, TIMEOUT_DOCKER_INSTALL, name, collect=output_lines
                 )
 
-                # Stream output in real-time
-                output_lines = []
-                for line in iter(process.stdout.readline, ""):
-                    line = line.strip()
-                    if line:
-                        output_lines.append(line)
-                        log_progress(line)
-
-                process.wait()
-
-                if process.returncode == 0:
+                if codigo == 0:
                     self.logger.info("Jellyfin installed successfully!")
-                    GLib.idle_add(callback, True, "Jellyfin installed successfully!")
+                    GLib.idle_add(callback, True, _("Jellyfin installed successfully!"))
                 else:
                     error_output = "\n".join(output_lines[-5:])  # Last 5 lines
-                    error_msg = f"Installation failed (exit code {process.returncode})"
-                    self.logger.error(f"{error_msg}: {error_output}")
-                    GLib.idle_add(callback, False, error_msg)
+                    self.logger.error(
+                        f"Installation failed (exit code {codigo}): {error_output}"
+                    )
+                    GLib.idle_add(
+                        callback, False, _("Installation failed (exit code {code})").format(code=codigo)
+                    )
 
+            except InstallationCancelledError:
+                GLib.idle_add(callback, False, _("Installation cancelled"))
+            except AppInstallError as e:
+                self.logger.error(str(e))
+                GLib.idle_add(callback, False, e.details.get("reason", e.message))
+            except subprocess.TimeoutExpired:
+                GLib.idle_add(callback, False, _("Installation timed out"))
             except FileNotFoundError:
-                error_msg = "Docker executable not found"
-                self.logger.error(error_msg)
-                GLib.idle_add(callback, False, error_msg)
+                self.logger.error("Docker executable not found")
+                GLib.idle_add(callback, False, _("Docker executable not found"))
             except Exception as e:
                 self.logger.exception(f"Error during installation: {e}")
                 GLib.idle_add(callback, False, str(e))
+            finally:
+                self._discard_certs()
 
         thread = threading.Thread(target=install_direct, daemon=True)
         thread.start()
 
-    def _run_in_image(
-        self,
-        script: str,
-        log_progress: Callable[[str], None],
-        timeout: int = TIMEOUT_DOCKER_EXEC_LONG,
-    ) -> int:
-        """Run a shell script in the builder image with the workspace mounted.
-
-        The image's entrypoint installs Jellyfin on its own, so it is replaced
-        by a shell here: we need its tools (sdb, tizen, unzip) but our own
-        sequence of steps.
-        """
-        cmd = self._wrap_cmd(
-            [
-                "docker",
-                "run",
-                "--rm",
-                "-v",
-                f"{self.workspace_host}:{self.workspace_container}",
-                "--entrypoint",
-                "sh",
-                f"{self.image_name}:{self.image_tag}",
-                "-c",
-                script,
-            ]
-        )
-        process = subprocess.Popen(
-            cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1
-        )
-        for line in iter(process.stdout.readline, ""):
-            line = line.strip()
-            if line:
-                log_progress(line)
-        process.wait(timeout=timeout)
-        return process.returncode
-
     def device_certificate(
-        self, log_progress: Callable[[str], None], password: str = ""
+        self, log_progress: Callable[[str], None], password: str = "", tv_ip: str = ""
     ) -> Optional[Tuple[str, str]]:
         """The user's own signing certificate, when they have supplied one.
 
@@ -1060,11 +815,14 @@ class DockerService:
         if not (autor and dist):
             return None
         if not (os.path.isfile(autor) and os.path.isfile(dist)):
-            self.logger.warning("Configured certificate files are missing")
-            return None
+            # Not a silent fall back to the published package: on Tizen 8+
+            # that fails only at the very end, far from the actual cause.
+            faltando = ", ".join(p for p in (autor, dist) if not os.path.isfile(p))
+            raise AppInstallError(tv_ip, f"certificate file not found: {faltando}")
 
+        self._prepare_workspace()
         destino = os.path.join(self.workspace_host, DEVICE_CERT_DIR)
-        os.makedirs(destino, exist_ok=True)
+        os.makedirs(destino, mode=0o700, exist_ok=True)
         # Not copied: rewrapped. The CLI in the container only opens legacy
         # PKCS#12, and it misreads a password that happens to be valid base64
         # (see safe_password). Rewrapping with a password of our own makes
@@ -1076,11 +834,19 @@ class DockerService:
         senha_assinatura = safe_password()
         try:
             rewrap_p12(Path(autor), senha, Path(destino) / CERT_AUTHOR_FILENAME, senha_assinatura)
-            rewrap_p12(Path(dist), senha, Path(destino) / CERT_DISTRIBUTOR_FILENAME, senha_assinatura)
+            try:
+                rewrap_p12(
+                    Path(dist), senha, Path(destino) / CERT_DISTRIBUTOR_FILENAME, senha_assinatura
+                )
+            except SamsungCertificateError:
+                if not senha:
+                    raise
+                # A distributor certificate often carries no password at all.
+                rewrap_p12(
+                    Path(dist), "", Path(destino) / CERT_DISTRIBUTOR_FILENAME, senha_assinatura
+                )
         except SamsungCertificateError as e:
-            raise AppInstallError(
-                self.config.get("device.ip", ""), e.details.get("reason", str(e))
-            ) from e
+            raise AppInstallError(tv_ip, e.details.get("reason", str(e))) from e
         log_progress("Signing with your own certificate...")
         return destino, senha_assinatura
 
@@ -1113,27 +879,18 @@ class DockerService:
                         GLib.idle_add(progress_callback, msg)
                     self.logger.info(msg)
 
-                os.makedirs(self.workspace_host, exist_ok=True)
+                self._cancelled.clear()
+                ip = checked_tv_ip(tv_ip)
+                self._prepare_workspace()
                 ws = self.workspace_container
                 pkg = f"{ws}/{CUSTOMIZATION_PKG_DIR}"
 
                 log_progress("Downloading the pre-built package...")
-                fetch = f"""set -e
-cd {ws}
-rm -rf {CUSTOMIZATION_PKG_DIR} && mkdir {CUSTOMIZATION_PKG_DIR}
-TAG=$(basename "$(curl -sLI {JELLYFIN_BUILDS_RELEASES}/latest \
-  | grep -i '^location:' | sed 's/^[Ll]ocation: //' | tr -d '\\r')")
-echo "Release: $TAG"
-wget -q "{JELLYFIN_BUILDS_RELEASES}/download/$TAG/{build_option}.wgt" -O original.wgt
-cd {CUSTOMIZATION_PKG_DIR} && unzip -qo ../original.wgt
-# The image runs as root; hand the files back so the injection step can
-# write to them as the desktop user.
-chown -R {os.getuid()}:{os.getgid()} {ws}
-echo "Package unpacked"
-"""
-                if self._run_in_image(fetch, log_progress) != 0:
+                if self._run_in_image(
+                    fetch_script(ws, build_option), log_progress, TIMEOUT_DOCKER_INSTALL
+                ) != 0:
                     GLib.idle_add(
-                        callback, False, "Could not download the Jellyfin package"
+                        callback, False, _("Could not download the Jellyfin package")
                     )
                     return
 
@@ -1165,132 +922,51 @@ echo "Package unpacked"
                 else:
                     log_progress("Native player not patched (not present or changed)")
 
-                par = self.device_certificate(log_progress, cert_password)
+                par = self.device_certificate(log_progress, cert_password, ip)
                 certs, senha = par if par else (None, "")
-                if certs:
-                    # A profile pointing at the pair just generated. The
-                    # built-in 'dev' profile signs with the image's own
-                    # certificate, which expired in 2022 and is exactly what
-                    # this TV refuses.
-                    perfil = "custom"
-                    prep = f"""set -e
-cp /home/developer/profile.xml /tmp/p.xml
-sed -i 's|/certificates/|{ws}/{DEVICE_CERT_DIR}/|g' /tmp/p.xml
-sed -i 's/_CERTIFICATEPASSWORD_/{senha}/' /tmp/p.xml
-sed -i '/<\\/profile>/ r /tmp/p.xml' \
-  /home/developer/tizen-studio-data/profile/profiles.xml
-"""
-                else:
-                    perfil = TIZEN_SIGN_PROFILE
-                    prep = ""
 
                 log_progress("Signing and installing...")
-                finish = prep + f"""cd {pkg} || exit 1
-# The old signatures no longer match the edited files.
-rm -f author-signature.xml signature1.xml
-cd {ws} || exit 1
-tizen package -t wgt -s {perfil} -- {CUSTOMIZATION_PKG_DIR} || exit 1
-WGT=$(ls {pkg}/*.wgt | head -1)
-echo "Signed: $WGT"
-sdb connect {tv_ip}
-TV_NAME=$(sdb devices | grep -E 'device\\s+\\w+[-]?\\w+' -o | sed 's/device//' - | xargs)
-if [ -z "$TV_NAME" ]; then echo "Could not find the TV name"; exit 1; fi
-echo "Found TV: $TV_NAME"
-
-# tee keeps the output streaming to the user while letting us inspect it.
-try_install() {{
-    tizen install -n "$WGT" -t "$TV_NAME" 2>&1 | tee /tmp/install.log
-    grep -q "successfully installed" /tmp/install.log
-}}
-
-if ! try_install; then
-    # Tizen refuses to update an app unless the new package carries the same
-    # author certificate. The published package is signed by whoever built it,
-    # and ours is re-signed here, so the first customized install always
-    # collides. Removing the old one is the only way through.
-    if grep -q "Author certificate not match" /tmp/install.log; then
-        PKGID=$(grep -o 'package="[^"]*"' {pkg}/config.xml | head -1 | cut -d'"' -f2)
-        echo ""
-        echo "The installed app was signed by a different author."
-        echo "Removing it before installing the customized package."
-        echo "(Settings stored inside the TV app will be lost.)"
-        if [ -z "$PKGID" ]; then echo "Could not read the package id"; exit 1; fi
-        # sdb, not "tizen uninstall": the latter answers "The package is not
-        # exist" for a package that is plainly installed and that sdb removes
-        # without complaint.
-        sdb -s {tv_ip}:26101 uninstall "$PKGID" 2>&1 | tee /tmp/uninstall.log
-        if ! grep -q "uninstall completed" /tmp/uninstall.log; then
-            echo "Could not remove the installed app"
-            exit 1
-        fi
-        try_install || exit 1
-    else
-        exit 1
-    fi
-fi
-"""
-                if self._run_in_image(finish, log_progress) != 0:
-                    GLib.idle_add(callback, False, "Installation failed")
+                script = install_script(ws, pkg, ip, senha if certs else None)
+                if self._run_in_image(script, log_progress, TIMEOUT_DOCKER_INSTALL) != 0:
+                    GLib.idle_add(callback, False, _("Installation failed"))
                     return
 
                 GLib.idle_add(
-                    callback, True, "Jellyfin installed with your customizations!"
+                    callback, True, _("Jellyfin installed with your customizations!")
                 )
 
+            except InstallationCancelledError:
+                GLib.idle_add(callback, False, _("Installation cancelled"))
+            except AppInstallError as e:
+                self.logger.error(str(e))
+                GLib.idle_add(callback, False, e.details.get("reason", e.message))
             except CustomizationError as e:
                 self.logger.error(f"Customization failed: {e}")
                 GLib.idle_add(callback, False, str(e))
             except subprocess.TimeoutExpired:
-                GLib.idle_add(callback, False, "Installation timed out")
+                GLib.idle_add(callback, False, _("Installation timed out"))
             except FileNotFoundError:
-                GLib.idle_add(callback, False, "Docker executable not found")
+                GLib.idle_add(callback, False, _("Docker executable not found"))
             except Exception as e:
                 self.logger.exception(f"Error during installation: {e}")
                 GLib.idle_add(callback, False, str(e))
+            finally:
+                self._discard_certs()
 
         threading.Thread(target=install, daemon=True).start()
 
-    def platform_version(self, tv_ip: str) -> str:
-        """The TV's Tizen version, or empty string. Blocking; call off the UI."""
+    def _sdb_query(self, tv_ip: str, command: str) -> str:
+        """Run one sdb command against the TV from the image; '' on failure."""
         try:
-            script = (
-                f"export PATH={TIZEN_TOOLS_DIR}:$PATH; "
-                f"sdb connect {tv_ip} >/dev/null 2>&1; sleep 1; "
-                f"sdb -s {tv_ip}:{SDB_PORT} capability 2>/dev/null "
-                "| grep '^platform_version:'"
-            )
-            r = subprocess.run(
-                self._wrap_cmd(
-                    [
-                        "docker", "run", "--rm", "--network", "host",
-                        "--entrypoint", "sh",
-                        f"{self.image_name}:{self.image_tag}", "-c", script,
-                    ]
-                ),
-                capture_output=True,
-                text=True,
-                timeout=TIMEOUT_DOCKER_EXEC_MEDIUM,
-            )
-            saida = (r.stdout or "").strip()
-            if ":" in saida:
-                return saida.split(":", 1)[1].strip()
-        except Exception as e:
-            self.logger.debug(f"Could not read the Tizen version: {e}")
-        return ""
-
-    def read_duid(self, tv_ip: str) -> str:
-        """The TV's device id, or empty string.
-
-        Answered by a whitelisted sdb command that works even though these
-        sets refuse a shell. It is what the distributor certificate has to
-        name, and what Samsung's Certificate Manager asks people to paste in.
-        """
+            ip = checked_tv_ip(tv_ip)
+        except AppInstallError:
+            return ""
+        script = (
+            f"export PATH={TIZEN_TOOLS_DIR}:$PATH; "
+            f"sdb connect {ip} >/dev/null 2>&1; sleep 1; "
+            f"sdb -s {ip}:{SDB_PORT} {command} 2>/dev/null"
+        )
         try:
-            script = (
-                f"export PATH={TIZEN_TOOLS_DIR}:$PATH; "
-                f"sdb connect {tv_ip} >/dev/null 2>&1; sleep 1; "
-                f"sdb -s {tv_ip}:{SDB_PORT} shell 0 getduid 2>/dev/null"
-            )
             r = subprocess.run(
                 self._wrap_cmd(
                     [
@@ -1305,8 +981,24 @@ fi
             )
             return (r.stdout or "").strip()
         except Exception as e:
-            self.logger.debug(f"Could not read the TV id: {e}")
+            self.logger.debug(f"sdb {command} failed: {e}")
             return ""
+
+    def platform_version(self, tv_ip: str) -> str:
+        """The TV's Tizen version, or empty string. Blocking; call off the UI."""
+        for linha in self._sdb_query(tv_ip, "capability").splitlines():
+            if linha.startswith("platform_version:"):
+                return linha.split(":", 1)[1].strip()
+        return ""
+
+    def read_duid(self, tv_ip: str) -> str:
+        """The TV's device id, or empty string.
+
+        Answered by a whitelisted sdb command that works even though these
+        sets refuse a shell. It is what the distributor certificate has to
+        name, and what Samsung's Certificate Manager asks people to paste in.
+        """
+        return self._sdb_query(tv_ip, "shell 0 getduid")
 
     def needs_own_certificate(self, version: str) -> bool:
         """Whether this Tizen refuses the published package's expired chain.
@@ -1342,18 +1034,114 @@ fi
         threading.Thread(target=run, daemon=True).start()
 
     def stop_all_processes(self) -> None:
-        """Stop all running Docker processes."""
-        try:
-            self.logger.info(f"Stopping Docker container: {self.container_name}")
-            subprocess.run(
-                ["docker", "stop", self.container_name],
-                capture_output=True,
-                timeout=TIMEOUT_DOCKER_STOP,
-            )
-            self.logger.info("Docker container stopped successfully")
-        except subprocess.TimeoutExpired:
-            self.logger.warning(f"Timeout stopping container {self.container_name}")
-        except FileNotFoundError:
-            self.logger.error("Docker executable not found")
-        except Exception as e:
-            self.logger.exception(f"Error stopping Docker container: {e}")
+        """Cancel what is running: our containers by name, and their clients.
+
+        It used to "docker stop jellybeam-builder", a container no install
+        ever ran in, so Cancel stopped nothing.
+        """
+        self._cancelled.set()
+        with self._runs_lock:
+            em_curso = list(self._runs.values())
+        for process, name in em_curso:
+            self.logger.info(f"Stopping {name or 'docker'} (pid {process.pid})")
+            self._kill(process, name)
+
+
+def fetch_script(ws: str, build_option: str) -> str:
+    """Shell script: download the latest published package and unpack it."""
+    return f"""set -e
+cd {ws}
+rm -rf {CUSTOMIZATION_PKG_DIR} && mkdir {CUSTOMIZATION_PKG_DIR}
+# The last Location header is the release page; a redirect chain has several.
+TAG=$(basename "$(curl -sLI {JELLYFIN_BUILDS_RELEASES}/latest \\
+  | grep -i '^location:' | tail -n 1 | sed 's/^[Ll]ocation: //' | tr -d '\\r')")
+if [ -z "$TAG" ] || [ "$TAG" = "latest" ]; then
+    echo "Could not find the latest release of {build_option}"
+    exit 1
+fi
+echo "Release: $TAG"
+wget -nv "{JELLYFIN_BUILDS_RELEASES}/download/$TAG/{build_option}.wgt" -O original.wgt
+cd {CUSTOMIZATION_PKG_DIR} && unzip -qo ../original.wgt
+# The image runs as root; hand the files back so the injection step can
+# write to them as the desktop user.
+chown -R {os.getuid()}:{os.getgid()} {ws}
+echo "Package unpacked"
+"""
+
+
+def install_script(ws: str, pkg: str, ip: str, cert_password: Optional[str]) -> str:
+    """Shell script: sign the edited package and install it on the TV.
+
+    cert_password is set when the user's own certificate was rewrapped into
+    the workspace (it is safe_password(): letters, digits and one '.');
+    None signs with the image's 'dev' profile.
+    """
+    if cert_password is not None:
+        # A profile pointing at the rewrapped pair. The built-in 'dev' profile
+        # signs with the image's own certificate, which expired in 2022 and is
+        # exactly what Tizen 8+ refuses. Inserted once, after the first
+        # profile, under a name we pick.
+        perfil = "custom"
+        prep = f"""set -e
+cp /home/developer/profile.xml /tmp/p.xml
+sed -i 's|<profile name="[^"]*">|<profile name="{perfil}">|' /tmp/p.xml
+sed -i 's|/certificates/|{ws}/{DEVICE_CERT_DIR}/|g' /tmp/p.xml
+sed -i 's/_CERTIFICATEPASSWORD_/{cert_password}/' /tmp/p.xml
+sed -i '0,/<\\/profile>/{{/<\\/profile>/ r /tmp/p.xml
+}}' /home/developer/tizen-studio-data/profile/profiles.xml
+set +e
+"""
+    else:
+        perfil = TIZEN_SIGN_PROFILE
+        prep = ""
+
+    serial = f"{ip}:{SDB_PORT}"
+    return prep + f"""cd {pkg} || exit 1
+# The old signatures no longer match the edited files.
+rm -f author-signature.xml signature1.xml
+cd {ws} || exit 1
+tizen package -t wgt -s {perfil} -- {CUSTOMIZATION_PKG_DIR} || exit 1
+WGT=$(ls {pkg}/*.wgt | head -1)
+echo "Signed: $WGT"
+sdb connect {ip}
+# The name sdb lists for this TV, whatever hyphens or dots it has.
+TV_NAME=$(sdb devices | awk -v s="{serial}" '$1 == s && $2 == "device" {{ $1 = ""; $2 = ""; sub(/^ +/, ""); print }}')
+if [ -z "$TV_NAME" ]; then
+    echo "Could not connect to the TV at {serial}."
+    echo "Check that Developer Mode on the TV has this computer's IP as Host PC IP."
+    exit 1
+fi
+echo "Found TV: $TV_NAME"
+
+# tee keeps the output streaming to the user while letting us inspect it.
+try_install() {{
+    tizen install -n "$WGT" -t "$TV_NAME" 2>&1 | tee /tmp/install.log
+    grep -q "successfully installed" /tmp/install.log
+}}
+
+if ! try_install; then
+    # Tizen refuses to update an app unless the new package carries the same
+    # author certificate. The published package is signed by whoever built it,
+    # and ours is re-signed here, so the first customized install always
+    # collides. Removing the old one is the only way through.
+    if grep -q "Author certificate not match" /tmp/install.log; then
+        PKGID=$(grep -o 'package="[^"]*"' {pkg}/config.xml | head -1 | cut -d'"' -f2)
+        echo ""
+        echo "The installed app was signed by a different author."
+        echo "Removing it before installing the customized package."
+        echo "(Settings stored inside the TV app will be lost.)"
+        if [ -z "$PKGID" ]; then echo "Could not read the package id"; exit 1; fi
+        # sdb, not "tizen uninstall": the latter answers "The package is not
+        # exist" for a package that is plainly installed and that sdb removes
+        # without complaint.
+        sdb -s {serial} uninstall "$PKGID" 2>&1 | tee /tmp/uninstall.log
+        if ! grep -q "uninstall completed" /tmp/uninstall.log; then
+            echo "Could not remove the installed app"
+            exit 1
+        fi
+        try_install || exit 1
+    else
+        exit 1
+    fi
+fi
+"""

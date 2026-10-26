@@ -1,4 +1,6 @@
 # pages/install.py
+import threading
+
 import gi
 
 gi.require_version("Gtk", "4.0")
@@ -25,6 +27,9 @@ class InstallPage(Gtk.Box):
         self.device_service = DeviceService(logger=window.logger)
 
         self.installation_running = False
+        # Bumped on every start and on Cancel: a callback from an earlier run
+        # (cancelled, or superseded by Retry) must not repaint this one.
+        self._install_gen = 0
         self._pulse_source_id = None
         # Mirrors what goes to the terminal, without the colour escapes, so
         # the copy button does not depend on reading text back out of VTE.
@@ -74,7 +79,7 @@ class InstallPage(Gtk.Box):
         self.tv_info_row = Adw.ActionRow()
         self.tv_info_row.set_title(_("Target Device"))
         self.tv_info_row.set_subtitle(_("Loading..."))
-        tv_icon = Gtk.Image.new_from_icon_name("video-display-symbolic")
+        tv_icon = design.image("video-display-symbolic")
         self.tv_info_row.add_prefix(tv_icon)
         header_group.add(self.tv_info_row)
 
@@ -173,7 +178,7 @@ class InstallPage(Gtk.Box):
         self.terminal_expander = Adw.ExpanderRow()
         self.terminal_expander.set_title(_("Installation Log"))
         self.terminal_expander.set_subtitle(_("Click to view detailed output"))
-        log_icon = Gtk.Image.new_from_icon_name("utilities-terminal-symbolic")
+        log_icon = design.image("utilities-terminal-symbolic")
         self.terminal_expander.add_prefix(log_icon)
 
         # Copying the log is how a failure gets reported to someone else, so
@@ -224,7 +229,7 @@ class InstallPage(Gtk.Box):
         success_row = Adw.ActionRow()
         success_row.set_title(_("Jellyfin is ready!"))
         success_row.set_subtitle(_("Open the Jellyfin app on your TV"))
-        success_icon = Gtk.Image.new_from_icon_name("object-select-symbolic")
+        success_icon = design.image("object-select-symbolic")
         success_row.add_prefix(success_icon)
 
         done_button = Gtk.Button.new_with_label(_("Done"))
@@ -380,8 +385,8 @@ class InstallPage(Gtk.Box):
             _(
                 "Tizen {version} only accepts packages signed with a "
                 "certificate issued by Samsung for your account, with this TV "
-                "registered. Create one in Tizen Studio's Certificate Manager, "
-                "then add it under Certificates."
+                "registered. Go back to Certificates and use \"Create with your "
+                "Samsung account\"."
             ).format(version=version)
         )
         row.add_prefix(design.icon_badge("dialog-warning-symbolic", tone="warning"))
@@ -431,6 +436,7 @@ class InstallPage(Gtk.Box):
 
         self._update_tv_info()
         self.installation_running = True
+        self._install_gen += 1
 
         # Update UI
         self.start_button.set_sensitive(False)
@@ -453,13 +459,14 @@ class InstallPage(Gtk.Box):
         self._log_info(f"Target: {tv_ip}")
         self._log_info("")
 
-        # Step 1: Pull Docker image
-        self._set_status(_("Downloading container..."), 0.1)
-        self._log_info(_("Pulling Docker image..."))
+        geracao = self._install_gen
+
+        def atual():
+            return self.installation_running and geracao == self._install_gen
 
         def on_image_ready(success, message):
 
-            if not self.installation_running:
+            if not atual():
                 return
 
             if not success:
@@ -476,6 +483,8 @@ class InstallPage(Gtk.Box):
             self._log_info("")
 
             def on_install_complete(success, message):
+                if not atual():
+                    return
                 if success:
                     self._installation_complete()
                 else:
@@ -536,9 +545,40 @@ class InstallPage(Gtk.Box):
             elif "pull complete" in msg_lower:
                 GLib.idle_add(self._set_status, _("Download complete"), 0.28)
 
-        self.docker_service.prepare_environment_async(
-            on_image_ready, progress_callback=on_pull_progress
-        )
+        def pull():
+            # Step 1: Pull Docker image
+            self._set_status(_("Downloading container..."), 0.1)
+            self._log_info(_("Pulling Docker image..."))
+            self.docker_service.prepare_environment_async(
+                on_image_ready, progress_callback=on_pull_progress
+            )
+
+        def on_host_checked(divergencia):
+            if not atual():
+                return False
+            if divergencia:
+                aceito, este = divergencia
+                self._installation_failed(
+                    _(
+                        "The TV only accepts installs from {accepted}, and this "
+                        "computer is {current}. On the TV: Apps, type 12345, set "
+                        "Host PC IP to {current}, then restart the TV."
+                    ).format(accepted=aceito, current=este)
+                )
+                return False
+            pull()
+            return False
+
+        # Step 0: the TV names the one computer it accepts. Checked before
+        # anything is downloaded; "failed to connect" at the very end of the
+        # install is all the user got otherwise.
+        self._set_status(_("Checking the TV..."), 0.05)
+        threading.Thread(
+            target=lambda: GLib.idle_add(
+                on_host_checked, self.device_service.host_ip_mismatch(tv_ip)
+            ),
+            daemon=True,
+        ).start()
 
     def _set_status(self, text, progress):
         """Update status text and progress bar."""
@@ -631,6 +671,7 @@ class InstallPage(Gtk.Box):
         self._log_info("")
         self._log_success(_("Installation Complete!"))
         self._log_info(_("Find Jellyfin in your TV's app list."))
+        self._fetch_tizen_version()
 
     def _installation_failed(self, message):
         """Handle installation failure."""
@@ -649,13 +690,18 @@ class InstallPage(Gtk.Box):
         self._log_info("")
         self._log_error(_("Installation Failed"))
         self._log_error(message)
+        # Often the same cause as the version read failing (sdb refused);
+        # after the user fixes it and retries, the row should catch up.
+        self._fetch_tizen_version()
 
     def _on_cancel_installation(self, button):
         """Cancel the installation."""
         if self.installation_running:
             self.installation_running = False
+            self._install_gen += 1
             self._stop_pulse_timer()
-            self.docker_service.stop_all_processes()
+            # Kills the running container; blocking docker calls, off the UI.
+            threading.Thread(target=self.docker_service.stop_all_processes, daemon=True).start()
 
             self._clear_prefix()
             self.status_spinner.stop()

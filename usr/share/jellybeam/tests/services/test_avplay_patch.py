@@ -4,6 +4,8 @@ The fixture below is the shape of jellyfin-tizen's avplayVideoPlayer.js around
 the anchors the patch relies on, not the whole file.
 """
 
+import pytest
+
 from services import customization
 from services.customization import AVPLAY_FILE
 
@@ -154,9 +156,45 @@ class TestSubtitles:
             assert campo in fonte
 
     def test_only_harmless_markup_survives(self, tmp_path):
-        """Cues carry <i> and <br>; anything else is stripped before innerHTML."""
+        """Cues carry <i> and <br>; anything else is stripped before innerHTML.
+
+        Run as real JavaScript: the tags allowed through also lose their
+        attributes (an older version let <b onclick=...> pass).
+        """
+        import json
+        import re
+        import shutil
+        import subprocess
+
+        if not shutil.which("node"):
+            pytest.skip("node not available")
         fonte = _patched(tmp_path)
-        assert r"(i|b|u|br)" in fonte
+        cadeia = re.search(r"var safe = (String\(text \|\| ''\)[\s\S]*?);\n", fonte).group(1)
+        casos = {
+            "um\ndois": "um<br>dois",
+            "<b onclick=alert(1)>b</b>": "<b>b</b>",
+            "<i>i</i> <script>x</script>": "<i>i</i> x",
+            "<font color=red>c</font>": "c",
+            "<BR/>a": "<br>a",
+            "<img src=x onerror=y>z": "z",
+        }
+        prog = "var out = [];" + "".join(
+            f"(function(text){{ out.push({cadeia}); }})({json.dumps(k)});" for k in casos
+        ) + "process.stdout.write(JSON.stringify(out));"
+        r = subprocess.run(["node", "-e", prog], capture_output=True, text=True)
+        assert r.returncode == 0, r.stderr
+        assert json.loads(r.stdout) == list(casos.values())
+
+    def test_a_late_vtt_reply_cannot_restart_the_subtitles(self, tmp_path):
+        """Switching off (or stopping) aborts the request; a stale reply is ignored."""
+        fonte = _patched(tmp_path)
+        limpar = fonte[fonte.index("this._clearVtt = function"):]
+        assert "this._vttXhr.abort()" in limpar[:600]
+        assert "if (self._vttXhr !== xhr) { return; }" in fonte
+
+    def test_background_colour_is_validated(self, tmp_path):
+        fonte = _patched(tmp_path)
+        assert "test(bg) ? bg : 'transparent'" in fonte
 
     def test_hidden_when_switched_off_stopped_or_source_changes(self, tmp_path):
         fonte = _patched(tmp_path)

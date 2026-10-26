@@ -4,7 +4,18 @@ Unit tests for configuration management.
 """
 
 import json
+import os
+import stat
+
+import pytest
+
 from utils.config import ConfigManager
+
+
+@pytest.fixture(autouse=True)
+def _isolated_home(tmp_path, monkeypatch):
+    """ConfigManager() reads ~/.config/jellybeam: never the developer's own."""
+    monkeypatch.setenv("HOME", str(tmp_path / "home"))
 
 
 class TestConfigManager:
@@ -19,13 +30,9 @@ class TestConfigManager:
         config._config = config._default_config()
 
         # Check main sections
-        assert "device" in config._config
-        assert "certificates" in config._config
-        assert "docker" in config._config
-        assert "network" in config._config
-        assert "timeouts" in config._config
-        assert "ui" in config._config
-        assert "logging" in config._config
+        assert set(config._config) == {"device", "certificates", "customization", "logging"}
+        # Keys nothing read (image, timeouts, window size...) are gone.
+        assert "docker" not in config._config and "network" not in config._config
 
     def test_get_with_dot_notation(self, temp_directory):
         """Test getting values using dot notation."""
@@ -35,8 +42,8 @@ class TestConfigManager:
         config._config = config._default_config()
 
         # Test getting nested values
-        assert config.get("docker.container_name") == "jellybeam-builder"
-        assert config.get("network.scan_timeout") == 30
+        assert config.get("certificates.use_default") is True
+        assert config.get("customization.enabled") is False
         assert config.get("logging.level") == "INFO"
 
     def test_get_with_default(self, temp_directory):
@@ -72,7 +79,7 @@ class TestConfigManager:
         all_config = config.get_all()
         assert isinstance(all_config, dict)
         assert "device" in all_config
-        assert "docker" in all_config
+        assert "customization" in all_config
 
     def test_reset_to_defaults(self, temp_directory):
         """Test resetting configuration to defaults."""
@@ -125,3 +132,39 @@ class TestConfigManager:
         assert config.get("device.ip") == "10.0.0.1"
         assert config.get("device.developer_mode") is True
         assert config.get("logging.level") == "DEBUG"
+
+
+class TestLoadAndSave:
+    def _arquivo(self):
+        return ConfigManager().config_file
+
+    def test_file_values_win_and_missing_keys_get_defaults(self):
+        arquivo = self._arquivo()
+        arquivo.write_text(json.dumps({"device": {"ip": "10.0.0.7"}, "legacy": {"x": 1}}))
+        config = ConfigManager()
+        assert config.get("device.ip") == "10.0.0.7"
+        assert config.get("certificates.use_default") is True  # absent from the file
+        assert config.get("legacy.x") == 1  # unknown keys are kept, not dropped
+
+    def test_an_unreadable_file_is_set_aside_not_overwritten(self):
+        arquivo = self._arquivo()
+        arquivo.write_text('{"device": {"ip": "10.0.0.7"')  # truncated
+        config = ConfigManager()
+        assert config.get("device.ip") == ""
+        reserva = arquivo.with_suffix(".json.broken")
+        assert reserva.read_text().startswith('{"device"')
+        config.set("logging.level", "DEBUG")
+        assert reserva.exists()  # the user's data survives the next save
+
+    def test_saved_atomically_and_private(self):
+        config = ConfigManager()
+        config.set("customization.server_url", "https://example.org")
+        assert stat.S_IMODE(os.stat(config.config_file).st_mode) == 0o600
+        assert json.loads(config.config_file.read_text())["customization"]["server_url"] == "https://example.org"
+        assert not [p for p in os.listdir(config.config_dir) if p.startswith(".config-")]
+
+    def test_get_returns_a_copy_of_sections(self):
+        config = ConfigManager()
+        secao = config.get("device")
+        secao["ip"] = "mudado"
+        assert config.get("device.ip") == ""
