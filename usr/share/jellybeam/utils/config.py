@@ -88,6 +88,11 @@ class ConfigManager:
                 "use_default": True,  # Use built-in certificates from Docker container
                 "author_cert_path": "",
                 "distributor_cert_path": "",
+                # The name written into the author certificate. Samsung ties
+                # every future update of a published app to it, and it cannot
+                # be changed afterwards -- so whoever publishes under their
+                # own name sets this before asking for the certificate.
+                "author_name": "JellyBeam",
             },
             # Tags pointing at a Jellyfin server, embedded into the TV build.
             # The URL stays here, in the user's config, and never in the

@@ -72,6 +72,26 @@ CALLBACK_MAX_BYTES = 64 * 1024
 _LOGIN_URL = re.compile(rb"https://account\.samsung\.com/[A-Za-z0-9_./?=&:%~+-]+")
 
 
+# The name written into the author certificate when nothing else is set.
+DEFAULT_AUTHOR_NAME = "JellyBeam"
+
+
+def author_subject(name: str) -> str:
+    """The author name, made safe to sit inside an OpenSSL subject.
+
+    The value is interpolated into "/CN=<name>", where "/" starts another
+    field and "=" separates name from value. A name carrying either would
+    silently build a different subject than the one asked for -- so those,
+    and anything else that cannot survive the round trip, are dropped rather
+    than trusted. An empty result falls back to the default instead of
+    asking Samsung to sign a certificate with no name at all.
+    """
+    cleaned = "".join(
+        c for c in name.strip() if c.isprintable() and c not in "/=\\\n\r"
+    ).strip()
+    return cleaned[:64] or DEFAULT_AUTHOR_NAME
+
+
 class SamsungCertificate:
     """Fetches the pieces Samsung's tooling uses, then issues a certificate."""
 
@@ -342,6 +362,7 @@ class SamsungCertificate:
         password: str,
         cas: Dict[str, Path],
         log: Callable[[str], None],
+        author_name: str = DEFAULT_AUTHOR_NAME,
     ) -> Tuple[Path, Path]:
         """Ask Samsung for both certificates and write the two .p12 files."""
         destino.mkdir(parents=True, exist_ok=True)
@@ -354,7 +375,7 @@ class SamsungCertificate:
         autor = self._one(
             destino,
             "author",
-            subject="/CN=JellyBeam",
+            subject=f"/CN={author_subject(author_name)}",
             endpoint=SAMSUNG_CERT_AUTHOR_API,
             extra=[("platform", "VD")],
             ca=cas["author_ca"],
@@ -583,10 +604,17 @@ def write_legacy_p12(p12: Path, key_pem: bytes, cert_pem: bytes, ca_pem: bytes, 
 class SamsungCertificateFlow:
     """Runs the whole issuance off the main thread, reporting back on it."""
 
-    def __init__(self, docker_service, cache_dir: Path, destino: Path) -> None:
+    def __init__(
+        self,
+        docker_service,
+        cache_dir: Path,
+        destino: Path,
+        author_name: str = DEFAULT_AUTHOR_NAME,
+    ) -> None:
         self.docker = docker_service
         self.cert = SamsungCertificate(cache_dir)
         self.destino = destino
+        self.author_name = author_name
 
     def owns(self, cert_path: str) -> bool:
         """True if the certificate at cert_path was issued by this flow."""
@@ -632,7 +660,8 @@ class SamsungCertificateFlow:
 
                 senha = safe_password()
                 autor, dist = self.cert.issue(
-                    duid, token, user, self.destino, senha, cas, log
+                    duid, token, user, self.destino, senha, cas, log,
+                    author_name=self.author_name,
                 )
                 GLib.idle_add(
                     callback, True, "", str(autor), str(dist), senha

@@ -9,7 +9,7 @@ gi.require_version("Adw", "1")
 from gi.repository import Gtk, Adw, GLib, Gio
 from services.certificates import CertificateService
 from services.docker import DockerService
-from services.samsung_cert import SamsungCertificateFlow
+from services.samsung_cert import DEFAULT_AUTHOR_NAME, SamsungCertificateFlow
 from utils import design
 from utils.i18n import _
 from utils.ui_helpers import ErrorNotification
@@ -28,6 +28,11 @@ class CertificatesPage(Gtk.ScrolledWindow):
             DockerService(logger=window.logger, config=window.config_manager),
             Path(GLib.get_user_cache_dir()) / "jellybeam" / "samsung-cert",
             Path(GLib.get_user_data_dir()) / "jellybeam" / "certificates",
+            # Read once, at startup: the name only matters at the moment a
+            # certificate is asked for, and by then the window exists.
+            author_name=window.config_manager.get(
+                "certificates.author_name", DEFAULT_AUTHOR_NAME
+            ),
         )
         self.cert_service = CertificateService(logger=window.logger)
 

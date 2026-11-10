@@ -274,3 +274,42 @@ class TestPrivateFiles:
         for arquivo in (novo, antigo):
             assert stat.S_IMODE(os.stat(arquivo).st_mode) == 0o600
         assert antigo.read_bytes() == b"new"
+
+
+class TestAuthorSubject:
+    """The author name goes into "/CN=<name>" and is signed by Samsung.
+
+    Whatever ends up there is the identity every future update of a published
+    app must be signed with, and it cannot be changed afterwards -- so it has
+    to be exactly what was asked for, or nothing.
+    """
+
+    def test_an_ordinary_name_is_kept(self):
+        from services.samsung_cert import author_subject
+
+        assert author_subject("Ashy Software") == "Ashy Software"
+
+    def test_a_name_that_would_forge_another_field_is_stripped(self):
+        from services.samsung_cert import DEFAULT_AUTHOR_NAME, author_subject
+
+        # "/" opens another field and "=" separates name from value: left
+        # alone, "Acme/O=Evil" would build a subject nobody asked for.
+        assert author_subject("Acme/O=Evil") == "AcmeOEvil"
+        assert author_subject("a\nb") == "ab"
+        assert author_subject("/=") == DEFAULT_AUTHOR_NAME
+
+    def test_nothing_useful_falls_back_to_the_default(self):
+        from services.samsung_cert import DEFAULT_AUTHOR_NAME, author_subject
+
+        for empty in ("", "   ", "\t\n"):
+            assert author_subject(empty) == DEFAULT_AUTHOR_NAME
+
+    def test_surrounding_space_does_not_travel(self):
+        from services.samsung_cert import author_subject
+
+        assert author_subject("  Ashy Software  ") == "Ashy Software"
+
+    def test_a_very_long_name_is_cut_to_what_a_CN_holds(self):
+        from services.samsung_cert import author_subject
+
+        assert len(author_subject("x" * 200)) == 64
