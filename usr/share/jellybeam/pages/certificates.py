@@ -9,7 +9,11 @@ gi.require_version("Adw", "1")
 from gi.repository import Gtk, Adw, GLib, Gio
 from services.certificates import CertificateService
 from services.docker import DockerService
-from services.samsung_cert import DEFAULT_AUTHOR_NAME, SamsungCertificateFlow
+from services.samsung_cert import (
+    DEFAULT_AUTHOR_NAME,
+    SamsungCertificateFlow,
+    author_subject,
+)
 from utils import design
 from utils.i18n import _
 from utils.ui_helpers import ErrorNotification
@@ -28,11 +32,6 @@ class CertificatesPage(Gtk.ScrolledWindow):
             DockerService(logger=window.logger, config=window.config_manager),
             Path(GLib.get_user_cache_dir()) / "jellybeam" / "samsung-cert",
             Path(GLib.get_user_data_dir()) / "jellybeam" / "certificates",
-            # Read once, at startup: the name only matters at the moment a
-            # certificate is asked for, and by then the window exists.
-            author_name=window.config_manager.get(
-                "certificates.author_name", DEFAULT_AUTHOR_NAME
-            ),
         )
         self.cert_service = CertificateService(logger=window.logger)
 
@@ -165,6 +164,24 @@ class CertificatesPage(Gtk.ScrolledWindow):
         self.password_row.connect("changed", self._on_password_changed)
         self.custom_group.add(self.password_row)
 
+        # The name Samsung writes into the author certificate. It sits here,
+        # next to the button that asks for one, because it cannot be changed
+        # afterwards: once an app is published, every update has to be signed
+        # by this same author.
+        self.author_name_row = Adw.EntryRow()
+        self.author_name_row.set_title(_("Author name"))
+        self.author_name_row.set_text(
+            self.window.config_manager.get(
+                "certificates.author_name", DEFAULT_AUTHOR_NAME
+            )
+        )
+        self.author_name_row.update_property(
+            [Gtk.AccessibleProperty.DESCRIPTION],
+            [_("Name written into the certificate; it cannot be changed after publishing")],
+        )
+        self.author_name_row.connect("changed", self._on_author_name_changed)
+        self.custom_group.add(self.author_name_row)
+
         # Create the certificate with Samsung, without Tizen Studio
         create_row = Adw.ActionRow()
         create_row.set_title(_("Create with your Samsung account"))
@@ -296,6 +313,23 @@ class CertificatesPage(Gtk.ScrolledWindow):
 
         self._check_certificate_completeness()
 
+    def _on_author_name_changed(self, row):
+        """Keep the typed name, showing what will actually be signed.
+
+        The value is cleaned before it reaches the certificate (a "/" or an
+        "=" would build a different subject), so the subtitle reports the
+        result rather than letting someone believe a name that will not
+        survive.
+        """
+        typed = row.get_text()
+        final = author_subject(typed)
+        self.window.config_manager.set("certificates.author_name", typed)
+        row.set_subtitle(
+            ""
+            if final == typed.strip()
+            else _("Will be signed as: {name}").format(name=final)
+        )
+
     def _on_create_certificate(self, button):
         """Obtain a Samsung certificate for the connected TV.
 
@@ -342,6 +376,8 @@ class CertificatesPage(Gtk.ScrolledWindow):
             self._show_success(_("Certificate created for this TV"))
             return False
 
+        # Taken now, from the field, so what is on screen is what gets signed.
+        self.cert_service_samsung.author_name = self.author_name_row.get_text()
         self.cert_service_samsung.create_async(tv_ip, log, done)
 
     def _on_password_changed(self, entry):
